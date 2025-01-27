@@ -1,0 +1,3227 @@
+[
+    {
+        "nid": "Canto",
+        "name": "Canto",
+        "desc": "Can move again after certain actions.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            4
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "canto",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fort",
+        "name": "Fort",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            2
+        ],
+        "components": [
+            [
+                "regeneration",
+                0.2
+            ],
+            [
+                "avoid",
+                20
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        3
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Throne",
+        "name": "Throne",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            2
+        ],
+        "components": [
+            [
+                "regeneration",
+                0.10000000000000002
+            ],
+            [
+                "avoid",
+                30
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        3
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Forest",
+        "name": "Forest",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "avoid",
+                20
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Mountain",
+        "name": "Mountain",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "avoid",
+                30
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Peak",
+        "name": "Peak",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "avoid",
+                40
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        2
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Avoid10",
+        "name": "Avoid10",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "avoid",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "NoAvoid",
+        "name": "NoAvoid",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "avoid",
+                -1000
+            ],
+            [
+                "crit_avoid",
+                1000
+            ]
+        ]
+    },
+    {
+        "nid": "Avoid5",
+        "name": "Avoid5",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "avoid",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Flying",
+        "name": "Flying",
+        "desc": "Can fly.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            10
+        ],
+        "components": [
+            [
+                "ignore_terrain",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Strength_Plus2",
+        "name": "Strength +2",
+        "desc": "Grants STR +2.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Strength_Plus5",
+        "name": "Strength +5",
+        "desc": "Grants STR +5.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            11,
+            6
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Resistance_Plus5",
+        "name": "Resistance +5",
+        "desc": "Grants RES +5.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            9
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Defense_Plus5",
+        "name": "Defense +5",
+        "desc": "Grants DEF +5.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            8
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Speed_Plus5",
+        "name": "Speed +5",
+        "desc": "Grants SPD +5.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            11,
+            10
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Skill_Plus5",
+        "name": "Skill +5",
+        "desc": "Grants SKL +5.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            11,
+            7
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Luck_Plus5",
+        "name": "Luck +5",
+        "desc": "Grants LCK +5.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            11,
+            8
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Dragonstone",
+        "name": "Dragonstone",
+        "desc": "Grants STR +12, SKL +12, DEF +15, RES+20.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        12
+                    ],
+                    [
+                        "SKL",
+                        12
+                    ],
+                    [
+                        "DEF",
+                        15
+                    ],
+                    [
+                        "RES",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Poisoned",
+        "name": "Poisoned",
+        "desc": "Inflicts -2 to all stats.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            4
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                6
+            ],
+            [
+                "gba_poison",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "ResistPlus",
+        "name": "Resist+",
+        "desc": "Grants additional RES.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            5
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        7
+                    ]
+                ]
+            ],
+            [
+                "time",
+                7
+            ],
+            [
+                "upkeep_stat_change",
+                [
+                    [
+                        "RES",
+                        -1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Stoneskin",
+        "name": "Stoneskin",
+        "desc": "Take half damage but inflicts -2 SPD.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            7
+        ],
+        "components": [
+            [
+                "time",
+                4
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        -4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Stunned",
+        "name": "Stunned",
+        "desc": "Unit cannot act.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            8
+        ],
+        "components": [
+            [
+                "time",
+                2
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sleep",
+        "name": "Sleep",
+        "desc": "Unit is asleep.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            8
+        ],
+        "components": [
+            [
+                "time",
+                5
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "cannot_use_items",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Petrify",
+        "name": "Petrify",
+        "desc": "Unit is petrified. Cannot avoid enemy attacks and suffers -30 dodge.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            2,
+            10
+        ],
+        "components": [
+            [
+                "time",
+                5
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "avoid",
+                -1000
+            ],
+            [
+                "crit_avoid",
+                -30
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    65,
+                    65,
+                    65
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rescue",
+        "name": "Rescue",
+        "desc": "Unit is weighed down with a traveler.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "SKL",
+                        0.5
+                    ],
+                    [
+                        "SPD",
+                        0.5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Steal",
+        "name": "Steal",
+        "desc": "Can steal items from enemies with lower speed.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            7,
+            10
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Steal"
+            ],
+            [
+                "sight_range_bonus",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "Locktouch",
+        "name": "Locktouch",
+        "desc": "Unit can opened locks without a key.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "locktouch",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Crit_Plus30",
+        "name": "Crit +30",
+        "desc": "Grants +30 Critical change",
+        "icon_nid": "Skills",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "crit",
+                30
+            ]
+        ]
+    },
+    {
+        "nid": "Crit_Plus15",
+        "name": "Crit +15",
+        "desc": "Grants +15 Critical change",
+        "icon_nid": "Skills",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "crit",
+                15
+            ]
+        ]
+    },
+    {
+        "nid": "Anticrit",
+        "name": "Anticrit",
+        "desc": "Grants immunity to critical hits.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            3
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                1000
+            ]
+        ]
+    },
+    {
+        "nid": "Wretched_Air",
+        "name": "Wretched Air",
+        "desc": "Grants STR +10, SKL +10, DEF +10, RES +10.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Ravager",
+        "name": "Ravager",
+        "desc": "Grants STR +15, SKL +15, DEF +15, RES +15.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        15
+                    ],
+                    [
+                        "SKL",
+                        15
+                    ],
+                    [
+                        "DEF",
+                        15
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Demon_Light",
+        "name": "Demon Light",
+        "desc": "Grants MAG +10, SKL +10, LCK +10, DEF +10, RES +15.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        15
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Silence",
+        "name": "Silence",
+        "desc": "Unit cannot use magic.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "cannot_use_magic_items",
+                null
+            ],
+            [
+                "time",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Berserk",
+        "name": "Berserk",
+        "desc": "Unit is confused and can no longer tell friend from foe.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            8
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "change_ai",
+                "Pursue"
+            ]
+        ]
+    },
+    {
+        "nid": "Sword_Hit_Plus10",
+        "name": "Sword Hit +10",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hit",
+                10
+            ],
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Sword'"
+            ]
+        ]
+    },
+    {
+        "nid": "Torch",
+        "name": "Torch",
+        "desc": "Grants increased sight range in fog of war.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            5
+        ],
+        "components": [
+            [
+                "decreasing_sight_range_bonus",
+                4
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Void_Curse",
+        "name": "Void Curse",
+        "desc": "No exp gained for attacking this unit.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "enemy_exp_multiplier",
+                0
+            ]
+        ]
+    },
+    {
+        "nid": "Inspiration",
+        "name": "Inspiration",
+        "desc": "Aura - Grants +1 damage and +1 resist to allies.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            4
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Inspiration_child"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Inspiration_child",
+        "name": "Inspired",
+        "desc": "Grants +1 damage and +1 resist.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            4
+        ],
+        "components": [
+            [
+                "damage",
+                1
+            ],
+            [
+                "resist",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Devil_Luck",
+        "name": "Devil Luck",
+        "desc": "Skill gained by equipping the Devil Axe.\nReceives damage equal to damage dealt.",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "lifelink",
+                -1.0
+            ]
+        ]
+    },
+    {
+        "nid": "Eclipse_Helper",
+        "name": "Eclipse Helper",
+        "desc": "In order for enemies to use Eclipse, they must think they're inflicting a negative status or dealing damage.\nEclipse doesn't deal damage normally, so instead it secretly inflicts this status.",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Blinded",
+        "name": "Blinded",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "hit",
+                -50
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "avoid",
+                -50
+            ],
+            [
+                "crit_avoid",
+                -50
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Avoid",
+        "name": "Heroic Avoid",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "resist",
+                999
+            ],
+            [
+                "avoid",
+                999
+            ],
+            [
+                "crit_avoid",
+                999
+            ]
+        ]
+    },
+    {
+        "nid": "Dance",
+        "name": "Dance",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "ability",
+                "Refresh"
+            ]
+        ]
+    },
+    {
+        "nid": "Supply_mode",
+        "name": "Supplier mode",
+        "desc": "",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Supplier_to_Wagon"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "change_variant",
+                "_Supplier"
+            ]
+        ]
+    },
+    {
+        "nid": "Wagon_mode",
+        "name": "Wagon mode",
+        "desc": "Bonus to movement in detriment to other stats.\nMegail and adjacent units gain access to the <green>Convoy</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            31
+        ],
+        "components": [
+            [
+                "ability",
+                "Wagon_to_Supplier"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -10
+                    ],
+                    [
+                        "RES",
+                        -10
+                    ],
+                    [
+                        "MOV",
+                        6
+                    ]
+                ]
+            ],
+            [
+                "avoid",
+                -100
+            ],
+            [
+                "crit_avoid",
+                -100
+            ],
+            [
+                "movement_type",
+                "Light Cav"
+            ],
+            [
+                "change_variant",
+                "_Wagon"
+            ],
+            [
+                "ignore_rescue_penalty",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "All_Embracing_Care",
+        "name": "All-embracing Care",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "All_Embracing_Care_ability"
+            ],
+            [
+                "cost_mana",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "All_Embracing_Care_effect",
+        "name": "All-embracing Care",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "witch_warp",
+                null
+            ],
+            [
+                "end_time",
+                2
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    0,
+                    26,
+                    198
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Strike",
+        "name": "Blinding Strike",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "Blinding_Strike_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Silencing_Strike",
+        "name": "Silencing Strike",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "Silencing_Strike_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Stunning_Strike",
+        "name": "Stunning Strike",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "Stunning_Strike_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Rebuke",
+        "name": "Rebuke",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "Rebuke_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Admiration",
+        "name": "Admiration",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Admiration_effect"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Admiration_effect",
+        "name": "Admiration effect",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "resist",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_proc",
+        "name": "Lust proc",
+        "desc": "",
+        "icon_nid": "wexp_icons",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "proc_rate",
+                "MAGIC_DEFENSE"
+            ],
+            [
+                "attack_proc",
+                "Lust_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_effect",
+        "name": "Lust effect",
+        "desc": "",
+        "icon_nid": "wexp_icons",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "unselectable",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Mast",
+        "name": "Mast",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Fap"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Bond",
+        "name": "Bond",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Bond_effect"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Bond_effect",
+        "name": "Bond effect",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "regeneration",
+                0.1
+            ]
+        ]
+    },
+    {
+        "nid": "SupportAllies",
+        "name": "Support Allies",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "ability",
+                "Support_Allies_Effect"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fap_buff",
+        "name": "Fap buff",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ],
+                    [
+                        "STR",
+                        3
+                    ],
+                    [
+                        "DEF",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ],
+                    [
+                        "MAG",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Blow",
+        "name": "Heroic Blow",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Heroic_Blow_ability"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Assault",
+        "name": "Heroic Assault",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Heroic_Assault_ability"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Assault_1",
+        "name": "Heroic Assault",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Heroic_Aura_ability"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Ivala_Blessing",
+        "name": "Ivala's Blessing",
+        "desc": "Unit gains extra EXP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "exp_multiplier",
+                2.0
+            ],
+            [
+                "wexp_multiplier",
+                2.0
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Pretty_Lance",
+        "name": "Pretty Lance",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "ability",
+                "Pretty_Lance_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Stance_Switch_Might",
+        "name": "Stance Switch Might",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "Aura_of_Might"
+            ]
+        ]
+    },
+    {
+        "nid": "Stance_Switch_Spirit",
+        "name": "Stance Switch Might",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "Aura_of_Spirit"
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_of_Might_effect",
+        "name": "Aura of Might",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            23
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "end_time",
+                3
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_of_Spirit_effect",
+        "name": "Aura of Spirit",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            18
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "end_time",
+                3
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fire_Storm",
+        "name": "Fire Storm",
+        "desc": "",
+        "icon_nid": "FireStorm",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Fire_Storm_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "Shield_of_Purity",
+        "name": "Shield of Purity",
+        "desc": "Increases allies' DEF and RES for 2 turns. Range: 2 tiles. Cost: 5 mana.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "ability",
+                "Shield_of_Purity_ability"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Shield_of_Purity_effect",
+        "name": "Shield of Purity effect",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            49
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Active_Synergy",
+        "name": "Active Synergy",
+        "desc": "",
+        "icon_nid": "Valuable",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Lightning_Whip",
+        "name": "Lightning Whip",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "ability",
+                "Lightning_Whip_effect"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Earth_Whip",
+        "name": "Earth Whip",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "ability",
+                "Earth_Whip_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Altina'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Earth"
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Whip",
+        "name": "Pure Whip",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "ability",
+                "Pure_Whip_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Vhala'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Pure"
+            ]
+        ]
+    },
+    {
+        "nid": "Wild_Lashing",
+        "name": "Wild Lashing",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "ability",
+                "Wild_Lashing_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "astra_proc",
+                {
+                    "extra_attacks": 2,
+                    "damage_percent": 0.5,
+                    "show_proc_effects": false
+                }
+            ],
+            [
+                "alternate_battle_anim",
+                "Wild"
+            ]
+        ]
+    },
+    {
+        "nid": "Lash_of_Torment",
+        "name": "Lash of Torment",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Lash_of_Torment_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Wild"
+            ]
+        ]
+    },
+    {
+        "nid": "Lustful_Emissaries",
+        "name": "Lutsful Emissaries",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "ability",
+                "Lustful_Emissaries_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Attack"
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Kiss",
+        "name": "Forceful Kiss",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "ability",
+                "Forceful_Kiss_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Attack"
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy",
+        "name": "Combat Fantasy",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "ability",
+                "Combat_Fantasy_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy_buff",
+        "name": "Combat Fantasy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            52
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "time",
+                6
+            ]
+        ]
+    },
+    {
+        "nid": "Arrow_of_Ice",
+        "name": "Arrow of Ice",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "ability",
+                "Arrow_of_Ice_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Vhala' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Arrow_of_Lust",
+        "name": "Arrow of Lust",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Arrow_of_Lust_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Vhala' for u in target_system.get_adj_units(game.get_unit('Yarra'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Earth_Bomb",
+        "name": "Earth Bomb",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "ability",
+                "Earth_Bomb_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Varia' for u in target_system.get_adj_units(game.get_unit('Altina'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Defenders_Frenzy",
+        "name": "Defender's Frenzy",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "ability",
+                "Defenders_Frenzy_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Varia' for u in target_system.get_adj_units(game.get_unit('Hilstara'))]) and not 'Defenders_Frenzy_effect' in [skill.nid for skill in unit.skills] and not 'Servants_Frenzy_effect' in [skill.nid for skill in unit.skills]"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Defenders_Frenzy_effect",
+        "name": "Defender's Frenzy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            52
+        ],
+        "components": [
+            [
+                "time",
+                3
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "upkeep_damage",
+                -5
+            ],
+            [
+                "condition",
+                "not 'Servants_Frenzy_effect' in [skill.nid for skill in unit.skills]"
+            ]
+        ]
+    },
+    {
+        "nid": "Explosives_ability",
+        "name": "Place explosives",
+        "desc": "",
+        "icon_nid": "Consumable",
+        "icon_index": [
+            0,
+            11
+        ],
+        "components": [
+            [
+                "ability",
+                "Explosives"
+            ]
+        ]
+    },
+    {
+        "nid": "Exploded",
+        "name": "Exploded",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Servants_Frenzy",
+        "name": "Servant's Frenzy",
+        "desc": "",
+        "icon_nid": "Valuable",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Servants_Frenzy_ability"
+            ],
+            [
+                "condition",
+                "not 'Defenders_Frenzy_effect' in [skill.nid for skill in unit.skills] and not 'Servants_Frenzy_effect' in [skill.nid for skill in unit.skills]"
+            ]
+        ]
+    },
+    {
+        "nid": "Servants_Frenzy_effect",
+        "name": "Servant's Frenzy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            52
+        ],
+        "components": [
+            [
+                "time",
+                3
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        2
+                    ],
+                    [
+                        "DEF",
+                        -2
+                    ],
+                    [
+                        "RES",
+                        -2
+                    ]
+                ]
+            ],
+            [
+                "upkeep_damage",
+                -5
+            ]
+        ]
+    },
+    {
+        "nid": "Furious_Strikes",
+        "name": "Furious Strikes",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            6
+        ],
+        "components": [
+            [
+                "ability",
+                "Furious_Strikes_ability"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blade_Dance",
+        "name": "Blade Dance",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            6
+        ],
+        "components": [
+            [
+                "astra_proc",
+                {
+                    "extra_attacks": 4,
+                    "damage_percent": 0.5,
+                    "show_proc_effects": true
+                }
+            ],
+            [
+                "proc_rate",
+                "HALFLUCK"
+            ],
+            [
+                "cannot_double",
+                null
+            ],
+            [
+                "hit",
+                -5
+            ]
+        ]
+    },
+    {
+        "nid": "Disrupt",
+        "name": "Disrupt",
+        "desc": "Attempts to inflict various status effects on an enemy. \u27295",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Disrupt"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Robin' for u in target_system.get_adj_units(game.get_unit('Qum'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Disrupt_blind",
+        "name": "Blind [Disrupt]",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            21
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "hit",
+                -50
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "avoid",
+                -50
+            ],
+            [
+                "crit_avoid",
+                -50
+            ]
+        ]
+    },
+    {
+        "nid": "Disrupt_silence",
+        "name": "Silence [Disrupt]",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            21
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "cannot_use_magic_items",
+                null
+            ],
+            [
+                "unit_anim",
+                "MapSilence"
+            ]
+        ]
+    },
+    {
+        "nid": "Disrupt_confusion",
+        "name": "Confusion [Disrupt]",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            21
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "change_ai",
+                "Berserk"
+            ],
+            [
+                "unit_anim",
+                "MapProvoke"
+            ]
+        ]
+    },
+    {
+        "nid": "Disrupt_sleep",
+        "name": "Sleep [Disrupt]",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            21
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ],
+                    [
+                        "DEF",
+                        -5
+                    ],
+                    [
+                        "RES",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapStun"
+            ],
+            [
+                "avoid",
+                -99
+            ],
+            [
+                "crit_avoid",
+                -99
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Disrupt_stun",
+        "name": "Stun [Disrupt]",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            21
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "unit_tint",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "avoid",
+                -99
+            ],
+            [
+                "crit_avoid",
+                -99
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_disrupt_blind",
+        "name": "Proc disrupt blind",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 5"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Disrupt_blind"
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_disrupt_silence",
+        "name": "Proc disrupt blind",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 5"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Disrupt_silence"
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_disrupt_confusion",
+        "name": "Proc disrupt blind",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 6"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Disrupt_confusion"
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_disrupt_sleep",
+        "name": "Proc disrupt blind",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 8"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Disrupt_sleep"
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_disrupt_stun",
+        "name": "Proc disrupt blind",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 4"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Proc_disrupt_stun"
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire",
+        "name": "Inspire",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "ability",
+                "Inspire_ability"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire_effect",
+        "name": "Inspire",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            50
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "mana_regeneration",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Anti_Tyrant",
+        "name": "Anti-Tyrant Essence",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "ability",
+                "AntiTyrant_ability"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Ginasta'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Anti_Tyrant_effect",
+        "name": "Anti-Tyrant Essence",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "time",
+                4
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -1
+                    ],
+                    [
+                        "MAG",
+                        -1
+                    ],
+                    [
+                        "SPD",
+                        -1
+                    ],
+                    [
+                        "LCK",
+                        -1
+                    ]
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapPoison"
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    }
+]
