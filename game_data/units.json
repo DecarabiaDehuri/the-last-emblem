@@ -51,10 +51,6 @@
             ],
             [
                 1,
-                "Mast"
-            ],
-            [
-                1,
                 "SupportAllies"
             ],
             [
@@ -64,6 +60,10 @@
             [
                 1,
                 "All_Embracing_Care"
+            ],
+            [
+                1,
+                "Testing_skill"
             ]
         ],
         "unit_notes": [],
@@ -1557,6 +1557,10 @@
             [
                 1,
                 "Pretty_Lance"
+            ],
+            [
+                1,
+                "Mass_Kiss"
             ]
         ],
         "unit_notes": [],
@@ -2729,7 +2733,7 @@
         "desc": "",
         "variant": null,
         "level": 1,
-        "klass": "Soldier",
+        "klass": "Paladin",
         "tags": [],
         "bases": {
             "HP": 15,
@@ -2740,8 +2744,8 @@
             "LCK": 5,
             "DEF": 5,
             "RES": 5,
-            "CON": 8,
-            "MOV": 5
+            "CON": 11,
+            "MOV": 8
         },
         "growths": {
             "HP": 60,
@@ -3011,16 +3015,19 @@
         "variant": "Queen",
         "level": 9,
         "klass": "Spider",
-        "tags": [],
+        "tags": [
+            "Boss",
+            "Monster"
+        ],
         "bases": {
-            "HP": 30,
-            "STR": 14,
-            "MAG": 7,
-            "SKL": 9,
-            "SPD": 10,
+            "HP": 20,
+            "STR": 4,
+            "MAG": 6,
+            "SKL": 8,
+            "SPD": 6,
             "LCK": 4,
-            "DEF": 12,
-            "RES": 2,
+            "DEF": 7,
+            "RES": 3,
             "CON": 11,
             "MOV": 7
         },

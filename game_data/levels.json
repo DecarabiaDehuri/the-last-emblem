@@ -3791,7 +3791,7 @@
                 "team": "player",
                 "ai": "None",
                 "roam_ai": null,
-                "ai_group": null,
+                "ai_group": "",
                 "starting_position": [
                     0,
                     4
@@ -3825,8 +3825,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    4,
-                    9
+                    1,
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -4033,7 +4033,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    13,
+                    3,
                     5
                 ],
                 "starting_traveler": null,
@@ -4122,11 +4122,17 @@
         "tilemap": "tutorial1",
         "bg_tilemap": null,
         "party": "Eirika",
-        "music": {},
+        "music": {
+            "player_phase": "Prologue battles",
+            "enemy_phase": "Prologue battles",
+            "player_battle": "Prologue battles",
+            "enemy_battle": "Prologue battles",
+            "boss_battle": "Boss1"
+        },
         "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
+            "simple": "Save the village!",
+            "win": "Defeat enemies",
+            "loss": "Village is destroyed,Chosen dies"
         },
         "roam": false,
         "roam_unit": null,
@@ -4177,6 +4183,48 @@
                 "generic": true
             },
             {
+                "nid": "103",
+                "variant": null,
+                "level": 6,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 6,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
                 "nid": "Chosen",
                 "team": "player",
                 "ai": "None",
@@ -4200,7 +4248,7 @@
                 "ai_group": "",
                 "starting_position": [
                     9,
-                    1
+                    2
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -4208,12 +4256,70 @@
             {
                 "nid": "SpiderQueen",
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "Guard",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "Simonyoung",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 1,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "106",
+                "variant": null,
+                "level": 1,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 1,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [
@@ -4252,28 +4358,11 @@
                 "interrupt_move": false
             },
             {
-                "nid": "Housevisit",
-                "region_type": "event",
-                "position": [
-                    13,
-                    7
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "Visit",
-                "condition": "True",
-                "time_left": null,
-                "only_once": true,
-                "interrupt_move": false
-            },
-            {
                 "nid": "Snag",
                 "region_type": "event",
                 "position": [
                     9,
-                    1
+                    2
                 ],
                 "size": [
                     1,
@@ -4286,8 +4375,23 @@
                 "interrupt_move": false
             }
         ],
-        "unit_groups": [],
-        "ai_groups": []
+        "unit_groups": [
+            {
+                "nid": "Soldiers",
+                "units": [
+                    "106",
+                    "105",
+                    "107"
+                ],
+                "positions": {}
+            }
+        ],
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "6",

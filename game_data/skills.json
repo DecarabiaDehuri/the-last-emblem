@@ -1152,6 +1152,22 @@
         ]
     },
     {
+        "nid": "Testing_skill",
+        "name": "Testing skill",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "ability",
+                "Testing"
+            ]
+        ]
+    },
+    {
         "nid": "Heroic_Avoid",
         "name": "Heroic Avoid",
         "desc": "",
@@ -1759,6 +1775,46 @@
             [
                 "condition",
                 "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Mass_Kiss",
+        "name": "Mass Kiss",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "ability",
+                "Mass_Kiss_ability_core"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Yarra'))])"
             ],
             [
                 "hide_aura",

@@ -3338,7 +3338,8 @@
         "_source": [
             "flicker_cursor;Villagedestroy",
             "show_layer;Village destroyed",
-            "wait;500"
+            "wait;1000",
+            "lose_game"
         ],
         "nid": "7 VillageDestroy"
     },
@@ -3352,8 +3353,10 @@
         "priority": 20,
         "_source": [
             "wait;500",
-            "map_anim;Snag;9,1",
-            "show_layer;snag"
+            "map_anim;Snag;9,2",
+            "sound;VillageDestroyed",
+            "show_layer;snag",
+            "level_var;snagbridge;1"
         ],
         "nid": "7 Snagbridge"
     },
@@ -3361,9 +3364,9 @@
         "name": "Villagevisit",
         "trigger": "Visit",
         "level_nid": "7",
-        "condition": "region.nid == 'Village'",
+        "condition": "region.nid == 'Villagevisit'",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
             "transition;Close",
@@ -3371,29 +3374,50 @@
             "transition;Open",
             "add_portrait;Man1;Left;no_block",
             "add_portrait;{unit};Right",
-            "speak;Man1;The rumors are true, aren't they? The Grado army's taken over the castle|It looks like they've seized the castle gate, too.|Smart work--the gate provides defense and heals wounds to boot.|They must be fierce warriors to have taken the gate. Watch yourself.",
+            "speak;Man1;Thank you for your warning...|Those monsters are being a pain lately.|You can have this as a token of gratitude.",
             "transition;Close",
             "change_background",
             "transition;Open",
-            "has_traded;{unit}"
+            "give_item;Chosen;Dragonshield",
+            "has_traded;{unit}",
+            "show_layer;Village visited",
+            "level_var;spiderboss;1"
         ],
         "nid": "7 Villagevisit"
     },
     {
         "name": "Bosschega",
-        "trigger": "enemy_turn_change",
+        "trigger": "phase_change",
         "level_nid": "7",
-        "condition": "game.turncount == 3",
+        "condition": "game.level_vars['spiderboss'] == 1",
         "commands": [],
         "only_once": true,
         "priority": 20,
         "_source": [
             "wait;500",
             "move_cursor;1,1",
+            "disp_cursor;1,1",
             "wait;300",
-            "music;Shadow of the Enemy",
-            "load_unit;SpiderQueen;enemy;Attack",
-            "add_unit;SpiderQueen;0,0;swoosh;closest;north"
+            "change_music;player_phase;Halfway change",
+            "change_music;enemy_phase;Halfway change",
+            "change_music;enemy_battle;Halfway change",
+            "change_music;player_battle;Halfway change",
+            "add_unit;SpiderQueen;0,0;fade;closest;north",
+            "add_unit;103;1,0;fade;closest;north",
+            "add_unit;104;0,1;fade;closest;west",
+            "move_unit;SpiderQueen;1,1;normal;closest",
+            "move_unit;103;1,2;normal;closest",
+            "move_unit;104;2,1;normal;closest",
+            "wait;500",
+            "level_var;simonappears;1",
+            "if;{v:ivala} == 1",
+            "    wait;500",
+            "    add_portrait;Ivala;(120,32)",
+            "    wait;200",
+            "    speak;Ivala;Bosses are stronger enemy units. Often, defeating them is the way to clear a chapter.|They have a special symbol on their sprite and are frequently stationary.|Rushing in without carefully studying what a boss can do is risky!;bottom;;;;blue;;;;;None",
+            "    remove_portrait;Ivala",
+            "    wait;200",
+            "end"
         ],
         "nid": "7 Bosschega"
     },
@@ -3407,16 +3431,18 @@
         "priority": 20,
         "_source": [
             "chapter_title",
+            "# variaveis 0:",
+            "level_var;snagbridge;0",
+            "level_var;spiderboss;0",
+            "level_var;simonappears;0",
             "change_background;GradoCastle",
             "add_portrait;Chosen;Left,Bottom;no_block",
             "add_portrait;Simonyoung;Right,Bottom;no_block",
             "music;Distant Roads",
-            "speak;Simonyoung;...and without proper cleaning, your equipment is more prone to breaking.|Needless to say, this can be the difference between life and death in a combat.|That's why we should wait for the mage, a magically reinforced weapon grants us another layer of security.",
+            "speak;Simonyoung;...and without proper cleaning and maintenance, your equipment is more prone to breaking.|Needless to say, this can be the difference between life and death in a combat.|Furthermore, a magically reinforced armor grants us another layer of security.",
             "speak;Chosen;Boring.",
             "speak;Simonyoung;{tgm}...",
-            "expression;Chosen;Smile",
-            "speak;Chosen;The fate of the world is at stake here, and you want me to stand around?!",
-            "speak;Chosen;Ivala has given me this gift! I ought to liberate everyone with no time to haste!|Besides, my sword is already glowing! How much more magical does it need to be?",
+            "speak;Chosen;There are hot ladies out there, the fate of the world is at stake, and you want me to stand around?!|Besides, my sword is already glowing, that's enough magic for me!",
             "speak;Simonyoung;You must understand, there are several reaso-{no_wait}",
             "music_clear",
             "sound;Wall Attack",
@@ -3454,14 +3480,15 @@
             "add_portrait;Chosen;Left,Bottom;no_block",
             "speak;Chosen;Foul creature! I will destroy you as my first mission!",
             "wait;300",
-            "add_portrait;Ivala;Right,Top",
-            "speak;Ivala;Fulfill your destiny, my child.;top_left;;;;blue;;;;;None",
-            "speak;Chosen;Ivala! Grant me your blessing to overcome my first trial!;bottom_right",
-            "speak;Ivala;Follow my directions and you shall head towards greatness.;top_left;;;;blue;;;;;None",
-            "speak;Chosen;With your guidance nothing will stop me!;bottom_right",
-            "wait;100",
-            "multi_remove_portrait;Chosen;Ivala",
-            ""
+            "if;{v:ivala} == 1",
+            "    add_portrait;Ivala;Right,Top",
+            "    speak;Ivala;Fulfill your destiny, my child.;top_left;;;;blue;;;;;None",
+            "    speak;Chosen;Ivala! Grant me your blessing to overcome my first trial!;bottom_right",
+            "    speak;Ivala;Follow my directions and you shall head towards greatness.;top_left;;;;blue;;;;;None",
+            "    speak;Chosen;With your guidance nothing will stop me!;bottom_right",
+            "    wait;100",
+            "    multi_remove_portrait;Chosen;Ivala",
+            "end"
         ],
         "nid": "7 Intro"
     },
@@ -3474,15 +3501,17 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "if;{v:ivala} == 1",
             "wait;500",
             "add_portrait;Ivala;Right,Top",
             "wait;200",
-            "speak;Ivala;It all functions on turns. Use your arrow keys, or your mouse, to navigate.|Use the confirm button (default: X key) to select the character you want to give commands to.;bottom;;;;blue;;;;;None",
+            "speak;Ivala;It all functions on turns. Use your arrow keys, or your mouse, to navigate.|Use the confirm button (default: X key) to select the character you want to give commands to.|If you select an empty tile, you will be able to access extra menus, such as the <red>Options</> settings.;bottom;;;;blue;;;;;None",
             "add_portrait;Chosen;Left,Bottom",
             "speak;Chosen;Huh? I have no idea what you're talking about!;bottom_right",
             "speak;Ivala;Fear not, for what I speak{br}is not meant to reach your ears, but your Soul.;top_left;;;;blue;;;;;None",
             "speak;Chosen;Oh, uh, okay. I'll carry on!;bottom_right",
-            "multi_remove_portrait;Chosen;Ivala"
+            "multi_remove_portrait;Chosen;Ivala",
+            "end"
         ],
         "nid": "7 Tutorial:navigation"
     },
@@ -3495,12 +3524,14 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "if;{v:ivala} == 1",
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
             "speak;Ivala;You can frequently use the cancel button (default: Z key) to revert a selection.|After selecing a unit, your range of available movement will be displayed through blue tiles.|If you want to stay in place, select the same tile you are already on.|After moving, your options appear in a window.|The options you have available depend on a plethora of factors, such as your current position or available targets.|For now, feel free to move anywhere, then select <red>Wait</> to end your turn.;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
-            "wait;200"
+            "wait;200",
+            "end"
         ],
         "nid": "7 Tutorial:movement"
     },
@@ -3513,6 +3544,7 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "if;{v:ivala} == 1",
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
@@ -3529,7 +3561,8 @@
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
-            "speak;Ivala;Other tiles might give you positive or negative bonuses.|To check their effects, place the cursor on them and check the bottom left part of your screen.;bottom;;;;blue;;;;;None"
+            "speak;Ivala;Other tiles might give you positive or negative bonuses.|To check their effects, place the cursor on them and check the bottom part of your screen.;bottom;;;;blue;;;;;None",
+            "end"
         ],
         "nid": "7 Tutorial:fort"
     },
@@ -3542,7 +3575,7 @@
         "only_once": true,
         "priority": 20,
         "_source": [
-            "if;game.get_unit('Chosen').position == (13,5)",
+            "if;{v:ivala} == 1 and game.get_unit('Chosen').position == (13,5)",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
             "    speak;Ivala;The map is divided into tiles, and you may find that each tile can help or hinder your journey.|Those cliffs are restricting your movement, you will have to choose another route.;bottom;;;;blue;;;;;None",
@@ -3561,12 +3594,14 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "if;{v:ivala} == 1",
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
             "speak;Ivala;Each unit needs to move (or stay in place) first, then perform an action.|You cannot move after actions.|When your units have run out of available actions, they turn gray.|In the enemy phase, your foes follow the same rules.;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
-            "wait;200"
+            "wait;200",
+            "end"
         ],
         "nid": "7 Tutorial:move_and_action"
     },
@@ -3579,7 +3614,7 @@
         "only_once": true,
         "priority": 20,
         "_source": [
-            "if;game.get_unit('Chosen').get_hp() < game.get_unit('Chosen').get_max_hp()",
+            "if;{v:ivala} == 1 and game.get_unit('Chosen').get_hp() < game.get_unit('Chosen').get_max_hp()",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
             "    wait;200",
@@ -3589,5 +3624,166 @@
             "end"
         ],
         "nid": "7 Tutorial:item"
+    },
+    {
+        "name": "Tutorial:visit",
+        "trigger": "turn_change",
+        "level_nid": "7",
+        "condition": "game.turncount == 3",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;{v:ivala} == 1",
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;By positioning a unit in certain tiles, you can interact with them.|You should <red>Visit</> Shops, Houses and Villages.|Villages are often at risk of being attacked, but you can prevent attacks by visiting them.;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200",
+            "end"
+        ],
+        "nid": "7 Tutorial:visit"
+    },
+    {
+        "name": "Simon Chega",
+        "trigger": "phase_change",
+        "level_nid": "7",
+        "condition": "game.level_vars['simonappears'] == 1",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "move_cursor;13,2",
+            "disp_cursor;t",
+            "wait;500",
+            "add_unit;Simonyoung;13,2;fade;closest;north",
+            "move_unit;Simonyoung;13,3;normal;closest",
+            "wait;200",
+            "add_unit;105;13,2;fade;stack;north",
+            "add_unit;106;13,2;fade;stack;north",
+            "add_unit;107;13,2;fade;stack;north",
+            "move_unit;105;14,2;normal;closest",
+            "move_unit;106;13,4;normal;closest",
+            "move_unit;107;12,3;normal;closest",
+            "wait;1000",
+            "add_portrait;Simonyoung;Left,Bottom;normal",
+            "s;Simonyoung;Prioritize the evacuation of nearby villages!|Maintain the communication link and we should be able to pinpoint the attack's origin.|Move!",
+            "wait;400",
+            "move_unit;105;11,0;normal;push",
+            "move_unit;106;14,2;normal;push",
+            "move_unit;107;12,9;normal;push",
+            "remove_group;Soldiers;fade",
+            "wait;500",
+            "if;{v:ivala} == 1",
+            "    add_portrait;Ivala;(120,32)",
+            "    wait;200",
+            "    speak;Ivala;Now you have a powerful unit at your disposal.|You can consult the status of units by pressing the check button (default: C key).|On the same note, you can also use this button to read the descriptions of just about everything.|When in doubt, remember the Check button!;bottom;;;;blue;;;;;None",
+            "    remove_portrait;Ivala",
+            "    wait;500",
+            "end",
+            ""
+        ],
+        "nid": "7 Simon Chega"
+    },
+    {
+        "name": "Tutorial:snag",
+        "trigger": "unit_select",
+        "level_nid": "7",
+        "condition": "unit.nid == 'Simonyoung'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;{v:ivala} == 1 and {v:snagbridge} == 0",
+            "    wait;500",
+            "    add_portrait;Ivala;(120,32)",
+            "    wait;200",
+            "    speak;Ivala;Some maps contain breakable tiles, such as broken <red>Walls</> or <red>Snags</>.|Those can be attacked by any unit, friend or foe.|Always be on the lookout for them, as their destruction can change your available movement.|There is an available <red>Snag</> here, why don't you try breaking it with Simon and see what happens?;bottom;;;;blue;;;;;None",
+            "    remove_portrait;Ivala",
+            "    wait;200",
+            "    move_cursor;9,2",
+            "    disp_cursor;t",
+            "    wait;1000",
+            "    disp_cursor;n",
+            "end"
+        ],
+        "nid": "7 Tutorial:snag"
+    },
+    {
+        "name": "Firstspiderdeath",
+        "trigger": "unit_death",
+        "level_nid": "7",
+        "condition": "unit.nid == '102'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;{v:ivala} == 1 and {v:spiderboss} == 0",
+            "    wait;500",
+            "    add_portrait;Ivala;(120,32)",
+            "    wait;200",
+            "    speak;Ivala;Good job defeating your first foe!|You should still warn the other village.|You never know, things could take a turn for the worse.;bottom;;;;blue;;;;;None",
+            "    remove_portrait;Ivala",
+            "    wait;200",
+            "end"
+        ],
+        "nid": "7 Firstspiderdeath"
+    },
+    {
+        "name": "Spiderboss death",
+        "trigger": "combat_end",
+        "level_nid": "7",
+        "condition": "game.check_dead(\"SpiderQueen\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "win_game"
+        ],
+        "nid": "7 Spiderboss death"
+    },
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "7",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close",
+            "wait;1000",
+            "change_background;VillageGate",
+            "transition;open",
+            "add_portrait;Chosen;Left,Bottom",
+            "add_portrait;Simonyoung;Right,Bottom",
+            "s;Chosen;Ahh... nothing beats the feeling of victory!|I saved the day, despite your grumpy ass holding me back!",
+            "s;Simonyoung;As the Chosen, your life holds more responsibilities than only your own.|By rushing in without a plan, you're jeopardizing our whole continent's hope.",
+            "s;Chosen;Nah, shut up.|I did most of the work while your lazy ass was sitting cowardly at the castle!",
+            "s;Simonyoung;Joining a battlefield you know nothing about is not going to get you very far.",
+            "s;Chosen;I already know everything I need:|I'm gonna save the world.|You keep worrying about the details, I'll be busy getting all the bitches.",
+            "s;Simonyoung;...;;;;;;;;;;;;;no_sound;no_talk",
+            "transition;close",
+            "wait;1000"
+        ],
+        "nid": "7 Outro"
+    },
+    {
+        "name": "Chosen Quote Spiderboss",
+        "trigger": "combat_start",
+        "level_nid": "7",
+        "condition": "(unit.nid == \"Chosen\" and unit2.nid == 'SpiderQueen') or (unit.nid == 'SpiderQueen' and unit2.nid == \"Chosen\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Chosen;Right,Bottom;;Smile",
+            "s;Chosen;You're... You're freaking hot!|Dang, I'll love to get a taste after defeating you!",
+            "remove_portrait;Chosen"
+        ],
+        "nid": "7 Chosen Quote Spiderboss"
     }
 ]
