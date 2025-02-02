@@ -1743,6 +1743,34 @@
         ]
     },
     {
+        "nid": "Puppy_Eyes",
+        "name": "Puppy Eyes",
+        "desc": "While at full HP, Monica is more likely to avoid enemy attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            41
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "game.get_unit('Monica').get_hp() = game.get_unit('Monica').get_max_hp()"
+            ],
+            [
+                "avoid",
+                20
+            ],
+            [
+                "crit_avoid",
+                20
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Pretty_Lance",
         "name": "Pretty Lance",
         "desc": "",

@@ -1,5 +1,178 @@
 [
     {
+        "nid": "1",
+        "name": "Overworld",
+        "tilemap": "PrologueMap",
+        "music": "PrologueOverworld",
+        "overworld_nodes": [
+            {
+                "nid": "26",
+                "name": "New Location",
+                "pos": [
+                    16,
+                    17
+                ],
+                "icon": "castle",
+                "level": "7",
+                "menu_options": []
+            },
+            {
+                "nid": "27",
+                "name": "New Location",
+                "pos": [
+                    20,
+                    6
+                ],
+                "icon": "cathedral",
+                "level": null,
+                "menu_options": []
+            },
+            {
+                "nid": "28",
+                "name": "New Location",
+                "pos": [
+                    20,
+                    14
+                ],
+                "icon": "town",
+                "level": null,
+                "menu_options": []
+            }
+        ],
+        "map_paths": {},
+        "border_tile_width": 1
+    },
+    {
+        "nid": "MainOverworld",
+        "name": "Arclent",
+        "tilemap": "ArclentOverworldRemake",
+        "music": "Overworld",
+        "overworld_nodes": [
+            {
+                "nid": "36",
+                "name": "New Location",
+                "pos": [
+                    7,
+                    26
+                ],
+                "icon": "palace",
+                "level": "DEBUG",
+                "menu_options": []
+            },
+            {
+                "nid": "37",
+                "name": "New Location",
+                "pos": [
+                    11,
+                    27
+                ],
+                "icon": "town",
+                "level": null,
+                "menu_options": []
+            },
+            {
+                "nid": "38",
+                "name": "New Location",
+                "pos": [
+                    12,
+                    30
+                ],
+                "icon": "castle",
+                "level": null,
+                "menu_options": []
+            },
+            {
+                "nid": "39",
+                "name": "New Location",
+                "pos": [
+                    15,
+                    25
+                ],
+                "icon": "castle",
+                "level": null,
+                "menu_options": []
+            },
+            {
+                "nid": "40",
+                "name": "New Location",
+                "pos": [
+                    12,
+                    20
+                ],
+                "icon": "map_node",
+                "level": null,
+                "menu_options": []
+            },
+            {
+                "nid": "41",
+                "name": "New Location",
+                "pos": [
+                    13,
+                    22
+                ],
+                "icon": "map_node",
+                "level": null,
+                "menu_options": []
+            },
+            {
+                "nid": "42",
+                "name": "New Location",
+                "pos": [
+                    16,
+                    22
+                ],
+                "icon": "map_node",
+                "level": null,
+                "menu_options": []
+            }
+        ],
+        "map_paths": {
+            "(7, 26)-(11, 27)": [
+                [
+                    7,
+                    26
+                ],
+                [
+                    10,
+                    26
+                ],
+                [
+                    11,
+                    27
+                ]
+            ],
+            "(11, 27)-(12, 30)": [
+                [
+                    11,
+                    27
+                ],
+                [
+                    11,
+                    29
+                ],
+                [
+                    12,
+                    30
+                ]
+            ],
+            "(12, 30)-(15, 25)": [
+                [
+                    12,
+                    30
+                ],
+                [
+                    15,
+                    27
+                ],
+                [
+                    15,
+                    25
+                ]
+            ]
+        },
+        "border_tile_width": 1
+    },
+    {
         "nid": "0",
         "name": "Magvel",
         "tilemap": "Magvel",
@@ -708,15 +881,6 @@
                 ]
             ]
         },
-        "border_tile_width": 0
-    },
-    {
-        "nid": "1",
-        "name": "Overworld 1",
-        "tilemap": null,
-        "music": null,
-        "overworld_nodes": [],
-        "map_paths": {},
         "border_tile_width": 0
     }
 ]

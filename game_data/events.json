@@ -8,10 +8,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "choice;tutorialchoice;Do you wish to play the Prologue/Tutorial?;Yes,No",
+            "choice;tutorialchoice;Do you wish to play the Prologue?;Yes,No",
             "if;'{v:_last_choice}' == 'Yes'",
             "    game_var;prologue;1",
-            "    choice;tutorialivala;Do you want to proceed with Ivala?;Yes,No",
+            "    choice;tutorialivala;Do you wish to listen to Ivala? (Enables Tutorial);Yes,No",
             "    if;'{v:_last_choice}' == 'Yes'",
             "        game_var;ivala;1",
             "    elif;'{v:_last_choice}' == 'No'",
@@ -3356,7 +3356,8 @@
             "map_anim;Snag;9,2",
             "sound;VillageDestroyed",
             "show_layer;snag",
-            "level_var;snagbridge;1"
+            "level_var;snagbridge;1",
+            "remove_region;Snag"
         ],
         "nid": "7 Snagbridge"
     },
@@ -3381,7 +3382,15 @@
             "give_item;Chosen;Dragonshield",
             "has_traded;{unit}",
             "show_layer;Village visited",
-            "level_var;spiderboss;1"
+            "level_var;spiderboss;1",
+            "if;{v:ivala} == 1",
+            "    wait;500",
+            "    add_portrait;Ivala;(120,32)",
+            "    wait;200",
+            "    speak;Ivala;You have gained a consumable <red>Item</>!|Remember to use the C key to check its effects.|Using items count as an action, so be mindful of when to use them.;bottom;;;;blue;;;;;None",
+            "    remove_portrait;Ivala",
+            "    wait;200",
+            "end"
         ],
         "nid": "7 Villagevisit"
     },
@@ -3402,14 +3411,20 @@
             "change_music;enemy_phase;Halfway change",
             "change_music;enemy_battle;Halfway change",
             "change_music;player_battle;Halfway change",
+            "music;Halfway change",
             "add_unit;SpiderQueen;0,0;fade;closest;north",
             "add_unit;103;1,0;fade;closest;north",
             "add_unit;104;0,1;fade;closest;west",
+            "add_unit;108;11,0;fade;closest;north",
+            "add_unit;109;10,9;fade;closest;south",
             "move_unit;SpiderQueen;1,1;normal;closest",
             "move_unit;103;1,2;normal;closest",
             "move_unit;104;2,1;normal;closest",
+            "move_unit;108;11,1;normal;closest",
+            "move_unit;109;10,7;normal;closest",
             "wait;500",
             "level_var;simonappears;1",
+            "wait;1000",
             "if;{v:ivala} == 1",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
@@ -3417,7 +3432,8 @@
             "    speak;Ivala;Bosses are stronger enemy units. Often, defeating them is the way to clear a chapter.|They have a special symbol on their sprite and are frequently stationary.|Rushing in without carefully studying what a boss can do is risky!;bottom;;;;blue;;;;;None",
             "    remove_portrait;Ivala",
             "    wait;200",
-            "end"
+            "end",
+            "change_objective_simple;Defeat the boss!"
         ],
         "nid": "7 Bosschega"
     },
@@ -3438,7 +3454,7 @@
             "change_background;GradoCastle",
             "add_portrait;Chosen;Left,Bottom;no_block",
             "add_portrait;Simonyoung;Right,Bottom;no_block",
-            "music;Distant Roads",
+            "music;Happy1",
             "speak;Simonyoung;...and without proper cleaning and maintenance, your equipment is more prone to breaking.|Needless to say, this can be the difference between life and death in a combat.|Furthermore, a magically reinforced armor grants us another layer of security.",
             "speak;Chosen;Boring.",
             "speak;Simonyoung;{tgm}...",
@@ -3474,7 +3490,7 @@
             "wait;500",
             "sound;VillageDestroyed",
             "show_layer;Village intro destroyed",
-            "music;Shadow of the Enemy",
+            "music;Tension",
             "wait;1000",
             "end_skip",
             "add_portrait;Chosen;Left,Bottom;no_block",
@@ -3528,7 +3544,7 @@
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
-            "speak;Ivala;You can frequently use the cancel button (default: Z key) to revert a selection.|After selecing a unit, your range of available movement will be displayed through blue tiles.|If you want to stay in place, select the same tile you are already on.|After moving, your options appear in a window.|The options you have available depend on a plethora of factors, such as your current position or available targets.|For now, feel free to move anywhere, then select <red>Wait</> to end your turn.;bottom;;;;blue;;;;;None",
+            "speak;Ivala;You can frequently use the cancel button (default: Z key) to revert a selection.|After selecing a unit, your range of available movement will be displayed through blue tiles.|The red tiles show the maximum range of your attacks.|If you want to stay in place, select the same tile you are already on.|After moving, your options appear in a window.|The options you have available depend on a plethora of factors, such as your current position or available targets.|For now, feel free to move anywhere, then select <red>Wait</> to end your turn.;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
             "wait;200",
             "end"
@@ -3561,7 +3577,7 @@
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
-            "speak;Ivala;Other tiles might give you positive or negative bonuses.|To check their effects, place the cursor on them and check the bottom part of your screen.;bottom;;;;blue;;;;;None",
+            "speak;Ivala;Other tiles might give you positive or negative bonuses.|To check their effects, place the cursor on them and check the bottom part of your screen.|<red>\"DEF\"</> means how much defense a unit will gain by standing on it.|Likewise, <red>\"AVO\"</> means how much more likely the unit will dodge attacks.;bottom;;;;blue;;;;;None",
             "end"
         ],
         "nid": "7 Tutorial:fort"
@@ -3606,24 +3622,23 @@
         "nid": "7 Tutorial:move_and_action"
     },
     {
-        "name": "Tutorial:item",
-        "trigger": "combat_end",
+        "name": "Tutorial:trade",
+        "trigger": "phase_change",
         "level_nid": "7",
-        "condition": "(unit.nid == \"Chosen\" and unit2.team == 'enemy') or (unit.team == 'enemy' and unit2.nid == \"Chosen\")",
+        "condition": "game.game_vars['ivala'] == 1 and game.get_unit('Chosen').get_hp() < game.get_unit('Chosen').get_max_hp() and game.level_vars['simonappears'] == 1 and has_item('Health_Potion', nid=\"Simonyoung\") == True",
         "commands": [],
         "only_once": true,
         "priority": 20,
         "_source": [
-            "if;{v:ivala} == 1 and game.get_unit('Chosen').get_hp() < game.get_unit('Chosen').get_max_hp()",
-            "    wait;500",
-            "    add_portrait;Ivala;(120,32)",
-            "    wait;200",
-            "    speak;Ivala;If you ever need to heal your wounds, try selecting <red>Item</> and using the Health Potion.|This will consume your action, so be strategic.;bottom;;;;blue;;;;;None",
-            "    remove_portrait;Ivala",
-            "    wait;200",
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;Oh, dear Chosen, you are in need of healing.|Thankfully, Simon has brought a <red>Health Potion</>.|By placing your units adjacent to each other, they can <red>Trade</> items between their inventories.|Trading does not cost an action!{br}However, it must be done before doing something that do costs an action.;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial:item"
+        "nid": "7 Tutorial:trade"
     },
     {
         "name": "Tutorial:visit",
@@ -3658,24 +3673,35 @@
             "move_cursor;13,2",
             "disp_cursor;t",
             "wait;500",
+            "music;Reinforcements",
             "add_unit;Simonyoung;13,2;fade;closest;north",
             "move_unit;Simonyoung;13,3;normal;closest",
             "wait;200",
             "add_unit;105;13,2;fade;stack;north",
             "add_unit;106;13,2;fade;stack;north",
             "add_unit;107;13,2;fade;stack;north",
+            "add_unit;110;13,2;fade;stack;north",
+            "add_unit;111;13,2;fade;stack;north",
             "move_unit;105;14,2;normal;closest",
             "move_unit;106;13,4;normal;closest",
             "move_unit;107;12,3;normal;closest",
+            "move_unit;110;14,3;normal;closest",
+            "move_unit;111;13,4;normal;closest",
             "wait;1000",
             "add_portrait;Simonyoung;Left,Bottom;normal",
-            "s;Simonyoung;Prioritize the evacuation of nearby villages!|Maintain the communication link and we should be able to pinpoint the attack's origin.|Move!",
+            "s;Simonyoung;Rose group, prioritize the evacuation of nearby villages!|Maintain the communication link to our mages and we should be able to pinpoint the attack's origin.|Golem group, you're with me. Attack the spiders!",
+            "remove_portrait;Simonyoung",
             "wait;400",
             "move_unit;105;11,0;normal;push",
             "move_unit;106;14,2;normal;push",
             "move_unit;107;12,9;normal;push",
+            "move_unit;110;11,1;normal;closest",
+            "move_unit;111;10,6;normal;closest",
             "remove_group;Soldiers;fade",
             "wait;500",
+            "interact_unit;110;11,1;hit1, hit2, crit1",
+            "interact_unit;111;10,7;miss1, crit2",
+            "wait;1000",
             "if;{v:ivala} == 1",
             "    add_portrait;Ivala;(120,32)",
             "    wait;200",
@@ -3683,7 +3709,7 @@
             "    remove_portrait;Ivala",
             "    wait;500",
             "end",
-            ""
+            "music_fade_back"
         ],
         "nid": "7 Simon Chega"
     },
@@ -3696,11 +3722,12 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "level_var;tutoskill;1",
             "if;{v:ivala} == 1 and {v:snagbridge} == 0",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
             "    wait;200",
-            "    speak;Ivala;Some maps contain breakable tiles, such as broken <red>Walls</> or <red>Snags</>.|Those can be attacked by any unit, friend or foe.|Always be on the lookout for them, as their destruction can change your available movement.|There is an available <red>Snag</> here, why don't you try breaking it with Simon and see what happens?;bottom;;;;blue;;;;;None",
+            "    speak;Ivala;Some maps contain breakable tiles, such as broken <red>Walls</> or <red>Snags</>.|Those can be attacked by any unit, friend or foe.|Always be on the lookout for them, as their destruction can change your available movement.;bottom;;;;blue;;;;;None",
             "    remove_portrait;Ivala",
             "    wait;200",
             "    move_cursor;9,2",
@@ -3727,7 +3754,8 @@
             "    speak;Ivala;Good job defeating your first foe!|You should still warn the other village.|You never know, things could take a turn for the worse.;bottom;;;;blue;;;;;None",
             "    remove_portrait;Ivala",
             "    wait;200",
-            "end"
+            "end",
+            "change_objective_simple;Warn the village!"
         ],
         "nid": "7 Firstspiderdeath"
     },
@@ -3740,6 +3768,10 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "wait;1000",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
             "win_game"
         ],
         "nid": "7 Spiderboss death"
@@ -3754,9 +3786,11 @@
         "priority": 20,
         "_source": [
             "transition;close",
+            "music_clear",
             "wait;1000",
             "change_background;VillageGate",
             "transition;open",
+            "music;Happy1",
             "add_portrait;Chosen;Left,Bottom",
             "add_portrait;Simonyoung;Right,Bottom",
             "s;Chosen;Ahh... nothing beats the feeling of victory!|I saved the day, despite your grumpy ass holding me back!",
@@ -3781,9 +3815,160 @@
         "_source": [
             "wait;500",
             "add_portrait;Chosen;Right,Bottom;;Smile",
-            "s;Chosen;You're... You're freaking hot!|Dang, I'll love to get a taste after defeating you!",
-            "remove_portrait;Chosen"
+            "s;Chosen;You're... You're freaking hot!{br}That's a spider succubus!|Dang, I'm gonna get a taste after defeating you!",
+            "add_portrait;SpiderQueen;Left,Bottom",
+            "s;SpiderQueen;You'd love that, wouldn't you, pretty boy?|I'm gonna have lots of fun once I tie you up.|I'm gonna make YOU shoot white sticky stuff out of your ass!",
+            "s;Chosen;Hell ye-{c:expression;Chosen;NoSmile}{c:wait;700} wait...",
+            "multi_remove_portrait;Chosen;SpiderQueen"
         ],
         "nid": "7 Chosen Quote Spiderboss"
+    },
+    {
+        "name": "PROLDeathChosen",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Chosen'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear",
+            "add_portrait;Chosen;FarRight",
+            "speak;Chosen;Whaaat?{c:wait;500} I...{c:wait;500} I was THE one to...",
+            "expression;Chosen;CloseEyes",
+            "remove_portrait;Chosen",
+            "remove_unit;Chosen",
+            "lose_game"
+        ],
+        "nid": "Global PROLDeathChosen"
+    },
+    {
+        "name": "Tutorial:green",
+        "trigger": "other_turn_change",
+        "level_nid": "7",
+        "condition": "game.game_vars['ivala'] == 1",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;Green units are <green>allies</> of your party.|They will move independently of your commands.;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200",
+            "end"
+        ],
+        "nid": "7 Tutorial:green"
+    },
+    {
+        "name": "Tutorial:skill",
+        "trigger": "unit_select",
+        "level_nid": "7",
+        "condition": "unit.nid == 'Simonyoung' and game.level_vars['tutoskill'] == 1 and game.game_vars['ivala'] == 1",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;Units have different <red>abilities</>, each with their own conditions and effects.|Generally, abilities cost <red>Mana</> to use. Mana is refilled at the start of each level.|You can consult the current mana of each character by accessing the status screen (C key).|As units level up or form connections to other units, they can gain more abilities.|Simon already has some of them, in the form of strikes that cause <red>status effects</>.|Since the boss uses Magic to attack, it's worth using <red>Silencing Strike</>!;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200",
+            "level_var;tutopair;1"
+        ],
+        "nid": "7 Tutorial:skill"
+    },
+    {
+        "name": "Tutorial:pair-up",
+        "trigger": "phase_change",
+        "level_nid": "7",
+        "condition": "game.level_vars['tutopair'] == 1 and game.game_vars['ivala'] == 1",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;Let's talk about the <red>Pair-up</> system.|First, we have the <red>Attack Stance</>:|it triggers whenever one of 2 adjacent units enter a combat.|In that battle, the adjacent unit will join and deal half damage.|<red>This is true for friend (two blue units) or foe (two red units)!</>|On the other hand, we have the <red>Defense Stance</>:|Adjacent units can select the <red>Pair-up</> option to join another unit.|In doing so, the joined unit will not participate in dealing damage, but will instead accumulate 2 <red>charges</> from every battle.|When it reaches 10 charges, it will negate all damage.|After pairing-up, you can switch who is the \"main unit\" or separate.|Just remember, paired-up units will not participate in Attack Stances!;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200"
+        ],
+        "nid": "7 Tutorial:pair-up"
+    },
+    {
+        "name": "Tutorial:attack speed",
+        "trigger": "combat_start",
+        "level_nid": "7",
+        "condition": "game.game_vars['ivala'] == 1",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;The combat happens automatically, and many factors come into play.|<red>HIT</> refers to the percentage of an attack landing.|<red>DMG</> is, well, the damage.|<red>CRT</> is the chance of a critical strike, which deals thrice the damage!|Units sometimes can <red>double attack</>. This depends on a series of calculations.|In short, it's an interaction between the <red>SPD (speed)</> stat of the units,|the <red>WT (weight)</> of the weapons,|and the <red>CON (constitution)</> of each combatant.;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200"
+        ],
+        "nid": "7 Tutorial:attack speed"
+    },
+    {
+        "name": "PROLDeathSimon",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Simonyoung'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear",
+            "add_portrait;Simonyoung;FarRight;normal;CloseEyes",
+            "speak;Simonyoung;I...{c:wait;500} was not good enough.{br}{c:wait;500}Forgive me, I must heal my injuries.",
+            "remove_portrait;Chosen",
+            "remove_unit;Simonyoung",
+            "music_fade_back"
+        ],
+        "nid": "Global PROLDeathSimon"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "8",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_talk;Chosen;Monica",
+            "remove_group;PlayerTeam;immediate",
+            "chapter_title",
+            "change_background;Clearing",
+            "transition;Open",
+            "multi_add_portrait;Chosen;Left;Simonyoung;Right",
+            "s;Chosen;...and a redhead to complete my Harem.{c:wait;500}{br}Man, it's gonna be awesome being worldwidefamous!",
+            "s;Simonyoung;You have an obscenely high amount of other things you should rather be worrying about.",
+            "expression;Chosen;NoSmile",
+            "s;Chosen;Hmm... you're right...{c:wait;1500}{br}I will need to buy a mansion to fit so many people.",
+            "s;Simonyoung;That's precisely not w-{c:wait;500}{c:music_clear} wait.",
+            "change_background;VillageGate",
+            "multi_add_portrait;Chosen;Left;Simonyoung;Right",
+            "s;Simonyoung;There, I can see it.",
+            "s;Chosen;That's our objective? Alright, let's bounce!",
+            "wait;500",
+            "multi_remove_portrait;Chosen;Simonyoung",
+            "transition;close",
+            "change_background",
+            "wait;1000",
+            "move_cursor;7,14",
+            "add_group;PlayerTeam;starting;immediate;giveup",
+            "add_group;Others;starting;immediate;giveup",
+            "add_group;Monsters;starting;immediate;giveup",
+            "transition;open"
+        ],
+        "nid": "8 Intro"
     }
 ]

@@ -2728,74 +2728,6 @@
         "fields": []
     },
     {
-        "nid": "Simonyoung",
-        "name": "Simon",
-        "desc": "",
-        "variant": null,
-        "level": 1,
-        "klass": "Paladin",
-        "tags": [],
-        "bases": {
-            "HP": 15,
-            "STR": 5,
-            "MAG": 5,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 5,
-            "DEF": 5,
-            "RES": 5,
-            "CON": 11,
-            "MOV": 8
-        },
-        "growths": {
-            "HP": 60,
-            "STR": 40,
-            "MAG": 40,
-            "SKL": 40,
-            "SPD": 40,
-            "LCK": 40,
-            "DEF": 40,
-            "RES": 40
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Lance",
-                false
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Blinding_Strike"
-            ],
-            [
-                1,
-                "Silencing_Strike"
-            ],
-            [
-                1,
-                "Stunning_Strike"
-            ],
-            [
-                1,
-                "Rebuke"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                1,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Simonyoung",
-        "affinity": "None",
-        "fields": []
-    },
-    {
         "nid": "Chosen",
         "name": "Chosen",
         "desc": "A sage-in-training from Jehanna. He reveres his teacher, Saleh.",
@@ -2833,10 +2765,6 @@
         "starting_items": [
             [
                 "Iron_Sword",
-                false
-            ],
-            [
-                "Health_Potion",
                 false
             ]
         ],
@@ -2912,12 +2840,153 @@
         "fields": []
     },
     {
+        "nid": "Simonyoung",
+        "name": "Simon",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Paladin",
+        "tags": [],
+        "bases": {
+            "HP": 25,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 10,
+            "RES": 7,
+            "CON": 11,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 60,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 40,
+            "RES": 40
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Lance",
+                false
+            ],
+            [
+                "Health_Potion",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Blinding_Strike"
+            ],
+            [
+                1,
+                "Silencing_Strike"
+            ],
+            [
+                1,
+                "Stunning_Strike"
+            ],
+            [
+                1,
+                "Rebuke"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                1,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Simonyoung",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Monica",
+        "name": "Sister Monica",
+        "desc": "",
+        "variant": "Monica",
+        "level": 1,
+        "klass": "Cleric",
+        "tags": [],
+        "bases": {
+            "HP": 10,
+            "STR": 2,
+            "MAG": 7,
+            "SKL": 2,
+            "SPD": 4,
+            "LCK": 7,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 5
+        },
+        "growths": {
+            "SPD": 32,
+            "HP": 50,
+            "STR": 0,
+            "MAG": 30,
+            "SKL": 35,
+            "LCK": 45,
+            "DEF": 8,
+            "RES": 50,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "starting_items": [
+            [
+                "Heal",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Puppy_Eyes"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Staff": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Monica",
+        "affinity": "Light",
+        "fields": []
+    },
+    {
         "nid": "Antarion",
         "name": "Antarion",
         "desc": "A sage from the village Caer Pelyn. He\u2019s Ewan\u2019s solemn, but kind, teacher.",
         "variant": "",
         "level": 1,
-        "klass": "Sage",
+        "klass": "Blademaster",
         "tags": [],
         "bases": {
             "HP": 30,
@@ -2946,11 +3015,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Elfire",
-                false
-            ],
-            [
-                "Thunder",
+                "Rapier",
                 false
             ]
         ],
@@ -3005,6 +3070,144 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Antarion",
+        "affinity": "Wind",
+        "fields": []
+    },
+    {
+        "nid": "Cassian",
+        "name": "Cassian",
+        "desc": "",
+        "variant": "",
+        "level": 1,
+        "klass": "Cavalier",
+        "tags": [],
+        "bases": {
+            "HP": 20,
+            "STR": 5,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 6,
+            "RES": 0,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 35,
+            "MAG": 17,
+            "SKL": 40,
+            "SPD": 28,
+            "LCK": 30,
+            "DEF": 15,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "starting_items": [
+            [
+                "Iron_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                31,
+                null
+            ],
+            "Lance": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Cassian",
+        "affinity": "Fire",
+        "fields": []
+    },
+    {
+        "nid": "Lucia",
+        "name": "Lucia",
+        "desc": "",
+        "variant": "Female",
+        "level": 1,
+        "klass": "Cavalier",
+        "tags": [],
+        "bases": {
+            "HP": 20,
+            "STR": 5,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 6,
+            "RES": 0,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 35,
+            "MAG": 17,
+            "SKL": 40,
+            "SPD": 28,
+            "LCK": 30,
+            "DEF": 15,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "starting_items": [
+            [
+                "Iron_Sword",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                31,
+                null
+            ],
+            "Lance": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Lucia",
         "affinity": "Wind",
         "fields": []
     },
@@ -3100,7 +3303,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Cormag",
+        "portrait_nid": "SpiderQueen",
         "affinity": "Fire",
         "fields": []
     },
