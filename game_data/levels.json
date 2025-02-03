@@ -161,7 +161,7 @@
             "player_battle": "Prologue battles",
             "enemy_battle": "Prologue battles",
             "boss_battle": "Boss1",
-            "other_phase": "Greentheme",
+            "other_phase": "Other theme",
             "other_battle": null
         },
         "objective": {
@@ -596,43 +596,16 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    17,
-                    14
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
             },
             {
-                "nid": "101",
+                "nid": "105",
                 "variant": null,
                 "level": 5,
-                "klass": "Orc",
-                "faction": "Soldier",
-                "starting_items": [
-                    [
-                        "Iron_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    12,
-                    2
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "102",
-                "variant": null,
-                "level": 5,
-                "klass": "Orc",
-                "faction": "Soldier",
+                "klass": "Brigand",
+                "faction": "Bandit",
                 "starting_items": [
                     [
                         "Iron_Axe",
@@ -646,41 +619,65 @@
                 "ai_group": "",
                 "starting_position": [
                     9,
-                    2
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "103",
-                "variant": null,
-                "level": 5,
-                "klass": "Imp",
-                "faction": "Soldier",
-                "starting_items": [
-                    [
-                        "Iron_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    1,
                     4
                 ],
                 "starting_traveler": null,
                 "generic": true
             },
             {
-                "nid": "104",
+                "nid": "106",
                 "variant": null,
                 "level": 5,
-                "klass": "Imp",
-                "faction": "Soldier",
+                "klass": "Brigand",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    3,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "111",
+                "variant": null,
+                "level": 5,
+                "klass": "Brigand",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    16,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 5,
+                "klass": "Militia",
+                "faction": "Bandit",
                 "starting_items": [
                     [
                         "Iron_Lance",
@@ -693,8 +690,112 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    14,
+                    6,
                     2
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "109",
+                "variant": null,
+                "level": 5,
+                "klass": "Militia",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "108",
+                "variant": null,
+                "level": 5,
+                "klass": "Thief",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    15,
+                    1
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "110",
+                "variant": null,
+                "level": 5,
+                "klass": "Thief",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    4,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Crusher",
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Wall",
+                "variant": null,
+                "level": 1,
+                "klass": "Wall25",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    9
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -702,8 +803,8 @@
         ],
         "regions": [
             {
-                "nid": "New Region",
-                "region_type": "terrain",
+                "nid": "Wall",
+                "region_type": "event",
                 "position": [
                     14,
                     9
@@ -712,7 +813,7 @@
                     1,
                     1
                 ],
-                "sub_nid": null,
+                "sub_nid": "Destructible",
                 "condition": "True",
                 "time_left": null,
                 "only_once": false,
@@ -729,30 +830,30 @@
                 "positions": {}
             },
             {
-                "nid": "Others",
+                "nid": "Bandits",
                 "units": [
-                    "Monica",
-                    "Cassian",
-                    "Lucia",
-                    "Antarion"
+                    "Crusher",
+                    "110",
+                    "108",
+                    "109",
+                    "107",
+                    "111",
+                    "106",
+                    "105"
                 ],
                 "positions": {}
             },
             {
-                "nid": "Monsters",
+                "nid": "Others",
                 "units": [
-                    "101",
-                    "102"
+                    "Monica",
+                    "Cassian",
+                    "Lucia"
                 ],
                 "positions": {}
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "1",
@@ -1905,7 +2006,7 @@
                 "generic": false
             },
             {
-                "nid": "Bazba",
+                "nid": "Crusher",
                 "team": "enemy",
                 "ai": "Guard",
                 "roam_ai": null,

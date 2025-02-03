@@ -9,8 +9,8 @@
                 "nid": "26",
                 "name": "New Location",
                 "pos": [
-                    16,
-                    17
+                    15,
+                    18
                 ],
                 "icon": "castle",
                 "level": "7",
@@ -31,15 +31,30 @@
                 "nid": "28",
                 "name": "New Location",
                 "pos": [
-                    20,
-                    14
+                    18,
+                    16
                 ],
                 "icon": "town",
-                "level": null,
+                "level": "8",
                 "menu_options": []
             }
         ],
-        "map_paths": {},
+        "map_paths": {
+            "(15, 18)-(18, 16)": [
+                [
+                    18,
+                    16
+                ],
+                [
+                    16,
+                    18
+                ],
+                [
+                    15,
+                    18
+                ]
+            ]
+        },
         "border_tile_width": 1
     },
     {
