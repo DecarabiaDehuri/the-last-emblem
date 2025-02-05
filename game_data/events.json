@@ -1672,6 +1672,7 @@
             "add_base_convo;Dreams of Home",
             "add_weather;night",
             "game_var;_supports;True",
+            "enable_turnwheel;1",
             "#trigger_script;Trigger",
             "base;Clearing",
             "#music;Attack;2000",
@@ -3120,7 +3121,8 @@
         "priority": 20,
         "_source": [
             "add_talk;Simon;Aka",
-            "set_current_hp;Chosen;1"
+            "set_current_hp;Chosen;1",
+            "set_current_hp;Monica;1"
         ],
         "nid": "DEBUG Addtalk"
     },
@@ -3419,11 +3421,11 @@
             "move_cursor;1,1",
             "disp_cursor;1,1",
             "wait;300",
-            "change_music;player_phase;Halfway change",
-            "change_music;enemy_phase;Halfway change",
-            "change_music;enemy_battle;Halfway change",
-            "change_music;player_battle;Halfway change",
-            "music;Halfway change",
+            "change_music;player_phase;Halfway change loop",
+            "change_music;enemy_phase;Halfway change loop",
+            "change_music;enemy_battle;Halfway change loop",
+            "change_music;player_battle;Halfway change loop",
+            "music;Halfway change loop",
             "add_unit;SpiderQueen;0,0;fade;closest;north",
             "add_unit;103;1,0;fade;closest;north",
             "add_unit;104;0,1;fade;closest;west",
@@ -3522,7 +3524,7 @@
         "nid": "7 Intro"
     },
     {
-        "name": "Tutorial:navigation",
+        "name": "Tutorial: navigation",
         "trigger": "turn_change",
         "level_nid": "7",
         "condition": "game.turncount == 1",
@@ -3542,10 +3544,10 @@
             "multi_remove_portrait;Chosen;Ivala",
             "end"
         ],
-        "nid": "7 Tutorial:navigation"
+        "nid": "7 Tutorial: navigation"
     },
     {
-        "name": "Tutorial:movement",
+        "name": "Tutorial: movement",
         "trigger": "unit_select",
         "level_nid": "7",
         "condition": "unit.nid == 'Chosen'",
@@ -3562,10 +3564,10 @@
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial:movement"
+        "nid": "7 Tutorial: movement"
     },
     {
-        "name": "Tutorial:fort",
+        "name": "Tutorial :fort",
         "trigger": "phase_change",
         "level_nid": "7",
         "condition": "game.turncount == 2",
@@ -3593,10 +3595,10 @@
             "speak;Ivala;Other tiles might give you positive or negative bonuses.|To check their effects, place the cursor on them and check the bottom part of your screen.|<red>\"DEF\"</> means how much defense a unit will gain by standing on it.|Likewise, <red>\"AVO\"</> means how much more likely the unit will dodge attacks.;bottom;;;;blue;;;;;None",
             "end"
         ],
-        "nid": "7 Tutorial:fort"
+        "nid": "7 Tutorial :fort"
     },
     {
-        "name": "Tutorial:cliff",
+        "name": "Tutorial: cliff",
         "trigger": "phase_change",
         "level_nid": "7",
         "condition": "game.turncount == 2",
@@ -3612,10 +3614,10 @@
             "    wait;200",
             "end"
         ],
-        "nid": "7 Tutorial:cliff"
+        "nid": "7 Tutorial: cliff"
     },
     {
-        "name": "Tutorial:move_and_action",
+        "name": "Tutorial: move_and_action",
         "trigger": "enemy_turn_change",
         "level_nid": "7",
         "condition": "game.turncount == 1",
@@ -3632,10 +3634,10 @@
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial:move_and_action"
+        "nid": "7 Tutorial: move_and_action"
     },
     {
-        "name": "Tutorial:trade",
+        "name": "Tutorial: trade",
         "trigger": "phase_change",
         "level_nid": "7",
         "condition": "game.game_vars['ivala'] == 1 and game.get_unit('Chosen').get_hp() < game.get_unit('Chosen').get_max_hp() and game.level_vars['simonappears'] == 1 and has_item('Health_Potion', nid=\"Simonyoung\") == True",
@@ -3646,15 +3648,15 @@
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
-            "speak;Ivala;Oh, dear Chosen, you are in need of healing.|Thankfully, Simon has brought a <red>Health Potion</>.|By placing your units adjacent to each other, they can <red>Trade</> items between their inventories.|Trading does not cost an action!{br}However, it must be done before doing something that do costs an action.;bottom;;;;blue;;;;;None",
+            "speak;Ivala;Oh, dear Chosen, you are in need of healing.|Thankfully, Simon has brought a <red>Health Potion</>.|By placing your units adjacent to each other, they can <red>Trade</>.|Trade will switch items between their inventories, which can hold up to 5 items.|You can trade as many times as you want before performing an action.|However, you cannot cancel your movement or move again after trading!;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial:trade"
+        "nid": "7 Tutorial: trade"
     },
     {
-        "name": "Tutorial:visit",
+        "name": "Tutorial: visit",
         "trigger": "turn_change",
         "level_nid": "7",
         "condition": "game.turncount == 3",
@@ -3671,7 +3673,7 @@
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial:visit"
+        "nid": "7 Tutorial: visit"
     },
     {
         "name": "Simon Chega",
@@ -3729,7 +3731,7 @@
         "nid": "7 Simon Chega"
     },
     {
-        "name": "Tutorial:snag",
+        "name": "Tutorial: snag",
         "trigger": "unit_select",
         "level_nid": "7",
         "condition": "unit.nid == 'Simonyoung'",
@@ -3751,7 +3753,7 @@
             "    disp_cursor;n",
             "end"
         ],
-        "nid": "7 Tutorial:snag"
+        "nid": "7 Tutorial: snag"
     },
     {
         "name": "Firstspiderdeath",
@@ -3858,7 +3860,7 @@
         "nid": "Global PROLDeathChosen"
     },
     {
-        "name": "Tutorial:green",
+        "name": "Tutorial: green",
         "trigger": "other_turn_change",
         "level_nid": "7",
         "condition": "game.game_vars['ivala'] == 1",
@@ -3874,10 +3876,10 @@
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial:green"
+        "nid": "7 Tutorial: green"
     },
     {
-        "name": "Tutorial:skill",
+        "name": "Tutorial: skill",
         "trigger": "unit_select",
         "level_nid": "7",
         "condition": "unit.nid == 'Simonyoung' and game.level_vars['tutoskill'] == 1 and game.game_vars['ivala'] == 1",
@@ -3888,15 +3890,15 @@
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
-            "speak;Ivala;Units have different <red>abilities</>, each with their own conditions and effects.|Generally, abilities cost <red>Mana</> to use. Mana is refilled at the start of each level.|You can consult the current mana of each character by accessing the status screen (C key).|As units level up or form connections to other units, they can gain more abilities.|Simon already has some of them, in the form of strikes that cause <red>status effects</>.|Since the boss uses Magic to attack, it's worth using <red>Silencing Strike</>!;bottom;;;;blue;;;;;None",
+            "speak;Ivala;Units have different <red>abilities</>, each with their own conditions and effects.|Generally, abilities cost <red>Mana</> to use. Mana is refilled at the start of each chapter.|You can consult the current mana of each character by accessing the status screen (C key).|As units level up or form connections to other units, they can gain more abilities.|Simon already has some of them, in the form of strikes that cause <red>status effects</>.|Since the boss uses Magic to attack, it's worth using <red>Silencing Strike</>!;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
             "wait;200",
             "level_var;tutopair;1"
         ],
-        "nid": "7 Tutorial:skill"
+        "nid": "7 Tutorial: skill"
     },
     {
-        "name": "Tutorial:pair-up",
+        "name": "Tutorial: pair-up",
         "trigger": "phase_change",
         "level_nid": "7",
         "condition": "game.level_vars['tutopair'] == 1 and game.game_vars['ivala'] == 1",
@@ -3907,14 +3909,14 @@
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
-            "speak;Ivala;Let's talk about the <red>Pair-up</> system.|First, we have the <red>Attack Stance</>:|it triggers whenever one of 2 adjacent units enter a combat.|In that battle, the adjacent unit will join and deal half damage.|<red>This is true for friend (two blue units) or foe (two red units)!</>|On the other hand, we have the <red>Defense Stance</>:|Adjacent units can select the <red>Pair-up</> option to join another unit.|In doing so, the joined unit will not participate in dealing damage, but will instead accumulate 2 <red>charges</> from every battle.|When it reaches 10 charges, it will negate all damage.|After pairing-up, you can switch who is the \"main unit\" or separate.|Just remember, paired-up units will not participate in Attack Stances!;bottom;;;;blue;;;;;None",
+            "speak;Ivala;Let's talk about the <red>Pair-up</> system.|First, we have the <red>Attack Stance</>:|it triggers whenever one of 2 adjacent units enter a combat.|In that battle, the adjacent unit will join and deal half damage.|<red>This is true for friend (two blue units) or foe (two red units)!</>|On the other hand, we have the <red>Defense Stance</>:|Adjacent units can select the <red>Pair-up</> option to join another unit.|The joined unit will not participate in dealing damage.|Instead, they will accumulate 2 <red>charges</> from each battle.|When it reaches 10 charges, it will negate all damage once, and the gauge is reset.|After pairing-up, you can switch who is the \"main unit\" or separate.|Just remember, paired-up units will not participate in Attack Stances!;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
             "wait;200"
         ],
-        "nid": "7 Tutorial:pair-up"
+        "nid": "7 Tutorial: pair-up"
     },
     {
-        "name": "Tutorial:attack speed",
+        "name": "Tutorial: attack speed",
         "trigger": "combat_start",
         "level_nid": "7",
         "condition": "game.game_vars['ivala'] == 1",
@@ -3929,7 +3931,7 @@
             "remove_portrait;Ivala",
             "wait;200"
         ],
-        "nid": "7 Tutorial:attack speed"
+        "nid": "7 Tutorial: attack speed"
     },
     {
         "name": "PROLDeathSimon",
@@ -3964,6 +3966,7 @@
             "chapter_title",
             "change_background;Clearing",
             "transition;Open",
+            "music;Happy1",
             "multi_add_portrait;Chosen;Left;Simonyoung;Right",
             "s;Chosen;...and a redhead to complete my Harem.{c:wait;500}{br}Man, it's gonna be awesome being worldwidefamous!",
             "s;Simonyoung;You have an obscenely high amount of other things you should rather be worrying about.",
@@ -3973,36 +3976,41 @@
             "change_background;VillageGate",
             "multi_add_portrait;Chosen;Left;Simonyoung;Right",
             "s;Simonyoung;There, I can see it.",
-            "s;Chosen;That's our objective? Alright, let's bounce!",
+            "s;Chosen;That's our objective? Alright, let's pick up the pace!",
             "wait;500",
             "multi_remove_portrait;Chosen;Simonyoung",
             "transition;close",
+            "end_skip",
             "change_background",
             "wait;1000",
-            "move_cursor;7,14",
+            "move_cursor;9,16",
             "add_group;PlayerTeam;starting;immediate;giveup",
             "add_group;Others;starting;immediate;giveup",
             "add_group;Bandits;starting;immediate;giveup",
             "transition;open",
             "wait;1000",
+            "center_cursor;10,11",
+            "wait;1500",
+            "center_cursor;Chosen",
+            "wait;1000",
             "add_portrait;Chosen;Left;normal;Smile",
             "s;Chosen;Ohh, I see a pretty lady there!",
             "wait;300",
-            "move_unit;Chosen;7,12;normal;giveup",
-            "wait;300",
-            "move_unit;Simonyoung;6,11;normal;giveup",
-            "wait;100",
-            "move_unit;Simonyoung;7,11;normal;giveup",
+            "move_unit;Chosen;10,12;normal;giveup;no_block",
+            "move_unit;Simonyoung;9,12;normal;giveup",
+            "move_unit;Simonyoung;9,11;normal;giveup",
+            "move_unit;Simonyoung;10,11;normal;giveup",
             "wait;500",
             "add_portrait;Simonyoung;Right;normal;NoSmile",
             "expression;Chosen;NoSmile",
+            "music_clear",
             "s;Simonyoung;Wait. There's something wrong here.",
             "wait;400",
             "multi_remove_portrait;Chosen;Simonyoung",
-            "wait;500",
-            "move_cursor;7,6",
+            "wait;1000",
+            "center_cursor;9,7",
             "music;Tension",
-            "wait;500",
+            "wait;1500",
             "flicker_cursor;Crusher",
             "wait;300",
             "add_portrait;Crusher;Right;normal;Smile",
@@ -4011,16 +4019,22 @@
             "s;Monica;{tgm}...",
             "add_portrait;Cassian;Left;left;NoSmile",
             "s;Cassian;Who do you think you are, jackass?|Do you really think we'll just bend our knees to your ugly ass?",
-            "add_portrait;Lucia;MidLeft;left;NoSmile",
+            "expression;Crusher;NoSmile",
+            "add_portrait;Lucia;MidLeft;left;Smile",
             "s;Lucia;You mean to say that you would consider it if he were handsome?",
             "s;Cassian;It's useless to come up with impossible scenarios.|The hot ones don't form brigand bands.",
             "s;Lucia;But sometimes they are amongst their underlings.|You know, last summer, that thief...",
             "bop_portrait;Crusher",
-            "s;Crusher;Enough!{c:wait;400} What the hell are you two talking about?!|Men, let's crush them!",
+            "s;Crusher;Enough!{c:wait;400} What the hell are you two talking about?!|Men, crush them and I'll resume our mission!",
             "s;Cassian;Well, we tried the diplomacy!",
             "s;Lucia;No, we fucking didn't.",
             "multi_remove_portrait;Monica;Cassian;Lucia;Crusher",
             "wait;500",
+            "move_unit;Crusher;19,5;normal;giveup;no_follow;no_block",
+            "wait;100",
+            "move_unit;113;7,10;normal;giveup;no_block;no_follow",
+            "move_unit;114;11,9;normal;giveup;no_follow",
+            "wait;1000",
             "move_cursor;Chosen",
             "wait;200",
             "multi_add_portrait;Simonyoung;Left;Chosen;Right",
@@ -4029,35 +4043,38 @@
             "s;Simonyoung;{tgm}...",
             "multi_remove_portrait;Chosen;Simonyoung",
             "wait;400",
-            "add_unit;Antarion;6,14;fade;giveup;south",
+            "music_clear",
+            "add_unit;Antarion;8,17;fade;giveup;south",
             "move_cursor;Antarion",
             "flicker_cursor;Antarion",
             "wait;300",
-            "move_unit;Antarion;6,12;normal;giveup",
+            "move_unit;Antarion;9,12;normal;giveup",
             "wait;200",
             "add_portrait;Antarion;Left;normal;Smile",
+            "music;Funny",
             "s;Antarion;Mere bandits dare to attack this precious flower?|Ha! Not in the presence of the mighty Antarion!|You shall taste defeat from the mightiest of the land!",
             "wait;200",
             "add_portrait;Chosen;Right;normal;NoSmile",
-            "s;Chosen;Bro, what the hell?! You're seriously going to steal my spotlight?",
+            "s;Chosen;Bro, what the hell?! You're seriously trying to steal my spotlight?",
             "s;Antarion;Who even are you, kid? Go play with your toys somewhere else, this is between adults.",
             "s;Chosen;You... you...!",
             "s;Antarion;In awe? I know, it isn't every day you meet a famous blademaster such as myself.|If you wish to join my party, then just say so.|I'll protect you from the threat.{br}Try not to soil your diaper.",
             "remove_portrait;Antarion",
             "wait;200",
-            "move_unit;Antarion;6,10",
+            "move_unit;Antarion;9,11",
             "wait;1000",
             "s;Chosen;By Ivala, this prick is gonna pay!{br}I'm gonna defeat way more bandits than him!",
             "remove_portrait;Chosen",
             "wait;500",
-            "move_unit;Simonyoung;8,11;normal;giveup",
-            "move_unit;Chosen;7,10;normal;giveup",
+            "move_unit;Simonyoung;11,11;normal;giveup",
+            "move_unit;Chosen;10,11;normal;giveup",
             "wait;1000",
             "change_team;Antarion;player",
             "wait;200",
             "sound;Level Up",
             "alert;You joined \"Antarion's Party\"!",
-            "game_var;ivala;1"
+            "game_var;ivala;1",
+            "music_clear"
         ],
         "nid": "8 Intro"
     },
@@ -4079,7 +4096,7 @@
         "nid": "8 Wall destroyed"
     },
     {
-        "name": "Tutorial:weapon triangle",
+        "name": "Tutorial: weapon triangle",
         "trigger": "phase_change",
         "level_nid": "8",
         "condition": "game.game_vars['ivala'] == 1",
@@ -4091,28 +4108,28 @@
             "add_portrait;Ivala;(120,32)",
             "wait;200",
             "speak;Ivala;There is something important you should be aware of: the enemies' <red>weapons</>.;bottom;;;;blue;;;;;None",
-            "move_cursor;3,4",
-            "flicker_cursor;3,4",
+            "center_cursor;Crusher",
+            "flicker_cursor;Crusher",
             "wait;300",
             "speak;Ivala;This enemy uses an <icon>Axe</><red>Axe</>.;bottom;;;;blue;;;;;None",
             "wait;300",
-            "move_cursor;4,2",
-            "flicker_cursor;4,2",
+            "center_cursor;108",
+            "flicker_cursor;108",
             "wait;300",
             "speak;Ivala;This one uses a <icon>Sword</><red>Sword</>.;bottom;;;;blue;;;;;None",
             "wait;200",
-            "move_cursor;6,2",
-            "flicker_cursor;6,2",
+            "move_cursor;107",
+            "flicker_cursor;107",
             "wait;300",
             "speak;Ivala;And this one uses a <icon>Lance</><red>Lance</>.;bottom;;;;blue;;;;;None",
             "speak;Ivala;Those three types make what is called the <red>Weapon Triangle</>.|Think of it as Rock-Paper-Scissors:|<red>Sword beats Axe.|Axe beats Lance.|Lance beats Sword.</>|This relation will affect the damage and accuracy in combat.|Try not to get countered!;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
             "wait;200"
         ],
-        "nid": "8 Tutorial:weapon triangle"
+        "nid": "8 Tutorial: weapon triangle"
     },
     {
-        "name": "Tutorial:support and synergy skills",
+        "name": "Tutorial: support and synergy skills",
         "trigger": "unit_select",
         "level_nid": "8",
         "condition": "unit.nid == 'Antarion' and game.game_var['ivala'] == 1",
@@ -4127,7 +4144,7 @@
             "remove_portrait;Ivala",
             "wait;200"
         ],
-        "nid": "8 Tutorial:support and synergy skills"
+        "nid": "8 Tutorial: support and synergy skills"
     },
     {
         "name": "Chosen Recruits Monica and Cavs",
@@ -4165,6 +4182,7 @@
             "    wait;200",
             "    s;Cassian;Seems like Sister Monica trusts these guys.|The more the merrier!",
             "    remove_portrait;Cassian",
+            "    change_team;Cassian;player",
             "    sound;Level Up",
             "    alert;Cassian has joined your party!",
             "end",
@@ -4175,6 +4193,7 @@
             "    wait;200",
             "    s;Lucia;Hoh... She's opening up her guard.|Must've seen something in them.",
             "    remove_portrait;Lucia",
+            "    change_team;Lucia;player",
             "    sound;Level Up",
             "    alert;Lucia has joined your party!",
             "end",
@@ -4225,6 +4244,7 @@
             "    wait;200",
             "    s;Cassian;Seems like Sister Monica trusts these guys.|The more the merrier!",
             "    remove_portrait;Cassian",
+            "    change_team;Cassian;player",
             "    sound;Level Up",
             "    alert;Cassian has joined your party!",
             "    wait;2000",
@@ -4236,6 +4256,7 @@
             "    wait;200",
             "    s;Lucia;Hoh... She's opening up her guard.|Must've seen something in them.",
             "    remove_portrait;Lucia",
+            "    change_team;Lucia;player",
             "    sound;Level Up",
             "    alert;Lucia has joined your party!",
             "    wait;2000",
@@ -4243,5 +4264,28 @@
             "music_fade_back"
         ],
         "nid": "8 Antarion Recruits Monica and Cavs"
+    },
+    {
+        "name": "Tutorial: turnwheel",
+        "trigger": "phase_change",
+        "level_nid": "8",
+        "condition": "game.turncount == 2 and game.game_vars['ivala'] == 1 and (game.current_mode.nid == 'Casual' or game.current_mode.nid == 'Normal')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "enable_turnwheel;t",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;As you progress on your battles, you may find yourself regretful of past choices.|As I am here to bring Light upon your world, allow me to grant you my most important gift.|You have now access to the <red><wave amplitude=1.5>Turnwheel</></>.|To use it, select a tile without any units, such as you do to bring up extra options.|By selecting Turnwheel, <red>you can revert the state of the battle to a previous point</>.;bottom;;;;blue;;;;;None",
+            "if;game.current_mode.nid == 'Normal'",
+            "    s;Ivala;You only have 3 uses per chapter, so make them count.;bottom;;;;blue;;;;;None",
+            "end",
+            "s;Ivala;Nothing will stand between you and your destined journey.;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200"
+        ],
+        "nid": "8 Tutorial: turnwheel"
     }
 ]

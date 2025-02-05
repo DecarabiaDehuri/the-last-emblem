@@ -1647,6 +1647,246 @@
         ]
     },
     {
+        "nid": "Martial_Masturbation",
+        "name": "Martial Masturbation",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Desperate_Masturbation",
+        "name": "Desperate Masturbation",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Varia'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Healing_Masturbation",
+        "name": "Healing Masturbation",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flaming_Thrust",
+        "name": "Flaming Thrust",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Cautious_Swipes",
+        "name": "Cautious Swipes",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            20
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Swift_Stab",
+        "name": "Swift Stab",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            18
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Heroic_Blow",
         "name": "Heroic Blow",
         "desc": "",
@@ -1753,20 +1993,88 @@
         ],
         "components": [
             [
-                "combat_condition",
-                "game.get_unit('Monica').get_hp() = game.get_unit('Monica').get_max_hp()"
+                "condition",
+                "game.get_unit('Monica').get_hp() == game.get_unit('Monica').get_max_hp()"
+            ],
+            [
+                "defense_pre_proc",
+                "Puppy_Eyes_Effect"
+            ],
+            [
+                "proc_rate",
+                "CERTEZA"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Puppy_Eyes_Effect",
+        "name": "Puppy Eyes",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            41
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                30
             ],
             [
                 "avoid",
-                20
-            ],
-            [
-                "crit_avoid",
-                20
+                30
             ],
             [
                 "display_skill_icon_in_combat",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Flashy_Strike",
+        "name": "Flashy Strike",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            8
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "Flashy_Strike_ability"
+            ],
+            [
+                "alternate_battle_anim",
+                "Critical"
+            ]
+        ]
+    },
+    {
+        "nid": "Twice_the_Threat",
+        "name": "Twice the Threat",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            47
+        ],
+        "components": [
+            [
+                "pairup_bonus",
+                "Canto"
+            ],
+            [
+                "condition",
+                "game.get_traveler"
             ]
         ]
     },
