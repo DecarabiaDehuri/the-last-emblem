@@ -101,7 +101,7 @@
                 "generic": true
             },
             {
-                "nid": "O'Neill",
+                "nid": "Ogma",
                 "team": "enemy",
                 "ai": "Guard",
                 "roam_ai": null,
@@ -177,6 +177,27 @@
         "units": [
             {
                 "nid": "101",
+                "variant": null,
+                "level": 6,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "PursueVillage",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "112",
                 "variant": null,
                 "level": 6,
                 "klass": "Spider",
@@ -312,7 +333,7 @@
                 "generic": false
             },
             {
-                "nid": "Snag",
+                "nid": "Snagcima",
                 "variant": null,
                 "level": 1,
                 "klass": "Snag20",
@@ -324,8 +345,27 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    9,
+                    7,
                     2
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Snagbaixo",
+                "variant": null,
+                "level": 1,
+                "klass": "Snag20",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -412,7 +452,7 @@
                 ],
                 "starting_skills": [],
                 "team": "other",
-                "ai": "AIPrologueGreen",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -433,7 +473,7 @@
                 ],
                 "starting_skills": [],
                 "team": "other",
-                "ai": "AIPrologueGreen",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -446,8 +486,8 @@
                 "nid": "Villagevisit",
                 "region_type": "event",
                 "position": [
-                    2,
-                    7
+                    1,
+                    2
                 ],
                 "size": [
                     1,
@@ -463,8 +503,8 @@
                 "nid": "Villagedestroy",
                 "region_type": "event",
                 "position": [
-                    2,
-                    7
+                    1,
+                    2
                 ],
                 "size": [
                     1,
@@ -477,11 +517,28 @@
                 "interrupt_move": false
             },
             {
-                "nid": "Snag",
+                "nid": "Snagcima",
                 "region_type": "event",
                 "position": [
-                    9,
+                    7,
                     2
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Destructible",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Snagbaixo",
+                "region_type": "event",
+                "position": [
+                    8,
+                    7
                 ],
                 "size": [
                     1,
@@ -689,8 +746,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    0,
-                    6
+                    9,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -810,7 +867,7 @@
                 "ai_group": "",
                 "starting_position": [
                     23,
-                    4
+                    6
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -833,8 +890,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
-                    4
+                    0,
+                    15
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -842,7 +899,7 @@
             {
                 "nid": "Crusher",
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "CrusherWall",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -853,20 +910,39 @@
                 "generic": false
             },
             {
-                "nid": "Wall",
+                "nid": "Wall_esq",
                 "variant": null,
                 "level": 1,
                 "klass": "Wall25",
-                "faction": "Soldier",
+                "faction": "Wall",
                 "starting_items": [],
                 "starting_skills": [],
-                "team": "enemy",
+                "team": "other",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    14,
-                    9
+                    6,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Wall_dir",
+                "variant": null,
+                "level": 1,
+                "klass": "ReinforcedWall",
+                "faction": "Wall",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    21,
+                    4
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -874,11 +950,28 @@
         ],
         "regions": [
             {
-                "nid": "Wall",
+                "nid": "Wall_esq",
                 "region_type": "event",
                 "position": [
-                    14,
-                    9
+                    6,
+                    2
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Destructible",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Wall_dir",
+                "region_type": "event",
+                "position": [
+                    21,
+                    4
                 ],
                 "size": [
                     1,
@@ -924,6 +1017,110 @@
                 "positions": {}
             }
         ],
+        "ai_groups": []
+    },
+    {
+        "nid": "9",
+        "name": "Chapter 9",
+        "tilemap": "Prologue3",
+        "bg_tilemap": null,
+        "party": "Eirika",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 5,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 5,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Bord",
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Ogma",
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Simon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": false
+            }
+        ],
+        "regions": [],
+        "unit_groups": [],
         "ai_groups": []
     },
     {
@@ -3287,7 +3484,7 @@
                 "generic": false
             },
             {
-                "nid": "Rennac",
+                "nid": "Minerve",
                 "team": "other",
                 "ai": "None",
                 "roam_ai": null,
@@ -4530,11 +4727,11 @@
         "bg_tilemap": null,
         "party": "Eirika",
         "music": {
-            "player_phase": "Shadow of the Enemy",
-            "enemy_phase": null,
+            "player_phase": "Battle6",
+            "enemy_phase": "Boss1",
             "other_phase": null,
             "enemy2_phase": null,
-            "player_battle": "Attack",
+            "player_battle": null,
             "enemy_battle": null,
             "other_battle": null,
             "enemy2_battle": null
@@ -4860,11 +5057,74 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    12,
-                    5
+                    4,
+                    10
                 ],
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "Cassian",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Lucia",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Incubus_King",
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    3
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 1,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [

@@ -6154,6 +6154,91 @@
         ]
     },
     {
+        "nid": "Stained_Scythe",
+        "name": "Stained Scythe",
+        "desc": "Don't ask, please, don't ask.",
+        "icon_nid": "{AtelierLabs} scythe 1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                65
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "uses",
+                20
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "warning",
+                "True"
+            ],
+            [
+                "value",
+                1000
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "prf_unit",
+                [
+                    "Incubus_King"
+                ]
+            ],
+            [
+                "battle_animation_music",
+                "IK attack"
+            ]
+        ]
+    },
+    {
         "nid": "Halberd",
         "name": "Halberd",
         "desc": "Effective against horseback units",

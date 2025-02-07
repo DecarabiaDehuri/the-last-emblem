@@ -1737,9 +1737,7 @@
         "variant": "Female",
         "level": 3,
         "klass": "Mage",
-        "tags": [
-            "RobinSynergy"
-        ],
+        "tags": [],
         "bases": {
             "HP": 34,
             "STR": 15,
@@ -1768,14 +1766,6 @@
         "starting_items": [
             [
                 "Fire",
-                false
-            ],
-            [
-                "Steel_Lance",
-                false
-            ],
-            [
-                "Health_Potion",
                 false
             ]
         ],
@@ -3094,7 +3084,7 @@
             "DEF": 8,
             "RES": 13,
             "CON": 8,
-            "MOV": 6
+            "MOV": 5
         },
         "growths": {
             "HP": 50,
@@ -3120,7 +3110,7 @@
         "wexp_gain": {
             "Sword": [
                 false,
-                0,
+                31,
                 251
             ],
             "Lance": [
@@ -3140,17 +3130,17 @@
             ],
             "Staff": [
                 true,
-                71,
+                0,
                 251
             ],
             "Light": [
                 true,
-                121,
+                0,
                 251
             ],
             "Anima": [
                 true,
-                181,
+                0,
                 251
             ],
             "Dark": [
@@ -3176,15 +3166,17 @@
         "variant": "",
         "level": 5,
         "klass": "Cavalier",
-        "tags": [],
+        "tags": [
+            "Mounted"
+        ],
         "bases": {
             "HP": 20,
-            "STR": 5,
+            "STR": 6,
             "MAG": 2,
             "SKL": 3,
             "SPD": 5,
             "LCK": 0,
-            "DEF": 6,
+            "DEF": 7,
             "RES": 0,
             "CON": 9,
             "MOV": 7
@@ -3219,7 +3211,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Twice_the_Threat_Cassian"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -3245,14 +3242,17 @@
         "variant": "Female",
         "level": 5,
         "klass": "Cavalier",
-        "tags": [],
+        "tags": [
+            "Mounted",
+            "Female"
+        ],
         "bases": {
             "HP": 20,
             "STR": 5,
             "MAG": 2,
-            "SKL": 3,
-            "SPD": 5,
-            "LCK": 0,
+            "SKL": 4,
+            "SPD": 6,
+            "LCK": 1,
             "DEF": 6,
             "RES": 0,
             "CON": 9,
@@ -3288,7 +3288,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Twice_the_Threat_Lucia"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -3407,12 +3412,12 @@
         "fields": []
     },
     {
-        "nid": "Rennac",
-        "name": "Rennac",
+        "nid": "Minerve",
+        "name": "Minerve",
         "desc": "A lazy, greedy, but exceptional fighter from the Republic of Carcino.",
         "variant": "",
         "level": 1,
-        "klass": "Rogue",
+        "klass": "Dancer",
         "tags": [],
         "bases": {
             "HP": 28,
@@ -3499,17 +3504,17 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Rennac",
+        "portrait_nid": "Minerve",
         "affinity": "Dark",
         "fields": []
     },
     {
-        "nid": "Duessel",
-        "name": "Duessel",
+        "nid": "Bord",
+        "name": "Bord",
         "desc": "A courageous general in Grado\u2019s army. He\u2019s better known as Obsidian.",
         "variant": null,
         "level": 9,
-        "klass": "Great_Knight",
+        "klass": "Mercenary",
         "tags": [],
         "bases": {
             "HP": 41,
@@ -3538,15 +3543,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Silver_Lance",
-                false
-            ],
-            [
-                "Silver_Axe",
-                false
-            ],
-            [
-                "Health_Potion",
+                "Iron_Sword",
                 false
             ]
         ],
@@ -3560,12 +3557,12 @@
             ],
             "Lance": [
                 false,
-                181,
+                0,
                 251
             ],
             "Axe": [
                 false,
-                181,
+                0,
                 251
             ],
             "Bow": [
@@ -3605,8 +3602,8 @@
         "fields": []
     },
     {
-        "nid": "O'Neill",
-        "name": "O'Neill",
+        "nid": "Ogma",
+        "name": "Ogma",
         "desc": "A troop leader in Grado's army.",
         "variant": null,
         "level": 4,
@@ -4474,13 +4471,15 @@
         "fields": []
     },
     {
-        "nid": "Lyon",
-        "name": "Lyon",
+        "nid": "Incubus_King",
+        "name": "Incubus King",
         "desc": "",
         "variant": null,
-        "level": 14,
-        "klass": "Necromancer",
-        "tags": [],
+        "level": 17,
+        "klass": "Incubus_Emperor",
+        "tags": [
+            "Monster"
+        ],
         "bases": {
             "HP": 46,
             "STR": 1,
@@ -4508,11 +4507,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Nosferatu",
-                false
-            ],
-            [
-                "Fenrir",
+                "Stained_Scythe",
                 false
             ]
         ],
@@ -4531,7 +4526,7 @@
             ],
             "Axe": [
                 false,
-                0,
+                181,
                 251
             ],
             "Bow": [
@@ -4541,7 +4536,7 @@
             ],
             "Staff": [
                 false,
-                181,
+                0,
                 251
             ],
             "Light": [
@@ -4556,7 +4551,7 @@
             ],
             "Dark": [
                 false,
-                251,
+                181,
                 251
             ],
             "Default": [
@@ -4566,7 +4561,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Lyon",
+        "portrait_nid": "Incubus King",
         "affinity": null,
         "fields": []
     }

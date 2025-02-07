@@ -714,7 +714,7 @@
     {
         "nid": "Locktouch",
         "name": "Locktouch",
-        "desc": "Unit can opened locks without a key.",
+        "desc": "Unit can open locks without a key.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -2059,9 +2059,9 @@
         ]
     },
     {
-        "nid": "Twice_the_Threat",
+        "nid": "Twice_the_Threat_Cassian",
         "name": "Twice the Threat",
-        "desc": "",
+        "desc": "If Cassian is in Guard Stance with Lucia,\nLucia heals half of damage dealt.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -2070,11 +2070,79 @@
         "components": [
             [
                 "pairup_bonus",
-                "Canto"
+                "Twice_the_Threat_effect_Cassian"
             ],
             [
                 "condition",
-                "game.get_traveler"
+                "game.get_rescuer(unit).nid == 'Lucia'"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Twice_the_Threat_effect_Cassian",
+        "name": "Twice the Threat",
+        "desc": "Heals half of damage dealt.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            47
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "lifelink",
+                0.5
+            ]
+        ]
+    },
+    {
+        "nid": "Twice_the_Threat_Lucia",
+        "name": "Twice the Threat",
+        "desc": "If Lucia is in Guard Stance with Cassian,\nCassian will always attack first.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            47
+        ],
+        "components": [
+            [
+                "pairup_bonus",
+                "Twice_the_Threat_effect_Lucia"
+            ],
+            [
+                "condition",
+                "game.get_rescuer(unit).nid == 'Cassian'"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Twice_the_Threat_effect_Lucia",
+        "name": "Twice the Threat",
+        "desc": "Always attacks first.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            47
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "vantage",
+                null
             ]
         ]
     },
@@ -2344,13 +2412,18 @@
     {
         "nid": "Active_Synergy",
         "name": "Active Synergy",
-        "desc": "",
-        "icon_nid": "Valuable",
+        "desc": "Unit is activating the synergy ability of an ally nearby.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            11,
+            52
         ],
-        "components": []
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
     },
     {
         "nid": "Lightning_Whip",
