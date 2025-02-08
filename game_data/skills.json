@@ -1,5 +1,285 @@
 [
     {
+        "nid": "Heroic_Blow",
+        "name": "Heroic Blow",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Heroic_Blow_ability"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Assault",
+        "name": "Heroic Assault",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Heroic_Assault_ability"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Assault_1",
+        "name": "Heroic Assault",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Heroic_Aura_ability"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Ivala_Blessing",
+        "name": "Ivala's Blessing",
+        "desc": "Unit gains extra EXP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "exp_multiplier",
+                2.0
+            ],
+            [
+                "wexp_multiplier",
+                2.0
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Puppy_Eyes",
+        "name": "Puppy Eyes",
+        "desc": "While at full HP, Monica is more likely to avoid enemy attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            41
+        ],
+        "components": [
+            [
+                "condition",
+                "game.get_unit('Monica').get_hp() == game.get_unit('Monica').get_max_hp()"
+            ],
+            [
+                "defense_pre_proc",
+                "Puppy_Eyes_Effect"
+            ],
+            [
+                "proc_rate",
+                "CERTEZA"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Puppy_Eyes_Effect",
+        "name": "Puppy Eyes",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            41
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                30
+            ],
+            [
+                "avoid",
+                30
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flashy_Strike",
+        "name": "Flashy Strike",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            8
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "Flashy_Strike_ability"
+            ],
+            [
+                "alternate_battle_anim",
+                "Critical"
+            ]
+        ]
+    },
+    {
+        "nid": "Twice_the_Threat_Cassian",
+        "name": "Twice the Threat",
+        "desc": "If Lucia is in Guard Stance with Cassian,\nCassian will always attack first.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            47
+        ],
+        "components": [
+            [
+                "pairup_bonus",
+                "Twice_the_Threat_effect_Cassian"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Twice_the_Threat_effect_Cassian",
+        "name": "Twice the Threat",
+        "desc": "Heals half of damage dealt.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            47
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "lifelink",
+                0.5
+            ],
+            [
+                "condition",
+                "unit.nid == 'Lucia'"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Twice_the_Threat_Lucia",
+        "name": "Twice the Threat",
+        "desc": "If Cassian is in Guard Stance with Lucia,\nLucia heals half of damage dealt.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            47
+        ],
+        "components": [
+            [
+                "pairup_bonus",
+                "Twice_the_Threat_effect_Lucia"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Twice_the_Threat_effect_Lucia",
+        "name": "Twice the Threat",
+        "desc": "Always attacks first.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            47
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "condition",
+                "unit.nid == 'Cassian'"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Canto",
         "name": "Canto",
         "desc": "Can move again after certain actions.",
@@ -1882,266 +2162,6 @@
             ],
             [
                 "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Heroic_Blow",
-        "name": "Heroic Blow",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Heroic_Blow_ability"
-            ],
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Heroic_Assault",
-        "name": "Heroic Assault",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Heroic_Assault_ability"
-            ],
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Heroic_Assault_1",
-        "name": "Heroic Assault",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Heroic_Aura_ability"
-            ],
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Ivala_Blessing",
-        "name": "Ivala's Blessing",
-        "desc": "Unit gains extra EXP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            19
-        ],
-        "components": [
-            [
-                "exp_multiplier",
-                2.0
-            ],
-            [
-                "wexp_multiplier",
-                2.0
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Puppy_Eyes",
-        "name": "Puppy Eyes",
-        "desc": "While at full HP, Monica is more likely to avoid enemy attacks.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            41
-        ],
-        "components": [
-            [
-                "condition",
-                "game.get_unit('Monica').get_hp() == game.get_unit('Monica').get_max_hp()"
-            ],
-            [
-                "defense_pre_proc",
-                "Puppy_Eyes_Effect"
-            ],
-            [
-                "proc_rate",
-                "CERTEZA"
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Puppy_Eyes_Effect",
-        "name": "Puppy Eyes",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            41
-        ],
-        "components": [
-            [
-                "crit_avoid",
-                30
-            ],
-            [
-                "avoid",
-                30
-            ],
-            [
-                "display_skill_icon_in_combat",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Flashy_Strike",
-        "name": "Flashy Strike",
-        "desc": "",
-        "icon_nid": "Skills",
-        "icon_index": [
-            3,
-            8
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "ability",
-                "Flashy_Strike_ability"
-            ],
-            [
-                "alternate_battle_anim",
-                "Critical"
-            ]
-        ]
-    },
-    {
-        "nid": "Twice_the_Threat_Cassian",
-        "name": "Twice the Threat",
-        "desc": "If Cassian is in Guard Stance with Lucia,\nLucia heals half of damage dealt.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            47
-        ],
-        "components": [
-            [
-                "pairup_bonus",
-                "Twice_the_Threat_effect_Cassian"
-            ],
-            [
-                "condition",
-                "game.get_rescuer(unit).nid == 'Lucia'"
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Twice_the_Threat_effect_Cassian",
-        "name": "Twice the Threat",
-        "desc": "Heals half of damage dealt.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            47
-        ],
-        "components": [
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
-                "lifelink",
-                0.5
-            ]
-        ]
-    },
-    {
-        "nid": "Twice_the_Threat_Lucia",
-        "name": "Twice the Threat",
-        "desc": "If Lucia is in Guard Stance with Cassian,\nCassian will always attack first.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            47
-        ],
-        "components": [
-            [
-                "pairup_bonus",
-                "Twice_the_Threat_effect_Lucia"
-            ],
-            [
-                "condition",
-                "game.get_rescuer(unit).nid == 'Cassian'"
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Twice_the_Threat_effect_Lucia",
-        "name": "Twice the Threat",
-        "desc": "Always attacks first.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            47
-        ],
-        "components": [
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
-                "vantage",
                 null
             ]
         ]
