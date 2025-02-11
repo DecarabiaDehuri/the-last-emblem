@@ -150,7 +150,7 @@
         "ai_groups": []
     },
     {
-        "nid": "7",
+        "nid": "P1",
         "name": "Prologue: 1",
         "tilemap": "tutorial1",
         "bg_tilemap": null,
@@ -479,6 +479,16 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "Mira",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [
@@ -565,11 +575,650 @@
         "ai_groups": []
     },
     {
-        "nid": "8",
+        "nid": "P2",
         "name": "Prologue: 2",
-        "tilemap": "Prologue2teste",
+        "tilemap": "pre-cave",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
+        "music": {
+            "player_phase": "Prologue battles",
+            "enemy_phase": "Prologue enemy phase"
+        },
+        "objective": {
+            "simple": "Enter the cave",
+            "win": "Enter the cave",
+            "loss": "Chosen is defeated"
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "Batgal",
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    3
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "106",
+                "variant": null,
+                "level": 1,
+                "klass": "Revenant",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "111",
+                "variant": null,
+                "level": 1,
+                "klass": "Revenant",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 1,
+                "klass": "Mogall",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Evil_Eye",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "110",
+                "variant": null,
+                "level": 1,
+                "klass": "Mogall",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Evil_Eye",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    0,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "113",
+                "variant": null,
+                "level": 1,
+                "klass": "Mogall",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Evil_Eye",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "108",
+                "variant": null,
+                "level": 1,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "112",
+                "variant": null,
+                "level": 1,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Duro",
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "109",
+                "variant": null,
+                "level": 1,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Chosen",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Simonyoung",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Mira",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            }
+        ],
+        "regions": [
+            {
+                "nid": "Cave",
+                "region_type": "event",
+                "position": [
+                    6,
+                    2
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Seize",
+                "condition": "unit.nid == 'Chosen'",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            }
+        ],
+        "unit_groups": [
+            {
+                "nid": "Player",
+                "units": [
+                    "Chosen",
+                    "Simonyoung",
+                    "Mira"
+                ],
+                "positions": {
+                    "Chosen": [
+                        6,
+                        11
+                    ],
+                    "Simonyoung": [
+                        5,
+                        11
+                    ],
+                    "Mira": [
+                        7,
+                        11
+                    ]
+                }
+            }
+        ],
+        "ai_groups": []
+    },
+    {
+        "nid": "P3",
+        "name": "Prologue: 3",
+        "tilemap": "prol4",
         "bg_tilemap": null,
         "party": "Eirika",
+        "music": {
+            "player_phase": "Boss2",
+            "enemy_phase": "Boss2"
+        },
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "Batgal",
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 1,
+                "klass": "Mogall",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Evil_Eye",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 1,
+                "klass": "Mogall",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Evil_Eye",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 1,
+                "klass": "Mogall",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Evil_Eye",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 1,
+                "klass": "Mogall",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Evil_Eye",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 1,
+                "klass": "Mogall",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Evil_Eye",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Chosen",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Simonyoung",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Mira",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "SpiderEmpress",
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    1
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "106",
+                "variant": null,
+                "level": 1,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 1,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "108",
+                "variant": null,
+                "level": 1,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Duro",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "109",
+                "variant": null,
+                "level": 1,
+                "klass": "Revenant",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    4,
+                    15
+                ],
+                "starting_traveler": null,
+                "generic": true
+            }
+        ],
+        "regions": [],
+        "unit_groups": [
+            {
+                "nid": "Player",
+                "units": [
+                    "Chosen",
+                    "Simonyoung",
+                    "Mira",
+                    "Duro"
+                ],
+                "positions": {
+                    "Chosen": [
+                        6,
+                        15
+                    ],
+                    "Simonyoung": [
+                        6,
+                        16
+                    ],
+                    "Mira": [
+                        7,
+                        16
+                    ],
+                    "Duro": [
+                        7,
+                        15
+                    ]
+                }
+            }
+        ],
+        "ai_groups": []
+    },
+    {
+        "nid": "P4",
+        "name": "Prologue:",
+        "tilemap": "Prologue2teste",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
         "music": {
             "player_phase": "Prologue battles",
             "enemy_phase": "Prologue enemy phase",
@@ -577,7 +1226,7 @@
             "boss_battle": "Boss1"
         },
         "objective": {
-            "simple": "Defeat the enemies!",
+            "simple": "Defeat the bandits!",
             "win": "Defeat all enemies",
             "loss": "Chosen dies"
         },
@@ -676,7 +1325,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Prol3Archers",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -686,7 +1335,7 @@
             {
                 "nid": "115",
                 "variant": null,
-                "level": 5,
+                "level": 3,
                 "klass": "Archer",
                 "faction": "Bandit",
                 "starting_items": [
@@ -697,7 +1346,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Prol3Archers",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -707,8 +1356,8 @@
             {
                 "nid": "116",
                 "variant": null,
-                "level": 5,
-                "klass": "Mercenary",
+                "level": 3,
+                "klass": "Archer",
                 "faction": "Bandit",
                 "starting_items": [
                     [
@@ -718,7 +1367,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Prol3Archers",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -729,17 +1378,21 @@
                 "nid": "117",
                 "variant": null,
                 "level": 5,
-                "klass": "Cavalier",
+                "klass": "Thief",
                 "faction": "Bandit",
                 "starting_items": [
                     [
-                        "Iron_Lance",
+                        "Slim_Sword",
+                        false
+                    ],
+                    [
+                        "Door_Key",
                         false
                     ]
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Thief",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -749,7 +1402,7 @@
             {
                 "nid": "106",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Brigand",
                 "faction": "Bandit",
                 "starting_items": [
@@ -760,7 +1413,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -773,7 +1426,7 @@
             {
                 "nid": "111",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Brigand",
                 "faction": "Bandit",
                 "starting_items": [
@@ -784,7 +1437,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -797,7 +1450,7 @@
             {
                 "nid": "113",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Brigand",
                 "faction": "Bandit",
                 "starting_items": [
@@ -808,7 +1461,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -821,7 +1474,7 @@
             {
                 "nid": "107",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Militia",
                 "faction": "Bandit",
                 "starting_items": [
@@ -832,7 +1485,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -845,7 +1498,7 @@
             {
                 "nid": "109",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Militia",
                 "faction": "Bandit",
                 "starting_items": [
@@ -856,7 +1509,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -869,7 +1522,7 @@
             {
                 "nid": "112",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Militia",
                 "faction": "Bandit",
                 "starting_items": [
@@ -880,7 +1533,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -893,7 +1546,7 @@
             {
                 "nid": "114",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Militia",
                 "faction": "Bandit",
                 "starting_items": [
@@ -904,7 +1557,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -917,7 +1570,7 @@
             {
                 "nid": "108",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Thief",
                 "faction": "Bandit",
                 "starting_items": [
@@ -928,7 +1581,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -941,7 +1594,7 @@
             {
                 "nid": "110",
                 "variant": null,
-                "level": 5,
+                "level": 1,
                 "klass": "Thief",
                 "faction": "Bandit",
                 "starting_items": [
@@ -952,7 +1605,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Prol3IgnoreWall",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -1006,6 +1659,16 @@
                 ],
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "Bruce",
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [
@@ -1027,20 +1690,37 @@
                 "interrupt_move": false
             },
             {
-                "nid": "New Region",
+                "nid": "alert",
                 "region_type": "event",
                 "position": [
-                    18,
+                    16,
                     3
                 ],
                 "size": [
-                    4,
-                    7
+                    9,
+                    10
                 ],
-                "sub_nid": "",
+                "sub_nid": "Alert",
                 "condition": "True",
                 "time_left": null,
                 "only_once": false,
+                "interrupt_move": true
+            },
+            {
+                "nid": "Door",
+                "region_type": "event",
+                "position": [
+                    1,
+                    5
+                ],
+                "size": [
+                    2,
+                    1
+                ],
+                "sub_nid": "Door",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
                 "interrupt_move": false
             }
         ],
@@ -1077,12 +1757,7 @@
                 "positions": {}
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "9",
@@ -1268,7 +1943,7 @@
                 "generic": false
             },
             {
-                "nid": "Breguet",
+                "nid": "Duro",
                 "team": "enemy",
                 "ai": "Guard",
                 "roam_ai": null,
@@ -1599,7 +2274,7 @@
             {
                 "nid": "Enemy1",
                 "units": [
-                    "Breguet",
+                    "Duro",
                     "101",
                     "102",
                     "103",
@@ -1608,10 +2283,6 @@
                     "106"
                 ],
                 "positions": {
-                    "Breguet": [
-                        2,
-                        5
-                    ],
                     "101": [
                         1,
                         6
@@ -1635,6 +2306,10 @@
                     "103": [
                         1,
                         8
+                    ],
+                    "Duro": [
+                        2,
+                        5
                     ]
                 }
             },
@@ -3899,7 +4574,7 @@
                 "generic": false
             },
             {
-                "nid": "Saar",
+                "nid": "Bruce",
                 "team": "enemy",
                 "ai": "Guard",
                 "roam_ai": null,
@@ -4767,7 +5442,7 @@
                 "nid": "EnemyTeam",
                 "units": [
                     "101",
-                    "Saar",
+                    "Bruce",
                     "102",
                     "103",
                     "104",
@@ -5190,6 +5865,19 @@
                 ],
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "SpiderEmpress",
+                "team": "player",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [

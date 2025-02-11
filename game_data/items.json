@@ -90,10 +90,6 @@
         ],
         "components": [
             [
-                "weapon",
-                null
-            ],
-            [
                 "target_enemy",
                 null
             ],
@@ -111,7 +107,7 @@
             ],
             [
                 "hit",
-                75
+                70
             ],
             [
                 "weight",
@@ -126,16 +122,16 @@
                 "Lance"
             ],
             [
-                "weapon_rank",
-                "E"
-            ],
-            [
                 "status_on_hit",
                 "Blinded"
             ],
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "spell",
+                null
             ]
         ]
     },
@@ -150,10 +146,6 @@
         ],
         "components": [
             [
-                "weapon",
-                null
-            ],
-            [
                 "target_enemy",
                 null
             ],
@@ -186,16 +178,16 @@
                 "Lance"
             ],
             [
-                "weapon_rank",
-                "E"
-            ],
-            [
                 "status_on_hit",
                 "Silence"
             ],
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "spell",
+                null
             ]
         ]
     },
@@ -210,10 +202,6 @@
         ],
         "components": [
             [
-                "weapon",
-                null
-            ],
-            [
                 "target_enemy",
                 null
             ],
@@ -231,7 +219,7 @@
             ],
             [
                 "hit",
-                75
+                60
             ],
             [
                 "weight",
@@ -246,16 +234,16 @@
                 "Lance"
             ],
             [
-                "weapon_rank",
-                "E"
-            ],
-            [
                 "status_on_hit",
                 "Stunned"
             ],
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "spell",
+                null
             ]
         ]
     },
@@ -279,7 +267,7 @@
             ],
             [
                 "max_range",
-                3
+                1
             ],
             [
                 "target_ally",
@@ -288,6 +276,10 @@
             [
                 "restore",
                 null
+            ],
+            [
+                "mana_cost",
+                10
             ]
         ]
     },
@@ -516,6 +508,66 @@
             [
                 "status_on_hold",
                 "Canto"
+            ]
+        ]
+    },
+    {
+        "nid": "DarkWeb",
+        "name": "Dark Web",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                20
+            ],
+            [
+                "status_on_hit",
+                "Webbed"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_special_range",
+                "x == 0 or y == 0"
+            ],
+            [
+                "battle_animation_music",
+                "Boss1"
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
             ]
         ]
     },
@@ -2671,6 +2723,62 @@
             [
                 "battle_cast_anim",
                 "DirtKick"
+            ]
+        ]
+    },
+    {
+        "nid": "Flail",
+        "name": "Dark Flail",
+        "desc": "",
+        "icon_nid": "{AtelierLabs} spear 3",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                460
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "weapon_rank",
+                "E"
             ]
         ]
     },
@@ -11702,6 +11810,10 @@
             [
                 "max_range",
                 2
+            ],
+            [
+                "battle_cast_anim",
+                "Hex"
             ]
         ]
     },

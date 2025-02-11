@@ -236,7 +236,7 @@
         "platform": "Mountain",
         "background": "combat_hill",
         "mtype": "Mountain",
-        "opaque": false,
+        "opaque": true,
         "status": "Peak"
     },
     {
@@ -446,6 +446,21 @@
         "platform": "Ruins",
         "background": "combat_ruins",
         "mtype": "Fort",
+        "opaque": false,
+        "status": null
+    },
+    {
+        "nid": "Cave",
+        "name": "Cave",
+        "color": [
+            0,
+            0,
+            0
+        ],
+        "minimap": "Mountain",
+        "platform": "Fort",
+        "background": "Cave",
+        "mtype": "Normal",
         "opaque": false,
         "status": null
     }

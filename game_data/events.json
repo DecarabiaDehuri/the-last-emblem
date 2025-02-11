@@ -25,7 +25,7 @@
             "    elif;'{v:_last_choice}' == 'No'",
             "        game_var;ivala;0",
             "    end",
-            "    set_next_chapter;7",
+            "    set_next_chapter;P1",
             "    transition;close;2000",
             "    wait;1000",
             "    win_game",
@@ -3344,7 +3344,7 @@
     {
         "name": "VillageDestroy",
         "trigger": "Destructible",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "region.nid == 'Villagedestroy'",
         "commands": [],
         "only_once": true,
@@ -3357,12 +3357,12 @@
             "wait;2000",
             "lose_game"
         ],
-        "nid": "7 VillageDestroy"
+        "nid": "P1 VillageDestroy"
     },
     {
         "name": "Snagbridge cima",
         "trigger": "unit_death",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "unit.nid == 'Snagcima'",
         "commands": [],
         "only_once": true,
@@ -3375,12 +3375,12 @@
             "level_var;snagbridgecima;1",
             "remove_region;Snagcima"
         ],
-        "nid": "7 Snagbridge cima"
+        "nid": "P1 Snagbridge cima"
     },
     {
         "name": "Villagevisit",
         "trigger": "Visit",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "region.nid == 'Villagevisit'",
         "commands": [],
         "only_once": true,
@@ -3389,9 +3389,12 @@
             "transition;Close",
             "change_background;Village",
             "transition;Open",
-            "add_portrait;Man1;Left;no_block",
-            "add_portrait;{unit};Right",
-            "speak;Man1;Thank you for your warning...|Those monsters are being a pain lately.|You can have this as a token of gratitude.",
+            "add_portrait;Man1;MidLeft;no_block",
+            "add_portrait;Mira;FarLeft;no_block",
+            "add_portrait;Chosen;Right",
+            "speak;Man1;Thank you for your warning...|Those monsters are being a pain lately.|You can have this item as a token of gratitude.|Never figured out how to use it anyway...",
+            "s;Chosen;Awesome!",
+            "speak;Mira;{tgm}...;;;thought_bubble",
             "transition;Close",
             "change_background",
             "transition;Open",
@@ -3408,12 +3411,12 @@
             "    wait;200",
             "end"
         ],
-        "nid": "7 Villagevisit"
+        "nid": "P1 Villagevisit"
     },
     {
-        "name": "Boss chega e tutorial: enemy range",
+        "name": "Boss e Mira chegam e tutorial: enemy range",
         "trigger": "phase_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.level_vars['spiderboss'] == 1",
         "commands": [],
         "only_once": true,
@@ -3443,7 +3446,31 @@
             "wait;300",
             "s;Chosen;This...{c:wait;300} is nothing!|I'll wipe the floor with any monster you throw at me!",
             "remove_portrait;Chosen",
+            "wait;500",
+            "add_unit;Mira;1,2;fade;stack;north",
+            "move_unit;Mira;2,2;normal;closest",
+            "wait;1000",
+            "multi_add_portrait;Mira;Left;Chosen;Right",
+            "wait;300",
+            "s;Mira;I... I also want to fight!",
+            "s;Chosen;Aren't you a little young to be thinking about that?|Stay here and leave this to me, the future savior of the world!",
+            "s;Mira;I'm an adult! And... I want to be near you!",
+            "s;Chosen;Ohh, smitten already, are you?|Don't worry babe, I'll protect you tightly!",
+            "bop_portrait;Mira",
+            "expression;Mira;CloseEyes",
+            "s;Mira;I... don't want you!|I mean... I need to get stronger first...|I need to fulfill my mission.|{c:expression;Mira;OpenEyes}Only then I can think about... other stuff.",
+            "s;Chosen;I'm not sure I follow, but ok.|Let's do it together!",
+            "wait;300",
+            "multi_remove_portrait;Chosen;Mira",
+            "wait;300",
+            "change_team;Mira;player",
+            "sound;Level Up",
+            "alert;Mira has joined your party!",
+            "level_var;tutopair;1",
+            "wait;1000",
             "if;{v:ivala} == 1",
+            "    wait;500",
+            "    flicker_cursor;SpiderQueen",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
             "    wait;200",
@@ -3455,18 +3482,19 @@
             "end",
             "change_objective_simple;Defeat the boss!"
         ],
-        "nid": "7 Boss chega e tutorial: enemy range"
+        "nid": "P1 Boss e Mira chegam e tutorial: enemy range"
     },
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "True",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "chapter_title",
+            "create_achievement;firstofmany;First of Many!;Defeated your first enemy.",
             "# variaveis 0:",
             "level_var;snagbridge;0",
             "level_var;spiderboss;0",
@@ -3507,13 +3535,13 @@
             "wait;500",
             "flicker_cursor;12,9",
             "wait;2000",
+            "music;Tension",
             "add_unit;102;14,9;fade;giveup;east",
             "wait;500",
             "move_unit;102;12,9;normal;giveup",
             "wait;500",
             "sound;VillageDestroyed",
             "show_layer;Village intro destroyed",
-            "music;Tension",
             "wait;1000",
             "add_unit;112;1,9;fade;giveup;south",
             "wait;500",
@@ -3535,12 +3563,12 @@
             "    multi_remove_portrait;Chosen;Ivala",
             "end"
         ],
-        "nid": "7 Intro"
+        "nid": "P1 Intro"
     },
     {
         "name": "Tutorial: navigation",
         "trigger": "turn_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.turncount == 1",
         "commands": [],
         "only_once": true,
@@ -3558,12 +3586,12 @@
             "multi_remove_portrait;Chosen;Ivala",
             "end"
         ],
-        "nid": "7 Tutorial: navigation"
+        "nid": "P1 Tutorial: navigation"
     },
     {
         "name": "Tutorial: movement",
         "trigger": "unit_select",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "unit.nid == 'Chosen'",
         "commands": [],
         "only_once": true,
@@ -3578,12 +3606,12 @@
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial: movement"
+        "nid": "P1 Tutorial: movement"
     },
     {
         "name": "Tutorial: fort",
         "trigger": "phase_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.turncount == 2",
         "commands": [],
         "only_once": true,
@@ -3609,12 +3637,12 @@
             "speak;Ivala;Other tiles might give you positive or negative bonuses.|To check their effects, place the cursor on them and check the bottom part of your screen.|<red>\"DEF\"</> means how much defense a unit will gain by standing on it.|Likewise, <red>\"AVO\"</> means how much more likely the unit will dodge attacks.;bottom;;;;blue;;;;;None",
             "end"
         ],
-        "nid": "7 Tutorial: fort"
+        "nid": "P1 Tutorial: fort"
     },
     {
         "name": "Tutorial: cliff",
         "trigger": "phase_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.turncount == 2",
         "commands": [],
         "only_once": true,
@@ -3628,12 +3656,12 @@
             "    wait;200",
             "end"
         ],
-        "nid": "7 Tutorial: cliff"
+        "nid": "P1 Tutorial: cliff"
     },
     {
         "name": "Tutorial: move_and_action",
         "trigger": "enemy_turn_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.turncount == 1",
         "commands": [],
         "only_once": true,
@@ -3648,12 +3676,12 @@
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial: move_and_action"
+        "nid": "P1 Tutorial: move_and_action"
     },
     {
         "name": "Tutorial: trade",
         "trigger": "phase_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.game_vars['ivala'] == 1 and game.get_unit('Chosen').get_hp() < game.get_unit('Chosen').get_max_hp() and game.level_vars['simonappears'] == 1 and has_item('Health_Potion', nid=\"Simonyoung\") == True",
         "commands": [],
         "only_once": true,
@@ -3667,12 +3695,12 @@
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial: trade"
+        "nid": "P1 Tutorial: trade"
     },
     {
         "name": "Simon Chega",
         "trigger": "phase_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.level_vars['simonappears'] == 1",
         "commands": [],
         "only_once": true,
@@ -3725,17 +3753,18 @@
             "end",
             "music_fade_back"
         ],
-        "nid": "7 Simon Chega"
+        "nid": "P1 Simon Chega"
     },
     {
         "name": "Firstspiderdeath and Tutorial: snag",
-        "trigger": "unit_death",
-        "level_nid": "7",
-        "condition": "unit.nid == '102'",
+        "trigger": "combat_end",
+        "level_nid": "P1",
+        "condition": "game.check_dead(\"102\")",
         "commands": [],
         "only_once": true,
         "priority": 20,
         "_source": [
+            "complete_achievement;firstofmany;t;banner",
             "if;{v:ivala} == 1 and {v:spiderboss} == 0 and {v:snagbridge} == 0",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
@@ -3747,12 +3776,12 @@
             "    wait;1000",
             "end"
         ],
-        "nid": "7 Firstspiderdeath and Tutorial: snag"
+        "nid": "P1 Firstspiderdeath and Tutorial: snag"
     },
     {
-        "name": "Spiderboss death",
+        "name": "Spiderboss death VICTORY",
         "trigger": "combat_end",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.check_dead(\"SpiderQueen\")",
         "commands": [],
         "only_once": true,
@@ -3764,12 +3793,12 @@
             "wait;1000",
             "win_game"
         ],
-        "nid": "7 Spiderboss death"
+        "nid": "P1 Spiderboss death VICTORY"
     },
     {
         "name": "Outro",
         "trigger": "level_end",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -3789,16 +3818,21 @@
             "s;Simonyoung;Joining a battlefield you know nothing about is not going to get you very far.",
             "s;Chosen;I already know everything I need:|I'm gonna save the world.|You keep worrying about the details, I'll be busy getting all the bitches.",
             "s;Simonyoung;...;;;;;;;;;;;;;no_sound;no_talk",
+            "move_portrait;Chosen;CenterLeft",
+            "add_portrait;SoldierBlue;FarLeft;left",
+            "s;SoldierBlue;Captain, we've located the source of the attacks. It's the Jito Cave.",
+            "s;Simonyoung;Good work. I'm heading there now.|Form search parties to investigate other caves nearby.",
+            "s;Chosen;Sweet, our next step is already clear!",
             "transition;close",
             "wait;3000",
-            "set_next_chapter;8"
+            "set_next_chapter;P2"
         ],
-        "nid": "7 Outro"
+        "nid": "P1 Outro"
     },
     {
         "name": "Chosen Quote Spiderboss",
         "trigger": "combat_start",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "(unit.nid == \"Chosen\" and unit2.nid == 'SpiderQueen') or (unit.nid == 'SpiderQueen' and unit2.nid == \"Chosen\")",
         "commands": [],
         "only_once": true,
@@ -3812,7 +3846,7 @@
             "s;Chosen;Hell ye-{c:expression;Chosen;NoSmile}{c:wait;700} wait...",
             "multi_remove_portrait;Chosen;SpiderQueen"
         ],
-        "nid": "7 Chosen Quote Spiderboss"
+        "nid": "P1 Chosen Quote Spiderboss"
     },
     {
         "name": "PROLDeathChosen",
@@ -3836,7 +3870,7 @@
     {
         "name": "Tutorial: green",
         "trigger": "other_turn_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.game_vars['ivala'] == 1",
         "commands": [],
         "only_once": true,
@@ -3850,12 +3884,12 @@
             "wait;200",
             "end"
         ],
-        "nid": "7 Tutorial: green"
+        "nid": "P1 Tutorial: green"
     },
     {
         "name": "Tutorial: skill",
         "trigger": "unit_select",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "unit.nid == 'Simonyoung' and game.level_vars['tutoskill'] == 1 and game.game_vars['ivala'] == 1",
         "commands": [],
         "only_once": true,
@@ -3866,16 +3900,15 @@
             "wait;200",
             "speak;Ivala;Units have different <red>abilities</>, each with their own conditions and effects.|Generally, abilities cost <red>Mana</> to use. Mana is refilled at the start of each chapter.|You can consult the current mana of each character by accessing the status screen (C key).|As units level up or form connections to other units, they can gain more abilities.|Simon already has some of them, in the form of strikes that cause <red>status effects</>.|Since the boss uses Magic to attack, it's worth using <red>Silencing Strike</>!;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
-            "wait;200",
-            "level_var;tutopair;1"
+            "wait;200"
         ],
-        "nid": "7 Tutorial: skill"
+        "nid": "P1 Tutorial: skill"
     },
     {
         "name": "Tutorial: pair-up",
-        "trigger": "phase_change",
-        "level_nid": "7",
-        "condition": "game.level_vars['tutopair'] == 1 and game.game_vars['ivala'] == 1",
+        "trigger": "unit_select",
+        "level_nid": "P1",
+        "condition": "game.level_vars['tutopair'] == 1 and game.game_vars['ivala'] == 1 and unit.nid == 'Chosen'",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -3887,12 +3920,12 @@
             "remove_portrait;Ivala",
             "wait;200"
         ],
-        "nid": "7 Tutorial: pair-up"
+        "nid": "P1 Tutorial: pair-up"
     },
     {
         "name": "Tutorial: attack speed",
         "trigger": "combat_start",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.game_vars['ivala'] == 1",
         "commands": [],
         "only_once": true,
@@ -3905,7 +3938,7 @@
             "remove_portrait;Ivala",
             "wait;200"
         ],
-        "nid": "7 Tutorial: attack speed"
+        "nid": "P1 Tutorial: attack speed"
     },
     {
         "name": "PROLDeathSimon",
@@ -3919,7 +3952,7 @@
             "music_clear",
             "add_portrait;Simonyoung;FarRight;normal;CloseEyes",
             "speak;Simonyoung;I...{c:wait;500} was not good enough.{br}{c:wait;500}Forgive me, I must heal my injuries.",
-            "remove_portrait;Chosen",
+            "remove_portrait;Simonyoung",
             "remove_unit;Simonyoung",
             "music_fade_back"
         ],
@@ -3928,12 +3961,21 @@
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "8",
+        "level_nid": "P4",
         "condition": "True",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
+            "#variaveis",
+            "level_var;alertplank;0",
+            "level_var;plankgone;0",
+            "level_var;mid;0",
+            "level_var;midsetup;0",
+            "level_var;alert;0",
+            "## REMOVER ISSO AQUI DPS \\/",
+            "game_var;ivala;1",
+            "#####",
             "add_talk;Chosen;Monica",
             "add_talk;Antarion;Monica",
             "remove_group;PlayerTeam;immediate",
@@ -3946,16 +3988,25 @@
             "s;Simonyoung;You have an obscenely high amount of other things you should rather be worrying about.",
             "expression;Chosen;NoSmile",
             "s;Chosen;Hmm... you're right...{c:expression;Chosen;CloseEyes}{c:wait;1500}{br}{c:expression;Chosen;OpenEyes}I will need to buy a mansion to fit so many people.",
-            "s;Simonyoung;That's precisely not w-{c:wait;500}{c:music_clear} wait.",
-            "change_background;VillageGate",
-            "multi_add_portrait;Chosen;Left;Simonyoung;Right",
+            "s;Simonyoung;That's precisely not w-{c:wait;500} hold.",
             "s;Simonyoung;There, I can see it.",
+            "remove_portrait;Simonyoung;;left",
+            "wait;500",
+            "transition;close",
+            "remove_portrait;Chosen",
+            "change_background;VillageGate",
+            "add_portrait;Simonyoung;Left",
+            "transition;open",
+            "wait;700",
+            "add_portrait;Chosen;Right;right",
+            "wait;700",
             "s;Chosen;That's our objective? Alright, let's pick up the pace!",
             "wait;500",
-            "multi_remove_portrait;Chosen;Simonyoung",
+            "remove_portrait;Simonyoung;;normal",
+            "remove_portrait;Chosen;;normal",
+            "wait;500",
             "transition;close",
             "change_background",
-            "wait;1000",
             "move_cursor;9,16",
             "add_group;PlayerTeam;starting;immediate;giveup",
             "add_group;Others;starting;immediate;giveup",
@@ -4055,16 +4106,14 @@
             "wait;200",
             "sound;Level Up",
             "alert;You joined \"Antarion's Party\"!",
-            "game_var;ivala;1",
-            "music_clear",
-            "set_current_hp;Wall_dir;100"
+            "music_clear"
         ],
-        "nid": "8 Intro"
+        "nid": "P4 Intro"
     },
     {
         "name": "Wall destroyed",
         "trigger": "unit_death",
-        "level_nid": "8",
+        "level_nid": "P4",
         "condition": "unit.nid == 'Wall_dir'",
         "commands": [],
         "only_once": true,
@@ -4075,15 +4124,48 @@
             "sound;VillageDestroyed",
             "show_layer;wall_dir",
             "remove_region;Wall_dir",
-            "wait;500"
+            "wait;1000",
+            "center_cursor;Crusher",
+            "multi_add_portrait;Crusher;Left;Plank;Right",
+            "wait;300",
+            "s;Crusher;Yes... yes! HAHAHAHA!",
+            "s;Plank;So what's the big idea?",
+            "s;Crusher;Shut up and GO GRAB IT!",
+            "s;Plank;A good leader should be communicative... but okay, okay.",
+            "multi_remove_portrait;Crusher;Plank",
+            "wait;400",
+            "move_unit;Plank;22,1;normal;stack;no_follow",
+            "wait;400",
+            "show_layer;chest",
+            "unlock;Plank",
+            "wait;400",
+            "move_unit;Plank;22,5;normal;closest",
+            "multi_add_portrait;Crusher;Left;Plank;Right",
+            "wait;300",
+            "s;Plank;Is this in another language or something? What the hell...",
+            "s;Crusher;This is worth more than your sorry life.|Deliver it to that creepy aramite, and we should be set for life!",
+            "s;Plank;Now that's good news.",
+            "multi_remove_portrait;Crusher;Plank",
+            "wait;500",
+            "move_unit;Plank;24,5;normal;closest",
+            "multi_add_portrait;Crusher;Left;Plank;Right",
+            "wait;300",
+            "s;Plank;You, uh, coming?",
+            "s;Crusher;I... can't.",
+            "s;Plank;Huh? What?",
+            "expression;Crusher;NoSmile",
+            "bop_portrait;Crusher",
+            "s;Crusher;I fucking CAN'T!|I'm too tired, my legs just  ain't moving anytime soon.|I defeated this wall, those chumps should be easy.",
+            "s;Plank;...If you say so.",
+            ""
         ],
-        "nid": "8 Wall destroyed"
+        "nid": "P4 Wall destroyed"
     },
     {
         "name": "Tutorial: weapon triangle",
-        "trigger": "phase_change",
-        "level_nid": "8",
-        "condition": "game.game_vars['ivala'] == 1",
+        "trigger": "unit_select",
+        "level_nid": "P4",
+        "condition": "game.game_vars['ivala'] == 1 and (unit.nid == 'Chosen' or unit.nid == 'Antarion' or unit.nid =='Simonyoung')",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4110,30 +4192,12 @@
             "remove_portrait;Ivala",
             "wait;200"
         ],
-        "nid": "8 Tutorial: weapon triangle"
-    },
-    {
-        "name": "Tutorial: support and synergy skills",
-        "trigger": "unit_select",
-        "level_nid": "8",
-        "condition": "unit.nid == 'Antarion' and game.game_var['ivala'] == 1",
-        "commands": [],
-        "only_once": true,
-        "priority": 20,
-        "_source": [
-            "wait;500",
-            "add_portrait;Ivala;(120,32)",
-            "wait;200",
-            "speak;Ivala;Aside from more muscles, allies also bring advantages in the form of <red>Support</>.|When your units enter combat or stay nearby (2 tiles range), they gain <red>Support points</>.|By increasing those points, they unlock <red>Support Conversations</> when adjacent.|Any time this happens, their <red>Support Rank</> increases.|Increasing those ranks grant bonuses to the stats of the respective units, when nearby.|You can also gain <red>Synergy Abilities</> by achieving certain ranks!|In short, bonds are power!;bottom;;;;blue;;;;;None",
-            "remove_portrait;Ivala",
-            "wait;200"
-        ],
-        "nid": "8 Tutorial: support and synergy skills"
+        "nid": "P4 Tutorial: weapon triangle"
     },
     {
         "name": "Chosen Recruits Monica and Cavs",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P4",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Monica'",
         "commands": [],
         "only_once": true,
@@ -4183,12 +4247,12 @@
             "end",
             "music_fade_back"
         ],
-        "nid": "8 Chosen Recruits Monica and Cavs"
+        "nid": "P4 Chosen Recruits Monica and Cavs"
     },
     {
         "name": "Antarion Recruits Monica and Cavs",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P4",
         "condition": "unit.nid == 'Antarion' and unit2.nid == 'Monica'",
         "commands": [],
         "only_once": true,
@@ -4247,35 +4311,12 @@
             "end",
             "music_fade_back"
         ],
-        "nid": "8 Antarion Recruits Monica and Cavs"
-    },
-    {
-        "name": "Tutorial: turnwheel",
-        "trigger": "phase_change",
-        "level_nid": "8",
-        "condition": "game.turncount == 2 and game.game_vars['ivala'] == 1 and (game.current_mode.nid == 'Casual' or game.current_mode.nid == 'Normal')",
-        "commands": [],
-        "only_once": true,
-        "priority": 20,
-        "_source": [
-            "wait;500",
-            "enable_turnwheel;t",
-            "add_portrait;Ivala;(120,32)",
-            "wait;200",
-            "speak;Ivala;As you progress on your battles, you may find yourself regretful of past choices.|As I am here to bring Light upon your world, allow me to grant you my most important gift.|You have now access to the <red><wave amplitude=1.5>Turnwheel</></>.|To use it, select a tile without any units, such as you do to bring up extra options.|By selecting Turnwheel, <red>you can revert the state of the battle to a previous point</>.;bottom;;;;blue;;;;;None",
-            "if;game.current_mode.nid == 'Normal'",
-            "    s;Ivala;You only have 3 uses per chapter, so make them count.;bottom;;;;blue;;;;;None",
-            "end",
-            "s;Ivala;Nothing will stand between you and your destined journey.;bottom;;;;blue;;;;;None",
-            "remove_portrait;Ivala",
-            "wait;200"
-        ],
-        "nid": "8 Tutorial: turnwheel"
+        "nid": "P4 Antarion Recruits Monica and Cavs"
     },
     {
         "name": "Snagbridge baixo",
         "trigger": "unit_death",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "unit.nid == 'Snagbaixo'",
         "commands": [],
         "only_once": false,
@@ -4288,13 +4329,13 @@
             "level_var;snagbridge;1",
             "remove_region;Snagbaixo"
         ],
-        "nid": "7 Snagbridge baixo"
+        "nid": "P1 Snagbridge baixo"
     },
     {
         "name": "Second spider death and Tutorial: Visit",
-        "trigger": "unit_death",
-        "level_nid": "7",
-        "condition": "unit.nid == '112'",
+        "trigger": "combat_end",
+        "level_nid": "P1",
+        "condition": "game.check_dead(\"112\")",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4321,12 +4362,12 @@
             "end",
             ""
         ],
-        "nid": "7 Second spider death and Tutorial: Visit"
+        "nid": "P1 Second spider death and Tutorial: Visit"
     },
     {
         "name": "Tutorial: cav mov",
         "trigger": "phase_change",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "game.level_vars['tutocav'] == 1 and game.game_vars['ivala'] == 1 and game.game_vars['snagbridgecima'] == 0",
         "commands": [],
         "only_once": true,
@@ -4341,12 +4382,12 @@
             "flicker_cursor;7,2",
             "wait;1000"
         ],
-        "nid": "7 Tutorial: cav mov"
+        "nid": "P1 Tutorial: cav mov"
     },
     {
         "name": "Tutorial: level up",
         "trigger": "unit_level_up",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "unit.nid == 'Chosen' and game.game_vars['ivala'] == 1",
         "commands": [],
         "only_once": true,
@@ -4359,12 +4400,12 @@
             "remove_portrait;Ivala",
             "wait;200"
         ],
-        "nid": "7 Tutorial: level up"
+        "nid": "P1 Tutorial: level up"
     },
     {
         "name": "Overworld",
         "trigger": "overworld_start",
-        "level_nid": "7",
+        "level_nid": "P1",
         "condition": "True",
         "commands": [],
         "only_once": true,
@@ -4374,36 +4415,53 @@
             "reveal_overworld_road;26;28",
             "reveal_overworld_node;28"
         ],
-        "nid": "7 Overworld"
+        "nid": "P1 Overworld"
     },
     {
-        "name": "Enemy reinforcements middle",
+        "name": "Enemy reinforcements middle and Tutorial: moving boss + archer",
         "trigger": "phase_change",
-        "level_nid": "8",
-        "condition": "game.turncount == 6",
+        "level_nid": "P4",
+        "condition": "game.turncount == 6 or game.level_vars['midsetup'] == 1",
         "commands": [],
         "only_once": true,
         "priority": 20,
         "_source": [
+            "level_var;mid;1",
             "wait;1000",
             "center_cursor;10,1",
             "music;Halfway change loop",
-            "add_unit;115;10,0;fade;closest;north",
+            "wait;300",
+            "add_unit;Bruce;8,0;fade;closest;north",
+            "move_unit;Bruce;8,1;normal;closest",
+            "add_unit;115;7,0;fade;closest;north",
             "add_unit;116;9,0;fade;closest;north",
-            "add_unit;117;8,0;fade;closest;north",
+            "wait;600",
+            "add_portrait;Bruce;Right",
+            "wait;300",
+            "s;Bruce;Tsc. These guys will fight back.|Alright, you fellas with me.{br}Coordinate our movements.",
+            "wait;300",
+            "remove_portrait;Bruce",
             "change_music;player_phase;Halfway change loop",
             "change_music;enemy_phase;Halfway change loop",
             "change_music;enemy_battle;Halfway change loop",
             "change_music;player_battle;Halfway change loop",
-            "wait;1000"
+            "wait;1000",
+            "if;{v:ivala} == 1",
+            "    wait;500",
+            "    add_portrait;Ivala;(120,32)",
+            "    wait;200",
+            "    speak;Ivala;Another <red>Boss</> unit has appeared!|Be careful, though, as this is a <red>moving Boss</>!|Remember to check his range by selecting him.|He has also brought archers, who use <red>ranged</> attacks.|Getting close to them will be your best bet!;bottom;;;;blue;;;;;None",
+            "    remove_portrait;Ivala",
+            "    wait;200",
+            "end"
         ],
-        "nid": "8 Enemy reinforcements middle"
+        "nid": "P4 Enemy reinforcements middle and Tutorial: moving boss + archer"
     },
     {
         "name": "CrushWall2",
         "trigger": "enemy_turn_change",
-        "level_nid": "8",
-        "condition": "game.turncount == 2",
+        "level_nid": "P4",
+        "condition": "game.turncount == 2 and game.level_vars['alert'] == 0",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4414,7 +4472,7 @@
             "wait;500",
             "multi_add_portrait;Crusher;Left;Plank;Right",
             "s;Plank;I'm telling you, it's the force. You're just a brute, you have no idea how this works.|If you attack the specific spots, this will break in no sweat.|In all honesty, this is your limit. It's OK to give up.",
-            "s;Crusher;Oh my fucking god, just please go bother someone else if you're NOT HELPING!",
+            "s;Crusher;Oh my fucking god, just please go bother someone else if you're not helping!",
             "s;Plank;See, losing your calm isn't the quality of a leader.|This wall is more composed than you are.",
             "s;Crusher;How about you stand right between me and the wall?|This will motivate me to CRUSH YOU BOTH!",
             "s;Plank;Just move over and let me do my trick.",
@@ -4437,13 +4495,13 @@
             "move_unit;Plank;22,5;normal;stack",
             "move_unit;Crusher;21,5;normal;stack"
         ],
-        "nid": "8 CrushWall2"
+        "nid": "P4 CrushWall2"
     },
     {
         "name": "CrushWall1",
         "trigger": "enemy_turn_change",
-        "level_nid": "8",
-        "condition": "game.turncount == 1",
+        "level_nid": "P4",
+        "condition": "game.turncount == 1 and game.level_vars['alert'] == 0",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4469,13 +4527,13 @@
             "wait;1000",
             "music;Prologue enemy phase"
         ],
-        "nid": "8 CrushWall1"
+        "nid": "P4 CrushWall1"
     },
     {
         "name": "CrushWall3",
         "trigger": "enemy_turn_change",
-        "level_nid": "8",
-        "condition": "game.turncount == 3",
+        "level_nid": "P4",
+        "condition": "game.turncount == 3 and game.level_vars['alert'] == 0",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4483,32 +4541,30 @@
             "center_cursor;Crusher",
             "flicker_cursor;Crusher",
             "multi_add_portrait;Crusher;Left;Plank;Right",
-            "s;Plank;...and then the whole meat fell into the fire! Why the fuck wouldn't he have listened to me?",
+            "s;Plank;...and then the whole meat fell into the fire!|Why the fuck wouldn't he have listened to me?",
             "s;Crusher;Hmm-hm.",
-            "s;Plank;That's what I told Keny. But Keny is a two-faced bitch.|I fucking knew he wouldn't have agreed with me in public. But after the raid, who comes searching for me?",
+            "s;Plank;That's what I told Keny. But Keny is a two-faced bitch.|I fucking knew he wouldn't have agreed with me in public.|But after the raid, who comes searching for me?",
             "s;Crusher;{tgm}...",
             "s;Plank;That's right, the same ol' Keny! I swear, those guys are...",
             "multi_remove_portrait;Crusher;Plank",
             "wait;400",
             "interact_unit;Crusher;Wall_dir;hit1;;force_no_animation",
-            "music_clear",
             "wait;3000",
             "multi_add_portrait;Crusher;Left;Plank;Right",
             "wait;1000",
-            "music_fade_back",
-            "s;Plank;...just incorrigible. That's why this band needs a better leader.|Someone who can put those guys in their place.{br}Someone capable of...",
+            "s;Plank;...just incorrigible. That's why this band needs a better leader.|Someone who can put those guys in their place. Someone capable of...",
             "s;Crusher;I really wish you were a wall right now.",
             "wait;500",
             "multi_remove_portrait;Crusher;Plank",
             "wait;1000"
         ],
-        "nid": "8 CrushWall3"
+        "nid": "P4 CrushWall3"
     },
     {
         "name": "CrushWall4",
         "trigger": "enemy_turn_change",
-        "level_nid": "8",
-        "condition": "game.turncount == 4",
+        "level_nid": "P4",
+        "condition": "game.turncount == 4 and game.level_vars['alert'] == 0",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4529,42 +4585,428 @@
             "remove_portrait;Crusher",
             "wait;400",
             "interact_unit;Crusher;Wall_dir;hit1;;force_no_animation",
-            "wait;1000"
+            "wait;1000",
+            "level_var;plankgone;1"
         ],
-        "nid": "8 CrushWall4"
+        "nid": "P4 CrushWall4"
     },
     {
         "name": "CrushWall5",
         "trigger": "enemy_turn_change",
-        "level_nid": "8",
-        "condition": "game.turncount == 5",
+        "level_nid": "P4",
+        "condition": "game.turncount == 5 and game.level_vars['alert'] == 0",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;{v:alertplank} == 0",
+            "    center_cursor;Crusher",
+            "    flicker_cursor;Crusher",
+            "    add_unit;Plank;24,5;swoosh;closest;east",
+            "    wait;500",
+            "    move_unit;Plank;22,5;normal;closest",
+            "    wait;500",
+            "    multi_add_portrait;Crusher;Left;Plank;Right",
+            "    s;Plank;Did ya miss me?",
+            "    s;Crusher;Was it really worth tasting silence, only to part with it so quickly...?",
+            "    s;Plank;What are you speaking so philosophically for?|That's why this wall is still there.|You don't see the wall complaining.",
+            "    multi_remove_portrait;Crusher;Plank",
+            "    wait;400",
+            "    interact_unit;Crusher;Wall_dir;hit1;;force_no_animation",
+            "    wait;1000",
+            "    multi_add_portrait;Crusher;Left;Plank;Right",
+            "    wait;500",
+            "    s;Crusher;So, are they coming or not?",
+            "    s;Plank;Yeah, soon.",
+            "    wait;500",
+            "    multi_remove_portrait;Crusher;Plank",
+            "    wait;1000",
+            "    level_var;plankgone;0",
+            "elif;{v:alertplank} == 1",
+            "    center_cursor;Crusher",
+            "    add_unit;Plank;24,5;swoosh;closest;east",
+            "    wait;1000",
+            "    add_portrait;Plank;Left;normal;NoSmile",
+            "    s;Plank;...Ah.|Welp, good luck, boss!",
+            "    wait;300",
+            "    remove_portrait;Plank",
+            "    wait;300",
+            "    remove_unit;Plank;swoosh;east",
+            "end",
+            ""
+        ],
+        "nid": "P4 CrushWall5"
+    },
+    {
+        "name": "Alert, enemy near Crusher",
+        "trigger": "Alert",
+        "level_nid": "P4",
+        "condition": "any(game.level.regions.get('alert').contains(unit.position) for unit in game.get_units_in_party()) == True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "level_var;alert;1",
+            "change_music;player_phase;Halfway change loop",
+            "change_music;enemy_phase;Halfway change loop",
+            "change_music;enemy_battle;Halfway change loop",
+            "change_music;player_battle;Halfway change loop",
+            "if;{v:plankgone} == 0",
+            "    wait;1000",
+            "    center_cursor;Crusher",
+            "    wait;500",
+            "    multi_add_portrait;Crusher;Left;Plank;Right",
+            "    wait;300",
+            "    s;Crusher;Ah fuck...",
+            "    s;Plank;They're here, boss! Leave this wall-boyfriend of yours!",
+            "    expression;Crusher;CloseEyes",
+            "    s;Crusher;I... can't.",
+            "    s;Plank;Huh? What?",
+            "    expression;Crusher;NoSmile",
+            "    bop_portrait;Crusher",
+            "    s;Crusher;I fucking CAN'T!|I'm too tired, my legs just  ain't moving anytime soon.|Either I complete my mission or I'll die right here.",
+            "    s;Plank;{tgm}...",
+            "    s;Crusher;So go. Save your pathetic ass at least.",
+            "    s;Plank;Boss... I'll always remember ya.|Sometimes as an example of what not to do. Or most of the time. Or alw-",
+            "    interact_unit;Crusher;Plank;miss1",
+            "    wait;500",
+            "    s;Plank;Ok. Bye.",
+            "    multi_remove_portrait;Crusher;Plank",
+            "    wait;500",
+            "    remove_unit;Plank;swoosh;east",
+            "    change_ai;Crusher;Guard",
+            "elif;{v:plankgone} == 1",
+            "    wait;1000",
+            "    center_cursor;Crusher",
+            "    wait;500",
+            "    add_portrait;Crusher;Right",
+            "    wait;300",
+            "    s;Crusher;So this is my final stand, huh...?|Alright, bring it on, little maggots!|I'll show why I'm called the Crusher!",
+            "    change_ai;Crusher;Guard",
+            "    level_var;alertplank;1",
+            "end",
+            "if;{v:mid} == 0",
+            "    level_var;midsetup;1",
+            "end"
+        ],
+        "nid": "P4 Alert, enemy near Crusher"
+    },
+    {
+        "name": "Rout VICTORY",
+        "trigger": "combat_end",
+        "level_nid": "P4",
+        "condition": "len(game.get_enemy_units()) == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
+            "win_game"
+        ],
+        "nid": "P4 Rout VICTORY"
+    },
+    {
+        "name": "CrushWall6",
+        "trigger": null,
+        "level_nid": "P4",
+        "condition": "game.turncount == 6 and game.level_vars['alert'] == 0",
         "commands": [],
         "only_once": true,
         "priority": 20,
         "_source": [
             "center_cursor;Crusher",
             "flicker_cursor;Crusher",
-            "add_unit;Plank;24,5;swoosh;closest;east",
-            "wait;500",
-            "move_unit;Plank;22,5;normal;closest",
-            "wait;500",
-            "multi_add_portrait;Crusher;Left;Plank;Right",
-            "s;Plank;Did ya miss me?",
-            "s;Crusher;Was it really worth tasting silence, only to part with it so quick...",
-            "s;Plank;What are you speaking so philosophically for?|That's why this wall is still there.|You don't see the wall complaining.",
-            "multi_remove_portrait;Crusher;Plank",
-            "wait;400",
-            "interact_unit;Crusher;Wall_dir;hit1;;force_no_animation",
-            "music_clear",
-            "wait;1500",
-            "multi_add_portrait;Crusher;Left;Plank;Right",
             "wait;1000",
-            "s;Crusher;So, are they coming or not?",
-            "s;Plank;Yeah, soon.",
+            "interact_unit;Crusher;Wall_dir;hit1;;force_no_animation"
+        ],
+        "nid": "P4 CrushWall6"
+    },
+    {
+        "name": "Tutorial: Trainee e Ranged",
+        "trigger": "unit_select",
+        "level_nid": "P1",
+        "condition": "game.level_vars['tutopair'] == 1 and game.game_vars['ivala'] == 1 and unit.nid == 'Chosen'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
             "wait;500",
-            "multi_remove_portrait;Crusher;Plank",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;Mira is a <red>Trainee</> character.|Trainees are classes that start out weak, but have high future potential!|Trainees automatically promote to a superior class when they reach level 10.|Be careful of sending Mira to the frontlines while she's still inexperienced.|Thankfully, she is wielding a <red>ranged</> axe!{br}This weapon can hit from 2 tiles away.|This lets you safely attack against melee opponents.;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200"
+        ],
+        "nid": "P1 Tutorial: Trainee e Ranged"
+    },
+    {
+        "name": "PROLDeathMira",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Mira'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear",
+            "add_portrait;Mira;FarRight;normal;CloseEyes",
+            "speak;Mira;No... not until he is...",
+            "remove_portrait;Mira",
+            "remove_unit;Mira",
+            "music_fade_back"
+        ],
+        "nid": "Global PROLDeathMira"
+    },
+    {
+        "name": "Seize cave entrance VICTORY",
+        "trigger": "Seize",
+        "level_nid": "P2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
+            "win_game"
+        ],
+        "nid": "P2 Seize cave entrance VICTORY"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "P2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "chapter_title",
+            "transition;close",
+            "add_weather;night",
+            "change_background;ForestDark",
+            "multi_add_portrait;Simonyoung;Right;Chosen;Left",
+            "transition;open",
+            "s;Simonyoung;We're almost there.",
+            "move_portrait;Chosen;MidLeft;no_block",
+            "add_portrait;SoldierBlue;FarLeft;left",
+            "music;Tension",
+            "s;SoldierBlue;S-sir! The... Captain Duro has...",
+            "s;Simonyoung;Calm down. What happened?",
+            "s;SoldierBlue;Sorry, sir. We were wounded... Captain Duro has sacrificed himself to let us retreat!|He's alone holding the monsters at the entrance of Jito!",
+            "s;Simonyoung;Understood. Leave it to us, we'll pick up our pace.",
+            "s;SoldierBlue;Yes, sir!",
+            "remove_portrait;SoldierBlue;;left",
+            "move_portrait;Chosen;Left",
+            "s;Chosen;What a cool guy this Duro must be!",
+            "s;Simonyoung;This could be a trap.",
+            "s;Chosen;Huh?",
+            "s;Simonyoung;Enemy succubi could be attempting to deceive us.",
+            "s;Chosen;Oh... Fuck! So, do we still go there?",
+            "expression;Simonyoung;CloseEyes",
+            "s;Simonyoung;...;no_talk",
+            "expression;Simonyoung;OpenEyes",
+            "s;Simonyoung;We don't have a choice. This could still be true. Come on.",
+            "s;Chosen;Yeah!",
+            "transition;close",
+            "change_background",
+            "wait;1000",
+            "move_cursor;6,9",
+            "transition;open",
+            "end_skip",
+            "wait;1500",
+            "flicker_cursor;Duro",
+            "wait;500",
+            "add_portrait;Duro;Left",
+            "wait;300",
+            "s;Duro;Hahaha, you monsters don't stand a chance!|My lance might not be in its peak, but it still can thrust well enough!|Who wants to be next?!",
+            "remove_portrait;Duro",
+            "wait;500",
+            "interact_unit;108;Duro;hit1,hit2,hit1,hit2,end",
+            "add_portrait;Duro;Left",
+            "wait;300",
+            "s;Duro;Ha! I'll sleep here at this rate!",
+            "remove_portrait;Duro",
+            "wait;500",
+            "move_unit;113;6,7;normal",
+            "wait;500",
+            "interact_unit;113;Duro;hit1,end",
+            "wait;500",
+            "add_portrait;Duro;Left;;NoSmile",
+            "wait;300",
+            "s;Duro;Aw shit, those magic assholes piss me off!",
+            "remove_portrait;Duro",
+            "wait;1000",
+            "move_cursor;6,11",
+            "music;Reinforcements",
+            "#SPAWN GROUP",
+            "add_group;Player;Player;fade;stack",
+            "move_group;Player;Player;normal;stack",
+            "wait;1500",
+            "multi_add_portrait;Duro;Left;Chosen;Right",
+            "s;Chosen;You're in luck, your savior is here!|You don't have to sacrifice yourself anymore!",
+            "s;Duro;Sacrifice? Gah, who told you that, shithair?|I'm just enjoying my time here alone, is all! Hahahaha!",
+            "s;Chosen;Wha-... I think we should leave this guy behind.",
+            "s;Duro;Haha! Ease up, will you?|Simon, your new boyfriend is funny!",
+            "remove_portrait;Chosen",
+            "add_portrait;Simonyoung;Right",
+            "s;Simonyoung;If you don't have anything useful to say, I take it the situation is controlled.",
+            "s;Duro;Oh, it's just the opposite! I just wanna die smiling!|See, there's this succubus who have put us into a lot of trouble...",
+            "wait;300",
+            "flicker_cursor;Batgal",
+            "wait;1000",
+            "move_cursor;Duro",
+            "wait;300",
+            "s;Duro;So let's take down this girl and we enter the cave.|If we don't succeed, she'll enter OUR cave! Hahaha!",
+            "s;Simonyoung;...;no_talk",
+            "multi_remove_portrait;Duro;Simonyoung",
+            "wait;1000",
+            "change_team;Duro;player",
+            "sound;Level Up",
+            "alert;Duro has joined your party!",
             "wait;1000"
         ],
-        "nid": "8 CrushWall5"
+        "nid": "P2 Intro"
+    },
+    {
+        "name": "Tutorial: support and synergy skills",
+        "trigger": "phase_change",
+        "level_nid": "P2",
+        "condition": "game.game_vars['ivala'] == 1",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;Aside from more muscles, allies also bring advantages in the form of <red>Support</>.|When your units enter combat or stay nearby (2 tiles range), they gain <red>Support points</>.|By increasing those points, they unlock <red>Support Conversations</> when adjacent.|Any time this happens, their <red>Support Rank</> increases.|Increasing those ranks grant bonuses to the stats of the respective units, when nearby.|You can also gain <red>Synergy Abilities</> by achieving certain ranks!|In short, bonds are power!;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200"
+        ],
+        "nid": "P2 Tutorial: support and synergy skills"
+    },
+    {
+        "name": "Boss quote",
+        "trigger": "combat_start",
+        "level_nid": "P2",
+        "condition": "(unit.nid == \"Duro\" and unit2.nid == 'Batgal') or (unit.nid == 'Batgal' and unit2.nid == \"Duro\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Duro;Right,Bottom;;Smile",
+            "s;Duro;Hey, sorry you couldn't have your fun with my boys!|I'm the protector of their chastity, HAHA!",
+            "add_portrait;SpiderQueen;Left,Bottom",
+            "s;SpiderQueen;That's quite alright. With your size, I'm betting you can make up for it nicely...",
+            "s;Duro;Ha! You see, this would not fly well with my wife.|Better luck next time!",
+            "multi_remove_portrait;Duro;SpiderQueen"
+        ],
+        "nid": "P2 Boss quote"
+    },
+    {
+        "name": "Tutorial: magic vs armor",
+        "trigger": "unit_select",
+        "level_nid": "P2",
+        "condition": "unit.nid == 'Duro'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;As a <red>armored</> unit, Duro has good defense and is suitable for the frontlines.|However, armored units have poor resistance and are vulnerable to magic attacks!;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200"
+        ],
+        "nid": "P2 Tutorial: magic vs armor"
+    },
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "P2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "set_next_chapter;P3"
+        ],
+        "nid": "P2 Outro"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "P3",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "spawn_group;Player;south;Player;normal;closest",
+            "equip_item;SpiderEmpress;DarkWeb"
+        ],
+        "nid": "P3 Intro"
+    },
+    {
+        "name": "Boss death VICTORY",
+        "trigger": "combat_end",
+        "level_nid": "P3",
+        "condition": "game.check_dead(\"SpiderQueen\")",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
+            "win_game"
+        ],
+        "nid": "P3 Boss death VICTORY"
+    },
+    {
+        "name": "Tutorial: Turnwheel",
+        "trigger": "phase_change",
+        "level_nid": "P3",
+        "condition": "game.turncount == 2 and game.game_vars['ivala'] == 1 and (game.current_mode.nid == 'Casual' or game.current_mode.nid == 'Normal')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "enable_turnwheel;t",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;As you progress on your battles, you may find yourself regretful of past choices.|As I am here to bring Light upon your world, allow me to grant you my most important gift.|You have now access to the <red><wave amplitude=1.5>Turnwheel</></>.|To use it, select a tile without any units, such as you do to bring up extra options.|By selecting Turnwheel, <red>you can revert the state of the battle to a previous point</>.;bottom;;;;blue;;;;;None",
+            "if;game.current_mode.nid == 'Normal'",
+            "    s;Ivala;You only have 3 uses per chapter, so make them count.;bottom;;;;blue;;;;;None",
+            "end",
+            "s;Ivala;Nothing will stand between you and your destined journey.;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;200"
+        ],
+        "nid": "P3 Tutorial: Turnwheel"
+    },
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "P3",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "set_next_chapter;P4",
+            ""
+        ],
+        "nid": "P3 Outro"
     }
 ]

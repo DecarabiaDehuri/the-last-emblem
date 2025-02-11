@@ -2725,6 +2725,7 @@
         "level": 1,
         "klass": "Chosen",
         "tags": [
+            "Required",
             "Chosen"
         ],
         "bases": {
@@ -2734,7 +2735,7 @@
             "SKL": 11,
             "SPD": 9,
             "LCK": 6,
-            "DEF": 9,
+            "DEF": 7,
             "RES": 6,
             "CON": 5,
             "MOV": 5
@@ -2902,48 +2903,105 @@
         "fields": []
     },
     {
-        "nid": "SpiderQueen",
-        "name": "Spider Queen",
-        "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
-        "variant": "Queen",
-        "level": 9,
-        "klass": "Spider",
-        "tags": [
-            "Boss",
-            "Monster"
-        ],
+        "nid": "Mira",
+        "name": "Mira",
+        "desc": "",
+        "variant": "",
+        "level": 1,
+        "klass": "Journeyman",
+        "tags": [],
         "bases": {
-            "HP": 20,
+            "HP": 18,
             "STR": 4,
-            "MAG": 6,
-            "SKL": 8,
-            "SPD": 6,
-            "LCK": 4,
-            "DEF": 7,
-            "RES": 3,
-            "CON": 11,
-            "MOV": 7
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 4,
+            "LCK": 0,
+            "DEF": 3,
+            "RES": 0,
+            "CON": 7,
+            "MOV": 5
         },
         "growths": {
-            "HP": 85,
-            "STR": 55,
-            "MAG": 25,
+            "HP": 70,
+            "STR": 35,
+            "MAG": 0,
             "SKL": 40,
-            "SPD": 45,
+            "SPD": 32,
             "LCK": 35,
-            "DEF": 25,
-            "RES": 15,
+            "DEF": 15,
+            "RES": 20,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Flux",
+                "Hatchet",
                 false
             ]
         ],
         "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Axe": [
+                false,
+                1,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Mira",
+        "affinity": "Fire",
+        "fields": []
+    },
+    {
+        "nid": "Duro",
+        "name": "Duro",
+        "desc": "Commander of a Grado military force.",
+        "variant": "",
+        "level": 4,
+        "klass": "Knight",
+        "tags": [
+            "Armor"
+        ],
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 2,
+            "SPD": 1,
+            "LCK": 2,
+            "DEF": 10,
+            "CON": 13,
+            "MOV": 4,
+            "RES": 3
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 40,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 15,
+            "LCK": 25,
+            "DEF": 28,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 20
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Like_a_champ"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -2953,7 +3011,7 @@
             ],
             "Lance": [
                 true,
-                0,
+                71,
                 251
             ],
             "Axe": [
@@ -2983,7 +3041,7 @@
             ],
             "Dark": [
                 false,
-                71,
+                0,
                 251
             ],
             "Default": [
@@ -2993,8 +3051,8 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "SpiderQueen",
-        "affinity": "Fire",
+        "portrait_nid": "Breguet",
+        "affinity": "None",
         "fields": []
     },
     {
@@ -3006,14 +3064,14 @@
         "klass": "Cleric",
         "tags": [],
         "bases": {
-            "HP": 10,
+            "HP": 17,
             "STR": 2,
             "MAG": 7,
             "SKL": 2,
             "SPD": 4,
             "LCK": 7,
-            "DEF": 1,
-            "RES": 2,
+            "DEF": 3,
+            "RES": 8,
             "CON": 5,
             "MOV": 5
         },
@@ -3075,14 +3133,14 @@
         "klass": "Blademaster",
         "tags": [],
         "bases": {
-            "HP": 30,
-            "STR": 0,
-            "MAG": 16,
-            "SKL": 18,
-            "SPD": 14,
-            "LCK": 11,
-            "DEF": 8,
-            "RES": 13,
+            "HP": 17,
+            "STR": 5,
+            "MAG": 2,
+            "SKL": 7,
+            "SPD": 9,
+            "LCK": 16,
+            "DEF": 5,
+            "RES": 6,
             "CON": 8,
             "MOV": 5
         },
@@ -3105,7 +3163,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Flashy_Strike"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -3313,6 +3376,303 @@
         "fields": []
     },
     {
+        "nid": "SpiderQueen",
+        "name": "Spider Queen",
+        "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
+        "variant": "Queen",
+        "level": 4,
+        "klass": "Spider",
+        "tags": [
+            "Boss",
+            "Monster"
+        ],
+        "bases": {
+            "HP": 20,
+            "STR": 4,
+            "MAG": 6,
+            "SKL": 8,
+            "SPD": 6,
+            "LCK": 4,
+            "DEF": 7,
+            "RES": 3,
+            "CON": 11,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 40,
+            "SPD": 45,
+            "LCK": 35,
+            "DEF": 25,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Flux",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                true,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                71,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "SpiderQueen",
+        "affinity": "Fire",
+        "fields": []
+    },
+    {
+        "nid": "SpiderEmpress",
+        "name": "Spider Empress",
+        "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
+        "variant": "Empress",
+        "level": 4,
+        "klass": "Spider",
+        "tags": [
+            "Boss",
+            "Monster"
+        ],
+        "bases": {
+            "HP": 27,
+            "STR": 5,
+            "MAG": 6,
+            "SKL": 10,
+            "SPD": 5,
+            "LCK": 4,
+            "DEF": 8,
+            "RES": 5,
+            "CON": 11,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 40,
+            "SPD": 45,
+            "LCK": 35,
+            "DEF": 25,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Flux",
+                false
+            ],
+            [
+                "DarkWeb",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                true,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                121,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                71,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "SpiderQueen",
+        "affinity": "Fire",
+        "fields": []
+    },
+    {
+        "nid": "Batgal",
+        "name": "Bat Succubus",
+        "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
+        "variant": "",
+        "level": 6,
+        "klass": "Batgal",
+        "tags": [
+            "Boss",
+            "Monster"
+        ],
+        "bases": {
+            "HP": 25,
+            "STR": 8,
+            "MAG": 6,
+            "SKL": 8,
+            "SPD": 8,
+            "LCK": 4,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 11,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 40,
+            "SPD": 45,
+            "LCK": 35,
+            "DEF": 25,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Flail",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                true,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "SpiderQueen",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
         "nid": "Crusher",
         "name": "Crusher",
         "desc": "The leader of Bazba's bandits.",
@@ -3416,7 +3776,7 @@
         "nid": "Plank",
         "name": "Plank",
         "desc": "One of Bazba's henchmen.",
-        "variant": null,
+        "variant": "",
         "level": 4,
         "klass": "Thief",
         "tags": [],
@@ -3502,6 +3862,101 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Bone",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Bruce",
+        "name": "Bruce",
+        "desc": "Commander of Grado's border guard.\nHis loyalty is unshakable.",
+        "variant": "",
+        "level": 8,
+        "klass": "Mercenary",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 18,
+            "STR": 4,
+            "MAG": 0,
+            "SKL": 8,
+            "SPD": 3,
+            "LCK": 4,
+            "DEF": 6,
+            "CON": 9,
+            "MOV": 5,
+            "RES": 3
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Blade",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                31,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                true,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Bazba",
         "affinity": "None",
         "fields": []
     },
@@ -3787,196 +4242,6 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Mercenary1",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Breguet",
-        "name": "Breguet",
-        "desc": "Commander of a Grado military force.",
-        "variant": null,
-        "level": 4,
-        "klass": "Knight",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 21,
-            "STR": 8,
-            "MAG": 0,
-            "SKL": 2,
-            "SPD": 1,
-            "LCK": 2,
-            "DEF": 9,
-            "CON": 13,
-            "MOV": 4,
-            "RES": 0
-        },
-        "growths": {
-            "HP": 80,
-            "STR": 40,
-            "MAG": 0,
-            "SKL": 30,
-            "SPD": 15,
-            "LCK": 25,
-            "DEF": 28,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 20
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Lance",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                true,
-                71,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Breguet",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Saar",
-        "name": "Saar",
-        "desc": "Commander of Grado's border guard.\nHis loyalty is unshakable.",
-        "variant": "",
-        "level": 8,
-        "klass": "Knight",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 30,
-            "STR": 12,
-            "MAG": 0,
-            "SKL": 8,
-            "SPD": 3,
-            "LCK": 4,
-            "DEF": 11,
-            "CON": 13,
-            "MOV": 4,
-            "RES": 3
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Javelin",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                71,
-                251
-            ],
-            "Axe": [
-                true,
-                710,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Saar",
         "affinity": "None",
         "fields": []
     },
