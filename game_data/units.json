@@ -2994,6 +2994,10 @@
             [
                 "Iron_Lance",
                 false
+            ],
+            [
+                "Health_Potion",
+                false
             ]
         ],
         "learned_skills": [
@@ -3477,7 +3481,7 @@
         "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
         "variant": "Empress",
         "level": 4,
-        "klass": "Spider",
+        "klass": "SpiderEmpress",
         "tags": [
             "Boss",
             "Monster"
@@ -3492,7 +3496,7 @@
             "DEF": 8,
             "RES": 5,
             "CON": 11,
-            "MOV": 2
+            "MOV": 3
         },
         "growths": {
             "HP": 85,

@@ -282,7 +282,7 @@
     {
         "nid": "Webbed",
         "name": "Webbed",
-        "desc": "",
+        "desc": "Unit has -5 SPD and -3 MOV for the remainder of their turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -302,7 +302,7 @@
                     ],
                     [
                         "MOV",
-                        -1
+                        -3
                     ]
                 ]
             ],
@@ -372,7 +372,7 @@
     {
         "nid": "Blinding_Strike",
         "name": "Blinding Strike",
-        "desc": "Simon can use Blinding Strike. Costs <blue>5 mana</>.\nBLIND: Unit loses HIT and AVOID. Duration: 2 turns.",
+        "desc": "Simon can use Blinding Strike. Costs <blue>5 mana</>.\n<red>BLIND</>: Unit loses HIT and AVOID. Duration: 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -392,7 +392,7 @@
     {
         "nid": "Silencing_Strike",
         "name": "Silencing Strike",
-        "desc": "Simon can use Silencing Strike. Costs <blue>5 mana</>.\nSILENCE: Unit cannot use magic items. Duration: 3 turns.",
+        "desc": "Simon can use Silencing Strike. Costs <blue>5 mana</>.\n<red>SILENCE</>: Unit cannot use magic items. Duration: 3 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -412,7 +412,7 @@
     {
         "nid": "Stunning_Strike",
         "name": "Stunning Strike",
-        "desc": "Simon can use Stunning Strike. Costs <blue>5 mana</>.\nSTUN: Unit cannot act. Duration: 1 turn.",
+        "desc": "Simon can use Stunning Strike. Costs <blue>5 mana</>.\n<red>STUN</>: Unit cannot act. Duration: 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,

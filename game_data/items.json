@@ -514,7 +514,7 @@
     {
         "nid": "DarkWeb",
         "name": "Dark Web",
-        "desc": "",
+        "desc": "A siege weapon which shoots at a straight line. Units hit by this will get WEBBED.\n<red>WEBBED</>: -5 SPD, -3 MOV. Duration: 1 turn. ",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -535,7 +535,7 @@
             ],
             [
                 "max_range",
-                20
+                25
             ],
             [
                 "status_on_hit",
@@ -559,7 +559,7 @@
             ],
             [
                 "damage",
-                4
+                8
             ],
             [
                 "no_double",
@@ -568,6 +568,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "shove",
+                2
             ]
         ]
     },

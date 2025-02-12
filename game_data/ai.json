@@ -699,10 +699,10 @@
         "roam_ai": false
     },
     {
-        "nid": "SpiderEmpress",
+        "nid": "SEmpress",
         "behaviours": [
             {
-                "action": "Attack",
+                "action": "Move_to",
                 "target": "Enemy",
                 "target_spec": null,
                 "view_range": -4,
@@ -712,10 +712,10 @@
                 "condition": ""
             },
             {
-                "action": "Move_to",
-                "target": "Position",
-                "target_spec": "Starting",
-                "view_range": 0,
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": null,
+                "view_range": -4,
                 "invert_targeting": false,
                 "roam_speed": 100,
                 "desired_proximity": 0,

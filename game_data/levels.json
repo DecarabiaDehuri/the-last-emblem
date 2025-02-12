@@ -731,7 +731,7 @@
             {
                 "nid": "108",
                 "variant": null,
-                "level": 1,
+                "level": 8,
                 "klass": "Spider",
                 "faction": "Monster",
                 "starting_items": [
@@ -755,7 +755,7 @@
             {
                 "nid": "112",
                 "variant": null,
-                "level": 1,
+                "level": 8,
                 "klass": "Spider",
                 "faction": "Monster",
                 "starting_items": [
@@ -853,7 +853,7 @@
                     1,
                     1
                 ],
-                "sub_nid": "Seize",
+                "sub_nid": "Enter",
                 "condition": "unit.nid == 'Chosen'",
                 "time_left": null,
                 "only_once": false,
@@ -934,22 +934,19 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    6,
-                    7
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
             {
                 "nid": "102",
                 "variant": null,
-                "level": 1,
-                "klass": "Mogall",
+                "level": 5,
+                "klass": "Revenant",
                 "faction": "Monster",
                 "starting_items": [
                     [
-                        "Evil_Eye",
+                        "Sharp_Claw",
                         false
                     ]
                 ],
@@ -958,22 +955,19 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    11,
-                    10
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
             {
                 "nid": "103",
                 "variant": null,
-                "level": 1,
-                "klass": "Mogall",
+                "level": 10,
+                "klass": "Spider",
                 "faction": "Monster",
                 "starting_items": [
                     [
-                        "Evil_Eye",
+                        "Sharp_Claw",
                         false
                     ]
                 ],
@@ -989,7 +983,7 @@
             {
                 "nid": "104",
                 "variant": null,
-                "level": 1,
+                "level": 8,
                 "klass": "Mogall",
                 "faction": "Monster",
                 "starting_items": [
@@ -1024,10 +1018,7 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    2,
-                    12
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
@@ -1064,7 +1055,7 @@
             {
                 "nid": "SpiderEmpress",
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "SEmpress",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -1077,7 +1068,7 @@
             {
                 "nid": "106",
                 "variant": null,
-                "level": 1,
+                "level": 10,
                 "klass": "Spider",
                 "faction": "Monster",
                 "starting_items": [
@@ -1091,17 +1082,14 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    8,
-                    12
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
             {
                 "nid": "107",
                 "variant": null,
-                "level": 1,
+                "level": 10,
                 "klass": "Spider",
                 "faction": "Monster",
                 "starting_items": [
@@ -1115,17 +1103,14 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    2,
-                    4
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
             {
                 "nid": "108",
                 "variant": null,
-                "level": 1,
+                "level": 10,
                 "klass": "Spider",
                 "faction": "Monster",
                 "starting_items": [
@@ -1139,10 +1124,7 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    13,
-                    2
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
@@ -1159,7 +1141,7 @@
             {
                 "nid": "109",
                 "variant": null,
-                "level": 1,
+                "level": 7,
                 "klass": "Revenant",
                 "faction": "Soldier",
                 "starting_items": [
@@ -1173,21 +1155,55 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    4,
-                    15
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "110",
+                "variant": null,
+                "level": 6,
+                "klass": "Revenant",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
                 ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             }
         ],
-        "regions": [],
+        "regions": [
+            {
+                "nid": "Spider",
+                "region_type": "normal",
+                "position": [
+                    0,
+                    4
+                ],
+                "size": [
+                    15,
+                    13
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            }
+        ],
         "unit_groups": [
             {
                 "nid": "Player",
                 "units": [
-                    "Chosen",
-                    "Simonyoung",
                     "Mira",
                     "Duro"
                 ],
@@ -1201,17 +1217,79 @@
                         16
                     ],
                     "Mira": [
-                        7,
+                        8,
                         16
                     ],
                     "Duro": [
-                        7,
-                        15
+                        6,
+                        16
+                    ]
+                }
+            },
+            {
+                "nid": "Monster",
+                "units": [
+                    "101",
+                    "102",
+                    "103",
+                    "104",
+                    "105",
+                    "106",
+                    "107",
+                    "108",
+                    "109",
+                    "110"
+                ],
+                "positions": {
+                    "101": [
+                        6,
+                        7
+                    ],
+                    "102": [
+                        2,
+                        12
+                    ],
+                    "103": [
+                        10,
+                        10
+                    ],
+                    "104": [
+                        13,
+                        4
+                    ],
+                    "105": [
+                        3,
+                        2
+                    ],
+                    "106": [
+                        8,
+                        12
+                    ],
+                    "107": [
+                        1,
+                        4
+                    ],
+                    "108": [
+                        12,
+                        2
+                    ],
+                    "109": [
+                        5,
+                        10
+                    ],
+                    "110": [
+                        13,
+                        9
                     ]
                 }
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "P4",
