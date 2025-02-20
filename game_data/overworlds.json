@@ -13,7 +13,7 @@
                     18
                 ],
                 "icon": "castle",
-                "level": "7",
+                "level": "P1",
                 "menu_options": []
             },
             {
@@ -29,29 +29,50 @@
             },
             {
                 "nid": "28",
-                "name": "Prologue 2",
+                "name": "New Location",
+                "pos": [
+                    18,
+                    17
+                ],
+                "icon": "woods",
+                "level": "P2",
+                "menu_options": []
+            },
+            {
+                "nid": "29",
+                "name": "New Location",
                 "pos": [
                     18,
                     16
                 ],
-                "icon": "town",
-                "level": "8",
+                "icon": "map_node",
+                "level": "P3",
                 "menu_options": []
             }
         ],
         "map_paths": {
-            "(15, 18)-(18, 16)": [
-                [
-                    18,
-                    16
-                ],
-                [
-                    16,
-                    18
-                ],
+            "(15, 18)-(18, 17)": [
                 [
                     15,
                     18
+                ],
+                [
+                    17,
+                    18
+                ],
+                [
+                    18,
+                    17
+                ]
+            ],
+            "(18, 16)-(18, 17)": [
+                [
+                    18,
+                    17
+                ],
+                [
+                    18,
+                    16
                 ]
             ]
         },

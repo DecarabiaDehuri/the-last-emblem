@@ -1673,6 +1673,8 @@
             "add_weather;night",
             "game_var;_supports;True",
             "enable_turnwheel;1",
+            "set_current_mana;Simon;10",
+            "give_item;Simon;Heroic_Imitation;no_banner",
             "#trigger_script;Trigger",
             "base;Clearing",
             "#music;Attack;2000",
@@ -3122,7 +3124,8 @@
         "_source": [
             "add_talk;Simon;Aka",
             "set_current_hp;Chosen;1",
-            "set_current_hp;Monica;1"
+            "set_current_hp;Monica;1",
+            "set_current_hp;Antarion;1"
         ],
         "nid": "DEBUG Addtalk"
     },
@@ -3322,6 +3325,7 @@
         "_source": [
             "if;'Aura_of_Might_effect' in [skill.nid for skill in unit.skills]",
             "    remove_skill;Uyae;Aura_of_Might_effect;no_banner",
+            "    remove_item;Uyae;Might_Claw;no_banner",
             "end"
         ],
         "nid": "Global UyaeSpiritStance"
@@ -3402,6 +3406,7 @@
             "has_traded;{unit}",
             "show_layer;Village visited",
             "level_var;spiderboss;1",
+            "remove_region;Villagevisit",
             "if;{v:ivala} == 1",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
@@ -3450,7 +3455,7 @@
             "add_unit;Mira;1,2;fade;stack;north",
             "move_unit;Mira;2,2;normal;closest",
             "wait;1000",
-            "multi_add_portrait;Mira;Left;Chosen;Right",
+            "multi_add_portrait;Mira;Right;Chosen;Left",
             "wait;300",
             "s;Mira;I... I also want to fight!",
             "s;Chosen;Aren't you a little young to be thinking about that?|Stay here and leave this to me, the future savior of the world!",
@@ -3545,7 +3550,9 @@
             "wait;1000",
             "add_unit;112;1,9;fade;giveup;south",
             "wait;500",
-            "flicker_cursor;1,9",
+            "move_unit;112;1,8;normal;giveup",
+            "wait;300",
+            "flicker_cursor;1,8",
             "wait;700",
             "flicker_cursor;1,2",
             "wait;1000",
@@ -3735,12 +3742,14 @@
             "move_unit;105;14,4;normal;stack;no_block",
             "move_unit;106;14,4;normal;stack;no_block",
             "move_unit;107;14,4;normal;stack;no_block",
-            "move_unit;110;11,2;normal;closest",
-            "move_unit;111;9,6;normal;closest",
+            "move_unit;110;109;normal;closest",
+            "move_unit;111;108;normal;closest",
             "remove_group;Soldiers;fade",
             "wait;500",
+            "set_stats;111;SKL,17;no_warn",
             "interact_unit;111;108;hit1, hit2, crit1",
             "interact_unit;110;109;miss1, crit2",
+            "set_stats;111;SKL,5;no_warn",
             "wait;1000",
             "level_var;tutoskill;1",
             "level_var;tutocav;1",
@@ -3979,6 +3988,7 @@
             "add_talk;Chosen;Monica",
             "add_talk;Antarion;Monica",
             "remove_group;PlayerTeam;immediate",
+            "show_layer;simplificando",
             "chapter_title",
             "change_background;Clearing",
             "transition;Open",
@@ -4335,7 +4345,7 @@
         "name": "Second spider death and Tutorial: Visit",
         "trigger": "combat_end",
         "level_nid": "P1",
-        "condition": "game.check_dead(\"112\")",
+        "condition": "game.check_dead(\"112\") and game.level_vars['spiderboss'] == 0",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4368,7 +4378,7 @@
         "name": "Tutorial: cav mov",
         "trigger": "phase_change",
         "level_nid": "P1",
-        "condition": "game.level_vars['tutocav'] == 1 and game.game_vars['ivala'] == 1 and game.game_vars['snagbridgecima'] == 0",
+        "condition": "game.level_vars['tutocav'] == 1 and game.game_vars['ivala'] == 1 and game.level_vars['snagbridgecima'] == 0",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4388,7 +4398,7 @@
         "name": "Tutorial: level up",
         "trigger": "unit_level_up",
         "level_nid": "P1",
-        "condition": "unit.nid == 'Chosen' and game.game_vars['ivala'] == 1",
+        "condition": "unit.nid == 'Chosen' and game.game_vars['ivala'] == 1 and game.check_alive('101') == False and game.check_alive('112) == False",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -4419,7 +4429,7 @@
     },
     {
         "name": "Enemy reinforcements middle and Tutorial: moving boss + archer",
-        "trigger": "phase_change",
+        "trigger": "turn_change",
         "level_nid": "P4",
         "condition": "game.turncount == 6 or game.level_vars['midsetup'] == 1",
         "commands": [],
@@ -4647,6 +4657,7 @@
         "priority": 20,
         "_source": [
             "level_var;alert;1",
+            "remove_region;alert",
             "change_music;player_phase;Halfway change loop",
             "change_music;enemy_phase;Halfway change loop",
             "change_music;enemy_battle;Halfway change loop",
@@ -4692,10 +4703,10 @@
         "nid": "P4 Alert, enemy near Crusher"
     },
     {
-        "name": "Rout VICTORY",
+        "name": "Crusher dies VICTORY",
         "trigger": "combat_end",
         "level_nid": "P4",
-        "condition": "len(game.get_enemy_units()) == 0",
+        "condition": "game.check_dead(\"Crusher\")",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -4706,7 +4717,7 @@
             "wait;1000",
             "win_game"
         ],
-        "nid": "P4 Rout VICTORY"
+        "nid": "P4 Crusher dies VICTORY"
     },
     {
         "name": "CrushWall6",
@@ -4972,7 +4983,7 @@
             "move_cursor;7,15",
             "transition;open",
             "# S\u00d3 UM TESTE IVALA",
-            "game_var;ivala;1",
+            "#game_var;ivala;1",
             "# mudar aqui dps em",
             "move_cursor;7,16",
             "transition;open",
@@ -5034,7 +5045,7 @@
             "spawn_group;Player;south;Player;normal;giveup",
             "wait;600",
             "move_cursor;7,16",
-            "#spawn_group;Monster;north;Monster;normal;giveup",
+            "spawn_group;Monster;north;Monster;normal;giveup",
             "wait;1000"
         ],
         "nid": "P3 Intro"
@@ -5149,5 +5160,107 @@
             "remove_portrait;Chosen"
         ],
         "nid": "P3 Eyes get used to the dark"
+    },
+    {
+        "name": "Visit condominio",
+        "trigger": "Visit",
+        "level_nid": "P4",
+        "condition": "region.nid == 'Casacondominio'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;Close",
+            "change_background;House",
+            "transition;Open",
+            "multi_add_portrait;Man1;Left;{unit};Right",
+            "speak;Man1;Are we allowed to leave yet? Those rascals are on up to it again...|Please, deal with the Crusher's gang for us.|Take this gold, just make them gone...",
+            "transition;Close",
+            "change_background",
+            "transition;Open",
+            "give_money;1000;ChosenParty",
+            "has_traded;{unit}",
+            "show_layer;casachiquevisit",
+            "remove_region;Casacondominio"
+        ],
+        "nid": "P4 Visit condominio"
+    },
+    {
+        "name": "Visit casa amarela",
+        "trigger": "Visit",
+        "level_nid": "P4",
+        "condition": "region.nid == 'Casaamarela'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;Close",
+            "change_background;House",
+            "transition;Open",
+            "multi_add_portrait;Man1;Left;{unit};Right",
+            "speak;Man1;Sigh... I always knew that those shady people would bring us trouble.|They offered some money to erect that magical tower or something.|I feel bad vibes every time I think about it.|I don't know what's the deal but it ain't worth it, I tell you!",
+            "transition;Close",
+            "change_background",
+            "transition;Open",
+            "has_traded;{unit}",
+            "show_layer;casaesqvisit",
+            "remove_region;Casaamarela"
+        ],
+        "nid": "P4 Visit casa amarela"
+    },
+    {
+        "name": "Visit casa cima",
+        "trigger": "Visit",
+        "level_nid": "P4",
+        "condition": "region.nid == 'Casacima'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;Close",
+            "change_background;House",
+            "transition;Open",
+            "multi_add_portrait;Man1;Left;{unit};Right;Woman1;FarLeft",
+            "wait;300",
+            "remove_portrait;Woman1;;left",
+            "speak;Man1;Huh?{c:wait;500} Ah, yes, the bandit attack. That's right.|Yeah, bad attack, huh?{br}Wow... crazy.|Yeah, just take this item and pretend you saw nothing here, will you?",
+            "transition;Close",
+            "change_background",
+            "transition;Open",
+            "has_traded;{unit}",
+            "show_layer;casacimavisit",
+            "remove_region;Casacima"
+        ],
+        "nid": "P4 Visit casa cima"
+    },
+    {
+        "name": "Firewall place",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_region;{eval:target_pos};{eval:target_pos};1,1;status;BurnedFW;only_once;interrupt_move",
+            "map_anim;MapFire;{eval:target_pos};permanent"
+        ],
+        "nid": "Global Firewall place"
+    },
+    {
+        "name": "Firewall trigger",
+        "trigger": "unit_wait",
+        "level_nid": null,
+        "condition": "any([skill.nid == 'BurnedFW' for skill in unit.skills])",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_map_anim;MapFire;{unit}",
+            "map_anim;MapFire;{unit};overlay",
+            "sound;Burning",
+            "has_finished;{unit}"
+        ],
+        "nid": "Global Firewall trigger"
     }
 ]

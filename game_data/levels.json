@@ -770,8 +770,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    14,
-                    11
+                    11,
+                    6
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -1055,7 +1055,7 @@
             {
                 "nid": "SpiderEmpress",
                 "team": "enemy",
-                "ai": "SEmpress",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -1284,16 +1284,11 @@
                 }
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "P4",
-        "name": "Prologue:",
+        "name": "Prologue: 4",
         "tilemap": "Prologue2teste",
         "bg_tilemap": null,
         "party": "ChosenParty",
@@ -1304,8 +1299,8 @@
             "boss_battle": "Boss1"
         },
         "objective": {
-            "simple": "Defeat the bandits!",
-            "win": "Defeat all enemies",
+            "simple": "Defeat Crusher",
+            "win": "Defeat the bandit boss",
             "loss": "Chosen dies"
         },
         "roam": false,
@@ -1439,7 +1434,7 @@
                 "faction": "Bandit",
                 "starting_items": [
                     [
-                        "Iron_Blade",
+                        "Iron_Bow",
                         false
                     ]
                 ],
@@ -1517,7 +1512,7 @@
                 "team": "enemy",
                 "ai": "Attack",
                 "roam_ai": null,
-                "ai_group": "",
+                "ai_group": "2",
                 "starting_position": [
                     19,
                     8
@@ -1563,12 +1558,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "Defend",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    18,
-                    4
+                    15,
+                    6
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -1613,7 +1608,7 @@
                 "team": "enemy",
                 "ai": "Attack",
                 "roam_ai": null,
-                "ai_group": "",
+                "ai_group": "2",
                 "starting_position": [
                     21,
                     15
@@ -1635,12 +1630,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "Defend",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    16,
-                    4
+                    15,
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -1661,7 +1656,7 @@
                 "team": "enemy",
                 "ai": "Attack",
                 "roam_ai": null,
-                "ai_group": "",
+                "ai_group": "2",
                 "starting_position": [
                     21,
                     10
@@ -1683,12 +1678,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    15,
-                    5
+                    18,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -1747,6 +1742,26 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "Duro",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Mira",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [
@@ -1779,23 +1794,57 @@
                     10
                 ],
                 "sub_nid": "Alert",
-                "condition": "True",
+                "condition": "unit.team == 'Player'",
                 "time_left": null,
                 "only_once": false,
                 "interrupt_move": true
             },
             {
-                "nid": "Door",
+                "nid": "Casacondominio",
                 "region_type": "event",
                 "position": [
-                    1,
-                    5
-                ],
-                "size": [
                     2,
                     1
                 ],
-                "sub_nid": "Door",
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Casaamarela",
+                "region_type": "event",
+                "position": [
+                    7,
+                    5
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Casacima",
+                "region_type": "event",
+                "position": [
+                    17,
+                    1
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
                 "condition": "True",
                 "time_left": null,
                 "only_once": true,
@@ -1807,9 +1856,20 @@
                 "nid": "PlayerTeam",
                 "units": [
                     "Chosen",
-                    "Simonyoung"
+                    "Simonyoung",
+                    "Mira",
+                    "Duro"
                 ],
-                "positions": {}
+                "positions": {
+                    "Mira": [
+                        9,
+                        14
+                    ],
+                    "Duro": [
+                        10,
+                        14
+                    ]
+                }
             },
             {
                 "nid": "Bandits",
@@ -1835,7 +1895,12 @@
                 "positions": {}
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "2",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "9",
@@ -5545,8 +5610,8 @@
         "bg_tilemap": null,
         "party": "Eirika",
         "music": {
-            "player_phase": "Battle6",
-            "enemy_phase": "Boss1",
+            "player_phase": null,
+            "enemy_phase": null,
             "other_phase": null,
             "enemy2_phase": null,
             "player_battle": null,
@@ -5618,7 +5683,7 @@
                 "ai_group": "",
                 "starting_position": [
                     1,
-                    5
+                    14
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -5670,7 +5735,7 @@
                 "ai_group": "",
                 "starting_position": [
                     12,
-                    5
+                    6
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -5825,8 +5890,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    5
+                    2,
+                    13
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -5845,7 +5910,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -5862,8 +5927,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    9
+                    1,
+                    13
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -5901,8 +5966,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    12,
-                    6
+                    5,
+                    12
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -5910,12 +5975,12 @@
             {
                 "nid": "Incubus_King",
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
-                    3
+                    6,
+                    2
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -5934,7 +5999,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy2",
-                "ai": "Pursue",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -5947,12 +6012,51 @@
             {
                 "nid": "SpiderEmpress",
                 "team": "player",
-                "ai": "Attack",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
                     6,
                     4
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Duro",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Antarion",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Rosa",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    4,
+                    2
                 ],
                 "starting_traveler": null,
                 "generic": false

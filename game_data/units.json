@@ -2077,18 +2077,13 @@
             [
                 "Spirit_Claw",
                 false
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Stance_Switch_Might"
             ],
             [
-                1,
-                "Stance_Switch_Spirit"
+                "Switch_Stance",
+                false
             ]
         ],
+        "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -2327,6 +2322,18 @@
             [
                 1,
                 "Arrow_of_Lust"
+            ],
+            [
+                1,
+                "Offensive_Rain"
+            ],
+            [
+                1,
+                "Defensive_Rain"
+            ],
+            [
+                1,
+                "Blinding_Rain"
             ]
         ],
         "unit_notes": [],
@@ -2770,7 +2777,7 @@
             ],
             [
                 2,
-                "Heroic_Assault_1"
+                "Heroic_Aura"
             ],
             [
                 1,
@@ -3004,6 +3011,10 @@
             [
                 1,
                 "Like_a_champ"
+            ],
+            [
+                1,
+                "Bear_hug"
             ]
         ],
         "unit_notes": [],
@@ -3055,7 +3066,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Breguet",
+        "portrait_nid": "Duro",
         "affinity": "None",
         "fields": []
     },
@@ -3113,6 +3124,10 @@
             [
                 1,
                 "Puppy_Eyes"
+            ],
+            [
+                1,
+                "Awkward_Silence_proc"
             ]
         ],
         "unit_notes": [],
@@ -3171,6 +3186,10 @@
             [
                 1,
                 "Flashy_Strike"
+            ],
+            [
+                1,
+                "Drink_Potion"
             ]
         ],
         "unit_notes": [],
@@ -3282,6 +3301,10 @@
             [
                 1,
                 "Twice_the_Threat_Cassian"
+            ],
+            [
+                1,
+                "No_Privacy_Cassian"
             ]
         ],
         "unit_notes": [],
@@ -3359,6 +3382,10 @@
             [
                 1,
                 "Twice_the_Threat_Lucia"
+            ],
+            [
+                1,
+                "No_Privacy_Lucia"
             ]
         ],
         "unit_notes": [],
@@ -3688,7 +3715,7 @@
             "ZeroMove"
         ],
         "bases": {
-            "HP": 26,
+            "HP": 29,
             "STR": 9,
             "MAG": 0,
             "SKL": 6,
@@ -3880,7 +3907,7 @@
             "Boss"
         ],
         "bases": {
-            "HP": 18,
+            "HP": 25,
             "STR": 4,
             "MAG": 0,
             "SKL": 8,
@@ -4831,6 +4858,81 @@
         "alternate_classes": [],
         "portrait_nid": "Incubus King",
         "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Rosa",
+        "name": "Rosa",
+        "desc": "",
+        "variant": "Female",
+        "level": 1,
+        "klass": "Mage",
+        "tags": [
+            "Female"
+        ],
+        "bases": {
+            "HP": 16,
+            "STR": 0,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 0,
+            "DEF": 3,
+            "RES": 4,
+            "CON": 5,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 55,
+            "STR": 0,
+            "MAG": 55,
+            "SKL": 40,
+            "SPD": 35,
+            "LCK": 20,
+            "DEF": 5,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "starting_items": [
+            [
+                "Fire",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Firewall"
+            ],
+            [
+                1,
+                "Hot_Business"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Anima": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Rosa",
+        "affinity": "Fire",
         "fields": []
     }
 ]

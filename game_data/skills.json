@@ -48,8 +48,8 @@
         ]
     },
     {
-        "nid": "Heroic_Assault_1",
-        "name": "Heroic Assault",
+        "nid": "Heroic_Aura",
+        "name": "Heroic Aura",
         "desc": "",
         "icon_nid": null,
         "icon_index": [
@@ -152,9 +152,69 @@
         ]
     },
     {
+        "nid": "Awkward_Silence_proc",
+        "name": "Awkward Silence",
+        "desc": "Monica has a chance at the beginning of the turn to gain the Awkward Silence aura. Enemies affected by this aura gain [SILENCED].",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            29
+        ],
+        "components": [
+            [
+                "proc_turn_skill",
+                "Awkward_Silence_aura"
+            ],
+            [
+                "proc_rate",
+                "MOEDA"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Awkward_Silence_aura",
+        "name": "Awkward Silence (ACTIVE)",
+        "desc": "Enemies nearby cannot use magic while this aura is active.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            29
+        ],
+        "components": [
+            [
+                "aura",
+                "Silence"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Flashy_Strike",
         "name": "Flashy Strike",
-        "desc": "",
+        "desc": "Antarion can use his special attack <green>Flashy Strike</>. It most certainly defeats any enemy with one strike.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -162,16 +222,36 @@
         ],
         "components": [
             [
-                "hidden",
-                null
-            ],
-            [
                 "ability",
                 "Flashy_Strike_ability"
             ],
             [
-                "alternate_battle_anim",
-                "Critical"
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Drink_Potion",
+        "name": "Drink Potion",
+        "desc": "Antarion can drink one of his many potions.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            38
+        ],
+        "components": [
+            [
+                "ability",
+                "Drink_Potion_ability"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -228,6 +308,36 @@
         ]
     },
     {
+        "nid": "No_Privacy_Cassian",
+        "name": "No Privacy",
+        "desc": "On <red>odd</> turns, Cassian can move next to Lucia, regardless of MOV or where she is on the map.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            34
+        ],
+        "components": [
+            [
+                "specific_witch_warp",
+                [
+                    "Lucia"
+                ]
+            ],
+            [
+                "condition",
+                "game.turncount % 2 == 1"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Twice_the_Threat_Lucia",
         "name": "Twice the Threat",
         "desc": "If Cassian is in Guard Stance with Lucia,\nLucia heals half of damage dealt.",
@@ -275,6 +385,36 @@
             ],
             [
                 "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "No_Privacy_Lucia",
+        "name": "No Privacy",
+        "desc": "On <red>even</> turns, Lucia can move next to Cassian, regardless of MOV or where he is on the map.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            34
+        ],
+        "components": [
+            [
+                "specific_witch_warp",
+                [
+                    "Cassian"
+                ]
+            ],
+            [
+                "condition",
+                "game.turncount % 2 == 0"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
                 null
             ]
         ]
@@ -370,9 +510,73 @@
         ]
     },
     {
+        "nid": "Bear_hug",
+        "name": "Bear hug",
+        "desc": "Duro locks adjacent enemies into a hot, sweaty bear hug. Neither Duro nor adjacent enemies can dodge attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            15
+        ],
+        "components": [
+            [
+                "aura",
+                "Bear_hug_effect"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "avoid",
+                -1000
+            ]
+        ]
+    },
+    {
+        "nid": "Bear_hug_effect",
+        "name": "Bear hug",
+        "desc": "Unit is receiving a hot bear hug from behind. AVOID is negated.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            15
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "avoid",
+                -1000
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    173,
+                    173,
+                    86
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Blinding_Strike",
         "name": "Blinding Strike",
-        "desc": "Simon can use Blinding Strike. Costs <blue>5 mana</>.\n<red>BLIND</>: Unit loses HIT and AVOID. Duration: 2 turns.",
+        "desc": "Simon can use Blinding Strike. Costs <blue>5 mana</>.\n<red>[BLINDED]</>: Unit loses HIT and AVOID. Duration: 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -380,12 +584,12 @@
         ],
         "components": [
             [
-                "ability",
-                "Blinding_Strike_ability"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "ability",
+                "Blinding_Strike_ability"
             ]
         ]
     },
@@ -400,12 +604,12 @@
         ],
         "components": [
             [
-                "ability",
-                "Silencing_Strike_ability"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "ability",
+                "Silencing_Strike_ability"
             ]
         ]
     },
@@ -420,12 +624,12 @@
         ],
         "components": [
             [
-                "ability",
-                "Stunning_Strike_ability"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "ability",
+                "Stunning_Strike_ability"
             ]
         ]
     },
@@ -446,6 +650,146 @@
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Firewall",
+        "name": "Firewall",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Firewall_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Burned",
+        "name": "Burned",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "upkeep_damage",
+                5
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "upkeep_animation",
+                "MapFire"
+            ],
+            [
+                "stack",
+                999
+            ],
+            [
+                "time",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "BurnedFW",
+        "name": "Burned",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "upkeep_damage",
+                5
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "upkeep_animation",
+                "MapFire"
+            ],
+            [
+                "stack",
+                999
+            ],
+            [
+                "time",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "Hot_Business",
+        "name": "Hot Business",
+        "desc": "When using a <red>Fire</> spell, Rosa has MAG% chance to inflict <red>[BURNED]</> on her enemy.\n<red>[BURNED]</>: 5 damage at the start of unit's turn. Lasts 3 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            23
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "game.get_unit('Rosa').get_weapon().nid == 'Fire'"
+            ],
+            [
+                "proc_rate",
+                "MAGIC_DAMAGE"
+            ],
+            [
+                "attack_pre_proc",
+                "Hot_Business_proc"
+            ]
+        ]
+    },
+    {
+        "nid": "Hot_Business_proc",
+        "name": "Hot Business",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            23
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Burned"
             ]
         ]
     },
@@ -1568,7 +1912,7 @@
     {
         "nid": "Blinded",
         "name": "Blinded",
-        "desc": "",
+        "desc": "Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -1593,10 +1937,6 @@
             ],
             [
                 "avoid",
-                -50
-            ],
-            [
-                "crit_avoid",
                 -50
             ]
         ]
@@ -1658,6 +1998,10 @@
             [
                 "ability",
                 "Refresh"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -2340,10 +2684,10 @@
         "nid": "Stance_Switch_Might",
         "name": "Stance Switch Might",
         "desc": "",
-        "icon_nid": "Affinity",
+        "icon_nid": "skill_icons",
         "icon_index": [
             0,
-            3
+            26
         ],
         "components": [
             [
@@ -2353,10 +2697,6 @@
             [
                 "hidden",
                 null
-            ],
-            [
-                "ability",
-                "Aura_of_Might"
             ]
         ]
     },
@@ -2364,10 +2704,10 @@
         "nid": "Stance_Switch_Spirit",
         "name": "Stance Switch Might",
         "desc": "",
-        "icon_nid": "Affinity",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            3
+            1,
+            26
         ],
         "components": [
             [
@@ -2377,21 +2717,17 @@
             [
                 "hidden",
                 null
-            ],
-            [
-                "ability",
-                "Aura_of_Spirit"
             ]
         ]
     },
     {
         "nid": "Aura_of_Might_effect",
         "name": "Aura of Might",
-        "desc": "",
+        "desc": "<red>STR+5, DEF+5.</>\n<blue>MAG-5, RES-5.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
-            8,
-            23
+            0,
+            26
         ],
         "components": [
             [
@@ -2404,6 +2740,14 @@
                     [
                         "DEF",
                         5
+                    ],
+                    [
+                        "MAG",
+                        -5
+                    ],
+                    [
+                        "RES",
+                        -5
                     ]
                 ]
             ],
@@ -2412,19 +2756,23 @@
                 3
             ],
             [
-                "display_skill_icon_in_combat",
-                null
+                "unit_flickering_tint",
+                [
+                    170,
+                    0,
+                    0
+                ]
             ]
         ]
     },
     {
         "nid": "Aura_of_Spirit_effect",
         "name": "Aura of Spirit",
-        "desc": "",
+        "desc": "<blue>MAG+5, RES+5.</>\n<red>STR-5, DEF-5.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
-            13,
-            18
+            1,
+            26
         ],
         "components": [
             [
@@ -2437,6 +2785,14 @@
                     [
                         "RES",
                         5
+                    ],
+                    [
+                        "STR",
+                        -5
+                    ],
+                    [
+                        "DEF",
+                        -5
                     ]
                 ]
             ],
@@ -2445,8 +2801,12 @@
                 3
             ],
             [
-                "display_skill_icon_in_combat",
-                null
+                "unit_flickering_tint",
+                [
+                    0,
+                    0,
+                    255
+                ]
             ]
         ]
     },
@@ -3001,6 +3361,156 @@
             [
                 "hide_aura",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Offensive_Rain",
+        "name": "Offensive Rain",
+        "desc": "Vhala can use <red>Offensive Rain</>, which debuffs the opponent's defensive stats.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Offensive_Rain_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Rain",
+        "name": "Defensive Rain",
+        "desc": "Vhala can use <red>Defensive Rain</>, which debuffs the opponent's offensive stats.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Defensive_Rain_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Rain",
+        "name": "Blinding Rain",
+        "desc": "Vhala can use <red>Blinding Rain</>, which can inflict <red>[Blinded]</> onto the targets.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Blinding_Rain_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Offensive_Rain_debuff",
+        "name": "Defense Debuff",
+        "desc": "From Vhala's <red>Offensive Rain</>.\nDEF -3. RES - 3.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            20
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -3
+                    ],
+                    [
+                        "RES",
+                        -3
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    170,
+                    0,
+                    0
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Rain_debuff",
+        "name": "Attack Debuff",
+        "desc": "From Vhala's <red>Defensive Rain</>.\nSTR -3. MAG - 3.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            20
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -3
+                    ],
+                    [
+                        "MAG",
+                        -3
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    0,
+                    170,
+                    255
+                ]
             ]
         ]
     },
