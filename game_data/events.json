@@ -5242,25 +5242,42 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "add_region;{eval:target_pos};{eval:target_pos};1,1;status;BurnedFW;only_once;interrupt_move",
-            "map_anim;MapFire;{eval:target_pos};permanent"
+            "add_region;Firewall;{eval:target_pos};1,1;status;BurnedFW;3",
+            "map_anim;MapFire;{eval:target_pos};permanent;overlay",
+            "level_var;firewall;1",
+            "level_var;firewallposition;{eval:target_pos}"
         ],
         "nid": "Global Firewall place"
     },
     {
-        "name": "Firewall trigger",
-        "trigger": "unit_wait",
+        "name": "Firewall countdown",
+        "trigger": "turn_change",
         "level_nid": null,
-        "condition": "any([skill.nid == 'BurnedFW' for skill in unit.skills])",
+        "condition": "game.level_vars['firewall'] >= 1",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "remove_map_anim;MapFire;{unit}",
-            "map_anim;MapFire;{unit};overlay",
-            "sound;Burning",
-            "has_finished;{unit}"
+            "inc_level_var;firewall;1"
         ],
-        "nid": "Global Firewall trigger"
+        "nid": "Global Firewall countdown"
+    },
+    {
+        "name": "Firewall remove",
+        "trigger": "turn_change",
+        "level_nid": null,
+        "condition": "game.level_vars['firewall'] == 3",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;({v:firewallposition})",
+            "wait;500",
+            "sound;Burning",
+            "wait;300",
+            "remove_map_anim;MapFire;({v:firewallposition});overlay",
+            "level_var;firewall;0"
+        ],
+        "nid": "Global Firewall remove"
     }
 ]

@@ -656,7 +656,7 @@
     {
         "nid": "Firewall",
         "name": "Firewall",
-        "desc": "",
+        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -674,9 +674,78 @@
         ]
     },
     {
+        "nid": "Cozy_Warmth",
+        "name": "Cozy Warmth",
+        "desc": "While Rosa is standing on a <red>Firewall</> and equipping <red>Fire</> magic, +1 to all stats and CRIT greatly increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "condition",
+                "has_skill(\"Rosa\",\"BurnedFW\") == True"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "SKL",
+                        1
+                    ],
+                    [
+                        "LCK",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ],
+                    [
+                        "CON",
+                        1
+                    ],
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "crit",
+                30
+            ]
+        ]
+    },
+    {
         "nid": "Burned",
         "name": "Burned",
-        "desc": "",
+        "desc": "Unit is receives 5 damage at the start of the turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -715,8 +784,8 @@
     },
     {
         "nid": "BurnedFW",
-        "name": "Burned",
-        "desc": "",
+        "name": "Burned (Firewall)",
+        "desc": "Unit is receives 5 damage at the start of the turn, as long as they are on <red>Firewall</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -738,18 +807,6 @@
                     0,
                     0
                 ]
-            ],
-            [
-                "upkeep_animation",
-                "MapFire"
-            ],
-            [
-                "stack",
-                999
-            ],
-            [
-                "time",
-                3
             ]
         ]
     },
@@ -792,6 +849,17 @@
                 "Burned"
             ]
         ]
+    },
+    {
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Canto",

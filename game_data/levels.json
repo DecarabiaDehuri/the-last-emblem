@@ -1903,6 +1903,53 @@
         ]
     },
     {
+        "nid": "7",
+        "name": "Chapter 7",
+        "tilemap": "prol5",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 1,
+                "klass": "Berserker",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Killer_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    16
+                ],
+                "starting_traveler": null,
+                "generic": true
+            }
+        ],
+        "regions": [],
+        "unit_groups": [],
+        "ai_groups": []
+    },
+    {
         "nid": "9",
         "name": "Chapter 9",
         "tilemap": "Prologue3",
