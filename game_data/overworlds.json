@@ -6,19 +6,19 @@
         "music": "PrologueOverworld",
         "overworld_nodes": [
             {
-                "nid": "26",
-                "name": "Prologue 1",
+                "nid": "P1",
+                "name": "Arderis Castle",
                 "pos": [
-                    15,
-                    18
+                    16,
+                    19
                 ],
                 "icon": "castle",
                 "level": "P1",
                 "menu_options": []
             },
             {
-                "nid": "27",
-                "name": "New Location",
+                "nid": "IK",
+                "name": "Incubus King's Castle",
                 "pos": [
                     20,
                     6
@@ -28,10 +28,10 @@
                 "menu_options": []
             },
             {
-                "nid": "28",
-                "name": "New Location",
+                "nid": "P2",
+                "name": "Jito Cave",
                 "pos": [
-                    18,
+                    14,
                     17
                 ],
                 "icon": "woods",
@@ -39,39 +39,85 @@
                 "menu_options": []
             },
             {
-                "nid": "29",
+                "nid": "P4",
+                "name": "Nodford village",
+                "pos": [
+                    16,
+                    16
+                ],
+                "icon": "town",
+                "level": "P4",
+                "menu_options": []
+            },
+            {
+                "nid": "P5",
+                "name": "Bandit base",
+                "pos": [
+                    18,
+                    17
+                ],
+                "icon": "ruins",
+                "level": "P5",
+                "menu_options": []
+            },
+            {
+                "nid": "32",
                 "name": "New Location",
                 "pos": [
                     18,
-                    16
+                    15
                 ],
                 "icon": "map_node",
-                "level": "P3",
+                "level": null,
                 "menu_options": []
             }
         ],
         "map_paths": {
-            "(15, 18)-(18, 17)": [
+            "(16, 16)-(18, 17)": [
                 [
-                    15,
-                    18
+                    16,
+                    16
                 ],
                 [
                     17,
-                    18
+                    16
                 ],
                 [
                     18,
                     17
                 ]
             ],
-            "(18, 16)-(18, 17)": [
+            "(18, 15)-(18, 17)": [
                 [
                     18,
                     17
                 ],
                 [
                     18,
+                    15
+                ]
+            ],
+            "(14, 17)-(16, 19)": [
+                [
+                    16,
+                    19
+                ],
+                [
+                    14,
+                    17
+                ]
+            ],
+            "(14, 17)-(16, 16)": [
+                [
+                    14,
+                    17
+                ],
+                [
+                    15,
+                    17
+                ],
+                [
+                    16,
                     16
                 ]
             ]

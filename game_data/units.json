@@ -2732,6 +2732,7 @@
         "level": 1,
         "klass": "Chosen",
         "tags": [
+            "Lord",
             "Required",
             "Chosen"
         ],
@@ -2767,18 +2768,6 @@
             ]
         ],
         "learned_skills": [
-            [
-                3,
-                "Heroic_Blow"
-            ],
-            [
-                4,
-                "Heroic_Assault"
-            ],
-            [
-                2,
-                "Heroic_Aura"
-            ],
             [
                 1,
                 "Ivala_Blessing"
@@ -3407,6 +3396,250 @@
         "fields": []
     },
     {
+        "nid": "Safado",
+        "name": "Safado",
+        "desc": "",
+        "variant": "",
+        "level": 6,
+        "klass": "Thief",
+        "tags": [],
+        "bases": {
+            "HP": 16,
+            "STR": 3,
+            "MAG": 3,
+            "SKL": 1,
+            "SPD": 9,
+            "LCK": 0,
+            "DEF": 2,
+            "RES": 0,
+            "CON": 6,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 45,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 5,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "starting_items": [
+            [
+                "Lancereaver",
+                false
+            ],
+            [
+                "Lockpick",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                1,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Safado",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Rosa",
+        "name": "Rosa",
+        "desc": "",
+        "variant": "Female",
+        "level": 8,
+        "klass": "Mage",
+        "tags": [
+            "Female"
+        ],
+        "bases": {
+            "HP": 16,
+            "STR": 0,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 0,
+            "DEF": 3,
+            "RES": 4,
+            "CON": 5,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 55,
+            "STR": 0,
+            "MAG": 55,
+            "SKL": 40,
+            "SPD": 35,
+            "LCK": 20,
+            "DEF": 5,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "starting_items": [
+            [
+                "Fire",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Firewall"
+            ],
+            [
+                1,
+                "Hot_Business"
+            ],
+            [
+                1,
+                "Cozy_Warmth"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Anima": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Rosa",
+        "affinity": "Fire",
+        "fields": []
+    },
+    {
+        "nid": "Minerve",
+        "name": "Minerve",
+        "desc": "A lazy, greedy, but exceptional fighter from the Republic of Carcino.",
+        "variant": "",
+        "level": 9,
+        "klass": "Dancer",
+        "tags": [],
+        "bases": {
+            "HP": 28,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 16,
+            "SPD": 17,
+            "LCK": 5,
+            "DEF": 9,
+            "RES": 11,
+            "CON": 7,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 65,
+            "STR": 25,
+            "MAG": 15,
+            "SKL": 45,
+            "SPD": 60,
+            "LCK": 25,
+            "DEF": 25,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Steel_Sword",
+                false
+            ],
+            [
+                "Elixir",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Minerve",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
         "nid": "SpiderQueen",
         "name": "Spider Queen",
         "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
@@ -3992,45 +4225,43 @@
         "fields": []
     },
     {
-        "nid": "Minerve",
-        "name": "Minerve",
-        "desc": "A lazy, greedy, but exceptional fighter from the Republic of Carcino.",
+        "nid": "Wrecker",
+        "name": "Wrecker",
+        "desc": "A troop leader in Grado's army.",
         "variant": "",
-        "level": 1,
-        "klass": "Dancer",
-        "tags": [],
+        "level": 13,
+        "klass": "Warrior",
+        "tags": [
+            "Boss"
+        ],
         "bases": {
             "HP": 28,
-            "STR": 10,
-            "MAG": 5,
-            "SKL": 16,
-            "SPD": 17,
-            "LCK": 5,
-            "DEF": 9,
-            "RES": 11,
-            "CON": 7,
-            "MOV": 0
+            "STR": 8,
+            "MAG": 0,
+            "SKL": 9,
+            "SPD": 6,
+            "LCK": 7,
+            "DEF": 11,
+            "CON": 13,
+            "MOV": 3,
+            "RES": 7
         },
         "growths": {
-            "HP": 65,
-            "STR": 25,
-            "MAG": 15,
-            "SKL": 45,
-            "SPD": 60,
-            "LCK": 25,
-            "DEF": 25,
-            "RES": 30,
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
             "CON": 0,
-            "MOV": 0
+            "MOV": 0,
+            "RES": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Steel_Sword",
-                false
-            ],
-            [
-                "Elixir",
+                "Killer_Axe",
                 false
             ]
         ],
@@ -4038,8 +4269,8 @@
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
-                true,
-                1,
+                false,
+                0,
                 251
             ],
             "Lance": [
@@ -4048,8 +4279,8 @@
                 251
             ],
             "Axe": [
-                false,
-                0,
+                true,
+                71,
                 251
             ],
             "Bow": [
@@ -4084,8 +4315,8 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Minerve",
-        "affinity": "Dark",
+        "portrait_nid": "Mercenary1",
+        "affinity": "None",
         "fields": []
     },
     {
@@ -4179,101 +4410,6 @@
         "alternate_classes": [],
         "portrait_nid": "Duessel",
         "affinity": "Anima",
-        "fields": []
-    },
-    {
-        "nid": "Ogma",
-        "name": "Ogma",
-        "desc": "A troop leader in Grado's army.",
-        "variant": null,
-        "level": 4,
-        "klass": "Fighter",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 24,
-            "STR": 7,
-            "MAG": 0,
-            "SKL": 4,
-            "SPD": 7,
-            "LCK": 0,
-            "DEF": 2,
-            "CON": 11,
-            "MOV": 5,
-            "RES": 0
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Axe",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                true,
-                71,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Mercenary1",
-        "affinity": "None",
         "fields": []
     },
     {
@@ -4769,7 +4905,7 @@
         "nid": "Incubus_King",
         "name": "Incubus King",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 17,
         "klass": "Incubus_Emperor",
         "tags": [
@@ -4857,154 +4993,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Incubus King",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Rosa",
-        "name": "Rosa",
-        "desc": "",
-        "variant": "Female",
-        "level": 1,
-        "klass": "Mage",
-        "tags": [
-            "Female"
-        ],
-        "bases": {
-            "HP": 16,
-            "STR": 0,
-            "MAG": 1,
-            "SKL": 3,
-            "SPD": 3,
-            "LCK": 0,
-            "DEF": 3,
-            "RES": 4,
-            "CON": 5,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 55,
-            "STR": 0,
-            "MAG": 55,
-            "SKL": 40,
-            "SPD": 35,
-            "LCK": 20,
-            "DEF": 5,
-            "RES": 40,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "starting_items": [
-            [
-                "Fire",
-                false
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Firewall"
-            ],
-            [
-                1,
-                "Hot_Business"
-            ],
-            [
-                1,
-                "Cozy_Warmth"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Anima": [
-                false,
-                31,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Rosa",
-        "affinity": "Fire",
-        "fields": []
-    },
-    {
-        "nid": "Safado",
-        "name": "Safado",
-        "desc": "",
-        "variant": null,
-        "level": 1,
-        "klass": "Thief",
-        "tags": [],
-        "bases": {
-            "HP": 16,
-            "STR": 3,
-            "MAG": 3,
-            "SKL": 1,
-            "SPD": 9,
-            "LCK": 0,
-            "DEF": 2,
-            "RES": 0,
-            "CON": 6,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 50,
-            "STR": 5,
-            "MAG": 5,
-            "SKL": 45,
-            "SPD": 40,
-            "LCK": 40,
-            "DEF": 5,
-            "RES": 20,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "starting_items": [
-            [
-                "Slim_Sword",
-                false
-            ],
-            [
-                "Lockpick",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                1,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Safado",
-        "affinity": null,
+        "affinity": "None",
         "fields": []
     }
 ]

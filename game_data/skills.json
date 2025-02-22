@@ -1,12 +1,28 @@
 [
     {
+        "nid": "Active_Synergy",
+        "name": "Active Synergy",
+        "desc": "Unit is activating the synergy ability of an ally nearby.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            52
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Heroic_Blow",
         "name": "Heroic Blow",
-        "desc": "",
-        "icon_nid": null,
+        "desc": "The Chosen can use a powerful attack. Effective against monsters.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            2,
+            21
         ],
         "components": [
             [
@@ -26,11 +42,11 @@
     {
         "nid": "Heroic_Assault",
         "name": "Heroic Assault",
-        "desc": "",
-        "icon_nid": null,
+        "desc": "The Chosen can unleash an all-powerful attack around it, damaging nearby enemies.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            4,
+            26
         ],
         "components": [
             [
@@ -50,11 +66,11 @@
     {
         "nid": "Heroic_Aura",
         "name": "Heroic Aura",
-        "desc": "",
-        "icon_nid": null,
+        "desc": "When not at full health, the Chosen can call upon Ivala to heal their wounds.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            1,
+            38
         ],
         "components": [
             [
@@ -92,6 +108,54 @@
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Safe_Approach",
+        "name": "Safe Approach",
+        "desc": "<green>[Simon Synergy]</> The Chosen has begrudgingly decided to hear Simon's advice for once. Unit has bonus damage when defending.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Chosen' for u in target_system.get_adj_units(game.get_unit('Simonyoung'))])"
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
             ]
         ]
     },
@@ -652,6 +716,17 @@
                 null
             ]
         ]
+    },
+    {
+        "nid": "new_1",
+        "name": "new_1",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Firewall",
@@ -1785,6 +1860,10 @@
             [
                 "time",
                 3
+            ],
+            [
+                "unit_anim",
+                "MapSilence"
             ]
         ]
     },
@@ -2944,22 +3023,6 @@
             [
                 "time",
                 2
-            ]
-        ]
-    },
-    {
-        "nid": "Active_Synergy",
-        "name": "Active Synergy",
-        "desc": "Unit is activating the synergy ability of an ally nearby.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            52
-        ],
-        "components": [
-            [
-                "hidden_if_inactive",
-                null
             ]
         ]
     },

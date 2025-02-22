@@ -80,97 +80,6 @@
         ]
     },
     {
-        "nid": "Simonyoung_skills",
-        "name": "Personal Skills",
-        "desc": "Displays the unit's available skills.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            2,
-            0
-        ],
-        "components": [
-            [
-                "multi_item",
-                [
-                    "Blinding_Strike_ability",
-                    "Silencing_Strike_ability",
-                    "Stunning_Strike_ability",
-                    "Rebuke_ability"
-                ]
-            ],
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Simonyoung"
-                ]
-            ],
-            [
-                "accessory",
-                null
-            ],
-            [
-                "locked",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Simonyoung_synergy_skills",
-        "name": "Synergy Skills",
-        "desc": "Displays the unit's available synergy skills.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            50
-        ],
-        "components": [
-            [
-                "multi_item",
-                [
-                    "Heroic_Imitation"
-                ]
-            ],
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Simonyoung"
-                ]
-            ],
-            [
-                "accessory",
-                null
-            ],
-            [
-                "locked",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Blinding_Strike_ability",
         "name": "Blinding Strike",
         "desc": "Blinds an opponent.\n<blue>5 mana.</>",
@@ -377,21 +286,13 @@
     {
         "nid": "Heroic_Imitation",
         "name": "Heroic Imitation",
-        "desc": "An attempt to imitate the Chosen's power.\nCosts <blue>15 mana</>.",
+        "desc": "Simon attempts to copy the Chosen. Deals more damage to monsters.\n<blue>Costs 10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
-            49
+            2,
+            21
         ],
         "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
             [
                 "min_range",
                 1
@@ -401,23 +302,11 @@
                 1
             ],
             [
-                "damage",
-                6
-            ],
-            [
-                "hit",
-                75
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
                 "weapon_type",
                 "Sword"
             ],
             [
-                "no_double",
+                "target_enemy",
                 null
             ],
             [
@@ -426,7 +315,7 @@
                     "effective_tags": [
                         "Monster"
                     ],
-                    "effective_multiplier": 1.4999999999999987,
+                    "effective_multiplier": 2.0,
                     "effective_bonus_damage": 0,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
@@ -434,11 +323,27 @@
             ],
             [
                 "mana_cost",
-                15
+                10
             ],
             [
-                "eval_available",
-                "any([u.nid == 'Chosen' for u in target_system.get_adj_units(game.get_unit('Simonyoung'))]) == True"
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weapon",
+                null
             ]
         ]
     },
@@ -533,11 +438,11 @@
     {
         "nid": "Heroic_Blow_ability",
         "name": "Heroic Blow",
-        "desc": "Deals more damage to monsters.\n<blue>10 mana</>",
+        "desc": "Deals more damage to monsters.\n<blue>Costs 10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
-            49
+            2,
+            21
         ],
         "components": [
             [
@@ -600,8 +505,8 @@
         "desc": "Deals damage to enemies around the user.\n<blue>10 mana</>",
         "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            38
+            4,
+            26
         ],
         "components": [
             [
@@ -656,8 +561,8 @@
         "desc": "Calls upon the light of Ivala to heal the user completely.\n<blue>10 mana.</>",
         "icon_nid": "Skills",
         "icon_index": [
-            10,
-            4
+            9,
+            7
         ],
         "components": [
             [
@@ -3629,17 +3534,6 @@
                 5
             ],
             [
-                "uses",
-                46
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -3700,17 +3594,6 @@
                 2
             ],
             [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -3769,17 +3652,6 @@
             [
                 "weight",
                 10
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "level_exp",
@@ -3852,17 +3724,6 @@
             [
                 "weapon_rank",
                 "A"
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ]
         ]
     },
@@ -3903,17 +3764,6 @@
             [
                 "weapon_rank",
                 "D"
-            ],
-            [
-                "uses",
-                35
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "weight",
@@ -3980,17 +3830,6 @@
                 "C"
             ],
             [
-                "uses",
-                25
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "weight",
                 14
             ],
@@ -4053,17 +3892,6 @@
             [
                 "weapon_rank",
                 "A"
-            ],
-            [
-                "uses",
-                15
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "weight",
@@ -4131,7 +3959,7 @@
             ],
             [
                 "uses",
-                40
+                5
             ],
             [
                 "uses_options",
@@ -4277,7 +4105,7 @@
             ],
             [
                 "uses",
-                18
+                10
             ],
             [
                 "uses_options",
@@ -4443,7 +4271,7 @@
             ],
             [
                 "uses",
-                18
+                10
             ],
             [
                 "uses_options",
@@ -4542,7 +4370,7 @@
             ],
             [
                 "weapon_rank",
-                "C"
+                "D"
             ],
             [
                 "uses",
@@ -4561,6 +4389,10 @@
             ],
             [
                 "reaver",
+                null
+            ],
+            [
+                "warning",
                 null
             ]
         ]
@@ -4625,7 +4457,7 @@
             ],
             [
                 "uses",
-                30
+                20
             ],
             [
                 "uses_options",
@@ -5250,17 +5082,6 @@
             [
                 "weapon_rank",
                 "E"
-            ],
-            [
-                "uses",
-                45
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ]
         ]
     },
@@ -5321,17 +5142,6 @@
             [
                 "weapon_rank",
                 "E"
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ]
         ]
     },
@@ -5372,17 +5182,6 @@
             [
                 "weapon_rank",
                 "D"
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "weight",
@@ -6200,7 +5999,7 @@
             ],
             [
                 "weapon_rank",
-                "C"
+                "D"
             ],
             [
                 "uses",
@@ -6240,6 +6039,10 @@
             [
                 "max_range",
                 1
+            ],
+            [
+                "warning",
+                null
             ]
         ]
     },
@@ -6536,17 +6339,6 @@
                 10
             ],
             [
-                "uses",
-                45
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -6605,17 +6397,6 @@
             [
                 "weight",
                 15
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "level_exp",
@@ -6820,17 +6601,6 @@
                 5
             ],
             [
-                "uses",
-                50
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -6885,17 +6655,6 @@
             [
                 "weight",
                 12
-            ],
-            [
-                "uses",
-                20
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "level_exp",
@@ -7460,10 +7219,14 @@
             ],
             [
                 "weapon_rank",
-                "C"
+                "D"
             ],
             [
                 "reaver",
+                null
+            ],
+            [
+                "warning",
                 null
             ]
         ]
@@ -7831,17 +7594,6 @@
                 5
             ],
             [
-                "uses",
-                45
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -7904,17 +7656,6 @@
             [
                 "weapon_rank",
                 "D"
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "weight",
@@ -8853,17 +8594,6 @@
                 "E"
             ],
             [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "exp",
                 11
             ],
@@ -8922,17 +8652,6 @@
             [
                 "weapon_rank",
                 "D"
-            ],
-            [
-                "uses",
-                20
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "exp",
@@ -10178,17 +9897,6 @@
                 6
             ],
             [
-                "uses",
-                35
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -10700,17 +10408,6 @@
                 4
             ],
             [
-                "uses",
-                40
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -11220,17 +10917,6 @@
             [
                 "value",
                 900
-            ],
-            [
-                "uses",
-                45
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ]
         ]
     },
