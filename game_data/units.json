@@ -2889,7 +2889,12 @@
         "wexp_gain": {
             "Lance": [
                 false,
-                1,
+                71,
+                null
+            ],
+            "Sword": [
+                false,
+                31,
                 null
             ]
         },
@@ -2920,13 +2925,13 @@
         },
         "growths": {
             "HP": 70,
-            "STR": 35,
+            "STR": 60,
             "MAG": 0,
-            "SKL": 40,
-            "SPD": 32,
-            "LCK": 35,
-            "DEF": 15,
-            "RES": 20,
+            "SKL": 60,
+            "SPD": 60,
+            "LCK": 60,
+            "DEF": 60,
+            "RES": 50,
             "CON": 0,
             "MOV": 0
         },
@@ -2937,7 +2942,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Aptitude"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Axe": [
@@ -3000,10 +3010,6 @@
             [
                 1,
                 "Like_a_champ"
-            ],
-            [
-                1,
-                "Bear_hug"
             ]
         ],
         "unit_notes": [],
@@ -3056,7 +3062,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Duro",
-        "affinity": "None",
+        "affinity": "Wind",
         "fields": []
     },
     {
@@ -3064,7 +3070,7 @@
         "name": "Sister Monica",
         "desc": "",
         "variant": "Monica",
-        "level": 3,
+        "level": 5,
         "klass": "Cleric",
         "tags": [],
         "bases": {
@@ -3113,10 +3119,6 @@
             [
                 1,
                 "Puppy_Eyes"
-            ],
-            [
-                1,
-                "Awkward_Silence_proc"
             ]
         ],
         "unit_notes": [],
@@ -3290,10 +3292,6 @@
             [
                 1,
                 "Twice_the_Threat_Cassian"
-            ],
-            [
-                1,
-                "No_Privacy_Cassian"
             ]
         ],
         "unit_notes": [],
@@ -3371,10 +3369,6 @@
             [
                 1,
                 "Twice_the_Threat_Lucia"
-            ],
-            [
-                1,
-                "No_Privacy_Lucia"
             ]
         ],
         "unit_notes": [],
@@ -3404,7 +3398,7 @@
         "klass": "Thief",
         "tags": [],
         "bases": {
-            "HP": 16,
+            "HP": 18,
             "STR": 3,
             "MAG": 3,
             "SKL": 1,
@@ -3454,7 +3448,7 @@
         "wexp_gain": {
             "Sword": [
                 false,
-                1,
+                31,
                 null
             ]
         },
@@ -3474,14 +3468,14 @@
             "Female"
         ],
         "bases": {
-            "HP": 16,
+            "HP": 19,
             "STR": 0,
-            "MAG": 1,
-            "SKL": 3,
-            "SPD": 3,
-            "LCK": 0,
+            "MAG": 9,
+            "SKL": 10,
+            "SPD": 4,
+            "LCK": 10,
             "DEF": 3,
-            "RES": 4,
+            "RES": 7,
             "CON": 5,
             "MOV": 5
         },
@@ -3540,6 +3534,99 @@
         "alternate_classes": [],
         "portrait_nid": "Rosa",
         "affinity": "Fire",
+        "fields": []
+    },
+    {
+        "nid": "Baruba",
+        "name": "Baruba",
+        "desc": "A courageous general in Grado\u2019s army. He\u2019s better known as Obsidian.",
+        "variant": "",
+        "level": 9,
+        "klass": "Mercenary",
+        "tags": [],
+        "bases": {
+            "HP": 25,
+            "STR": 12,
+            "MAG": 2,
+            "SKL": 12,
+            "SPD": 8,
+            "LCK": 8,
+            "DEF": 9,
+            "RES": 9,
+            "CON": 15,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 5,
+            "SKL": 40,
+            "SPD": 30,
+            "LCK": 20,
+            "DEF": 45,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Sword",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                181,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Duessel",
+        "affinity": "Anima",
         "fields": []
     },
     {
@@ -3948,7 +4035,7 @@
             "ZeroMove"
         ],
         "bases": {
-            "HP": 29,
+            "HP": 32,
             "STR": 9,
             "MAG": 0,
             "SKL": 6,
@@ -4037,6 +4124,106 @@
         "fields": []
     },
     {
+        "nid": "Bandit3",
+        "name": "Bandit",
+        "desc": "The leader of Bazba's bandits.",
+        "variant": "",
+        "level": 6,
+        "klass": "Brigand",
+        "tags": [
+            "Boss",
+            "ZeroMove"
+        ],
+        "bases": {
+            "HP": 18,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 8,
+            "LCK": 0,
+            "DEF": 5,
+            "CON": 12,
+            "MOV": 5,
+            "RES": 3
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Axe",
+                false
+            ],
+            [
+                "Hatchet",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                true,
+                71,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Bandit3",
+        "affinity": "None",
+        "fields": []
+    },
+    {
         "nid": "Plank",
         "name": "Plank",
         "desc": "One of Bazba's henchmen.",
@@ -4045,16 +4232,16 @@
         "klass": "Thief",
         "tags": [],
         "bases": {
-            "HP": 19,
-            "STR": 6,
+            "HP": 27,
+            "STR": 11,
             "MAG": 0,
-            "SKL": 6,
-            "SPD": 6,
-            "LCK": 0,
-            "DEF": 5,
+            "SKL": 12,
+            "SPD": 13,
+            "LCK": 3,
+            "DEF": 2,
             "CON": 12,
             "MOV": 6,
-            "RES": 1
+            "RES": 0
         },
         "growths": {
             "HP": 0,
@@ -4140,13 +4327,13 @@
             "Boss"
         ],
         "bases": {
-            "HP": 25,
-            "STR": 4,
+            "HP": 28,
+            "STR": 7,
             "MAG": 0,
-            "SKL": 8,
-            "SPD": 3,
+            "SKL": 10,
+            "SPD": 5,
             "LCK": 4,
-            "DEF": 6,
+            "DEF": 7,
             "CON": 9,
             "MOV": 5,
             "RES": 3
@@ -4235,13 +4422,13 @@
             "Boss"
         ],
         "bases": {
-            "HP": 28,
-            "STR": 8,
+            "HP": 36,
+            "STR": 10,
             "MAG": 0,
-            "SKL": 9,
-            "SPD": 6,
+            "SKL": 11,
+            "SPD": 8,
             "LCK": 7,
-            "DEF": 11,
+            "DEF": 12,
             "CON": 13,
             "MOV": 3,
             "RES": 7
@@ -4317,99 +4504,6 @@
         "alternate_classes": [],
         "portrait_nid": "Mercenary1",
         "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Bord",
-        "name": "Bord",
-        "desc": "A courageous general in Grado\u2019s army. He\u2019s better known as Obsidian.",
-        "variant": null,
-        "level": 9,
-        "klass": "Mercenary",
-        "tags": [],
-        "bases": {
-            "HP": 41,
-            "STR": 17,
-            "MAG": 2,
-            "SKL": 12,
-            "SPD": 12,
-            "LCK": 8,
-            "DEF": 17,
-            "RES": 9,
-            "CON": 15,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 85,
-            "STR": 55,
-            "MAG": 5,
-            "SKL": 40,
-            "SPD": 30,
-            "LCK": 20,
-            "DEF": 45,
-            "RES": 30,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Sword",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                181,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Duessel",
-        "affinity": "Anima",
         "fields": []
     },
     {
@@ -4506,7 +4600,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Selena",
-        "affinity": null,
+        "affinity": "None",
         "fields": []
     },
     {

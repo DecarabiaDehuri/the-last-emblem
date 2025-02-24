@@ -48,6 +48,42 @@
         ]
     },
     {
+        "nid": "Shelter_ability",
+        "name": "Shelter",
+        "desc": "Rescues a unit nearby.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "target.lead_unit == False and unit.lead_unit == False"
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Shelter skill"
+            ]
+        ]
+    },
+    {
         "nid": "Testing",
         "name": "Testing",
         "desc": "",
@@ -672,6 +708,10 @@
             [
                 "shove",
                 2
+            ],
+            [
+                "crit",
+                20
             ]
         ]
     },
@@ -778,6 +818,62 @@
                 [
                     "Safado"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Flashy_Escape_ability",
+        "name": "Flashy Escape",
+        "desc": "Swaps positions between the user and the target while inflicting <red>[BLINDED]</>.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            40
+        ],
+        "components": [
+            [
+                "swap_on_end_combat",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Blinded"
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
             ]
         ]
     },
@@ -8557,7 +8653,7 @@
     },
     {
         "nid": "Heal",
-        "name": "Heal",
+        "name": "Healing Staff",
         "desc": "Restores (User's MAG + 10) HP.",
         "icon_nid": "Staff",
         "icon_index": [
@@ -10502,17 +10598,6 @@
             [
                 "value",
                 700
-            ],
-            [
-                "uses",
-                35
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ]
         ]
     },
@@ -12361,7 +12446,7 @@
         "nid": "Health_Potion",
         "name": "Health Potion",
         "desc": "Restores 10 HP.",
-        "icon_nid": "Consumable",
+        "icon_nid": "Potions",
         "icon_index": [
             0,
             0
@@ -12408,7 +12493,7 @@
         "nid": "Large_Health_Potion",
         "name": "Large Health Potion",
         "desc": "Restores 20 HP.",
-        "icon_nid": "Consumable",
+        "icon_nid": "Potions",
         "icon_index": [
             0,
             0
@@ -12455,7 +12540,7 @@
         "nid": "Huge_Health_Potion",
         "name": "Huge Health Potion",
         "desc": "Restores 50 HP.",
-        "icon_nid": "Consumable",
+        "icon_nid": "Potions",
         "icon_index": [
             0,
             0
@@ -12502,9 +12587,9 @@
         "nid": "Mana_Potion",
         "name": "Mana Potion",
         "desc": "Restores 5 Mana.",
-        "icon_nid": "Consumable",
+        "icon_nid": "Potions",
         "icon_index": [
-            0,
+            1,
             0
         ],
         "components": [
@@ -12542,6 +12627,100 @@
             [
                 "mana_cost",
                 -5
+            ]
+        ]
+    },
+    {
+        "nid": "Large_Mana_Potion",
+        "name": "Large Mana Potion",
+        "desc": "Restores 10 Mana.",
+        "icon_nid": "Potions",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                300
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "mana_cost",
+                -10
+            ]
+        ]
+    },
+    {
+        "nid": "Huge_Mana_Potion",
+        "name": "Huge Mana Potion",
+        "desc": "Restores 20 Mana.",
+        "icon_nid": "Potions",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                300
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "mana_cost",
+                -20
             ]
         ]
     },

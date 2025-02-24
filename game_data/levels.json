@@ -778,15 +778,15 @@
         "name": "Prologue: 3",
         "tilemap": "prol4",
         "bg_tilemap": null,
-        "party": "Eirika",
+        "party": "ChosenParty",
         "music": {
             "player_phase": "Boss2",
             "enemy_phase": "Boss2"
         },
         "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
+            "simple": "Defeat the Boss",
+            "win": "Defeat the Boss",
+            "loss": "Chosen dies"
         },
         "roam": false,
         "roam_unit": null,
@@ -1030,7 +1030,7 @@
                 "variant": null,
                 "level": 7,
                 "klass": "Revenant",
-                "faction": "Soldier",
+                "faction": "Monster",
                 "starting_items": [
                     [
                         "Sharp_Claw",
@@ -1051,7 +1051,7 @@
                 "variant": null,
                 "level": 6,
                 "klass": "Revenant",
-                "faction": "Soldier",
+                "faction": "Monster",
                 "starting_items": [
                     [
                         "Sharp_Claw",
@@ -1674,14 +1674,14 @@
                 "region_type": "event",
                 "position": [
                     16,
-                    3
+                    2
                 ],
                 "size": [
                     9,
-                    10
+                    11
                 ],
                 "sub_nid": "Alert",
-                "condition": "unit.team == 'Player'",
+                "condition": "unit.team == 'player'",
                 "time_left": null,
                 "only_once": false,
                 "interrupt_move": true
@@ -1770,6 +1770,57 @@
                 "time_left": null,
                 "only_once": false,
                 "interrupt_move": false
+            },
+            {
+                "nid": "Vendor",
+                "region_type": "event",
+                "position": [
+                    12,
+                    3
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Vendor",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "1",
+                "region_type": "formation",
+                "position": [
+                    10,
+                    12
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "2",
+                "region_type": "formation",
+                "position": [
+                    9,
+                    12
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
             }
         ],
         "unit_groups": [
@@ -1842,7 +1893,7 @@
         },
         "roam": false,
         "roam_unit": null,
-        "go_to_overworld": false,
+        "go_to_overworld": true,
         "should_record": true,
         "tags": [],
         "units": [
@@ -2183,7 +2234,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -2204,7 +2255,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -2268,7 +2319,7 @@
                 "nid": "4",
                 "region_type": "formation",
                 "position": [
-                    5,
+                    6,
                     15
                 ],
                 "size": [
@@ -2358,7 +2409,20 @@
                     "113",
                     "114"
                 ],
-                "positions": {}
+                "positions": {
+                    "Safado": [
+                        12,
+                        11
+                    ],
+                    "113": [
+                        12,
+                        11
+                    ],
+                    "114": [
+                        12,
+                        11
+                    ]
+                }
             }
         ],
         "ai_groups": [
@@ -2369,27 +2433,31 @@
         ]
     },
     {
-        "nid": "9",
-        "name": "Chapter 9",
+        "nid": "P6",
+        "name": "Prologue: 6",
         "tilemap": "Prologue3",
         "bg_tilemap": null,
-        "party": "Eirika",
-        "music": {},
+        "party": "ChosenParty",
+        "music": {
+            "player_phase": "Prologue battles",
+            "enemy_phase": "Prologue enemy phase",
+            "enemy2_phase": "Boss2"
+        },
         "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
+            "simple": "Survive for 8 turns",
+            "win": "Defend Rosa",
+            "loss": "Chosen dies,Rosa dies"
         },
         "roam": false,
         "roam_unit": null,
-        "go_to_overworld": false,
+        "go_to_overworld": true,
         "should_record": true,
         "tags": [],
         "units": [
             {
                 "nid": "101",
                 "variant": null,
-                "level": 5,
+                "level": 8,
                 "klass": "Orc",
                 "faction": "Monster",
                 "starting_items": [
@@ -2403,17 +2471,140 @@
                 "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    10,
-                    7
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
             {
-                "nid": "102",
+                "nid": "111",
                 "variant": null,
-                "level": 5,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "AttackRosa",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "112",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "116",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "AttackRosa",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "117",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "118",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "119",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "120",
+                "variant": null,
+                "level": 8,
                 "klass": "Imp",
                 "faction": "Monster",
                 "starting_items": [
@@ -2427,49 +2618,640 @@
                 "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    10,
-                    6
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
             {
-                "nid": "Bord",
+                "nid": "121",
+                "variant": null,
+                "level": 8,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "AttackRosa",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 8,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "113",
+                "variant": null,
+                "level": 8,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "114",
+                "variant": null,
+                "level": 8,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "115",
+                "variant": null,
+                "level": 8,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "AttackRosa",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "122",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "123",
+                "variant": null,
+                "level": 8,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "124",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Baruba",
                 "team": "other",
-                "ai": "Attack",
+                "ai": "Guard",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    9,
+                    6
+                ],
                 "starting_traveler": null,
                 "generic": false
             },
             {
-                "nid": "Wrecker",
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Simon",
+                "nid": "Chosen",
                 "team": "player",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
-                    10
+                    0,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Simonyoung",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    0,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Rosa",
+                "team": "other",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 6,
+                "klass": "Brigand",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 5,
+                "klass": "Brigand",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 6,
+                "klass": "Brigand",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "AttackRosa",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "106",
+                "variant": null,
+                "level": 6,
+                "klass": "Brigand",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 6,
+                "klass": "Brigand",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "AttackRosa",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "108",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "109",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "110",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Bandit3",
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    4
                 ],
                 "starting_traveler": null,
                 "generic": false
             }
         ],
-        "regions": [],
-        "unit_groups": [],
+        "regions": [
+            {
+                "nid": "1",
+                "region_type": "formation",
+                "position": [
+                    5,
+                    9
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "2",
+                "region_type": "formation",
+                "position": [
+                    6,
+                    10
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "3",
+                "region_type": "formation",
+                "position": [
+                    6,
+                    7
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "4",
+                "region_type": "formation",
+                "position": [
+                    8,
+                    9
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "5",
+                "region_type": "formation",
+                "position": [
+                    7,
+                    8
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            }
+        ],
+        "unit_groups": [
+            {
+                "nid": "raid1",
+                "units": [
+                    "101",
+                    "111",
+                    "112"
+                ],
+                "positions": {
+                    "101": [
+                        8,
+                        0
+                    ],
+                    "111": [
+                        7,
+                        0
+                    ],
+                    "112": [
+                        9,
+                        0
+                    ]
+                }
+            },
+            {
+                "nid": "raid2",
+                "units": [
+                    "102",
+                    "113",
+                    "114",
+                    "115"
+                ],
+                "positions": {
+                    "102": [
+                        17,
+                        6
+                    ],
+                    "113": [
+                        0,
+                        2
+                    ],
+                    "114": [
+                        5,
+                        14
+                    ],
+                    "115": [
+                        13,
+                        14
+                    ]
+                }
+            },
+            {
+                "nid": "raid3",
+                "units": [
+                    "116",
+                    "117",
+                    "118"
+                ],
+                "positions": {
+                    "116": [
+                        15,
+                        0
+                    ],
+                    "117": [
+                        0,
+                        4
+                    ],
+                    "118": [
+                        6,
+                        14
+                    ]
+                }
+            },
+            {
+                "nid": "raid4",
+                "units": [
+                    "119",
+                    "120",
+                    "121"
+                ],
+                "positions": {
+                    "119": [
+                        3,
+                        0
+                    ],
+                    "120": [
+                        0,
+                        9
+                    ],
+                    "121": [
+                        17,
+                        10
+                    ]
+                }
+            },
+            {
+                "nid": "raid5",
+                "units": [
+                    "122",
+                    "123",
+                    "124"
+                ],
+                "positions": {
+                    "122": [
+                        11,
+                        0
+                    ],
+                    "123": [
+                        0,
+                        14
+                    ],
+                    "124": [
+                        17,
+                        3
+                    ]
+                }
+            }
+        ],
         "ai_groups": []
     },
     {
@@ -6187,8 +6969,8 @@
                 "roam_ai": null,
                 "ai_group": null,
                 "starting_position": [
-                    0,
-                    2
+                    1,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -6200,8 +6982,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    12,
-                    6
+                    7,
+                    10
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -6393,8 +7175,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    1,
-                    13
+                    7,
+                    11
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -6432,8 +7214,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
-                    12
+                    6,
+                    11
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -6508,8 +7290,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    8,
-                    9
+                    6,
+                    10
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -6562,6 +7344,23 @@
                 "time_left": null,
                 "only_once": true,
                 "interrupt_move": false
+            },
+            {
+                "nid": "alert",
+                "region_type": "event",
+                "position": [
+                    0,
+                    0
+                ],
+                "size": [
+                    3,
+                    3
+                ],
+                "sub_nid": "alert",
+                "condition": "any(game.level.regions.get('alert').contains(unit.position) for unit in game.get_units_in_party()) == True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": true
             }
         ],
         "unit_groups": [],

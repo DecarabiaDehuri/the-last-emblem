@@ -14,7 +14,15 @@
                 ],
                 "icon": "castle",
                 "level": "P1",
-                "menu_options": []
+                "menu_options": [
+                    {
+                        "nid": "Armory",
+                        "event": null,
+                        "option_name": "Armory",
+                        "visible": false,
+                        "enabled": false
+                    }
+                ]
             },
             {
                 "nid": "IK",
@@ -47,7 +55,22 @@
                 ],
                 "icon": "town",
                 "level": "P4",
-                "menu_options": []
+                "menu_options": [
+                    {
+                        "nid": "Armory",
+                        "event": "Nodford Armory",
+                        "option_name": "Armory",
+                        "visible": true,
+                        "enabled": true
+                    },
+                    {
+                        "nid": "Vendor",
+                        "event": "Nodford Vendor",
+                        "option_name": "Vendor",
+                        "visible": true,
+                        "enabled": true
+                    }
+                ]
             },
             {
                 "nid": "P5",
@@ -61,14 +84,14 @@
                 "menu_options": []
             },
             {
-                "nid": "32",
-                "name": "New Location",
+                "nid": "P6",
+                "name": "Mountain Crossing",
                 "pos": [
-                    18,
-                    15
+                    19,
+                    14
                 ],
                 "icon": "map_node",
-                "level": null,
+                "level": "P6",
                 "menu_options": []
             }
         ],
@@ -85,16 +108,6 @@
                 [
                     18,
                     17
-                ]
-            ],
-            "(18, 15)-(18, 17)": [
-                [
-                    18,
-                    17
-                ],
-                [
-                    18,
-                    15
                 ]
             ],
             "(14, 17)-(16, 19)": [
@@ -119,6 +132,20 @@
                 [
                     16,
                     16
+                ]
+            ],
+            "(18, 17)-(19, 14)": [
+                [
+                    18,
+                    17
+                ],
+                [
+                    18,
+                    15
+                ],
+                [
+                    19,
+                    14
                 ]
             ]
         },

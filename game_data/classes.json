@@ -2215,6 +2215,10 @@
             [
                 1,
                 "Canto"
+            ],
+            [
+                1,
+                "Shelter"
             ]
         ],
         "wexp_gain": {
@@ -2661,6 +2665,10 @@
             [
                 1,
                 "Canto"
+            ],
+            [
+                1,
+                "Shelter"
             ]
         ],
         "wexp_gain": {
@@ -5762,6 +5770,10 @@
             [
                 1,
                 "Canto"
+            ],
+            [
+                1,
+                "Shelter"
             ]
         ],
         "wexp_gain": {
@@ -5804,6 +5816,11 @@
                 false,
                 0,
                 251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
             ],
             "Default": [
                 false,
@@ -5951,6 +5968,11 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
@@ -6096,6 +6118,11 @@
                 false,
                 0,
                 251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
             ],
             "Default": [
                 false,
@@ -10408,7 +10435,7 @@
         ],
         "max_level": 20,
         "bases": {
-            "HP": 5,
+            "HP": 10,
             "STR": 5,
             "MAG": 0,
             "SKL": 3,
@@ -10420,13 +10447,13 @@
             "MOV": 5
         },
         "growths": {
-            "HP": 0,
+            "HP": 70,
             "STR": 80,
             "MAG": 25,
             "SKL": 25,
             "SPD": 25,
             "LCK": 25,
-            "DEF": 25,
+            "DEF": 60,
             "RES": 25,
             "CON": 0,
             "MOV": 0
@@ -10480,7 +10507,7 @@
                 null
             ],
             "Axe": [
-                false,
+                true,
                 0,
                 null
             ],
@@ -10544,10 +10571,10 @@
         "max_level": 20,
         "bases": {
             "HP": 5,
-            "STR": 5,
+            "STR": 4,
             "MAG": 0,
-            "SKL": 3,
-            "SPD": 3,
+            "SKL": 2,
+            "SPD": 5,
             "LCK": 2,
             "DEF": 2,
             "RES": 1,
@@ -10555,14 +10582,14 @@
             "MOV": 5
         },
         "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
+            "HP": 70,
+            "STR": 40,
+            "MAG": 25,
+            "SKL": 60,
+            "SPD": 70,
+            "LCK": 25,
+            "DEF": 25,
+            "RES": 25,
             "CON": 0,
             "MOV": 0
         },
@@ -10602,7 +10629,12 @@
             "CON": 25,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Flying"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
