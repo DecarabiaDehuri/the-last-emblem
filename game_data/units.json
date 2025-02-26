@@ -2883,6 +2883,10 @@
             [
                 1,
                 "Rebuke"
+            ],
+            [
+                1,
+                "Strategic_Strikes"
             ]
         ],
         "unit_notes": [],
@@ -2900,7 +2904,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Simonyoung",
-        "affinity": "None",
+        "affinity": "Ice",
         "fields": []
     },
     {
@@ -3062,7 +3066,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Duro",
-        "affinity": "Wind",
+        "affinity": "Thunder",
         "fields": []
     },
     {
@@ -3169,15 +3173,11 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Rapier",
+                "Rapier_Antarion",
                 false
             ]
         ],
         "learned_skills": [
-            [
-                1,
-                "Flashy_Strike"
-            ],
             [
                 1,
                 "Drink_Potion"
@@ -3309,7 +3309,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Cassian",
-        "affinity": "Fire",
+        "affinity": "Thunder",
         "fields": []
     },
     {
@@ -3443,7 +3443,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Stalling_Stance"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -3454,7 +3459,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Safado",
-        "affinity": "None",
+        "affinity": "Anima",
         "fields": []
     },
     {
@@ -3647,7 +3652,7 @@
             "DEF": 9,
             "RES": 11,
             "CON": 7,
-            "MOV": 0
+            "MOV": 5
         },
         "growths": {
             "HP": 65,
@@ -3662,16 +3667,7 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Steel_Sword",
-                false
-            ],
-            [
-                "Elixir",
-                false
-            ]
-        ],
+        "starting_items": [],
         "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
@@ -5088,6 +5084,61 @@
         "alternate_classes": [],
         "portrait_nid": "Incubus King",
         "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Ogre1",
+        "name": "Ogre",
+        "desc": "",
+        "variant": null,
+        "level": 10,
+        "klass": "Ogre",
+        "tags": [
+            "Boss",
+            "ZeroMove",
+            "Monster"
+        ],
+        "bases": {
+            "HP": 40,
+            "STR": 9,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 3,
+            "LCK": 4,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 16,
+            "MOV": 5
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Axe",
+                false
+            ],
+            [
+                "Hand_Axe",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "SwordBreaker"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Axe": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "",
+        "affinity": null,
         "fields": []
     }
 ]

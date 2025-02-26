@@ -80,6 +80,10 @@
             [
                 "event_after_combat_on_hit",
                 "Global Shelter skill"
+            ],
+            [
+                "no_map_hp_display",
+                null
             ]
         ]
     },
@@ -468,6 +472,81 @@
             [
                 "spell",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Rapier_Antarion",
+        "name": "Rapier",
+        "desc": "Deals +5 damage on critical hits. Antarion only weapon. The preferred weapon of the Blademasters.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor"
+                    ],
+                    "effective_multiplier": 1.0,
+                    "effective_bonus_damage": 14,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "added_crit_damage",
+                5
+            ],
+            [
+                "prf_unit",
+                [
+                    "Antarion"
+                ]
             ]
         ]
     },
@@ -874,6 +953,110 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "weapon",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ]
+        ]
+    },
+    {
+        "nid": "Stalling_Stance_ability",
+        "name": "Stalling Stance",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            27
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "status_on_hit",
+                "Stalling_Stance_buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Make_way_ability",
+        "name": "Make way",
+        "desc": "Deals damage and pushes target 1 tile away.\nCosts <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            4
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "shove_on_end_combat",
+                1
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "mana_cost",
+                5
             ]
         ]
     },

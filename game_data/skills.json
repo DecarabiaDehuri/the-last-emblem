@@ -16,6 +16,43 @@
         ]
     },
     {
+        "nid": "traveler",
+        "name": "traveler",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    156,
+                    4,
+                    6
+                ]
+            ],
+            [
+                "condition",
+                "u('Cassian').traveler == 'Chosen'"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        50
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Shelter",
         "name": "Shelter",
         "desc": "Unit can rescue another adjacent ally.",
@@ -32,6 +69,58 @@
             [
                 "ability",
                 "Shelter_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "SwordBreaker",
+        "name": "Sword Breaker",
+        "desc": "Unit is buffed if enemy is using a <red>Sword</>.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Sword'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "critao",
+        "name": "critao",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "crit",
+                999
             ]
         ]
     },
@@ -78,7 +167,7 @@
     {
         "nid": "Heroic_Aura",
         "name": "Heroic Aura",
-        "desc": "When not at full health, the Chosen can call upon Ivala to heal their wounds.\nCosts <blue>10 mana</>.",
+        "desc": "When at less than full health, the Chosen can call upon Ivala to heal their wounds.\nCosts <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -172,6 +261,62 @@
         ]
     },
     {
+        "nid": "Safe_Approach_pair",
+        "name": "Safe Approach",
+        "desc": "<green>[Simon Synergy]</> The Chosen has begrudgingly decided to hear Simon's advice for once. Unit has bonus damage when defending.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Chosen').traveler == 'Simonyoung'"
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Strategic_Strikes",
+        "name": "Strategic Strikes",
+        "desc": "Simon can use a plethora of special strikes that cause negative effects on his enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            25
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Blinding_Strike",
         "name": "Blinding Strike",
         "desc": "Simon can use Blinding Strike. Costs <blue>5 mana</>.\n<red>[BLINDED]</>: Unit loses HIT and AVOID. Duration: 2 turns.",
@@ -188,6 +333,10 @@
             [
                 "ability",
                 "Blinding_Strike_ability"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -208,6 +357,10 @@
             [
                 "ability",
                 "Silencing_Strike_ability"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -228,6 +381,10 @@
             [
                 "ability",
                 "Stunning_Strike_ability"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -270,10 +427,6 @@
                 null
             ],
             [
-                "grey_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Simonyoung' for u in target_system.get_adj_units(game.get_unit('Chosen'))])"
             ],
@@ -291,6 +444,38 @@
             ],
             [
                 "hide_aura",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Imitation_pair",
+        "name": "Heroic Imitation",
+        "desc": "<green>[Chosen Synergy]</> Simon can attempt to copy the Chosen's power.\nEffective against monsters. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            21
+        ],
+        "components": [
+            [
+                "ability",
+                "Heroic_Imitation"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Simonyoung').traveler == 'Chosen'"
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -314,7 +499,7 @@
     {
         "nid": "Overbearing_Jokes",
         "name": "Overbearing Jokes",
-        "desc": "<green>[Duro Synergy]</> Mira can't stand Duro's jokes! When adjacent to Duro, Mira can move after attacking.",
+        "desc": "<green>[Duro Synergy]</> Mira can't stand Duro's jokes! Mira can move after attacking.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -323,10 +508,6 @@
         "components": [
             [
                 "class_skill",
-                null
-            ],
-            [
-                "grey_if_inactive",
                 null
             ],
             [
@@ -351,6 +532,38 @@
             ],
             [
                 "canto_plus",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Overbearing_Jokes_pair",
+        "name": "Overbearing Jokes",
+        "desc": "<green>[Duro Synergy]</> Mira can't stand Duro's jokes! Mira can move after attacking.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Mira').traveler == 'Duro'"
+            ],
+            [
+                "canto_plus",
+                null
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -521,8 +734,8 @@
         ]
     },
     {
-        "nid": "Flashy_Strike",
-        "name": "Flashy Strike",
+        "nid": "Flashy_Strike_beta",
+        "name": "Flashy Strike beta",
         "desc": "Antarion can use his special attack <green>Flashy Strike</>. It most certainly defeats any enemy with one strike.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -605,6 +818,131 @@
             [
                 "ally_lifelink",
                 0.5
+            ]
+        ]
+    },
+    {
+        "nid": "No_Crit_Antarion",
+        "name": "No Crit Antarion",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flashy_Strike",
+        "name": "Flashy Strike",
+        "desc": "Each combat initiated by Antarion builds 1 charge. Defeating a foe builds 2 charges. At 4 charges, Antarion can use this skill for a guaranteed critical attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            51
+        ],
+        "components": [
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    12,
+                    150,
+                    152
+                ]
+            ],
+            [
+                "active_combat_charge_increase",
+                1
+            ],
+            [
+                "kill_charge_increase",
+                2
+            ],
+            [
+                "combat_art",
+                "Guaranteed_Crit"
+            ]
+        ]
+    },
+    {
+        "nid": "Critical_Boost",
+        "name": "Critical Boost",
+        "desc": "Antarion gaints +10 CRIT. After a critical attack, he gain <red>[OVERCONFIDENCE]</>: +15 HIT, -15 AVOID. Lasts until end of next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            43
+        ],
+        "components": [
+            [
+                "crit_event",
+                "Global Antarion Crit"
+            ],
+            [
+                "gain_skill_after_crit",
+                "Overconfidence"
+            ],
+            [
+                "crit",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Overconfidence",
+        "name": "Overconfidence",
+        "desc": "Unit is drunk in his own success. HIT+15, AVOID-15. Lasts until end of next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            51
+        ],
+        "components": [
+            [
+                "hit",
+                15
+            ],
+            [
+                "avoid",
+                -15
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Guaranteed_Crit",
+        "name": "Observe the Greatest!",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            45
+        ],
+        "components": [
+            [
+                "alternate_battle_anim",
+                "Critical"
+            ],
+            [
+                "crit",
+                999
             ]
         ]
     },
@@ -821,6 +1159,50 @@
         ]
     },
     {
+        "nid": "Make_Way",
+        "name": "Make Way",
+        "desc": "<green>[Safado Synergy]</>. Safado accidentaly teaches Lucia how to push people away. Lucia can use Make Way, which damages and pushes opponents. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            14
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Lucia' for u in target_system.get_adj_units(game.get_unit('Safado'))])"
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "ability",
+                "Make_way_ability"
+            ]
+        ]
+    },
+    {
         "nid": "Webbed",
         "name": "Webbed",
         "desc": "Unit has -5 SPD and -3 MOV for the remainder of their turn.",
@@ -977,7 +1359,7 @@
     {
         "nid": "Remembrance",
         "name": "Remembrance",
-        "desc": "<green>[Lucia Synergy]</>. Lucia reminds Duro of his wife's fierceness. Duro recovers 20% max HP at the start of the turn.",
+        "desc": "<green>[Lucia Synergy]</>. Lucia reminds Duro of his wife's fierceness. Duro recovers 30% max HP at the start of the turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -1014,7 +1396,7 @@
             ],
             [
                 "regeneration",
-                0.2
+                0.30000000000000004
             ]
         ]
     },
@@ -1041,7 +1423,7 @@
     {
         "nid": "Cozy_Warmth",
         "name": "Cozy Warmth",
-        "desc": "While Rosa is standing on a <red>Firewall</> and equipping <red>Fire</> magic, +1 to all stats and CRIT greatly increased.",
+        "desc": "While Rosa is standing on a <red>Firewall</> and equipping <red>Fire</> magic, +2 to all stats and CRIT greatly increased.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -1061,39 +1443,39 @@
                 [
                     [
                         "STR",
-                        1
+                        2
                     ],
                     [
                         "MAG",
-                        1
+                        2
                     ],
                     [
                         "SKL",
-                        1
+                        2
                     ],
                     [
                         "LCK",
-                        1
+                        2
                     ],
                     [
                         "SPD",
-                        1
+                        2
                     ],
                     [
                         "DEF",
-                        1
+                        2
                     ],
                     [
                         "RES",
-                        1
+                        2
                     ],
                     [
                         "CON",
-                        1
+                        2
                     ],
                     [
                         "MOV",
-                        1
+                        2
                     ]
                 ]
             ],
@@ -1144,6 +1526,10 @@
             [
                 "time",
                 3
+            ],
+            [
+                "upkeep_sound",
+                "Burning"
             ]
         ]
     },
@@ -1176,6 +1562,10 @@
             [
                 "endstep_damage",
                 5
+            ],
+            [
+                "upkeep_sound",
+                "Burning"
             ]
         ]
     },
@@ -1224,6 +1614,50 @@
         ]
     },
     {
+        "nid": "Fast_Fire",
+        "name": "Fast Fire",
+        "desc": "<green>[Cassjan Synergy]</>. Rosa learned with Cassian that, sometimes, it's better to act quick and think later. Rosa has increased attack speed.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Rosa' for u in target_system.get_adj_units(game.get_unit('Cassian'))])"
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "attack_speed",
+                4
+            ]
+        ]
+    },
+    {
         "nid": "Flashy_Escape",
         "name": "Flashy Escape",
         "desc": "<green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>.\n<red>[BLINDED]</>:Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
@@ -1264,6 +1698,191 @@
             [
                 "ability",
                 "Flashy_Escape_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Stalling_Stance",
+        "name": "Stalling_Stance",
+        "desc": "Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            27
+        ],
+        "components": [
+            [
+                "ability",
+                "Stalling_Stance_ability"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Stalling_Stance_buff",
+        "name": "Stalling_Stance",
+        "desc": "Safado will dodge enemy attacks, but also miss his own.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            27
+        ],
+        "components": [
+            [
+                "avoid",
+                999
+            ],
+            [
+                "hit",
+                -999
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Post_Nut_Prayer",
+        "name": "Post Nut Prayer",
+        "desc": "<green>[Monica Synergy]</>. Minerve learned from Monica the relaxing effect of spiritual pursuit. When dancing, also grants the ally <red>[PNP]</>.\n<red>[PNP]</>: Unit has +15 HIT and AVOID. Lasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Minerve' for u in target_system.get_adj_units(game.get_unit('Monica'))])"
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "give_ally_status_after_combat",
+                "Post_Nut_Prayer_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "Post_Nut_Prayer_effect",
+        "name": "PNP",
+        "desc": "Unit has +15 HIT and AVOID. Lasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            35
+        ],
+        "components": [
+            [
+                "time",
+                2
+            ],
+            [
+                "hit",
+                15
+            ],
+            [
+                "avoid",
+                15
+            ]
+        ]
+    },
+    {
+        "nid": "Super_Dance",
+        "name": "Super Dance",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "active_combat_charge_increase",
+                1
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "give_ally_status_after_combat",
+                "Super_Dance_buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Super_Dance_buff",
+        "name": "Super Dance Buff",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            35
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "HP",
+                        30
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
             ]
         ]
     },
