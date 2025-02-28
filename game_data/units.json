@@ -2914,7 +2914,9 @@
         "variant": "",
         "level": 1,
         "klass": "Journeyman",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
             "HP": 18,
             "STR": 4,
@@ -3076,7 +3078,9 @@
         "variant": "Monica",
         "level": 5,
         "klass": "Cleric",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
             "HP": 17,
             "STR": 2,
@@ -3640,8 +3644,10 @@
         "desc": "A lazy, greedy, but exceptional fighter from the Republic of Carcino.",
         "variant": "",
         "level": 9,
-        "klass": "Dancer",
-        "tags": [],
+        "klass": "Suc_Minerve",
+        "tags": [
+            "Female"
+        ],
         "bases": {
             "HP": 28,
             "STR": 10,
@@ -3667,13 +3673,22 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "True_Form",
+                false
+            ],
+            [
+                "Flux",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 true,
-                1,
+                0,
                 251
             ],
             "Lance": [
@@ -3708,7 +3723,7 @@
             ],
             "Dark": [
                 false,
-                0,
+                31,
                 251
             ],
             "Default": [
@@ -4065,7 +4080,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Last_Stand"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -4448,7 +4468,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Anticrit"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -5138,6 +5163,34 @@
         },
         "alternate_classes": [],
         "portrait_nid": "",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Debug",
+        "name": "Debug",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Citizen",
+        "tags": [],
+        "bases": {
+            "MOV": 999,
+            "HP": 999,
+            "SPD": 99,
+            "DEF": 99,
+            "SKL": 99,
+            "RES": 99,
+            "CON": 99
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Eirika",
         "affinity": null,
         "fields": []
     }

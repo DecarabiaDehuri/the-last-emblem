@@ -16,6 +16,22 @@
         ]
     },
     {
+        "nid": "Nothing",
+        "name": "Nothing",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "do_nothing",
+                1
+            ]
+        ]
+    },
+    {
         "nid": "traveler",
         "name": "traveler",
         "desc": "",
@@ -109,6 +125,30 @@
         ]
     },
     {
+        "nid": "Last_Stand",
+        "name": "Last Stand",
+        "desc": "When at less than half of max HP, unit will not be affected by any negative status.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            46
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_hp() < (unit.get_max_hp() / 2)"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "immune_status",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "critao",
         "name": "critao",
         "desc": "",
@@ -121,6 +161,22 @@
             [
                 "crit",
                 999
+            ]
+        ]
+    },
+    {
+        "nid": "Rock_Throw",
+        "name": "Rock Throw",
+        "desc": "ORC THROW BIG ROCK!",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -205,6 +261,136 @@
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_Blighting",
+        "name": "Aura Blighting",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            36
+        ],
+        "components": [
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Repulsed"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any(['Female' in unit.tags for u in target_system.get_adj_units(game.get_unit('Chosen'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_Blighting_buffs",
+        "name": "Aura Blighting",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            36
+        ],
+        "components": [
+            [
+                "condition",
+                "any(['Female' in unit.tags for u in target_system.get_adj_units(game.get_unit('Chosen'))])"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Conceited",
+        "name": "Conceited",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            34
+        ],
+        "components": [
+            [
+                "crit",
+                30
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Repulsed",
+        "name": "Repulsed",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "condition",
+                "'Female' in unit.tags"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        -2
+                    ]
+                ]
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    36,
+                    0,
+                    107
+                ]
             ]
         ]
     },
@@ -497,6 +683,51 @@
         ]
     },
     {
+        "nid": "Revenge_Driven",
+        "name": "Revenge Driven",
+        "desc": "While at less than half of MAX HP, Mira can double attack on defense.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            43
+        ],
+        "components": [
+            [
+                "can_double_on_defense",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() < (unit.get_max_hp() / 2)"
+            ]
+        ]
+    },
+    {
+        "nid": "Premature_Advance",
+        "name": "Premature Advance",
+        "desc": "Mira has her eyes set on a dangerous future. Mira has extra movement. This skill is deactivated upon first receiving damage on the current chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            8
+        ],
+        "components": [
+            [
+                "undamaged_condition",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Overbearing_Jokes",
         "name": "Overbearing Jokes",
         "desc": "<green>[Duro Synergy]</> Mira can't stand Duro's jokes! Mira can move after attacking.",
@@ -627,7 +858,7 @@
     {
         "nid": "Awkward_Silence_proc",
         "name": "Awkward Silence",
-        "desc": "Monica has a chance at the beginning of the turn to gain the Awkward Silence aura. Enemies affected by this aura gain [SILENCED].",
+        "desc": "Monica has MAG% at the beginning of the turn to gain the Awkward Silence aura. Enemies affected by this aura gain [SILENCED].",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -640,7 +871,7 @@
             ],
             [
                 "proc_rate",
-                "MOEDA"
+                "MAGIC_DAMAGE"
             ],
             [
                 "class_skill",
@@ -681,6 +912,125 @@
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Soothing_Presence",
+        "name": "Soothing Presence",
+        "desc": "Monica's presence might not be heard, but is definitely felt. Monica can heal an ally from far away.\nCosts <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            49
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Soothing_Presence_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "MAG_DOUBLE",
+        "name": "MAG DOUBLE",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MAG",
+                        2.0
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Penitence",
+        "name": "Penitence",
+        "desc": "When at more than half health, Monica can use Penitence: Heals in an area. Allies gain <red>[BLESSED]</>. Costs <red>HP equal to half of MAX HP</> and <blue>10 mana</>.\n<red>[BLESSED]</>: Unit takes half damage in the next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            24
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Penitence"
+            ]
+        ]
+    },
+    {
+        "nid": "Penitence_effect",
+        "name": "Blessed",
+        "desc": "Unit feels the touch of someone inside them... in a wholesome way. Takes half damage. Lasts for one combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            24
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ],
+            [
+                "unit_tint",
+                [
+                    171,
+                    227,
+                    232
+                ]
             ]
         ]
     },
@@ -849,7 +1199,7 @@
         "components": [
             [
                 "build_charge",
-                2
+                4
             ],
             [
                 "unit_flickering_tint",
@@ -862,13 +1212,25 @@
             [
                 "combat_art",
                 "Guaranteed_Crit"
+            ],
+            [
+                "active_combat_charge_increase",
+                1
+            ],
+            [
+                "kill_charge_increase",
+                2
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
     {
         "nid": "Critical_Boost",
         "name": "Critical Boost",
-        "desc": "Antarion gaints +10 CRIT. After a critical attack, he gain <red>[OVERCONFIDENCE]</>: +15 HIT, -15 AVOID. Lasts until end of next combat.",
+        "desc": "Antarion gaints +10 CRIT. After a critical attack, he gains <red>[OVERCONFIDENCE]</>: +15 HIT, -15 AVOID. Lasts until end of next combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -878,13 +1240,25 @@
             [
                 "crit",
                 10
+            ],
+            [
+                "crit_event",
+                "Global Antarion Crit"
+            ],
+            [
+                "gain_skill_after_crit",
+                "Overconfidence"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
     {
         "nid": "Overconfidence",
         "name": "Overconfidence",
-        "desc": "Unit is drunk in his own success. HIT+15, AVOID-15. Lasts until end of next combat.",
+        "desc": "Antarion is too focused on his own success. HIT+15, AVOID-15. Lasts until end of next combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -1387,7 +1761,7 @@
     {
         "nid": "Firewall",
         "name": "Firewall",
-        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
+        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -1556,7 +1930,7 @@
     {
         "nid": "Hot_Business",
         "name": "Hot Business",
-        "desc": "When using a <red>Fire</> spell, Rosa has MAG% chance to inflict <red>[BURNED]</> on her enemy.\n<red>[BURNED]</>: 5 damage at the start of unit's turn. Lasts 3 turns.",
+        "desc": "When using a <red>Fire</> spell, Rosa has MAG% chance to inflict <red>[BURNED]</> on her enemy.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn. Lasts 3 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -1637,7 +2011,7 @@
             ],
             [
                 "attack_speed",
-                4
+                5
             ]
         ]
     },
@@ -1746,6 +2120,22 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "ability",
+                "Fap"
             ]
         ]
     },
@@ -2432,6 +2822,10 @@
             [
                 "negative",
                 null
+            ],
+            [
+                "unit_anim",
+                "MapStun"
             ]
         ]
     },

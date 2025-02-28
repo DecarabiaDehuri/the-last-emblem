@@ -3255,16 +3255,19 @@
         "ai_groups": []
     },
     {
-        "nid": "7",
-        "name": "Chapter 7",
+        "nid": "P7",
+        "name": "Prologue: 7",
         "tilemap": "mountain entrance",
         "bg_tilemap": null,
         "party": "ChosenParty",
-        "music": {},
+        "music": {
+            "player_phase": "Boss2",
+            "enemy_phase": "Boss2"
+        },
         "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
+            "simple": "Go to the mountain!",
+            "win": "Chosen reaches the mountain",
+            "loss": "Chosen dies"
         },
         "roam": false,
         "roam_unit": null,
@@ -3278,10 +3281,7 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    5,
-                    17
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
             },
@@ -3292,8 +3292,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    4,
-                    6
+                    5,
+                    17
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -3307,10 +3307,513 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc_Thrower",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Rock",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc_Thrower",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Rock",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc_Thrower",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Rock",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc_Thrower",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Rock",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "113",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc_Thrower",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Rock",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 9,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "106",
+                "variant": null,
+                "level": 9,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 9,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "108",
+                "variant": null,
+                "level": 9,
+                "klass": "Imp",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "109",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "110",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "111",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "112",
+                "variant": null,
+                "level": 9,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Minerve",
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    4,
+                    17
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Debug",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
             }
         ],
-        "regions": [],
-        "unit_groups": [],
+        "regions": [
+            {
+                "nid": "1",
+                "region_type": "formation",
+                "position": [
+                    6,
+                    19
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "1_1",
+                "region_type": "formation",
+                "position": [
+                    4,
+                    20
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "1_2",
+                "region_type": "formation",
+                "position": [
+                    7,
+                    20
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "1_3",
+                "region_type": "formation",
+                "position": [
+                    4,
+                    18
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "1_4",
+                "region_type": "formation",
+                "position": [
+                    6,
+                    17
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Mountain",
+                "region_type": "event",
+                "position": [
+                    4,
+                    6
+                ],
+                "size": [
+                    4,
+                    1
+                ],
+                "sub_nid": "Mountain",
+                "condition": "unit.nid == 'Chosen'",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": true
+            },
+            {
+                "nid": "ambush",
+                "region_type": "normal",
+                "position": [
+                    1,
+                    8
+                ],
+                "size": [
+                    12,
+                    3
+                ],
+                "sub_nid": "Ambush",
+                "condition": "unit.team == 'player'",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            }
+        ],
+        "unit_groups": [
+            {
+                "nid": "throw",
+                "units": [
+                    "101",
+                    "103",
+                    "104",
+                    "105",
+                    "113"
+                ],
+                "positions": {
+                    "101": [
+                        6,
+                        7
+                    ],
+                    "103": [
+                        10,
+                        11
+                    ],
+                    "104": [
+                        0,
+                        11
+                    ],
+                    "105": [
+                        7,
+                        14
+                    ],
+                    "113": [
+                        1,
+                        15
+                    ]
+                }
+            },
+            {
+                "nid": "orc",
+                "units": [
+                    "109",
+                    "110",
+                    "111",
+                    "112"
+                ],
+                "positions": {
+                    "109": [
+                        4,
+                        13
+                    ],
+                    "110": [
+                        13,
+                        13
+                    ],
+                    "111": [
+                        8,
+                        9
+                    ],
+                    "112": [
+                        1,
+                        9
+                    ]
+                }
+            },
+            {
+                "nid": "imp",
+                "units": [
+                    "102",
+                    "106",
+                    "107",
+                    "108"
+                ],
+                "positions": {
+                    "102": [
+                        2,
+                        20
+                    ],
+                    "106": [
+                        5,
+                        20
+                    ],
+                    "107": [
+                        8,
+                        20
+                    ],
+                    "108": [
+                        11,
+                        20
+                    ]
+                }
+            }
+        ],
         "ai_groups": []
     },
     {
@@ -3350,8 +3853,8 @@
         "ai_groups": []
     },
     {
-        "nid": "P7",
-        "name": "Prologue: 7",
+        "nid": "P10",
+        "name": "Prologue: 10",
         "tilemap": "Prologuelamia",
         "bg_tilemap": null,
         "party": "ChosenParty",
@@ -5910,7 +6413,7 @@
                     15,
                     6
                 ],
-                "sub_nid": null,
+                "sub_nid": "",
                 "condition": "True",
                 "time_left": null,
                 "only_once": false,
@@ -7641,7 +8144,7 @@
                 "generic": false
             },
             {
-                "nid": "Bandit3",
+                "nid": "Crusher",
                 "team": "enemy",
                 "ai": "None",
                 "roam_ai": null,
@@ -7682,6 +8185,27 @@
                     6,
                     7
                 ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 9,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             }

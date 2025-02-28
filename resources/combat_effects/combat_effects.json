@@ -66901,5 +66901,77 @@
                 "New Palette_19"
             ]
         ]
+    },
+    {
+        "nid": "Blank",
+        "poses": [
+            [
+                "Attack",
+                [
+                    [
+                        "pan",
+                        null
+                    ],
+                    [
+                        "spell_hit",
+                        null
+                    ],
+                    [
+                        "hit_spark",
+                        null
+                    ],
+                    [
+                        "sound",
+                        [
+                            "Axe Push"
+                        ]
+                    ],
+                    [
+                        "start_hit",
+                        null
+                    ],
+                    [
+                        "wait_for_hit",
+                        [
+                            null,
+                            null
+                        ]
+                    ],
+                    [
+                        "end_parent_loop",
+                        null
+                    ],
+                    [
+                        "wait",
+                        [
+                            0
+                        ]
+                    ],
+                    [
+                        "pan",
+                        null
+                    ]
+                ]
+            ],
+            [
+                "Miss",
+                [
+                    [
+                        "pan",
+                        null
+                    ],
+                    [
+                        "miss",
+                        null
+                    ],
+                    [
+                        "end_parent_loop",
+                        null
+                    ]
+                ]
+            ]
+        ],
+        "frames": [],
+        "palettes": []
     }
 ]
