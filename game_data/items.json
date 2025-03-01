@@ -774,6 +774,69 @@
         ]
     },
     {
+        "nid": "Shiny_Sword",
+        "name": "Shiny Sword",
+        "desc": "Uses MAG to determine damage.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            14
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "uses",
+                25
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Soothing_Presence_effect",
         "name": "Soothing Presence",
         "desc": "Restores an ally's HP from afar with double the potency. Costs <blue>5 mana</>.",
