@@ -3823,7 +3823,8 @@
         "bg_tilemap": "withered mountain background",
         "party": "ChosenParty",
         "music": {
-            "player_phase": "Wind"
+            "player_phase": "Wind",
+            "enemy_phase": "Prologue enemy phase"
         },
         "objective": {
             "simple": "",
@@ -3964,6 +3965,299 @@
                 ],
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "Plant",
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_lamia",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flux",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_lamia",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flux",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_lamia",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flux",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_lamia",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flux",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_lamia",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flux",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "106",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_lamia",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flux",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_lamia",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flux",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "108",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "109",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "110",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "111",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "112",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "113",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Milena",
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [
@@ -4015,8 +4309,93 @@
                 "sub_nid": "ambush",
                 "condition": "True",
                 "time_left": null,
-                "only_once": true,
+                "only_once": false,
                 "interrupt_move": true
+            },
+            {
+                "nid": "formation_1",
+                "region_type": "formation",
+                "position": [
+                    22,
+                    27
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "formation_2",
+                "region_type": "formation",
+                "position": [
+                    19,
+                    25
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "formation_3",
+                "region_type": "formation",
+                "position": [
+                    19,
+                    27
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "formation_4",
+                "region_type": "formation",
+                "position": [
+                    23,
+                    26
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "formation_5",
+                "region_type": "formation",
+                "position": [
+                    21,
+                    28
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
             }
         ],
         "unit_groups": [
@@ -4066,14 +4445,86 @@
                         25
                     ]
                 }
+            },
+            {
+                "nid": "enemy",
+                "units": [
+                    "101",
+                    "102",
+                    "103",
+                    "104",
+                    "105",
+                    "106",
+                    "107",
+                    "108",
+                    "109",
+                    "110",
+                    "111",
+                    "112",
+                    "113",
+                    "Milena"
+                ],
+                "positions": {
+                    "101": [
+                        22,
+                        11
+                    ],
+                    "102": [
+                        29,
+                        19
+                    ],
+                    "103": [
+                        27,
+                        15
+                    ],
+                    "104": [
+                        29,
+                        23
+                    ],
+                    "105": [
+                        24,
+                        28
+                    ],
+                    "106": [
+                        20,
+                        21
+                    ],
+                    "107": [
+                        19,
+                        18
+                    ],
+                    "108": [
+                        23,
+                        15
+                    ],
+                    "109": [
+                        25,
+                        19
+                    ],
+                    "110": [
+                        29,
+                        29
+                    ],
+                    "111": [
+                        23,
+                        31
+                    ],
+                    "112": [
+                        33,
+                        22
+                    ],
+                    "113": [
+                        29,
+                        12
+                    ],
+                    "Milena": [
+                        33,
+                        14
+                    ]
+                }
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "P10",
@@ -8231,7 +8682,7 @@
             "loss": "Crash"
         },
         "roam": false,
-        "roam_unit": "Simon",
+        "roam_unit": "Rosa",
         "go_to_overworld": true,
         "should_record": true,
         "tags": [],
@@ -8243,8 +8694,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
-                    4
+                    8,
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8283,7 +8734,7 @@
                 "ai_group": "",
                 "starting_position": [
                     5,
-                    6
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8295,7 +8746,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
+                    6,
                     5
                 ],
                 "starting_traveler": null,
@@ -8308,21 +8759,21 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    4,
+                    5,
                     4
                 ],
                 "starting_traveler": null,
                 "generic": false
             },
             {
-                "nid": "Minerve",
+                "nid": "Milena",
                 "team": "player",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    4,
-                    8
+                    3,
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8334,7 +8785,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
+                    8,
                     6
                 ],
                 "starting_traveler": null,
@@ -8347,8 +8798,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    4
+                    7,
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8367,27 +8818,14 @@
                 "generic": false
             },
             {
-                "nid": "Crusher",
-                "team": "enemy",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    4,
-                    5
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
                 "nid": "Mira",
                 "team": "player",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    5
+                    2,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8431,6 +8869,19 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "Crusher",
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [

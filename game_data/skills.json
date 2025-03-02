@@ -69,86 +69,6 @@
         ]
     },
     {
-        "nid": "Shelter",
-        "name": "Shelter",
-        "desc": "Unit can rescue another adjacent ally.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            5,
-            33
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Shelter_ability"
-            ]
-        ]
-    },
-    {
-        "nid": "SwordBreaker",
-        "name": "Sword Breaker",
-        "desc": "Unit is buffed if enemy is using a <red>Sword</>.\nDMG+10, HIT+30, DMG received -5.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            28
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "combat_condition",
-                "item_system.weapon_type(target, target.get_weapon()) == 'Sword'"
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
-                "hit",
-                30
-            ],
-            [
-                "resist",
-                5
-            ]
-        ]
-    },
-    {
-        "nid": "Last_Stand",
-        "name": "Last Stand",
-        "desc": "When at less than half of max HP, unit will not be affected by any negative status.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            46
-        ],
-        "components": [
-            [
-                "condition",
-                "unit.get_hp() < (unit.get_max_hp() / 2)"
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "immune_status",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "critao",
         "name": "critao",
         "desc": "",
@@ -161,22 +81,6 @@
             [
                 "crit",
                 999
-            ]
-        ]
-    },
-    {
-        "nid": "Rock_Throw",
-        "name": "Rock Throw",
-        "desc": "ORC THROW BIG ROCK!",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            34
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
             ]
         ]
     },
@@ -267,7 +171,7 @@
     {
         "nid": "Aura_Blighting",
         "name": "Aura Blighting",
-        "desc": "",
+        "desc": "The Chosen heavily benefits from adjacent female units, gaining bonus combat stats and a chance to gain <green>[CONCEITED]</> at the start of the turn. The women, however, are debuffed with <red>[REPULSED]</>.\n<green>[CONCEITED]</>: Bonus CRIT. Lasts for one combat.\n<red>[REPULSED]</>: -2 to all stats as long as he is nearby.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -293,10 +197,6 @@
             [
                 "class_skill",
                 null
-            ],
-            [
-                "condition",
-                "any(['Female' in unit.tags for u in target_system.get_adj_units(game.get_unit('Chosen'))])"
             ]
         ]
     },
@@ -312,26 +212,42 @@
         "components": [
             [
                 "condition",
-                "any(['Female' in unit.tags for u in target_system.get_adj_units(game.get_unit('Chosen'))])"
+                "any(['Female' in u.tags for u in target_system.get_adj_units(game.get_unit('Chosen'))])"
             ],
             [
                 "hidden",
                 null
             ],
             [
-                "unit_flickering_tint",
-                [
-                    255,
-                    0,
-                    0
-                ]
+                "proc_turn_skill",
+                "Conceited"
+            ],
+            [
+                "proc_rate",
+                "MOEDA"
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "resist",
+                5
+            ],
+            [
+                "avoid",
+                5
+            ],
+            [
+                "crit",
+                5
             ]
         ]
     },
     {
         "nid": "Conceited",
         "name": "Conceited",
-        "desc": "",
+        "desc": "\"I have to show them how awesome I am!\"\nBonus CRIT. Lasts for one combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -354,13 +270,21 @@
                     "lost_on_enemy": true,
                     "lost_on_splash": true
                 }
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    234,
+                    244,
+                    186
+                ]
             ]
         ]
     },
     {
         "nid": "Repulsed",
         "name": "Repulsed",
-        "desc": "",
+        "desc": "If only he was as torelable as he is powerful.\n-2 to all stats.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -376,6 +300,26 @@
                 [
                     [
                         "SKL",
+                        -2
+                    ],
+                    [
+                        "MAG",
+                        -2
+                    ],
+                    [
+                        "SPD",
+                        -2
+                    ],
+                    [
+                        "LCK",
+                        -2
+                    ],
+                    [
+                        "DEF",
+                        -2
+                    ],
+                    [
+                        "RES",
                         -2
                     ]
                 ]
@@ -414,7 +358,7 @@
             ],
             [
                 "combat_condition",
-                "mode == 'defense'"
+                "mode == 'defense' and (unit2.team == 'enemy' or unit2.team == 'enemy2')"
             ],
             [
                 "display_skill_icon_in_combat",
@@ -422,7 +366,7 @@
             ],
             [
                 "damage",
-                3
+                5
             ],
             [
                 "aura",
@@ -591,6 +535,63 @@
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Shelter",
+        "name": "Shelter",
+        "desc": "Unit can rescue an adjacent ally. When paired-up, gain bonus DEF and RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Shelter_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Shelter_buff",
+        "name": "Shelter",
+        "desc": "Unit can rescue an adjacent ally. When paired-up, gain bonus DEF and RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "u('Simonyoung').lead_unit == Yes"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ]
+                ]
             ]
         ]
     },
@@ -796,6 +797,187 @@
             [
                 "hidden",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Like_a_champ",
+        "name": "Like a champ",
+        "desc": "Doubles Duro's defense. Has DEF% chance of activating when defending a strike.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "defense_proc",
+                "Like_a_champ_effect"
+            ],
+            [
+                "proc_rate",
+                "DEFENSE"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Like_a_champ_effect",
+        "name": "Like a champ",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        2.0
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Bear_hug",
+        "name": "Bear hug",
+        "desc": "Duro locks adjacent enemies into a hot, sweaty bear hug. Neither Duro nor adjacent enemies can dodge attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            15
+        ],
+        "components": [
+            [
+                "aura",
+                "Bear_hug_effect"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "avoid",
+                -1000
+            ]
+        ]
+    },
+    {
+        "nid": "Bear_hug_effect",
+        "name": "Bear hug",
+        "desc": "Unit is receiving a hot bear hug from behind. AVOID is negated.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            15
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "avoid",
+                -1000
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    173,
+                    173,
+                    86
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Grand_Entrance",
+        "name": "Grand Entrance",
+        "desc": "When Duro is at full HP, his attacks hit enemies in an area. Costs <blue>4 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            18
+        ],
+        "components": [
+            [
+                "Cleave",
+                null
+            ],
+            [
+                "condition",
+                "game.get_unit('Duro').get_hp() == game.get_unit('Duro').get_max_hp()"
+            ],
+            [
+                "cost_mana",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Remembrance",
+        "name": "Remembrance",
+        "desc": "<green>[Lucia Synergy]</>. Lucia reminds Duro of his wife's fierceness. Duro recovers 30% max HP at the start of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Safado' for u in target_system.get_adj_units(game.get_unit('Antarion'))])"
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "regeneration",
+                0.30000000000000004
             ]
         ]
     },
@@ -1130,7 +1312,7 @@
     {
         "nid": "Attention_Is_All_You_Need",
         "name": "Attention Is All You Need",
-        "desc": "<green>[Minerve Synergy]</>. Nothing makes Antarion happier than the gaze of a beautiful lady. Antarion heals adjacent allies 50% of damage dealt.",
+        "desc": "<green>[Milena Synergy]</>. Nothing makes Antarion happier than the gaze of a beautiful lady. Antarion heals adjacent allies 50% of damage dealt.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -1147,7 +1329,7 @@
             ],
             [
                 "condition",
-                "any([u.nid == 'Antarion' for u in target_system.get_adj_units(game.get_unit('Minerve'))])"
+                "any([u.nid == 'Antarion' for u in target_system.get_adj_units(game.get_unit('Milena'))])"
             ],
             [
                 "aura",
@@ -1301,6 +1483,26 @@
             [
                 "crit",
                 999
+            ]
+        ]
+    },
+    {
+        "nid": "Clutch_King",
+        "name": "Clutch King",
+        "desc": "Antarion gains more crit damage the less health he has.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            32
+        ],
+        "components": [
+            [
+                "eval_crit_additional",
+                "{eval: 10 if (unit.current_hp / unit.get_max_hp()) <= 0.1 else int((1 - (unit.current_hp / unit.get_max_hp())) * 10)}"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -1598,163 +1800,6 @@
                     181,
                     181
                 ]
-            ]
-        ]
-    },
-    {
-        "nid": "Like_a_champ",
-        "name": "Like a champ",
-        "desc": "Doubles Duro's defense. Has DEF% chance of activating when defending a strike.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            36
-        ],
-        "components": [
-            [
-                "defense_proc",
-                "Like_a_champ_effect"
-            ],
-            [
-                "proc_rate",
-                "DEFENSE"
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Like_a_champ_effect",
-        "name": "Like a champ",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            36
-        ],
-        "components": [
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
-                "stat_multiplier",
-                [
-                    [
-                        "DEF",
-                        2.0
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Bear_hug",
-        "name": "Bear hug",
-        "desc": "Duro locks adjacent enemies into a hot, sweaty bear hug. Neither Duro nor adjacent enemies can dodge attacks.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            15
-        ],
-        "components": [
-            [
-                "aura",
-                "Bear_hug_effect"
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura_target",
-                "enemy"
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "avoid",
-                -1000
-            ]
-        ]
-    },
-    {
-        "nid": "Bear_hug_effect",
-        "name": "Bear hug",
-        "desc": "Unit is receiving a hot bear hug from behind. AVOID is negated.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            15
-        ],
-        "components": [
-            [
-                "negative",
-                null
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "avoid",
-                -1000
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    173,
-                    173,
-                    86
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Remembrance",
-        "name": "Remembrance",
-        "desc": "<green>[Lucia Synergy]</>. Lucia reminds Duro of his wife's fierceness. Duro recovers 30% max HP at the start of the turn.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            37
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Safado' for u in target_system.get_adj_units(game.get_unit('Antarion'))])"
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "regeneration",
-                0.30000000000000004
             ]
         ]
     },
@@ -2159,7 +2204,7 @@
             ],
             [
                 "condition",
-                "any([u.nid == 'Minerve' for u in target_system.get_adj_units(game.get_unit('Monica'))])"
+                "any([u.nid == 'Milena' for u in target_system.get_adj_units(game.get_unit('Monica'))])"
             ],
             [
                 "aura",
@@ -2219,7 +2264,7 @@
         "components": [
             [
                 "build_charge",
-                2
+                5
             ],
             [
                 "display_skill_icon_in_combat",
@@ -2228,6 +2273,10 @@
             [
                 "give_ally_status_after_combat",
                 "Super_Dance_buff"
+            ],
+            [
+                "active_combat_charge_increase",
+                1
             ]
         ]
     },
@@ -2253,6 +2302,82 @@
             [
                 "time",
                 2
+            ]
+        ]
+    },
+    {
+        "nid": "Rock_Throw",
+        "name": "Rock Throw",
+        "desc": "ORC THROW BIG ROCK!",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Last_Stand",
+        "name": "Last Stand",
+        "desc": "When at less than half of max HP, unit will not be affected by any negative status.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            46
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_hp() < (unit.get_max_hp() / 2)"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "immune_status",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "SwordBreaker",
+        "name": "Sword Breaker",
+        "desc": "Unit is buffed if enemy is using a <red>Sword</>.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Sword'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
             ]
         ]
     },
