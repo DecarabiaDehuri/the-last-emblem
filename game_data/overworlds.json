@@ -44,7 +44,15 @@
                 ],
                 "icon": "woods",
                 "level": "P2",
-                "menu_options": []
+                "menu_options": [
+                    {
+                        "nid": "New_Event",
+                        "event": null,
+                        "option_name": "",
+                        "visible": false,
+                        "enabled": false
+                    }
+                ]
             },
             {
                 "nid": "P4",
@@ -96,7 +104,7 @@
             },
             {
                 "nid": "P7",
-                "name": "New Location",
+                "name": "Foothill",
                 "pos": [
                     17,
                     15

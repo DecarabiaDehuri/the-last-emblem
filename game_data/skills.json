@@ -85,6 +85,232 @@
         ]
     },
     {
+        "nid": "Silence",
+        "name": "SILENCED",
+        "desc": "Unit cannot use magic.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "cannot_use_magic_items",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "unit_anim",
+                "MapSilence"
+            ]
+        ]
+    },
+    {
+        "nid": "Poisoned",
+        "name": "POISONED",
+        "desc": "Unit randomly receives up to 5 damage per turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            4
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                4
+            ],
+            [
+                "gba_poison",
+                5
+            ],
+            [
+                "unit_anim",
+                "MapPoison"
+            ]
+        ]
+    },
+    {
+        "nid": "Blinded",
+        "name": "BLINDED",
+        "desc": "Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "hit",
+                -50
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "avoid",
+                -50
+            ]
+        ]
+    },
+    {
+        "nid": "Confused",
+        "name": "CONFUSED",
+        "desc": "Unit behaves on their own and can't tell friend or foe.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            36
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "change_ai",
+                "Berserk"
+            ],
+            [
+                "unit_anim",
+                "MapProvoke"
+            ]
+        ]
+    },
+    {
+        "nid": "Sleep",
+        "name": "SLEEPING",
+        "desc": "Unit is asleep. -5 DEF and RES. Unit awakes when receives a hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            45
+        ],
+        "components": [
+            [
+                "time",
+                4
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ],
+                    [
+                        "DEF",
+                        -5
+                    ],
+                    [
+                        "RES",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "lost_on_take_hit",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Stunned",
+        "name": "STUNNED",
+        "desc": "Unit cannot act for the remainder of their turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            38
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "unit_anim",
+                "MapStun"
+            ]
+        ]
+    },
+    {
+        "nid": "Blinded_Immune",
+        "name": "Blinded Immunity",
+        "desc": "Unit cannot be <red>[BLINDED]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Heroic_Blow",
         "name": "Heroic Blow",
         "desc": "The Chosen can use a powerful attack. Effective against monsters.\nCosts <blue>10 mana</>.",
@@ -256,7 +482,7 @@
         "components": [
             [
                 "crit",
-                30
+                15
             ],
             [
                 "display_skill_icon_in_combat",
@@ -817,6 +1043,30 @@
             [
                 "proc_rate",
                 "DEFENSE"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Like_a_champ_cutscene",
+        "name": "Like a champ",
+        "desc": "Doubles Duro's defense. Has DEF% chance of activating when defending a strike.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "defense_proc",
+                "Like_a_champ_effect"
+            ],
+            [
+                "proc_rate",
+                "CERTEZA"
             ],
             [
                 "class_skill",
@@ -1498,11 +1748,44 @@
         "components": [
             [
                 "eval_crit_additional",
-                "{eval: 10 if (unit.current_hp / unit.get_max_hp()) <= 0.1 else int((1 - (unit.current_hp / unit.get_max_hp())) * 10)}"
+                "10 if (unit.get_hp() / unit.get_max_hp()) <= 0.1 else int((1 - (unit.get_hp() / unit.get_max_hp())) * 10)"
             ],
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Survival_First",
+        "name": "Survival First",
+        "desc": "While at less than half of max HP, Antarion has bonus AVOID and MOV.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            11
+        ],
+        "components": [
+            [
+                "avoid",
+                30
+            ],
+            [
+                "combat_condition",
+                "unit.get_hp() < (unit.get_max_hp() / 2)"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
             ]
         ]
     },
@@ -1637,6 +1920,46 @@
         ]
     },
     {
+        "nid": "Defiant_Strike",
+        "name": "Defiant Strike",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            23
+        ],
+        "components": [
+            [
+                "drain_charge",
+                3
+            ],
+            [
+                "attack_pre_proc",
+                "Defiant_Strike_buff"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Defiant_Strike_buff",
+        "name": "Defiant Strike",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            23
+        ],
+        "components": [
+            [
+                "resist",
+                5
+            ]
+        ]
+    },
+    {
         "nid": "Twice_the_Threat_Lucia",
         "name": "Twice the Threat",
         "desc": "If Cassian is in Guard Stance with Lucia,\nLucia heals half of damage dealt.",
@@ -1717,6 +2040,57 @@
                 null
             ]
         ]
+    },
+    {
+        "nid": "Striking_Defiance",
+        "name": "Striking Defiance",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            23
+        ],
+        "components": [
+            [
+                "drain_charge",
+                3
+            ],
+            [
+                "defense_pre_proc",
+                "Striking_Defiance_buff"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Striking_Defiance_buff",
+        "name": "Striking Defiance",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            23
+        ],
+        "components": [
+            [
+                "damage",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Reverb_Guard",
+        "name": "Reverb Guard",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Make_Way",
@@ -1800,6 +2174,257 @@
                     181,
                     181
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Flashy_Escape",
+        "name": "Flashy Escape",
+        "desc": "<green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>.\n<red>[BLINDED]</>:Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Safado' for u in target_system.get_adj_units(game.get_unit('Antarion'))])"
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "ability",
+                "Flashy_Escape_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Stalling_Stance",
+        "name": "Stalling Stance",
+        "desc": "Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            27
+        ],
+        "components": [
+            [
+                "ability",
+                "Stalling_Stance_ability"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Stalling_Stance_buff",
+        "name": "Stalling_Stance",
+        "desc": "Safado will dodge enemy attacks, but also miss his own.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            27
+        ],
+        "components": [
+            [
+                "avoid",
+                999
+            ],
+            [
+                "hit",
+                -999
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Nothing_Personal_skill",
+        "name": "Nothing Personal",
+        "desc": "Safado can pivot to the other side of the enemy, when possible. After that, his next attack on this turn inflicts <red>[POISONED]</>. Costs <blue>10 mana</>.\n<red>[POISONED]</>: Unit randomly receives up to 5 damage per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            43
+        ],
+        "components": [
+            [
+                "ability",
+                "Nothing_Personal"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Nothing_Personal_buff",
+        "name": "Nothing Personal buff",
+        "desc": "Safado's next attack will inflict <red>[POISONED]</>.\n<red>[POISONED]</>: Unit randomly receives up to 5 damage per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            18
+        ],
+        "components": [
+            [
+                "give_status_after_combat_on_hit",
+                "Poisoned"
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "1",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ],
+            [
+                "unit_tint",
+                [
+                    91,
+                    52,
+                    90
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Sneaking_Stance_buff",
+        "name": "Sneaking Stance buff",
+        "desc": "Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "pass",
+                null
+            ],
+            [
+                "time",
+                4
+            ],
+            [
+                "lost_on_strike",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "modify_ai_priority",
+                0.5
+            ]
+        ]
+    },
+    {
+        "nid": "Sneaking_Stance",
+        "name": "Sneaking Stance buff",
+        "desc": "Safado can gain <green>[SNEAKING STANCE]</>. Costs <blue>10 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Sneaking_stance_ability"
             ]
         ]
     },
@@ -1895,7 +2520,7 @@
     {
         "nid": "Burned",
         "name": "Burned",
-        "desc": "Unit is receives 5 damage at the start of the turn.",
+        "desc": "Unit is receives 5 damage at the start and end of the turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -1928,7 +2553,7 @@
             ],
             [
                 "time",
-                3
+                2
             ],
             [
                 "upkeep_sound",
@@ -1975,7 +2600,7 @@
     {
         "nid": "Hot_Business",
         "name": "Hot Business",
-        "desc": "When using a <red>Fire</> spell, Rosa has MAG% chance to inflict <red>[BURNED]</> on her enemy.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn. Lasts 3 turns.",
+        "desc": "When using a <red>Fire</> spell, Rosa has MAG% chance to inflict <red>[BURNED]</> on her enemy.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -2057,130 +2682,6 @@
             [
                 "attack_speed",
                 5
-            ]
-        ]
-    },
-    {
-        "nid": "Flashy_Escape",
-        "name": "Flashy Escape",
-        "desc": "<green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>.\n<red>[BLINDED]</>:Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            23
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Safado' for u in target_system.get_adj_units(game.get_unit('Antarion'))])"
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "ability",
-                "Flashy_Escape_ability"
-            ]
-        ]
-    },
-    {
-        "nid": "Stalling_Stance",
-        "name": "Stalling_Stance",
-        "desc": "Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks.\nCosts <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            27
-        ],
-        "components": [
-            [
-                "ability",
-                "Stalling_Stance_ability"
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "cost_mana",
-                10
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Stalling_Stance_buff",
-        "name": "Stalling_Stance",
-        "desc": "Safado will dodge enemy attacks, but also miss his own.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            27
-        ],
-        "components": [
-            [
-                "avoid",
-                999
-            ],
-            [
-                "hit",
-                -999
-            ],
-            [
-                "time",
-                2
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    255,
-                    85,
-                    255
-                ]
-            ],
-            [
-                "display_skill_icon_in_combat",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "new",
-        "name": "new",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "ability",
-                "Fap"
             ]
         ]
     },
@@ -2827,30 +3328,6 @@
         ]
     },
     {
-        "nid": "Poisoned",
-        "name": "Poisoned",
-        "desc": "Inflicts -2 to all stats.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            3,
-            4
-        ],
-        "components": [
-            [
-                "negative",
-                null
-            ],
-            [
-                "time",
-                6
-            ],
-            [
-                "gba_poison",
-                5
-            ]
-        ]
-    },
-    {
         "nid": "ResistPlus",
         "name": "Resist+",
         "desc": "Grants additional RES.",
@@ -2910,84 +3387,6 @@
                         -4
                     ]
                 ]
-            ]
-        ]
-    },
-    {
-        "nid": "Stunned",
-        "name": "Stunned",
-        "desc": "Unit cannot act.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            4,
-            8
-        ],
-        "components": [
-            [
-                "time",
-                2
-            ],
-            [
-                "unselectable",
-                null
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "MOV",
-                        -99
-                    ]
-                ]
-            ],
-            [
-                "cannot_use_items",
-                null
-            ],
-            [
-                "negative",
-                null
-            ],
-            [
-                "unit_anim",
-                "MapStun"
-            ]
-        ]
-    },
-    {
-        "nid": "Sleep",
-        "name": "Sleep",
-        "desc": "Unit is asleep.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            4,
-            8
-        ],
-        "components": [
-            [
-                "time",
-                5
-            ],
-            [
-                "unselectable",
-                null
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "MOV",
-                        -99
-                    ]
-                ]
-            ],
-            [
-                "negative",
-                null
-            ],
-            [
-                "cannot_use_items",
-                null
             ]
         ]
     },
@@ -3289,34 +3688,6 @@
         ]
     },
     {
-        "nid": "Silence",
-        "name": "Silence",
-        "desc": "Unit cannot use magic.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            9,
-            3
-        ],
-        "components": [
-            [
-                "negative",
-                null
-            ],
-            [
-                "cannot_use_magic_items",
-                null
-            ],
-            [
-                "time",
-                3
-            ],
-            [
-                "unit_anim",
-                "MapSilence"
-            ]
-        ]
-    },
-    {
         "nid": "Berserk",
         "name": "Berserk",
         "desc": "Unit is confused and can no longer tell friend from foe.",
@@ -3502,38 +3873,6 @@
                     "lost_on_enemy": true,
                     "lost_on_splash": true
                 }
-            ]
-        ]
-    },
-    {
-        "nid": "Blinded",
-        "name": "Blinded",
-        "desc": "Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            36
-        ],
-        "components": [
-            [
-                "negative",
-                null
-            ],
-            [
-                "time",
-                2
-            ],
-            [
-                "hit",
-                -50
-            ],
-            [
-                "unit_anim",
-                "MapFrostbite"
-            ],
-            [
-                "avoid",
-                -50
             ]
         ]
     },

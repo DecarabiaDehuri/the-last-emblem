@@ -18,6 +18,7 @@
             "choice;tutorialchoice;Do you wish to play the Prologue?;Yes,No",
             "if;'{v:_last_choice}' == 'Yes'",
             "    game_var;prologue;1",
+            "    s;;When you finish naming your character, press [START] to proceed.|The default [START] button on keyboard control is the letter [S].;;;narration",
             "    text_entry;chosenname;What is your name?;9;force_entry",
             "    choice;tutorialivala;Do you wish to listen to Ivala? (Enables Tutorial);Yes,No",
             "    if;'{v:_last_choice}' == 'Yes'",
@@ -3506,26 +3507,26 @@
             "music;Tension2",
             "change_background;0-intro",
             "wait;300",
+            "s;;He called himself...;;;narration",
             "change_background;1-intro",
             "wait;300",
-            "s;;He called himself...;;;narration",
+            "s;;...the <red>Incubus King</>.;;;narration",
+            "change_background;2-intro",
             "wait;300",
-            "change_background;2-2-intro",
-            "wait;300",
+            "s;;With his army of <red>succubi</> and <red>orcs</> he threw the world into chaos.;;;narration",
             "change_background;3-intro",
             "wait;300",
-            "s;;...the <red>Incubus King</>.;;;narration",
+            "s;;Many were killed or driven to a mindless lust.;;;narration",
             "change_background;4-intro",
             "wait;300",
-            "s;;With his army of <red>succubi</> and <red>orcs</> he stablished his evil and horny kingdom.|Amongst this chaos, could there be anyone capable of slaying him?;;;narration",
-            "transition;close;1000",
+            "s;;Who could stop his evil and horny kingdom?;;;narration",
+            "transition;close;3000",
             "change_background;StarSky",
             "transition;open;1000",
             "wait;500",
-            "add_portrait;Chosen;MidLeft",
-            "wait;500",
-            "s;;You are the <red>Chosen</> one, rumored to be selected by the goddess <red>Ivala</> herself.|You represent our hopes in this dire moment.|If only you can control your urges...;;;narration",
-            "wait;400",
+            "add_portrait;Chosen;CenterLeft,Middle",
+            "wait;1000",
+            "s;;You are the <red>Chosen</> one, rumored to be selected by the goddess Ivala herself.|You represent our hopes in this dire moment.|You ought to be successful... If only you control your urges...;;;narration",
             "remove_portrait;Chosen",
             "transition;close;2000",
             "music_clear",
@@ -3541,6 +3542,7 @@
             "add_portrait;Chosen;Left,Bottom;no_block",
             "add_portrait;Simonyoung;Right,Bottom;no_block",
             "music;Happy1",
+            "transition;open;2000",
             "speak;Simonyoung;...and without proper cleaning and maintenance, your equipment is more prone to breaking.|Needless to say, this can be the difference between life and death in a combat.|Furthermore, a magically reinforced armor grants us another layer of security.",
             "speak;Chosen;Boring.",
             "speak;Simonyoung;{tgm}...",
@@ -4096,7 +4098,10 @@
             "end_skip",
             "wait;500",
             "center_cursor;19,5;no_block",
-            "move_unit;Crusher;21,5;normal;giveup;;no_follow",
+            "move_unit;Crusher;21,5;normal;stack",
+            "add_portrait;Crusher;Right",
+            "s;Crusher;Allllright you blockheads, set up a perimeter! <red>If they get close, stop them!</>",
+            "remove_portrait;Crusher",
             "wait;1000",
             "center_cursor;Monica",
             "wait;400",
@@ -4169,6 +4174,7 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "remove_region;alert",
             "wait;500",
             "map_anim;Snag;21,4",
             "sound;VillageDestroyed",
@@ -4198,6 +4204,7 @@
             "multi_remove_portrait;Crusher;Plank",
             "wait;500",
             "move_unit;Plank;24,5;normal;closest",
+            "wait;400",
             "multi_add_portrait;Crusher;Left;Plank;Right",
             "wait;300",
             "s;Plank;You, uh, coming?",
@@ -4207,7 +4214,9 @@
             "bop_portrait;Crusher",
             "s;Crusher;I fucking CAN'T!|I'm too tired, my legs just  ain't moving anytime soon.|I defeated this wall, those chumps should be easy.",
             "s;Plank;...If you say so.",
-            ""
+            "multi_remove_portrait;Crusher;Plank",
+            "wait;300",
+            "remove_unit;Plank;fade;east"
         ],
         "nid": "P4 Wall destroyed"
     },
@@ -4702,6 +4711,8 @@
             "change_music;enemy_phase;Halfway change loop",
             "change_music;enemy_battle;Halfway change loop",
             "change_music;player_battle;Halfway change loop",
+            "change_ai;107;Pursue",
+            "change_ai;114;Pursue",
             "if;{v:plankgone} == 0",
             "    wait;1000",
             "    center_cursor;Crusher",
@@ -4875,13 +4886,15 @@
             "wait;500",
             "add_portrait;Duro;Left",
             "wait;300",
-            "s;Duro;Hahaha, you monsters don't stand a chance!|My lance might not be in its peak, but it still can thrust well enough!|Who wants to be next?!",
+            "s;Duro;HA! You monsters don't stand a chance!|My lance might not be in its peak, but it still can thrust well enough!|Who wants to be next?!",
             "remove_portrait;Duro",
             "wait;500",
+            "give_skill;Duro;Like_a_champ_cutscene;;no_banner;persistent",
             "interact_unit;108;Duro;hit1,hit2,hit1,hit2,end",
+            "remove_skill;Duro;Like_a_champ_cutscene;no_banner",
             "add_portrait;Duro;Left",
             "wait;300",
-            "s;Duro;Ha! I'll sleep here at this rate!",
+            "s;Duro;HAHA! I'll sleep here at this rate!",
             "remove_portrait;Duro",
             "wait;500",
             "move_unit;113;6,7;normal",
@@ -4901,7 +4914,7 @@
             "wait;1500",
             "multi_add_portrait;Duro;Left;Chosen;Right",
             "s;Chosen;You're in luck, your savior is here!|You don't have to sacrifice yourself anymore!",
-            "s;Duro;Sacrifice? Gah, who told you that, shithair?|I'm just enjoying my time here alone, is all! Hahahaha!",
+            "s;Duro;Sacrifice? Gah, who told you that, shithair?|I'm just enjoying my time here alone, is all! HAHAHAHA!",
             "s;Chosen;Wha-... I think we should leave this guy behind.",
             "s;Duro;Haha! Ease up, will you?|Simon, your new boyfriend is funny!",
             "remove_portrait;Chosen",
@@ -4913,7 +4926,7 @@
             "wait;1000",
             "move_cursor;Duro",
             "wait;300",
-            "s;Duro;So let's take down this girl and we enter the cave.|If we don't succeed, she'll enter OUR cave! Hahaha!",
+            "s;Duro;So let's take down this girl and we enter the cave.|If we don't succeed, she'll enter OUR cave! HAHAHA!",
             "s;Simonyoung;...;no_talk",
             "multi_remove_portrait;Duro;Simonyoung",
             "wait;1000",
@@ -4956,7 +4969,7 @@
             "s;Duro;Hey, sorry you couldn't have your fun with my boys!|I'm the protector of their chastity, HAHA!",
             "add_portrait;SpiderQueen;Left,Bottom",
             "s;SpiderQueen;That's quite alright. With your size, I'm betting you can make up for it nicely...",
-            "s;Duro;Ha! You see, this would not fly well with my wife.|Better luck next time!",
+            "s;Duro;You see, this would not fly well with my wife.|No offense, darling, but she is way scarier than you! HAHAHA!",
             "multi_remove_portrait;Duro;SpiderQueen"
         ],
         "nid": "P2 Boss quote"
@@ -5006,7 +5019,7 @@
         "nid": "P2 Outro"
     },
     {
-        "name": "Intro",
+        "name": "Intro e Tutorial: negative effects",
         "trigger": "level_start",
         "level_nid": "P3",
         "condition": "True",
@@ -5086,9 +5099,17 @@
             "wait;600",
             "move_cursor;7,16",
             "spawn_group;Monster;north;Monster;normal;giveup",
-            "wait;1000"
+            "wait;1000",
+            "if;{v:ivala} == 1",
+            "    wait;500",
+            "    add_portrait;Ivala;(120,32)",
+            "    wait;200",
+            "    s;Ivala;Oh, you have been hit by a <red>negative effect</>.|You can always consult their penalties by checking the status page.;bottom;;;;blue;;;;;None",
+            "    remove_portrait;Ivala",
+            "    wait;200",
+            "end"
         ],
-        "nid": "P3 Intro"
+        "nid": "P3 Intro e Tutorial: negative effects"
     },
     {
         "name": "Boss death VICTORY",
@@ -5170,24 +5191,6 @@
             "wait;200"
         ],
         "nid": "P3 Tutorial: boss siege"
-    },
-    {
-        "name": "Tutorial: negative effects",
-        "trigger": "combat_end",
-        "level_nid": "P3",
-        "condition": "game.has_skill(unit, 'Webbed') == True",
-        "commands": [],
-        "only_once": true,
-        "priority": 20,
-        "_source": [
-            "wait;500",
-            "add_portrait;Ivala;(120,32)",
-            "wait;200",
-            "s;Ivala;Oh, you have been hit by a <red>negative effect</>.|You can always consult their penalties by checking the status page.;bottom;;;;blue;;;;;None",
-            "remove_portrait;Ivala",
-            "wait;200"
-        ],
-        "nid": "P3 Tutorial: negative effects"
     },
     {
         "name": "Eyes get used to the dark",
@@ -5472,6 +5475,7 @@
             "center_cursor;1,10",
             "wait;500",
             "add_unit;Wrecker;0,10;fade;closest;west",
+            "music;Tension2",
             "wait;500",
             "move_unit;Wrecker;3,8",
             "wait;1000",
@@ -5518,7 +5522,7 @@
         "nid": "P5 Victory"
     },
     {
-        "name": "Stair enemy reinforcement 1",
+        "name": "Stairs enemy reinforcement e Safado",
         "trigger": "turn_change",
         "level_nid": "P5",
         "condition": "game.turncount == 4",
@@ -5542,7 +5546,7 @@
             "remove_portrait;Safado",
             "wait;600"
         ],
-        "nid": "P5 Stair enemy reinforcement 1"
+        "nid": "P5 Stairs enemy reinforcement e Safado"
     },
     {
         "name": "Wall1",
@@ -5683,9 +5687,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "transition;close;1000",
             "wait;1000",
             "music;Happy1",
             "change_background;Village",
+            "transition;open;1000",
             "multi_add_portrait;Woman1;Left;Chosen;Right",
             "s;Woman1;Thank you so much!|Those guys have been giving us trouble ever since they stationed nearby...",
             "s;Chosen;No problem. I'm soon to be savior of the whole world, so I don't mind saving this poor village!",
@@ -5894,7 +5900,7 @@
             "sound;Level Up",
             "alert;Safado has joined your party!",
             "music_fade_back",
-            "remove_talk;Lucia;Plank"
+            "remove_talk;Lucia;Safado"
         ],
         "nid": "P5 Recruit Safado"
     },
@@ -5998,7 +6004,7 @@
             "move_unit;108;0,12;normal;stack;no_block;no_follow",
             "move_unit;109;0,12;normal;stack;no_block;no_follow",
             "move_unit;110;0,12;normal;stack;no_block;no_follow",
-            "s;Mercenaries;O-ORC RAID!! RUN!!",
+            "s;Mercenaries;O-ORC RAID!! RUN!!;top",
             "wait;1000",
             "remove_unit;108;fade;west",
             "remove_unit;109;fade;west",
@@ -6237,7 +6243,7 @@
             "reveal_overworld_node;P6",
             "sound;MapHeal",
             "wait;1000",
-            "reveal_overworld_road;P5;P6",
+            "reveal_overworld_road;P4;P6",
             "wait;1000"
         ],
         "nid": "P6 Overworld start"
@@ -6368,10 +6374,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "add_portrait;Rosa;Right;;NoSmile,CloseEyes",
-            "s;Rosa;... I'll ... meet you soon ...",
-            "transition;close;1000",
-            "lose_game"
+            ""
         ],
         "nid": "P6 Rosa dies"
     },
@@ -6457,9 +6460,11 @@
             "give_skill;Chosen;Aura_Blighting_buffs;no_banner",
             "give_item;Chosen;Shining_Sword;no_banner",
             "give_skill;Duro;Grand_Entrance;persistent;no_banner",
-            "give_skill;Antarion;Clutch_King",
-            "give_skill;Antarion;Guaranteed_Crit",
-            ""
+            "give_skill;Antarion;Clutch_King;;no_banner",
+            "give_skill;Antarion;Guaranteed_Crit;;no_banner",
+            "give_skill;Safado;Nothing_Personal_skill;no_banner;persistent",
+            "give_skill;Safado;Sneaking_Stance;;persistent;no_banner",
+            "give_skill;Lucia;Striking_Defiance;;no_banner;persistent"
         ],
         "nid": "DEBUG_2 testing"
     },
@@ -6712,6 +6717,8 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "music_clear",
+            "chapter_title",
             "level_var;shinysword;0",
             "transition;close",
             "center_cursor;6,32",
@@ -6726,6 +6733,7 @@
             "show_layer;pedras",
             "add_weather;event_tile;12,22",
             "show_layer;raizes",
+            "music;Wind",
             "transition;open;2000",
             "add_unit;Chosen;7,32;fade;closest;south",
             "add_unit;Simonyoung;6,32;fade;closest;south",
@@ -6827,6 +6835,7 @@
             "    wait;500",
             "    screen_shake;500;default;no_block",
             "    wait;200",
+            "    map_anim;AOE_Reinforce;12,20",
             "    sound;Weapon Click",
             "    show_layer;totem2",
             "    hide_layer;totem1",
@@ -6837,7 +6846,10 @@
             "    wait;1000",
             "    add_portrait;Chosen;Left",
             "    wait;300",
-            "    s;Chosen;Ohh baby, strong and smart, splendid and sexy!|I'm THE Chosen, ready for anything!|Come on, everyone!",
+            "    s;Chosen;Ohh baby, strong and smart, splendid and sexy!|I'm THE Chosen, ready for anything!",
+            "    if;len(game.get_units_in_party()) > 1",
+            "        s;Chosen;Come on, everyone!",
+            "    end",
             "    remove_region;Interact",
             "    transition;close;1000",
             "    if;game.check_alive('Simonyoung') == True",
@@ -7168,6 +7180,7 @@
             "wait;600",
             "add_unit;Minerve;32,25;warp;stack;fade",
             "wait;400",
+            "music_clear",
             "add_portrait;Minerve;Right",
             "s;Minerve;We know a lot about you already, {v:chosenname}!|That's why we prepared a special opponent for you.|One that you definitely wouldn't fuck!",
             "remove_portrait;Minerve",
@@ -7179,6 +7192,7 @@
             "wait;1000",
             "add_portrait;Plant;Right",
             "wait;400",
+            "music;Funny",
             "s;Plant;If he tries anything with me, he will have one hell of a HARD time!",
             "wait;400",
             "center_cursor;Chosen",
@@ -7237,5 +7251,89 @@
             ""
         ],
         "nid": "DEBUG_2 New Event_2"
+    },
+    {
+        "name": "Overworld start",
+        "trigger": "overworld_start",
+        "level_nid": "P7",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "reveal_overworld_node;P7",
+            "sound;MapHeal",
+            "wait;1000",
+            "reveal_overworld_road;P6;P7",
+            "wait;1000"
+        ],
+        "nid": "P7 Overworld start"
+    },
+    {
+        "name": "Overworld start",
+        "trigger": "overworld_start",
+        "level_nid": "8",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "reveal_overworld_node;P8",
+            "sound;MapHeal",
+            "wait;1000",
+            "reveal_overworld_road;P7;P8",
+            "wait;1000"
+        ],
+        "nid": "8 Overworld start"
+    },
+    {
+        "name": "Wrecker attacks Plank",
+        "trigger": "turn_change",
+        "level_nid": "P5",
+        "condition": "game.level.regions.get('easteregg').contains(game.get_unit('Wrecker').position)",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;300",
+            "flicker_cursor;Wrecker",
+            "music;Other theme",
+            "add_portrait;Wrecker;Right",
+            "s;Wrecker;PLANK! WHERE IS CRUSHER?",
+            "add_portrait;Plank;Left",
+            "s;Plank;Uh...{c:wait;400} he's on vacation, don't worry.|He said I could be in charge while he's away.|Any problem you can take it up to him, I'm just the messenger!|And also... {c:wait;500}I go by <red>Demolisher</> now.",
+            "wait;1000",
+            "s;Wrecker;TRUTH?",
+            "s;Plank;Sure.",
+            "s;Wrecker;PLANK SMELLS OF LIES!",
+            "s;Plank;No, that is just the soap I stole from...",
+            "s;Wrecker;WRECKER WRECKS DEMOLISHER!",
+            "s;Plank;Ah fuck it.{c:wait;300} DEMOLISHER DEMOLISHES WRECKER!",
+            "multi_remove_portrait;Wrecker;Plank",
+            "wait;300",
+            "change_team;Wrecker;enemy2",
+            "wait;1000"
+        ],
+        "nid": "P5 Wrecker attacks Plank"
+    },
+    {
+        "name": "PROL Death Rosa",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Rosa'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear",
+            "add_portrait;Rosa;Right;;NoSmile,CloseEyes",
+            "s;Rosa;... I'll ... meet you soon ...",
+            "remove_portrait;Rosa",
+            "remove_unit;Rosa",
+            "music_fade_back"
+        ],
+        "nid": "Global PROL Death Rosa"
     }
 ]

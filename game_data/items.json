@@ -48,46 +48,6 @@
         ]
     },
     {
-        "nid": "Shelter_ability",
-        "name": "Shelter",
-        "desc": "Rescues a unit nearby.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            5,
-            33
-        ],
-        "components": [
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "attack_after_combat",
-                null
-            ],
-            [
-                "eval_target_restrict_2",
-                "target.lead_unit == False and unit.lead_unit == False"
-            ],
-            [
-                "event_after_combat_on_hit",
-                "Global Shelter skill"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Testing",
         "name": "Testing",
         "desc": "",
@@ -183,6 +143,94 @@
         ]
     },
     {
+        "nid": "Flavonoids",
+        "name": "Flavonoids",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            41
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "heal",
+                15
+            ]
+        ]
+    },
+    {
+        "nid": "Cyanogenic_glycosides",
+        "name": "Cyanogenic Glycosides",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Hex"
+            ],
+            [
+                "eclipse",
+                null
+            ],
+            [
+                "hit",
+                70
+            ]
+        ]
+    },
+    {
         "nid": "Heroic_Blow_ability",
         "name": "Heroic Blow",
         "desc": "Deals more damage to monsters.\n<blue>Costs 10 mana</>.",
@@ -192,6 +240,10 @@
             21
         ],
         "components": [
+            [
+                "spell",
+                null
+            ],
             [
                 "min_range",
                 1
@@ -257,6 +309,10 @@
         ],
         "components": [
             [
+                "spell",
+                null
+            ],
+            [
                 "min_range",
                 0
             ],
@@ -271,10 +327,6 @@
             [
                 "mana_cost",
                 10
-            ],
-            [
-                "spell",
-                null
             ],
             [
                 "effective_damage",
@@ -303,6 +355,10 @@
             [
                 "weapon_type",
                 "Sword"
+            ],
+            [
+                "exp",
+                15
             ]
         ]
     },
@@ -427,6 +483,10 @@
         ],
         "components": [
             [
+                "spell",
+                null
+            ],
+            [
                 "target_enemy",
                 null
             ],
@@ -465,10 +525,6 @@
             [
                 "mana_cost",
                 5
-            ],
-            [
-                "spell",
-                null
             ]
         ]
     },
@@ -482,6 +538,10 @@
             25
         ],
         "components": [
+            [
+                "spell",
+                null
+            ],
             [
                 "target_enemy",
                 null
@@ -521,10 +581,6 @@
             [
                 "mana_cost",
                 5
-            ],
-            [
-                "spell",
-                null
             ]
         ]
     },
@@ -538,6 +594,10 @@
             25
         ],
         "components": [
+            [
+                "spell",
+                null
+            ],
             [
                 "target_enemy",
                 null
@@ -577,10 +637,6 @@
             [
                 "mana_cost",
                 5
-            ],
-            [
-                "spell",
-                null
             ]
         ]
     },
@@ -617,6 +673,10 @@
             [
                 "mana_cost",
                 10
+            ],
+            [
+                "exp",
+                5
             ]
         ]
     },
@@ -630,6 +690,10 @@
             21
         ],
         "components": [
+            [
+                "spell",
+                null
+            ],
             [
                 "min_range",
                 1
@@ -680,6 +744,46 @@
             ],
             [
                 "weapon",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Shelter_ability",
+        "name": "Shelter",
+        "desc": "Rescues an adjacent unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "target.lead_unit == False and unit.lead_unit == False"
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Shelter skill"
+            ],
+            [
+                "no_map_hp_display",
                 null
             ]
         ]
@@ -769,6 +873,21 @@
             [
                 "spell",
                 null
+            ],
+            [
+                "c_uses",
+                2
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "exp",
+                10
             ]
         ]
     },
@@ -800,7 +919,7 @@
             ],
             [
                 "damage",
-                6
+                4
             ],
             [
                 "hit",
@@ -823,23 +942,14 @@
                 "Sword"
             ],
             [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Horse",
-                        "Armor"
-                    ],
-                    "effective_multiplier": 1.0,
-                    "effective_bonus_damage": 14,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
                 "prf_unit",
                 [
                     "Antarion"
                 ]
+            ],
+            [
+                "added_crit_damage",
+                5
             ]
         ]
     },
@@ -913,6 +1023,10 @@
             24
         ],
         "components": [
+            [
+                "spell",
+                null
+            ],
             [
                 "eval_hp_cost",
                 "unit.get_max_hp() / 2"
@@ -1072,6 +1186,10 @@
             [
                 "cooldown",
                 3
+            ],
+            [
+                "attack_after_combat",
+                null
             ]
         ]
     },
@@ -1136,17 +1254,13 @@
     {
         "nid": "Flashy_Escape_ability",
         "name": "Flashy Escape",
-        "desc": "Swaps positions between the user and the target while inflicting <red>[BLINDED]</>.\nCosts <blue>10 mana</>.",
+        "desc": "Safado moves backwards from the target while inflicting <red>[BLINDED]</>.\nCosts <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
             40
         ],
         "components": [
-            [
-                "swap_on_end_combat",
-                null
-            ],
             [
                 "spell",
                 null
@@ -1194,6 +1308,54 @@
             [
                 "weapon_type",
                 "Sword"
+            ],
+            [
+                "backdash",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Nothing_Personal",
+        "name": "Nothing Personal",
+        "desc": "Safado jumps to the other side of the target. Safado's next attack on this turn inflicts <red>[POISONED]</>. Costs <blue>10 mana.</>\n<red>[POISONED]</>: Unit randomly receives up to 5 damage per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            43
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "pivot",
+                1
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "Nothing_Personal_buff"
+            ],
+            [
+                "target_enemy",
+                null
             ]
         ]
     },
@@ -1234,6 +1396,50 @@
             [
                 "status_on_hit",
                 "Stalling_Stance_buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Sneaking_stance_ability",
+        "name": "Sneaking stance",
+        "desc": "Safado can use <green>[SNEAKING STANCE]</>. Costs <blue>10 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "self_status_on_hit",
+                "Sneaking_Stance_buff"
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
             ]
         ]
     },
@@ -3956,7 +4162,7 @@
             ],
             [
                 "max_range",
-                1
+                2
             ],
             [
                 "damage",

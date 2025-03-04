@@ -3252,12 +3252,12 @@
         ],
         "bases": {
             "HP": 20,
-            "STR": 6,
+            "STR": 5,
             "MAG": 2,
-            "SKL": 3,
-            "SPD": 5,
-            "LCK": 0,
-            "DEF": 7,
+            "SKL": 4,
+            "SPD": 6,
+            "LCK": 1,
+            "DEF": 6,
             "RES": 0,
             "CON": 9,
             "MOV": 7
@@ -3402,14 +3402,14 @@
         "klass": "Thief",
         "tags": [],
         "bases": {
-            "HP": 18,
+            "HP": 20,
             "STR": 3,
             "MAG": 3,
             "SKL": 1,
             "SPD": 9,
-            "LCK": 0,
+            "LCK": 10,
             "DEF": 2,
-            "RES": 0,
+            "RES": 5,
             "CON": 6,
             "MOV": 6
         },
@@ -3439,7 +3439,7 @@
         },
         "starting_items": [
             [
-                "Lancereaver",
+                "Slim_Sword",
                 false
             ],
             [
@@ -3477,15 +3477,15 @@
             "Female"
         ],
         "bases": {
-            "HP": 19,
+            "HP": 22,
             "STR": 0,
             "MAG": 9,
             "SKL": 10,
-            "SPD": 4,
+            "SPD": 5,
             "LCK": 10,
-            "DEF": 3,
+            "DEF": 4,
             "RES": 7,
-            "CON": 5,
+            "CON": 8,
             "MOV": 5
         },
         "growths": {
@@ -4227,7 +4227,7 @@
     },
     {
         "nid": "Plant",
-        "name": "Plant Succubus",
+        "name": "Dahlia",
         "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
         "variant": "",
         "level": 6,
@@ -4264,7 +4264,11 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Flux",
+                "Flavonoids",
+                false
+            ],
+            [
+                "Cyanogenic_glycosides",
                 false
             ]
         ],
@@ -4293,7 +4297,7 @@
             ],
             "Staff": [
                 false,
-                0,
+                31,
                 251
             ],
             "Light": [
