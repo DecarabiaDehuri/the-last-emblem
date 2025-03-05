@@ -3530,6 +3530,10 @@
             [
                 1,
                 "Cozy_Warmth"
+            ],
+            [
+                1,
+                "Tarrying_Pyre"
             ]
         ],
         "unit_notes": [],
@@ -4329,6 +4333,31 @@
         "alternate_classes": [],
         "portrait_nid": "Planta",
         "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "plant_target",
+        "name": "plant target",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "ReinforcedWall",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [
+            [
+                1,
+                "target"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "",
+        "affinity": "None",
         "fields": []
     },
     {

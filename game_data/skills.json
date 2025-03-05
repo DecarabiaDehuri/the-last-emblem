@@ -85,6 +85,38 @@
         ]
     },
     {
+        "nid": "target",
+        "name": "target",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unselectable",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "testanim",
+        "name": "testanim",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "change_animation",
+                "RosaPhoenix"
+            ]
+        ]
+    },
+    {
         "nid": "Silence",
         "name": "SILENCED",
         "desc": "Unit cannot use magic.",
@@ -291,6 +323,34 @@
             [
                 "unit_anim",
                 "MapStun"
+            ]
+        ]
+    },
+    {
+        "nid": "Exposed",
+        "name": "Exposed",
+        "desc": "Unit is more likely to receive critical hits. Can be stacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            43
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "crit_avoid",
+                -5
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "negative",
+                null
             ]
         ]
     },
@@ -1922,7 +1982,7 @@
     {
         "nid": "Defiant_Strike",
         "name": "Defiant Strike",
-        "desc": "",
+        "desc": "For the first 3 combats this chapter, Cassian has incrased defense when attacking.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -1956,6 +2016,34 @@
             [
                 "resist",
                 5
+            ]
+        ]
+    },
+    {
+        "nid": "Exposing_Crash",
+        "name": "Exposing Crash",
+        "desc": "Cassian has a chance to inflict <red>[EXPOSED]</> when hitting an enemy.\n<red>[EXPOSED]</>: Unit is more likely to receive critical attacks. Can be stacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            47
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "proc_rate",
+                "MOEDA"
+            ],
+            [
+                "give_status_after_hit",
+                "Exposed"
             ]
         ]
     },
@@ -2044,7 +2132,7 @@
     {
         "nid": "Striking_Defiance",
         "name": "Striking Defiance",
-        "desc": "",
+        "desc": "For the first 3 combats this chapter, Lucia has incrased damage when defending.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -2082,15 +2170,32 @@
         ]
     },
     {
-        "nid": "Reverb_Guard",
-        "name": "Reverb Guard",
-        "desc": "",
-        "icon_nid": null,
+        "nid": "Exposing_Guard",
+        "name": "Exposing Guard",
+        "desc": "Lucia has a chance to inflict <red>[EXPOSED]</> when hit by an enemy.\n<red>[EXPOSED]</>: Unit is more likely to receive critical attacks. Can be stacked.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            3,
+            47
         ],
-        "components": []
+        "components": [
+            [
+                "give_status_on_take_hit",
+                "Exposed"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "proc_rate",
+                "MOEDA"
+            ]
+        ]
     },
     {
         "nid": "Make_Way",
@@ -2364,6 +2469,26 @@
         ]
     },
     {
+        "nid": "Sneaking_Stance",
+        "name": "Sneaking Stance buff",
+        "desc": "Safado can gain <green>[SNEAKING STANCE]</>. Costs <blue>10 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Sneaking_stance_ability"
+            ]
+        ]
+    },
+    {
         "nid": "Sneaking_Stance_buff",
         "name": "Sneaking Stance buff",
         "desc": "Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
@@ -2405,26 +2530,6 @@
             [
                 "modify_ai_priority",
                 0.5
-            ]
-        ]
-    },
-    {
-        "nid": "Sneaking_Stance",
-        "name": "Sneaking Stance buff",
-        "desc": "Safado can gain <green>[SNEAKING STANCE]</>. Costs <blue>10 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            51
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Sneaking_stance_ability"
             ]
         ]
     },
@@ -2682,6 +2787,99 @@
             [
                 "attack_speed",
                 5
+            ]
+        ]
+    },
+    {
+        "nid": "Tarrying_Pyre",
+        "name": "Tarrying Pyre",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "miracle",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tarrying_Pyre_buff",
+        "name": "Tarrying Pyre",
+        "desc": "This is Rosa's last moment.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            28
+        ],
+        "components": [
+            [
+                "change_animation",
+                "RosaPhoenix"
+            ],
+            [
+                "fatal_damage",
+                null
+            ],
+            [
+                "eval_upkeep_damage",
+                "unit.get_hp() / 2"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    4
+                ]
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MAG",
+                        2.0
+                    ],
+                    [
+                        "SKL",
+                        2.0
+                    ],
+                    [
+                        "LCK",
+                        2.0
+                    ],
+                    [
+                        "DEF",
+                        2.0
+                    ],
+                    [
+                        "RES",
+                        2.0
+                    ],
+                    [
+                        "HP",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "change_ai",
+                "Berserk"
             ]
         ]
     },

@@ -2463,8 +2463,8 @@
         },
         "objective": {
             "simple": "Survive for 8 turns",
-            "win": "Defend Rosa",
-            "loss": "Chosen dies,Rosa dies"
+            "win": "Survive for 8 turns",
+            "loss": "Chosen dies"
         },
         "roam": false,
         "roam_unit": null,
@@ -4532,6 +4532,72 @@
                 }
             }
         ],
+        "ai_groups": []
+    },
+    {
+        "nid": "7",
+        "name": "Chapter 7",
+        "tilemap": "ikregion",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [],
+        "regions": [],
+        "unit_groups": [],
+        "ai_groups": []
+    },
+    {
+        "nid": "9",
+        "name": "Chapter 9",
+        "tilemap": "ikentrance",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [],
+        "regions": [],
+        "unit_groups": [],
+        "ai_groups": []
+    },
+    {
+        "nid": "10",
+        "name": "Chapter 10",
+        "tilemap": "ik throne",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [],
+        "regions": [],
+        "unit_groups": [],
         "ai_groups": []
     },
     {
@@ -8728,8 +8794,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    4,
-                    2
+                    7,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8755,7 +8821,7 @@
                 "ai_group": "",
                 "starting_position": [
                     4,
-                    7
+                    6
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8793,7 +8859,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    4,
+                    2,
                     8
                 ],
                 "starting_traveler": null,
@@ -8888,6 +8954,29 @@
                     6,
                     8
                 ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Plant",
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "plant_target",
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
             }

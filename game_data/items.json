@@ -145,7 +145,7 @@
     {
         "nid": "Flavonoids",
         "name": "Flavonoids",
-        "desc": "",
+        "desc": "Heals an ally. 1 turn cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -184,8 +184,8 @@
     },
     {
         "nid": "Cyanogenic_glycosides",
-        "name": "Cyanogenic Glycosides",
-        "desc": "",
+        "name": "Cyanoglyco",
+        "desc": "Plants a bomb seed, which explodes next turn. Units hit by the explosion have their HP halved. 1 turn cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -193,7 +193,11 @@
         ],
         "components": [
             [
-                "weapon",
+                "spell",
+                null
+            ],
+            [
+                "magic_at_range",
                 null
             ],
             [
@@ -227,6 +231,62 @@
             [
                 "hit",
                 70
+            ],
+            [
+                "event_on_hit",
+                "Global Plant root aoe"
+            ],
+            [
+                "damage",
+                -100
+            ]
+        ]
+    },
+    {
+        "nid": "Activate_Roots",
+        "name": "Activate Roots",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "blast_aoe",
+                1
+            ],
+            [
+                "eclipse",
+                null
+            ],
+            [
+                "damage",
+                -65
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "map_target_cast_anim",
+                "Snag"
+            ],
+            [
+                "map_hit_sfx",
+                "Critical Hit 2"
             ]
         ]
     },

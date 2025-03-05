@@ -41,236 +41,6 @@
         "nid": "0 Intro"
     },
     {
-        "name": "DeathEirika",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Eirika'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Eirika;FarRight",
-            "speak;Eirika;Brother... I'm sorry.",
-            "expression;Eirika;CloseEyes",
-            "remove_portrait;Eirika",
-            "remove_unit;Eirika",
-            "lose_game"
-        ],
-        "nid": "Global DeathEirika"
-    },
-    {
-        "name": "DeathSeth",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Seth'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Seth;FarRight",
-            "speak;Seth;Urgh...|My apologies. I must withdraw.",
-            "expression;Seth;CloseEyes",
-            "remove_portrait;Seth"
-        ],
-        "nid": "Global DeathSeth"
-    },
-    {
-        "name": "DeathJoshua",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Joshua'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Joshua;FarRight",
-            "speak;Joshua;I... I guess my luck finally ran out...|Heh.",
-            "expression;Joshua;CloseEyes",
-            "remove_portrait;Joshua"
-        ],
-        "nid": "Global DeathJoshua"
-    },
-    {
-        "name": "DeathColm",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Colm'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Colm;FarRight",
-            "speak;Colm;To think of it... Me... In this place...|Neimi...",
-            "expression;Colm;CloseEyes",
-            "remove_portrait;Colm"
-        ],
-        "nid": "Global DeathColm"
-    },
-    {
-        "name": "DeathNeimi",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Neimi'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Neimi;FarRight",
-            "speak;Neimi;You were right, Colm...|I am a klutz. Sorry...",
-            "expression;Neimi;CloseEyes",
-            "remove_portrait;Neimi"
-        ],
-        "nid": "Global DeathNeimi"
-    },
-    {
-        "name": "DeathArtur",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Artur'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Artur;FarRight",
-            "speak;Artur;The rest... is up to you.",
-            "expression;Artur;CloseEyes",
-            "remove_portrait;Artur"
-        ],
-        "nid": "Global DeathArtur"
-    },
-    {
-        "name": "DeathNatasha",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Natasha'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Natasha;FarRight",
-            "if;game.level.nid == '5'",
-            "speak;Natasha;I can't let myself die here...|Someone has to hear my tale...",
-            "else",
-            "speak;Natasha;My fate is irrelevant...|The world must have... light.",
-            "end",
-            "expression;Natasha;CloseEyes",
-            "remove_portrait;Natasha"
-        ],
-        "nid": "Global DeathNatasha"
-    },
-    {
-        "name": "DeathLute",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Lute'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Lute;FarRight",
-            "speak;Lute;I...{br}I don't want to die...",
-            "expression;Lute;CloseEyes",
-            "remove_portrait;Lute"
-        ],
-        "nid": "Global DeathLute"
-    },
-    {
-        "name": "DeathVanessa",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Vanessa'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Vanessa;FarRight",
-            "speak;Vanessa;Please...|Forgive me...",
-            "expression;Vanessa;CloseEyes",
-            "remove_portrait;Vanessa"
-        ],
-        "nid": "Global DeathVanessa"
-    },
-    {
-        "name": "DeathMoulder",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Moulder'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Moulder;FarRight",
-            "speak;Moulder;I am sorry. I believe this is as far as I go...",
-            "expression;Moulder;CloseEyes",
-            "remove_portrait;Moulder"
-        ],
-        "nid": "Global DeathMoulder"
-    },
-    {
-        "name": "DeathRoss",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Ross'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Ross;FarRight",
-            "speak;Ross;I... am a warrior to the very end.",
-            "expression;Ross;CloseEyes",
-            "remove_portrait;Ross"
-        ],
-        "nid": "Global DeathRoss"
-    },
-    {
-        "name": "DeathGarcia",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Garcia'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Garcia;FarRight",
-            "speak;Garcia;I have no regrets.{br}This was always my fate.",
-            "expression;Garcia;CloseEyes",
-            "remove_portrait;Garcia"
-        ],
-        "nid": "Global DeathGarcia"
-    },
-    {
-        "name": "DeathFranz",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Franz'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Franz;FarRight",
-            "speak;Franz;I'm sorry, General Seth...",
-            "expression;Franz;CloseEyes",
-            "remove_portrait;Franz"
-        ],
-        "nid": "Global DeathFranz"
-    },
-    {
-        "name": "DeathGilliam",
-        "trigger": "unit_death",
-        "level_nid": null,
-        "condition": "unit.nid == 'Gilliam'",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Gilliam;FarRight",
-            "speak;Gilliam;I was prepared for...{br}anything...",
-            "expression;Gilliam;CloseEyes",
-            "remove_portrait;Gilliam"
-        ],
-        "nid": "Global DeathGilliam"
-    },
-    {
         "name": "DeathONeill",
         "trigger": "unit_death",
         "level_nid": "0",
@@ -5780,7 +5550,7 @@
         "name": "PROL Chosen lvlup skills",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "unit.nid == 'Chosen'",
+        "condition": "unit.nid == 'Chosen' and source == 'exp_gain'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -5789,8 +5559,10 @@
             "    give_skill;Chosen;Heroic_Blow;;persistent",
             "elif;game.get_unit('Chosen').level == 3",
             "    give_skill;Chosen;Heroic_Aura;persistent",
-            "elif;game.get_unit('Chosen').level == 5",
+            "elif;game.get_unit('Chosen').level == 4",
             "    give_skill;Chosen;Heroic_Assault;persistent",
+            "elif;game.get_unit('Chosen').level == 5",
+            "    give_skill;Chosen;Aura_Blighting;persistent",
             "end"
         ],
         "nid": "Global PROL Chosen lvlup skills"
@@ -5799,13 +5571,15 @@
         "name": "PROL Duro lvlup skills",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "unit.nid == 'Duro'",
+        "condition": "unit.nid == 'Duro' and source == 'exp_gain'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;game.get_unit('Duro').level == 6",
+            "if;game.get_unit('Duro').level == 5",
             "    give_skill;Duro;Bear_hug;persistent",
+            "elif;game.get_unit('Duro').level == 7",
+            "    give_skill;Duro;Grand_Entrance;persistent",
             "end"
         ],
         "nid": "Global PROL Duro lvlup skills"
@@ -6311,13 +6085,17 @@
         "name": "PROL Cassian lvlup skills",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "unit.nid == 'Cassian'",
+        "condition": "unit.nid == 'Cassian' and source == 'exp_gain'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "if;game.get_unit('Cassian').level == 6",
             "    give_skill;Cassian;No_Privacy_Cassian;persistent",
+            "elif;game.get_unit('Cassian').level == 8",
+            "    give_skill;Cassian;Defiant_Strike;;persistent",
+            "elif;game.get_unit('Cassian').level == 10",
+            "    give_skill;Cassian;Exposing_Crash;;persistent",
             "end"
         ],
         "nid": "Global PROL Cassian lvlup skills"
@@ -6326,13 +6104,17 @@
         "name": "PROL Lucia lvlup skills",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "unit.nid == 'Lucia'",
+        "condition": "unit.nid == 'Lucia' and source == 'exp_gain'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "if;game.get_unit('Lucia').level == 6",
             "    give_skill;Lucia;No_Privacy_Lucia;persistent",
+            "elif;game.get_unit('Lucia').level == 8",
+            "    give_skill;Lucia;Striking_Defiance;;persistent",
+            "elif;game.get_unit('Lucia').level == 10",
+            "    give_skill;Lucia;Exposing_Guard;;persistent",
             "end"
         ],
         "nid": "Global PROL Lucia lvlup skills"
@@ -6354,13 +6136,17 @@
         "name": "PROL Monica lvlup skills",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "unit.nid == 'Monica'",
+        "condition": "unit.nid == 'Monica' and source == 'exp_gain'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "if;game.get_unit('Monica').level == 6",
+            "    give_skill;Monica;Soothing_Presence;;persistent",
+            "elif;game.get_unit('Monica').level == 8",
             "    give_skill;Monica;Awkward_Silence_proc;;persistent",
+            "elif;game.get_unit('Monica').level == 10",
+            "    give_skill;Monica;Penitence;;persistent",
             "end"
         ],
         "nid": "Global PROL Monica lvlup skills"
@@ -6455,7 +6241,7 @@
             "give_skill;Monica;Soothing_Presence;no_banner",
             "add_talk;Duro;Antarion",
             "set_current_hp;Chosen;1",
-            "set_current_hp;Monica;1",
+            "set_current_hp;Rosa;5",
             "give_skill;Chosen;Aura_Blighting;no_banner",
             "give_skill;Chosen;Aura_Blighting_buffs;no_banner",
             "give_item;Chosen;Shining_Sword;no_banner",
@@ -6464,7 +6250,8 @@
             "give_skill;Antarion;Guaranteed_Crit;;no_banner",
             "give_skill;Safado;Nothing_Personal_skill;no_banner;persistent",
             "give_skill;Safado;Sneaking_Stance;;persistent;no_banner",
-            "give_skill;Lucia;Striking_Defiance;;no_banner;persistent"
+            "give_skill;Lucia;Striking_Defiance;;no_banner;persistent",
+            "give_skill;Chosen;testanim;;no_banner;persistent"
         ],
         "nid": "DEBUG_2 testing"
     },
@@ -7319,21 +7106,175 @@
         "nid": "P5 Wrecker attacks Plank"
     },
     {
-        "name": "PROL Death Rosa",
-        "trigger": "unit_death",
+        "name": "Plant root aoe",
+        "trigger": null,
         "level_nid": null,
-        "condition": "unit.nid == 'Rosa'",
+        "condition": "True",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "music_clear",
-            "add_portrait;Rosa;Right;;NoSmile,CloseEyes",
-            "s;Rosa;... I'll ... meet you soon ...",
-            "remove_portrait;Rosa",
-            "remove_unit;Rosa",
-            "music_fade_back"
+            "add_region;root;{eval:target_pos};1,1;normal;root;2",
+            "map_anim;RedDot;{eval:target_pos};permanent",
+            "#--- Tile Above ---",
+            "add_region;rootup;{eval: (target_pos[0], target_pos[1] - 1)};1,1;normal;;2",
+            "map_anim;RedDot;{eval: (target_pos[0], target_pos[1] - 1)};permanent",
+            "#--- Tile Below ---",
+            "add_region;rootdown;{eval: (target_pos[0], target_pos[1] + 1)};1,1;normal;;2",
+            "map_anim;RedDot;{eval: (target_pos[0], target_pos[1] + 1)};permanent",
+            "#--- Tile to the Left ---",
+            "add_region;rootleft;{eval: (target_pos[0] - 1, target_pos[1])};1,1;normal;;2",
+            "map_anim;RedDot;{eval: (target_pos[0] - 1, target_pos[1])};permanent",
+            "#--- Tile to the Right ---",
+            "add_region;rootright;{eval: (target_pos[0] + 1, target_pos[1])};1,1;normal;;2",
+            "map_anim;RedDot;{eval: (target_pos[0] + 1, target_pos[1])};permanent"
         ],
-        "nid": "Global PROL Death Rosa"
+        "nid": "Global Plant root aoe"
+    },
+    {
+        "name": "Root event",
+        "trigger": "time_region_complete",
+        "level_nid": null,
+        "condition": "region.nid == 'root'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;200",
+            "flicker_cursor;{eval:position}",
+            "wait;200",
+            "remove_map_anim;RedDot;{eval:position}",
+            "remove_map_anim;RedDot;{eval: (position[0], position[1] - 1)}",
+            "remove_map_anim;RedDot;{eval: (position[0], position[1] + 1)}",
+            "remove_map_anim;RedDot;{eval: (position[0] - 1, position[1])}",
+            "remove_map_anim;RedDot;{eval: (position[0] + 1, position[1])}",
+            "screen_shake;200;default",
+            "create_unit;plant_target;;1;{eval:position};immediate;stack",
+            "interact_unit;Plant;{eval:position};--;Activate_Roots",
+            "#sound;Critical Hit 2",
+            "#map_anim;Snag;{eval:position}",
+            "kill_unit;plant_target;immediate"
+        ],
+        "nid": "Global Root event"
+    },
+    {
+        "name": "New Event",
+        "trigger": "level_start",
+        "level_nid": "7",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_weather;sunset"
+        ],
+        "nid": "7 New Event"
+    },
+    {
+        "name": "PROL Mira lvlup skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Mira' and source == 'exp_gain'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_unit('Mira').level == 3",
+            "    give_skill;Mira;Revenge_Driven;;persistent",
+            "elif;game.get_unit('Mira').level == 5",
+            "    give_skill;Mira;Premature_Advance;;persistent",
+            "end"
+        ],
+        "nid": "Global PROL Mira lvlup skills"
+    },
+    {
+        "name": "PROL Simonyoung lvlup skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Simonyoung' and source == 'exp_gain'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_unit('Simonyoung').level == 8",
+            "    give_skill;Simonyoung;Rebuke;;persistent",
+            "elif;game.get_unit('MSimonyoung').level == 9",
+            "    give_skill;Simonyoung;Shelter;;persistent",
+            "end"
+        ],
+        "nid": "Global PROL Simonyoung lvlup skills"
+    },
+    {
+        "name": "PROL Antarion lvlup skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Antarion' and source == 'exp_gain'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_unit('Antarion').level == 6",
+            "    give_skill;Antarion;Drink_Potion;;persistent",
+            "elif;game.get_unit('Antarion').level == 8",
+            "    give_skill;Antarion;Critical_Boost;;persistent",
+            "elif;game.get_unit('Antarion').level == 10",
+            "    give_skill;Antarion;Survival_First;;persistent",
+            "end"
+        ],
+        "nid": "Global PROL Antarion lvlup skills"
+    },
+    {
+        "name": "PROL Safado lvlup skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Safado' and source == 'exp_gain'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_unit('Safado').level == 6",
+            "    give_skill;Safado;Nothing_Personal_skill;;persistent",
+            "elif;game.get_unit('Safado').level == 7",
+            "    give_skill;Safado;Stalling_Stance;;persistent",
+            "elif;game.get_unit('Safado').level == 8",
+            "    give_skill;Safado;Sneaking_Stance;;persistent",
+            "end"
+        ],
+        "nid": "Global PROL Safado lvlup skills"
+    },
+    {
+        "name": "Rosa Phoenix Trigger",
+        "trigger": "combat_end",
+        "level_nid": null,
+        "condition": "(unit.nid == 'Rosa' or unit2.nid == 'Rosa') and u('Rosa').get_hp() == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "center_cursor;Rosa",
+            "flicker_cursor;Rosa",
+            "music;RosaPhoenix;1000",
+            "wait;500",
+            "add_portrait;Rosa;Left;;Smile,CloseEyes",
+            "wait;2000",
+            "s;Rosa;It has... finally come.;;;;3",
+            "wait;1000",
+            "s;Rosa;I will join you soon...|But first...;;;;3",
+            "s;Rosa;...this world that has taken you from me...;;;;3",
+            "expression;Rosa;NoSmile,OpenEyes",
+            "s;Rosa;<wave><red>LET IT ALL BE CHARRED!</></>",
+            "remove_portrait;Rosa",
+            "remove_skill;Rosa;Tarrying_Pyre;no_banner;",
+            "give_skill;Rosa;Tarrying_Pyre_buff;;no_banner;persistent",
+            "set_current_hp;Rosa;{eval: u('Rosa').get_max_hp()}",
+            "change_team;Rosa;enemy",
+            "wait;1000",
+            "change_music;player_phase;RosaPhoenix",
+            "change_music;enemy_phase;RosaPhoenix",
+            "change_music;enemy2_phase;RosaPhoenix",
+            "change_music;other_phase;RosaPhoenix"
+        ],
+        "nid": "Global Rosa Phoenix Trigger"
     }
 ]
