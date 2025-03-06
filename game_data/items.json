@@ -48,6 +48,36 @@
         ]
     },
     {
+        "nid": "Fuck_Emblem",
+        "name": "Fuck Emblem",
+        "desc": "",
+        "icon_nid": "{Lisandra Brave} (FE5 Recolor) 134 8x8",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "accessory",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "status_on_hold",
+                "Active_Synergy"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Lord"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Testing",
         "name": "Testing",
         "desc": "",
@@ -289,6 +319,17 @@
                 "Critical Hit 2"
             ]
         ]
+    },
+    {
+        "nid": "dancetest",
+        "name": "dancetest",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Heroic_Blow_ability",
@@ -15061,6 +15102,18 @@
         ],
         "components": [
             [
+                "spell",
+                null
+            ],
+            [
+                "refresh",
+                null
+            ],
+            [
+                "heal",
+                5
+            ],
+            [
                 "map_cast_sfx",
                 "RefreshDanceMap"
             ],
@@ -15073,19 +15126,11 @@
                 1
             ],
             [
-                "refresh",
-                null
-            ],
-            [
                 "exp",
                 11
             ],
             [
                 "target_ally",
-                null
-            ],
-            [
-                "spell",
                 null
             ],
             [
@@ -15099,10 +15144,6 @@
                     11,
                     255
                 ]
-            ],
-            [
-                "eval_target_restrict_2",
-                "True"
             ]
         ]
     },

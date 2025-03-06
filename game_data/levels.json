@@ -3273,6 +3273,82 @@
         "ai_groups": []
     },
     {
+        "nid": "11",
+        "name": "Chapter 11",
+        "tilemap": "watchtower",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 8,
+                "klass": "Archer",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 1,
+                "klass": "Archer",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": true
+            }
+        ],
+        "regions": [],
+        "unit_groups": [],
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
+    },
+    {
         "nid": "P7",
         "name": "Prologue: 7",
         "tilemap": "mountain entrance",
@@ -8741,10 +8817,10 @@
         "bg_tilemap": null,
         "party": "Eirika",
         "music": {
-            "player_phase": null,
-            "enemy_phase": null,
+            "player_phase": "Prologue battles",
+            "enemy_phase": "Prologue enemy phase",
             "other_phase": null,
-            "enemy2_phase": null,
+            "enemy2_phase": "Boss2",
             "player_battle": null,
             "enemy_battle": null,
             "other_battle": null,
@@ -8794,8 +8870,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
-                    8
+                    1,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8807,7 +8883,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
+                    1,
                     5
                 ],
                 "starting_traveler": null,
@@ -8958,14 +9034,14 @@
                 "generic": false
             },
             {
-                "nid": "Plant",
+                "nid": "Minerve",
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Dancer",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    2
+                    9,
+                    1
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8979,6 +9055,30 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 1,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    3
+                ],
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [

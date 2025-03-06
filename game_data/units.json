@@ -7,7 +7,8 @@
         "level": 1,
         "klass": "IncubusKing",
         "tags": [
-            "Lord"
+            "Lord",
+            "Incubus"
         ],
         "bases": {
             "HP": 16,
@@ -2727,7 +2728,7 @@
     {
         "nid": "Chosen",
         "name": "Chosen",
-        "desc": "A sage-in-training from Jehanna. He reveres his teacher, Saleh.",
+        "desc": "The hero who is destined to save Arclent.",
         "variant": null,
         "level": 1,
         "klass": "Chosen",
@@ -2829,7 +2830,7 @@
     {
         "nid": "Simonyoung",
         "name": "Simon",
-        "desc": "",
+        "desc": "The Chosen's appointed guardian. A careful war veteran.",
         "variant": "",
         "level": 7,
         "klass": "Paladin",
@@ -2910,7 +2911,7 @@
     {
         "nid": "Mira",
         "name": "Mira",
-        "desc": "",
+        "desc": "A meek orphan with fierce ambitions.",
         "variant": "",
         "level": 1,
         "klass": "Journeyman",
@@ -2970,7 +2971,7 @@
     {
         "nid": "Duro",
         "name": "Duro",
-        "desc": "Commander of a Grado military force.",
+        "desc": "Captain of Ardoheim's forces. A crude yet heartful man.",
         "variant": "",
         "level": 4,
         "klass": "Knight",
@@ -3773,16 +3774,7 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "True_Form",
-                false
-            ],
-            [
-                "Flux",
-                false
-            ]
-        ],
+        "starting_items": [],
         "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {

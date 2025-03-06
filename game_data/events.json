@@ -6251,7 +6251,7 @@
             "give_skill;Safado;Nothing_Personal_skill;no_banner;persistent",
             "give_skill;Safado;Sneaking_Stance;;persistent;no_banner",
             "give_skill;Lucia;Striking_Defiance;;no_banner;persistent",
-            "give_skill;Chosen;testanim;;no_banner;persistent"
+            "set_current_hp;103;10"
         ],
         "nid": "DEBUG_2 testing"
     },
@@ -6314,6 +6314,7 @@
             "chapter_title",
             "transition;close",
             "show_layer;base_1",
+            "show_layer;base_2",
             "add_weather;sunset",
             "add_weather;sunset",
             "change_background;Plains",
@@ -7246,7 +7247,7 @@
         "name": "Rosa Phoenix Trigger",
         "trigger": "combat_end",
         "level_nid": null,
-        "condition": "(unit.nid == 'Rosa' or unit2.nid == 'Rosa') and u('Rosa').get_hp() == 1",
+        "condition": "(unit.nid == 'Rosa' or unit2.nid == 'Rosa') and u('Rosa').get_hp() == 1 and (game.current_mode.nid == 'Hard' or game.current_mode.nid == 'Normal')",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -7268,13 +7269,49 @@
             "remove_skill;Rosa;Tarrying_Pyre;no_banner;",
             "give_skill;Rosa;Tarrying_Pyre_buff;;no_banner;persistent",
             "set_current_hp;Rosa;{eval: u('Rosa').get_max_hp()}",
-            "change_team;Rosa;enemy",
+            "change_team;Rosa;enemy2",
+            "add_weather;fire",
             "wait;1000",
-            "change_music;player_phase;RosaPhoenix",
-            "change_music;enemy_phase;RosaPhoenix",
-            "change_music;enemy2_phase;RosaPhoenix",
-            "change_music;other_phase;RosaPhoenix"
+            "change_music;enemy2_phase;RosaPhoenix"
         ],
         "nid": "Global Rosa Phoenix Trigger"
+    },
+    {
+        "name": "PROL Death Rosa casual",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Rosa' and game.current_mode.nid == 'Casual'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear",
+            "add_portrait;Rosa;FarRight",
+            "speak;Rosa;Oops. Hihi. I overextended, my apologies.",
+            "expression;Rosa;CloseEyes",
+            "remove_portrait;Rosa",
+            "remove_unit;Rosa",
+            "music_fade_back"
+        ],
+        "nid": "Global PROL Death Rosa casual"
+    },
+    {
+        "name": "PROL Death Rosa Phoenix",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Rosa' and (game.current_mode.nid == 'Normal' or game.current_mode.nid == 'Hard')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear;1000",
+            "wait;1000",
+            "remove_weather;fire",
+            "wait;1000",
+            "remove_unit;Rosa",
+            "change_music;enemy2_phase;Boss2",
+            "music_fade_back;1000"
+        ],
+        "nid": "Global PROL Death Rosa Phoenix"
     }
 ]
