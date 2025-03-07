@@ -242,8 +242,8 @@
         "desc": "Unit is asleep. -5 DEF and RES. Unit awakes when receives a hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            14,
-            45
+            3,
+            44
         ],
         "components": [
             [
@@ -975,8 +975,8 @@
         "desc": "While at less than half of MAX HP, Mira can double attack on defense.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            43
+            13,
+            38
         ],
         "components": [
             [
@@ -1082,6 +1082,34 @@
             ],
             [
                 "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Laser_Focus",
+        "name": "Laser Focus",
+        "desc": "If there are no allies within 2 tiles, Mira gains bonus accuracy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            28
+        ],
+        "components": [
+            [
+                "hit",
+                50
+            ],
+            [
+                "condition",
+                "unit_funcs.check_focus(unit, 2) == 0"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "class_skill",
                 null
             ]
         ]
@@ -1244,6 +1272,26 @@
             [
                 "cost_mana",
                 4
+            ]
+        ]
+    },
+    {
+        "nid": "Projectile_Parry",
+        "name": "Projectile Parry",
+        "desc": "Duro used to be good at tennis, you know? Duro can counter attacks even if they're far away.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            22
+        ],
+        "components": [
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -2393,7 +2441,7 @@
     {
         "nid": "Nothing_Personal_skill",
         "name": "Nothing Personal",
-        "desc": "Safado can pivot to the other side of the enemy, when possible. After that, his next attack on this turn inflicts <red>[POISONED]</>. Costs <blue>10 mana</>.\n<red>[POISONED]</>: Unit randomly receives up to 5 damage per turn.",
+        "desc": "Safado can pivot to the other side of the enemy, inflicting <red>[POISONED]</>. After that, his next attack on this turn also inflicts <red>[POISONED]</>. Costs <blue>10 mana</>.\n<red>[POISONED]</>: Unit randomly receives up to 5 damage per turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -2433,7 +2481,7 @@
                 [
                     [
                         "NumberOfCombats (X)",
-                        "1",
+                        "2",
                         "Number of combats before expiration"
                     ],
                     [
@@ -2534,6 +2582,26 @@
         ]
     },
     {
+        "nid": "Social_Distancing_skill",
+        "name": "Social Distancing",
+        "desc": "Safado can shove any unit 1 tile away. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            49
+        ],
+        "components": [
+            [
+                "ability",
+                "Social_Distancing"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Firewall",
         "name": "Firewall",
         "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
@@ -2618,7 +2686,7 @@
             ],
             [
                 "crit",
-                30
+                50
             ]
         ]
     },
@@ -2793,7 +2861,7 @@
     {
         "nid": "Tarrying_Pyre",
         "name": "Tarrying Pyre",
-        "desc": "",
+        "desc": "When Rosa dies (normal and hard mode) she restores her life and goes berserk.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -2886,7 +2954,7 @@
     {
         "nid": "Post_Nut_Prayer",
         "name": "Post Nut Prayer",
-        "desc": "<green>[Monica Synergy]</>. Minerve learned from Monica the relaxing effect of spiritual pursuit. When dancing, also grants the ally <red>[PNP]</>.\n<red>[PNP]</>: Unit has +15 HIT and AVOID. Lasts 2 turns.",
+        "desc": "<green>[Monica Synergy]</>. Milena learned from Monica the relaxing effect of spiritual pursuit. When dancing, also grants the ally <red>[PNP]</>.\n<red>[PNP]</>: Unit has +15 HIT and AVOID. Lasts 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -3000,6 +3068,46 @@
             ],
             [
                 "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            35
+        ],
+        "components": [
+            [
+                "gain_skill_after_take_miss",
+                "Active_Synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "new_1",
+        "name": "new_1",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "lost_on_take_hit",
+                null
+            ],
+            [
+                "resist",
                 2
             ]
         ]

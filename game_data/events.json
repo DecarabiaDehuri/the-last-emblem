@@ -5580,6 +5580,8 @@
             "    give_skill;Duro;Bear_hug;persistent",
             "elif;game.get_unit('Duro').level == 7",
             "    give_skill;Duro;Grand_Entrance;persistent",
+            "elif;game.get_unit('Duro').level == 10",
+            "    give_skill;Duro;Projectile_Parry;;persistent",
             "end"
         ],
         "nid": "Global PROL Duro lvlup skills"
@@ -6251,7 +6253,8 @@
             "give_skill;Safado;Nothing_Personal_skill;no_banner;persistent",
             "give_skill;Safado;Sneaking_Stance;;persistent;no_banner",
             "give_skill;Lucia;Striking_Defiance;;no_banner;persistent",
-            "set_current_hp;103;10"
+            "set_current_hp;103;10",
+            "give_skill;Mira;Laser_Focus;;persistent"
         ],
         "nid": "DEBUG_2 testing"
     },
@@ -7181,8 +7184,10 @@
         "priority": 20,
         "_source": [
             "if;game.get_unit('Mira').level == 3",
-            "    give_skill;Mira;Revenge_Driven;;persistent",
+            "    give_skill;Mira;Laser_Focus;;persistent",
             "elif;game.get_unit('Mira').level == 5",
+            "    give_skill;Mira;Revenge_Driven;;persistent",
+            "elif;game.get_unit('Mira').level == 7",
             "    give_skill;Mira;Premature_Advance;;persistent",
             "end"
         ],
@@ -7239,6 +7244,8 @@
             "    give_skill;Safado;Stalling_Stance;;persistent",
             "elif;game.get_unit('Safado').level == 8",
             "    give_skill;Safado;Sneaking_Stance;;persistent",
+            "elif;game.get_unit('Safado').level == 10",
+            "    give_skill;Safado;Social_Distancing_skill;;persistent",
             "end"
         ],
         "nid": "Global PROL Safado lvlup skills"
@@ -7313,5 +7320,22 @@
             "music_fade_back;1000"
         ],
         "nid": "Global PROL Death Rosa Phoenix"
+    },
+    {
+        "name": "PROL Rosa lvlup skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Rosa' and source == 'exp_gain'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_unit('Rosa').level == 9",
+            "    give_skill;Rosa;Hot_Business;;persistent",
+            "elif;game.get_unit('Rosa').level == 10",
+            "    give_skill;Rosa;Cozy_Warmth;;persistent",
+            "end"
+        ],
+        "nid": "Global PROL Rosa lvlup skills"
     }
 ]

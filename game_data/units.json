@@ -2751,13 +2751,13 @@
         },
         "growths": {
             "HP": 60,
-            "STR": 0,
-            "MAG": 55,
-            "SKL": 50,
-            "SPD": 45,
-            "LCK": 60,
+            "STR": 40,
+            "MAG": 60,
+            "SKL": 35,
+            "SPD": 20,
+            "LCK": 50,
             "DEF": 20,
-            "RES": 45,
+            "RES": 10,
             "CON": 0,
             "MOV": 0
         },
@@ -2830,7 +2830,7 @@
     {
         "nid": "Simonyoung",
         "name": "Simon",
-        "desc": "The Chosen's appointed guardian. A careful war veteran.",
+        "desc": "The Chosen's appointed guardian. A prudent war veteran.",
         "variant": "",
         "level": 7,
         "klass": "Paladin",
@@ -2839,7 +2839,7 @@
             "HP": 25,
             "STR": 5,
             "MAG": 5,
-            "SKL": 5,
+            "SKL": 9,
             "SPD": 5,
             "LCK": 5,
             "DEF": 10,
@@ -2850,7 +2850,7 @@
         "growths": {
             "HP": 60,
             "STR": 40,
-            "MAG": 40,
+            "MAG": 20,
             "SKL": 40,
             "SPD": 40,
             "LCK": 40,
@@ -2880,10 +2880,6 @@
             [
                 1,
                 "Stunning_Strike"
-            ],
-            [
-                1,
-                "Rebuke"
             ],
             [
                 1,
@@ -2997,7 +2993,7 @@
             "SKL": 30,
             "SPD": 15,
             "LCK": 25,
-            "DEF": 28,
+            "DEF": 40,
             "CON": 0,
             "MOV": 0,
             "RES": 20
@@ -3075,7 +3071,7 @@
     {
         "nid": "Monica",
         "name": "Sister Monica",
-        "desc": "",
+        "desc": "Pietous sister seeking redemption.",
         "variant": "Monica",
         "level": 5,
         "klass": "Cleric",
@@ -3095,13 +3091,13 @@
             "MOV": 5
         },
         "growths": {
-            "SPD": 32,
+            "SPD": 30,
             "HP": 50,
             "STR": 0,
-            "MAG": 30,
+            "MAG": 50,
             "SKL": 35,
-            "LCK": 45,
-            "DEF": 8,
+            "LCK": 10,
+            "DEF": 10,
             "RES": 50,
             "CON": 0,
             "MOV": 0
@@ -3146,7 +3142,7 @@
     {
         "nid": "Antarion",
         "name": "Antarion",
-        "desc": "A sage from the village Caer Pelyn. He\u2019s Ewan\u2019s solemn, but kind, teacher.",
+        "desc": "An obnoxious swordsman with undeserving popularity and skill.",
         "variant": "",
         "level": 5,
         "klass": "Blademaster",
@@ -3165,13 +3161,13 @@
         },
         "growths": {
             "HP": 50,
-            "STR": 0,
-            "MAG": 30,
-            "SKL": 25,
+            "STR": 30,
+            "MAG": 10,
+            "SKL": 30,
             "SPD": 40,
-            "LCK": 40,
+            "LCK": 30,
             "DEF": 30,
-            "RES": 35,
+            "RES": 20,
             "CON": 0,
             "MOV": 0
         },
@@ -3185,7 +3181,7 @@
         "learned_skills": [
             [
                 1,
-                "Drink_Potion"
+                "Flashy_Strike"
             ]
         ],
         "unit_notes": [],
@@ -3244,7 +3240,7 @@
     {
         "nid": "Cassian",
         "name": "Cassian",
-        "desc": "",
+        "desc": "Mercenary recruited to protect Monica. He is a carefree spirit.",
         "variant": "",
         "level": 5,
         "klass": "Cavalier",
@@ -3259,19 +3255,19 @@
             "SPD": 6,
             "LCK": 1,
             "DEF": 6,
-            "RES": 0,
+            "RES": 2,
             "CON": 9,
             "MOV": 7
         },
         "growths": {
-            "HP": 75,
-            "STR": 35,
-            "MAG": 17,
+            "HP": 50,
+            "STR": 40,
+            "MAG": 10,
             "SKL": 40,
-            "SPD": 28,
+            "SPD": 50,
             "LCK": 30,
-            "DEF": 15,
-            "RES": 15,
+            "DEF": 10,
+            "RES": 20,
             "CON": 0,
             "MOV": 0
         },
@@ -3320,7 +3316,7 @@
     {
         "nid": "Lucia",
         "name": "Lucia",
-        "desc": "",
+        "desc": "Mercenary recruited to protect Monica. She is a sharp observant.",
         "variant": "Female",
         "level": 5,
         "klass": "Cavalier",
@@ -3333,22 +3329,22 @@
             "STR": 5,
             "MAG": 2,
             "SKL": 4,
-            "SPD": 6,
+            "SPD": 4,
             "LCK": 1,
-            "DEF": 6,
-            "RES": 0,
+            "DEF": 8,
+            "RES": 9,
             "CON": 9,
             "MOV": 7
         },
         "growths": {
-            "HP": 75,
-            "STR": 35,
-            "MAG": 17,
+            "HP": 50,
+            "STR": 40,
+            "MAG": 10,
             "SKL": 40,
-            "SPD": 28,
+            "SPD": 20,
             "LCK": 30,
-            "DEF": 15,
-            "RES": 15,
+            "DEF": 50,
+            "RES": 60,
             "CON": 0,
             "MOV": 0
         },
@@ -3397,31 +3393,31 @@
     {
         "nid": "Safado",
         "name": "Safado",
-        "desc": "",
+        "desc": "A wanderer thief with many plans - all often foiled by his overthinking.",
         "variant": "",
         "level": 6,
         "klass": "Thief",
         "tags": [],
         "bases": {
             "HP": 20,
-            "STR": 3,
+            "STR": 6,
             "MAG": 3,
-            "SKL": 1,
+            "SKL": 9,
             "SPD": 9,
             "LCK": 10,
             "DEF": 2,
-            "RES": 5,
+            "RES": 4,
             "CON": 6,
             "MOV": 6
         },
         "growths": {
             "HP": 50,
-            "STR": 5,
-            "MAG": 5,
-            "SKL": 45,
+            "STR": 40,
+            "MAG": 30,
+            "SKL": 40,
             "SPD": 40,
             "LCK": 40,
-            "DEF": 5,
+            "DEF": 30,
             "RES": 20,
             "CON": 0,
             "MOV": 0
@@ -3451,7 +3447,7 @@
         "learned_skills": [
             [
                 1,
-                "Stalling_Stance"
+                "Nothing_Personal_skill"
             ]
         ],
         "unit_notes": [],
@@ -3470,7 +3466,7 @@
     {
         "nid": "Rosa",
         "name": "Rosa",
-        "desc": "",
+        "desc": "An elegant yet mysterious mage. ",
         "variant": "Female",
         "level": 8,
         "klass": "Mage",
@@ -3490,13 +3486,13 @@
             "MOV": 5
         },
         "growths": {
-            "HP": 55,
+            "HP": 50,
             "STR": 0,
-            "MAG": 55,
+            "MAG": 50,
             "SKL": 40,
-            "SPD": 35,
+            "SPD": 30,
             "LCK": 20,
-            "DEF": 5,
+            "DEF": 30,
             "RES": 40,
             "CON": 0,
             "MOV": 0
@@ -3526,14 +3522,6 @@
             ],
             [
                 1,
-                "Hot_Business"
-            ],
-            [
-                1,
-                "Cozy_Warmth"
-            ],
-            [
-                1,
                 "Tarrying_Pyre"
             ]
         ],
@@ -3553,7 +3541,7 @@
     {
         "nid": "Milena",
         "name": "Milena",
-        "desc": "A lazy, greedy, but exceptional fighter from the Republic of Carcino.",
+        "desc": "A playful Lamia with dreams of peace.",
         "variant": "",
         "level": 9,
         "klass": "Suc_Lamia",
@@ -3562,25 +3550,25 @@
             "Succubus"
         ],
         "bases": {
-            "HP": 28,
-            "STR": 10,
-            "MAG": 5,
-            "SKL": 16,
-            "SPD": 17,
+            "HP": 18,
+            "STR": 1,
+            "MAG": 6,
+            "SKL": 8,
+            "SPD": 11,
             "LCK": 5,
-            "DEF": 9,
-            "RES": 11,
-            "CON": 7,
+            "DEF": 3,
+            "RES": 4,
+            "CON": 9,
             "MOV": 5
         },
         "growths": {
-            "HP": 65,
-            "STR": 25,
-            "MAG": 15,
-            "SKL": 45,
-            "SPD": 60,
-            "LCK": 25,
-            "DEF": 25,
+            "HP": 50,
+            "STR": 20,
+            "MAG": 30,
+            "SKL": 40,
+            "SPD": 50,
+            "LCK": 20,
+            "DEF": 20,
             "RES": 30,
             "CON": 0,
             "MOV": 0
@@ -3740,9 +3728,44 @@
         "fields": []
     },
     {
+        "nid": "Geoff",
+        "name": "Geoff",
+        "desc": "Commander of the Ardoheim army. ",
+        "variant": null,
+        "level": 1,
+        "klass": "Sniper",
+        "tags": [],
+        "bases": {
+            "HP": 28,
+            "STR": 9,
+            "SKL": 11,
+            "SPD": 4,
+            "LCK": 6,
+            "DEF": 5,
+            "RES": 4,
+            "CON": 8,
+            "MOV": 6
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Longbow",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Geoff",
+        "affinity": "None",
+        "fields": []
+    },
+    {
         "nid": "Minerve",
         "name": "Minerve",
-        "desc": "A lazy, greedy, but exceptional fighter from the Republic of Carcino.",
+        "desc": "Captain in the Succubus army. An eager underling of Riala.",
         "variant": "",
         "level": 9,
         "klass": "Suc_Minerve",
@@ -3832,7 +3855,7 @@
     {
         "nid": "Rialayoung",
         "name": "Riala",
-        "desc": "A steadfast and honourable cavalier in sworn service to Renais.",
+        "desc": "Elite succubus mage. A cunning strategist.",
         "variant": "",
         "level": 5,
         "klass": "Suc_Riala",
@@ -3926,8 +3949,8 @@
     },
     {
         "nid": "SpiderQueen",
-        "name": "Spider Queen",
-        "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
+        "name": "Spider Suc.",
+        "desc": "A succubus from the spider variant.",
         "variant": "Queen",
         "level": 4,
         "klass": "Spider",
@@ -4023,7 +4046,7 @@
     {
         "nid": "SpiderEmpress",
         "name": "Spider Empress",
-        "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
+        "desc": "A powerful succubus from the spider variant.",
         "variant": "Empress",
         "level": 4,
         "klass": "SpiderEmpress",
@@ -4123,7 +4146,7 @@
     {
         "nid": "Batgal",
         "name": "Bat Succubus",
-        "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
+        "desc": "A succubus from the bat variant.",
         "variant": "",
         "level": 6,
         "klass": "Batgal",
@@ -4224,7 +4247,7 @@
     {
         "nid": "Plant",
         "name": "Dahlia",
-        "desc": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.",
+        "desc": "A succubus from the plant variant.",
         "variant": "",
         "level": 6,
         "klass": "Plant",
@@ -4355,7 +4378,7 @@
     {
         "nid": "Crusher",
         "name": "Crusher",
-        "desc": "The leader of Bazba's bandits.",
+        "desc": "The leader of Crusher's bandits.",
         "variant": "",
         "level": 6,
         "klass": "Brigand",
@@ -4560,7 +4583,7 @@
     {
         "nid": "Plank",
         "name": "Plank",
-        "desc": "One of Bazba's henchmen.",
+        "desc": "One day he will lead his own bandit group.",
         "variant": "",
         "level": 4,
         "klass": "Thief",
@@ -4653,7 +4676,7 @@
     {
         "nid": "Bruce",
         "name": "Bruce",
-        "desc": "Commander of Grado's border guard.\nHis loyalty is unshakable.",
+        "desc": "Crusher's powerful soldier.",
         "variant": "",
         "level": 8,
         "klass": "Mercenary",
@@ -4748,7 +4771,7 @@
     {
         "nid": "Wrecker",
         "name": "Wrecker",
-        "desc": "A troop leader in Grado's army.",
+        "desc": "The strongest but uncontrollable Crusher's underling.",
         "variant": "",
         "level": 13,
         "klass": "Warrior",
@@ -5433,7 +5456,7 @@
         "nid": "Ogre1",
         "name": "Ogre",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 10,
         "klass": "Ogre",
         "tags": [

@@ -3293,7 +3293,31 @@
             {
                 "nid": "103",
                 "variant": null,
-                "level": 8,
+                "level": 6,
+                "klass": "Archer",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 6,
                 "klass": "Archer",
                 "faction": "Soldier",
                 "starting_items": [
@@ -3315,14 +3339,62 @@
                 "generic": true
             },
             {
-                "nid": "104",
+                "nid": "106",
                 "variant": null,
-                "level": 1,
+                "level": 6,
                 "klass": "Archer",
                 "faction": "Soldier",
                 "starting_items": [
                     [
                         "Iron_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    3,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 6,
+                "klass": "Archer",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 1,
+                "klass": "Orc",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
                         false
                     ]
                 ],
@@ -3333,10 +3405,23 @@
                 "ai_group": "",
                 "starting_position": [
                     8,
-                    10
+                    1
                 ],
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "Geoff",
+                "team": "other",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [],
@@ -8817,10 +8902,10 @@
         "bg_tilemap": null,
         "party": "Eirika",
         "music": {
-            "player_phase": "Prologue battles",
-            "enemy_phase": "Prologue enemy phase",
+            "player_phase": null,
+            "enemy_phase": null,
             "other_phase": null,
-            "enemy2_phase": "Boss2",
+            "enemy2_phase": null,
             "player_battle": null,
             "enemy_battle": null,
             "other_battle": null,
@@ -8974,8 +9059,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
-                    3
+                    4,
+                    10
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -8993,7 +9078,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
+                    7,
                     7
                 ],
                 "starting_traveler": null,
