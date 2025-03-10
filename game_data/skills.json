@@ -101,6 +101,26 @@
         ]
     },
     {
+        "nid": "AI_ignore",
+        "name": "AI ignore",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "modify_ai_priority",
+                0.0
+            ]
+        ]
+    },
+    {
         "nid": "testanim",
         "name": "testanim",
         "desc": "",

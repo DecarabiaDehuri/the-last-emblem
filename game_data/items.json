@@ -321,15 +321,44 @@
         ]
     },
     {
-        "nid": "dancetest",
-        "name": "dancetest",
+        "nid": "Dance_enemy",
+        "name": "Dance",
         "desc": "",
-        "icon_nid": null,
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            1,
+            50
         ],
-        "components": []
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Minerve dance"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Poisoned"
+            ]
+        ]
     },
     {
         "nid": "Heroic_Blow_ability",
@@ -1643,7 +1672,7 @@
     {
         "nid": "True_Form",
         "name": "True Form",
-        "desc": "Minerve disperses the magic on her illusion, focusing instead on dealing damage through her true visage.\nCosts <blue>10 mana</>.",
+        "desc": "Minerve disperses the magic on her illusion, focusing instead on dealing damage through her true visage.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -1687,10 +1716,6 @@
                 9
             ],
             [
-                "level_exp",
-                null
-            ],
-            [
                 "magic",
                 null
             ],
@@ -1707,6 +1732,10 @@
             [
                 "locked",
                 null
+            ],
+            [
+                "weapon_type",
+                "Dark"
             ]
         ]
     },
@@ -4457,6 +4486,66 @@
             [
                 "battle_animation_music",
                 "IK attack"
+            ]
+        ]
+    },
+    {
+        "nid": "Iron_Scythe",
+        "name": "Iron Scythe",
+        "desc": "",
+        "icon_nid": "{AtelierLabs} scythe 1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                360
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "weapon_type",
+                "Scythe"
             ]
         ]
     },
@@ -15192,10 +15281,6 @@
             [
                 "refresh",
                 null
-            ],
-            [
-                "heal",
-                5
             ],
             [
                 "map_cast_sfx",

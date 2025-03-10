@@ -126,6 +126,11 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -9408,12 +9413,7 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [
-            [
-                1,
-                "Dance"
-            ]
-        ],
+        "learned_skills": [],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -9472,7 +9472,7 @@
             0
         ],
         "map_sprite_nid": "Dancer",
-        "combat_anim_nid": "Minerve",
+        "combat_anim_nid": "Suc_Minerve",
         "fields": []
     },
     {
@@ -11142,12 +11142,13 @@
     {
         "nid": "Orc_Thrower",
         "name": "Rock Hurler",
-        "desc": "",
+        "desc": "Orcs who enjoy throwing big rocks towards their enemies.",
         "tier": 1,
         "movement_group": "Bandits",
         "promotes_from": null,
         "turns_into": [],
         "tags": [
+            "ZeroMove",
             "Monster"
         ],
         "max_level": 20,
@@ -11161,7 +11162,7 @@
             "DEF": 2,
             "RES": 1,
             "CON": 16,
-            "MOV": 5
+            "MOV": 0
         },
         "growths": {
             "HP": 80,
@@ -12035,7 +12036,7 @@
                 null
             ],
             "Lance": [
-                true,
+                false,
                 0,
                 null
             ],
@@ -12076,6 +12077,11 @@
             ],
             "Default": [
                 false,
+                0,
+                null
+            ],
+            "Scythe": [
+                true,
                 0,
                 null
             ]
@@ -12176,7 +12182,7 @@
                 null
             ],
             "Lance": [
-                true,
+                false,
                 0,
                 null
             ],
@@ -12217,6 +12223,11 @@
             ],
             "Default": [
                 false,
+                0,
+                null
+            ],
+            "Scythe": [
+                true,
                 0,
                 null
             ]
@@ -12363,6 +12374,298 @@
         ],
         "map_sprite_nid": "Gorgon (U) {IS}-stand",
         "combat_anim_nid": "Lamia_foe",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Centaur",
+        "name": "Suc. Centaur",
+        "desc": "Succubi with superior land movement.",
+        "tier": 1,
+        "movement_group": "Light Cav",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 20,
+            "STR": 5,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 6,
+            "CON": 9,
+            "MOV": 7,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 35,
+            "MAG": 17,
+            "SKL": 40,
+            "SPD": 28,
+            "LCK": 30,
+            "DEF": 15,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 15,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "CON": 25,
+            "MOV": 15,
+            "RES": 20,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                251
+            ],
+            "Lance": [
+                false,
+                31,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "icon_nid": "Tarvos (M) Elder Centaur {Seal}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Tarvos (F) (Alfred Kamon's Anim) {Blood}-stand",
+        "combat_anim_nid": "SuccubusCentaur",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Centaur_Boss",
+        "name": "Suc. Centaur",
+        "desc": "Armored Succubi with superior land movement.",
+        "tier": 1,
+        "movement_group": "Heavy Cav",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 20,
+            "STR": 5,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 6,
+            "CON": 9,
+            "MOV": 7,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 50,
+            "MAG": 17,
+            "SKL": 60,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 25,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 25,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "CON": 25,
+            "MOV": 15,
+            "RES": 20,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                251
+            ],
+            "Lance": [
+                false,
+                31,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "icon_nid": "Tarvos (M) Elder Centaur {Seal}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Tarvos (F) Centaur Sword {DATonDemand}-stand",
+        "combat_anim_nid": "SuccubusCentaurBoss",
         "fields": []
     },
     {

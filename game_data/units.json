@@ -3635,6 +3635,196 @@
         "fields": []
     },
     {
+        "nid": "Minerve",
+        "name": "Minerve",
+        "desc": "Captain in the Succubus army. An eager underling of Riala.",
+        "variant": "",
+        "level": 9,
+        "klass": "Suc_Minerve",
+        "tags": [
+            "Female"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 16,
+            "SPD": 17,
+            "LCK": 5,
+            "DEF": 9,
+            "RES": 11,
+            "CON": 7,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 65,
+            "STR": 25,
+            "MAG": 15,
+            "SKL": 45,
+            "SPD": 60,
+            "LCK": 25,
+            "DEF": 25,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Luna",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                121,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Minerve",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Minerve_true",
+        "name": "Minerve",
+        "desc": "Captain in the Succubus army. An eager underling of Riala.",
+        "variant": "Transform",
+        "level": 9,
+        "klass": "Suc_Minerve",
+        "tags": [
+            "Female"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 16,
+            "SPD": 17,
+            "LCK": 5,
+            "DEF": 9,
+            "RES": 11,
+            "CON": 7,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 65,
+            "STR": 25,
+            "MAG": 15,
+            "SKL": 45,
+            "SPD": 60,
+            "LCK": 25,
+            "DEF": 25,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "True_Form",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                121,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Minerve",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
         "nid": "Baruba",
         "name": "Baruba",
         "desc": "A courageous general in Grado\u2019s army. He\u2019s better known as Obsidian.",
@@ -3734,7 +3924,9 @@
         "variant": null,
         "level": 1,
         "klass": "Sniper",
-        "tags": [],
+        "tags": [
+            "ZeroMove"
+        ],
         "bases": {
             "HP": 28,
             "STR": 9,
@@ -3744,7 +3936,7 @@
             "DEF": 5,
             "RES": 4,
             "CON": 8,
-            "MOV": 6
+            "MOV": 0
         },
         "growths": {},
         "stat_cap_modifiers": {},
@@ -3752,104 +3944,24 @@
             [
                 "Longbow",
                 false
+            ],
+            [
+                "Killer_Ballista",
+                false
             ]
         ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {},
-        "alternate_classes": [],
-        "portrait_nid": "Geoff",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Minerve",
-        "name": "Minerve",
-        "desc": "Captain in the Succubus army. An eager underling of Riala.",
-        "variant": "",
-        "level": 9,
-        "klass": "Suc_Minerve",
-        "tags": [
-            "Female"
-        ],
-        "bases": {
-            "HP": 28,
-            "STR": 10,
-            "MAG": 5,
-            "SKL": 16,
-            "SPD": 17,
-            "LCK": 5,
-            "DEF": 9,
-            "RES": 11,
-            "CON": 7,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 65,
-            "STR": 25,
-            "MAG": 15,
-            "SKL": 45,
-            "SPD": 60,
-            "LCK": 25,
-            "DEF": 25,
-            "RES": 30,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [],
         "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
-            "Sword": [
-                true,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
             "Bow": [
                 false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                31,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
+                181,
+                null
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Minerve",
-        "affinity": "Dark",
+        "portrait_nid": "Geoff",
+        "affinity": "None",
         "fields": []
     },
     {
@@ -5532,6 +5644,52 @@
         "wexp_gain": {},
         "alternate_classes": [],
         "portrait_nid": "Eirika",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "SucCentaurBoss",
+        "name": "Centaur Boss",
+        "desc": "",
+        "variant": null,
+        "level": 12,
+        "klass": "Suc_Centaur_Boss",
+        "tags": [
+            "Boss",
+            "Female",
+            "Succubus"
+        ],
+        "bases": {
+            "HP": 30,
+            "STR": 7,
+            "MAG": 2,
+            "SKL": 10,
+            "SPD": 14,
+            "LCK": 7,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Blade",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "CentaurBoss",
         "affinity": null,
         "fields": []
     }

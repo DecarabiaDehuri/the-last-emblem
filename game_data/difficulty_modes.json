@@ -1,10 +1,10 @@
 [
     {
-        "nid": "Casual",
-        "name": "Casual",
-        "color": "green",
-        "permadeath_choice": "Casual",
-        "growths_choice": "Dynamic",
+        "nid": "Normal",
+        "name": "Normal",
+        "color": "blue",
+        "permadeath_choice": "Classic",
+        "growths_choice": "Random",
         "rng_choice": "Classic",
         "player_bases": {
             "HP": 0,
@@ -85,11 +85,11 @@
         "start_locked": false
     },
     {
-        "nid": "Normal",
-        "name": "Normal",
-        "color": "blue",
-        "permadeath_choice": "Classic",
-        "growths_choice": "Random",
+        "nid": "Casual",
+        "name": "Casual",
+        "color": "green",
+        "permadeath_choice": "Casual",
+        "growths_choice": "Dynamic",
         "rng_choice": "Classic",
         "player_bases": {
             "HP": 0,

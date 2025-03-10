@@ -3673,8 +3673,12 @@
             "speak;Chosen;Whaaat?{c:wait;500} I...{c:wait;500} I was THE one to...",
             "expression;Chosen;CloseEyes",
             "remove_portrait;Chosen",
-            "remove_unit;Chosen",
-            "lose_game"
+            "if;game.current_mode.nid == 'Casual'",
+            "    activate_turnwheel",
+            "else",
+            "    remove_unit;Chosen;fade;fade",
+            "    lose_game",
+            "end"
         ],
         "nid": "Global PROL Death Chosen"
     },
@@ -6238,7 +6242,6 @@
             "give_skill;Duro;Critical_Boost;;no_banner;persistent",
             "enable_turnwheel;t",
             "enable_supports;t",
-            "give_item;Minerve;Dragonstone;ChosenParty;no_banner",
             "give_skill;Monica;Penitence;no_banner",
             "give_skill;Monica;Soothing_Presence;no_banner",
             "add_talk;Duro;Antarion",
@@ -6253,8 +6256,8 @@
             "give_skill;Safado;Nothing_Personal_skill;no_banner;persistent",
             "give_skill;Safado;Sneaking_Stance;;persistent;no_banner",
             "give_skill;Lucia;Striking_Defiance;;no_banner;persistent",
-            "set_current_hp;103;10",
-            "give_skill;Mira;Laser_Focus;;persistent"
+            "give_skill;Mira;Laser_Focus;;persistent",
+            "give_item;Minerve;Dance_enemy"
         ],
         "nid": "DEBUG_2 testing"
     },
@@ -6308,7 +6311,7 @@
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "P7",
+        "level_nid": "P8",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -6316,8 +6319,7 @@
         "_source": [
             "chapter_title",
             "transition;close",
-            "show_layer;base_1",
-            "show_layer;base_2",
+            "show_layer;remake",
             "add_weather;sunset",
             "add_weather;sunset",
             "change_background;Plains",
@@ -6392,7 +6394,7 @@
             "move_unit;Chosen;5,18;immediate;silent",
             "prep;t;Preparation"
         ],
-        "nid": "P7 Intro"
+        "nid": "P8 Intro"
     },
     {
         "name": "Antarion Crit",
@@ -6434,7 +6436,7 @@
     {
         "name": "Mountain reach VICTORY",
         "trigger": "Mountain",
-        "level_nid": "P7",
+        "level_nid": "P8",
         "condition": "any(game.level.regions.get('Mountain').contains(unit.position) for unit in game.get_units_in_party()) == True",
         "commands": [],
         "only_once": false,
@@ -6446,12 +6448,12 @@
             "wait;1000",
             "win_game"
         ],
-        "nid": "P7 Mountain reach VICTORY"
+        "nid": "P8 Mountain reach VICTORY"
     },
     {
         "name": "Imp ambush setup",
         "trigger": "turn_change",
-        "level_nid": "P7",
+        "level_nid": "P8",
         "condition": "any(game.level.regions.get('ambush').contains(unit.position) for unit in game.get_units_in_party())",
         "commands": [],
         "only_once": true,
@@ -6468,12 +6470,12 @@
             "    wait;500",
             "end"
         ],
-        "nid": "P7 Imp ambush setup"
+        "nid": "P8 Imp ambush setup"
     },
     {
         "name": "Imp ambush",
         "trigger": "turn_change",
-        "level_nid": "P7",
+        "level_nid": "P8",
         "condition": "game.level_vars['ambushsetup'] == 1",
         "commands": [],
         "only_once": true,
@@ -6484,7 +6486,7 @@
             "spawn_group;imp;south;imp;normal;closest",
             "wait;1000"
         ],
-        "nid": "P7 Imp ambush"
+        "nid": "P8 Imp ambush"
     },
     {
         "name": "New Event_1",
@@ -6502,7 +6504,7 @@
     {
         "name": "Intro e Tutorial: free roam",
         "trigger": "level_start",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -6597,12 +6599,12 @@
             "    wait;200",
             "end"
         ],
-        "nid": "8 Intro e Tutorial: free roam"
+        "nid": "P9 Intro e Tutorial: free roam"
     },
     {
         "name": "Totem",
         "trigger": "Interact",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -6676,12 +6678,12 @@
             "    transition;open;1000",
             "end"
         ],
-        "nid": "8 Totem"
+        "nid": "P9 Totem"
     },
     {
         "name": "Simon talk",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Simonyoung'",
         "commands": [],
         "only_once": false,
@@ -6696,12 +6698,12 @@
             "end",
             "remove_talk;Chosen;Simonyoung"
         ],
-        "nid": "8 Simon talk"
+        "nid": "P9 Simon talk"
     },
     {
         "name": "Mira talk ",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Mira'",
         "commands": [],
         "only_once": false,
@@ -6711,12 +6713,12 @@
             "s;Mira;We're getting closer...{c:wait;400}{c:expression;Mira;Smile} I will... finally...!",
             "remove_talk;Chosen;Mira"
         ],
-        "nid": "8 Mira talk "
+        "nid": "P9 Mira talk "
     },
     {
         "name": "Duro talk",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Duro'",
         "commands": [],
         "only_once": false,
@@ -6730,12 +6732,12 @@
             "s;Duro;Because when you're this ugly, your partners will be that fucking dry! HAHAHAHAHA!|Nah, I'm just messing with ya.|You're not gonna make them dry because of your face.|But no promises about everything else, HAHAHA!",
             "remove_talk;Chosen;Duro"
         ],
-        "nid": "8 Duro talk"
+        "nid": "P9 Duro talk"
     },
     {
         "name": "Antarion Talk",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Antarion'",
         "commands": [],
         "only_once": false,
@@ -6745,12 +6747,12 @@
             "s;Antarion;I have to admit, you have come pretty far.|That is to be expected from someone under the protection of a renowed Blademaster.|Try even harder and you might get a footnote in the history books.|\"The clumsiest, but most persistent Antarion's pupil\".|Yes, the chicks will dig that I had the patience to mentor someone such as yourself.",
             "remove_talk;Chosen;Antarion"
         ],
-        "nid": "8 Antarion Talk"
+        "nid": "P9 Antarion Talk"
     },
     {
         "name": "Chest",
         "trigger": "chest",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -6769,12 +6771,12 @@
             "level_var;shinysword;1",
             "add_talk;Chosen;Simonyoung"
         ],
-        "nid": "8 Chest"
+        "nid": "P9 Chest"
     },
     {
         "name": "Monica talk",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Monica'",
         "commands": [],
         "only_once": true,
@@ -6788,12 +6790,12 @@
             "wait;1000",
             "remove_talk;Chosen;Mira"
         ],
-        "nid": "8 Monica talk"
+        "nid": "P9 Monica talk"
     },
     {
         "name": "Cassian talk",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Cassian'",
         "commands": [],
         "only_once": false,
@@ -6816,12 +6818,12 @@
             "end",
             "remove_talk;Chosen;Cassian"
         ],
-        "nid": "8 Cassian talk"
+        "nid": "P9 Cassian talk"
     },
     {
         "name": "Lucia talk",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Lucia'",
         "commands": [],
         "only_once": false,
@@ -6844,12 +6846,12 @@
             "end",
             "remove_talk;Chosen;Lucia"
         ],
-        "nid": "8 Lucia talk"
+        "nid": "P9 Lucia talk"
     },
     {
         "name": "Safado talk",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Safado'",
         "commands": [],
         "only_once": false,
@@ -6862,12 +6864,12 @@
             "wait;1000",
             "remove_talk;Chosen;Safado"
         ],
-        "nid": "8 Safado talk"
+        "nid": "P9 Safado talk"
     },
     {
         "name": "Rosa talk",
         "trigger": "on_talk",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "unit.nid == 'Chosen' and unit2.nid == 'Rosa'",
         "commands": [],
         "only_once": false,
@@ -6882,12 +6884,12 @@
             "s;Rosa;Do you feel a bit dizzy?{c:wait;300} Hihi. It's a natural reaction to climbing up this high.|My fires get a little weaker too, can you believe it?|However, you don't need to worry. I can still protect you just fine.",
             "remove_talk;Chosen;Rosa"
         ],
-        "nid": "8 Rosa talk"
+        "nid": "P9 Rosa talk"
     },
     {
         "name": "ambush e true level start",
         "trigger": "roaming_interrupt",
-        "level_nid": "8",
+        "level_nid": "P9",
         "condition": "True",
         "commands": [],
         "only_once": true,
@@ -7025,10 +7027,11 @@
             "change_objective_win;Defeat the boss.",
             "change_objective_loss;Chosen dies.",
             "change_objective_simple;Defeat the boss.",
+            "add_talk;Cassian;Milena",
             "transition;open;1000",
             "prep;t;Preparation"
         ],
-        "nid": "8 ambush e true level start"
+        "nid": "P9 ambush e true level start"
     },
     {
         "name": "New Event_2",
@@ -7046,25 +7049,7 @@
     {
         "name": "Overworld start",
         "trigger": "overworld_start",
-        "level_nid": "P7",
-        "condition": "True",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "wait;1000",
-            "reveal_overworld_node;P7",
-            "sound;MapHeal",
-            "wait;1000",
-            "reveal_overworld_road;P6;P7",
-            "wait;1000"
-        ],
-        "nid": "P7 Overworld start"
-    },
-    {
-        "name": "Overworld start",
-        "trigger": "overworld_start",
-        "level_nid": "8",
+        "level_nid": "P8",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -7077,7 +7062,25 @@
             "reveal_overworld_road;P7;P8",
             "wait;1000"
         ],
-        "nid": "8 Overworld start"
+        "nid": "P8 Overworld start"
+    },
+    {
+        "name": "Overworld start",
+        "trigger": "overworld_start",
+        "level_nid": "P9",
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "reveal_overworld_node;P9",
+            "sound;MapHeal",
+            "wait;1000",
+            "reveal_overworld_road;P8;P9",
+            "wait;1000"
+        ],
+        "nid": "P9 Overworld start"
     },
     {
         "name": "Wrecker attacks Plank",
@@ -7270,16 +7273,18 @@
             "wait;1000",
             "s;Rosa;I will join you soon...|But first...;;;;3",
             "s;Rosa;...this world that has taken you from me...;;;;3",
-            "expression;Rosa;NoSmile,OpenEyes",
-            "s;Rosa;<wave><red>LET IT ALL BE CHARRED!</></>",
-            "remove_portrait;Rosa",
+            "remove_portrait;Rosa;no_block",
+            "add_portrait;RosaPhoenix;Left",
+            "s;RosaPhoenix;<wave><red>LET IT BURN TO ASHES!</></>",
+            "remove_portrait;RosaPhoenix",
             "remove_skill;Rosa;Tarrying_Pyre;no_banner;",
             "give_skill;Rosa;Tarrying_Pyre_buff;;no_banner;persistent",
             "set_current_hp;Rosa;{eval: u('Rosa').get_max_hp()}",
             "change_team;Rosa;enemy2",
             "add_weather;fire",
             "wait;1000",
-            "change_music;enemy2_phase;RosaPhoenix"
+            "change_music;enemy2_phase;RosaPhoenix",
+            "change_portrait;Rosa;RosaPhoenix"
         ],
         "nid": "Global Rosa Phoenix Trigger"
     },
@@ -7337,5 +7342,483 @@
             "end"
         ],
         "nid": "Global PROL Rosa lvlup skills"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "P7",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "show_layer;details",
+            "chapter_title",
+            "transition;close",
+            "center_cursor;9,7",
+            "transition;open",
+            "multi_add_portrait;Geoff;Left;Minerve;Right",
+            "music;Tension",
+            "s;Geoff;Don't take me for a fool!",
+            "s;Minerve;Oh, come on~|Just some orgies here and there won't hurt anyone!|Unless some of your soldiers were willing to participate, of course~",
+            "s;Geoff;I wasn't born yesterday!|You have plenty of other spaces to do whatever the fuck you want.|Your excuses are appalling, frankly insulting to me!",
+            "s;Minerve;You don't get ittt!|Some of us have an exhibition fetish, we <wave>need</> to be near the border~",
+            "s;Geoff;Over my dead body. Try your dirty tactics and we will open fire.",
+            "wait;400",
+            "s;Minerve;I will take you up on that offer.",
+            "s;Geoff;...?;;;thought_bubble",
+            "s;Minerve;This will happen over your dead body. You asked for it~",
+            "multi_remove_portrait;Minerve;Geoff",
+            "wait;500",
+            "remove_unit;Minerve;warp;fade",
+            "center_cursor;8,1",
+            "wait;500",
+            "center_cursor;Geoff",
+            "wait;400",
+            "move_unit;Geoff;8,16;normal;closest",
+            "wait;400",
+            "add_unit;Chosen;9,17;fade;closest;south",
+            "wait;300",
+            "move_unit;Chosen;9,16;normal;closest",
+            "wait;500",
+            "multi_add_portrait;Geoff;Left;Chosen;MidRight;Simonyoung;FarRight",
+            "s;Chosen;What's happening here?!",
+            "s;Geoff;Leave! We're about to enter a battle here!",
+            "s;Chosen;Then this is just the place for us to be!",
+            "s;Geoff;Hmm? Oh. Simon is here.",
+            "s;Simonyoung;Geoff.",
+            "expression;Simonyoung;CloseEyes",
+            "s;Geoff;So you are on your little quest again, huh?",
+            "expression;Simonyoung;OpenEyes",
+            "s;Simonyoung;We are doing our utmost to end the war.",
+            "s;Geoff;Just try not to end my formation along the way.",
+            "transition;close;1000",
+            "prep;t;Preparation"
+        ],
+        "nid": "P7 Intro"
+    },
+    {
+        "name": "Wall1 break",
+        "trigger": "unit_death",
+        "level_nid": "P7",
+        "condition": "unit.nid == 'wall1'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;300",
+            "center_cursor;1,12",
+            "wait;300",
+            "map_anim;Snag;1,12",
+            "sound;VillageDestroyed",
+            "show_layer;wall1",
+            "remove_region;wall1"
+        ],
+        "nid": "P7 Wall1 break"
+    },
+    {
+        "name": "Wall2 break",
+        "trigger": "unit_death",
+        "level_nid": "P7",
+        "condition": "unit.nid == 'wall2'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;300",
+            "center_cursor;13,12",
+            "wait;300",
+            "map_anim;Snag;13,12",
+            "sound;VillageDestroyed",
+            "show_layer;wall2",
+            "remove_region;wall2"
+        ],
+        "nid": "P7 Wall2 break"
+    },
+    {
+        "name": "Wall3 break",
+        "trigger": "unit_death",
+        "level_nid": "P7",
+        "condition": "unit.nid == 'wall3'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;300",
+            "center_cursor;16,12",
+            "wait;300",
+            "map_anim;Snag;16,12",
+            "sound;VillageDestroyed",
+            "show_layer;wall3",
+            "remove_region;wall3"
+        ],
+        "nid": "P7 Wall3 break"
+    },
+    {
+        "name": "wave2",
+        "trigger": "turn_change",
+        "level_nid": "P7",
+        "condition": "game.turncount == 3",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "change_ai;108;AttackGeoff",
+            "change_ai;114;Pursue",
+            "change_ai;115;Pursue"
+        ],
+        "nid": "P7 wave2"
+    },
+    {
+        "name": "wave3",
+        "trigger": "turn_change",
+        "level_nid": "P7",
+        "condition": "game.turncount == 4",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "change_ai;109;AttackGeoff",
+            "change_ai;116;Pursue",
+            "change_ai;117;Pursue"
+        ],
+        "nid": "P7 wave3"
+    },
+    {
+        "name": "wave4",
+        "trigger": "turn_change",
+        "level_nid": "P7",
+        "condition": "game.turncount == 5",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "change_ai;113;AttackGeoff",
+            "change_ai;118;Pursue",
+            "change_ai;119;Pursue"
+        ],
+        "nid": "P7 wave4"
+    },
+    {
+        "name": "Enemies dead VICTORY",
+        "trigger": "combat_end",
+        "level_nid": "P7",
+        "condition": "len(game.get_enemy_units()) == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
+            "win_game"
+        ],
+        "nid": "P7 Enemies dead VICTORY"
+    },
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "P7",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close",
+            "music_clear",
+            "wait;500",
+            "change_background;CastleSepia",
+            "transition;open",
+            "multi_add_portrait;Chosen;Left;Geoff;Right",
+            "wait;200",
+            "s;Chosen;You're a real fighter, and we're in need of an acher!",
+            "s;Geoff;So? I have nothing to do with it.",
+            "s;Chosen;You're dense, huh? Join us!",
+            "s;Geoff;I understood you perfectly. You are the one out of your mind.|You are free to do your expedition, but don't disrupt the work of those in your path.",
+            "s;Chosen;That's...{c:wait;300} you're not gonna need to watch the borders anymore.|Soon there will be no Incubus King territory anymore!",
+            "s;Geoff;You are not the only one who dreamt this.|While you and everyone else daydreams, the people need someone to protect them.",
+            "s;Chosen;Ok man, I get it already!|Keep up holed up in here while I save your ass!",
+            "remove_portrait;Chosen;;left",
+            "wait;1000",
+            "transition;close;1000"
+        ],
+        "nid": "P7 Outro"
+    },
+    {
+        "name": "Overworld start",
+        "trigger": "overworld_start",
+        "level_nid": "P7",
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "reveal_overworld_node;P7",
+            "sound;MapHeal",
+            "wait;1000",
+            "reveal_overworld_road;P6;P7",
+            "wait;1000"
+        ],
+        "nid": "P7 Overworld start"
+    },
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "P8",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            ""
+        ],
+        "nid": "P8 Outro"
+    },
+    {
+        "name": "Overworld start",
+        "trigger": "overworld_start",
+        "level_nid": "P10",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "reveal_overworld_node;P10",
+            "sound;MapHeal",
+            "wait;1000",
+            "reveal_overworld_road;P9;P10",
+            "wait;1000",
+            ""
+        ],
+        "nid": "P10 Overworld start"
+    },
+    {
+        "name": "PROL Death Safado",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Safado'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear",
+            "add_portrait;Safado;FarRight;normal;CloseEyes",
+            "speak;Safado;I have to... at least... say something memorable... before I...;;;thought_bubble",
+            "remove_portrait;Safado",
+            "remove_unit;Safado",
+            "music_fade_back"
+        ],
+        "nid": "Global PROL Death Safado"
+    },
+    {
+        "name": "Minerve rout",
+        "trigger": "unit_death",
+        "level_nid": "P9",
+        "condition": "unit.nid == 'Minerve'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Minerve;FarRight;normal;CloseEyes",
+            "speak;Minerve;Ouchie~",
+            "remove_portrait;Minerve",
+            "remove_unit;Minerve;warp;fade",
+            "wait;1000",
+            "music_fade_back"
+        ],
+        "nid": "P9 Minerve rout"
+    },
+    {
+        "name": "Geoff dies game over",
+        "trigger": "unit_death",
+        "level_nid": "P7",
+        "condition": "unit.nid == 'Geoff'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "if;game.current_mode.nid == 'Casual'",
+            "    activate_turnwheel",
+            "else",
+            "    lose_game",
+            "end",
+            "lose_game"
+        ],
+        "nid": "P7 Geoff dies game over"
+    },
+    {
+        "name": "Milena recruit",
+        "trigger": "on_talk",
+        "level_nid": "P9",
+        "condition": "unit.nid == 'Cassian' and unit2.nid == 'Milena'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;Reinforcements",
+            "multi_add_portrait;Cassian;Left;Milena;Right",
+            "s;Milena;Ah... So we have to fight at last...",
+            "s;Cassian;Huh? Well, we do...|Actually, we don't! Who decided that anyway?",
+            "s;Milena;Our bosses...?",
+            "s;Cassian;Ah. You have a point there! That kinda sucks, right?",
+            "s;Milena;Tell me about it!|Say, before we kill each other... are you a traveler?",
+            "s;Cassian;Hmmm I think so!|I visited some countries with my sister before.|Well, not the whole continent.|Some places are not receptive at all, hahaha!|Well, not to make this an indirect offense...|Wait, you ARE trying to kill us, so it is the worse one yet!",
+            "bop_portrait;Milena",
+            "s;Milena;Aaaah how I wish I could partake in those journeys as well!|If you feel persecuted here, imagine how it must be for me anywhere else!",
+            "expression;Cassian;CloseEyes,NoSmile",
+            "s;Cassian;That's...",
+            "expression;Cassian;OpenEyes",
+            "s;Milena;I heard so many wonderful stories!|The great dunes of Aram, swallowing the sun itself!|The ancient trees of Gheldaron, as old as time itself!|The complex ruins of Zirantia, guarding many secrets for explorers to discover!",
+            "s;Cassian;Wow, you actually know more about this than me!",
+            "s;Milena;Don't you feel the sense of wonder? There's a magnificent world out there!|But... I'm trapped here, on this ruined wasteland.|As long as he is waging war with everyone...",
+            "s;Cassian;So we just have to get rid of the bad guy, right?",
+            "s;Milena;If only...",
+            "s;Cassian;That's no problem! We're on a mission to solve this right now!",
+            "s;Milena;Truly? I hope you succeed!",
+            "s;Cassian;Why don't you join us? You are fun and our goals align!",
+            "s;Milena;Umm... do you really mean it?",
+            "s;Cassian;Of course!",
+            "s;Milena;And have you talked to your teammates about it?",
+            "s;Cassian;Uhh... Nah, but we figure this out together later!",
+            "bop_portrait;Milena",
+            "s;Milena;Oh, okay! This is the best day ever!!",
+            "multi_remove_portrait;Cassian;Milena",
+            "change_team;Milena;player",
+            "sound;Level Up",
+            "alert;Milena has joined your party!",
+            "wait;2000",
+            "remove_talk;Cassian;Milena"
+        ],
+        "nid": "P9 Milena recruit"
+    },
+    {
+        "name": "Minerve dance",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "reset;{eval:target}"
+        ],
+        "nid": "Global Minerve dance"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "P10",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "chapter_title",
+            "transition;close",
+            "center_cursor;11,18",
+            "transition;open;1000",
+            "add_unit;Chosen;12,18",
+            "move_unit;Chosen;12,17",
+            "add_portrait;Chosen;Left",
+            "wait;1000",
+            "s;Chosen;So this is the Incubus King's realm, huh?",
+            "center_cursor;8,5",
+            "wait;1000",
+            "add_unit;Minerve;7,17;immediate;closest;fade",
+            "center_cursor;Chosen",
+            "wait;300",
+            "s;Chosen;It's a pile of shit!",
+            "s;???;It wasn't... always like this, y'know!?",
+            "move_portrait;Chosen;Right",
+            "mirror_portrait;Chosen",
+            "center_cursor;Minerve",
+            "music;Tension",
+            "add_portrait;Minerve;Left",
+            "s;Chosen;You again! You piss me off, go find someone else to screw!",
+            "s;Minerve;I'd love to~|But right now I'm at work~|Speaking of which...",
+            "multi_remove_portrait;Chosen;Minerve",
+            "wait;300",
+            "move_unit;Minerve;6,3;warp;closest",
+            "wait;500",
+            "center_cursor;Minerve",
+            "wait;500",
+            "add_portrait;Minerve;Left",
+            "s;Minerve;Come on out, girls~|Show them how tough we are for surviving here!",
+            "remove_portrait;Minerve",
+            "wait;300",
+            "spawn_group;enemy;north;enemy;normal;closest",
+            "wait;1000",
+            "center_cursor;Chosen",
+            "transition;close;1000",
+            "transition;open;1000",
+            "prep;t;Preparation"
+        ],
+        "nid": "P10 Intro"
+    },
+    {
+        "name": "Minerve rout",
+        "trigger": "unit_death",
+        "level_nid": "P10",
+        "condition": "unit.nid == 'Minerve'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Minerve;FarRight;normal;CloseEyes",
+            "speak;Minerve;Not againn~",
+            "remove_portrait;Minerve",
+            "remove_unit;Minerve;warp;fade",
+            "wait;1000",
+            "music_fade_back"
+        ],
+        "nid": "P10 Minerve rout"
+    },
+    {
+        "name": "Enemy reinforcements orc throwers 1",
+        "trigger": "turn_change",
+        "level_nid": "P10",
+        "condition": "game.turncount == 2",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "flicker_cursor;Minerve",
+            "add_portrait;Minerve;Left",
+            "s;Minerve;Humm...{c:wait;400} in hindsight, this is boriing~|I'll call some friends!",
+            "wait;200",
+            "remove_unit;Minerve;warp",
+            "wait;1000"
+        ],
+        "nid": "P10 Enemy reinforcements orc throwers 1"
+    },
+    {
+        "name": "Enemy reinforcements orc throwers 2",
+        "trigger": "turn_change",
+        "level_nid": "P10",
+        "condition": "game.turncount == 3",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "center_cursor;6,3",
+            "wait;300",
+            "add_unit;Minerve;6,3;warp;closest;fade",
+            "wait;500",
+            "add_portrait;Minerve;Left",
+            "s;Minerve;Heeey, I'm baaack~",
+            "wait;200",
+            "remove_portrait;Minerve",
+            "wait;200",
+            "spawn_group;orc;north;orc;normal;closest",
+            "wait;1000",
+            "change_ai;Minerve;Pursue"
+        ],
+        "nid": "P10 Enemy reinforcements orc throwers 2"
     }
 ]
