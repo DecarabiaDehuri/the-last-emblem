@@ -3737,17 +3737,18 @@
         "level": 9,
         "klass": "Suc_Minerve",
         "tags": [
+            "Boss",
             "Female"
         ],
         "bases": {
-            "HP": 28,
+            "HP": 40,
             "STR": 10,
-            "MAG": 5,
+            "MAG": 11,
             "SKL": 16,
             "SPD": 17,
             "LCK": 5,
-            "DEF": 9,
-            "RES": 11,
+            "DEF": 12,
+            "RES": 13,
             "CON": 7,
             "MOV": 5
         },
@@ -3766,11 +3767,20 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "True_Form",
+                "Pistil_Pleasure",
+                false
+            ],
+            [
+                "Area_Of_Ero",
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "True_Form"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -3913,7 +3923,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Duessel",
+        "portrait_nid": "Baruba",
         "affinity": "Anima",
         "fields": []
     },
@@ -4003,7 +4013,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Lust_Death_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [

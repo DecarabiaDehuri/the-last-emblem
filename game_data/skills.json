@@ -138,7 +138,7 @@
     },
     {
         "nid": "Silence",
-        "name": "SILENCED",
+        "name": "<red>[SILENCE]</>",
         "desc": "Unit cannot use magic.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -166,7 +166,7 @@
     },
     {
         "nid": "Poisoned",
-        "name": "POISONED",
+        "name": "<red>[POISON]</>",
         "desc": "Unit randomly receives up to 5 damage per turn.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -194,8 +194,8 @@
     },
     {
         "nid": "Blinded",
-        "name": "BLINDED",
-        "desc": "Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
+        "name": "<red>[BLIND]</>",
+        "desc": "Unit's accuracy and avoid greatly decreases.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -226,7 +226,7 @@
     },
     {
         "nid": "Confused",
-        "name": "CONFUSED",
+        "name": "<red>[CONFUSION]</>",
         "desc": "Unit behaves on their own and can't tell friend or foe.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -253,12 +253,16 @@
             [
                 "unit_anim",
                 "MapProvoke"
+            ],
+            [
+                "unselectable",
+                null
             ]
         ]
     },
     {
         "nid": "Sleep",
-        "name": "SLEEPING",
+        "name": "<red>[SLEEP]</>",
         "desc": "Unit is asleep. -5 DEF and RES. Unit awakes when receives a hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -302,12 +306,24 @@
             [
                 "lost_on_take_hit",
                 null
+            ],
+            [
+                "unit_anim",
+                "MapStun"
+            ],
+            [
+                "unit_tint",
+                [
+                    35,
+                    89,
+                    135
+                ]
             ]
         ]
     },
     {
         "nid": "Stunned",
-        "name": "STUNNED",
+        "name": "<red>[STUN]</>",
         "desc": "Unit cannot act for the remainder of their turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -347,8 +363,57 @@
         ]
     },
     {
+        "nid": "Paralysis",
+        "name": "<red>[PARALYSIS]</>",
+        "desc": "Unit cannot act.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "time",
+                4
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "unit_anim",
+                "MapStun"
+            ],
+            [
+                "unit_tint",
+                [
+                    166,
+                    162,
+                    35
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Exposed",
-        "name": "Exposed",
+        "name": "<red>[EXPOSED]</>",
         "desc": "Unit is more likely to receive critical hits. Can be stacked.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -366,11 +431,71 @@
             ],
             [
                 "time",
-                1
+                2
             ],
             [
                 "negative",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_Drain",
+        "name": "<red>[LUST DRAIN]</>",
+        "desc": "Unit loses 5 mana at the beginning of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "mana_regeneration",
+                -5
+            ],
+            [
+                "time",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_Death",
+        "name": "<red>[LUST DEATH]</>",
+        "desc": "Unit is incapacitated.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            38
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "unit_tint",
+                [
+                    168,
+                    35,
+                    37
+                ]
             ]
         ]
     },
@@ -387,6 +512,366 @@
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Silence_attack",
+        "name": "<red>[SILENCE]</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[SILENCE]</>: Unit cannot use magic.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Silence_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Silence_proc",
+        "name": "<red>[SILENCE]</> infliction",
+        "desc": "Attacks have a chance to inflict <red>[SILENCE]</>.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Silence"
+            ]
+        ]
+    },
+    {
+        "nid": "Poison_attack",
+        "name": "<red>[POISON]</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[POISON]</>: Unit randomly receives up to 5 damage per turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            4
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Poison_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Poison_proc",
+        "name": "<red>[POISON]</> infliction",
+        "desc": "Unit randomly receives up to 5 damage per turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            4
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Poisoned"
+            ]
+        ]
+    },
+    {
+        "nid": "Blind_attack",
+        "name": "<red>[BLIND]</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Blind_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blind_proc",
+        "name": "<red>[BLIND]</> infliction",
+        "desc": "Attacks have a chance to inflict <red>[BLIND]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Blinded"
+            ]
+        ]
+    },
+    {
+        "nid": "Confusion_attack",
+        "name": "<red>[CONFUSION]</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[CONFUSION]</>: Unit behaves on their own and can't tell friend or foe.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            36
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Confusion_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Confusion_proc",
+        "name": "<red>[CONFUSION]</> infliction",
+        "desc": "Attacks have a chance to inflict <red>[CONFUSION]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            36
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Confused"
+            ]
+        ]
+    },
+    {
+        "nid": "Sleep_attack",
+        "name": "<red>[SLEEP]</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[SLEEP]</>: Unit is asleep. -5 DEF and RES. Unit awakes when receives a hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            44
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Sleep_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sleep_proc",
+        "name": "<red>[SLEEP]</> infliction",
+        "desc": "Attacks have a chance to inflict <red>[SLEEP]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            44
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Sleep"
+            ]
+        ]
+    },
+    {
+        "nid": "Stun_attack",
+        "name": "<red>[STUN]</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[STUN]</>: Unit cannot act for the remainder of their turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            38
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Active_Synergy"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Stun_proc",
+        "name": "<red>[STUN]</> infliction",
+        "desc": "Attacks have a chance to inflict <red>[STUN]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            38
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Stunned"
+            ]
+        ]
+    },
+    {
+        "nid": "Paralysis_attack",
+        "name": "<red>[PARALYSIS]</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[PARALYSIS]</>: Unit cannot act.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Paralysis_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Paralysis_proc",
+        "name": "<red>[PARALYSIS]</> infliction",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Paralysis"
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_Drain_attack",
+        "name": "<red>LUST DRAIN</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[LUST DRAIN]</>: Unit loses 5 mana at the beginning of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Lust_Drain_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_Drain_proc",
+        "name": "<red>[LUST DRAIN]</> infliction",
+        "desc": "Attacks have a chance to inflict <red>[LUST DRAIN]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Lust_Drain"
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_Death_attack",
+        "name": "<red>[LUST DEATH]</> infliction",
+        "desc": "Attacks have a LUK% chance to inflict <red>[LUST DEATH]</>: Unit is incapacitated.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            38
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Lust_Death_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_Death_proc",
+        "name": "<red>[LUST DEATH]</> infliction",
+        "desc": "Attacks have a chance to inflict <red>[LUST DEATH]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            38
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Lust_Death"
             ]
         ]
     },
@@ -3205,6 +3690,22 @@
             [
                 "resist",
                 5
+            ]
+        ]
+    },
+    {
+        "nid": "True_Form",
+        "name": "True Form",
+        "desc": "Minerve disperses the magic on her illusion, focusing instead on dealing damage through her true visage. She alternates between a single target powerful attack and a AoE attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
             ]
         ]
     },

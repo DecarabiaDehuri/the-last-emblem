@@ -10534,7 +10534,12 @@
             "CON": 25,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Poison_attack"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -10582,6 +10587,11 @@
                 null
             ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
                 false,
                 0,
                 null
@@ -10716,6 +10726,11 @@
                 null
             ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
                 false,
                 0,
                 null
@@ -10994,6 +11009,11 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Myrmidon",
@@ -11077,7 +11097,12 @@
             "CON": 25,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Stun_attack"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -11125,6 +11150,11 @@
                 null
             ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
                 false,
                 0,
                 null
@@ -11268,6 +11298,11 @@
                 false,
                 0,
                 null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Cyclops Axe {IS}",
@@ -11275,7 +11310,7 @@
             0,
             0
         ],
-        "map_sprite_nid": "Cyclops (U) Axe {IS}-stand",
+        "map_sprite_nid": "Rock Thrower",
         "combat_anim_nid": "Orc",
         "fields": []
     },
@@ -11297,7 +11332,7 @@
             "MAG": 0,
             "SKL": 3,
             "SPD": 3,
-            "LCK": 2,
+            "LCK": 5,
             "DEF": 2,
             "RES": 1,
             "CON": 16,
@@ -11307,11 +11342,11 @@
             "HP": 70,
             "STR": 80,
             "MAG": 25,
-            "SKL": 25,
-            "SPD": 25,
-            "LCK": 25,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 35,
             "DEF": 60,
-            "RES": 25,
+            "RES": 30,
             "CON": 0,
             "MOV": 0
         },
@@ -11351,7 +11386,12 @@
             "CON": 25,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Stun_attack"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -11399,6 +11439,11 @@
                 null
             ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
                 false,
                 0,
                 null
@@ -11490,6 +11535,10 @@
             [
                 1,
                 "Flying"
+            ],
+            [
+                1,
+                "Blind_attack"
             ]
         ],
         "wexp_gain": {
@@ -11539,6 +11588,11 @@
                 null
             ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
                 false,
                 0,
                 null
@@ -11674,6 +11728,11 @@
                 false,
                 0,
                 null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Militia (F) Deserter Lance Helmet {Rasdel, Epicer}",
@@ -11806,6 +11865,11 @@
                 false,
                 0,
                 null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": null,
@@ -11887,7 +11951,12 @@
             "CON": 25,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Confusion_attack"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -11938,6 +12007,11 @@
                 false,
                 0,
                 null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -11969,7 +12043,7 @@
             "MAG": 2,
             "SKL": 5,
             "SPD": 5,
-            "LCK": 0,
+            "LCK": 1,
             "DEF": 3,
             "RES": 2,
             "CON": 10,
@@ -12027,6 +12101,10 @@
             [
                 1,
                 "Flying"
+            ],
+            [
+                1,
+                "Sleep_attack"
             ]
         ],
         "wexp_gain": {
@@ -12097,7 +12175,7 @@
     },
     {
         "nid": "Suc_foe_2",
-        "name": "Succubus",
+        "name": "Elite Succubus",
         "desc": "",
         "tier": 1,
         "movement_group": "Fliers",
@@ -12115,7 +12193,7 @@
             "MAG": 2,
             "SKL": 5,
             "SPD": 5,
-            "LCK": 0,
+            "LCK": 4,
             "DEF": 3,
             "RES": 2,
             "CON": 12,
@@ -12173,6 +12251,10 @@
             [
                 1,
                 "Flying"
+            ],
+            [
+                1,
+                "Lust_Drain_attack"
             ]
         ],
         "wexp_gain": {
@@ -12237,7 +12319,7 @@
             0,
             0
         ],
-        "map_sprite_nid": "Succubus (F) {SkidMarc25}-stand",
+        "map_sprite_nid": "EliteSuc-stand",
         "combat_anim_nid": "Succubus_2",
         "fields": []
     },
@@ -12260,7 +12342,7 @@
             "MAG": 4,
             "SKL": 5,
             "SPD": 5,
-            "LCK": 0,
+            "LCK": 3,
             "DEF": 3,
             "RES": 2,
             "CON": 13,
@@ -12314,7 +12396,12 @@
             "CON": 25,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Paralysis_attack"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -12365,6 +12452,11 @@
                 false,
                 0,
                 null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "417a3038-e69e-4aab-bcd0-632433e5d66c",
@@ -12395,7 +12487,7 @@
             "MAG": 2,
             "SKL": 3,
             "SPD": 5,
-            "LCK": 0,
+            "LCK": 3,
             "DEF": 6,
             "CON": 9,
             "MOV": 7,
@@ -12511,6 +12603,11 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Tarvos (M) Elder Centaur {Seal}",
@@ -12605,6 +12702,10 @@
             [
                 1,
                 "Canto"
+            ],
+            [
+                1,
+                "Paralysis_attack"
             ]
         ],
         "wexp_gain": {
@@ -12657,6 +12758,11 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Tarvos (M) Elder Centaur {Seal}",
@@ -12786,6 +12892,11 @@
                 null
             ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
                 false,
                 0,
                 null

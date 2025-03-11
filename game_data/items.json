@@ -361,6 +361,57 @@
         ]
     },
     {
+        "nid": "Beer",
+        "name": "Beer",
+        "desc": "Cheap alcohol. Heals for 20 HP, but user is inflicted with <red>[CONFUSION]</>.",
+        "icon_nid": "Potions",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "heal",
+                20
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                50
+            ],
+            [
+                "self_status_on_hit",
+                "Confused"
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
         "nid": "Heroic_Blow_ability",
         "name": "Heroic Blow",
         "desc": "Deals more damage to monsters.\n<blue>Costs 10 mana</>.",
@@ -1670,13 +1721,13 @@
         ]
     },
     {
-        "nid": "True_Form",
-        "name": "True Form",
-        "desc": "Minerve disperses the magic on her illusion, focusing instead on dealing damage through her true visage.",
+        "nid": "Pistil_Pleasure",
+        "name": "Pistil Pleasure",
+        "desc": "Minerve hits an enemy with a powerful Lust attack. 1 turn cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
-            35
+            48
         ],
         "components": [
             [
@@ -1726,7 +1777,7 @@
             [
                 "prf_unit",
                 [
-                    "Minerve"
+                    "Minerve_true"
                 ]
             ],
             [
@@ -1736,6 +1787,108 @@
             [
                 "weapon_type",
                 "Dark"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Area_Of_Ero",
+        "name": "Area Of Ero",
+        "desc": "Minerve hits an area with a Lust attack. 1 turn cooldown.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            44
+        ],
+        "components": [
+            [
+                "transform",
+                null
+            ],
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Minerve_true"
+                ]
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "enemy_blast_aoe",
+                1
+            ],
+            [
+                "map_hit_sfx",
+                "GorgonMagic3"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Wyrmsfire"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    240,
+                    23,
+                    255
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "Throw 2"
             ]
         ]
     },

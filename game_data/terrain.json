@@ -9,7 +9,7 @@
         ],
         "minimap": "Grass",
         "platform": "Plains",
-        "background": "combat_plains",
+        "background": "Grassland",
         "mtype": "Normal",
         "opaque": false,
         "status": null
@@ -39,7 +39,7 @@
         ],
         "minimap": "Forest",
         "platform": "Forest",
-        "background": "combat_forest",
+        "background": "GrassMaze",
         "mtype": "Forest",
         "opaque": false,
         "status": "Forest"
@@ -99,7 +99,7 @@
         ],
         "minimap": "Floor",
         "platform": "Floor",
-        "background": "combat_castle2",
+        "background": "Castle",
         "mtype": "Floor",
         "opaque": false,
         "status": null
@@ -114,7 +114,7 @@
         ],
         "minimap": "Sand",
         "platform": "Road",
-        "background": "combat_plains",
+        "background": "Road1",
         "mtype": "Normal",
         "opaque": false,
         "status": null
@@ -174,7 +174,7 @@
         ],
         "minimap": "Sea",
         "platform": "Lake",
-        "background": "combat_river",
+        "background": "Underwater1",
         "mtype": "Sea",
         "opaque": false,
         "status": "Avoid10"
@@ -189,7 +189,7 @@
         ],
         "minimap": "Sea",
         "platform": "Sea",
-        "background": "combat_sea",
+        "background": "Underwater1",
         "mtype": "Sea",
         "opaque": false,
         "status": "Avoid10"
@@ -204,7 +204,7 @@
         ],
         "minimap": "River",
         "platform": "River",
-        "background": "combat_river",
+        "background": "Underwater1",
         "mtype": "River",
         "opaque": false,
         "status": null
@@ -219,7 +219,7 @@
         ],
         "minimap": "Hill",
         "platform": "Hill",
-        "background": "combat_hill",
+        "background": "Dirt1",
         "mtype": "Hill",
         "opaque": false,
         "status": "Mountain"
@@ -234,7 +234,7 @@
         ],
         "minimap": "Mountain",
         "platform": "Mountain",
-        "background": "combat_hill",
+        "background": "RockCave1",
         "mtype": "Mountain",
         "opaque": true,
         "status": "Peak"
@@ -249,7 +249,7 @@
         ],
         "minimap": "Cliff",
         "platform": "Cliff",
-        "background": "combat_hill",
+        "background": "Dirt1",
         "mtype": "Cliff",
         "opaque": false,
         "status": null
@@ -279,7 +279,7 @@
         ],
         "minimap": "House",
         "platform": "House",
-        "background": "combat_village",
+        "background": "Road3",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -324,7 +324,7 @@
         ],
         "minimap": "Shop",
         "platform": "Armory",
-        "background": "combat_plains",
+        "background": "Road1",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -339,7 +339,7 @@
         ],
         "minimap": "Shop",
         "platform": "Vendor",
-        "background": "combat_plains",
+        "background": "Road1",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -369,7 +369,7 @@
         ],
         "minimap": "House",
         "platform": "Village",
-        "background": "combat_village",
+        "background": "Road3",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -429,7 +429,7 @@
         ],
         "minimap": "Ruins",
         "platform": "Ruins",
-        "background": "combat_ruins",
+        "background": "Ruins1",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -444,7 +444,7 @@
         ],
         "minimap": "Ruins",
         "platform": "Ruins",
-        "background": "combat_ruins",
+        "background": "Ruins1",
         "mtype": "Fort",
         "opaque": false,
         "status": null
@@ -458,9 +458,24 @@
             50
         ],
         "minimap": "Mountain",
-        "platform": "Fort",
-        "background": "Cave",
+        "platform": "Sand",
+        "background": "combat_cave",
         "mtype": "Cave",
+        "opaque": false,
+        "status": null
+    },
+    {
+        "nid": "Wasteland",
+        "name": "Wasteland",
+        "color": [
+            117,
+            117,
+            117
+        ],
+        "minimap": "Waste",
+        "platform": "Sand",
+        "background": "Wasteland",
+        "mtype": "Normal",
         "opaque": false,
         "status": null
     }
