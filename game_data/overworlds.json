@@ -148,13 +148,24 @@
             },
             {
                 "nid": "P11",
-                "name": "",
+                "name": "Hard Wood Forest",
                 "pos": [
                     22,
                     10
                 ],
-                "icon": "forest_temple",
+                "icon": "woods",
                 "level": "P11",
+                "menu_options": []
+            },
+            {
+                "nid": "P12",
+                "name": "Confrontation",
+                "pos": [
+                    23,
+                    8
+                ],
+                "icon": "forest_temple",
+                "level": "P12",
                 "menu_options": []
             }
         ],
@@ -271,6 +282,20 @@
                 [
                     22,
                     10
+                ]
+            ],
+            "(22, 10)-(23, 8)": [
+                [
+                    22,
+                    10
+                ],
+                [
+                    22,
+                    9
+                ],
+                [
+                    23,
+                    8
                 ]
             ]
         },

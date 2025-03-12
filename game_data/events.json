@@ -8,9 +8,23 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "music_clear",
+            "change_background;BlackBackground",
             "transition;close",
+            "music_clear;1000",
             "wait;1000",
+            "transition;open",
+            "s;;Warning: this is a <red>+18</> game.|It contains explicit sexual language and imagery.|This is a fangame tribute to the adult RPG The Last Sovereign, made by Sierra Lee.|This game contains spoilers up to the end of Chapter 3 of The Last Sovereign.;center;;overworld_narration",
+            "wait;4000",
+            "end_skip",
+            "music;FuckEmblem;3000",
+            "change_background;Fuck Emblem",
+            "wait;2000",
+            "change_background;FuckEmblemdim",
+            "s;;The Fuck Emblems.|Nobody knows when, how or why they were created.|Possessing a Fuck Emblem makes someone the god of sex, virtually irresistible to women.|Well, now that I think about it, I can pretty much guess on why they were created.|Regardless of intentions or circunstamces, the Fuck Emblems changed the world.|Whole kingdoms rose and fell due to those wretched Emblems.|With time and enough battles they were broken, scattered far and wide.|Their status eventually amounting to nothing but silly fairy tales.|However, the world was never truly rid of them.|Indeed, this is a story surrounding those remaining Emblems.;center;;cinematic",
+            "music_clear;1000",
+            "s;;This is the story of The Last Emblem.;center;;cinematic",
+            "transition;close;2000",
+            "wait;5000",
             "music;First Choice",
             "change_background;StarSky",
             "transition;open;2000",
@@ -32,29 +46,13 @@
             "    win_game",
             "elif;'{v:_last_choice}' == 'No'",
             "    game_var;prologue;0",
-            "    set_next_chapter;DEBUG",
+            "    set_next_chapter;DEBUG_2",
             "    transition;close;2000",
             "    wait;1000",
             "    win_game",
             "end"
         ],
         "nid": "0 Intro"
-    },
-    {
-        "name": "DeathONeill",
-        "trigger": "unit_death",
-        "level_nid": "0",
-        "condition": "unit.nid == \"O'Neill\"",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;O'Neill;Left",
-            "speak;O'Neill;What? How?",
-            "expression;O'Neill;CloseEyes",
-            "remove_portrait;O'Neill"
-        ],
-        "nid": "0 DeathONeill"
     },
     {
         "name": "DeathSaar",
@@ -102,34 +100,6 @@
         "nid": "0 Outro"
     },
     {
-        "name": "OnlyBoss",
-        "trigger": "combat_end",
-        "level_nid": "0",
-        "condition": "len(game.get_enemy_units()) == 1",
-        "commands": [],
-        "only_once": true,
-        "priority": 20,
-        "_source": [
-            "add_portrait;Seth;Left",
-            "speak;Seth;All that's left is their leader...",
-            "remove_portrait;Seth"
-        ],
-        "nid": "0 OnlyBoss"
-    },
-    {
-        "name": "Defeat Boss",
-        "trigger": "combat_end",
-        "level_nid": "0",
-        "condition": "game.check_dead(\"O'Neill\")",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "win_game"
-        ],
-        "nid": "0 Defeat Boss"
-    },
-    {
         "name": "Defeat Boss",
         "trigger": "combat_end",
         "level_nid": "5",
@@ -141,61 +111,6 @@
             "win_game"
         ],
         "nid": "5 Defeat Boss"
-    },
-    {
-        "name": "EnemyTurn2",
-        "trigger": "enemy_turn_change",
-        "level_nid": "0",
-        "condition": "game.turncount == 2",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "add_portrait;O'Neill;Right",
-            "speak;O'Neill;What was that? Do you think you can take me, wretched lordling?|Come! It's time you high-and-mighty knights learned to respect a true warrior!",
-            "remove_portrait;O'Neill",
-            "change_ai;O'Neill;Defend"
-        ],
-        "nid": "0 EnemyTurn2"
-    },
-    {
-        "name": "FightONeill",
-        "trigger": "combat_start",
-        "level_nid": "0",
-        "condition": "check_default(\"O'Neill\",['Eirika'])",
-        "commands": [],
-        "only_once": true,
-        "priority": 20,
-        "_source": [
-            "add_portrait;O'Neill;Left",
-            "speak;O'Neill;You will be the first to die!",
-            "remove_portrait;O'Neill",
-            "change_music;player_phase;Grasp at Victory"
-        ],
-        "nid": "0 FightONeill"
-    },
-    {
-        "name": "Eirika/ONeill",
-        "trigger": "combat_start",
-        "level_nid": "0",
-        "condition": "check_pair('Eirika',\"O'Neill\")",
-        "commands": [],
-        "only_once": true,
-        "priority": 20,
-        "_source": [
-            "hide_combat_ui",
-            "add_portrait;O'Neill;Left;;;no_block",
-            "add_portrait;Eirika;Right",
-            "speak;O'Neill;How did you manage to take us on?!|You're just a little girl!",
-            "speak;Eirika;I fight for my country.{br}For my people!|{c:expression;Eirika;HalfCloseEyes}For their sakes I will defeat you!",
-            "bop;O'Neill;no_block",
-            "s;O'Neill;We'll see about that!",
-            "remove_portrait;O'Neill;no_block",
-            "remove_portrait;Eirika",
-            "change_music;player_phase;Grasp at Victory",
-            "show_combat_ui"
-        ],
-        "nid": "0 Eirika/ONeill"
     },
     {
         "name": "FightSaar",
@@ -4790,9 +4705,8 @@
             "s;SpiderQueen;...;no_talk",
             "s;SpiderQueen;Who would ever want to...",
             "remove_portrait;SpiderQueen;;left",
-            "s;Chosen;Huh?",
-            "",
-            "set_next_chapter;P3"
+            "s;Chosen;...;;;thought_bubble",
+            "transition;close;1000"
         ],
         "nid": "P2 Outro"
     },
@@ -5320,9 +5234,19 @@
             "flicker_cursor;Safado",
             "wait;300",
             "add_portrait;Safado;Left;;CloseEyes",
-            "s;Safado;Hmm...{c:wait;300} Here comes the opportunity I was waiting for.;;;thought_bubble",
-            "remove_portrait;Safado",
-            "wait;600"
+            "s;Safado;Hmm...{c:wait;300} Here comes the opportunity I was waiting for.|I'm scared as fuck, though...|What if they see through me?!|Will they notice I'm going for the chest?|What if I...;;;thought_bubble",
+            "expression;Safado;OpenEyes",
+            "add_portrait;Bandit2;Right;right;Smile",
+            "s;Bandit2;Hey there! We're gonna go to battle soon! Pretty nerve-wracking, right?!",
+            "s;Safado;Oh, you poor child. I understand, I was an amateur once.",
+            "expression;Bandit2;NoSmile",
+            "expression;Safado;CloseEyes",
+            "s;Safado;Now it all flows through me naturally.",
+            "expression;Safado;OpenEyes",
+            "s;Safado;Here's my tip: don't hesitate, just do it.|Only then, one day, you may achieve the same zen as I.",
+            "wait;500",
+            "multi_remove_portrait;Safado;Bandit2",
+            "wait;1000"
         ],
         "nid": "P5 Stairs enemy reinforcement e Safado"
     },
@@ -5497,7 +5421,7 @@
         "priority": 20,
         "_source": [
             "transition;Close",
-            "shop;{unit};Iron_Sword,Slim_Sword,Steel_Sword,Iron_Lance,Slim_Lance,Steel_Lance,Iron_Axe,Steel_Axe,Hand_Axe;armory",
+            "shop;{unit};Iron_Sword,Slim_Sword,Steel_Sword,Iron_Lance,Slim_Lance,Steel_Lance,Iron_Axe,Steel_Axe,Hand_Axe,Iron_Bow,Steel_Bow,Short_Bow;armory",
             "transition;Open"
         ],
         "nid": "P4 Armory Nodford"
@@ -5672,7 +5596,7 @@
         "priority": 20,
         "_source": [
             "transition;Close",
-            "shop;{unit};Health_Potion,Heal,Fire,Thunder,Lightning,Flux;vendor",
+            "shop;{unit};Health_Potion,Heal,Fire,Thunder,Lightning,Flux,Shine;vendor",
             "transition;Open"
         ],
         "nid": "P4 Shop Nodford"
@@ -5714,6 +5638,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "game_var;rosaphoenix;0",
             "add_talk;Chosen;Rosa",
             "show_layer;details",
             "chapter_title",
@@ -5982,6 +5907,34 @@
         "_source": [
             "wait;1000",
             "music_clear",
+            "center_cursor;1,11",
+            "wait;1000",
+            "music;Reinforcements",
+            "add_unit;Baruba;0,12;fade;closest;west",
+            "add_unit;108;0,9;fade;closest;west",
+            "add_unit;109;0,13;fade;closest;west",
+            "add_unit;110;0,11;fade;closest;west",
+            "add_unit;125;0,8;;fade;closest;west",
+            "add_unit;126;0,14;fade;closest;west",
+            "add_unit;127;0,6;fade;closest;west",
+            "wait;1000",
+            "flicker_cursor;Baruba",
+            "add_portrait;Baruba;Left",
+            "wait;300",
+            "s;Baruba;Hey, asshats!{c:wait;300} Make way for the pros!",
+            "if;game.check_alive('Rosa') == True and {v:rosaphoenix} == 0",
+            "    flicker_cursor;Rosa",
+            "    add_portrait;Rosa;Right",
+            "    s;Rosa;Thank you very much for your support.",
+            "    remove_portrait;Rosa",
+            "    center_cursor;Baruba",
+            "elif;game.check_alive('Rosa') == False",
+            "    expression;Baruba;NoSmile,CloseEyes",
+            "    s;Baruba;So that girlie didn't make it, eh...",
+            "    remove_portrait;Baruba",
+            "end",
+            "remove_portrait;Baruba",
+            "wait;2000",
             "victory_screen;Victory",
             "wait;1000",
             "win_game"
@@ -6015,6 +5968,9 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "transition;close;1000",
+            "music_clear",
+            "wait;1000",
             ""
         ],
         "nid": "P6 Outro"
@@ -6061,7 +6017,8 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "enable_supports;t"
+            "enable_supports;t",
+            "game_var;rosaphoenix;0"
         ],
         "nid": "0 Variables"
     },
@@ -6235,7 +6192,12 @@
             "give_skill;Safado;Sneaking_Stance;;persistent;no_banner",
             "give_skill;Lucia;Striking_Defiance;;no_banner;persistent",
             "give_skill;Mira;Lust_Death_attack;;persistent;no_banner",
-            "give_item;Chosen;Beer"
+            "give_skill;Milena;Succubus_Mana;;persistent;no_banner",
+            "give_skill;Milena;Dance;;no_banner;persistent",
+            "give_skill;Milena;Subtle_Slithering;;no_banner;persistent",
+            "give_item;Chosen;Loot_Bag",
+            "give_skill;Milena;Constricting_Love;;persistent",
+            "give_skill;Milena;Mesmerizing_Tune;;persistent"
         ],
         "nid": "DEBUG_2 testing"
     },
@@ -7151,6 +7113,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "level_var;shop;0",
             "chapter_title",
             "transition;close",
             "wait;1000",
@@ -7243,6 +7206,7 @@
             "multi_remove_portrait;Minerve;Chosen;Simonyoung",
             "wait;500",
             "spawn_group;enemy;west;enemy;normal;no_follow",
+            "spawn_group;enemy2;east;enemy2;normal;closest;no_follow",
             "wait;1000",
             "add_portrait;Minerve;Left",
             "s;Minerve;Elite Succubi, make them bleed as much as you make me wet~",
@@ -7251,6 +7215,7 @@
             "center_cursor;Chosen",
             "transition;close;1000",
             "wait;1000",
+            "remove_unit;Simonyoung;immediate;fade",
             "transition;open;1000",
             "prep;t;Preparation"
         ],
@@ -7363,7 +7328,8 @@
             "add_weather;fire",
             "wait;1000",
             "change_music;enemy2_phase;RosaPhoenix",
-            "change_portrait;Rosa;RosaPhoenix"
+            "change_portrait;Rosa;RosaPhoenix",
+            "game_var;rosaphoenix;1"
         ],
         "nid": "Global Rosa Phoenix Trigger"
     },
@@ -8001,10 +7967,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;game.current_mode.permadeath",
-            "    lose_game",
-            "else",
-            "end"
+            ""
         ],
         "nid": "DEBUG Test difficulty"
     },
@@ -8171,8 +8134,168 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            ""
+            "music_clear",
+            "wait;500",
+            "center_cursor;Minerve_true",
+            "add_portrait;Minerve_true;FarRight;;NoSmile,CloseEyes",
+            "s;Minerve_true;I{tgm}{c:wait;400}.{c:wait;400}.{c:wait;400}.",
+            "add_unit;Rialayoung;Minerve_true;warp;closest;fade",
+            "map_anim;MapSurprise;Minerve_true",
+            "add_portrait;Rialayoung;FarLeft",
+            "move_portrait;Rialayoung;FarRight",
+            "multi_remove_portrait;Rialayoung;Minerve",
+            "remove_unit;Rialayoung;warp;fade",
+            "remove_unit;Minerve_true;warp;fade",
+            "wait;1000",
+            "music_fade_back"
         ],
         "nid": "P11 Minerve \"dead\""
+    },
+    {
+        "name": "Succubus Mana",
+        "trigger": "turn_change",
+        "level_nid": null,
+        "condition": "game.turncount == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 6,
+        "_source": [
+            "if;game.check_alive('Milena') == True",
+            "    set_current_mana;Milena;0",
+            "end"
+        ],
+        "nid": "Global Succubus Mana"
+    },
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "P5",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;1000",
+            "music_clear",
+            "wait;1000"
+        ],
+        "nid": "P5 Outro"
+    },
+    {
+        "name": "Casa shop",
+        "trigger": "Visit",
+        "level_nid": "P11",
+        "condition": "region.nid == 'casa'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;{v:shop} == 0",
+            "    change_background;House",
+            "    multi_add_portrait;{unit};Left;SucShop;Right",
+            "    s;SucShop;Oh?{c:wait;300} Been a while since our last visitors.|Come on, buy our stuff.|I don't care who you are or what you're doing. We need money all the same.",
+            "    level_var;shop;1",
+            "    transition;close",
+            "    change_background",
+            "    multi_remove_portrait;{unit};SucShop",
+            "end",
+            "transition;close",
+            "shop;{unit};Health_Potion,Large_Health_Potion,Huge_Health_Potion,Mana_Potion,Large_Mana_Potion,Huge_Mana_Potion,Shine,Elfire,Luna,Elixir;vendor",
+            "transition;open",
+            ""
+        ],
+        "nid": "P11 Casa shop"
+    },
+    {
+        "name": "Gain Sx",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "level_var;sxpurse;{eval: game.get_random(100, 500)}",
+            "wait;300",
+            "give_money;{v:sxpurse}",
+            "wait;300"
+        ],
+        "nid": "Global Gain Sx"
+    },
+    {
+        "name": "Rosa Phoenix alive check end chapter",
+        "trigger": "level_end",
+        "level_nid": null,
+        "condition": "game.game_vars['rosaphoenix'] == 1 and game.check_alive('Rosa') == True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "kill_unit;Rosa;immediate"
+        ],
+        "nid": "Global Rosa Phoenix alive check end chapter"
+    },
+    {
+        "name": "Gain loot",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "#pyev1",
+            "item_pool=['Angelic_Robe','Energy_Ring','Secret_Book','Speedwing','Goddess_Icon','Dragonshield','Talisman'] #Fill in with whatever item NIDs you want",
+            "r=random.randint(0,len(item_pool)-1) ",
+            "$give_item unit.nid item_pool[r]"
+        ],
+        "nid": "Global Gain loot"
+    },
+    {
+        "name": "Rout Victory",
+        "trigger": "combat_end",
+        "level_nid": "P11",
+        "condition": "len(game.get_enemy_units()) == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
+            "win_game"
+        ],
+        "nid": "P11 Rout Victory"
+    },
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "P11",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;1000",
+            "wait;1000"
+        ],
+        "nid": "P11 Outro"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "P12",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "chapter_title",
+            "transition;close",
+            "center_cursor;10,7"
+        ],
+        "nid": "P12 Intro"
     }
 ]

@@ -3541,7 +3541,7 @@
     {
         "nid": "Milena",
         "name": "Milena",
-        "desc": "A playful Lamia with dreams of peace.",
+        "desc": "A playful Lamia with dreams of travel.",
         "variant": "",
         "level": 9,
         "klass": "Suc_Lamia",
@@ -3559,7 +3559,7 @@
             "DEF": 3,
             "RES": 4,
             "CON": 9,
-            "MOV": 5
+            "MOV": 2
         },
         "growths": {
             "HP": 50,
@@ -3627,6 +3627,11 @@
                 false,
                 0,
                 251
+            ],
+            "Refresh": [
+                false,
+                1,
+                null
             ]
         },
         "alternate_classes": [],
@@ -3675,7 +3680,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Lust_Drain_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -3773,6 +3783,10 @@
             [
                 "Area_Of_Ero",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
         "learned_skills": [
@@ -4114,9 +4128,18 @@
             [
                 "Flux",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Poison_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -4214,6 +4237,10 @@
             [
                 "DarkWeb",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
         "learned_skills": [],
@@ -4310,9 +4337,18 @@
             [
                 "Flail",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Blind_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -4416,6 +4452,10 @@
             [
                 "Cyanogenic_glycosides",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
         "learned_skills": [],
@@ -4519,7 +4559,7 @@
             "MAG": 0,
             "SKL": 6,
             "SPD": 8,
-            "LCK": 0,
+            "LCK": 3,
             "DEF": 5,
             "CON": 12,
             "MOV": 5,
@@ -4546,12 +4586,20 @@
             [
                 "Hatchet",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
         "learned_skills": [
             [
                 1,
                 "Last_Stand"
+            ],
+            [
+                1,
+                "Stun_attack"
             ]
         ],
         "unit_notes": [],
@@ -4721,7 +4769,7 @@
             "MAG": 0,
             "SKL": 12,
             "SPD": 13,
-            "LCK": 3,
+            "LCK": 8,
             "DEF": 2,
             "CON": 12,
             "MOV": 6,
@@ -4744,9 +4792,18 @@
             [
                 "Slim_Sword",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Sleep_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -4838,6 +4895,10 @@
         "starting_items": [
             [
                 "Iron_Blade",
+                false
+            ],
+            [
+                "Sx_Purse",
                 false
             ]
         ],
@@ -4934,12 +4995,20 @@
             [
                 "Killer_Axe",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
         "learned_skills": [
             [
                 1,
                 "Anticrit"
+            ],
+            [
+                1,
+                "Paralysis_attack"
             ]
         ],
         "unit_notes": [],
@@ -5613,12 +5682,20 @@
             [
                 "Hand_Axe",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
         "learned_skills": [
             [
                 1,
                 "SwordBreaker"
+            ],
+            [
+                1,
+                "Stun_attack"
             ]
         ],
         "unit_notes": [],
@@ -5666,7 +5743,7 @@
         "nid": "SucCentaurBoss",
         "name": "Centaur Boss",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 12,
         "klass": "Suc_Centaur_Boss",
         "tags": [
@@ -5692,9 +5769,18 @@
             [
                 "Iron_Blade",
                 false
+            ],
+            [
+                "Loot_Bag",
+                true
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Silence_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -5705,7 +5791,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "CentaurBoss",
-        "affinity": null,
+        "affinity": "None",
         "fields": []
     }
 ]

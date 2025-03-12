@@ -1,5 +1,123 @@
 [
     {
+        "nid": "Sx_Purse",
+        "name": "Sx Purse",
+        "desc": "Use this item to gain some Sx. Does not end unit's turn.",
+        "icon_nid": "Consumable",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Gain Sx"
+            ],
+            [
+                "map_cast_anim",
+                "MapSurprise"
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Loot_Bag",
+        "name": "Loot Bag",
+        "desc": "Use this item to gain a random <green>stat booster</>. Does not end unit's turn.",
+        "icon_nid": "Consumable",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Gain loot"
+            ],
+            [
+                "map_cast_anim",
+                "MapSurprise"
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Fap",
         "name": "Fap",
         "desc": "Let's have fun! Applies a buff. Gains 5 mana.",
@@ -361,17 +479,77 @@
         ]
     },
     {
-        "nid": "Beer",
-        "name": "Beer",
-        "desc": "Cheap alcohol. Heals for 20 HP, but user is inflicted with <red>[CONFUSION]</>.",
-        "icon_nid": "Potions",
+        "nid": "Dance",
+        "name": "Dance",
+        "desc": "<green>Refreshes</> an allied unit, letting them act again this turn. Costs <blue> 4 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
             1,
-            1
+            50
         ],
         "components": [
             [
-                "target_tile",
+                "refresh",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "MapSmallHealTrans"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    236,
+                    28,
+                    255
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "battle_cast_anim",
+                "Refresh"
+            ],
+            [
+                "weapon_type",
+                "Refresh"
+            ]
+        ]
+    },
+    {
+        "nid": "Masturbate",
+        "name": "Masturbate",
+        "desc": "Gain <blue>4 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            34
+        ],
+        "components": [
+            [
+                "spell",
                 null
             ],
             [
@@ -383,31 +561,32 @@
                 0
             ],
             [
-                "heal",
-                20
-            ],
-            [
-                "usable",
+                "target_tile",
                 null
             ],
             [
-                "value",
-                50
+                "mana_cost",
+                -4
             ],
             [
-                "self_status_on_hit",
-                "Confused"
+                "map_cast_anim",
+                "MapSurprise"
             ],
             [
-                "uses",
-                3
+                "map_hit_sfx",
+                "Shine"
             ],
             [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "hover_description",
+                "Gain <blue>4 mana</>."
+            ],
+            [
+                "exp",
+                10
             ]
         ]
     },
@@ -853,7 +1032,7 @@
             ],
             [
                 "mana_cost",
-                10
+                5
             ],
             [
                 "exp",
@@ -1933,6 +2112,58 @@
             [
                 "exp",
                 15
+            ]
+        ]
+    },
+    {
+        "nid": "Constricting_Love_ability",
+        "name": "Constricting Love",
+        "desc": "Milena entangles an enemy, inflicting it with <red>[SQUEEZED]</>. Costs <blue>15 mana</>.\n<red>[SQUEEZED]</>: Unit cannot move and has decreased attack and defense speed.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            24
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Squeezed"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 3"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    58,
+                    255,
+                    65
+                ]
+            ],
+            [
+                "hit",
+                75
             ]
         ]
     },
@@ -13562,6 +13793,41 @@
         ]
     },
     {
+        "nid": "Serum",
+        "name": "Serum",
+        "desc": "Removes negative statuses.",
+        "icon_nid": "Consumable",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "restore",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Health_Potion",
         "name": "Health Potion",
         "desc": "Restores 10 HP.",
@@ -13601,9 +13867,9 @@
             [
                 "map_hit_add_blend",
                 [
-                    96,
-                    144,
-                    232
+                    232,
+                    59,
+                    97
                 ]
             ]
         ]
@@ -13648,9 +13914,9 @@
             [
                 "map_hit_add_blend",
                 [
-                    96,
-                    144,
-                    232
+                    232,
+                    46,
+                    49
                 ]
             ]
         ]
@@ -13695,9 +13961,9 @@
             [
                 "map_hit_add_blend",
                 [
-                    96,
-                    144,
-                    232
+                    232,
+                    7,
+                    11
                 ]
             ]
         ]
@@ -13705,7 +13971,7 @@
     {
         "nid": "Mana_Potion",
         "name": "Mana Potion",
-        "desc": "Restores 5 Mana.",
+        "desc": "Restores 5 Mana. <red>Can't be used by Succubi</>.",
         "icon_nid": "Potions",
         "icon_index": [
             1,
@@ -13718,7 +13984,7 @@
             ],
             [
                 "value",
-                300
+                600
             ],
             [
                 "target_ally",
@@ -13746,13 +14012,17 @@
             [
                 "mana_cost",
                 -5
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Succubus' not in unit.tags"
             ]
         ]
     },
     {
         "nid": "Large_Mana_Potion",
         "name": "Large Mana Potion",
-        "desc": "Restores 10 Mana.",
+        "desc": "Restores 10 Mana. <red>Can't be used by Succubi</>.",
         "icon_nid": "Potions",
         "icon_index": [
             1,
@@ -13765,7 +14035,7 @@
             ],
             [
                 "value",
-                300
+                1000
             ],
             [
                 "target_ally",
@@ -13785,8 +14055,8 @@
             [
                 "map_hit_add_blend",
                 [
-                    96,
-                    144,
+                    69,
+                    121,
                     232
                 ]
             ],
@@ -13799,7 +14069,7 @@
     {
         "nid": "Huge_Mana_Potion",
         "name": "Huge Mana Potion",
-        "desc": "Restores 20 Mana.",
+        "desc": "Restores 20 Mana. <red>Can't be used by Succubi</>.",
         "icon_nid": "Potions",
         "icon_index": [
             1,
@@ -13812,7 +14082,7 @@
             ],
             [
                 "value",
-                300
+                1800
             ],
             [
                 "target_ally",
@@ -13832,14 +14102,253 @@
             [
                 "map_hit_add_blend",
                 [
-                    96,
-                    144,
+                    22,
+                    15,
                     232
                 ]
             ],
             [
                 "mana_cost",
                 -20
+            ]
+        ]
+    },
+    {
+        "nid": "Lust_Draught",
+        "name": "Lust Draught",
+        "desc": "Restores 10 Mana. <red>Usable only by Succubi</>.",
+        "icon_nid": "Potions",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                1500
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    232,
+                    46,
+                    229
+                ]
+            ],
+            [
+                "mana_cost",
+                -10
+            ]
+        ]
+    },
+    {
+        "nid": "Huge_Lust_Draught",
+        "name": "Huge Lust Draught",
+        "desc": "Restores 20 Mana. <red>Usable only by Succubi</>.",
+        "icon_nid": "Potions",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                1500
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    247,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "mana_cost",
+                -20
+            ]
+        ]
+    },
+    {
+        "nid": "Sylvan_Draught",
+        "name": "Sylvan Draught",
+        "desc": "Restores 99 HP and 20 Mana for the entire party.",
+        "icon_nid": "Potions",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "mana_cost",
+                -20
+            ],
+            [
+                "all_allies_aoe",
+                null
+            ],
+            [
+                "heal",
+                99
+            ]
+        ]
+    },
+    {
+        "nid": "Beer",
+        "name": "Beer",
+        "desc": "Cheap alcohol. Heals for 20 HP, but user is inflicted with <red>[CONFUSION]</>.",
+        "icon_nid": "Potions",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "heal",
+                20
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                200
+            ],
+            [
+                "self_status_on_hit",
+                "Confused"
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Mana_Wine",
+        "name": "Mana Wine",
+        "desc": "Magical alcohol. Restores <blue>10 mana</>, but user is inflicted with <red>[CONFUSION]</>.",
+        "icon_nid": "Consumable",
+        "icon_index": [
+            0,
+            9
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "heal",
+                20
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                200
+            ],
+            [
+                "self_status_on_hit",
+                "Confused"
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
             ]
         ]
     },
@@ -14126,7 +14635,7 @@
     {
         "nid": "Angelic_Robe",
         "name": "Angelic Robe",
-        "desc": "Permanently raises maximum HP by 7 points.",
+        "desc": "Permanently raises maximum HP by 2 points.",
         "icon_nid": "Boosters",
         "icon_index": [
             0,
@@ -14157,7 +14666,7 @@
                 [
                     [
                         "HP",
-                        7
+                        2
                     ]
                 ]
             ],
@@ -14167,7 +14676,7 @@
             ],
             [
                 "value",
-                8000
+                1000
             ]
         ]
     },
@@ -14219,7 +14728,7 @@
             ],
             [
                 "value",
-                8000
+                1000
             ]
         ]
     },
@@ -14267,7 +14776,7 @@
             ],
             [
                 "value",
-                8000
+                1000
             ]
         ]
     },
@@ -14315,7 +14824,7 @@
             ],
             [
                 "value",
-                8000
+                1000
             ]
         ]
     },
@@ -14363,7 +14872,7 @@
             ],
             [
                 "value",
-                8000
+                1000
             ]
         ]
     },
@@ -14411,7 +14920,7 @@
             ],
             [
                 "value",
-                8000
+                1000
             ]
         ]
     },
@@ -14459,7 +14968,7 @@
             ],
             [
                 "value",
-                8000
+                1000
             ]
         ]
     },
