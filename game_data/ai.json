@@ -829,8 +829,8 @@
         "nid": "AttackAndHeal",
         "behaviours": [
             {
-                "action": "Attack",
-                "target": "Enemy",
+                "action": "Support",
+                "target": "Ally",
                 "target_spec": null,
                 "view_range": -3,
                 "invert_targeting": false,
@@ -839,8 +839,8 @@
                 "condition": ""
             },
             {
-                "action": "Support",
-                "target": "Ally",
+                "action": "Attack",
+                "target": "Enemy",
                 "target_spec": null,
                 "view_range": -3,
                 "invert_targeting": false,

@@ -292,7 +292,7 @@
     },
     {
         "nid": "Flavonoids",
-        "name": "Flavonoids",
+        "name": "Flavonussy",
         "desc": "Heals an ally. 1 turn cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -327,13 +327,17 @@
             [
                 "heal",
                 15
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
     {
         "nid": "Cyanogenic_glycosides",
-        "name": "Cyanoglyco",
-        "desc": "Plants a bomb seed, which explodes next turn. Units hit by the explosion have their HP halved. 1 turn cooldown.",
+        "name": "Cyanoglussy",
+        "desc": "Plants a bomb seed, which explodes next turn. 1 turn cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -373,10 +377,6 @@
                 "Hex"
             ],
             [
-                "eclipse",
-                null
-            ],
-            [
                 "hit",
                 70
             ],
@@ -386,7 +386,11 @@
             ],
             [
                 "damage",
-                -100
+                8
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -535,6 +539,210 @@
             [
                 "weapon_type",
                 "Refresh"
+            ]
+        ]
+    },
+    {
+        "nid": "Lusting_Gaze",
+        "name": "Lusting Gaze",
+        "desc": "Riala inflicts a unit with <red>[DESIRED]</>. This unit will be the victim of Riala's attack next turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            33
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Desired"
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "damage",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Flux"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lethal_Lust",
+        "name": "Lethal Lust",
+        "desc": "Riala targets her enemy with a rain of painful lust. Unit loses half of their health. Unit is inflicted with <red>[LEAKING]</>.\n<red>[LEAKING]</>: Unit heals nearby enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            36
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eclipse",
+                null
+            ],
+            [
+                "damage",
+                0
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "eval_target_restrict_2",
+                "has_skill(target, 'Desired')"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Howl"
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Leaking"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lethal_Lust_2",
+        "name": "Lethal Lust",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            36
+        ],
+        "components": [
+            [
+                "smart_blast_aoe",
+                2
+            ],
+            [
+                "heal",
+                30
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "target_ally",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Healing_Kiss",
+        "name": "Healing Kiss",
+        "desc": "User heals and restores allied targets of debuffs.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "heal",
+                15
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
             ]
         ]
     },
@@ -12358,7 +12566,7 @@
     {
         "nid": "Luna",
         "name": "Luna",
-        "desc": "Ignore's enemy resistance",
+        "desc": "Ignores enemy resistance",
         "icon_nid": "Dark",
         "icon_index": [
             0,
@@ -12398,23 +12606,12 @@
                 null
             ],
             [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "weight",
                 12
             ],
             [
                 "crit",
-                10
+                3
             ],
             [
                 "value",
@@ -12431,12 +12628,16 @@
             [
                 "alternate_resist_formula",
                 "ZERO"
+            ],
+            [
+                "battle_cast_anim",
+                "Hex"
             ]
         ]
     },
     {
-        "nid": "Nosferatu",
-        "name": "Nosferatu",
+        "nid": "Succubus_Kiss",
+        "name": "Succubus Kiss",
         "desc": "User recovers HP equal to damage dealt.",
         "icon_nid": "Dark",
         "icon_index": [
@@ -12470,7 +12671,7 @@
             ],
             [
                 "crit",
-                0
+                5
             ],
             [
                 "weight",
@@ -12505,19 +12706,12 @@
                 3200
             ],
             [
-                "uses",
-                20
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "lifelink",
                 1.0
+            ],
+            [
+                "battle_cast_anim",
+                "Nyx"
             ]
         ]
     },
@@ -15625,10 +15819,6 @@
             [
                 "promote",
                 null
-            ],
-            [
-                "eval_target_restrict_2",
-                "unit.level >= 10"
             ]
         ]
     },

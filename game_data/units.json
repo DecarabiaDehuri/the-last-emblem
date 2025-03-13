@@ -3993,20 +3993,25 @@
         "name": "Riala",
         "desc": "Elite succubus mage. A cunning strategist.",
         "variant": "",
-        "level": 5,
+        "level": 16,
         "klass": "Suc_Riala",
-        "tags": [],
+        "tags": [
+            "Boss",
+            "ZeroMove",
+            "Female",
+            "Succubus"
+        ],
         "bases": {
-            "HP": 25,
+            "HP": 40,
             "STR": 9,
-            "MAG": 4,
+            "MAG": 12,
             "SKL": 6,
             "SPD": 7,
             "LCK": 6,
             "DEF": 9,
-            "RES": 1,
+            "RES": 11,
             "CON": 10,
-            "MOV": 7
+            "MOV": 0
         },
         "growths": {
             "HP": 90,
@@ -4023,7 +4028,15 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Flux",
+                "Lusting_Gaze",
+                false
+            ],
+            [
+                "Lethal_Lust",
+                false
+            ],
+            [
+                "Succubus_Kiss",
                 false
             ]
         ],
@@ -4031,18 +4044,26 @@
             [
                 1,
                 "Lust_Death_attack"
+            ],
+            [
+                1,
+                "Backup_Plan"
+            ],
+            [
+                1,
+                "Protection_Matters"
             ]
         ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 true,
-                31,
+                0,
                 251
             ],
             "Lance": [
                 true,
-                71,
+                0,
                 251
             ],
             "Axe": [
@@ -4072,7 +4093,7 @@
             ],
             "Dark": [
                 false,
-                0,
+                251,
                 251
             ],
             "Default": [
