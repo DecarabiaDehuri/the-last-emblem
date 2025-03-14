@@ -28,8 +28,8 @@
                 "nid": "IK",
                 "name": "Incubus King's Castle",
                 "pos": [
-                    20,
-                    6
+                    19,
+                    5
                 ],
                 "icon": "cathedral",
                 "level": null,
@@ -51,32 +51,6 @@
                         "option_name": "",
                         "visible": false,
                         "enabled": false
-                    }
-                ]
-            },
-            {
-                "nid": "P4",
-                "name": "Nodford village",
-                "pos": [
-                    14,
-                    18
-                ],
-                "icon": "town",
-                "level": "P4",
-                "menu_options": [
-                    {
-                        "nid": "Armory",
-                        "event": "Nodford Armory",
-                        "option_name": "Armory",
-                        "visible": true,
-                        "enabled": true
-                    },
-                    {
-                        "nid": "Vendor",
-                        "event": "Nodford Vendor",
-                        "option_name": "Vendor",
-                        "visible": true,
-                        "enabled": true
                     }
                 ]
             },
@@ -147,26 +121,63 @@
                 "menu_options": []
             },
             {
-                "nid": "P11",
+                "nid": "P12",
                 "name": "Hard Wood Forest",
                 "pos": [
-                    22,
-                    10
+                    18,
+                    9
                 ],
                 "icon": "woods",
                 "level": "P11",
                 "menu_options": []
             },
             {
-                "nid": "P12",
+                "nid": "P13",
                 "name": "Confrontation",
                 "pos": [
-                    23,
+                    20,
                     8
                 ],
-                "icon": "forest_temple",
+                "icon": "castle",
                 "level": "P12",
                 "menu_options": []
+            },
+            {
+                "nid": "P11",
+                "name": "New Location",
+                "pos": [
+                    20,
+                    10
+                ],
+                "icon": "town",
+                "level": "P11",
+                "menu_options": []
+            },
+            {
+                "nid": "P4",
+                "name": "Nodford Village",
+                "pos": [
+                    14,
+                    18
+                ],
+                "icon": "town",
+                "level": "P4",
+                "menu_options": [
+                    {
+                        "nid": "Armory1Overworld",
+                        "event": null,
+                        "option_name": "Armory",
+                        "visible": true,
+                        "enabled": true
+                    },
+                    {
+                        "nid": "Vendor1Overworld",
+                        "event": "Vendor1Overworld",
+                        "option_name": "Vendor",
+                        "visible": true,
+                        "enabled": true
+                    }
+                ]
             }
         ],
         "map_paths": {
@@ -270,32 +281,60 @@
                     11
                 ]
             ],
-            "(18, 11)-(22, 10)": [
+            "(18, 11)-(20, 10)": [
                 [
                     18,
                     11
                 ],
                 [
-                    21,
+                    19,
                     11
                 ],
                 [
-                    22,
+                    20,
                     10
                 ]
             ],
-            "(22, 10)-(23, 8)": [
+            "(18, 9)-(20, 10)": [
                 [
-                    22,
+                    20,
                     10
                 ],
                 [
-                    22,
+                    19,
+                    10
+                ],
+                [
+                    18,
+                    9
+                ]
+            ],
+            "(18, 9)-(20, 8)": [
+                [
+                    18,
                     9
                 ],
                 [
-                    23,
+                    19,
+                    9
+                ],
+                [
+                    20,
                     8
+                ]
+            ],
+            "(19, 5)-(20, 8)": [
+                [
+                    20,
+                    8
+                ],
+                [
+                    20,
+                    6
+                ],
+                [
+                    19,
+                    5
                 ]
             ]
         },

@@ -706,6 +706,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -715,6 +725,162 @@
         ],
         "map_sprite_nid": "Ephraim_Great_Lord",
         "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Special_Chosen",
+        "name": "Special Chosen",
+        "desc": "Not only Chosen. He is Special.",
+        "tier": 2,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Chosen",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 18,
+            "STR": 3,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 4,
+            "LCK": 0,
+            "DEF": 5,
+            "RES": 0,
+            "CON": 10,
+            "MOV": 7,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 90,
+            "STR": 45,
+            "MAG": 22,
+            "SKL": 40,
+            "SPD": 45,
+            "LCK": 40,
+            "DEF": 15,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 4,
+            "STR": 2,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 2,
+            "RES": 5,
+            "CON": 2,
+            "MOV": -99,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 27,
+            "MAG": 20,
+            "SKL": 26,
+            "SPD": 27,
+            "LCK": 30,
+            "DEF": 23,
+            "RES": 23,
+            "CON": 25,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                251
+            ],
+            "Lance": [
+                true,
+                40,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                true,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Ephraim_Great_Lord",
+        "combat_anim_nid": "Special_Chosen",
         "fields": []
     },
     {
@@ -1848,6 +2014,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Assassin",
@@ -1856,7 +2032,7 @@
             0
         ],
         "map_sprite_nid": "Rogue",
-        "combat_anim_nid": null,
+        "combat_anim_nid": "Rogue",
         "fields": []
     },
     {
@@ -2570,6 +2746,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Great_Knight",
@@ -2578,7 +2764,7 @@
             0
         ],
         "map_sprite_nid": "Great_Knight",
-        "combat_anim_nid": null,
+        "combat_anim_nid": "Great_Knight",
         "fields": []
     },
     {
@@ -3182,9 +3368,7 @@
             "Fighter",
             "Pirate"
         ],
-        "tags": [
-            "AutoPromote"
-        ],
+        "tags": [],
         "max_level": 10,
         "bases": {
             "HP": 14,
@@ -3303,6 +3487,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -3444,6 +3638,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Fighter",
@@ -3601,6 +3805,7 @@
         "movement_group": "Pirates",
         "promotes_from": null,
         "turns_into": [
+            "Warrior",
             "Berserker"
         ],
         "tags": [],
@@ -3722,6 +3927,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Pirate",
@@ -3730,7 +3945,7 @@
             0
         ],
         "map_sprite_nid": "Pirate",
-        "combat_anim_nid": "Raider",
+        "combat_anim_nid": "Pirate",
         "fields": []
     },
     {
@@ -3865,6 +4080,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Berserker",
@@ -4560,6 +4785,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Monk",
@@ -4579,7 +4814,8 @@
         "movement_group": "Mages",
         "promotes_from": null,
         "turns_into": [
-            "Bishop"
+            "Bishop",
+            "Valkyrie"
         ],
         "tags": [],
         "max_level": 20,
@@ -4691,10 +4927,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Cleric",
@@ -4838,6 +5089,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Bishop",
@@ -4970,10 +5231,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Mage (1)",
@@ -5112,6 +5388,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sage",
@@ -5395,6 +5681,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Mage_Knight",
@@ -5534,10 +5830,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Troubadour",
@@ -5675,10 +5986,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Valkyrie",
@@ -5687,7 +6013,7 @@
             0
         ],
         "map_sprite_nid": "Valkyrie",
-        "combat_anim_nid": null,
+        "combat_anim_nid": "ValkyrieFemale",
         "fields": []
     },
     {
@@ -10540,10 +10866,12 @@
         "nid": "Chosen",
         "name": "Chosen",
         "desc": "Swordfighters with superior speed and skill.",
-        "tier": 2,
+        "tier": 1,
         "movement_group": "Light Foot",
         "promotes_from": null,
-        "turns_into": [],
+        "turns_into": [
+            "Special_Chosen"
+        ],
         "tags": [
             "Sword"
         ],
@@ -10665,6 +10993,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Swordmaster",
@@ -11377,6 +11715,11 @@
                 false,
                 0,
                 null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Cyclops Axe {IS}",
@@ -11696,12 +12039,12 @@
         ],
         "max_level": 20,
         "bases": {
-            "HP": 5,
+            "HP": 6,
             "STR": 4,
             "MAG": 0,
-            "SKL": 2,
-            "SPD": 5,
-            "LCK": 2,
+            "SKL": 4,
+            "SPD": 6,
+            "LCK": 7,
             "DEF": 2,
             "RES": 1,
             "CON": 16,
@@ -11713,9 +12056,9 @@
             "MAG": 25,
             "SKL": 60,
             "SPD": 70,
-            "LCK": 25,
-            "DEF": 25,
-            "RES": 25,
+            "LCK": 40,
+            "DEF": 30,
+            "RES": 30,
             "CON": 0,
             "MOV": 0
         },
@@ -11817,6 +12160,11 @@
                 null
             ],
             "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
                 false,
                 0,
                 null

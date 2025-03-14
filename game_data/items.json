@@ -1870,10 +1870,6 @@
                 null
             ],
             [
-                "weapon",
-                null
-            ],
-            [
                 "weapon_type",
                 "Sword"
             ],
@@ -5378,6 +5374,17 @@
             [
                 "weapon_rank",
                 "A"
+            ],
+            [
+                "uses",
+                20
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
             ]
         ]
     },
@@ -11619,17 +11626,6 @@
                 null
             ],
             [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "weight",
                 8
             ],
@@ -14420,10 +14416,6 @@
                 5000
             ],
             [
-                "target_ally",
-                null
-            ],
-            [
                 "uses",
                 1
             ],
@@ -14443,16 +14435,32 @@
                 ]
             ],
             [
-                "mana_cost",
-                -20
-            ],
-            [
                 "all_allies_aoe",
                 null
             ],
             [
                 "heal",
                 99
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Restora mana party"
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "status_on_hit",
+                "Nothing"
             ]
         ]
     },
@@ -15813,7 +15821,8 @@
                     "Mage",
                     "Shaman",
                     "Troubadour",
-                    "Wyvern Rider"
+                    "Wyvern Rider",
+                    "Blademaster"
                 ]
             ],
             [

@@ -16,6 +16,10 @@
             [
                 "stack",
                 999
+            ],
+            [
+                "hide_skill_icon_in_combat",
+                null
             ]
         ]
     },
@@ -536,6 +540,38 @@
         ]
     },
     {
+        "nid": "Mana_Sip",
+        "name": "<red>[MANA SIP]</>",
+        "desc": "Unit is having his mana drained by Riala's magic. Loses <blue>1 mana</> at the beginning of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            27
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.team == 'player'"
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "upkeep_event",
+                "Global Mana sip event"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "MapStatDecrease"
+            ]
+        ]
+    },
+    {
         "nid": "Blinded_Immune",
         "name": "Blinded Immunity",
         "desc": "Unit cannot be <red>[BLINDED]</>.",
@@ -554,7 +590,7 @@
     {
         "nid": "Silence_attack",
         "name": "<red>[SILENCE]</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[SILENCE]</>: Unit cannot use magic.",
+        "desc": "Attacks have a chance to inflict <red>[SILENCE]</>: Unit cannot use magic.",
         "icon_nid": "Skills",
         "icon_index": [
             9,
@@ -567,7 +603,7 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "PROCSTATUS"
             ],
             [
                 "class_skill",
@@ -594,7 +630,7 @@
     {
         "nid": "Poison_attack",
         "name": "<red>[POISON]</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[POISON]</>: Unit randomly receives up to 5 damage per turn.",
+        "desc": "Attacks have a chance to inflict <red>[POISON]</>: Unit randomly receives up to 5 damage per turn.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -607,7 +643,7 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "PROCSTATUS"
             ],
             [
                 "class_skill",
@@ -634,7 +670,7 @@
     {
         "nid": "Blind_attack",
         "name": "<red>[BLIND]</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "desc": "Attacks have a chance to inflict <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -674,7 +710,7 @@
     {
         "nid": "Confusion_attack",
         "name": "<red>[CONFUSION]</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[CONFUSION]</>: Unit behaves on their own and can't tell friend or foe.",
+        "desc": "Attacks have a chance to inflict <red>[CONFUSION]</>: Unit behaves on their own and can't tell friend or foe.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -714,7 +750,7 @@
     {
         "nid": "Sleep_attack",
         "name": "<red>[SLEEP]</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[SLEEP]</>: Unit is asleep. -5 DEF and RES. Unit awakes when receives a hit.",
+        "desc": "Attacks have a chance to inflict <red>[SLEEP]</>: Unit is asleep. -5 DEF and RES. Unit awakes when receives a hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -754,7 +790,7 @@
     {
         "nid": "Stun_attack",
         "name": "<red>[STUN]</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[STUN]</>: Unit cannot act for the remainder of their turn.",
+        "desc": "Attacks have a chance to inflict <red>[STUN]</>: Unit cannot act for the remainder of their turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -794,7 +830,7 @@
     {
         "nid": "Paralysis_attack",
         "name": "<red>[PARALYSIS]</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[PARALYSIS]</>: Unit cannot act.",
+        "desc": "Attacks have a chance to inflict <red>[PARALYSIS]</>: Unit cannot act.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -834,7 +870,7 @@
     {
         "nid": "Lust_Drain_attack",
         "name": "<red>LUST DRAIN</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[LUST DRAIN]</>: Unit loses 5 mana at the beginning of the turn.",
+        "desc": "Attacks have a chance to inflict <red>[LUST DRAIN]</>: Unit loses 5 mana at the beginning of the turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -874,7 +910,7 @@
     {
         "nid": "Lust_Death_attack",
         "name": "<red>[LUST DEATH]</> infliction",
-        "desc": "Attacks have a LUK% chance to inflict <red>[LUST DEATH]</>: Unit is incapacitated.",
+        "desc": "Attacks have a chance to inflict <red>[LUST DEATH]</>: Unit is incapacitated.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -1535,13 +1571,17 @@
             [
                 "condition",
                 "unit.get_hp() < (unit.get_max_hp() / 2)"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
     {
         "nid": "Premature_Advance",
         "name": "Premature Advance",
-        "desc": "Mira has her eyes set on a dangerous future. Mira has extra movement. This skill is deactivated upon first receiving damage on the current chapter.",
+        "desc": "Mira has her eyes set on a dangerous future. Mira has extra movement on the first 3 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -1549,17 +1589,21 @@
         ],
         "components": [
             [
-                "undamaged_condition",
-                null
-            ],
-            [
                 "stat_change",
                 [
                     [
                         "MOV",
-                        2
+                        1
                     ]
                 ]
+            ],
+            [
+                "condition",
+                "game.turncount <= 3"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -1821,6 +1865,14 @@
             [
                 "cost_mana",
                 4
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -1841,6 +1893,10 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
             ]
         ]
     },
@@ -1856,10 +1912,6 @@
         "components": [
             [
                 "class_skill",
-                null
-            ],
-            [
-                "grey_if_inactive",
                 null
             ],
             [
@@ -1885,6 +1937,10 @@
             [
                 "regeneration",
                 0.30000000000000004
+            ],
+            [
+                "hidden_if_inactive",
+                null
             ]
         ]
     },
@@ -2524,7 +2580,7 @@
         "components": [
             [
                 "avoid",
-                30
+                20
             ],
             [
                 "combat_condition",
@@ -2542,6 +2598,10 @@
                         1
                     ]
                 ]
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -2630,7 +2690,7 @@
     {
         "nid": "Burning_Advance",
         "name": "Burning Advance",
-        "desc": "<green>[Rosa Synergy]</>. Rosa kindly sets Cassian's weapons ablaze. Cassian has LUK% chance to inflict <red>[BURNED]</> on his attacks.",
+        "desc": "<green>[Rosa Synergy]</>. Rosa kindly sets Cassian's weapons ablaze. Cassian has a chance to inflict <red>[BURNED]</> on his attacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -2639,10 +2699,6 @@
         "components": [
             [
                 "class_skill",
-                null
-            ],
-            [
-                "grey_if_inactive",
                 null
             ],
             [
@@ -2671,7 +2727,11 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "PROCSTATUS"
+            ],
+            [
+                "hidden_if_inactive",
+                null
             ]
         ]
     },
@@ -2763,7 +2823,7 @@
             ],
             [
                 "proc_rate",
-                "MOEDA"
+                "PROCSTATUS"
             ],
             [
                 "give_status_after_hit",
@@ -2917,7 +2977,7 @@
             ],
             [
                 "proc_rate",
-                "MOEDA"
+                "PROCSTATUS"
             ]
         ]
     },
@@ -2933,10 +2993,6 @@
         "components": [
             [
                 "class_skill",
-                null
-            ],
-            [
-                "grey_if_inactive",
                 null
             ],
             [
@@ -2962,6 +3018,10 @@
             [
                 "ability",
                 "Make_way_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
             ]
         ]
     },
@@ -3033,7 +3093,7 @@
     {
         "nid": "Flashy_Escape",
         "name": "Flashy Escape",
-        "desc": "<green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>.\n<red>[BLINDED]</>:Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
+        "desc": "<green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>. Costs <blue>10 mana</>.\n<red>[BLINDED]</>:Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -3042,10 +3102,6 @@
         "components": [
             [
                 "class_skill",
-                null
-            ],
-            [
-                "grey_if_inactive",
                 null
             ],
             [
@@ -3071,6 +3127,10 @@
             [
                 "ability",
                 "Flashy_Escape_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
             ]
         ]
     },
@@ -3506,7 +3566,7 @@
         "components": [
             [
                 "combat_condition",
-                "game.get_unit('Rosa').get_weapon().nid == 'Fire'"
+                "game.get_unit('Rosa').get_weapon().nid == 'Fire' or game.get_unit('Rosa').get_weapon().nid == 'Elfire'"
             ],
             [
                 "proc_rate",
@@ -3553,10 +3613,6 @@
                 null
             ],
             [
-                "grey_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Rosa' for u in target_system.get_adj_units(game.get_unit('Cassian'))])"
             ],
@@ -3579,6 +3635,10 @@
             [
                 "attack_speed",
                 10
+            ],
+            [
+                "hidden_if_inactive",
+                null
             ]
         ]
     },
@@ -4086,6 +4146,26 @@
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Creepy_Move",
+        "name": "Creepy Move",
+        "desc": "Unit can teleport next to any enemy target.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "witch_warp_expression",
+                "unit.team == 'player'"
             ]
         ]
     },

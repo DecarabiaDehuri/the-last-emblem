@@ -9,7 +9,7 @@
         ],
         "minimap": "Grass",
         "platform": "Plains",
-        "background": "Grassland_1",
+        "background": "plains_1",
         "mtype": "Normal",
         "opaque": false,
         "status": null
@@ -84,7 +84,7 @@
         ],
         "minimap": "Floor",
         "platform": "Floor",
-        "background": "Stone1",
+        "background": "road",
         "mtype": "Normal",
         "opaque": false,
         "status": null
@@ -114,7 +114,7 @@
         ],
         "minimap": "Sand",
         "platform": "Road",
-        "background": "Stone1",
+        "background": "road",
         "mtype": "Normal",
         "opaque": false,
         "status": null
@@ -234,7 +234,7 @@
         ],
         "minimap": "Mountain",
         "platform": "Mountain",
-        "background": "Sky",
+        "background": "mountain",
         "mtype": "Mountain",
         "opaque": true,
         "status": "Peak"
@@ -249,7 +249,7 @@
         ],
         "minimap": "Cliff",
         "platform": "Cliff",
-        "background": "Grassland_1",
+        "background": "cliff",
         "mtype": "Cliff",
         "opaque": false,
         "status": null
@@ -324,7 +324,7 @@
         ],
         "minimap": "Shop",
         "platform": "Armory",
-        "background": "Stone3",
+        "background": "shop",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -339,7 +339,7 @@
         ],
         "minimap": "Shop",
         "platform": "Vendor",
-        "background": "Stone3",
+        "background": "shop",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -369,7 +369,7 @@
         ],
         "minimap": "House",
         "platform": "Village",
-        "background": "Room1",
+        "background": "combat_village_1",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -384,7 +384,7 @@
         ],
         "minimap": "Chest",
         "platform": "Chest",
-        "background": "Stone1",
+        "background": "Stone3",
         "mtype": "Normal",
         "opaque": false,
         "status": null
@@ -399,7 +399,7 @@
         ],
         "minimap": "Door",
         "platform": "Floor",
-        "background": "Stone3",
+        "background": "Fort2_1",
         "mtype": "Wall",
         "opaque": false,
         "status": null
@@ -414,7 +414,7 @@
         ],
         "minimap": "Throne",
         "platform": "Throne",
-        "background": "Castle3",
+        "background": "throne",
         "mtype": "Throne",
         "opaque": false,
         "status": "Throne"
@@ -429,7 +429,7 @@
         ],
         "minimap": "Ruins",
         "platform": "Ruins",
-        "background": "Ruins_1",
+        "background": "ruins2",
         "mtype": "Normal",
         "opaque": false,
         "status": "Avoid10"
@@ -444,7 +444,7 @@
         ],
         "minimap": "Ruins",
         "platform": "Ruins",
-        "background": "Ruins_1",
+        "background": "villageruins",
         "mtype": "Fort",
         "opaque": false,
         "status": null
@@ -459,7 +459,7 @@
         ],
         "minimap": "Mountain",
         "platform": "Sand",
-        "background": "DirtCave",
+        "background": "cave_combat",
         "mtype": "Cave",
         "opaque": false,
         "status": null
@@ -474,8 +474,23 @@
         ],
         "minimap": "Waste",
         "platform": "Sand",
-        "background": "Wasteland_1",
+        "background": "wasteland_2",
         "mtype": "Normal",
+        "opaque": false,
+        "status": null
+    },
+    {
+        "nid": "Desert",
+        "name": "Desert",
+        "color": [
+            251,
+            255,
+            180
+        ],
+        "minimap": "Sand",
+        "platform": "Sand",
+        "background": "desert",
+        "mtype": "Desert",
         "opaque": false,
         "status": null
     }

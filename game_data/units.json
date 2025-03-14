@@ -2750,14 +2750,14 @@
             "MOV": 5
         },
         "growths": {
-            "HP": 60,
-            "STR": 40,
-            "MAG": 60,
-            "SKL": 35,
-            "SPD": 20,
-            "LCK": 50,
-            "DEF": 20,
-            "RES": 10,
+            "HP": 30,
+            "STR": 20,
+            "MAG": 30,
+            "SKL": 15,
+            "SPD": 10,
+            "LCK": 25,
+            "DEF": 10,
+            "RES": 5,
             "CON": 0,
             "MOV": 0
         },
@@ -2908,7 +2908,7 @@
         "nid": "Mira",
         "name": "Mira",
         "desc": "A meek orphan with fierce ambitions.",
-        "variant": "",
+        "variant": "Female",
         "level": 1,
         "klass": "Journeyman",
         "tags": [
@@ -3072,7 +3072,7 @@
         "nid": "Monica",
         "name": "Sister Monica",
         "desc": "Pietous sister seeking redemption.",
-        "variant": "Monica",
+        "variant": "Female",
         "level": 5,
         "klass": "Cleric",
         "tags": [
@@ -4002,7 +4002,7 @@
             "Succubus"
         ],
         "bases": {
-            "HP": 40,
+            "HP": 50,
             "STR": 9,
             "MAG": 12,
             "SKL": 6,
@@ -4919,11 +4919,16 @@
                 false
             ],
             [
-                "Sx_Purse",
-                false
+                "Loot_Bag",
+                true
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Stun_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -4994,7 +4999,7 @@
             "SKL": 11,
             "SPD": 8,
             "LCK": 7,
-            "DEF": 12,
+            "DEF": 4,
             "CON": 13,
             "MOV": 3,
             "RES": 7
@@ -5083,495 +5088,6 @@
         "alternate_classes": [],
         "portrait_nid": "Mercenary1",
         "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Selena",
-        "name": "Selena",
-        "desc": "",
-        "variant": "Female",
-        "level": 11,
-        "klass": "Mage Knight",
-        "tags": [],
-        "bases": {
-            "HP": 39,
-            "STR": 6,
-            "MAG": 14,
-            "SKL": 14,
-            "SPD": 17,
-            "LCK": 11,
-            "DEF": 11,
-            "RES": 18,
-            "CON": 6,
-            "MOV": 7
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Bolting",
-                false
-            ],
-            [
-                "Elfire",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                121,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                181,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Selena",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Vigarde",
-        "name": "Vigarde",
-        "desc": "",
-        "variant": "",
-        "level": 13,
-        "klass": "General",
-        "tags": [],
-        "bases": {
-            "HP": 54,
-            "STR": 22,
-            "MAG": 7,
-            "SKL": 15,
-            "SPD": 11,
-            "LCK": 10,
-            "DEF": 21,
-            "RES": 13,
-            "CON": 17,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Spear",
-                false
-            ],
-            [
-                "Knight_Crest",
-                true
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                181,
-                251
-            ],
-            "Lance": [
-                false,
-                251,
-                251
-            ],
-            "Axe": [
-                false,
-                181,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "VigardeHealthy",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Caellach",
-        "name": "Caellach",
-        "desc": "",
-        "variant": "",
-        "level": 12,
-        "klass": "Hero",
-        "tags": [],
-        "bases": {
-            "HP": 50,
-            "STR": 20,
-            "MAG": 3,
-            "SKL": 15,
-            "SPD": 14,
-            "LCK": 15,
-            "DEF": 16,
-            "RES": 14,
-            "CON": 13,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Tomahawk",
-                false
-            ],
-            [
-                "Silver_Axe",
-                false
-            ],
-            [
-                "Hoplon_Guard",
-                true
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                181,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                251,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Caellach",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Valter",
-        "name": "Valter",
-        "desc": "",
-        "variant": null,
-        "level": 131,
-        "klass": "Wyvern Knight",
-        "tags": [],
-        "bases": {
-            "HP": 48,
-            "STR": 20,
-            "MAG": 0,
-            "SKL": 18,
-            "SPD": 18,
-            "LCK": 4,
-            "DEF": 14,
-            "RES": 13,
-            "CON": 11,
-            "MOV": 8
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Spear",
-                false
-            ],
-            [
-                "Killer_Lance",
-                false
-            ],
-            [
-                "Fili_Shield",
-                true
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                251,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Valter",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Riev",
-        "name": "Riev",
-        "desc": "",
-        "variant": null,
-        "level": 16,
-        "klass": "Cleric",
-        "tags": [],
-        "bases": {
-            "HP": 51,
-            "STR": 0,
-            "MAG": 16,
-            "SKL": 22,
-            "SPD": 20,
-            "LCK": 11,
-            "DEF": 16,
-            "RES": 20,
-            "CON": 7,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Aura",
-                true
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                181,
-                251
-            ],
-            "Light": [
-                false,
-                251,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Riev",
-        "affinity": null,
         "fields": []
     },
     {
@@ -5774,13 +5290,13 @@
         ],
         "bases": {
             "HP": 30,
-            "STR": 7,
+            "STR": 9,
             "MAG": 2,
             "SKL": 10,
             "SPD": 14,
             "LCK": 7,
-            "DEF": 6,
-            "RES": 4,
+            "DEF": 10,
+            "RES": 6,
             "CON": 9,
             "MOV": 7
         },
@@ -5813,6 +5329,66 @@
         "alternate_classes": [],
         "portrait_nid": "CentaurBoss",
         "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "SucBoss",
+        "name": "Elite Succubus",
+        "desc": "",
+        "variant": null,
+        "level": 14,
+        "klass": "Suc_foe_2",
+        "tags": [
+            "Boss",
+            "Female",
+            "Succubus"
+        ],
+        "bases": {
+            "HP": 35,
+            "STR": 11,
+            "MAG": 11,
+            "SKL": 10,
+            "SPD": 6,
+            "LCK": 10,
+            "DEF": 8,
+            "RES": 9,
+            "CON": 12,
+            "MOV": 0
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Scythe",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Creepy_Move"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Dark": [
+                false,
+                71,
+                null
+            ],
+            "Scythe": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "SucBoss",
+        "affinity": "Dark",
         "fields": []
     }
 ]

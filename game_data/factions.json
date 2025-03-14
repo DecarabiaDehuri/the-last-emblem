@@ -1,9 +1,9 @@
 [
     {
         "nid": "Soldier",
-        "name": "Soldier",
-        "desc": "The army of Grado, the largest nation on the entire continent",
-        "icon_nid": "KnightEmblem",
+        "name": "IK Soldier",
+        "desc": "The army of the Incubus King.",
+        "icon_nid": "BanditEmblem",
         "icon_index": [
             0,
             0
@@ -22,7 +22,7 @@
     {
         "nid": "Bandit",
         "name": "Bandit",
-        "desc": "One of the bandits who have laid claim to the Carcino territories.",
+        "desc": "Bandits roam the region.",
         "icon_nid": "NeutralEmblem",
         "icon_index": [
             0,
@@ -54,6 +54,36 @@
         "name": "MagicBarrier",
         "desc": "",
         "icon_nid": "BlankEmblem",
+        "icon_index": [
+            0,
+            0
+        ]
+    },
+    {
+        "nid": "Neutral",
+        "name": "Neutral",
+        "desc": "",
+        "icon_nid": "ConfederacyEmblem",
+        "icon_index": [
+            0,
+            0
+        ]
+    },
+    {
+        "nid": "Villager",
+        "name": "Human Villager",
+        "desc": "",
+        "icon_nid": "BlankEmblem",
+        "icon_index": [
+            0,
+            0
+        ]
+    },
+    {
+        "nid": "AlliedSuccubi",
+        "name": "Allied Succubi",
+        "desc": "Succubi who are against the war.",
+        "icon_nid": "ResistanceEmblem",
         "icon_index": [
             0,
             0
