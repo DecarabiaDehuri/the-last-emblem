@@ -2871,18 +2871,6 @@
         "learned_skills": [
             [
                 1,
-                "Blinding_Strike"
-            ],
-            [
-                1,
-                "Silencing_Strike"
-            ],
-            [
-                1,
-                "Stunning_Strike"
-            ],
-            [
-                1,
                 "Strategic_Strikes"
             ]
         ],
@@ -3466,9 +3454,9 @@
     {
         "nid": "Rosa",
         "name": "Rosa",
-        "desc": "An elegant yet mysterious mage. ",
+        "desc": "An elegant yet mysterious mage.",
         "variant": "Female",
-        "level": 8,
+        "level": 7,
         "klass": "Mage",
         "tags": [
             "Female"
@@ -3518,7 +3506,7 @@
         "learned_skills": [
             [
                 1,
-                "Firewall"
+                "Firewall_v2"
             ],
             [
                 1,
@@ -3651,13 +3639,13 @@
         ],
         "bases": {
             "HP": 28,
-            "STR": 10,
-            "MAG": 5,
+            "STR": 5,
+            "MAG": 12,
             "SKL": 16,
-            "SPD": 17,
-            "LCK": 5,
-            "DEF": 9,
-            "RES": 11,
+            "SPD": 14,
+            "LCK": 14,
+            "DEF": 11,
+            "RES": 12,
             "CON": 7,
             "MOV": 5
         },
@@ -3684,6 +3672,114 @@
             [
                 1,
                 "Lust_Drain_attack"
+            ],
+            [
+                1,
+                "Unmovable"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                121,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Minerve",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Minerve_2",
+        "name": "Minerve",
+        "desc": "Captain in the Succubus army. An eager underling of Riala.",
+        "variant": "",
+        "level": 9,
+        "klass": "Suc_Minerve",
+        "tags": [
+            "Female"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 5,
+            "MAG": 12,
+            "SKL": 16,
+            "SPD": 14,
+            "LCK": 14,
+            "DEF": 11,
+            "RES": 12,
+            "CON": 7,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 65,
+            "STR": 25,
+            "MAG": 15,
+            "SKL": 45,
+            "SPD": 60,
+            "LCK": 25,
+            "DEF": 25,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Luna",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Lust_Drain_attack"
+            ],
+            [
+                1,
+                "Unmovable"
             ]
         ],
         "unit_notes": [],
@@ -3753,12 +3849,12 @@
         "bases": {
             "HP": 40,
             "STR": 10,
-            "MAG": 11,
+            "MAG": 16,
             "SKL": 16,
             "SPD": 17,
-            "LCK": 5,
-            "DEF": 12,
-            "RES": 13,
+            "LCK": 15,
+            "DEF": 13,
+            "RES": 14,
             "CON": 7,
             "MOV": 5
         },
@@ -3793,6 +3889,14 @@
             [
                 1,
                 "True_Form"
+            ],
+            [
+                1,
+                "Lust_Death"
+            ],
+            [
+                1,
+                "Unmovable"
             ]
         ],
         "unit_notes": [],
@@ -3946,7 +4050,7 @@
         "name": "Geoff",
         "desc": "Commander of the Ardoheim army. ",
         "variant": null,
-        "level": 1,
+        "level": 13,
         "klass": "Sniper",
         "tags": [
             "ZeroMove"
@@ -3970,7 +4074,7 @@
                 false
             ],
             [
-                "Killer_Ballista",
+                "Long_Ballista",
                 false
             ]
         ],
@@ -3997,7 +4101,6 @@
         "klass": "Suc_Riala",
         "tags": [
             "Boss",
-            "ZeroMove",
             "Female",
             "Succubus"
         ],
@@ -4052,6 +4155,10 @@
             [
                 1,
                 "Protection_Matters"
+            ],
+            [
+                1,
+                "Unmovable"
             ]
         ],
         "unit_notes": [],
@@ -4159,6 +4266,10 @@
             [
                 1,
                 "Poison_attack"
+            ],
+            [
+                1,
+                "Unmovable"
             ]
         ],
         "unit_notes": [],
@@ -4479,7 +4590,12 @@
                 true
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Unmovable"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -4621,6 +4737,10 @@
             [
                 1,
                 "Stun_attack"
+            ],
+            [
+                1,
+                "Unmovable"
             ]
         ],
         "unit_notes": [],
@@ -4793,7 +4913,7 @@
             "LCK": 8,
             "DEF": 2,
             "CON": 12,
-            "MOV": 6,
+            "MOV": 0,
             "RES": 0
         },
         "growths": {
@@ -4823,6 +4943,10 @@
             [
                 1,
                 "Sleep_attack"
+            ],
+            [
+                1,
+                "Unmovable"
             ]
         ],
         "unit_notes": [],
@@ -5213,7 +5337,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Axe",
+                "Steel_Axe",
                 false
             ],
             [
@@ -5244,7 +5368,65 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "",
+        "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "OgreWM",
+        "name": "Ogre",
+        "desc": "",
+        "variant": "",
+        "level": 12,
+        "klass": "Ogre",
+        "tags": [
+            "Boss",
+            "Monster"
+        ],
+        "bases": {
+            "HP": 50,
+            "STR": 11,
+            "MAG": 3,
+            "SKL": 8,
+            "SPD": 3,
+            "LCK": 4,
+            "DEF": 8,
+            "RES": 6,
+            "CON": 16,
+            "MOV": 5
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Steel_Axe",
+                false
+            ],
+            [
+                "Hand_Axe",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Stun_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Axe": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
         "affinity": null,
         "fields": []
     },
@@ -5290,13 +5472,13 @@
         ],
         "bases": {
             "HP": 30,
-            "STR": 9,
+            "STR": 15,
             "MAG": 2,
             "SKL": 10,
             "SPD": 14,
             "LCK": 7,
             "DEF": 10,
-            "RES": 6,
+            "RES": 8,
             "CON": 9,
             "MOV": 7
         },
@@ -5304,7 +5486,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Blade",
+                "Steel_Blade",
                 false
             ],
             [
@@ -5316,13 +5498,17 @@
             [
                 1,
                 "Silence_attack"
+            ],
+            [
+                1,
+                "Unmovable"
             ]
         ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 false,
-                31,
+                181,
                 null
             ]
         },

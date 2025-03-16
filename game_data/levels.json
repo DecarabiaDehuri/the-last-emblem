@@ -2928,6 +2928,73 @@
                 "generic": true
             },
             {
+                "nid": "128",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "129",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ],
+                    [
+                        "Sx_Purse",
+                        true
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "130",
+                "variant": null,
+                "level": 8,
+                "klass": "Orc",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
                 "nid": "Baruba",
                 "team": "other",
                 "ai": "Guard",
@@ -3459,7 +3526,7 @@
                 ],
                 "positions": {
                     "122": [
-                        11,
+                        13,
                         0
                     ],
                     "123": [
@@ -3467,8 +3534,30 @@
                         14
                     ],
                     "124": [
-                        17,
-                        3
+                        0,
+                        7
+                    ]
+                }
+            },
+            {
+                "nid": "raid6",
+                "units": [
+                    "128",
+                    "129",
+                    "130"
+                ],
+                "positions": {
+                    "128": [
+                        15,
+                        14
+                    ],
+                    "129": [
+                        4,
+                        0
+                    ],
+                    "130": [
+                        0,
+                        12
                     ]
                 }
             }
@@ -3894,6 +3983,126 @@
                 "generic": true
             },
             {
+                "nid": "123",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    4,
+                    0
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "124",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    0
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "125",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    15,
+                    0
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "126",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    0,
+                    1
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "127",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
                 "nid": "110",
                 "variant": null,
                 "level": 10,
@@ -4283,10 +4492,13 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    5,
+                    10
+                ],
                 "starting_traveler": null,
                 "generic": true
             },
@@ -4308,10 +4520,13 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    10,
+                    11
+                ],
                 "starting_traveler": null,
                 "generic": true
             },
@@ -4329,10 +4544,13 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    0,
+                    11
+                ],
                 "starting_traveler": null,
                 "generic": true
             },
@@ -4350,10 +4568,13 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    7,
+                    14
+                ],
                 "starting_traveler": null,
                 "generic": true
             },
@@ -4371,10 +4592,13 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    1,
+                    15
+                ],
                 "starting_traveler": null,
                 "generic": true
             },
@@ -4717,10 +4941,6 @@
                     "113"
                 ],
                 "positions": {
-                    "101": [
-                        6,
-                        7
-                    ],
                     "103": [
                         10,
                         11
@@ -4736,6 +4956,10 @@
                     "113": [
                         1,
                         15
+                    ],
+                    "101": [
+                        5,
+                        10
                     ]
                 }
             },
@@ -5276,6 +5500,121 @@
                 ],
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "orc1",
+                "variant": null,
+                "level": 11,
+                "klass": "Orc",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "2",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc2",
+                "variant": null,
+                "level": 11,
+                "klass": "Orc",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "2",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc3",
+                "variant": null,
+                "level": 11,
+                "klass": "Orc",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "2",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc4",
+                "variant": null,
+                "level": 11,
+                "klass": "Orc",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "2",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc5",
+                "variant": null,
+                "level": 11,
+                "klass": "Orc",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "2",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "OgreWM",
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "2",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [
@@ -5465,6 +5804,40 @@
                 "time_left": null,
                 "only_once": false,
                 "interrupt_move": false
+            },
+            {
+                "nid": "formation_9",
+                "region_type": "formation",
+                "position": [
+                    16,
+                    25
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "ogre",
+                "region_type": "normal",
+                "position": [
+                    15,
+                    6
+                ],
+                "size": [
+                    20,
+                    11
+                ],
+                "sub_nid": "ogre",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
             }
         ],
         "unit_groups": [
@@ -5590,9 +5963,51 @@
                         16
                     ]
                 }
+            },
+            {
+                "nid": "ogre",
+                "units": [
+                    "orc1",
+                    "orc2",
+                    "orc3",
+                    "orc4",
+                    "orc5",
+                    "OgreWM"
+                ],
+                "positions": {
+                    "OgreWM": [
+                        7,
+                        29
+                    ],
+                    "orc5": [
+                        6,
+                        31
+                    ],
+                    "orc4": [
+                        8,
+                        32
+                    ],
+                    "orc3": [
+                        6,
+                        32
+                    ],
+                    "orc2": [
+                        7,
+                        31
+                    ],
+                    "orc1": [
+                        7,
+                        32
+                    ]
+                }
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "2",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "P10",
@@ -5612,12 +6027,12 @@
         },
         "roam": false,
         "roam_unit": null,
-        "go_to_overworld": false,
+        "go_to_overworld": true,
         "should_record": true,
         "tags": [],
         "units": [
             {
-                "nid": "Minerve",
+                "nid": "Minerve_2",
                 "team": "enemy",
                 "ai": "Attack",
                 "roam_ai": null,
@@ -5654,7 +6069,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Sword",
+                        "Iron_Blade",
                         false
                     ]
                 ],
@@ -5675,7 +6090,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Sword",
+                        "Iron_Blade",
                         false
                     ]
                 ],
@@ -5696,7 +6111,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Sword",
+                        "Iron_Blade",
                         false
                     ],
                     [
@@ -5721,7 +6136,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Sword",
+                        "Iron_Blade",
                         false
                     ]
                 ],
@@ -5742,7 +6157,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Sword",
+                        "Iron_Blade",
                         false
                     ]
                 ],
@@ -5763,7 +6178,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Sword",
+                        "Iron_Blade",
                         false
                     ],
                     [
@@ -5788,7 +6203,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Sword",
+                        "Iron_Blade",
                         false
                     ]
                 ],
@@ -5809,7 +6224,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Sword",
+                        "Iron_Blade",
                         false
                     ]
                 ],
@@ -6095,20 +6510,20 @@
                 ],
                 "positions": {
                     "111": [
-                        9,
-                        6
-                    ],
-                    "112": [
-                        5,
-                        3
-                    ],
-                    "113": [
-                        4,
+                        12,
                         8
                     ],
-                    "114": [
-                        17,
+                    "112": [
+                        6,
                         6
+                    ],
+                    "113": [
+                        2,
+                        3
+                    ],
+                    "114": [
+                        19,
+                        5
                     ]
                 }
             }
@@ -6134,7 +6549,7 @@
         },
         "roam": false,
         "roam_unit": null,
-        "go_to_overworld": false,
+        "go_to_overworld": true,
         "should_record": true,
         "tags": [],
         "units": [
@@ -7582,7 +7997,7 @@
         },
         "roam": false,
         "roam_unit": null,
-        "go_to_overworld": false,
+        "go_to_overworld": true,
         "should_record": true,
         "tags": [],
         "units": [
@@ -8141,7 +8556,7 @@
             {
                 "nid": "Rialayoung",
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -12820,8 +13235,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    21,
-                    4
+                    22,
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -12846,7 +13261,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    20,
+                    1,
                     4
                 ],
                 "starting_traveler": null,
@@ -13038,12 +13453,25 @@
             {
                 "nid": "SucBoss",
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
                     29,
                     21
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Minerve",
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": false

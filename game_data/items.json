@@ -1037,6 +1037,54 @@
                 [
                     "Chosen"
                 ]
+            ],
+            [
+                "crit",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Strategic_Strikes",
+        "name": "Strategic Strikes",
+        "desc": "List of strikes aiming to hinder the opponent.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            25
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "multi_item",
+                [
+                    "Blinding_Strike_ability",
+                    "Silencing_Strike_ability",
+                    "Stunning_Strike_ability"
+                ]
             ]
         ]
     },
@@ -1762,6 +1810,58 @@
         ]
     },
     {
+        "nid": "Firewall_ability_v2",
+        "name": "Firewall TEST",
+        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "event_on_hit",
+                "Global Firewall v2 place"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "map_cast_sfx",
+                "Burning"
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "target is None or target == unit"
+            ]
+        ]
+    },
+    {
         "nid": "Lance_Blocker",
         "name": "Lance Blocker",
         "desc": "",
@@ -2368,6 +2468,62 @@
             [
                 "hit",
                 75
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Resistance",
+        "name": "Rally Resistance",
+        "desc": "Increases RES of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            24
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "ally_blast_aoe",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Rally_Resistance_buff"
+            ],
+            [
+                "map_cast_sfx",
+                "Rally"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    170,
+                    255
+                ]
             ]
         ]
     },
@@ -12583,7 +12739,7 @@
             ],
             [
                 "damage",
-                0
+                2
             ],
             [
                 "hit",
@@ -13985,13 +14141,17 @@
     {
         "nid": "Serum",
         "name": "Serum",
-        "desc": "Removes negative statuses.",
+        "desc": "Removes negative statuses from adjacent ally or yourself.",
         "icon_nid": "Consumable",
         "icon_index": [
             0,
             1
         ],
         "components": [
+            [
+                "restore",
+                null
+            ],
             [
                 "usable",
                 null
@@ -14012,8 +14172,32 @@
                 500
             ],
             [
-                "restore",
-                null
+                "eval_target_restrict_2",
+                "unit or target.team == 'player'"
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Recover"
+            ],
+            [
+                "map_target_cast_anim",
+                "MapSmallHealTrans"
             ]
         ]
     },

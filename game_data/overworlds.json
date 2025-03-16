@@ -128,23 +128,23 @@
                     9
                 ],
                 "icon": "woods",
-                "level": "P11",
+                "level": "P12",
                 "menu_options": []
             },
             {
                 "nid": "P13",
                 "name": "Confrontation",
                 "pos": [
-                    20,
-                    8
+                    21,
+                    7
                 ],
                 "icon": "castle",
-                "level": "P12",
+                "level": "P13",
                 "menu_options": []
             },
             {
                 "nid": "P11",
-                "name": "New Location",
+                "name": "Survivors",
                 "pos": [
                     20,
                     10
@@ -165,7 +165,7 @@
                 "menu_options": [
                     {
                         "nid": "Armory1Overworld",
-                        "event": null,
+                        "event": "Armory1Overworld",
                         "option_name": "Armory",
                         "visible": true,
                         "enabled": true
@@ -309,28 +309,24 @@
                     9
                 ]
             ],
-            "(18, 9)-(20, 8)": [
+            "(18, 9)-(21, 7)": [
                 [
                     18,
                     9
                 ],
                 [
-                    19,
-                    9
+                    20,
+                    7
                 ],
                 [
-                    20,
-                    8
+                    21,
+                    7
                 ]
             ],
-            "(19, 5)-(20, 8)": [
+            "(19, 5)-(21, 7)": [
                 [
-                    20,
-                    8
-                ],
-                [
-                    20,
-                    6
+                    21,
+                    7
                 ],
                 [
                     19,
