@@ -1922,7 +1922,7 @@
     {
         "nid": "Flashy_Escape_ability",
         "name": "Flashy Escape",
-        "desc": "Safado moves backwards from the target while inflicting <red>[BLINDED]</>. Can attack after.\nCosts <blue>10 mana</>.",
+        "desc": "Safado moves backwards from the target while inflicting <red>[BLINDED]</>. Can attack after.\nCosts <blue>5 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -1939,7 +1939,7 @@
             ],
             [
                 "mana_cost",
-                10
+                5
             ],
             [
                 "level_exp",
@@ -2030,7 +2030,7 @@
     {
         "nid": "Stalling_Stance_ability",
         "name": "Stalling Stance",
-        "desc": "Safado veils himself with a slippery magic. Neither Safado nor his enemies can hit each other in combat.",
+        "desc": "Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks. Enemis are more likely to attack him. Safado inflicts <red>[FRUSTRATED]</> on enemies after combat. Costs <blue>5 mana</>.\n<red>[FRUSTRATED]</>: DEF and RES reduced. Can be stacked up to 5 times. Debuff is lost on receiving an attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -2059,7 +2059,7 @@
             ],
             [
                 "mana_cost",
-                10
+                5
             ],
             [
                 "status_on_hit",
@@ -2068,9 +2068,9 @@
         ]
     },
     {
-        "nid": "Sneaking_stance_ability",
-        "name": "Sneaking stance",
-        "desc": "Safado can use <green>[SNEAKING STANCE]</>. Costs <blue>10 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
+        "nid": "Chameleon_stance_ability",
+        "name": "Chameleon stance",
+        "desc": "Safado applies <green>[CHAMELEON STANCE]</>. Costs <blue>5 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units. He has bonus MOV and AVOID. Less likely to be attacked by enemy units. This buff is lost when Safado attacks someone.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -2083,11 +2083,11 @@
             ],
             [
                 "mana_cost",
-                10
+                5
             ],
             [
                 "self_status_on_hit",
-                "Sneaking_Stance_buff"
+                "Chameleon_stance_buff"
             ],
             [
                 "exp",
@@ -2114,7 +2114,7 @@
     {
         "nid": "Social_Distancing",
         "name": "Social Distancing",
-        "desc": "Safado shoves any unit 1 tile away. Can attack after.\nCosts <blue>5 mana</>.",
+        "desc": "Safado shoves any unit 1 tile away. Can attack after.\nCosts <blue>2 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -2131,7 +2131,7 @@
             ],
             [
                 "mana_cost",
-                5
+                2
             ],
             [
                 "min_range",

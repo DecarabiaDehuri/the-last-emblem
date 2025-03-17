@@ -1363,6 +1363,9 @@
             "enable_turnwheel;1",
             "set_current_mana;Simon;10",
             "give_item;Simon;Heroic_Imitation;no_banner",
+            "give_skill;Safado;Chameleon_stance;;persistent",
+            "give_skill;Simonyoung;Guaranteed_Crit;;no_banner",
+            "give_item;Simonyoung;Iron_Sword;;no_banner",
             "#trigger_script;Trigger",
             "base;Clearing",
             "#music;Attack;2000",
@@ -2810,10 +2813,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "add_talk;Simon;Aka",
-            "set_current_hp;Chosen;1",
-            "set_current_hp;Monica;1",
-            "set_current_hp;Antarion;1"
+            "add_talk;Simon;Aka"
         ],
         "nid": "DEBUG Addtalk"
     },
@@ -6100,7 +6100,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;u('Monica').klass == 'Cleric'",
+            "if;u('Monica').klass == 'Priestess'",
             "if;game.get_unit('Monica').level == 6",
             "    give_skill;Monica;Soothing_Presence;;persistent",
             "elif;game.get_unit('Monica').level == 7",
@@ -6180,6 +6180,7 @@
         "_source": [
             "autolevel_to;Mira;9;random",
             "promote;Chosen;;silent",
+            "give_skill;Safado;Stalling_Stance_buff;;persistent",
             "give_skill;Duro;Strategic_Strikes;;no_banner;persistent",
             "give_skill;Rosa;Fan_the_Flames;;persistent;no_banner",
             "give_skill;Monica;Rally_Resistance;;persistent;no_banner",

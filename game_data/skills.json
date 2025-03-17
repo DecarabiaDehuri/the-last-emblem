@@ -3214,7 +3214,7 @@
     {
         "nid": "Flashy_Escape",
         "name": "Flashy Escape",
-        "desc": "<green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>. Costs <blue>10 mana</>.\n<red>[BLINDED]</>:Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
+        "desc": "<green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>. Costs <blue>5 mana</>.\n<red>[BLINDED]</>:Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -3282,7 +3282,7 @@
     {
         "nid": "Stalling_Stance",
         "name": "Stalling Stance",
-        "desc": "Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks.\nCosts <blue>10 mana</>.",
+        "desc": "Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks. Enemis are more likely to attack him. Safado inflicts <red>[FRUSTRATED]</> on enemies after combat. Costs <blue>5 mana</>.\n<red>[FRUSTRATED]</>: DEF and RES reduced. Can be stacked up to 5 times. Debuff is lost on receiving an attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -3299,7 +3299,7 @@
             ],
             [
                 "cost_mana",
-                10
+                5
             ],
             [
                 "grey_if_inactive",
@@ -3310,7 +3310,7 @@
     {
         "nid": "Stalling_Stance_buff",
         "name": "Stalling Stance",
-        "desc": "Safado will dodge enemy attacks, but also miss his own.",
+        "desc": "Safado will dodge enemy attacks, but also miss his own. Enemies are more likely to attack Safado.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -3327,15 +3327,7 @@
             ],
             [
                 "time",
-                2
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    255,
-                    85,
-                    255
-                ]
+                4
             ],
             [
                 "display_skill_icon_in_combat",
@@ -3344,6 +3336,71 @@
             [
                 "combat_condition",
                 "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_combat",
+                "Frustrated"
+            ],
+            [
+                "unit_tint",
+                [
+                    176,
+                    81,
+                    193
+                ]
+            ],
+            [
+                "modify_ai_priority",
+                1.7000000000000004
+            ],
+            [
+                "lost_on_strike",
+                null
+            ],
+            [
+                "cannot_counter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Frustrated",
+        "name": "<red>[FRUSTRATED]</>",
+        "desc": "DEF and RES reduced. Can be stacked up to 5 times. Debuff is lost on receiving an attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            27
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -2
+                    ],
+                    [
+                        "RES",
+                        -2
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.team == 'enemy' or unit.team == 'enemy2'"
+            ],
+            [
+                "unit_anim",
+                "MapFlying"
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "lost_on_take_hit",
+                null
             ]
         ]
     },
@@ -3430,9 +3487,9 @@
         ]
     },
     {
-        "nid": "Sneaking_Stance",
-        "name": "Sneaking Stance buff",
-        "desc": "Safado can gain <green>[SNEAKING STANCE]</>. Costs <blue>10 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
+        "nid": "Chameleon_Stance",
+        "name": "Chameleon Stance",
+        "desc": "Safado can gain <green>[CHAMELEON STANCE]</>. Costs <blue>5 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units. He has bonus MOV and AVOID. Less likely to be attacked by enemy units. This buff is lost when Safado attacks someone.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -3445,7 +3502,7 @@
             ],
             [
                 "ability",
-                "Sneaking_stance_ability"
+                "Chameleon_stance_ability"
             ],
             [
                 "grey_if_inactive",
@@ -3453,12 +3510,12 @@
             ],
             [
                 "cost_mana",
-                10
+                5
             ]
         ]
     },
     {
-        "nid": "Sneaking_Stance_buff",
+        "nid": "Sneaking_Stance_buff_backup",
         "name": "Sneaking Stance",
         "desc": "Safado can pass through enemy units and has bonus MOV.\nBuff is lost when Safado attacks someone.",
         "icon_nid": "skill_icons",
@@ -3489,20 +3546,236 @@
                 ]
             ],
             [
-                "unit_flickering_tint",
-                [
-                    0,
-                    0,
-                    0
-                ]
-            ],
-            [
                 "modify_ai_priority",
                 0.5
             ],
             [
                 "combat_condition",
                 "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "unit_tint",
+                [
+                    40,
+                    40,
+                    40
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Chameleon_stance_buff",
+        "name": "<green>[CHAMELEON STANCE]</>",
+        "desc": "Safado can pass through enemy units. He has bonus MOV and AVOID. Less likely to be attacked by enemy units.\nThis buff is lost when Safado attacks someone.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "multi_skill",
+                [
+                    "Sneak_Plains",
+                    "Sneak_Road",
+                    "Sneak_Forest",
+                    "Sneak_Bridge",
+                    "Sneak_Wasteland",
+                    "Sneak_Floor"
+                ]
+            ],
+            [
+                "lost_on_strike",
+                null
+            ],
+            [
+                "modify_ai_priority",
+                0.09999999999999998
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "avoid",
+                20
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Sneak_Plains",
+        "name": "Sneak Plains",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('1', '20')"
+            ],
+            [
+                "unit_tint",
+                [
+                    44,
+                    108,
+                    101
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sneak_Forest",
+        "name": "Sneak Forest",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('2')"
+            ],
+            [
+                "unit_tint",
+                [
+                    25,
+                    109,
+                    31
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sneak_Bridge",
+        "name": "Sneak Bridge",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('4', '31', '33', '34', '36')"
+            ],
+            [
+                "unit_tint",
+                [
+                    139,
+                    134,
+                    59
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sneak_Floor",
+        "name": "Sneak Floor",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('6', '8', 'Ruins', 'Village Ruins')"
+            ],
+            [
+                "unit_tint",
+                [
+                    139,
+                    139,
+                    139
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sneak_Wasteland",
+        "name": "Sneak Wasteland",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('Wasteland', '21')"
+            ],
+            [
+                "unit_tint",
+                [
+                    90,
+                    90,
+                    55
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sneak_Road",
+        "name": "Sneak Road",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('7')"
+            ],
+            [
+                "unit_tint",
+                [
+                    209,
+                    209,
+                    154
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
