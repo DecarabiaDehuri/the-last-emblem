@@ -281,6 +281,10 @@
             [
                 "avoid",
                 -50
+            ],
+            [
+                "condition",
+                "not has_skill(unit, \"Blinded_Immune\")"
             ]
         ]
     },
@@ -602,7 +606,7 @@
     {
         "nid": "Blinded_Immune",
         "name": "Blinded Immunity",
-        "desc": "Unit cannot be <red>[BLINDED]</>.",
+        "desc": "Unit cannot receive <red>[BLIND]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,

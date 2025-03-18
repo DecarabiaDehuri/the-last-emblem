@@ -2831,10 +2831,13 @@
         "nid": "Simonyoung",
         "name": "Simon",
         "desc": "The Chosen's appointed guardian. A prudent war veteran.",
-        "variant": "",
+        "variant": "Simonyoung",
         "level": 7,
         "klass": "Paladin",
-        "tags": [],
+        "tags": [
+            "Convoy",
+            "AdjConvoy"
+        ],
         "bases": {
             "HP": 25,
             "STR": 5,
@@ -4473,12 +4476,7 @@
                 true
             ]
         ],
-        "learned_skills": [
-            [
-                1,
-                "Blind_attack"
-            ]
-        ],
+        "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [

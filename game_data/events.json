@@ -3293,7 +3293,7 @@
         "nid": "P1 Intro"
     },
     {
-        "name": "Tutorial: navigation",
+        "name": "Tutorial: navigation e C",
         "trigger": "turn_change",
         "level_nid": "P1",
         "condition": "game.turncount == 1",
@@ -3305,7 +3305,7 @@
             "wait;500",
             "add_portrait;Ivala;Right,Top",
             "wait;200",
-            "speak;Ivala;It all functions on turns. Use your arrow keys, or your mouse, to navigate.|Use the confirm button (default: X key) to select the character you want to give commands to.|If you select an empty tile, you will be able to access extra menus, such as the <red>Options</> settings.|The check button (default: C key) lets you access the status menu.;bottom;;;;blue;;;;;None",
+            "speak;Ivala;It all functions on turns. Use your arrow keys, or your mouse, to navigate.|Use the confirm button (default: [X] key) to select the character you want to give commands to.|If you select an empty tile, you will be able to access extra menus, such as the <red>Options</> settings.|The check button (default: [C] key) lets you access the status menu.|On the same note, you can also use this button to read the descriptions of just about everything.|When in doubt, remember the Check button!;bottom;;;;blue;;;;;None",
             "add_portrait;Chosen;Left,Bottom",
             "speak;Chosen;Huh? I have no idea what you're talking about!;bottom_right",
             "speak;Ivala;Fear not, for what I speak{br}is not meant to reach your ears, but your Soul.;top_left;;;;blue;;;;;None",
@@ -3313,7 +3313,7 @@
             "multi_remove_portrait;Chosen;Ivala",
             "end"
         ],
-        "nid": "P1 Tutorial: navigation"
+        "nid": "P1 Tutorial: navigation e C"
     },
     {
         "name": "Tutorial: movement",
@@ -3425,7 +3425,7 @@
         "nid": "P1 Tutorial: trade"
     },
     {
-        "name": "Simon Chega",
+        "name": "Simon Chega e Tutorial: Supply",
         "trigger": "phase_change",
         "level_nid": "P1",
         "condition": "game.level_vars['simonappears'] == 1",
@@ -3476,13 +3476,13 @@
             "if;{v:ivala} == 1",
             "    add_portrait;Ivala;(120,32)",
             "    wait;200",
-            "    speak;Ivala;Now you have a powerful unit at your disposal.|You can consult the status of units by pressing the check button (default: C key).|On the same note, you can also use this button to read the descriptions of just about everything.|When in doubt, remember the Check button!;bottom;;;;blue;;;;;None",
+            "    speak;Ivala;Now you have a powerful and useful unit at your disposal!|Simon is responsible for the party's <red>Supply</>, where you can store and retrieve items.|Units adjacent to Simon can also access the Supply as well!;bottom;;;;blue;;;;;None",
             "    remove_portrait;Ivala",
             "    wait;500",
             "end",
             "music_fade_back"
         ],
-        "nid": "P1 Simon Chega"
+        "nid": "P1 Simon Chega e Tutorial: Supply"
     },
     {
         "name": "Firstspiderdeath and Tutorial: snag",
@@ -6179,6 +6179,7 @@
         "priority": 20,
         "_source": [
             "autolevel_to;Mira;9;random",
+            "give_skill;Minerve_true;Blinded_Immune;;no_banner",
             "promote;Chosen;;silent",
             "give_skill;Safado;Stalling_Stance_buff;;persistent",
             "give_skill;Duro;Strategic_Strikes;;no_banner;persistent",
@@ -6224,6 +6225,8 @@
             "give_skill;Milena;Dance;;no_banner;persistent",
             "give_skill;Milena;Subtle_Slithering;;no_banner;persistent",
             "set_current_hp;101;5",
+            "give_skill;101;Blinded_Immune;;no_banner;persistent",
+            "give_skill;Duro;Bear_hug;;no_banner",
             "give_item;Rialayoung;Lusting_Gaze;;no_banner",
             "give_item;Rialayoung;Lethal_Lust;no_banner",
             "give_item;Simonyoung;Master_Seal;no_banner",
