@@ -146,6 +146,21 @@
         "platform": "Wall",
         "background": "Stone3",
         "mtype": "Wall",
+        "opaque": false,
+        "status": null
+    },
+    {
+        "nid": "Wall_p3",
+        "name": "Wall",
+        "color": [
+            40,
+            40,
+            40
+        ],
+        "minimap": "Wall",
+        "platform": "Wall",
+        "background": "Stone3",
+        "mtype": "Wall",
         "opaque": true,
         "status": null
     },
@@ -236,7 +251,7 @@
         "platform": "Mountain",
         "background": "mountain",
         "mtype": "Mountain",
-        "opaque": true,
+        "opaque": false,
         "status": "Peak"
     },
     {
@@ -493,5 +508,35 @@
         "mtype": "Desert",
         "opaque": false,
         "status": null
+    },
+    {
+        "nid": "LavaCoast",
+        "name": "Lava Coast",
+        "color": [
+            59,
+            19,
+            19
+        ],
+        "minimap": "Lava_Coast",
+        "platform": "Cliff",
+        "background": "lava",
+        "mtype": "Normal",
+        "opaque": false,
+        "status": null
+    },
+    {
+        "nid": "Lava",
+        "name": "Lava",
+        "color": [
+            197,
+            0,
+            3
+        ],
+        "minimap": "Lava",
+        "platform": "Mountain",
+        "background": "lava",
+        "mtype": "River",
+        "opaque": false,
+        "status": "Burned"
     }
 ]

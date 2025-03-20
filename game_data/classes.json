@@ -3580,7 +3580,7 @@
             0
         ],
         "map_sprite_nid": "Journeyman",
-        "combat_anim_nid": "Journeyman",
+        "combat_anim_nid": "JourneymanMira",
         "fields": []
     },
     {
@@ -11994,7 +11994,7 @@
             "DEF": 2,
             "RES": 1,
             "CON": 16,
-            "MOV": 5
+            "MOV": 4
         },
         "growths": {
             "HP": 70,
@@ -12295,14 +12295,14 @@
             "MOV": 5
         },
         "growths": {
-            "HP": 80,
-            "STR": 80,
+            "HP": 70,
+            "STR": 20,
             "MAG": 25,
             "SKL": 40,
-            "SPD": 30,
+            "SPD": 20,
             "LCK": 35,
-            "DEF": 60,
-            "RES": 30,
+            "DEF": 20,
+            "RES": 10,
             "CON": 0,
             "MOV": 0
         },
@@ -14037,6 +14037,310 @@
         ],
         "map_sprite_nid": null,
         "combat_anim_nid": "RosaPhoenix",
+        "fields": []
+    },
+    {
+        "nid": "Seed_of_Corruption",
+        "name": "Seed of Corruption",
+        "desc": "Concentrated twisted lust magic.",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Monster"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 40,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Growing_Corruption"
+            ],
+            [
+                1,
+                "Unstable_Aura_1"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Gorgon Egg (U) Black {IS}-stand",
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Corruption_Incarnate",
+        "name": "<narrow>Corruption Incarnate</>",
+        "desc": "",
+        "tier": 2,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Flying",
+            "Monster"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 60,
+            "STR": 9,
+            "MAG": 18,
+            "SKL": 12,
+            "SPD": 8,
+            "LCK": 11,
+            "DEF": 12,
+            "RES": 14,
+            "CON": 0,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Flying"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                181,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Fire Dragon (Purple) {Max Limit}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Myrrh Generic [Kemui52]-stand",
+        "combat_anim_nid": "Corruption_Incarnate",
         "fields": []
     }
 ]

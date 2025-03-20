@@ -650,7 +650,7 @@
             ],
             [
                 "battle_cast_anim",
-                "Howl"
+                "Hex"
             ],
             [
                 "warning",
@@ -745,6 +745,145 @@
                 1
             ]
         ]
+    },
+    {
+        "nid": "DarkWeb",
+        "name": "Dark Web",
+        "desc": "A siege weapon which shoots at a straight line. Units hit by this will get WEBBED.\n<red>WEBBED</>: -5 SPD, -3 MOV. Duration: 1 turn. ",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                25
+            ],
+            [
+                "status_on_hit",
+                "Webbed"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_special_range",
+                "(x == 0 or y == 0)"
+            ],
+            [
+                "battle_animation_music",
+                "Boss1"
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "shove",
+                2
+            ],
+            [
+                "crit",
+                20
+            ]
+        ]
+    },
+    {
+        "nid": "Oppressing_Decay",
+        "name": "Oppresing Decay",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                6
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Masturbate",
@@ -1686,74 +1825,6 @@
         ]
     },
     {
-        "nid": "DarkWeb",
-        "name": "Dark Web",
-        "desc": "A siege weapon which shoots at a straight line. Units hit by this will get WEBBED.\n<red>WEBBED</>: -5 SPD, -3 MOV. Duration: 1 turn. ",
-        "icon_nid": "Skills",
-        "icon_index": [
-            1,
-            8
-        ],
-        "components": [
-            [
-                "siege_weapon",
-                null
-            ],
-            [
-                "warning",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                25
-            ],
-            [
-                "status_on_hit",
-                "Webbed"
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "eval_special_range",
-                "x == 0 or y == 0"
-            ],
-            [
-                "battle_animation_music",
-                "Boss1"
-            ],
-            [
-                "weapon_type",
-                "Bow"
-            ],
-            [
-                "damage",
-                8
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "shove",
-                2
-            ],
-            [
-                "crit",
-                20
-            ]
-        ]
-    },
-    {
         "nid": "Firewall_ability",
         "name": "Firewall",
         "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
@@ -1811,7 +1882,7 @@
     },
     {
         "nid": "Firewall_ability_v2",
-        "name": "Firewall TEST",
+        "name": "Firewall",
         "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -2070,7 +2141,7 @@
     {
         "nid": "Chameleon_stance_ability",
         "name": "Chameleon stance",
-        "desc": "Safado applies <green>[CHAMELEON STANCE]</>. Costs <blue>5 mana</>.\n<green>[SNEAKING STANCE]</>: Safado can pass through enemy units. He has bonus MOV and AVOID. Less likely to be attacked by enemy units. This buff is lost when Safado attacks someone.",
+        "desc": "Safado applies <green>[CHAMELEON STANCE]</>. Costs <blue>5 mana</>.\n<green>[CHAMELEON STANCE]</>: Safado can pass through enemy units. He has bonus MOV and AVOID. Less likely to be attacked by enemy units. This buff is lost when Safado attacks someone.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -2524,6 +2595,10 @@
                     170,
                     255
                 ]
+            ],
+            [
+                "exp",
+                15
             ]
         ]
     },
@@ -14154,6 +14229,10 @@
             ],
             [
                 "usable",
+                null
+            ],
+            [
+                "target_ally",
                 null
             ],
             [

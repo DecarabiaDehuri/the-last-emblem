@@ -3956,10 +3956,10 @@
     {
         "nid": "Baruba",
         "name": "Baruba",
-        "desc": "A courageous general in Grado\u2019s army. He\u2019s better known as Obsidian.",
+        "desc": "Veteran mercenary.",
         "variant": "",
         "level": 9,
-        "klass": "Mercenary",
+        "klass": "Hero",
         "tags": [],
         "bases": {
             "HP": 25,
@@ -5389,7 +5389,7 @@
             "DEF": 8,
             "RES": 6,
             "CON": 16,
-            "MOV": 5
+            "MOV": 4
         },
         "growths": {},
         "stat_cap_modifiers": {},
@@ -5570,6 +5570,39 @@
         },
         "alternate_classes": [],
         "portrait_nid": "SucBoss",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Iris",
+        "name": "Iris",
+        "desc": "Incubus King's secretary. She has an optimization fetish.",
+        "variant": null,
+        "level": 6,
+        "klass": "Dancer",
+        "tags": [
+            "Female",
+            "Succubus"
+        ],
+        "bases": {
+            "HP": 13,
+            "STR": 1,
+            "MAG": 3,
+            "SKL": 14,
+            "SPD": 1,
+            "LCK": 11,
+            "DEF": 5,
+            "RES": 6,
+            "MOV": 0
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Iris",
         "affinity": "Dark",
         "fields": []
     }
