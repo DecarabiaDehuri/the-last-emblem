@@ -14702,12 +14702,12 @@
                 null
             ],
             [
-                "heal",
-                99
+                "target_ally",
+                null
             ],
             [
-                "event_after_combat_on_hit",
-                "Global Restora mana party"
+                "heal",
+                99
             ],
             [
                 "target_tile",
@@ -14722,8 +14722,8 @@
                 0
             ],
             [
-                "status_on_hit",
-                "Nothing"
+                "event_on_hit",
+                "Global Restora mana party"
             ]
         ]
     },
@@ -16111,6 +16111,10 @@
             [
                 "status_on_hold",
                 "Anticrit"
+            ],
+            [
+                "equippable_accessory",
+                null
             ]
         ]
     },
@@ -16131,6 +16135,469 @@
             [
                 "status_on_hold",
                 "Anticrit"
+            ],
+            [
+                "equippable_accessory",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Warrior_Pin",
+        "name": "Warrior's Pin",
+        "desc": "Grants immunity to <red>[BLIND]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            15
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Blinded_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Thief_Pin",
+        "name": "Thief's Pin",
+        "desc": "Grants immunity to <red>[POISON]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            15
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Poisoned_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Mage_Pin",
+        "name": "Mage's Pin",
+        "desc": "Grants immunity to <red>[SILENCE]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            15
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Silence_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Healer_Pin",
+        "name": "Healer's Pin",
+        "desc": "Grants immunity to <red>[SLEEP]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            15
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Sleep_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Barrier_Pin",
+        "name": "Barrier Pin",
+        "desc": "Grants immunity to <red>[STUN]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            15
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Stunned_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Duelist_Pin",
+        "name": "Duelist's Pin",
+        "desc": "Grants immunity to <red>[PARALYSIS]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            15
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Paralysis_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Heirloom_Pin",
+        "name": "Heirloom Pin",
+        "desc": "Grants immunity to <red>[CONFUSION]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            15
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Confused_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Crusader_Charm",
+        "name": "Crusader Charm",
+        "desc": "Grants immunity to <red>[LUST DRAIN]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Lust_Drain_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Unperson_Charm",
+        "name": "Unperson Charm",
+        "desc": "Grants immunity to <red>[LUST DEATH]</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Lust_Death_Immune"
+            ]
+        ]
+    },
+    {
+        "nid": "Gauntlets",
+        "name": "Gauntlets",
+        "desc": "Boosts STR and DEF.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            13
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Headband",
+        "name": "Headband",
+        "desc": "Boosts STR and SPD.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            13
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Magic_Ring",
+        "name": "Magic Ring",
+        "desc": "Boosts MAG and RES.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            13
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Elven_Ring",
+        "name": "Elven Ring",
+        "desc": "Boosts MAG and DEF.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            13
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Cloak",
+        "name": "Cloak",
+        "desc": "Boosts SPD.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            13
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        2
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Boots",
+        "name": "Boots",
+        "desc": "Boosts DEF and SPD.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Sexy_Librarian_Glasses",
+        "name": "Sexy Librarian Glasses",
+        "desc": "Boosts MAG, RES and SPD. <red>Succubus only</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        0
+                    ]
+                ]
+            ],
+            [
+                "prf_tags",
+                [
+                    "Succubus"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Fetish_Cat_Ears",
+        "name": "Fetish Cat Ears",
+        "desc": "Boosts STR and SPD. <red>Succubus only</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "prf_tags",
+                [
+                    "Succubus"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Fetish_Bunny_Ears",
+        "name": "Fetish Bunny Ears",
+        "desc": "Boosts STR and SPD. <red>Succubus only</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "prf_tags",
+                [
+                    "Succubus"
+                ]
             ]
         ]
     },

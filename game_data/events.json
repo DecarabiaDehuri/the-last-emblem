@@ -3417,7 +3417,7 @@
             "wait;500",
             "add_portrait;Ivala;(120,32)",
             "wait;200",
-            "speak;Ivala;Oh, dear Chosen, you are in need of healing.|Thankfully, Simon has brought a <red>Health Potion</>.|By placing your units adjacent to each other, they can <red>Trade</>.|Trade will switch items between their inventories, which can hold up to 5 items.|You can trade as many times as you want before performing an action.|However, you cannot cancel your movement or move again after trading!;bottom;;;;blue;;;;;None",
+            "speak;Ivala;Oh, dear Chosen, you are in need of healing.|Thankfully, Simon has brought a <red>Health Potion</>.|By placing your units adjacent to each other, they can <red>Trade</>.|Trade will switch items between their inventories.|Inventories can hold up to 4 items and 1 accessory.|You can trade as many times as you want before performing an action.|However, you cannot cancel your movement or move again after trading!;bottom;;;;blue;;;;;None",
             "remove_portrait;Ivala",
             "wait;200",
             "end"
@@ -4978,7 +4978,7 @@
             "has_traded;{unit}",
             "show_layer;casachiquevisit",
             "remove_region;Casacondominio",
-            "give_money;3000;ChosenParty"
+            "give_item;{unit};Heirloom_Pin"
         ],
         "nid": "P4 Visit condominio"
     },
@@ -5341,8 +5341,7 @@
             "unlock;{unit}",
             "show_layer;chest",
             "give_item;{unit};Master_Seal",
-            "remove_region;Chest",
-            ""
+            "remove_region;Chest"
         ],
         "nid": "P5 Chest"
     },
@@ -6228,8 +6227,8 @@
         "nid": "Global Vendor1Overworld"
     },
     {
-        "name": "testing",
-        "trigger": "level_start",
+        "name": "testing backup",
+        "trigger": null,
         "level_nid": "DEBUG_2",
         "condition": "True",
         "commands": [],
@@ -6297,7 +6296,7 @@
             "give_item;Chosen;Serum;no_banner",
             "give_skill;Chosen;Blinded;;no_banner"
         ],
-        "nid": "DEBUG_2 testing"
+        "nid": "DEBUG_2 testing backup"
     },
     {
         "name": "New Event",
@@ -7630,6 +7629,7 @@
             "s;Chosen;Cool...",
             "s;Geoff;We'll talk later!",
             "transition;close;1000",
+            "add_tag;Geoff;ZeroMove",
             "prep;t;Preparation"
         ],
         "nid": "P7 Intro"
@@ -7763,6 +7763,7 @@
         "priority": 20,
         "_source": [
             "transition;close",
+            "remove_tag;Geoff;ZeroMove",
             "music_clear",
             "wait;500",
             "music;Happy1",
@@ -9429,7 +9430,7 @@
         "_source": [
             "unlock;{unit}",
             "show_layer;chest2",
-            "give_item;{unit};Angelic_Robe",
+            "give_item;{unit};Headband",
             "remove_region;chest2"
         ],
         "nid": "P11 chest2"
@@ -9445,7 +9446,7 @@
         "_source": [
             "unlock;{unit}",
             "show_layer;chest3",
-            "give_item;{unit};Goddess_Icon",
+            "give_item;{unit};Duelist_Pin",
             "remove_region;chest3"
         ],
         "nid": "P11 chest3"
@@ -9488,9 +9489,9 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "for;unit;game.get_player_units()",
-            "    set_current_mana;unit;20",
-            "end"
+            "for;UNIT;[unit.nid for unit in game.get_units_in_party()]",
+            "    set_current_mana;{UNIT};20",
+            "endf"
         ],
         "nid": "Global Restora mana party"
     },
@@ -10377,7 +10378,7 @@
         "_source": [
             "unlock;{unit}",
             "show_layer;chest2",
-            "give_item;{unit};Metis_s_Tome",
+            "give_item;{unit};Elven_Ring",
             "remove_region;chest2"
         ],
         "nid": "P7 Chest2"
@@ -10428,7 +10429,7 @@
         "nid": "Global Unit dies, leaves traveler"
     },
     {
-        "name": "New Event",
+        "name": "Intro",
         "trigger": "level_start",
         "level_nid": "10",
         "condition": "True",
@@ -10438,6 +10439,181 @@
         "_source": [
             "add_weather;fire"
         ],
-        "nid": "10 New Event"
+        "nid": "10 Intro"
+    },
+    {
+        "name": "Green reinforcement avengers like xd",
+        "trigger": "turn_change",
+        "level_nid": "10",
+        "condition": "game.turncount == 2",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear;1000",
+            "wait;1000",
+            "center_cursor;37,3",
+            "wait;1000",
+            "music;Reinforcements",
+            "spawn_group;reinforce;east;reinforce;normal;closest",
+            "wait;2000",
+            "remove_item;Geoff;Long_Ballista;no_banner",
+            "multi_add_portrait;Baruba;MidRight;Geoff;FarRight",
+            "wait;1000"
+        ],
+        "nid": "10 Green reinforcement avengers like xd"
+    },
+    {
+        "name": "Chest1",
+        "trigger": "Chest",
+        "level_nid": "10",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;chest",
+            "give_item;{unit};Huge_Health_Potion",
+            "remove_region;chest"
+        ],
+        "nid": "10 Chest1"
+    },
+    {
+        "name": "Chest2",
+        "trigger": "Chest",
+        "level_nid": "10",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;chest2",
+            "give_item;{unit};Sylvan_Draught",
+            "remove_region;chest2"
+        ],
+        "nid": "10 Chest2"
+    },
+    {
+        "name": "Chest3",
+        "trigger": "Chest",
+        "level_nid": "10",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;chest3",
+            "give_item;{unit};Huge_Mana_Potion",
+            "remove_region;chest3"
+        ],
+        "nid": "10 Chest3"
+    },
+    {
+        "name": "New Event_3",
+        "trigger": "level_start",
+        "level_nid": "DEBUG_2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "set_current_mana;Duro;1",
+            "give_item;Chosen;Sylvan_Draught;;no_banner",
+            "set_current_mana;Rosa;1",
+            "set_current_hp;Chosen;1",
+            "give_skill;Minerve;Blinded_Immune;;persistent;no_banner",
+            "give_item;Rosa;Mage_Pin;;no_banner",
+            "give_item;Chosen;Gauntlets;;no_banner",
+            "set_current_hp;Minerve;1"
+        ],
+        "nid": "DEBUG_2 New Event_3"
+    },
+    {
+        "name": "Chest2",
+        "trigger": "Chest",
+        "level_nid": "P4",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;chest",
+            "give_item;{unit};Boots",
+            "remove_region;Chest"
+        ],
+        "nid": "P4 Chest2"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "11",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "show_layer;mountains",
+            "show_layer;mountains2",
+            "show_layer;pilares",
+            "add_weather;sunset",
+            "add_weather;smoke",
+            "transition;close",
+            "center_cursor;9,1",
+            "music;Wind;10000",
+            "transition;open;5000",
+            "center_cursor;Incubus_King;10000",
+            "wait;3000",
+            "center_cursor;11,19;4000",
+            "wait;1000",
+            "center_cursor;10,35;6000",
+            "wait;2000",
+            "music_clear;10000",
+            "sound;Foot Step",
+            "add_group;player;player;fade;stack",
+            "move_unit;Chosen;10,33;no_follow",
+            "move_unit;Simonyoung;9,34;no_follow",
+            "add_tag;Simonyoung;Required",
+            "move_unit;Duro;11,34;no_follow",
+            "add_tag;Duro;Required",
+            "move_unit;Mira;12,35;no_follow",
+            "add_tag;Mira;Required",
+            "move_unit;Antarion;8,35;no_follow",
+            "add_tag;Antarion;Required",
+            "move_unit;Cassian;11,35;no_follow",
+            "add_tag;Cassian;Required",
+            "move_unit;Lucia;9,35;no_follow",
+            "add_tag;Lucia;Required",
+            "move_unit;Safado;9,36;no_follow",
+            "add_tag;Safado;Required",
+            "move_unit;Monica;11,36;no_follow",
+            "add_tag;Monica;Required",
+            "move_unit;Rosa;8,36;no_follow",
+            "add_tag;Rosa;Required",
+            "move_unit;Milena;12,36;no_follow",
+            "add_tag;Milena;Required",
+            "wait;3000",
+            "prep;t"
+        ],
+        "nid": "11 Intro"
+    },
+    {
+        "name": "Start true level trigger",
+        "trigger": "enemy_turn_change",
+        "level_nid": "11",
+        "condition": "all(game.level.regions.get('start').contains(unit.position) for unit in game.get_player_units())",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "center_cursor;Incubus_King",
+            "wait;1000",
+            "flicker_cursor;Incubus_King"
+        ],
+        "nid": "11 Start true level trigger"
     }
 ]

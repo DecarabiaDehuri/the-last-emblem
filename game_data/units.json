@@ -3667,6 +3667,10 @@
             [
                 "Luna",
                 false
+            ],
+            [
+                "Fetish_Bunny_Ears",
+                true
             ]
         ],
         "learned_skills": [
@@ -3771,6 +3775,10 @@
             [
                 "Luna",
                 false
+            ],
+            [
+                "Sexy_Librarian_Glasses",
+                true
             ]
         ],
         "learned_skills": [
@@ -3893,11 +3901,15 @@
             ],
             [
                 1,
-                "Lust_Death"
+                "Unmovable"
             ],
             [
                 1,
-                "Unmovable"
+                "Silence_Immune"
+            ],
+            [
+                1,
+                "Lust_Drain_attack"
             ]
         ],
         "unit_notes": [],
@@ -3988,7 +4000,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Sword",
+                "Steel_Blade",
                 false
             ]
         ],
@@ -4053,9 +4065,7 @@
         "variant": null,
         "level": 13,
         "klass": "Sniper",
-        "tags": [
-            "ZeroMove"
-        ],
+        "tags": [],
         "bases": {
             "HP": 28,
             "STR": 9,
@@ -4065,7 +4075,7 @@
             "DEF": 5,
             "RES": 4,
             "CON": 8,
-            "MOV": 0
+            "MOV": 6
         },
         "growths": {},
         "stat_cap_modifiers": {},
@@ -4476,7 +4486,12 @@
                 true
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Blinded_Immune"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -4590,6 +4605,10 @@
             [
                 1,
                 "Unmovable"
+            ],
+            [
+                1,
+                "Poisoned_Immune"
             ]
         ],
         "unit_notes": [],
@@ -4737,6 +4756,10 @@
             [
                 1,
                 "Unmovable"
+            ],
+            [
+                1,
+                "Stunned_Immune"
             ]
         ],
         "unit_notes": [],
@@ -5039,7 +5062,7 @@
                 false
             ],
             [
-                "Loot_Bag",
+                "Healer_Pin",
                 true
             ]
         ],
@@ -5403,7 +5426,7 @@
                 false
             ],
             [
-                "Loot_Bag",
+                "Unperson_Charm",
                 true
             ]
         ],
