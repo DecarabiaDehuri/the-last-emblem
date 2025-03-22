@@ -32,7 +32,7 @@
                     5
                 ],
                 "icon": "cathedral",
-                "level": null,
+                "level": "P14",
                 "menu_options": []
             },
             {
@@ -151,7 +151,22 @@
                 ],
                 "icon": "town",
                 "level": "P11",
-                "menu_options": []
+                "menu_options": [
+                    {
+                        "nid": "Armory2Overworld",
+                        "event": "Armory2Overworld",
+                        "option_name": "Armory",
+                        "visible": true,
+                        "enabled": true
+                    },
+                    {
+                        "nid": "Vendor2Overworld",
+                        "event": "Vendor2Overworld",
+                        "option_name": "Vendor",
+                        "visible": true,
+                        "enabled": true
+                    }
+                ]
             },
             {
                 "nid": "P4",

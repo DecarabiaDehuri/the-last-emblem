@@ -197,6 +197,46 @@
         ]
     },
     {
+        "nid": "Cant_be_doubled",
+        "name": "Cant be doubled",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "give_status_on_take_hit",
+                "Active_Synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Wary_Fighter",
+        "name": "Wary Fighter",
+        "desc": "Can't double attack or be double attacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            32
+        ],
+        "components": [
+            [
+                "attack_speed",
+                -99
+            ],
+            [
+                "defense_speed",
+                99
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Silence",
         "name": "<red>[SILENCE]</>",
         "desc": "Unit cannot use magic.",
@@ -1391,7 +1431,7 @@
         "components": [
             [
                 "crit",
-                15
+                20
             ],
             [
                 "display_skill_icon_in_combat",
@@ -1470,6 +1510,10 @@
                     0,
                     107
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -4220,7 +4264,7 @@
             ],
             [
                 "crit",
-                50
+                30
             ]
         ]
     },
@@ -4243,6 +4287,10 @@
                 [
                     "Burned_damage"
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -4265,6 +4313,10 @@
                 [
                     "Burned_damage"
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },

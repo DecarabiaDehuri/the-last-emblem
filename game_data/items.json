@@ -16144,7 +16144,7 @@
     },
     {
         "nid": "Warrior_Pin",
-        "name": "Warrior's Pin",
+        "name": "<yellow>Warrior's Pin</>",
         "desc": "Grants immunity to <red>[BLIND]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16159,12 +16159,16 @@
             [
                 "status_on_equip",
                 "Blinded_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Thief_Pin",
-        "name": "Thief's Pin",
+        "name": "<yellow>Thief's Pin</>",
         "desc": "Grants immunity to <red>[POISON]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16179,12 +16183,16 @@
             [
                 "status_on_equip",
                 "Poisoned_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Mage_Pin",
-        "name": "Mage's Pin",
+        "name": "<yellow>Mage's Pin</>",
         "desc": "Grants immunity to <red>[SILENCE]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16199,12 +16207,16 @@
             [
                 "status_on_equip",
                 "Silence_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Healer_Pin",
-        "name": "Healer's Pin",
+        "name": "<yellow>Healer's Pin</>",
         "desc": "Grants immunity to <red>[SLEEP]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16219,12 +16231,16 @@
             [
                 "status_on_equip",
                 "Sleep_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Barrier_Pin",
-        "name": "Barrier Pin",
+        "name": "<yellow>Barrier Pin</>",
         "desc": "Grants immunity to <red>[STUN]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16239,12 +16255,16 @@
             [
                 "status_on_equip",
                 "Stunned_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Duelist_Pin",
-        "name": "Duelist's Pin",
+        "name": "<yellow>Duelist's Pin</>",
         "desc": "Grants immunity to <red>[PARALYSIS]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16259,12 +16279,16 @@
             [
                 "status_on_equip",
                 "Paralysis_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Heirloom_Pin",
-        "name": "Heirloom Pin",
+        "name": "<yellow>Heirloom Pin</>",
         "desc": "Grants immunity to <red>[CONFUSION]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16279,12 +16303,16 @@
             [
                 "status_on_equip",
                 "Confused_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Crusader_Charm",
-        "name": "Crusader Charm",
+        "name": "<yellow>Crusader Charm</>",
         "desc": "Grants immunity to <red>[LUST DRAIN]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16299,12 +16327,16 @@
             [
                 "status_on_equip",
                 "Lust_Drain_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Unperson_Charm",
-        "name": "Unperson Charm",
+        "name": "<yellow>Unperson Charm</>",
         "desc": "Grants immunity to <red>[LUST DEATH]</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16319,12 +16351,16 @@
             [
                 "status_on_equip",
                 "Lust_Death_Immune"
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Gauntlets",
-        "name": "Gauntlets",
+        "name": "<yellow>Gauntlets</>",
         "desc": "Boosts STR and DEF.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16348,12 +16384,16 @@
                         1
                     ]
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Headband",
-        "name": "Headband",
+        "name": "<yellow>Headband</>",
         "desc": "Boosts STR and SPD.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16377,12 +16417,16 @@
                         1
                     ]
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Magic_Ring",
-        "name": "Magic Ring",
+        "name": "<yellow>Magic Ring</>",
         "desc": "Boosts MAG and RES.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16406,12 +16450,16 @@
                         1
                     ]
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Elven_Ring",
-        "name": "Elven Ring",
+        "name": "<yellow>Elven Ring</>",
         "desc": "Boosts MAG and DEF.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16435,12 +16483,16 @@
                         1
                     ]
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Cloak",
-        "name": "Cloak",
+        "name": "<yellow>Cloak</>",
         "desc": "Boosts SPD.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16460,12 +16512,16 @@
                         2
                     ]
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Boots",
-        "name": "Boots",
+        "name": "<yellow>Boots</>",
         "desc": "Boosts DEF and SPD.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16489,12 +16545,16 @@
                         1
                     ]
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Sexy_Librarian_Glasses",
-        "name": "Sexy Librarian Glasses",
+        "name": "<yellow>Sexy Librarian Glasses</>",
         "desc": "Boosts MAG, RES and SPD. <red>Succubus only</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16528,13 +16588,17 @@
                 [
                     "Succubus"
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Fetish_Cat_Ears",
-        "name": "Fetish Cat Ears",
-        "desc": "Boosts STR and SPD. <red>Succubus only</>.",
+        "name": "<yellow>Fetish Cat Ears</>",
+        "desc": "Boosts MAG and SPD. <red>Succubus only</>.",
         "icon_nid": "Boosters",
         "icon_index": [
             0,
@@ -16549,7 +16613,7 @@
                 "stat_change",
                 [
                     [
-                        "STR",
+                        "MAG",
                         1
                     ],
                     [
@@ -16563,12 +16627,16 @@
                 [
                     "Succubus"
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },
     {
         "nid": "Fetish_Bunny_Ears",
-        "name": "Fetish Bunny Ears",
+        "name": "<yellow>Fetish Bunny Ears</>",
         "desc": "Boosts STR and SPD. <red>Succubus only</>.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -16598,6 +16666,10 @@
                 [
                     "Succubus"
                 ]
+            ],
+            [
+                "value",
+                1000
             ]
         ]
     },

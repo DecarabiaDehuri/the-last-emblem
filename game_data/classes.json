@@ -6361,7 +6361,7 @@
             ],
             "Light": [
                 true,
-                0,
+                31,
                 251
             ],
             "Anima": [
@@ -8582,6 +8582,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -11547,6 +11557,157 @@
         "fields": []
     },
     {
+        "nid": "Suc_Spider",
+        "name": "<narrow>Spider Succubus</>",
+        "desc": "Succubus of the Spider variant.",
+        "tier": 1,
+        "movement_group": "Regular",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 3,
+            "LCK": 5,
+            "DEF": 4,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 82,
+            "STR": 60,
+            "MAG": 20,
+            "SKL": 40,
+            "SPD": 30,
+            "LCK": 25,
+            "DEF": 30,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Poison_attack"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                true,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "216cad6a-e59b-4346-baea-d280df025119",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Bael Widow (F) {MeatOfJustice}-stand",
+        "combat_anim_nid": "SucSpider",
+        "fields": []
+    },
+    {
         "nid": "SpiderEmpress",
         "name": "Spider",
         "desc": "",
@@ -13331,7 +13492,7 @@
     },
     {
         "nid": "Suc_foe_lamia",
-        "name": "Lamia Succubus",
+        "name": "<narrow>Lamia Succubus</>",
         "desc": "",
         "tier": 1,
         "movement_group": "Mages",
@@ -13481,7 +13642,7 @@
     },
     {
         "nid": "Suc_Centaur",
-        "name": "Suc. Centaur",
+        "name": "<narrow>Centaur Succubus</>",
         "desc": "Succubi with superior land movement.",
         "tier": 1,
         "movement_group": "Light Cav",
@@ -13641,7 +13802,7 @@
     },
     {
         "nid": "Suc_Centaur_Boss",
-        "name": "Suc. Centaur",
+        "name": "<narrow>Centaur Succubus</>",
         "desc": "Armored Succubi with superior land movement.",
         "tier": 1,
         "movement_group": "Heavy Cav",

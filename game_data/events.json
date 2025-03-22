@@ -5027,7 +5027,7 @@
             "has_traded;{unit}",
             "show_layer;casacimavisit",
             "remove_region;Casacima",
-            "give_item;{unit};Javelin"
+            "give_item;{unit};Fetish_Cat_Ears"
         ],
         "nid": "P4 Visit casa cima"
     },
@@ -5510,7 +5510,7 @@
             "has_traded;{unit}",
             "show_layer;casabaixa",
             "remove_region;Casabaixo",
-            "give_item;{unit};Mana_Potion"
+            "give_item;{unit};Magic_Ring"
         ],
         "nid": "P4 Visit casa baixo"
     },
@@ -7229,7 +7229,8 @@
             "remove_map_anim;RedDot;{eval: (position[0] - 1, position[1])}",
             "remove_map_anim;RedDot;{eval: (position[0] + 1, position[1])}",
             "screen_shake;200;default",
-            "create_unit;plant_target;;1;{eval:position};immediate;stack",
+            "make_generic;plant_target;root;1;enemy;None;Neutral",
+            "add_unit;plant_target;{eval:position};immediate;stack;fade",
             "interact_unit;Plant;{eval:position};--;Activate_Roots",
             "#sound;Critical Hit 2",
             "#map_anim;Snag;{eval:position}",
@@ -8329,7 +8330,7 @@
         "name": "Chest N",
         "trigger": "Chest",
         "level_nid": "P12",
-        "condition": "region.nid == 'chestN'",
+        "condition": "region.nid == 'ChestN'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -8345,7 +8346,7 @@
         "name": "Chest L",
         "trigger": "Chest",
         "level_nid": "P12",
-        "condition": "region.nid == 'chestL'",
+        "condition": "region.nid == 'ChestL'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -8361,7 +8362,7 @@
         "name": "Chest O",
         "trigger": "Chest",
         "level_nid": "P12",
-        "condition": "region.nid == 'chestO'",
+        "condition": "region.nid == 'ChestO'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -8377,7 +8378,7 @@
         "name": "Chest S",
         "trigger": "Chest",
         "level_nid": "P12",
-        "condition": "region.nid == 'chestS'",
+        "condition": "region.nid == 'ChestS'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -8891,6 +8892,8 @@
             "    remove_weather;sunset",
             "elif;game.turncount == 14",
             "    remove_weather;sunset",
+            "elif;game.turncount == 16",
+            "    remove_weather;rain",
             "end"
         ],
         "nid": "P13 Passing time"
@@ -8924,7 +8927,9 @@
             "add_lore;IncubusKing",
             "add_lore;Chosen",
             "add_lore;Simonyoung",
-            "add_lore;Mira"
+            "add_lore;Mira",
+            "game_var;_base_music;\"First Choice\"",
+            "game_var;_base_bg_name;\"SeaofClouds\""
         ],
         "nid": "P1 Basecamp unlocks"
     },
@@ -9407,7 +9412,7 @@
         "name": "chest1",
         "trigger": "Chest",
         "level_nid": "P11",
-        "condition": "region.nid == 'chest1'",
+        "condition": "region.nid == 'Chest1'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -9423,14 +9428,18 @@
         "name": "chest2",
         "trigger": "Chest",
         "level_nid": "P11",
-        "condition": "region.nid == 'chest2'",
+        "condition": "region.nid == 'Chest2'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "unlock;{unit}",
             "show_layer;chest2",
-            "give_item;{unit};Headband",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Thief_Pin",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
             "remove_region;chest2"
         ],
         "nid": "P11 chest2"
@@ -9439,14 +9448,18 @@
         "name": "chest3",
         "trigger": "Chest",
         "level_nid": "P11",
-        "condition": "region.nid == 'chest3'",
+        "condition": "region.nid == 'Chest3'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "unlock;{unit}",
             "show_layer;chest3",
+            "add_tag;{unit};Convoy",
             "give_item;{unit};Duelist_Pin",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
             "remove_region;chest3"
         ],
         "nid": "P11 chest3"
@@ -9461,7 +9474,7 @@
         "priority": 20,
         "_source": [
             "transition;close",
-            "shop;{unit};Health_Potion,Large_Health_Potion,Huge_Health_Potion,Mana_Potion,Large_Mana_Potion,Huge_Mana_Potion,Shine,Elfire,Luna,Elixir;vendor",
+            "shop;{unit};Health_Potion,Large_Health_Potion,Huge_Health_Potion,Mana_Potion,Large_Mana_Potion,Huge_Mana_Potion,Shine,Elfire,Luna,Elixir,Sexy_Librarian_Glasses;vendor",
             "transition;open"
         ],
         "nid": "P11 vendor"
@@ -9938,7 +9951,7 @@
     {
         "name": "Seed -> Dragon",
         "trigger": "turn_change",
-        "level_nid": "10",
+        "level_nid": "P14",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -10019,12 +10032,12 @@
             "else",
             "end"
         ],
-        "nid": "10 Seed -> Dragon"
+        "nid": "P14 Seed -> Dragon"
     },
     {
         "name": "Iris spawns seeds",
         "trigger": "turn_change",
-        "level_nid": "10",
+        "level_nid": "P14",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -10116,7 +10129,7 @@
             "else",
             "end"
         ],
-        "nid": "10 Iris spawns seeds"
+        "nid": "P14 Iris spawns seeds"
     },
     {
         "name": "Outro: IK cutscene",
@@ -10307,7 +10320,7 @@
         "name": "Chest",
         "trigger": "Chest",
         "level_nid": "P10",
-        "condition": "True",
+        "condition": "region.nid == 'Chest'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -10323,14 +10336,18 @@
         "name": "Chest2",
         "trigger": "Chest",
         "level_nid": "P9",
-        "condition": "True",
+        "condition": "region.nid == 'Chest2'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "unlock;{unit}",
             "show_layer;chest2",
-            "give_item;{unit};Master_Seal",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Unperson_Charm",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
             "remove_region;chest2"
         ],
         "nid": "P9 Chest2"
@@ -10339,7 +10356,7 @@
         "name": "Chest3",
         "trigger": "Chest",
         "level_nid": "P9",
-        "condition": "True",
+        "condition": "region.nid == 'Chest3'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -10355,7 +10372,7 @@
         "name": "Chest",
         "trigger": "Chest",
         "level_nid": "P7",
-        "condition": "True",
+        "condition": "region.nid == 'Chest'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -10371,14 +10388,18 @@
         "name": "Chest2",
         "trigger": "Chest",
         "level_nid": "P7",
-        "condition": "True",
+        "condition": "region.nid == 'Chest2'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "unlock;{unit}",
             "show_layer;chest2",
+            "add_tag;{unit};Convoy",
             "give_item;{unit};Elven_Ring",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
             "remove_region;chest2"
         ],
         "nid": "P7 Chest2"
@@ -10387,30 +10408,38 @@
         "name": "Chest",
         "trigger": "Chest",
         "level_nid": "P3",
-        "condition": "True",
+        "condition": "region.nid == 'Chest'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "unlock;{unit}",
             "show_layer;chest",
-            "give_item;{unit};Rescue",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Crusader_Charm",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
             "remove_region;chest"
         ],
         "nid": "P3 Chest"
     },
     {
         "name": "Chest",
-        "trigger": null,
+        "trigger": "Chest",
         "level_nid": "P6",
-        "condition": "True",
+        "condition": "region.nid == 'Chest'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "unlock;{unit}",
             "show_layer;chest",
-            "give_item;{unit};Horseslayer",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Healer_Pin",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
             "remove_region;chest"
         ],
         "nid": "P6 Chest"
@@ -10431,20 +10460,34 @@
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "10",
+        "level_nid": "P14",
         "condition": "True",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "add_weather;fire"
+            "add_weather;fire",
+            "chapter_title",
+            "transition;close",
+            "wait;1000",
+            "center_cursor;40,28",
+            "change_background;LavaCave",
+            "add_portrait;Iris;Left",
+            "music;Tension",
+            "transition;open;1000",
+            "wait;1000",
+            "s;Iris;Group B, I need you to stay further back.|We don't want to throw everything at them.|Rather, we should invite and entrap.",
+            "move_portrait;Iris;MidLeft",
+            "s;Iris;YES, THE CHEST IS RIGHT THERE! GOOD JOB!",
+            "mirror_portrait;Iris",
+            "s;Iris;Hmm? They couldn't come?|That's okay, I figured they wouldn't be comfortable here, so I planned for that."
         ],
-        "nid": "10 Intro"
+        "nid": "P14 Intro"
     },
     {
         "name": "Green reinforcement avengers like xd",
         "trigger": "turn_change",
-        "level_nid": "10",
+        "level_nid": "P14",
         "condition": "game.turncount == 2",
         "commands": [],
         "only_once": false,
@@ -10461,12 +10504,12 @@
             "multi_add_portrait;Baruba;MidRight;Geoff;FarRight",
             "wait;1000"
         ],
-        "nid": "10 Green reinforcement avengers like xd"
+        "nid": "P14 Green reinforcement avengers like xd"
     },
     {
         "name": "Chest1",
         "trigger": "Chest",
-        "level_nid": "10",
+        "level_nid": "P14",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -10477,12 +10520,12 @@
             "give_item;{unit};Huge_Health_Potion",
             "remove_region;chest"
         ],
-        "nid": "10 Chest1"
+        "nid": "P14 Chest1"
     },
     {
         "name": "Chest2",
         "trigger": "Chest",
-        "level_nid": "10",
+        "level_nid": "P14",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -10493,12 +10536,12 @@
             "give_item;{unit};Sylvan_Draught",
             "remove_region;chest2"
         ],
-        "nid": "10 Chest2"
+        "nid": "P14 Chest2"
     },
     {
         "name": "Chest3",
         "trigger": "Chest",
-        "level_nid": "10",
+        "level_nid": "P14",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -10509,7 +10552,7 @@
             "give_item;{unit};Huge_Mana_Potion",
             "remove_region;chest3"
         ],
-        "nid": "10 Chest3"
+        "nid": "P14 Chest3"
     },
     {
         "name": "New Event_3",
@@ -10526,8 +10569,11 @@
             "set_current_hp;Chosen;1",
             "give_skill;Minerve;Blinded_Immune;;persistent;no_banner",
             "give_item;Rosa;Mage_Pin;;no_banner",
-            "give_item;Chosen;Gauntlets;;no_banner",
-            "set_current_hp;Minerve;1"
+            "give_item;Chosen;Gauntlets",
+            "set_current_hp;Minerve;1",
+            "give_item;Chosen;Chest_Key;no_banner",
+            "give_item;Simonyoung;Chest_Key;no_banner",
+            "enable_turnwheel;t"
         ],
         "nid": "DEBUG_2 New Event_3"
     },
@@ -10535,22 +10581,26 @@
         "name": "Chest2",
         "trigger": "Chest",
         "level_nid": "P4",
-        "condition": "True",
+        "condition": "region.nid == 'Chest2'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "unlock;{unit}",
-            "show_layer;chest",
+            "show_layer;chest2",
+            "add_tag;{unit};Convoy",
             "give_item;{unit};Boots",
-            "remove_region;Chest"
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
+            "remove_region;Chest2"
         ],
         "nid": "P4 Chest2"
     },
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "11",
+        "level_nid": "P15",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -10562,12 +10612,13 @@
             "add_weather;sunset",
             "add_weather;smoke",
             "transition;close",
-            "center_cursor;9,1",
+            "center_cursor;1,1",
             "music;Wind;10000",
             "transition;open;5000",
-            "center_cursor;Incubus_King;10000",
+            "center_cursor;Incubus_King;8000",
+            "music_clear;3000",
             "wait;3000",
-            "center_cursor;11,19;4000",
+            "center_cursor;11,19;3000",
             "wait;1000",
             "center_cursor;10,35;6000",
             "wait;2000",
@@ -10598,13 +10649,13 @@
             "wait;3000",
             "prep;t"
         ],
-        "nid": "11 Intro"
+        "nid": "P15 Intro"
     },
     {
         "name": "Start true level trigger",
         "trigger": "enemy_turn_change",
-        "level_nid": "11",
-        "condition": "all(game.level.regions.get('start').contains(unit.position) for unit in game.get_player_units())",
+        "level_nid": "P15",
+        "condition": "all(game.level.regions.get('start').contains(unit.position) for unit in game.get_player_units(only_on_field=True))",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -10614,6 +10665,253 @@
             "wait;1000",
             "flicker_cursor;Incubus_King"
         ],
-        "nid": "11 Start true level trigger"
+        "nid": "P15 Start true level trigger"
+    },
+    {
+        "name": "Chest",
+        "trigger": "Chest",
+        "level_nid": "DEBUG_2",
+        "condition": "region.nid == 'Chest'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Thief_Pin",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end"
+        ],
+        "nid": "DEBUG_2 Chest"
+    },
+    {
+        "name": "Chest2",
+        "trigger": "Chest",
+        "level_nid": "P5",
+        "condition": "region.nid == 'Chest2'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;Chest2",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Barrier_Pin",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
+            "remove_region;Chest2"
+        ],
+        "nid": "P5 Chest2"
+    },
+    {
+        "name": "Chest",
+        "trigger": "Chest",
+        "level_nid": "P8",
+        "condition": "region.nid == 'Chest'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;chest",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Gauntlets",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
+            "remove_region;chest"
+        ],
+        "nid": "P8 Chest"
+    },
+    {
+        "name": "Chest e Tutorial: Accessory",
+        "trigger": "Chest",
+        "level_nid": "P1",
+        "condition": "region.nid == 'Chest'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;chest",
+            "give_item;{unit};Cloak",
+            "remove_region;chest",
+            "if;{v:ivala} == 1",
+            "    wait;500",
+            "    add_portrait;Ivala;(120,32)",
+            "    wait;200",
+            "    speak;Ivala;You have found an <red>Accessory</>!|Each accessory has a different effect, they're sure to be useful sometime!|By the way, <red>a unit can only hold one accessory</>.|So if you already have an accessory, and you open a chest...|...you will be forced to send one of them to your <red>supply</>!|But don't worry, they can be retrieved later.;bottom;;;;blue;;;;;None",
+            "    remove_portrait;Ivala",
+            "end"
+        ],
+        "nid": "P1 Chest e Tutorial: Accessory"
+    },
+    {
+        "name": "Chest key drop e Tutorial: Chest",
+        "trigger": "combat_end",
+        "level_nid": "P1",
+        "condition": "game.check_dead(\"112\") == True and game.game_vars['ivala'] == 1",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Ivala;(120,32)",
+            "wait;200",
+            "speak;Ivala;Aha, I see you have acquired a Chest Key.|With this item you can... open <red>Chests</>, of course.|You have to place your character on top of a Chest tile to open it.|This will consume your key.;bottom;;;;blue;;;;;None",
+            "remove_portrait;Ivala",
+            "wait;500",
+            "flicker_cursor;5,1",
+            "wait;1000"
+        ],
+        "nid": "P1 Chest key drop e Tutorial: Chest"
+    },
+    {
+        "name": "Chest",
+        "trigger": "Chest",
+        "level_nid": "P2",
+        "condition": "region.nid == 'Chest'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;chest",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Warrior_Pin",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
+            "remove_region;chest"
+        ],
+        "nid": "P2 Chest"
+    },
+    {
+        "name": "Chest2",
+        "trigger": "Chest",
+        "level_nid": "P8",
+        "condition": "region.nid == 'Chest2'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "show_layer;chest",
+            "add_tag;{unit};Convoy",
+            "give_item;{unit};Headband",
+            "if;{eval: unit.nid != 'Simonyoung'}",
+            "remove_tag;{unit};Convoy",
+            "end",
+            "remove_region;chest"
+        ],
+        "nid": "P8 Chest2"
+    },
+    {
+        "name": "Armory2Overworld",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
+            "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
+            "music;Happy1;500",
+            "shop;{unit};Silver_Axe,Silver_Lance,Silver_Sword,Tomahawk,Spear,Killing_Edge,Devil_Axe,Brave_Lance;armory",
+            "music_fade_back",
+            "game_var;_last_choice;False",
+            "else",
+            "end"
+        ],
+        "nid": "Global Armory2Overworld"
+    },
+    {
+        "name": "Vendor2Overworld",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
+            "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
+            "music;Happy1;500",
+            "shop;{unit};Health_Potion,Large_Health_Potion,Huge_Health_Potion,Mana_Potion,Large_Mana_Potion,Huge_Mana_Potion,Shine,Elfire,Luna,Elixir,Sexy_Librarian_Glasses;vendor",
+            "music_fade_back",
+            "game_var;_last_choice;False",
+            "else",
+            "end"
+        ],
+        "nid": "Global Vendor2Overworld"
+    },
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "P13",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;1000",
+            "wait;2000",
+            "change_background",
+            "change_tilemap;ik throne;reload",
+            "remove_all_units",
+            "load_unit;Incubus_King;enemy",
+            "add_unit;Incubus_King;10,7;immediate",
+            "load_unit;Iris;enemy;None",
+            "add_unit;Iris;10,10;immediate",
+            "make_generic;suc1;Suc_foe_1;1;enemy;None;Soldier",
+            "add_unit;suc1;6,12;immediate",
+            "make_generic;suc2;Suc_foe_1;1;enemy;None;Soldier",
+            "add_unit;suc2;14,13;immediate",
+            "make_generic;suc3;Suc_foe_1;1;enemy;None;Soldier",
+            "add_unit;suc3;15,13;immediate",
+            "make_generic;elite1;Suc_foe_2;1;enemy;None;Soldier",
+            "add_unit;elite1;9,13;immediate",
+            "make_generic;elite2;Suc_foe_2;1;enemy;None;Soldier",
+            "add_unit;elite2;11,13;immediate",
+            "center_cursor;10,18",
+            "wait;3000",
+            "music;Tension2",
+            "transition;open;1000",
+            "wait;1000",
+            "center_cursor;10,10;1000",
+            "wait;1000",
+            "flicker_cursor;Incubus_King",
+            "wait;2000",
+            "multi_add_portrait;Incubus King;Left;Iris;Right",
+            "expression;Iris;CloseEyes",
+            "s;Iris;Master, we regret to inform you that we are being attacked.",
+            "s;Incubus King;Just deal with it quickly.|I don't want anyone disturbing my Praise the Penis day.",
+            "expression;Iris;OpenEyes",
+            "s;Iris;I... was not informed of this matter.",
+            "s;Incubus King;I just came up with it!|It's a special holiday in which I go to the top of the mountain...|...with a full erection, and then people show deference to it!",
+            "s;Iris;I see.{c:wait;300} Regarding the intruders, we-",
+            "expression;Incubus King;CloseEyes",
+            "s;Incubus King;Psst.",
+            "s;Iris;?;no_talk",
+            "expression;Incubus King;OpenEyes",
+            "s;Incubus King;I don't want to get <wave>pissed off</> at my special day.",
+            "s;Iris;Apologies, master.|I will halt their raid on my own.",
+            "wait;300",
+            "multi_remove_portrait;Incubus King;Iris",
+            "wait;300",
+            "flicker_cursor;Iris",
+            "wait;200",
+            "move_unit;Iris;10,21",
+            "wait;500",
+            "add_portrait;Iris;Left;;CloseEyes,NoSmile",
+            "wait;1000",
+            "expression;Iris;OpenEyes",
+            "s;Iris;Everyone, with me.|I'll activate my <red> prototype.</>",
+            "transition;close;2000"
+        ],
+        "nid": "P13 Outro"
     }
 ]

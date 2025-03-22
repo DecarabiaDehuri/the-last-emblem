@@ -3061,7 +3061,7 @@
     },
     {
         "nid": "Monica",
-        "name": "Sister Monica",
+        "name": "<narrow>Sister Monica</>",
         "desc": "Pietous sister seeking redemption.",
         "variant": "Female",
         "level": 5,
@@ -3569,7 +3569,16 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Subtle_Slithering"
+            ],
+            [
+                1,
+                "Succubus_Mana"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -3641,9 +3650,9 @@
         "bases": {
             "HP": 28,
             "STR": 5,
-            "MAG": 12,
+            "MAG": 11,
             "SKL": 16,
-            "SPD": 14,
+            "SPD": 8,
             "LCK": 14,
             "DEF": 11,
             "RES": 12,
@@ -3667,10 +3676,6 @@
             [
                 "Luna",
                 false
-            ],
-            [
-                "Fetish_Bunny_Ears",
-                true
             ]
         ],
         "learned_skills": [
@@ -3749,9 +3754,9 @@
         "bases": {
             "HP": 28,
             "STR": 5,
-            "MAG": 12,
+            "MAG": 11,
             "SKL": 16,
-            "SPD": 14,
+            "SPD": 8,
             "LCK": 14,
             "DEF": 11,
             "RES": 12,
@@ -3775,10 +3780,6 @@
             [
                 "Luna",
                 false
-            ],
-            [
-                "Sexy_Librarian_Glasses",
-                true
             ]
         ],
         "learned_skills": [
@@ -3858,9 +3859,9 @@
         "bases": {
             "HP": 40,
             "STR": 10,
-            "MAG": 16,
+            "MAG": 15,
             "SKL": 16,
-            "SPD": 17,
+            "SPD": 10,
             "LCK": 15,
             "DEF": 13,
             "RES": 14,
@@ -4609,6 +4610,10 @@
             [
                 1,
                 "Poisoned_Immune"
+            ],
+            [
+                1,
+                "Wary_Fighter"
             ]
         ],
         "unit_notes": [],
@@ -5062,7 +5067,7 @@
                 false
             ],
             [
-                "Healer_Pin",
+                "Loot_Bag",
                 true
             ]
         ],
@@ -5426,7 +5431,7 @@
                 false
             ],
             [
-                "Unperson_Charm",
+                "Loot_Bag",
                 true
             ]
         ],

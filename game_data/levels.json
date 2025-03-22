@@ -95,7 +95,7 @@
                         false
                     ],
                     [
-                        "Sx_Purse",
+                        "Chest_Key",
                         true
                     ]
                 ],
@@ -133,7 +133,7 @@
                 "nid": "103",
                 "variant": null,
                 "level": 6,
-                "klass": "Spider",
+                "klass": "Suc_Spider",
                 "faction": "Monster",
                 "starting_items": [
                     [
@@ -454,6 +454,23 @@
                 "time_left": null,
                 "only_once": true,
                 "interrupt_move": false
+            },
+            {
+                "nid": "Chest",
+                "region_type": "event",
+                "position": [
+                    5,
+                    1
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Chest",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
             }
         ],
         "unit_groups": [
@@ -539,7 +556,7 @@
                         false
                     ],
                     [
-                        "Crusader_Charm",
+                        "Health_Potion",
                         true
                     ]
                 ],
@@ -595,7 +612,7 @@
                         false
                     ],
                     [
-                        "Sx_Purse",
+                        "Chest_Key",
                         true
                     ]
                 ],
@@ -663,7 +680,7 @@
                 "nid": "112",
                 "variant": null,
                 "level": 8,
-                "klass": "Spider",
+                "klass": "Suc_Spider",
                 "faction": "Monster",
                 "starting_items": [
                     [
@@ -765,6 +782,23 @@
                 "time_left": null,
                 "only_once": false,
                 "interrupt_move": false
+            },
+            {
+                "nid": "Chest",
+                "region_type": "event",
+                "position": [
+                    9,
+                    1
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Chest",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
             }
         ],
         "unit_groups": [
@@ -859,6 +893,10 @@
                     [
                         "Sharp_Claw",
                         false
+                    ],
+                    [
+                        "Chest_Key",
+                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -903,7 +941,7 @@
                         false
                     ],
                     [
-                        "Magic_Ring",
+                        "Mana_Potion",
                         true
                     ]
                 ],
@@ -984,7 +1022,7 @@
                 "nid": "106",
                 "variant": null,
                 "level": 10,
-                "klass": "Spider",
+                "klass": "Suc_Spider",
                 "faction": "Monster",
                 "starting_items": [
                     [
@@ -1030,7 +1068,7 @@
                 "nid": "108",
                 "variant": null,
                 "level": 10,
-                "klass": "Spider",
+                "klass": "Suc_Spider",
                 "faction": "Monster",
                 "starting_items": [
                     [
@@ -1123,7 +1161,7 @@
                 "interrupt_move": false
             },
             {
-                "nid": "chest",
+                "nid": "Chest",
                 "region_type": "event",
                 "position": [
                     10,
@@ -1913,7 +1951,7 @@
                 "interrupt_move": false
             },
             {
-                "nid": "chest2",
+                "nid": "Chest2",
                 "region_type": "event",
                 "position": [
                     4,
@@ -2090,7 +2128,7 @@
                         false
                     ],
                     [
-                        "Thief_Pin",
+                        "Chest_Key",
                         true
                     ]
                 ],
@@ -2557,6 +2595,20 @@
                 "time_left": null,
                 "only_once": false,
                 "interrupt_move": false
+            },
+            {
+                "nid": "Chest2",
+                "region_type": "event",
+                "position": null,
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Chest",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
             }
         ],
         "unit_groups": [
@@ -2713,7 +2765,7 @@
                         false
                     ],
                     [
-                        "Warrior_Pin",
+                        "Large_Health_Potion",
                         true
                     ]
                 ],
@@ -3124,7 +3176,7 @@
                         false
                     ],
                     [
-                        "Sx_Purse",
+                        "Chest_Key",
                         true
                     ]
                 ],
@@ -3465,7 +3517,7 @@
                 "interrupt_move": false
             },
             {
-                "nid": "chest",
+                "nid": "Chest",
                 "region_type": "event",
                 "position": [
                     12,
@@ -3478,7 +3530,7 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             }
         ],
@@ -4101,7 +4153,7 @@
                         false
                     ],
                     [
-                        "Gauntlets",
+                        "Sx_Purse",
                         true
                     ]
                 ],
@@ -4447,7 +4499,7 @@
                 "interrupt_move": false
             },
             {
-                "nid": "chest",
+                "nid": "Chest",
                 "region_type": "event",
                 "position": [
                     2,
@@ -4460,11 +4512,11 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             },
             {
-                "nid": "chest2",
+                "nid": "Chest2",
                 "region_type": "event",
                 "position": [
                     13,
@@ -4477,7 +4529,7 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             }
         ],
@@ -4624,7 +4676,7 @@
                         false
                     ],
                     [
-                        "Barrier_Pin",
+                        "Sx_Purse",
                         true
                     ]
                 ],
@@ -4745,7 +4797,7 @@
                         false
                     ],
                     [
-                        "Cloak",
+                        "Large_Mana_Potion",
                         true
                     ]
                 ],
@@ -4789,6 +4841,10 @@
                     [
                         "Iron_Lance",
                         false
+                    ],
+                    [
+                        "Chest_Key",
+                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -5035,6 +5091,40 @@
                 ],
                 "sub_nid": "Ambush",
                 "condition": "unit.team == 'player'",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Chest",
+                "region_type": "event",
+                "position": [
+                    14,
+                    18
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Chest",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Chest2",
+                "region_type": "event",
+                "position": [
+                    0,
+                    10
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Chest",
+                "condition": "unit.can_unlock(region)",
                 "time_left": null,
                 "only_once": true,
                 "interrupt_move": false
@@ -5482,7 +5572,7 @@
                         false
                     ],
                     [
-                        "Mage_Pin",
+                        "Sx_Purse",
                         true
                     ]
                 ],
@@ -5954,7 +6044,7 @@
                 "interrupt_move": false
             },
             {
-                "nid": "chest2",
+                "nid": "Chest2",
                 "region_type": "event",
                 "position": [
                     14,
@@ -5967,11 +6057,11 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             },
             {
-                "nid": "chest3",
+                "nid": "Chest3",
                 "region_type": "event",
                 "position": [
                     31,
@@ -5984,7 +6074,7 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             }
         ],
@@ -6476,7 +6566,7 @@
         ],
         "regions": [
             {
-                "nid": "chest",
+                "nid": "Chest",
                 "region_type": "event",
                 "position": [
                     11,
@@ -6489,7 +6579,7 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             },
             {
@@ -6697,7 +6787,7 @@
     },
     {
         "nid": "P11",
-        "name": "Prologue: 11",
+        "name": "Prologue: Survivors",
         "tilemap": "destroyedvillage",
         "bg_tilemap": null,
         "party": "ChosenParty",
@@ -7058,6 +7148,10 @@
                     [
                         "Iron_Scythe",
                         false
+                    ],
+                    [
+                        "Chest_Key",
+                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -7281,7 +7375,7 @@
         ],
         "regions": [
             {
-                "nid": "chest1",
+                "nid": "Chest1",
                 "region_type": "event",
                 "position": [
                     7,
@@ -7298,7 +7392,7 @@
                 "interrupt_move": false
             },
             {
-                "nid": "chest2",
+                "nid": "Chest2",
                 "region_type": "event",
                 "position": [
                     5,
@@ -7315,7 +7409,7 @@
                 "interrupt_move": false
             },
             {
-                "nid": "chest3",
+                "nid": "Chest3",
                 "region_type": "event",
                 "position": [
                     17,
@@ -7610,7 +7704,7 @@
     },
     {
         "nid": "P12",
-        "name": "Prologue: 12",
+        "name": "Prologue: (Un)veiling",
         "tilemap": "elite suc",
         "bg_tilemap": null,
         "party": "ChosenParty",
@@ -7748,6 +7842,10 @@
                     [
                         "Iron_Scythe",
                         false
+                    ],
+                    [
+                        "Chest_Key",
+                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -7870,7 +7968,7 @@
         ],
         "regions": [
             {
-                "nid": "New Region",
+                "nid": "New_Region",
                 "region_type": "formation",
                 "position": [
                     8,
@@ -7989,7 +8087,7 @@
                 "interrupt_move": false
             },
             {
-                "nid": "chestO",
+                "nid": "ChestO",
                 "region_type": "event",
                 "position": [
                     14,
@@ -8002,11 +8100,11 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             },
             {
-                "nid": "chestN",
+                "nid": "ChestN",
                 "region_type": "event",
                 "position": [
                     20,
@@ -8019,11 +8117,11 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             },
             {
-                "nid": "chestL",
+                "nid": "ChestL",
                 "region_type": "event",
                 "position": [
                     22,
@@ -8036,11 +8134,11 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             },
             {
-                "nid": "chestS",
+                "nid": "ChestS",
                 "region_type": "event",
                 "position": [
                     18,
@@ -8053,7 +8151,7 @@
                 "sub_nid": "Chest",
                 "condition": "unit.can_unlock(region)",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
                 "interrupt_move": false
             },
             {
@@ -8151,7 +8249,7 @@
     },
     {
         "nid": "P13",
-        "name": "Prologue: 13",
+        "name": "Prologue: Final Battle",
         "tilemap": "Prologuelamia",
         "bg_tilemap": null,
         "party": "ChosenParty",
@@ -8821,6 +8919,150 @@
                 "generic": true
             },
             {
+                "nid": "spider_1",
+                "variant": null,
+                "level": 15,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    16
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_2",
+                "variant": null,
+                "level": 15,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    1
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_3",
+                "variant": null,
+                "level": 15,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    16,
+                    22
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_4",
+                "variant": null,
+                "level": 15,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_5",
+                "variant": null,
+                "level": 15,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    20
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_6",
+                "variant": null,
+                "level": 15,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
                 "nid": "magic1",
                 "variant": null,
                 "level": 1,
@@ -9204,8 +9446,8 @@
         "ai_groups": []
     },
     {
-        "nid": "10",
-        "name": "Chapter 10",
+        "nid": "P14",
+        "name": "Prologue: Castle Raid",
         "tilemap": "IK lava",
         "bg_tilemap": null,
         "party": "ChosenParty",
@@ -10330,6 +10572,174 @@
                 "generic": true
             },
             {
+                "nid": "spider_1",
+                "variant": null,
+                "level": 20,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    33,
+                    23
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_2",
+                "variant": null,
+                "level": 20,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    31,
+                    14
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_3",
+                "variant": null,
+                "level": 20,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    31,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_4",
+                "variant": null,
+                "level": 20,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    27
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_5",
+                "variant": null,
+                "level": 20,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    19
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_6",
+                "variant": null,
+                "level": 20,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    19,
+                    14
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "spider_7",
+                "variant": null,
+                "level": 20,
+                "klass": "Suc_Spider",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    20,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
                 "nid": "Baruba",
                 "team": "other",
                 "ai": "Pursue",
@@ -10812,8 +11222,8 @@
         ]
     },
     {
-        "nid": "11",
-        "name": "Chapter 11",
+        "nid": "P15",
+        "name": "Prologue: Finale",
         "tilemap": "IKsummit",
         "bg_tilemap": "summitbg",
         "party": "ChosenParty",
@@ -10965,7 +11375,7 @@
                     1,
                     1
                 ],
-                "sub_nid": null,
+                "sub_nid": "",
                 "condition": "True",
                 "time_left": null,
                 "only_once": false,
@@ -11206,12 +11616,7 @@
                 }
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "8",
@@ -15583,7 +15988,7 @@
     {
         "nid": "DEBUG_2",
         "name": "DEBUG2",
-        "tilemap": "intromap",
+        "tilemap": "testeprolog",
         "bg_tilemap": null,
         "party": "Eirika",
         "music": {
@@ -15653,8 +16058,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    1,
-                    5
+                    8,
+                    4
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -15666,7 +16071,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
+                    7,
                     4
                 ],
                 "starting_traveler": null,
@@ -15705,8 +16110,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
-                    17
+                    6,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -15718,7 +16123,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
+                    6,
                     5
                 ],
                 "starting_traveler": null,
@@ -15730,10 +16135,7 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    22,
-                    4
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
             },
@@ -15796,10 +16198,7 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    6,
-                    17
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
@@ -15809,10 +16208,7 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    22,
-                    6
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
             },
@@ -15835,10 +16231,7 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    29,
-                    21
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
             },
@@ -15907,6 +16300,23 @@
                 "time_left": null,
                 "only_once": true,
                 "interrupt_move": true
+            },
+            {
+                "nid": "Chest",
+                "region_type": "event",
+                "position": [
+                    8,
+                    5
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Chest",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
             }
         ],
         "unit_groups": [],
