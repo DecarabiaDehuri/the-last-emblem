@@ -36,6 +36,10 @@
             [
                 "do_nothing",
                 1
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -229,6 +233,111 @@
             [
                 "defense_speed",
                 99
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fucking_Invincible",
+        "name": "Fucking Invincible",
+        "desc": "The Incubus King has powers beyond understanding, granting him exceptional strength and defense.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            36
+        ],
+        "components": [
+            [
+                "resist",
+                20
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "TrueMiracle",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dreadful_Predator",
+        "name": "Dreadful Predator",
+        "desc": "The Incubus King's overwhelming presence intimidates those nearby, halving the MOV of enemy units within 3 tiles.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            20
+        ],
+        "components": [
+            [
+                "aura",
+                "Dreadful_Predator_effect"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dreadful_Predator_effect",
+        "name": "<red>[FEARFUL]</>",
+        "desc": "Movement is halved.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            20
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MOV",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    95,
+                    31,
+                    32
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Unaffected",
+        "name": "Unaffected",
+        "desc": "Unit reflects negative statuses back at the enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            44
+        ],
+        "components": [
+            [
+                "reflect_status",
+                null
             ],
             [
                 "class_skill",
@@ -1560,11 +1669,11 @@
                 "ally"
             ],
             [
-                "grey_if_inactive",
+                "hide_aura",
                 null
             ],
             [
-                "hide_aura",
+                "hidden_if_inactive",
                 null
             ]
         ]
@@ -1606,6 +1715,30 @@
             [
                 "hidden",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Special_Aura",
+        "name": "Special Aura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            38
+        ],
+        "components": [
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "unit"
             ]
         ]
     },
@@ -1750,7 +1883,7 @@
         ]
     },
     {
-        "nid": "Shelter_buff",
+        "nid": "Shelter_child_global",
         "name": "Shelter",
         "desc": "Unit can rescue an adjacent ally. When paired-up, gain bonus DEF and RES.",
         "icon_nid": "skill_icons",
@@ -1760,17 +1893,29 @@
         ],
         "components": [
             [
-                "class_skill",
-                null
-            ],
-            [
                 "hidden",
                 null
             ],
             [
-                "condition",
-                "u('Simonyoung').lead_unit == Yes"
+                "pairup_bonus",
+                "Shelter_buff"
             ],
+            [
+                "global",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Shelter_buff",
+        "name": "Shelter",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
             [
                 "stat_change",
                 [
@@ -1783,6 +1928,14 @@
                         3
                     ]
                 ]
+            ],
+            [
+                "condition",
+                "unit.nid == 'Simonyoung'"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -3207,7 +3360,7 @@
     {
         "nid": "Exposing_Crash",
         "name": "Exposing Crash",
-        "desc": "Cassian has a chance to inflict <red>[EXPOSED]</> when hitting an enemy.\n<red>[EXPOSED]</>: Unit is more likely to receive critical attacks. Can be stacked.",
+        "desc": "Cassian has a chance to inflict <red>[EXPOSED]</> when attacking an enemy.\n<red>[EXPOSED]</>: Unit is more likely to receive critical attacks. Can be stacked.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -3219,16 +3372,12 @@
                 null
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "proc_rate",
                 "PROCSTATUS"
             ],
             [
                 "combat_condition",
-                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+                "(unit2.team == 'enemy' or unit2.team == 'enemy2') and mode == 'attack'"
             ],
             [
                 "attack_proc",
@@ -3377,7 +3526,7 @@
     {
         "nid": "Exposing_Guard",
         "name": "Exposing Guard",
-        "desc": "Lucia has a chance to inflict <red>[EXPOSED]</> when hit by an enemy.\n<red>[EXPOSED]</>: Unit is more likely to receive critical attacks. Can be stacked.",
+        "desc": "Lucia has a chance to inflict <red>[EXPOSED]</> when defending a hit by an enemy.\n<red>[EXPOSED]</>: Unit is more likely to receive critical attacks. Can be stacked.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -3389,16 +3538,12 @@
                 null
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "proc_rate",
                 "PROCSTATUS"
             ],
             [
                 "combat_condition",
-                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+                "(unit2.team == 'enemy' or unit2.team == 'enemy2') and mode == 'defense'"
             ],
             [
                 "defense_proc",
@@ -3655,19 +3800,7 @@
             ],
             [
                 "time",
-                3
-            ],
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
-                "combat_condition",
-                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
-            ],
-            [
-                "give_status_after_combat",
-                "Frustrated"
+                2
             ],
             [
                 "modify_ai_priority",
@@ -3680,6 +3813,40 @@
             [
                 "cannot_counter",
                 null
+            ],
+            [
+                "multi_skill",
+                [
+                    "Stalling_Stance_buff_2"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Stalling_Stance_buff_2",
+        "name": "Stalling Stance",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            27
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_combat",
+                "Frustrated"
             ]
         ]
     },
@@ -4150,7 +4317,7 @@
     {
         "nid": "Firewall_v2",
         "name": "Firewall",
-        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
+        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Costs <blue>6 mana</>.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -4171,7 +4338,7 @@
             ],
             [
                 "cost_mana",
-                5
+                6
             ]
         ]
     },
@@ -4291,6 +4458,10 @@
             [
                 "lost_on_end_chapter",
                 null
+            ],
+            [
+                "time",
+                1
             ]
         ]
     },
@@ -4317,6 +4488,10 @@
             [
                 "lost_on_end_chapter",
                 null
+            ],
+            [
+                "time",
+                1
             ]
         ]
     },

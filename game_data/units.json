@@ -2899,7 +2899,7 @@
         "nid": "Mira",
         "name": "Mira",
         "desc": "A meek orphan with fierce ambitions.",
-        "variant": "Female",
+        "variant": "Mira",
         "level": 1,
         "klass": "Journeyman",
         "tags": [
@@ -3063,7 +3063,7 @@
         "nid": "Monica",
         "name": "<narrow>Sister Monica</>",
         "desc": "Pietous sister seeking redemption.",
-        "variant": "Female",
+        "variant": "Monica",
         "level": 5,
         "klass": "Priestess",
         "tags": [],
@@ -3132,7 +3132,7 @@
         "nid": "Antarion",
         "name": "Antarion",
         "desc": "An obnoxious swordsman with undeserving popularity and skill.",
-        "variant": "",
+        "variant": "Antarion",
         "level": 5,
         "klass": "Blademaster",
         "tags": [],
@@ -3230,7 +3230,7 @@
         "nid": "Cassian",
         "name": "Cassian",
         "desc": "Mercenary recruited to protect Monica. He is a carefree spirit.",
-        "variant": "",
+        "variant": "Cassian",
         "level": 5,
         "klass": "Cavalier",
         "tags": [
@@ -3306,7 +3306,7 @@
         "nid": "Lucia",
         "name": "Lucia",
         "desc": "Mercenary recruited to protect Monica. She is a sharp observant.",
-        "variant": "Female",
+        "variant": "Lucia",
         "level": 5,
         "klass": "Cavalier",
         "tags": [
@@ -3456,7 +3456,7 @@
         "nid": "Rosa",
         "name": "Rosa",
         "desc": "An elegant yet mysterious mage.",
-        "variant": "Female",
+        "variant": "Rosa",
         "level": 7,
         "klass": "Mage",
         "tags": [
@@ -3850,7 +3850,7 @@
         "name": "Minerve",
         "desc": "Captain in the Succubus army. An eager underling of Riala.",
         "variant": "Transform",
-        "level": 9,
+        "level": 15,
         "klass": "Suc_Minerve",
         "tags": [
             "Boss",
@@ -3893,6 +3893,123 @@
             [
                 "Loot_Bag",
                 true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "True_Form"
+            ],
+            [
+                1,
+                "Unmovable"
+            ],
+            [
+                1,
+                "Silence_Immune"
+            ],
+            [
+                1,
+                "Lust_Drain_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                121,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Minerve",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Minerve_true_2",
+        "name": "Minerve",
+        "desc": "Captain in the Succubus army. An eager underling of Riala.",
+        "variant": "Transform",
+        "level": 15,
+        "klass": "Suc_Minerve",
+        "tags": [
+            "Boss",
+            "Female"
+        ],
+        "bases": {
+            "HP": 40,
+            "STR": 10,
+            "MAG": 15,
+            "SKL": 16,
+            "SPD": 10,
+            "LCK": 15,
+            "DEF": 13,
+            "RES": 14,
+            "CON": 7,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 65,
+            "STR": 25,
+            "MAG": 15,
+            "SKL": 45,
+            "SPD": 60,
+            "LCK": 25,
+            "DEF": 25,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Pistil_Pleasure",
+                false
+            ],
+            [
+                "Area_Of_Ero",
+                false
             ]
         ],
         "learned_skills": [
@@ -4090,7 +4207,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Wary_Fighter"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Bow": [
@@ -5243,19 +5365,20 @@
         "name": "Incubus King",
         "desc": "",
         "variant": "",
-        "level": 17,
+        "level": 20,
         "klass": "Incubus_Emperor",
         "tags": [
+            "Flying",
             "Monster"
         ],
         "bases": {
-            "HP": 46,
-            "STR": 1,
+            "HP": 80,
+            "STR": 30,
             "MAG": 24,
-            "SKL": 14,
-            "SPD": 12,
-            "LCK": 5,
-            "DEF": 17,
+            "SKL": 18,
+            "SPD": 17,
+            "LCK": 25,
+            "DEF": 23,
             "RES": 20,
             "CON": 7,
             "MOV": 6
@@ -5279,7 +5402,24 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Fucking_Invincible"
+            ],
+            [
+                1,
+                "Creepy_Move"
+            ],
+            [
+                1,
+                "Dreadful_Predator"
+            ],
+            [
+                1,
+                "Unaffected"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -5294,7 +5434,7 @@
             ],
             "Axe": [
                 false,
-                181,
+                0,
                 251
             ],
             "Bow": [
@@ -5326,6 +5466,11 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                251,
+                null
             ]
         },
         "alternate_classes": [],
@@ -5446,6 +5591,64 @@
             "Axe": [
                 false,
                 71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "OgreFinal",
+        "name": "Ogre Captain",
+        "desc": "",
+        "variant": "",
+        "level": 18,
+        "klass": "Ogre",
+        "tags": [
+            "Boss",
+            "Monster"
+        ],
+        "bases": {
+            "HP": 60,
+            "STR": 13,
+            "MAG": 3,
+            "SKL": 11,
+            "SPD": 6,
+            "LCK": 4,
+            "DEF": 11,
+            "RES": 8,
+            "CON": 16,
+            "MOV": 4
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Steel_Axe",
+                false
+            ],
+            [
+                "Hand_Axe",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Stun_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Axe": [
+                false,
+                181,
                 null
             ]
         },
@@ -5604,7 +5807,7 @@
     {
         "nid": "Iris",
         "name": "Iris",
-        "desc": "Incubus King's secretary. She has an optimization fetish.",
+        "desc": "Incubus King's secretary. Has an optimization fetish.",
         "variant": null,
         "level": 6,
         "klass": "Dancer",

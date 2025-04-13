@@ -539,6 +539,10 @@
             [
                 "weapon_type",
                 "Refresh"
+            ],
+            [
+                "exp",
+                15
             ]
         ]
     },
@@ -1526,10 +1530,6 @@
                 1
             ],
             [
-                "attack_after_combat",
-                null
-            ],
-            [
                 "eval_target_restrict_2",
                 "target.lead_unit == False and unit.lead_unit == False"
             ],
@@ -1883,7 +1883,7 @@
     {
         "nid": "Firewall_ability_v2",
         "name": "Firewall",
-        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Cooldown: 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
+        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Costs <blue>6 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -1908,7 +1908,7 @@
             ],
             [
                 "mana_cost",
-                5
+                6
             ],
             [
                 "map_cast_sfx",
@@ -5247,30 +5247,19 @@
             ],
             [
                 "damage",
-                11
+                20
             ],
             [
                 "hit",
-                65
+                150
             ],
             [
                 "weapon_type",
-                "Axe"
+                "Scythe"
             ],
             [
                 "weapon_rank",
                 "A"
-            ],
-            [
-                "uses",
-                20
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ],
             [
                 "weight",
@@ -8993,7 +8982,7 @@
             ],
             [
                 "hit",
-                55
+                95
             ],
             [
                 "weapon_type",
@@ -16085,7 +16074,8 @@
                     "Shaman",
                     "Troubadour",
                     "Wyvern Rider",
-                    "Blademaster"
+                    "Blademaster",
+                    "Priestess"
                 ]
             ],
             [

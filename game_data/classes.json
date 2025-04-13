@@ -5190,7 +5190,7 @@
             0
         ],
         "map_sprite_nid": "ClericMonica",
-        "combat_anim_nid": "ClericFemale",
+        "combat_anim_nid": "ClericMonica",
         "fields": []
     },
     {
@@ -5332,7 +5332,7 @@
             0
         ],
         "map_sprite_nid": "War Cleric (F) Axe {Der}-stand",
-        "combat_anim_nid": "Inquisitor",
+        "combat_anim_nid": "InquisitorMonica",
         "fields": []
     },
     {
@@ -5497,7 +5497,7 @@
         "promotes_from": null,
         "turns_into": [
             "Sage",
-            "Mage Knight"
+            "Mage_Knight"
         ],
         "tags": [],
         "max_level": 20,
@@ -5936,9 +5936,9 @@
         "fields": []
     },
     {
-        "nid": "Mage Knight",
+        "nid": "Mage_Knight",
         "name": "Mage Knight",
-        "desc": "",
+        "desc": "Mounted mages with higher mobility.",
         "tier": 2,
         "movement_group": "Light Cav",
         "promotes_from": "Mage",
@@ -6087,7 +6087,7 @@
             0
         ],
         "map_sprite_nid": "MageKnight",
-        "combat_anim_nid": "Strategist",
+        "combat_anim_nid": "Mage_Knight",
         "fields": []
     },
     {
@@ -9162,7 +9162,22 @@
                 31,
                 null
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
                 false,
                 0,
                 null
@@ -10104,6 +10119,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Mage (1)",
@@ -12143,7 +12168,7 @@
             0
         ],
         "map_sprite_nid": "Noble (M) Launch T1 {VelvetKitsune}-stand",
-        "combat_anim_nid": "Blademaster",
+        "combat_anim_nid": "BlademasterAntarion",
         "fields": []
     },
     {
@@ -12911,7 +12936,7 @@
             "DEF": 0,
             "RES": 0,
             "CON": 0,
-            "MOV": 0
+            "MOV": 6
         },
         "growths": {
             "HP": 0,
@@ -12974,7 +12999,7 @@
                 null
             ],
             "Axe": [
-                true,
+                false,
                 0,
                 null
             ],
@@ -13014,7 +13039,7 @@
                 null
             ],
             "Scythe": [
-                false,
+                true,
                 0,
                 null
             ],
