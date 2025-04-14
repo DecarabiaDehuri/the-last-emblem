@@ -141,12 +141,7 @@
             0,
             0
         ],
-        "components": [
-            [
-                "change_animation",
-                "RosaPhoenix"
-            ]
-        ]
+        "components": []
     },
     {
         "nid": "Succubus_Mana",
@@ -4694,7 +4689,7 @@
     {
         "nid": "Fan_the_Flames",
         "name": "Fan the Flames",
-        "desc": "Some people just want to watch the world burn. Rosa has bonus damage and damage reduction against burning enemies.",
+        "desc": "Some people just want to watch the world burn. Rosa has bonus damage and damage reduction against <red>[BURNED]</> enemies.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -4763,7 +4758,7 @@
         "components": [
             [
                 "change_animation",
-                "RosaPhoenix"
+                "Rosaphoenix"
             ],
             [
                 "fatal_damage",
