@@ -3686,8 +3686,18 @@
         "priority": 20,
         "_source": [
             "music_clear",
-            "add_portrait;Simonyoung;FarRight;normal;CloseEyes",
-            "speak;Simonyoung;I...{c:wait;500} was not good enough.{br}{c:wait;500}Forgive me, I must heal my injuries.",
+            "add_portrait;Simonyoung;FarRight;normal;CloseEyes,NoSmile",
+            "if;game.current_mode.permadeath",
+            "    speak;Simonyoung;Wendis...{c:wait;500} We'll finally...",
+            "    if;game.current_mode.nid != 'Ironman'",
+            "        activate_turnwheel",
+            "    else",
+            "        remove_unit;Simonyoung;fade;fade",
+            "        lose_game",
+            "    end",
+            "else",
+            "    s;Simonyoung;I...{c:wait;500} was not good enough.{br}{c:wait;500}Forgive me, I must heal my injuries.",
+            "end",
             "remove_portrait;Simonyoung",
             "music_fade_back"
         ],
@@ -5378,7 +5388,7 @@
             "wait;1000",
             "reveal_overworld_road;P1;P2",
             "wait;1000",
-            "reveal_overworld_node;IK;immediate",
+            "reveal_overworld_node;P14;immediate",
             "if;{v:ivala} == 1",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
@@ -5399,6 +5409,7 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "overworld_cinematic;1",
             "wait;1000",
             "s;;Chosen and his friends set out to investigate Jito Cave and rescue captain Duro.|What could have prompted this Spider attack?|Was this a random monster occurrence, or was the Incubus King behind it...?;;;narration",
             "wait;1000",
@@ -8958,7 +8969,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "add_lore;IncubusKing",
+            "add_lore;Incubus_King",
             "add_lore;Chosen",
             "add_lore;Simonyoung",
             "add_lore;Mira",
@@ -10538,7 +10549,7 @@
         "_source": [
             "unlock;{unit}",
             "show_layer;chest",
-            "give_item;{unit};Huge_Health_Potion",
+            "give_item;{unit};Sylvan_Draught",
             "remove_region;chest"
         ],
         "nid": "P14 Chest1"
@@ -10554,7 +10565,7 @@
         "_source": [
             "unlock;{unit}",
             "show_layer;chest2",
-            "give_item;{unit};Sylvan_Draught",
+            "give_item;{unit};Swiftsole",
             "remove_region;chest2"
         ],
         "nid": "P14 Chest2"
@@ -10570,7 +10581,7 @@
         "_source": [
             "unlock;{unit}",
             "show_layer;chest3",
-            "give_item;{unit};Huge_Mana_Potion",
+            "give_item;{unit};Sylvan_Draught",
             "remove_region;chest3"
         ],
         "nid": "P14 Chest3"
@@ -11619,6 +11630,8 @@
             "add_unit;Simonyoung;3,5",
             "transition;open;2000",
             "wait;1000",
+            "change_team;megail;player",
+            "wait;1000",
             "transition;close;2000",
             "remove_all_units",
             "#9 - orcent appears",
@@ -11628,10 +11641,10 @@
             "add_unit;orcent;3,3",
             "transition;open;2000",
             "wait;1000",
-            "add_unit;Simonyoung;3,5;;;south",
-            "wait;500",
             "kill_unit;orc1",
             "wait;500",
+            "add_unit;Simonyoung;3,5;;;south",
+            "wait;1000",
             "change_team;soldier;enemy",
             "wait;500",
             "move_unit;Simonyoung;3,4;silent",
@@ -11895,7 +11908,9 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "add_talk;Simon;deca"
+            "add_talk;Simon;deca",
+            "#hide_layer;base",
+            "#show_layer;base_1"
         ],
         "nid": "Limit talk"
     },
@@ -11926,5 +11941,21 @@
             "end"
         ],
         "nid": "Limit Talk deca"
+    },
+    {
+        "name": "Overworld",
+        "trigger": "overworld_start",
+        "level_nid": "P14",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "sound;MapHeal",
+            "reveal_overworld_road;P13;P14",
+            "wait;1000"
+        ],
+        "nid": "P14 Overworld"
     }
 ]
