@@ -81,22 +81,6 @@
         ]
     },
     {
-        "nid": "critao",
-        "name": "critao",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "crit",
-                999
-            ]
-        ]
-    },
-    {
         "nid": "target",
         "name": "target",
         "desc": "",
@@ -131,17 +115,6 @@
                 0.0
             ]
         ]
-    },
-    {
-        "nid": "testanim",
-        "name": "testanim",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
     },
     {
         "nid": "Succubus_Mana",
@@ -192,22 +165,6 @@
             [
                 "hidden",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Cant_be_doubled",
-        "name": "Cant be doubled",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "give_status_on_take_hit",
-                "Active_Synergy"
             ]
         ]
     },
@@ -2319,25 +2276,13 @@
     {
         "nid": "Grand_Entrance",
         "name": "Grand Entrance",
-        "desc": "When Duro is at full HP, his attacks hit enemies in an area. Costs <blue>4 mana</>.",
+        "desc": "When Duro is at full HP, his attacks hit enemies in an area.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
             18
         ],
         "components": [
-            [
-                "Cleave",
-                null
-            ],
-            [
-                "condition",
-                "game.get_unit('Duro').get_hp() == game.get_unit('Duro').get_max_hp()"
-            ],
-            [
-                "cost_mana",
-                4
-            ],
             [
                 "class_skill",
                 null
@@ -2349,6 +2294,18 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "post_combat_splash",
+                5
+            ],
+            [
+                "post_combat_splash_aoe",
+                1
+            ],
+            [
+                "condition",
+                "{eval: u('Duro').get_hp() == u('Duro').get_max_hp()}"
             ],
             [
                 "combat_condition",
@@ -2965,6 +2922,26 @@
             [
                 "hidden",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Critical_Antarion",
+        "name": "Critical Antarion Rapier",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "alternate_critical_addition_formula",
+                "CRIT_ANTA"
             ]
         ]
     },
@@ -3795,7 +3772,7 @@
             ],
             [
                 "time",
-                2
+                1
             ],
             [
                 "modify_ai_priority",
@@ -6400,7 +6377,7 @@
     {
         "nid": "Crit_Plus15",
         "name": "Crit +15",
-        "desc": "Grants +15 Critical change",
+        "desc": "Grants +15 Critical chance",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,

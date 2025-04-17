@@ -31,6 +31,7 @@
             "change_background;SeaofClouds",
             "transition;open;3000",
             "wait;1500",
+            "end_skip",
             "choice;tutorialchoice;Do you wish to play the Prologue?;Yes,No",
             "if;'{v:_last_choice}' == 'Yes'",
             "    game_var;prologue;1",
@@ -4684,7 +4685,7 @@
         "name": "Tutorial: magic vs armor",
         "trigger": "unit_select",
         "level_nid": "P2",
-        "condition": "unit.nid == 'Duro'",
+        "condition": "game.game_vars['ivala'] == 1 and unit.nid == 'Duro'",
         "commands": [],
         "only_once": true,
         "priority": 20,
@@ -5320,7 +5321,8 @@
             "wait;500",
             "multi_remove_portrait;Safado;Bandit2",
             "wait;1000",
-            "add_talk;Lucia;Safado"
+            "add_talk;Lucia;Safado",
+            "add_talk;Monica;Safado"
         ],
         "nid": "P5 Stairs enemy reinforcement e Safado"
     },
@@ -5496,7 +5498,7 @@
         "priority": 20,
         "_source": [
             "transition;Close",
-            "shop;{unit};Iron_Sword,Slim_Sword,Steel_Sword,Iron_Lance,Slim_Lance,Steel_Lance,Iron_Axe,Steel_Axe,Hand_Axe,Iron_Bow,Steel_Bow,Short_Bow;armory",
+            "shop;{unit};Iron_Sword,Slim_Sword,Steel_Sword,Javelin,Iron_Lance,Slim_Lance,Steel_Lance,Iron_Axe,Steel_Axe,Hand_Axe,Iron_Bow,Steel_Bow,Short_Bow;armory",
             "transition;Open"
         ],
         "nid": "P4 Armory Nodford"
@@ -5630,7 +5632,7 @@
         "nid": "P5 Tutorial: weapon reaver"
     },
     {
-        "name": "Recruit Safado",
+        "name": "Recruit Safado - Lucia",
         "trigger": "on_talk",
         "level_nid": "P5",
         "condition": "unit.nid == 'Lucia' and unit2.nid == 'Safado'",
@@ -5661,9 +5663,10 @@
             "sound;Level Up",
             "alert;Safado has joined your party!",
             "music_fade_back",
-            "remove_talk;Lucia;Safado"
+            "remove_talk;Lucia;Safado",
+            "remove_talk;Monica;Safado"
         ],
-        "nid": "P5 Recruit Safado"
+        "nid": "P5 Recruit Safado - Lucia"
     },
     {
         "name": "Shop Nodford",
@@ -6084,7 +6087,7 @@
             "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
             "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
             "music;Happy1;500",
-            "shop;{eval:game.game_vars.get('_last_choice')};Iron_Sword,Slim_Sword,Steel_Sword,Iron_Lance,Slim_Lance,Steel_Lance,Iron_Axe,Steel_Axe,Hand_Axe,Iron_Bow,Steel_Bow,Short_Bow;armory",
+            "shop;{eval:game.game_vars.get('_last_choice')};Iron_Sword,Slim_Sword,Steel_Sword,Javelin,Iron_Lance,Slim_Lance,Steel_Lance,Iron_Axe,Steel_Axe,Hand_Axe,Iron_Bow,Steel_Bow,Short_Bow;armory",
             "music_fade_back",
             "game_var;_last_choice;False",
             "else",
@@ -6101,9 +6104,15 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.current_mode.nid != 'Ironman'",
+            "    enable_turnwheel;t",
+            "    game_var;_max_turnwheel_uses;999",
+            "else",
+            "end",
             "enable_supports;t",
             "game_var;rosaphoenix;0",
-            "game_var;chosendeath;0"
+            "game_var;chosendeath;0",
+            "enable_convoy;t"
         ],
         "nid": "0 Variables"
     },
@@ -6510,7 +6519,7 @@
         "_source": [
             "level_var;ambushsetup;1",
             "remove_region;ambush",
-            "if;u('Simonyoung') in game.get_units_in_party()",
+            "if;u('Simonyoung') in game.get_player_units()",
             "    wait;1000",
             "    add_portrait;Simonyoung;Left",
             "    s;Simonyoung;If this was planned by her...;;;thought_bubble",
@@ -7114,6 +7123,8 @@
             "change_objective_loss;Chosen dies.",
             "change_objective_simple;Defeat the boss.",
             "add_talk;Cassian;Milena",
+            "add_talk;Mira;Milena",
+            "change_ai;Minerve;Pursue",
             "transition;open;1000",
             "prep;t;Preparation"
         ],
@@ -7583,10 +7594,10 @@
             "chapter_title",
             "transition;close",
             "center_cursor;9,7",
-            "if;game.mode == 'Hard' or game.mode == 'Ironman'",
-            "    add_group;ogre;ogre;immediate",
-            "else",
-            "end",
+            "#if;game.mode == 'Hard' or game.mode == 'Ironman'",
+            "#    add_group;ogre;ogre;immediate;closest",
+            "#else",
+            "#end",
             "transition;open",
             "multi_add_portrait;Geoff;Left;Minerve;Right",
             "music;Tension",
@@ -7966,7 +7977,7 @@
         "nid": "P7 Geoff dies game over"
     },
     {
-        "name": "Milena recruit",
+        "name": "Milena recruit - Cassian",
         "trigger": "on_talk",
         "level_nid": "P9",
         "condition": "unit.nid == 'Cassian' and unit2.nid == 'Milena'",
@@ -8006,9 +8017,10 @@
             "sound;Level Up",
             "alert;Milena has joined your party!",
             "wait;2000",
+            "remove_talk;Mira;Milena",
             "remove_talk;Cassian;Milena"
         ],
-        "nid": "P9 Milena recruit"
+        "nid": "P9 Milena recruit - Cassian"
     },
     {
         "name": "Minerve dance",
@@ -8144,16 +8156,13 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "enable_turnwheel;t",
-            "game_var;_max_turnwheel_uses;-1",
             "if;{v:ivala} == 1",
             "    wait;500",
             "    add_portrait;Ivala;(120,32)",
             "    wait;200",
-            "    speak;Ivala;As you progress on your battles, you may find yourself regretful of past choices.|As I am here to bring Light upon your world, allow me to grant you my most important gift.|You have now access to the <red><wave amplitude=1.5>Turnwheel</></>.|To use it, select a tile without any units, such as you do to bring up extra options.|By selecting Turnwheel, <red>you can revert the state of the battle to a previous point</>.;bottom;;;;blue;;;;;None",
+            "    speak;Ivala;As you progress on your battles, you may find yourself regretful of past choices.|To deal with this, I have bestowed upon you the gift of the <red><wave amplitude=1.5>Turnwheel</></>.|To use it, select a tile without any units, such as you do to bring up extra options.|By selecting Turnwheel, <red>you can revert the state of the battle to a previous point</>.|Be sure to use this to experiment and optimize your strategies!;bottom;;;;blue;;;;;None",
             "wait;200",
-            "end",
-            "alert;You can now use the <red>Turnwheel</>!"
+            "end"
         ],
         "nid": "P1 Turnwheel enable e Tutorial: Turnwheel"
     },
@@ -10610,7 +10619,9 @@
             "give_skill;Safado;Stalling_Stance;;no_banner;persistent",
             "give_skill;Rosa;Guaranteed_Crit;;no_banner;persistent",
             "promote;Rosa;Mage_Knight;silent",
-            "add_talk;Duro;Antarion"
+            "add_talk;Duro;Antarion",
+            "give_skill;Duro;Grand_Entrance;;no_banner",
+            "give_skill;Duro;Bear_hug;;no_banner"
         ],
         "nid": "DEBUG_2 intro"
     },
@@ -10887,7 +10898,7 @@
         "priority": 20,
         "_source": [
             "unlock;{unit}",
-            "show_layer;chest",
+            "show_layer;chest2",
             "give_item;{unit};Headband",
             "remove_region;chest"
         ],
@@ -11957,5 +11968,99 @@
             "wait;1000"
         ],
         "nid": "P14 Overworld"
+    },
+    {
+        "name": "Recruit Safado - Monica",
+        "trigger": "on_talk",
+        "level_nid": "P5",
+        "condition": "unit.nid == 'Monica' and unit2.nid == 'Safado'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "music;Reinforcements",
+            "add_portrait;Monica;Left",
+            "add_portrait;Safado;Right",
+            "s;Safado;A priestess, hmm? This is no place for you, dear.",
+            "s;Monica;...;no_talk",
+            "s;Safado;...;no_talk",
+            "expression;Safado;CloseEyes",
+            "s;Safado;Oh shit, she must be mad. I might have been too quick to avaliate her!!|Just because she is wearing the church's clothes shouldn't mean she's a nun!|But... it's a safe assumption to make, isn't it?!|So maybe she is mad because I was too condescending?|Stupid me, she must be here for a reason!|And why did I try that hard calling her \"dear\"?!;;;thought_bubble",
+            "expression;Safado;OpenEyes",
+            "s;Monica;...;no_talk",
+            "s;Safado;Regardless, your presence here brings me joy.|Might I inquire you on the purpose of your group?",
+            "expression;Monica;CloseEyes",
+            "s;Monica;...;no_talk",
+            "expression;Safado;CloseEyes",
+            "s;Safado;It's over. It's already over for me.|She is not giving me shit. Who would just straight up tell intel to their enemy?!|I should have known. Why did I even ask? Do I WANT to be embarrassed?|What if she never even answers me? Do I just attack?|But then, if I attacked, just how patethic would I be...|I mean, I'm pretty low already, but it should have a limit, right?;;;thought_bubble",
+            "expression;Monica;OpenEyes",
+            "expression;Safado;OpenEyes",
+            "s;Safado;...;no_talk",
+            "s;Monica;...;no_talk",
+            "expression;Safado;CloseEyes",
+            "s;Safado;Maybe... Maybe this is where I should draw the line?|Is this what she is truly speaking without words?|That I should search within myself for the answers?|Whatever the case, I should just decide already...|I don't want to stare at her then just walk away...|I'll feel pretty embarrassed if the rest of the guys see me just awkwardly leaving a battle...;;;thought_bubble",
+            "expression;Safado;OpenEyes",
+            "expression;Monica;Smile",
+            "s;Monica;...;no_talk",
+            "expression;Safado;CloseEyes",
+            "s;Safado;Wait... if I just join them, that'll explain everything!|I wouldn't have to awkwardly explain what happened to my colleagues!|Yeah, then it would be the hidden option, I'll neither have to attack or flee from her!|I'll just... casually make myself an ally... yeah.;;;thought_bubble",
+            "expression;Safado;OpenEyes",
+            "s;Safado;I have felt a higher calling through you, sister.|Thank you for the moment of enlightment. Let me join you through your ordeals.",
+            "multi_remove_portrait;Safado;Monica",
+            "change_team;Safado;player",
+            "sound;Level Up",
+            "alert;Safado has joined your party!",
+            "music_fade_back",
+            "remove_talk;Lucia;Safado",
+            "remove_talk;Monica;Safado"
+        ],
+        "nid": "P5 Recruit Safado - Monica"
+    },
+    {
+        "name": "Milena recruit - Mira",
+        "trigger": "on_talk",
+        "level_nid": "P9",
+        "condition": "unit.nid == 'Mira' and unit2.nid == 'Milena'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "music;Reinforcements",
+            "multi_add_portrait;Mira;Left;Milena;Right",
+            "s;Milena;*Sigh*... Ok, let's fight...",
+            "s;Mira;Umm... I'm sorry, but I need to...",
+            "s;Milena;It's a pity, but that's just what happens, right?|{c:expression;Milena;CloseEyes,NoSmile}Maybe some dreams are simply impossible...",
+            "expression;Mira;CloseEyes",
+            "s;Mira;...;no_talk",
+            "expression;Mira;OpenEyes",
+            "expression;Milena;OpenEyes",
+            "bop_portrait;Mira",
+            "s;Mira;I!{c:wait;300} I... am also fighting for my dream! You... shouldn't just give up!!",
+            "s;Milena;Oh!{c:wait;400} Well, you're right, girl!",
+            "s;Mira;It's... scary... and difficult...{c:wait;400} but we have to move forward!!",
+            "s;Milena;You're a strong one, aren't you? That's too bad we're on opposite sides here, hehe~",
+            "expression;Mira;CloseEyes",
+            "s;Mira;...I'm sorry... we could never be friends...|...who I want to destroy is the one you want to protect...",
+            "expression;Milena;CloseEyes",
+            "s;Milena;Yes... our dreams are opposed... {c:wait;500}{c:expression;Milena;OpenEyes}Wait, what?|Who are you talking about?",
+            "expression;Mira;OpenEyes",
+            "s;Mira;The Incubus King, the root of all evil!",
+            "s;Milena;Oh, I for sure agree he needs to be gone!",
+            "s;Mira;Umm... really? But you are fighting for him...",
+            "s;Milena;Haha, do you think everyone here is a hivemind? That would be silly!|Many of us are pissed at him, but we're just too weak to fight back!|At least *I* know I am... I'd much rather dance and sing!",
+            "s;Mira;Oh... that's nice.",
+            "s;Milena;Yep, that's how I keep myself sane around here.|What I really want is to explore the world. But that's an impossible dream with this war!|So if you want him gone, you for sure have my support!",
+            "s;Mira;That's wonderful! Then we can become friends!",
+            "bop_portrait;Milena",
+            "s;Milena;Yay! Let's work on our dreams together!",
+            "multi_remove_portrait;Mira;Milena",
+            "change_team;Milena;player",
+            "sound;Level Up",
+            "alert;Milena has joined your party!",
+            "wait;2000",
+            "remove_talk;Mira;Milena",
+            "remove_talk;Cassian;Milena"
+        ],
+        "nid": "P9 Milena recruit - Mira"
     }
 ]

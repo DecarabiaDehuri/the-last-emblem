@@ -1649,7 +1649,7 @@
     {
         "nid": "Rapier_Antarion",
         "name": "Rapier",
-        "desc": "Deals +5 damage on critical hits. Antarion only weapon. The preferred weapon of the Blademasters.",
+        "desc": "Antarion only weapon. When equipped, deals +5 damage on critical hits.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -1703,8 +1703,8 @@
                 ]
             ],
             [
-                "added_crit_damage",
-                5
+                "status_on_equip",
+                "Critical_Antarion"
             ]
         ]
     },

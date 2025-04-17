@@ -3134,7 +3134,7 @@
         "desc": "An obnoxious swordsman with undeserving popularity and skill.",
         "variant": "Antarion",
         "level": 5,
-        "klass": "Blademaster",
+        "klass": "Duelist",
         "tags": [],
         "bases": {
             "HP": 17,
@@ -3164,6 +3164,10 @@
         "starting_items": [
             [
                 "Rapier_Antarion",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -3274,7 +3278,7 @@
         },
         "starting_items": [
             [
-                "Iron_Lance",
+                "Iron_Sword",
                 false
             ]
         ],
@@ -3351,7 +3355,7 @@
         },
         "starting_items": [
             [
-                "Iron_Sword",
+                "Iron_Lance",
                 false
             ]
         ],
