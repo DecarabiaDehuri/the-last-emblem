@@ -3187,6 +3187,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "transition;close",
             "change_background;pre-IK-intro",
             "wait;2000",
@@ -3713,6 +3714,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "#variaveis",
             "level_var;alertplank;0",
             "level_var;plankgone;0",
@@ -4555,6 +4557,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "chapter_title",
             "transition;close",
             "add_weather;night",
@@ -4787,6 +4790,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "chapter_title",
             "transition;close",
             "show_layer;floor;immediate",
@@ -4794,6 +4798,7 @@
             "equip_item;SpiderEmpress;DarkWeb",
             "music;Tension",
             "move_cursor;7,15",
+            "change_background",
             "transition;open",
             "# S\u00d3 UM TESTE IVALA",
             "#game_var;ivala;1",
@@ -5100,8 +5105,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "show_layer;remake",
             "chapter_title",
+            "change_background",
+            "transition;open;1000",
             "wait;1000",
             "add_unit;Plank;0,10;fade;giveup;east",
             "center_cursor;3,7;immediate",
@@ -5248,7 +5256,7 @@
             "flicker_cursor;Wrecker",
             "wait;200",
             "add_portrait;Wrecker;Right",
-            "s;Wrecker;...{c:wait;400} They dare wall Wrecker out?!|THEY PAY!|{c:screen_shake;300;combat;no_block}AAAAAGHHHHH!",
+            "s;Wrecker;...{c:wait;400} They wall Wrecker out?!|THEY PAY!|{c:screen_shake;300;combat;no_block}AAAAAGHHHHH!",
             "remove_portrait;Wrecker",
             "move_unit;Wrecker;3,11;normal;push",
             "wait;300",
@@ -5720,6 +5728,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "game_var;rosaphoenix;0",
             "add_talk;Chosen;Rosa",
             "show_layer;details",
@@ -6376,6 +6385,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "chapter_title",
             "transition;close",
             "show_layer;remake",
@@ -6570,10 +6580,12 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "music_clear",
             "chapter_title",
             "level_var;shinysword;0",
-            "transition;close",
+            "change_background",
+            "transition;close;1000",
             "center_cursor;6,32",
             "add_weather;smoke",
             "add_weather;smoke",
@@ -7271,6 +7283,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "level_var;shop;0",
             "chapter_title",
             "transition;close",
@@ -7382,7 +7395,7 @@
             "wait;1000",
             "multi_add_portrait;Chosen;Left;Simonyoung;Right",
             "s;Chosen;What is happening?! Why I can't see shit?!",
-            "s;Simonyoung;This seems to be a powerful illusion magic.|This should be cancelled once we defeat Minerve.",
+            "s;Simonyoung;This seems to be a powerful illusion magic.|This should be cancelled once we defeat her.",
             "s;Chosen;Fuck... and how am I gonna find her?!",
             "s;Simonyoung;... therein lies the purpose of the spell.",
             "s;Chosen;True form or not, I'm gonna get this slut!!",
@@ -7475,7 +7488,7 @@
             "    give_skill;Safado;Stalling_Stance;;persistent",
             "elif;game.get_unit('Safado').level == 8",
             "    give_skill;Safado;Chameleon_Stance;;persistent",
-            "elif;game.get_unit('Safado').level == 10",
+            "elif;game.get_unit('Safado').level == 9",
             "    give_skill;Safado;Social_Distancing_skill;;persistent",
             "end",
             "end"
@@ -7592,12 +7605,14 @@
         "_source": [
             "show_layer;details",
             "chapter_title",
+            "change_background;BlackBackground",
             "transition;close",
             "center_cursor;9,7",
             "#if;game.mode == 'Hard' or game.mode == 'Ironman'",
             "#    add_group;ogre;ogre;immediate;closest",
             "#else",
             "#end",
+            "change_background",
             "transition;open",
             "multi_add_portrait;Geoff;Left;Minerve;Right",
             "music;Tension",
@@ -8044,9 +8059,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "chapter_title",
             "transition;close",
             "center_cursor;11,18",
+            "change_background",
             "transition;open;1000",
             "add_unit;Chosen;12,18",
             "move_unit;Chosen;12,17",
@@ -8603,6 +8620,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "level_var;barrier;0",
             "remove_skill;Rialayoung;Dance;no_banner",
             "chapter_title",
@@ -9256,6 +9274,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "show_layer;details",
             "show_layer;raiz",
             "show_layer;galhos",
@@ -9263,6 +9282,7 @@
             "transition;close",
             "music;Succubus City;1000",
             "center_cursor;10,7",
+            "change_background",
             "transition;open;1000",
             "wait;1000",
             "center_cursor;11,16",
@@ -10151,7 +10171,7 @@
             "    wait;500",
             "    sound;Attack Hit 5",
             "    screen_shake;0",
-            "    add_unit;egg4;7,3;swoosh;closest;fade",
+            "    add_unit;egg4;27,3;swoosh;closest;fade",
             "    add_region;egg4;egg4;1,1;normal;;5",
             "    screen_shake_end",
             "    wait;1000",
@@ -10496,6 +10516,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "add_weather;fire",
             "chapter_title",
             "transition;close",
@@ -10650,6 +10671,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "level_var;ik2;0",
             "show_layer;mountains",
             "show_layer;mountains2",
@@ -10659,6 +10681,7 @@
             "transition;close",
             "center_cursor;1,1",
             "music;Wind;10000",
+            "change_background",
             "transition;open;5000",
             "center_cursor;Incubus_King;8000",
             "music_clear;3000",
@@ -11041,7 +11064,7 @@
     },
     {
         "name": "Eggs dying removes region",
-        "trigger": "unit_wait",
+        "trigger": "unit_death",
         "level_nid": "P14",
         "condition": "True",
         "commands": [],
@@ -11496,11 +11519,13 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
             "transition;close",
             "show_layer;mountain1",
             "show_layer;mountain2",
             "center_cursor;5,19",
-            "transition;open;",
+            "change_background",
+            "transition;open;1000",
             "center_cursor;0,15;5000",
             "add_unit;Simonyoung;0,15;fade;giveup;west",
             "music;FuckEmblem",
@@ -11919,6 +11944,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_background;BlackBackground",
+            "transition;close",
+            "change_background",
+            "transition;open;1000",
             "add_talk;Simon;deca",
             "#hide_layer;base",
             "#show_layer;base_1"
@@ -12062,5 +12091,180 @@
             "remove_talk;Cassian;Milena"
         ],
         "nid": "P9 Milena recruit - Mira"
+    },
+    {
+        "name": "Boss quote - Chosen",
+        "trigger": "combat_start",
+        "level_nid": "P3",
+        "condition": "(unit.nid == \"Chosen\" and unit2.nid == 'SpiderEmpress')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "add_portrait;Chosen;Right,Bottom;;Smile",
+            "s;Chosen;This is payback for earlier!",
+            "remove_portrait;Chosen"
+        ],
+        "nid": "P3 Boss quote - Chosen"
+    },
+    {
+        "name": "Boss quote - Cassian",
+        "trigger": "combat_start",
+        "level_nid": "P4",
+        "condition": "(unit.nid == \"Cassian\" and unit2.nid == 'Crusher') or (unit.nid == 'Crusher' and unit2.nid == \"Cassian\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Crusher;Left,Bottom;Cassian;Right,Bottom",
+            "s;Cassian;I guess the tables have turned now, hahaha!",
+            "s;Crusher;Gah, you're a waste of breath. Rot in hell!",
+            "multi_remove_portrait;Crusher;Cassian"
+        ],
+        "nid": "P4 Boss quote - Cassian"
+    },
+    {
+        "name": "Boss quote - Lucia",
+        "trigger": "combat_start",
+        "level_nid": "P4",
+        "condition": "(unit.nid == \"Lucia\" and unit2.nid == 'Crusher') or (unit.nid == 'Crusher' and unit2.nid == \"Lucia\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Crusher;Left,Bottom;Lucia;Right,Bottom",
+            "s;Lucia;{tgm}Hmm...{tgm}{c:wait;300} You're calmer than I expected.",
+            "s;Crusher;You called for help, I don't give a shit! You're still a bunch of insects I get to crush!",
+            "multi_remove_portrait;Crusher;Lucia"
+        ],
+        "nid": "P4 Boss quote - Lucia"
+    },
+    {
+        "name": "Boss quote - Antarion",
+        "trigger": "combat_start",
+        "level_nid": "P4",
+        "condition": "(unit.nid == \"Antarion\" and unit2.nid == 'Crusher') or (unit.nid == 'Crusher' and unit2.nid == \"Antarion\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Crusher;Left,Bottom;Antarion;Right,Bottom",
+            "s;Antarion;One more villain about to fall from my blade!|I shudder to imagine what would happen to the village women, if not for me.|Frankly, as their savior, they should dedicate the rest of their lives to me.",
+            "s;Crusher;...am I really the villain here?",
+            "multi_remove_portrait;Crusher;Antarion"
+        ],
+        "nid": "P4 Boss quote - Antarion"
+    },
+    {
+        "name": "Wrecker - Simon",
+        "trigger": "combat_start",
+        "level_nid": "P5",
+        "condition": "(unit.nid == \"Simonyoung\" and unit2.nid == 'Wrecker') or (unit.nid == 'Wrecker' and unit2.nid == \"Simonyoung\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Wrecker;Left,Bottom;Simonyoung;Right,Bottom",
+            "s;Wrecker;WRECKER ANGRY!",
+            "s;Simonyoung;I understand you are upset. Perhaps we should talk first.",
+            "s;Wrecker;Wrecker not good at talk...",
+            "s;Simonyoung;We are not competing, this is a matter of reaching mutual understanding.|We can resolve...",
+            "s;Wrecker;No! NO! Just WRECK!",
+            "expression;Simonyoung;CloseEyes",
+            "s;Simonyoung;...;no_talk",
+            "multi_remove_portrait;Wrecker;Simonyoung"
+        ],
+        "nid": "P5 Wrecker - Simon"
+    },
+    {
+        "name": "Boss quote - Safado",
+        "trigger": "combat_start",
+        "level_nid": "P5",
+        "condition": "(unit.nid == \"Safado\" and unit2.nid == 'Plank') or (unit.nid == 'Plank' and unit2.nid == \"Safado\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Plank;Left,Bottom;Safado;Right,Bottom",
+            "s;Plank;Wait a minute, aren't you the milk boy?!|Are you rebelling because we're short on milk?!",
+            "s;Safado;Who I am is not of your concern anymore.|Right now we are opponents, and we will engage in combat as such.",
+            "expression;Safado;CloseEyes",
+            "s;Safado;Holy shit, I hate these guys. I just asked ONCE.|Only one time. I didn't even demand or anything. That was just a question.|And they're still hung up on it. Unbelievable.|Who else knows?! Fuck...|Good riddance I'll be gone soon!;;;thought_bubble",
+            "multi_remove_portrait;Wrecker;Safado"
+        ],
+        "nid": "P5 Boss quote - Safado"
+    },
+    {
+        "name": "Boss quote - Mira",
+        "trigger": "combat_start",
+        "level_nid": "P8",
+        "condition": "(unit.nid == \"Mira\" and unit2.nid == 'Ogre1') or (unit.nid == 'Ogre1' and unit2.nid == \"Mira\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Mira;Right,Bottom",
+            "s;Mira;G-get out of my way!{c:wait;400} You won't stop my revenge!",
+            "remove_portrait;Mira"
+        ],
+        "nid": "P8 Boss quote - Mira"
+    },
+    {
+        "name": "Minerve - Duro",
+        "trigger": "combat_start",
+        "level_nid": "P9",
+        "condition": "(unit.nid == \"Duro\" and unit2.nid == 'Minerve') or (unit.nid == 'Minerve' and unit2.nid == \"Duro\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Minerve;Left,Bottom;Duro;Right,Bottom",
+            "s;Duro;Keep your stuff away from me, will you? I'm too old to play with magic, HAHAHA!",
+            "s;Minerve;Aww, you don't seem old... But let me confirm, strip your armor please~",
+            "multi_remove_portrait;Minerve;Duro"
+        ],
+        "nid": "P9 Minerve - Duro"
+    },
+    {
+        "name": "Minerve - Antarion",
+        "trigger": "combat_start",
+        "level_nid": "P9",
+        "condition": "(unit.nid == \"Antarion\" and unit2.nid == 'Minerve') or (unit.nid == 'Minerve' and unit2.nid == \"Antarion\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Minerve;Left,Bottom;Antarion;Right,Bottom",
+            "s;Antarion;With beauty such as yourself, it is but a shame we're on opposite sides.|I am, however, a merciful man. With my great skill I shall swoon you over to my side!",
+            "s;Minerve;That's sweet~ but I'm not reeally interested, sorry!",
+            "expression;Antarion;NoSmile",
+            "s;Antarion;H-how come?! I thought your kind would be throwing themselves at me!",
+            "s;Minerve;Hehehe, you lack a certain seasoning I enjoy~",
+            "multi_remove_portrait;Minerve;Antarion"
+        ],
+        "nid": "P9 Minerve - Antarion"
+    },
+    {
+        "name": "test",
+        "trigger": "level_start",
+        "level_nid": "10",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_weather;smoke;10,7",
+            "show_layer;skybox",
+            "show_layer;mtn",
+            "show_layer;ground1",
+            "show_layer;ground2",
+            "show_layer;cliff",
+            "show_layer;ruins",
+            "show_layer;details2",
+            "show_layer;mtn2",
+            ""
+        ],
+        "nid": "10 test"
     }
 ]

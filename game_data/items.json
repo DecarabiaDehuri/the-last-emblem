@@ -2095,6 +2095,10 @@
             [
                 "self_status_on_hit",
                 "Nothing_Personal_buff"
+            ],
+            [
+                "status_on_hit",
+                "Poisoned"
             ]
         ]
     },
@@ -16022,7 +16026,7 @@
     {
         "nid": "Master_Seal",
         "name": "Master Seal",
-        "desc": "Promotes all normal classes",
+        "desc": "Promotes a unit into a next tier class. Some classes can't be promoted.\nUnit must be at level 10 or more.",
         "icon_nid": "Boosters",
         "icon_index": [
             0,
@@ -16081,6 +16085,10 @@
             [
                 "promote",
                 null
+            ],
+            [
+                "eval_target_restrict_2",
+                "unit.level >= 15"
             ]
         ]
     },

@@ -958,11 +958,11 @@
                 "nid": "105",
                 "variant": null,
                 "level": 2,
-                "klass": "Mogall",
+                "klass": "Suc_Spider",
                 "faction": "Monster",
                 "starting_items": [
                     [
-                        "Evil_Eye",
+                        "Sharp_Claw",
                         false
                     ]
                 ],
@@ -1022,7 +1022,7 @@
                 "nid": "106",
                 "variant": null,
                 "level": 10,
-                "klass": "Suc_Spider",
+                "klass": "Spider",
                 "faction": "Monster",
                 "starting_items": [
                     [
@@ -1043,7 +1043,7 @@
                 "nid": "107",
                 "variant": null,
                 "level": 10,
-                "klass": "Spider",
+                "klass": "Suc_Spider",
                 "faction": "Monster",
                 "starting_items": [
                     [
@@ -1236,8 +1236,8 @@
                         6
                     ],
                     "105": [
-                        4,
-                        1
+                        8,
+                        5
                     ],
                     "106": [
                         8,
@@ -6604,8 +6604,8 @@
                 "nid": "Chest",
                 "region_type": "event",
                 "position": [
-                    11,
-                    16
+                    20,
+                    2
                 ],
                 "size": [
                     1,
@@ -6723,14 +6723,14 @@
                 "nid": "New Region_7",
                 "region_type": "normal",
                 "position": [
-                    20,
-                    2
+                    11,
+                    16
                 ],
                 "size": [
                     1,
                     1
                 ],
-                "sub_nid": null,
+                "sub_nid": "",
                 "condition": "True",
                 "time_left": null,
                 "only_once": false,
@@ -12129,7 +12129,24 @@
                     "elite_3",
                     "elite_4"
                 ],
-                "positions": {}
+                "positions": {
+                    "elite_1": [
+                        8,
+                        32
+                    ],
+                    "elite_2": [
+                        12,
+                        31
+                    ],
+                    "elite_3": [
+                        7,
+                        35
+                    ],
+                    "elite_4": [
+                        13,
+                        35
+                    ]
+                }
             }
         ],
         "ai_groups": []
@@ -13205,6 +13222,28 @@
                 "generic": false
             }
         ],
+        "regions": [],
+        "unit_groups": [],
+        "ai_groups": []
+    },
+    {
+        "nid": "7",
+        "name": "Chapter 7",
+        "tilemap": "1",
+        "bg_tilemap": "1",
+        "party": "ChosenParty",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [],
         "regions": [],
         "unit_groups": [],
         "ai_groups": []
@@ -17823,6 +17862,42 @@
                 ],
                 "starting_traveler": null,
                 "generic": true
+            }
+        ],
+        "regions": [],
+        "unit_groups": [],
+        "ai_groups": []
+    },
+    {
+        "nid": "10",
+        "name": "Chapter 10",
+        "tilemap": "titleingame",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "Simon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [],
