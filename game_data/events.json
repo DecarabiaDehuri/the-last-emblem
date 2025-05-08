@@ -7285,6 +7285,7 @@
         "_source": [
             "change_background;BlackBackground",
             "level_var;shop;0",
+            "level_var;minerveattacked;0",
             "chapter_title",
             "transition;close",
             "wait;1000",
@@ -7400,6 +7401,16 @@
             "s;Simonyoung;... therein lies the purpose of the spell.",
             "s;Chosen;True form or not, I'm gonna get this slut!!",
             "multi_remove_portrait;Chosen;Simonyoung",
+            "wait;200",
+            "move_unit;Chosen;3,8;normal",
+            "move_unit;Minerve_true;21,13;warp;closest;no_follow",
+            "wait;400",
+            "add_portrait;Chosen;Left;mirror",
+            "s;Chosen;Damn! And she's gonna keep teleporting?! Not fair!",
+            "add_portrait;Minerve_true;FarRight;right",
+            "s;Minerve_true;Miss Riala kindly asked me hold you off, so I'm gonna take my time~",
+            "wait;200",
+            "multi_remove_portrait;Chosen;Minerve_true",
             "transition;close;1000",
             "wait;1000",
             "remove_unit;Simonyoung;immediate;fade",
@@ -7823,6 +7834,7 @@
             "change_background",
             "change_tilemap;ik throne;reload",
             "remove_all_units",
+            "",
             "load_unit;Incubus_King;enemy",
             "add_unit;Incubus_King;10,7;immediate",
             "load_unit;Iris;enemy;None",
@@ -8432,7 +8444,7 @@
             "music_clear",
             "enable_fog_of_war;f",
             "remove_weather;purple",
-            "wait;500",
+            "wait;1000",
             "center_cursor;Minerve_true",
             "add_portrait;Minerve_true;FarRight;;NoSmile,CloseEyes",
             "s;Minerve_true;I{tgm}{c:wait;400}.{c:wait;400}.{c:wait;400}.",
@@ -8443,8 +8455,8 @@
             "multi_remove_portrait;Rialayoung;Minerve",
             "remove_unit;Rialayoung;warp;fade",
             "remove_unit;Minerve_true;warp;fade",
-            "wait;1000",
-            "music_fade_back"
+            "wait;2000",
+            "win_game"
         ],
         "nid": "P12 Minerve \"dead\""
     },
@@ -8581,8 +8593,8 @@
         "nid": "Global Gain loot"
     },
     {
-        "name": "Rout Victory",
-        "trigger": "combat_end",
+        "name": "Rout Victory beta",
+        "trigger": null,
         "level_nid": "P12",
         "condition": "len(game.get_enemy_units()) == 0",
         "commands": [],
@@ -8595,7 +8607,7 @@
             "wait;1000",
             "win_game"
         ],
-        "nid": "P12 Rout Victory"
+        "nid": "P12 Rout Victory beta"
     },
     {
         "name": "Outro",
@@ -10639,7 +10651,8 @@
             "give_skill;Simonyoung;Shelter;;persistent;no_banner",
             "give_skill;Safado;Stalling_Stance;;no_banner;persistent",
             "give_skill;Rosa;Guaranteed_Crit;;no_banner;persistent",
-            "promote;Rosa;Mage_Knight;silent",
+            "promote;Rosa;Sage;silent",
+            "give_item;Rosa;Lightning;;no_banner",
             "add_talk;Duro;Antarion",
             "give_skill;Duro;Grand_Entrance;;no_banner",
             "give_skill;Duro;Bear_hug;;no_banner"
@@ -10715,7 +10728,7 @@
             "move_unit;Milena;12,36;no_follow",
             "add_tag;Milena;Required",
             "wait;3000",
-            "prep;t"
+            "prep;t;Wind"
         ],
         "nid": "P15 Intro"
     },
@@ -11247,7 +11260,7 @@
         "_source": [
             "multi_add_portrait;Cassian;Right;Incubus_King;Left",
             "s;Cassian;The big bad. You'll regret messing with us!",
-            "s;Incubus_King;What the fuck are you on about?|I was here mindming my own business!",
+            "s;Incubus_King;What the fuck are you on about?|I was here minding my own business!",
             "s;Cassian;Didn't you invade and destroy a couple of countries?",
             "s;Incubus_King;Ah yeah, I did do that.",
             "s;Cassian;Yeah.",
@@ -11317,9 +11330,11 @@
             "        remove_portrait;Simonyoung",
             "        reset;Simonyoung",
             "    else",
-            "        music_clear",
+            "        music_clear;1000",
             "        add_portrait;Simonyoung;Left;;NoSmile,CloseEyes",
-            "        wait;2000",
+            "        s;Simonyoung;This attempt was promising.",
+            "        expression;Simonyoung;OpenEyes",
+            "        s;Simonyoung;Time to prepare for the <red>next Chosen</>.",
             "        remove_portrait;Simonyoung",
             "        remove_unit;{unit};fade;fade",
             "        wait;1000",
@@ -11329,17 +11344,17 @@
             "    end",
             "else",
             "wait;1000",
-            "    if;{unit}.lead_unit",
-            "        level_var;unittraveler;{unit}.traveler",
+            "    if;u('{unit}').lead_unit",
+            "        level_var;unittraveler;u('{unit}').traveler",
             "        separate;{unit}",
             "        add_unit;{v:unittraveler};{unit};fade;closest;fade",
             "    end",
             "wait;1000",
-            "    if;{unit} == 'Mira'",
-            "        add_portrait;Mira;Left",
-            "        s;Mira;This is not... what I imagined...",
+            "    if;'{unit}' == 'Mira'",
+            "        add_portrait;Mira;Left;;NoSmile,CloseEyes",
+            "        s;Mira;Is there... any hope... left...",
             "        remove_portrait;Mira",
-            "    elif;{unit} == 'Duro'",
+            "    elif;'{unit}' == 'Duro'",
             "        add_portrait;Duro;Left",
             "        s;Duro;Guess I'll leave this to my children, HAHAHAHA!",
             "        remove_portrait;Duro",
@@ -11509,6 +11524,19 @@
             "inc_level_var;ik2"
         ],
         "nid": "P15 ik2 counter increase"
+    },
+    {
+        "name": "ik2 counter increase_1",
+        "trigger": "enemy_turn_change",
+        "level_nid": "P15",
+        "condition": "game.level_vars['ik'] == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "inc_level_var;ik2"
+        ],
+        "nid": "P15 ik2 counter increase_1"
     },
     {
         "name": "New Event",
@@ -12248,7 +12276,7 @@
     {
         "name": "test",
         "trigger": "level_start",
-        "level_nid": "10",
+        "level_nid": "Title",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -12265,6 +12293,138 @@
             "show_layer;mtn2",
             ""
         ],
-        "nid": "10 test"
+        "nid": "Title test"
+    },
+    {
+        "name": "Minerve_true random teleport",
+        "trigger": "phase_change",
+        "level_nid": "P12",
+        "condition": "game.level_vars['minerveattacked'] == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;200",
+            "lvar;minerveteleport;game.get_random_choice([1,2,3,4,5,6,7,8])",
+            "wait;300",
+            "center_cursor;Minerve_true",
+            "wait;300",
+            "if;{v:minerveteleport} == 1",
+            "    move_unit;Minerve_true;1,1;warp;closest;no_follow",
+            "elif;{v:minerveteleport} == 2",
+            "    move_unit;Minerve_true;2,12;warp;closest;no_follow",
+            "elif;{v:minerveteleport} == 3",
+            "    move_unit;Minerve_true;10,3;warp;closest;no_follow",
+            "elif;{v:minerveteleport} == 4",
+            "    move_unit;Minerve_true;9,11;warp;closest;no_follow",
+            "elif;{v:minerveteleport} == 5",
+            "    move_unit;Minerve_true;14,2;warp;closest;no_follow",
+            "elif;{v:minerveteleport} == 6",
+            "    move_unit;Minerve_true;13,10;warp;closest;no_follow",
+            "elif;{v:minerveteleport} == 7",
+            "    move_unit;Minerve_true;18,5;warp;closest;no_follow",
+            "elif;{v:minerveteleport} == 8",
+            "    move_unit;Minerve_true;20,9;warp;closest;no_follow",
+            "end",
+            "wait;500"
+        ],
+        "nid": "P12 Minerve_true random teleport"
+    },
+    {
+        "name": "Minerve_true attacked for the first time",
+        "trigger": "combat_end",
+        "level_nid": "P12",
+        "condition": "unit2.nid == 'Minerve_true' and u('Minerve_true').get_hp() >= 1 and (u('Minerve_true').get_hp() < u('Minerve_true').get_max_hp())",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "level_var;minerveattacked;1",
+            "add_portrait;Minerve_true;Left",
+            "s;Minerve_true;Ohh, you caught me~|I better change my plan before you hurt me more...",
+            "remove_portrait;Minerve_true",
+            "wait;400",
+            "move_unit;Minerve_true;22,13;warp;push;no_follow",
+            "change_stats;Minerve_true;MOV,-99;immediate",
+            "wait;500",
+            "change_music;player_phase;Halfway change loop",
+            "change_music;enemy_phase;Halfway change loop"
+        ],
+        "nid": "P12 Minerve_true attacked for the first time"
+    },
+    {
+        "name": "Trin setup",
+        "trigger": "level_start",
+        "level_nid": "DEBUG",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_talk;Trin;t1",
+            "add_talk;Trin;t2"
+        ],
+        "nid": "DEBUG Trin setup"
+    },
+    {
+        "name": "Trin t1",
+        "trigger": "on_talk",
+        "level_nid": "DEBUG",
+        "condition": "unit.nid == 'Trin' and unit2.nid == 't1'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Trin;Left",
+            "s;Trin;Do I copy this sucker?",
+            "choice;trincopy;Copy this unit?;Yes,No;backable;arrows",
+            "if;'{v:_last_choice}' == 'Yes'",
+            "    music;Defense;1000",
+            "    center_cursor;t1;500",
+            "    wait;200",
+            "    s;Trin;You're mine now!",
+            "    wait;200",
+            "    map_anim;AOE_Rally;t1",
+            "    sound;ShadowshotHit",
+            "    change_team;t1;other",
+            "    wait;1000",
+            "    remove_talk;Trin;t1",
+            "else",
+            "end",
+            "music_fade_back;1000"
+        ],
+        "nid": "DEBUG Trin t1"
+    },
+    {
+        "name": "New Event",
+        "trigger": null,
+        "level_nid": "DEBUG",
+        "condition": "",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            ""
+        ],
+        "nid": "DEBUG New Event"
+    },
+    {
+        "name": "Reminder for people to get near IK",
+        "trigger": "turn_change",
+        "level_nid": "P15",
+        "condition": "game.turncount == 5 and game.level_vars['ik'] == 0",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "center_cursor;Chosen",
+            "wait;500",
+            "add_portrait;Chosen;Left",
+            "s;Chosen;Come on!|<red>Let's get as close as possible</> to that assface!|My epic showdown needs witnesses!",
+            "remove_portrait;Chosen",
+            "wait;1000"
+        ],
+        "nid": "P15 Reminder for people to get near IK"
     }
 ]

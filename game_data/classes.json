@@ -583,6 +583,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -1188,6 +1198,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -1331,6 +1351,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Myrmidon",
@@ -1784,6 +1814,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Mercenary",
@@ -1798,7 +1838,7 @@
     {
         "nid": "Hero",
         "name": "Hero",
-        "desc": "",
+        "desc": "Seasoned veterans with remarkable\nskill.",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Mercenary",
@@ -1924,6 +1964,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Vanguard",
@@ -2072,6 +2122,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Thief",
@@ -2086,7 +2146,7 @@
     {
         "nid": "Assassin",
         "name": "Assassin",
-        "desc": "",
+        "desc": "Masters of the killing arts.",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Thief",
@@ -2212,6 +2272,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Assassin",
@@ -2226,7 +2296,7 @@
     {
         "nid": "Rogue",
         "name": "Rogue",
-        "desc": "",
+        "desc": "Knaves who need no tools or keys to\nopen locks.",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Thief",
@@ -2301,7 +2371,12 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Locktouch"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 2,
@@ -2504,6 +2579,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -3441,6 +3526,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Falcoknight",
@@ -3584,6 +3679,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Knight",
@@ -3598,7 +3703,7 @@
     {
         "nid": "General",
         "name": "General",
-        "desc": "",
+        "desc": "Knights of great skill.",
         "tier": 2,
         "movement_group": "Armors",
         "promotes_from": "Knight",
@@ -4628,6 +4733,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Brigand",
@@ -4760,10 +4875,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Archer",
@@ -4902,6 +5032,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sniper",
@@ -5039,10 +5179,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Ranger",
@@ -6720,7 +6875,7 @@
     {
         "nid": "Wyvern Rider",
         "name": "Wyvern Rider",
-        "desc": "",
+        "desc": "High-flying knights vulnerable only to\nbows and magic.",
         "tier": 1,
         "movement_group": "Fliers",
         "promotes_from": null,
@@ -6864,6 +7019,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Wyvern_Rider",
@@ -6878,7 +7043,7 @@
     {
         "nid": "Wyvern Lord",
         "name": "Wyvern Lord",
-        "desc": "",
+        "desc": "Wyvern-mounted knights of superior\nskill.",
         "tier": 2,
         "movement_group": "Fliers",
         "promotes_from": "Wyvern Rider",
@@ -7015,6 +7180,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Wyvern_Lord",
@@ -7029,7 +7204,7 @@
     {
         "nid": "Wyvern Knight",
         "name": "Wyvern Knight",
-        "desc": "",
+        "desc": "Wyvern riders who can pierce enemy\ndefenses.",
         "tier": 2,
         "movement_group": "Fliers",
         "promotes_from": "Wyvern Rider",
@@ -7166,6 +7341,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Wyvern_Rider",
@@ -7456,6 +7641,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Revenant",
@@ -7587,10 +7782,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Entombed",
@@ -7873,6 +8083,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sword_Wight",
@@ -8015,6 +8235,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sword_Bonewalker",
@@ -8146,10 +8376,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sword_Wight",
@@ -8298,6 +8543,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Mogall",
@@ -8439,6 +8694,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Arch_Mogall",
@@ -9363,10 +9628,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -9381,7 +9661,7 @@
     {
         "nid": "IncubusKing",
         "name": "Incubus King",
-        "desc": "",
+        "desc": "A holder of the Fuck Emblem.",
         "tier": 1,
         "movement_group": "Light Foot",
         "promotes_from": null,
@@ -9632,7 +9912,22 @@
                 0,
                 null
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
                 false,
                 0,
                 null
@@ -15323,6 +15618,299 @@
             0
         ],
         "map_sprite_nid": "Marshall (U) Lance {Nuramon}-stand_1",
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Slave_Mage",
+        "name": "Slave Mage",
+        "desc": "Curious practioners of anima magic.",
+        "tier": 1,
+        "movement_group": "Mages",
+        "promotes_from": null,
+        "turns_into": [
+            "Sage",
+            "Mage_Knight"
+        ],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 16,
+            "STR": 0,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 0,
+            "DEF": 3,
+            "RES": 4,
+            "CON": 5,
+            "MOV": 5,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 55,
+            "STR": 0,
+            "MAG": 55,
+            "SKL": 40,
+            "SPD": 35,
+            "LCK": 20,
+            "DEF": 5,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 1,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 1,
+            "MOV": -99,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 20,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                true,
+                31,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Mage (1)",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Cleric (F) Serra {IS}-stand",
+        "combat_anim_nid": "Mage",
+        "fields": []
+    },
+    {
+        "nid": "New Class",
+        "name": "New Class",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": null,
         "combat_anim_nid": null,
         "fields": []
     }
