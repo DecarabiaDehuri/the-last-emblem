@@ -801,6 +801,105 @@
         ]
     },
     {
+        "nid": "Speed_Penalty",
+        "name": "Speed Penalty",
+        "desc": "-5 SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            4
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ]
+        ]
+    },
+    {
+        "nid": "Strength_Penalty",
+        "name": "Strength Penalty",
+        "desc": "-5 STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            1
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ]
+        ]
+    },
+    {
+        "nid": "Defense_Penalty",
+        "name": "Defense Penalty",
+        "desc": "-5 DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            5
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ]
+        ]
+    },
+    {
         "nid": "Silence_Immune",
         "name": "Silence Immunity",
         "desc": "Unit cannot receive <red>[SILENCE]</>.",
@@ -1504,7 +1603,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -3041,7 +3141,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -6709,7 +6810,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -8742,7 +8844,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -9071,6 +9174,98 @@
             [
                 "negative",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Sneaky_Stabs",
+        "name": "Sneaky Stabs",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Sneaky_Stabs"
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Stab",
+        "name": "Blinding Stab",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            23
+        ],
+        "components": []
+    },
+    {
+        "nid": "Poisoned_Blade",
+        "name": "Poisoned Blade",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            48
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Poisoned_Blade"
+            ]
+        ]
+    },
+    {
+        "nid": "Crippled",
+        "name": "Crippled",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            16
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -5
+                    ],
+                    [
+                        "MAG",
+                        -5
+                    ],
+                    [
+                        "DEF",
+                        -5
+                    ],
+                    [
+                        "RES",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                3
             ]
         ]
     }

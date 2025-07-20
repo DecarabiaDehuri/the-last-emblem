@@ -1367,6 +1367,7 @@
             "give_skill;Safado;Chameleon_stance;;persistent",
             "give_skill;Simonyoung;Guaranteed_Crit;;no_banner",
             "give_item;Simonyoung;Iron_Sword;;no_banner",
+            "give_skill;Aka;Poisoned_Blade;;no_banner",
             "#trigger_script;Trigger",
             "base;Clearing",
             "#music;Attack;2000",
@@ -10528,6 +10529,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "show_layer;pillar1A",
+            "show_layer;pillar2A",
+            "show_layer;pillar3A",
+            "show_layer;pillar4A",
+            "show_layer;pillarsfixed",
             "change_background;BlackBackground",
             "add_weather;fire",
             "chapter_title",
@@ -10553,7 +10559,15 @@
             "expression;Iris;OpenEyes",
             "s;Iris;Everyone, be on the lookout for the <red>Corruption seeds</>, just as we planned!|They may affect you negatively, but protect their growth!",
             "expression;Iris;CloseEyes",
-            "transition;close;2000"
+            "transition;close;2000",
+            "move_cursor;40,28",
+            "music;Prologue battles;1000",
+            "transition;open;1000",
+            "add_unit;Chosen;41,29;fade;;east",
+            "wait;200",
+            "move_unit;Chosen;39,28;normal",
+            "wait;400",
+            ""
         ],
         "nid": "P14 Intro"
     },
@@ -12426,5 +12440,85 @@
             "wait;1000"
         ],
         "nid": "P15 Reminder for people to get near IK"
+    },
+    {
+        "name": "pillar1",
+        "trigger": "unit_death",
+        "level_nid": "P14",
+        "condition": "unit.nid == 'pillar1'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;100",
+            "center_cursor;pillar1;100",
+            "map_anim;Snag;pillar1",
+            "sound;VillageDestroyed",
+            "hide_layer;pillar1A",
+            "screen_shake;100",
+            "show_layer;pillar1B",
+            "wait;100"
+        ],
+        "nid": "P14 pillar1"
+    },
+    {
+        "name": "pillar2",
+        "trigger": "unit_death",
+        "level_nid": "P14",
+        "condition": "unit.nid == 'pillar2'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;100",
+            "center_cursor;pillar2;100",
+            "map_anim;Snag;pillar2",
+            "sound;VillageDestroyed",
+            "hide_layer;pillar2A",
+            "screen_shake;100",
+            "show_layer;pillar2B",
+            "wait;100"
+        ],
+        "nid": "P14 pillar2"
+    },
+    {
+        "name": "pillar3",
+        "trigger": "unit_death",
+        "level_nid": "P14",
+        "condition": "unit.nid == 'pillar3'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;100",
+            "center_cursor;pillar3;100",
+            "map_anim;Snag;pillar3",
+            "sound;VillageDestroyed",
+            "hide_layer;pillar3A",
+            "screen_shake;100",
+            "show_layer;pillar3B",
+            "wait;100"
+        ],
+        "nid": "P14 pillar3"
+    },
+    {
+        "name": "pillar4",
+        "trigger": "unit_death",
+        "level_nid": "P14",
+        "condition": "unit.nid == 'pillar4'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;100",
+            "center_cursor;pillar4;100",
+            "map_anim;Snag;pillar4",
+            "sound;VillageDestroyed",
+            "hide_layer;pillar4A",
+            "screen_shake;100",
+            "show_layer;pillar4B",
+            "wait;100"
+        ],
+        "nid": "P14 pillar4"
     }
 ]

@@ -2611,6 +2611,265 @@
         ]
     },
     {
+        "nid": "Sneaky_Stabs",
+        "name": "Sneaky Stabs",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            23
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "multi_item",
+                [
+                    "Blinding_Stab",
+                    "Crippling_Stab"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Stab",
+        "name": "Blinding Stab",
+        "desc": "Blinds an opponent.\n<blue>5 mana.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            23
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "status_on_hit",
+                "Blinded"
+            ],
+            [
+                "mana_cost",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Crippling_Stab",
+        "name": "Crippling Stab",
+        "desc": "Slows an opponent.\n<blue>5 mana.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            23
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "status_on_hit",
+                "Blinded"
+            ],
+            [
+                "mana_cost",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Disabling_Assault",
+        "name": "Disabling_Assault",
+        "desc": "Slows an opponent.\n<blue>5 mana.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            23
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "status_on_hit",
+                "Blinded"
+            ],
+            [
+                "mana_cost",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Poisoned_Blade",
+        "name": "Poisoned Blade",
+        "desc": "Aka poisons her blade, inflicting <red>[POISON]</> on her attack.\nCosts <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            48
+        ],
+        "components": [
+            [
+                "status_on_hit",
+                "Poisoned"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "damage",
+                3
+            ]
+        ]
+    },
+    {
         "nid": "Flaming_Thrust_ability",
         "name": "Flaming Thrust",
         "desc": "",
