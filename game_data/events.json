@@ -12520,5 +12520,53 @@
             "wait;100"
         ],
         "nid": "P14 pillar4"
+    },
+    {
+        "name": "CommandSwap",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;swap_gray;0",
+            "    if;game.get_unit(\"{eval: target.nid}\").finished == True",
+            "        level_var;swap_gray;1",
+            "    end",
+            "    # Show menu of undeployed player units to choose a replacement",
+            "    choice;replacement;Choose replacement:;{eval:[u.nid for u in game.get_units_in_party() if not u.position]};64;v;center;menu_bg_base;;type_unit;3,3;center;expression;",
+            "",
+            "    # The choice variable expands WITHOUT quotes, so compare it as a quoted string.",
+            "    if;'{v:replacement}' != ''",
+            "        # Save numeric coords (safe to store)",
+            "        level_var;swap_x;{eval: target.position[0]}",
+            "        level_var;swap_y;{eval: target.position[1]}",
+            "",
+            "        # Remove the currently-deployed unit (target)",
+            "        remove_unit;{eval: target.nid};fade",
+            "",
+            "        # Add the chosen undeployed ally at the same tile",
+            "        add_unit;{v:replacement};({v:swap_x},{v:swap_y});fade",
+            "        if;{v:swap_gray} == 1",
+            "            has_finished;{v:replacement}",
+            "        end",
+            "    end"
+        ],
+        "nid": "Global CommandSwap"
+    },
+    {
+        "name": "New Event",
+        "trigger": "level_start",
+        "level_nid": "9",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "prep;t",
+            "give_skill;Simon;Command;;no_banner"
+        ],
+        "nid": "9 New Event"
     }
 ]

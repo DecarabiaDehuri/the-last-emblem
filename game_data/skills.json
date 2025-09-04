@@ -7066,6 +7066,30 @@
         ]
     },
     {
+        "nid": "Command",
+        "name": "Command",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "CommandSelect"
+            ],
+            [
+                "condition",
+                "any(u.position is None for u in game.get_units_in_party())"
+            ]
+        ]
+    },
+    {
         "nid": "Lust_proc",
         "name": "Lust proc",
         "desc": "",

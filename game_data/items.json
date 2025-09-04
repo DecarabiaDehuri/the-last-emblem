@@ -3270,6 +3270,71 @@
         ]
     },
     {
+        "nid": "Command",
+        "name": "Command",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "sequence_item",
+                [
+                    "CommandSelect"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "CommandSelect",
+        "name": "Command",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            3
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global CommandSwap"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Supplier_to_Wagon",
         "name": "Ride Wagon",
         "desc": "",
