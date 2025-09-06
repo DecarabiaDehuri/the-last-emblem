@@ -24,26 +24,6 @@
         ]
     },
     {
-        "nid": "Nothing",
-        "name": "Nothing",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "do_nothing",
-                1
-            ],
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "traveler",
         "name": "traveler",
         "desc": "",
@@ -77,42 +57,6 @@
             [
                 "class_skill",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "target",
-        "name": "target",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "unselectable",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "AI_ignore",
-        "name": "AI ignore",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "modify_ai_priority",
-                0.0
             ]
         ]
     },
@@ -896,6 +840,47 @@
             [
                 "unit_anim",
                 "MapFrostbite"
+            ]
+        ]
+    },
+    {
+        "nid": "Crippled",
+        "name": "Crippled",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            16
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -5
+                    ],
+                    [
+                        "MAG",
+                        -5
+                    ],
+                    [
+                        "DEF",
+                        -5
+                    ],
+                    [
+                        "RES",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                3
             ]
         ]
     },
@@ -6817,50 +6802,6 @@
         ]
     },
     {
-        "nid": "Testing_skill",
-        "name": "Testing skill",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "ability",
-                "Testing"
-            ]
-        ]
-    },
-    {
-        "nid": "Heroic_Avoid",
-        "name": "Heroic Avoid",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "resist",
-                999
-            ],
-            [
-                "avoid",
-                999
-            ],
-            [
-                "crit_avoid",
-                999
-            ]
-        ]
-    },
-    {
         "nid": "Dance",
         "name": "Dance",
         "desc": "The unit can <green>refresh</> an ally, letting them act again this turn. Costs <blue>4 mana</>.",
@@ -6885,207 +6826,6 @@
             [
                 "grey_if_inactive",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Supply_mode",
-        "name": "Supplier mode",
-        "desc": "",
-        "icon_nid": "Boosters",
-        "icon_index": [
-            0,
-            20
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Supplier_to_Wagon"
-            ],
-            [
-                "hidden",
-                null
-            ],
-            [
-                "change_variant",
-                "_Supplier"
-            ]
-        ]
-    },
-    {
-        "nid": "Wagon_mode",
-        "name": "Wagon mode",
-        "desc": "Bonus to movement in detriment to other stats.\nMegail and adjacent units gain access to the <green>Convoy</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            3,
-            31
-        ],
-        "components": [
-            [
-                "ability",
-                "Wagon_to_Supplier"
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "DEF",
-                        -10
-                    ],
-                    [
-                        "RES",
-                        -10
-                    ],
-                    [
-                        "MOV",
-                        6
-                    ]
-                ]
-            ],
-            [
-                "avoid",
-                -100
-            ],
-            [
-                "crit_avoid",
-                -100
-            ],
-            [
-                "movement_type",
-                "Light Cav"
-            ],
-            [
-                "change_variant",
-                "_Wagon"
-            ],
-            [
-                "ignore_rescue_penalty",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "All_Embracing_Care",
-        "name": "All-embracing Care",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "ability",
-                "All_Embracing_Care_ability"
-            ],
-            [
-                "cost_mana",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "All_Embracing_Care_effect",
-        "name": "All-embracing Care",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            32
-        ],
-        "components": [
-            [
-                "witch_warp",
-                null
-            ],
-            [
-                "end_time",
-                2
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    0,
-                    26,
-                    198
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Admiration",
-        "name": "Admiration",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "aura",
-                "Admiration_effect"
-            ],
-            [
-                "aura_range",
-                3
-            ],
-            [
-                "aura_target",
-                "ally"
-            ]
-        ]
-    },
-    {
-        "nid": "Admiration_effect",
-        "name": "Admiration effect",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "resist",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Command",
-        "name": "Command",
-        "desc": "",
-        "icon_nid": "Skills",
-        "icon_index": [
-            6,
-            3
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "CommandSelect"
-            ],
-            [
-                "condition",
-                "any(u.position is None for u in game.get_units_in_party())"
             ]
         ]
     },
@@ -7264,6 +7004,367 @@
             [
                 "time",
                 2
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Avoid",
+        "name": "Heroic Avoid",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "resist",
+                999
+            ],
+            [
+                "avoid",
+                999
+            ],
+            [
+                "crit_avoid",
+                999
+            ]
+        ]
+    },
+    {
+        "nid": "Testing_skill",
+        "name": "Testing skill",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "ability",
+                "Testing"
+            ]
+        ]
+    },
+    {
+        "nid": "Admiration_effect",
+        "name": "Admiration effect",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "resist",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Admiration",
+        "name": "Admiration",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Admiration_effect"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "AI_ignore",
+        "name": "AI ignore",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "modify_ai_priority",
+                0.0
+            ]
+        ]
+    },
+    {
+        "nid": "target",
+        "name": "target",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unselectable",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Nothing",
+        "name": "Nothing",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "do_nothing",
+                1
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Supply_mode",
+        "name": "Supplier mode",
+        "desc": "",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Supplier_to_Wagon"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "change_variant",
+                "_Supplier"
+            ]
+        ]
+    },
+    {
+        "nid": "Wagon_mode",
+        "name": "Wagon mode",
+        "desc": "Bonus to movement in detriment to other stats.\nMegail and adjacent units gain access to the <green>Convoy</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            31
+        ],
+        "components": [
+            [
+                "ability",
+                "Wagon_to_Supplier"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -10
+                    ],
+                    [
+                        "RES",
+                        -10
+                    ],
+                    [
+                        "MOV",
+                        6
+                    ]
+                ]
+            ],
+            [
+                "avoid",
+                -100
+            ],
+            [
+                "crit_avoid",
+                -100
+            ],
+            [
+                "movement_type",
+                "Light Cav"
+            ],
+            [
+                "change_variant",
+                "_Wagon"
+            ],
+            [
+                "ignore_rescue_penalty",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Command",
+        "name": "Command",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "CommandSelect"
+            ],
+            [
+                "condition",
+                "any(u.position is None for u in game.get_units_in_party())"
+            ]
+        ]
+    },
+    {
+        "nid": "All_Embracing_Care",
+        "name": "All-embracing Care",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "ability",
+                "All_Embracing_Care_ability"
+            ],
+            [
+                "cost_mana",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "All_Embracing_Care_effect",
+        "name": "All-embracing Care",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "witch_warp",
+                null
+            ],
+            [
+                "end_time",
+                2
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    0,
+                    26,
+                    198
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Sneaky_Stabs",
+        "name": "Sneaky Stabs",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Sneaky_Stabs"
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Stab",
+        "name": "Blinding Stab",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Blinding_Stab"
+            ]
+        ]
+    },
+    {
+        "nid": "Poisoned_Blade",
+        "name": "Poisoned Blade",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            48
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Poisoned_Blade"
             ]
         ]
     },
@@ -9198,98 +9299,6 @@
             [
                 "negative",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Sneaky_Stabs",
-        "name": "Sneaky Stabs",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            23
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Sneaky_Stabs"
-            ]
-        ]
-    },
-    {
-        "nid": "Blinding_Stab",
-        "name": "Blinding Stab",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            23
-        ],
-        "components": []
-    },
-    {
-        "nid": "Poisoned_Blade",
-        "name": "Poisoned Blade",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            48
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Poisoned_Blade"
-            ]
-        ]
-    },
-    {
-        "nid": "Crippled",
-        "name": "Crippled",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            16
-        ],
-        "components": [
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        -5
-                    ],
-                    [
-                        "MAG",
-                        -5
-                    ],
-                    [
-                        "DEF",
-                        -5
-                    ],
-                    [
-                        "RES",
-                        -5
-                    ]
-                ]
-            ],
-            [
-                "negative",
-                null
-            ],
-            [
-                "time",
-                3
             ]
         ]
     }

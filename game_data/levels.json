@@ -18529,7 +18529,9 @@
         "tilemap": "Grado Keep",
         "bg_tilemap": null,
         "party": "Simon",
-        "music": {},
+        "music": {
+            "player_phase": "The Battle Must Be Won"
+        },
         "objective": {
             "simple": "",
             "win": "",
@@ -18704,11 +18706,6 @@
             }
         ],
         "unit_groups": [],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     }
 ]
