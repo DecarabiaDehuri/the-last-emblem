@@ -2768,7 +2768,7 @@
     {
         "nid": "Disabling_Assault",
         "name": "Disabling_Assault",
-        "desc": "Slows an opponent.\n<blue>5 mana.</>",
+        "desc": "Disables an opponent.\n<blue>5 mana.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -13040,6 +13040,927 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneSpells",
+        "name": "Arcane Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            2
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "ArcaneFire",
+                    "ArcaneLightning",
+                    "ArcaneIce",
+                    "ArcaneHeal",
+                    "ArcanePoison",
+                    "AreaSpells"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneFire",
+        "name": "Fire",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    96,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneLightning",
+        "name": "Lightning",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    251,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneIce",
+        "name": "Ice",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    47,
+                    255
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneHeal",
+        "name": "Heal",
+        "desc": "Restores (User's MAG) HP.",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "exp",
+                10
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    202,
+                    227,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "MAGIC_DAMAGE"
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ]
+        ]
+    },
+    {
+        "nid": "ArcanePoison",
+        "name": "Poison",
+        "desc": "Enemy cannot move or attack.",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "status_on_hit",
+                "Poisoned"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "hit",
+                65
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "prf_unit",
+                [
+                    "Altina"
+                ]
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    62,
+                    255,
+                    52
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "AreaSpells",
+        "name": "Area Spells",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "multi_item",
+                [
+                    "FireStorm",
+                    "LightningStorm",
+                    "IceStorm",
+                    "Quake",
+                    "PoisonStorm"
+                ]
+            ],
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Altina"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "FireStorm",
+        "name": "Fire Storm",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    96,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Fireball"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -2,
+                            -2
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            2,
+                            -2
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            2,
+                            2
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            -2,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "FireHit"
+            ]
+        ]
+    },
+    {
+        "nid": "LightningStorm",
+        "name": "Lightning Storm",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    224,
+                    15
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "Swoosh"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            1,
+                            0
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            0,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Thunder"
+            ]
+        ]
+    },
+    {
+        "nid": "IceStorm",
+        "name": "Ice Storm",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    224,
+                    217
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Blizzard"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            -2,
+                            0
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            0,
+                            0
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Fimbulvetr1"
+            ]
+        ]
+    },
+    {
+        "nid": "PoisonStorm",
+        "name": "Poison Storm",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    129,
+                    71,
+                    144
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "map_target_cast_anim",
+                "MapPoison"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -2,
+                            -1
+                        ],
+                        [
+                            2,
+                            -1
+                        ],
+                        [
+                            2,
+                            1
+                        ],
+                        [
+                            -2,
+                            1
+                        ],
+                        [
+                            -1,
+                            -2
+                        ],
+                        [
+                            1,
+                            -2
+                        ],
+                        [
+                            1,
+                            2
+                        ],
+                        [
+                            -1,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Poison"
+            ],
+            [
+                "eval_available",
+                "any(u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Altina')))"
+            ],
+            [
+                "status_on_hit",
+                "Poisoned"
+            ]
+        ]
+    },
+    {
+        "nid": "Quake",
+        "name": "Quake",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            49
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    76,
+                    47,
+                    18
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Sandblast"
+            ],
+            [
+                "map_hit_sfx",
+                "StoneHit"
+            ],
+            [
+                "enemy_line_aoe",
+                null
             ]
         ]
     },

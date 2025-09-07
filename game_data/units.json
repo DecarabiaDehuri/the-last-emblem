@@ -217,7 +217,7 @@
         "desc": "An earnest and compassionate cavalier from Renais.",
         "variant": null,
         "level": 1,
-        "klass": "Monk",
+        "klass": "Mage",
         "tags": [],
         "bases": {
             "HP": 20,
@@ -246,19 +246,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Sword",
-                false
-            ],
-            [
-                "Iron_Lance",
-                false
-            ],
-            [
-                "Health_Potion",
-                false
-            ],
-            [
-                "Health_Potion",
+                "ArcaneSpells",
                 false
             ]
         ],
@@ -267,12 +255,12 @@
         "wexp_gain": {
             "Sword": [
                 true,
-                1,
+                10,
                 251
             ],
             "Lance": [
                 true,
-                31,
+                0,
                 251
             ],
             "Axe": [
@@ -297,7 +285,7 @@
             ],
             "Anima": [
                 false,
-                0,
+                100,
                 251
             ],
             "Dark": [
@@ -324,7 +312,7 @@
         "desc": "An armoured knight from Frelia. He's quiet yet dependable.",
         "variant": null,
         "level": 4,
-        "klass": "Knight",
+        "klass": "Summoner",
         "tags": [],
         "bases": {
             "HP": 25,
@@ -351,12 +339,7 @@
             "RES": 20
         },
         "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Lance",
-                false
-            ]
-        ],
+        "starting_items": [],
         "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
@@ -1754,7 +1737,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Fire",
+                "ArcaneSpells",
                 false
             ]
         ],

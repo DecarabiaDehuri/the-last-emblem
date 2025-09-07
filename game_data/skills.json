@@ -6883,6 +6883,26 @@
         ]
     },
     {
+        "nid": "Fire_Storm",
+        "name": "Fire Storm",
+        "desc": "",
+        "icon_nid": "FireStorm",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Fire_Storm_effect"
+            ]
+        ]
+    },
+    {
         "nid": "Mast",
         "name": "Mast",
         "desc": "",
@@ -7369,6 +7389,17 @@
         ]
     },
     {
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
         "nid": "Martial_Masturbation",
         "name": "Martial Masturbation",
         "desc": "",
@@ -7815,26 +7846,6 @@
                     0,
                     255
                 ]
-            ]
-        ]
-    },
-    {
-        "nid": "Fire_Storm",
-        "name": "Fire Storm",
-        "desc": "",
-        "icon_nid": "FireStorm",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Fire_Storm_effect"
             ]
         ]
     },
