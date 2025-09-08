@@ -1369,6 +1369,11 @@
             "give_item;Simonyoung;Iron_Sword;;no_banner",
             "give_skill;Aka;Poisoned_Blade;;no_banner",
             "set_current_hp;Simon;2",
+            "promote;Altina;Sage;silent",
+            "promote;Hilstara;General;silent",
+            "set_current_hp;Hilstara;1",
+            "give_item;Monica;Restore;;no_banner",
+            "give_wexp;Monica;Staff;100;no_banner",
             "#trigger_script;Trigger",
             "base;Clearing",
             "#music;Attack;2000",
@@ -12595,5 +12600,24 @@
             "give_skill;Simon;Command;;no_banner"
         ],
         "nid": "9 New Event"
+    },
+    {
+        "name": "ReplaceProtect",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "# Loop through all allied units on the field",
+            "for;ALLY;[u.nid for u in game.get_player_units() if u.nid != unit.nid]",
+            "    # Check if this ally has the Protected skill",
+            "    if;has_skill(game.get_unit('{ALLY}'), 'Protected')",
+            "        remove_skill;{ALLY};Protected",
+            "    end",
+            "endf"
+        ],
+        "nid": "Global ReplaceProtect"
     }
 ]
