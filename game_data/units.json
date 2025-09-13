@@ -461,7 +461,7 @@
             ],
             "Lance": [
                 true,
-                31,
+                0,
                 251
             ],
             "Axe": [
@@ -481,7 +481,7 @@
             ],
             "Light": [
                 false,
-                0,
+                181,
                 251
             ],
             "Anima": [
@@ -1232,12 +1232,12 @@
         "nid": "Orcent",
         "name": "Orcent",
         "desc": "A beautiful cleric from the Grado Empire. She's graceful and serious.",
-        "variant": "Female",
+        "variant": "",
         "level": 1,
         "klass": "Orc_Orcent",
         "tags": [],
         "bases": {
-            "HP": 18,
+            "HP": 50,
             "STR": 0,
             "MAG": 2,
             "SKL": 4,
@@ -1263,15 +1263,32 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Mend",
+                "Iron_Bow",
                 false
             ],
             [
-                "Health_Potion",
+                "Iron_Axe",
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Careful_Positioning"
+            ],
+            [
+                1,
+                "Brutal_Nature"
+            ],
+            [
+                1,
+                "Introspective_Nature"
+            ],
+            [
+                1,
+                "Reflection"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -1286,12 +1303,12 @@
             ],
             "Axe": [
                 false,
-                0,
+                71,
                 251
             ],
             "Bow": [
                 false,
-                0,
+                71,
                 251
             ],
             "Staff": [
@@ -2403,7 +2420,7 @@
         "desc": "An aloof sword fighter from Jehanna. She\u2019s known as the Crimson Flash.",
         "variant": "",
         "level": 5,
-        "klass": "Shaman",
+        "klass": "Necromancer",
         "tags": [],
         "bases": {
             "HP": 23,
@@ -2432,20 +2449,29 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Shamshir",
+                "NecroSpells",
                 false
             ],
             [
-                "Elixir",
+                "ArcaneSpells",
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Collect_Souls"
+            ],
+            [
+                1,
+                "Wynn_collect_soul"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 true,
-                31,
+                0,
                 251
             ],
             "Lance": [
@@ -2475,7 +2501,7 @@
             ],
             "Anima": [
                 false,
-                0,
+                71,
                 251
             ],
             "Dark": [
@@ -3110,7 +3136,7 @@
         },
         "starting_items": [
             [
-                "Heal",
+                "DivineSpells",
                 false
             ]
         ],
@@ -3124,7 +3150,12 @@
         "wexp_gain": {
             "Staff": [
                 false,
-                31,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                71,
                 null
             ]
         },

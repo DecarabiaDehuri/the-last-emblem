@@ -5461,12 +5461,12 @@
                 251
             ],
             "Staff": [
-                true,
+                false,
                 31,
                 251
             ],
             "Light": [
-                false,
+                true,
                 0,
                 251
             ],
@@ -5612,12 +5612,12 @@
                 251
             ],
             "Staff": [
-                true,
+                false,
                 31,
                 251
             ],
             "Light": [
-                false,
+                true,
                 0,
                 251
             ],
@@ -5754,12 +5754,12 @@
                 null
             ],
             "Staff": [
-                true,
+                false,
                 0,
                 null
             ],
             "Light": [
-                false,
+                true,
                 0,
                 null
             ],
@@ -5907,7 +5907,7 @@
                 251
             ],
             "Staff": [
-                true,
+                false,
                 1,
                 251
             ],
@@ -5917,7 +5917,7 @@
                 251
             ],
             "Anima": [
-                false,
+                true,
                 0,
                 251
             ],
@@ -6206,7 +6206,7 @@
                 251
             ],
             "Staff": [
-                true,
+                false,
                 31,
                 251
             ],
@@ -6221,7 +6221,7 @@
                 251
             ],
             "Dark": [
-                false,
+                true,
                 0,
                 251
             ],
@@ -6509,7 +6509,7 @@
                 251
             ],
             "Staff": [
-                2,
+                false,
                 31,
                 251
             ],
@@ -6667,12 +6667,12 @@
                 251
             ],
             "Staff": [
-                true,
+                false,
                 31,
                 251
             ],
             "Light": [
-                false,
+                true,
                 0,
                 251
             ],
@@ -6823,7 +6823,7 @@
                 251
             ],
             "Staff": [
-                true,
+                false,
                 31,
                 251
             ],
@@ -7461,7 +7461,7 @@
                 251
             ],
             "Staff": [
-                2,
+                false,
                 251,
                 251
             ],
@@ -7471,12 +7471,12 @@
                 251
             ],
             "Anima": [
-                false,
+                true,
                 0,
                 251
             ],
             "Dark": [
-                2,
+                false,
                 251,
                 251
             ],
@@ -7506,8 +7506,8 @@
             0,
             0
         ],
-        "map_sprite_nid": "Necromancer",
-        "combat_anim_nid": null,
+        "map_sprite_nid": "Necromancer2",
+        "combat_anim_nid": "Necromancer",
         "fields": []
     },
     {
@@ -7943,6 +7943,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sword_Bonewalker",
@@ -10054,7 +10064,22 @@
                 0,
                 null
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
                 false,
                 0,
                 null
@@ -10187,10 +10212,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Soldier",
@@ -10322,10 +10362,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Soldier",
@@ -10460,10 +10515,25 @@
                 0,
                 251
             ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
             "Default": [
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Knight",
@@ -10604,6 +10674,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_General",
@@ -10892,6 +10972,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Vanguard",
@@ -11030,6 +11120,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -11173,6 +11273,16 @@
                 false,
                 0,
                 251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -15628,10 +15738,7 @@
         "tier": 1,
         "movement_group": "Mages",
         "promotes_from": null,
-        "turns_into": [
-            "Sage",
-            "Mage_Knight"
-        ],
+        "turns_into": [],
         "tags": [],
         "max_level": 20,
         "bases": {

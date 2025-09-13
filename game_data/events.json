@@ -1374,6 +1374,8 @@
             "set_current_hp;Hilstara;1",
             "give_item;Monica;Restore;;no_banner",
             "give_wexp;Monica;Staff;100;no_banner",
+            "give_skill;Aka;Revive_effect;;no_banner",
+            "give_skill;Orcent;Careful_Positioning;;no_banner",
             "#trigger_script;Trigger",
             "base;Clearing",
             "#music;Attack;2000",
@@ -12596,8 +12598,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "prep;t",
-            "give_skill;Simon;Command;;no_banner"
+            "give_item;Robin;Scroll_Bolting;;no_banner",
+            "give_item;Robin;Scroll_Shine;;no_banner",
+            "set_current_hp;101;1",
+            "set_current_hp;102;1",
+            "add_talk;Simon;Wynn"
         ],
         "nid": "9 New Event"
     },
@@ -12619,5 +12624,318 @@
             "endf"
         ],
         "nid": "Global ReplaceProtect"
+    },
+    {
+        "name": "Remove revive",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_skill;{unit};Revive_effect;no_banner",
+            "wait;200",
+            "add_portrait;{unit};RightCorner;;NoSmile,CloseEyes",
+            "s;{unit};{e: \"Shoot. Sorry. Thanks for covering my ass, Carina!\" if '{unit}' == 'Aka' else \"I... It won't happen again!\" if '{unit}' == 'Altina' else \"That was... unpleasant.\" if '{unit}' == 'Balia' else \"Ouch!\" if '{unit}' == 'Dari' else \"Tsc. Can't let my years catch up. Thanks, Carina.\" if '{unit}' == 'Hilstara' else \"AAAAH!\" if '{unit}' == 'Lynine' else \"That's what I call sexy teamwork! Now time for retribution!\" if '{unit}' == 'Nalili' else \"My erstwhile existence was but a shadow of what life has become. I cannot afford to forfeit my purpose.\" if '{unit}' == 'Orcent' else \"My mistake. Don't let this get to your head, otherwise you might pay dearly.\" if '{unit}' == 'Orilise' else \"Oh! Did Cumdump make a whoopsies?\" if '{unit}' == 'Qum' else \"It seems I underestimated them. I'm glad for your assistance, Carina.\" if '{unit}' == 'Riala' else \"Forgive me, everyone. I should have been more careful.\" if '{unit}' == 'Robin' else \"Guess what, cocksucer? You have to deal with more of me!\" if '{unit}' == 'Trin' else \"I will not back down yet. This is for my nestmates!\" if '{unit}' == 'Uyae' else \"Guess I got lucky, huh? As always.\" if '{unit}' == 'Varia' else \"Thank you, Carina. I'll seek a better position.\" if '{unit}' == 'Vhala' else \"Argh, strong idiots... Thankfully I have brilliant teammates!\" if '{unit}' == 'Wynn' else \"Carinaa! I could kiss you right now! And a lot more later, once I handle this first...\" if '{unit}' == 'Yarra' else \"I don't know what I would do without you, Carina.\" if '{unit}' == 'Simon' else \"Thanks for the second chance!\"}",
+            "wait;100",
+            "remove_portrait;{unit}",
+            "wait;200"
+        ],
+        "nid": "Global Remove revive"
+    },
+    {
+        "name": "Scroll Test",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_item;{target};ArcaneBolting",
+            "remove_item;{target};ArcaneBolting;no_banner",
+            "add_tag;{target};Bolting"
+        ],
+        "nid": "Global Scroll Test"
+    },
+    {
+        "name": "Scroll Bolting",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_item;{target};ArcaneBolting",
+            "remove_item;{target};ArcaneBolting;no_banner",
+            "add_tag;{target};Bolting"
+        ],
+        "nid": "Global Scroll Bolting"
+    },
+    {
+        "name": "Scroll Shine",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_item;{target};DivineShine",
+            "remove_item;{target};DivineShine;no_banner",
+            "add_tag;{target};Shine_scroll"
+        ],
+        "nid": "Global Scroll Shine"
+    },
+    {
+        "name": "Scroll Physic",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_item;{target};DivinePhysic",
+            "remove_item;{target};DivinePhysic;no_banner",
+            "add_tag;{target};Physic_scroll"
+        ],
+        "nid": "Global Scroll Physic"
+    },
+    {
+        "name": "Orcent Brute remove calm stack and move again",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_skill;Orcent;Calm_Stack;1;no_banner",
+            "",
+            "#level_var;brutestacks;{eval: item_funcs.num_stacks(u('Orcent'), 'Brute_Stack')}",
+            "",
+            "#wait;400",
+            "#choice;orcentmove;Move again?;Yes,No",
+            "#if;'{v:_last_choice}' == 'Yes'",
+            "#    wait;200",
+            "#    reset;Orcent",
+            "#    wait;200",
+            "#    set_current_hp;Orcent;{eval: game.get_unit('Orcent').get_hp() - (5 * {v:brutestacks})}",
+            "#end"
+        ],
+        "nid": "Global Orcent Brute remove calm stack and move again"
+    },
+    {
+        "name": "Orcent Calm remove brute stack",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_skill;Orcent;Brute_Stack;1;no_banner"
+        ],
+        "nid": "Global Orcent Calm remove brute stack"
+    },
+    {
+        "name": "Orcent check brute stack berserk",
+        "trigger": "combat_end",
+        "level_nid": null,
+        "condition": "unit.nid == 'Orcent' or unit2.nid == 'Orcent'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;{eval: item_funcs.num_stacks(u('Orcent'), 'Brute_Stack')} == 5",
+            "    give_skill;Orcent;Confused;;no_banner",
+            "end"
+        ],
+        "nid": "Global Orcent check brute stack berserk"
+    },
+    {
+        "name": "Orcent check calm stack sleep",
+        "trigger": "combat_end",
+        "level_nid": null,
+        "condition": "unit.nid == 'Orcent' or unit2.nid == 'Orcent'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;{eval: item_funcs.num_stacks(u('Orcent'), 'Calm_Stack')} == 5",
+            "    give_skill;Orcent;Sleep;;no_banner",
+            "end"
+        ],
+        "nid": "Global Orcent check calm stack sleep"
+    },
+    {
+        "name": "Orcent Plenitude",
+        "trigger": "turn_change",
+        "level_nid": null,
+        "condition": "any(u.nid == 'Orcent' and u.position for u in game.get_units_in_party())",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;brutestacks;{eval: item_funcs.num_stacks(u('Orcent'), 'Brute_Stack')}",
+            "level_var;calmstacks;{eval: item_funcs.num_stacks(u('Orcent'), 'Calm_Stack')}",
+            "level_var;orcentstacks;{e: {v:brutestacks} + {v:calmstacks}}",
+            "if;{v:brutestacks} == {v:calmstacks} and {v:orcentstacks} > 0",
+            "    give_skill;Orcent;Plenitude",
+            "end"
+        ],
+        "nid": "Global Orcent Plenitude"
+    },
+    {
+        "name": "Orcent Reflection",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;300",
+            "music;Preparation;500",
+            "add_portrait;Orcent;CenterLeft;;CloseEyes",
+            "choice;orcentreflection;Reflect for which purpose?;Reduce <red>Brutality</>,Diminish <blue>Serenity</>,Decrease both",
+            "if;'{v:_last_choice}' == 'Reduce <red>Brutality</>'",
+            "    remove_skill;Orcent;Brute_Stack;no_banner",
+            "elif;'{v:_last_choice}' == 'Diminish <blue>Serenity</>'",
+            "    remove_skill;Orcent;Calm_Stack;no_banner",
+            "else",
+            "    remove_skill;Orcent;Brute_Stack;no_banner",
+            "    remove_skill;Orcent;Calm_Stack;no_banner",
+            "end",
+            "wait;500",
+            "",
+            "level_var;orcentmonologue;{e: game.get_random(1, 5)}",
+            "if;'{v:orcentmonologue}' == 1",
+            "s;Orcent;There is no doubt within me that our pursuit is aimed toward a better world.|With the Incubus Emperor's fall, Arclent may finally begin to heal from its long and grievous afflictions.|Yet, I am not naive enough to believe he was the sole cause of our plight.|Though many evils sprang from his reign, he was not the root of all corruption.|Setting aside the myriad ethical considerations, he undeniably shaped the landscape, the very ecosystem of our world, instilling a new order throughout his reign.|This act unquestionably brought repercussions both tangible and, perhaps, unfathomable.|Were all the fruits of this vile tree rotten?|No, not entirely.|Yet no sweetness in the fruit can justify the devastation wrought by its accursed roots.|In felling this tree, we have also severed the potential for more sweet fruits to bloom.|But he, too, sabotaged futures, eliminated lives beyond comprehension.|This does not make us equals, but only underscores the futility of such comparisons.|To even entertain the notion of stasis, as a means to preserve possibility, is paradoxical and wholly antithetical to life itself.|A part of me clings to the hope that enough of history will endure to remember what was wrought.|It need not, nor should it, stand in defense of all that occurred.|Rather, it should stand as a grim reminder of the darkness we may yet be capable of.|And, perhaps, to honor those who, whether able or not, sought to shine amidst the oppressive shadow of that vicious tree.;;;thought_bubble;no_sound;no_talk",
+            "elif;'{v:orcentmonologue}' == 2",
+            "s;Orcent;Power is a slippery notion, forever shifting like silt in a riverbed.|Many deem it synonymous with brute force, the unbridled faculty to subdue, to cleave, to stamp one's will upon the fabric of things.|Yet I am not persuaded that such violence is its true core.|A boulder tumbling from a cliff wreaks havoc, yes, but once its momentum is spent it lies as inert as any common stone.|Power that depends solely on the spasm of impact is but a brief commotion.|I suspect the substance of strength may lie elsewhere, in a quieter faculty often overlooked.|Restraint, though seldom celebrated among my kin, has a curious gravity of its own.|To command one's impulse is to acknowledge the peril that lurks within one's sinews.|Even I, an orc with fingers too often ink-stained from ponderous scribblings, know the temptation to let arrows fly merely to prove that I can.|Yet the bow that holds its string taut, waiting for a worthy aim, possesses an authority far subtler than the flailing axe.|There is an austere dignity in withholding a blow, a mastery not only of one's weapon but of one's unruly self.|It is easy, after all, to lash out.|Even the dullest whelp may swing a club in peevishness and call it valor.|But to cradle force within and mete it with judicious care, there lies the rarer craft.|Restraint demands foresight, temperance, a willingness to appear hesitant in the eyes of those who equate noise with potency.|I have been chided for too much brooding, as if reflection were a defect|Yet, I would sooner bear that reproach than squander my limited might in some witless display.|My strength, such as it is, gains meaning only when I govern it, not when I let it govern me.|So I incline toward patience, even if it leaves me looking more monk than warrior.|A river is not mighty because it floods in frenzy, but because, year upon year, it sculpts the rock by steadfast attrition.|Force is loud but brittle.|Restraint, properly tended, endures.|If I have any claim to strength, it is not in the swiftness of my arrow|It is but in the halting breath before I loose it.|Though, truth be told, I miss as often as I strike.;;;thought_bubble;no_sound;no_talk",
+            "elif;'{v:orcentmonologue}' == 3",
+            "s;Orcent;Wisdom is a peculiar weight, heavier than any stone I have hefted in these hands.|Many extol it as a lamp against darkness, a boon to those who dare to look beyond the veil of ignorance.|Yet I have found its glow to be fickle, at times warming.|At others searing the flesh of thought until one longs for the cool shade of unknowing.|Knowledge is never simply a trove of pleasant certainties.|It is a tangle of riddles, often barbed, that cling to the mind long after one has ceased to seek them.|I have learned, somewhat grudgingly, that to see too much is to invite a quiet disquiet that no feast nor laughter can fully still.|Perhaps that is why so many prefer to brandish strength rather than pursue understanding.|I would not feign regret for my meagre insights, yet there are moments I envy the orc who thinks no further than his next meal or the gleam of steel in a fray.|Their world is small but merciful, while mine stretches wide and often bleak, a horizon lined with questions I can neither conquer nor lay to rest.|To be wise, or something adjacent to it, is to carry a pack filled with stones of speculation, each one whispering its own troublesome query.|I sometimes wonder if my bow grows heavier because of such musings, or if my shoulders simply tire from trying to bear both weapon and wondering alike.|Still, would I truly cast off this burden if I could?|I doubt it, for in spite of the weariness, there is a quiet savour in perceiving the subtler contours of life.|Even sorrow, viewed through the lens of understanding, gains a sombre dignity that brutish simplicity cannot fathom.|Perhaps wisdom is neither boon nor bane but a companion, stern and demanding, who insists I walk paths others leave untried.|If so, I ought to thank it for its discipline, even as I mutter against its cruelties.|I am, after all, only a thinker of middling calibre, fumbling after truths larger than my reach.|Yet I suspect the fumbling itself is part of the gift, or the curse, or whichever word one finds less burdensome.|And so I will shoulder this odd freight, for it is mine.|And though it bends my back, it keeps my gaze aloft.;;;thought_bubble;no_sound;no_talk",
+            "elif;'{v:orcentmonologue}' == 4",
+            "s;Orcent;Freedom is a word so bright that one must squint to look at it.|Many speak of it as though it were air itself, a boundless expanse into which one may stride unhampered.|Yet I have learned, sometimes the hard way, that liberty without shape is but a gust scattering leaves without purpose.|To act without measure is to tumble into chaos, to squander one's strength upon every fleeting urge.|Even an arrow, left unnotched, will never find its mark.|Only when set against the string and drawn with care can it reveal its flight.|I confess, there are moments when I envy the reckless, their laughter ringing as they dart from whim to whim.|They seem weightless, while I, with my long deliberations, feel as though I carry chains forged from my own reflections.|Still, I suspect those chains grant me a steadiness they cannot claim, a ballast against the storm of impulse.|Perhaps freedom is not the wildest leap but the choosing of which leap merits the risk.|A creature entirely unbound may find itself not free but adrift, bereft of course or anchor.|To bind oneself, willingly and wisely, is a subtler kind of release, one that lets a soul grow roots even as it reaches skyward.|I am no sage, only an orc muddling through lofty notions, yet it seems to me that restraint is not the enemy of liberty but its quiet architect.|My bow is proof enough.|Its strength resides not in slackness but in the tension that readies it for flight.|So I will keep my tether close, shaping my path with care, and trust that within such chosen bounds lies the truest breadth of all.;;;thought_bubble;no_sound;no_talk",
+            "elif;'{v:orcentmonologue}' == 5",
+            "s;Orcent;Strife is an unwelcome tutor, yet one whose lessons cling tighter than most.|Many would flee from discord as though it were a plague, and I cannot fault them for that urge.|Battle, whether of arms or of thought, leaves scars that no balm can wholly soothe.|Still, I wonder if meaning does not often bloom from the very soil turned by hardship.|An existence without friction might appear enviable, yet it risks becoming pale and hollow, a drift through quiet waters with no shore to name as destination.|It is in adversity that one meets the sinew of one's own spirit, and I say this as a creature hardly famed for subtle contemplation.|Even my own musings, ponderous though they are, were kindled by struggles I would not have chosen had I been given gentler roads.|Conflict, vexing as it is, shapes the edges of a life and gives it texture.|A bow earns its worth not by hanging idle but by weathering the strain that makes each shot possible.|Perhaps we do not seek turmoil for its own sake, but we find within it the spark that illuminates who we truly are.|Peace is sweet, yet without the memory of strife it risks becoming dull, a flavor too mild to savor.|I suspect the task lies not in banishing all struggle but in learning how to meet it with steadiness, even with a hint of grace.|For myself, I will not glorify battle, yet I cannot deny that every wound, every dispute, every weary march has carved some hidden clarity within me.|If there is purpose in the tumult, it is not in the noise itself but in how we emerge, however clumsily, from its clutches.|And though I am but an orc with a bow and an overworked mind, I would rather wrestle with the weight of striving than drift through a life too smooth to leave any mark.;;;thought_bubble;no_sound;no_talk",
+            "else",
+            "end",
+            "#s;Orcent; ;;;thought_bubble;no_sound;no_talk",
+            "#s;Orcent; ;;;thought_bubble;no_sound;no_talk",
+            "#s;Orcent; ;;;thought_bubble;no_sound;no_talk",
+            "#s;Orcent; ;;;thought_bubble;no_sound;no_talk",
+            "wait;500",
+            "remove_portrait;Orcent",
+            "music_fade_back;500"
+        ],
+        "nid": "Global Orcent Reflection"
+    },
+    {
+        "name": "Wynn soul collect",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;Wynn;200",
+            "wait;200",
+            "sound;Aura1",
+            "map_anim;OverchargeAura;Wynn",
+            "give_skill;Wynn;Bone_stack;;no_banner",
+            "wait;300"
+        ],
+        "nid": "Global Wynn soul collect"
+    },
+    {
+        "name": "Wynn soul spend",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_skill;Wynn;Bone_stack;no_banner",
+            ""
+        ],
+        "nid": "Global Wynn soul spend"
+    },
+    {
+        "name": "Wynn reanimate",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "        # Ask the player which one to revive",
+            "choice;reanimation;Choose ally:;{eval:[u.nid for u in game.get_all_player_units() if u.dead]};64;v;center;menu_bg_base;;type_unit;3,3;center;expression;",
+            "remove_tag;{v:reanimation};Dead",
+            "resurrect;{v:reanimation}",
+            "add_unit;{v:reanimation};{target_pos};warp",
+            "end",
+            "remove_skill;Wynn;Bone_stack;no_banner"
+        ],
+        "nid": "Global Wynn reanimate"
+    },
+    {
+        "name": "Death Aka",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Aka'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music_clear",
+            "add_portrait;Aka;FarRight;normal;CloseEyes,NoSmile",
+            "if;game.current_mode.permadeath",
+            "    speak;Aka;That won't...{c:wait;300} fare well...{c:wait;300} with my wife...{c:wait;300} at all...{c:wait;300} ha...{c:wait;500}ha...",
+            "else",
+            "    s;Aka;Is someone...{c:wait;300} here...?{c:wait;300} I...{c:wait;1000}{c:expression;Aka;OpenEyes,Smile} I'm about to let out a huge fart!{c:bop_portrait;Aka} HAHAHAHA!",
+            "end",
+            "remove_portrait;Aka",
+            "music_fade_back",
+            "add_tag;Aka;Dead"
+        ],
+        "nid": "Global Death Aka"
+    },
+    {
+        "name": "New Event_1",
+        "trigger": "phase_change",
+        "level_nid": "9",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "#kill_unit;Aka;immediate",
+            "#kill_unit;Dari;immediate",
+            "give_skill;Wynn;Bone_stack;;no_banner",
+            ""
+        ],
+        "nid": "9 New Event_1"
+    },
+    {
+        "name": "New Event_2",
+        "trigger": "on_talk",
+        "level_nid": "9",
+        "condition": "unit.nid == 'Simon' and unit2.nid == 'Wynn'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "s;system;{eval:[u.nid for u in game.get_all_player_units() if u.dead]}",
+            "choice;replacement;Choose replacement:;{eval:[u.nid for u in game.get_all_player_units() if u.dead]};64;v;center;menu_bg_base;;type_unit;3,3;center;expression;"
+        ],
+        "nid": "9 New Event_2"
     }
 ]

@@ -24,6 +24,86 @@
         ]
     },
     {
+        "nid": "Bone_stack",
+        "name": "Bone pile",
+        "desc": "Each stack of Bone pile enables an use of Wynn's Necromancy Spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            35
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ]
+        ]
+    },
+    {
+        "nid": "Collect_Souls",
+        "name": "Collect Souls",
+        "desc": "Wynn is on the lookout for nearby corpses. For each enemy defeated (by Wynn or any ally) within 3 tiles, gain one stack of <blue>Bone pile</>.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            10
+        ],
+        "components": [
+            [
+                "aura",
+                "Soul_Reaping"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Soul_Reaping",
+        "name": "Soul Reaping",
+        "desc": "If this unit kills an enemy, Wynn will collect their soul.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            40
+        ],
+        "components": [
+            [
+                "event_after_kill",
+                "Global Wynn soul collect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Wynn_collect_soul",
+        "name": "Soul Reaping",
+        "desc": "If this unit kills an enemy, Wynn will collect their soul.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            40
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "Bone_stack"
+            ]
+        ]
+    },
+    {
         "nid": "traveler",
         "name": "traveler",
         "desc": "",
@@ -574,7 +654,7 @@
     {
         "nid": "Paralysis",
         "name": "<red>[PARALYSIS]</>",
-        "desc": "Unit cannot act.",
+        "desc": "Unit cannot move.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -586,10 +666,6 @@
                 3
             ],
             [
-                "unselectable",
-                null
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -597,10 +673,6 @@
                         -99
                     ]
                 ]
-            ],
-            [
-                "cannot_use_items",
-                null
             ],
             [
                 "negative",
@@ -5481,7 +5553,7 @@
             ],
             [
                 "time",
-                2
+                3
             ]
         ]
     },
@@ -7905,16 +7977,16 @@
     {
         "nid": "Shield_of_Purity",
         "name": "Shield of Purity",
-        "desc": "Increases allies' DEF and RES for 2 turns. Range: 2 tiles. Cost: 5 mana.",
-        "icon_nid": "Affinity",
+        "desc": "Carina can increase nearby allies' DEF and RES for 2 turns. Costs <blue>6 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            6
+            10,
+            21
         ],
         "components": [
             [
                 "ability",
-                "Shield_of_Purity_ability"
+                "Shield_of_Purity"
             ],
             [
                 "class_skill",
@@ -7924,12 +7996,12 @@
     },
     {
         "nid": "Shield_of_Purity_effect",
-        "name": "Shield of Purity effect",
-        "desc": "",
+        "name": "Shield of Purity",
+        "desc": "Unit has increased DEF and RES.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            7,
-            49
+            10,
+            21
         ],
         "components": [
             [
@@ -7937,17 +8009,53 @@
                 [
                     [
                         "DEF",
-                        5
+                        4
                     ],
                     [
                         "RES",
-                        5
+                        4
                     ]
                 ]
             ],
             [
                 "time",
                 2
+            ]
+        ]
+    },
+    {
+        "nid": "Revive_effect",
+        "name": "Revive",
+        "desc": "Unit will revive and lose this status once it is defeated.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            3
+        ],
+        "components": [
+            [
+                "True_Miracle_Event",
+                "Global Remove revive"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    85,
+                    170,
+                    127
+                ]
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ]
         ]
     },
@@ -8337,6 +8445,34 @@
             [
                 "time",
                 6
+            ]
+        ]
+    },
+    {
+        "nid": "Illusioned",
+        "name": "Illusioned",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "modify_ai_priority",
+                0.0
+            ],
+            [
+                "pass",
+                null
+            ],
+            [
+                "unit_tint",
+                [
+                    0,
+                    0,
+                    0
+                ]
             ]
         ]
     },
@@ -9798,6 +9934,279 @@
                     173,
                     234
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Careful_Positioning",
+        "name": "Careful Positioning",
+        "desc": "Orcent can forfeit other actions to move a number of tiles beyond regular movement.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            8
+        ],
+        "components": [
+            [
+                "xcom_movement",
+                3
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Brutal_Nature",
+        "name": "Brutal Nature",
+        "desc": "When attacking in <red>player phase</>, gain 1 stack of <red>Brutality</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "condition",
+                "game.phase.get_current() == 'player'"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Brute_Stack",
+                    "recipient": "self",
+                    "allegiance": "both"
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Introspective_Nature",
+        "name": "Introspective Nature",
+        "desc": "After being attacked in <red>enemy phase</>, gain 1 stack of <blue>Serenity</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "condition",
+                "game.phase.get_current() != 'player'"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Calm_Stack",
+                    "recipient": "self",
+                    "allegiance": "both"
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Reflection",
+        "name": "Reflection",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Reflection"
+            ]
+        ]
+    },
+    {
+        "nid": "Brute_Stack",
+        "name": "Brutality",
+        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage, and is dealt 5 recoil damage after combat. At 4 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            52
+        ],
+        "components": [
+            [
+                "fatal_damage",
+                null
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "condition",
+                "game.phase.get_current() == 'player'"
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "event_after_combat",
+                "Global Orcent Brute remove calm stack and move again"
+            ],
+            [
+                "recoil",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Calm_Stack",
+        "name": "Serenity",
+        "desc": "For each stack of <blue>Serenity</>, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 4 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            52
+        ],
+        "components": [
+            [
+                "stack",
+                4
+            ],
+            [
+                "post_combat_healing",
+                5
+            ],
+            [
+                "condition",
+                "game.phase.get_current() != 'player'"
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "event_after_combat",
+                "Global Orcent Calm remove brute stack"
+            ],
+            [
+                "damage",
+                -2
+            ]
+        ]
+    },
+    {
+        "nid": "Plenitude",
+        "name": "Plenitude",
+        "desc": "Orcent has balanced his complex nature. Has increased stats, bonus damage, crit and post combat healing for this turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            52
+        ],
+        "components": [
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "post_combat_healing",
+                15
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    235,
+                    219,
+                    43
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "SKL",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        1
+                    ],
+                    [
+                        "LCK",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ],
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "testPOSTCOMBATDMG",
+        "name": "combatdmg",
+        "desc": "",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "fatal_damage",
+                null
+            ],
+            [
+                "endstep_damage",
+                50
             ]
         ]
     }

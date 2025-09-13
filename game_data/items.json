@@ -1,5 +1,386 @@
 [
     {
+        "nid": "NecroSpells",
+        "name": "Necromancy Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            36
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Necro_Axe",
+                    "Necro_Axe_Ranged",
+                    "Necro_Bow",
+                    "Necro_Bind",
+                    "Necro_Reanimate"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Necro_Axe",
+        "name": "(Axe) Demise",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            28
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "weapon_type_exempt",
+                "Axe"
+            ],
+            [
+                "eval_available",
+                "has_skill('Wynn','Bone_stack')"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Wynn soul spend"
+            ],
+            [
+                "wexp",
+                -5
+            ]
+        ]
+    },
+    {
+        "nid": "Necro_Axe_Ranged",
+        "name": "(Axe) Decease",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            15
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "weapon_type_exempt",
+                "Axe"
+            ],
+            [
+                "eval_available",
+                "has_skill('Wynn','Bone_stack')"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Wynn soul spend"
+            ],
+            [
+                "wexp",
+                -5
+            ]
+        ]
+    },
+    {
+        "nid": "Necro_Bow",
+        "name": "(Bow) Departure",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            28
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "weapon_type_exempt",
+                "Bow"
+            ],
+            [
+                "eval_available",
+                "has_skill('Wynn','Bone_stack')"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Wynn soul spend"
+            ],
+            [
+                "wexp",
+                -5
+            ]
+        ]
+    },
+    {
+        "nid": "Necro_Bind",
+        "name": "Bind",
+        "desc": "Inflicts <red>[PARALYSIS]</> on an enemy. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            28
+        ],
+        "components": [
+            [
+                "eval_available",
+                "has_skill('Wynn','Bone_stack')"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Wynn soul spend"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Paralysis"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "weapon_type_exempt",
+                "Staff"
+            ],
+            [
+                "battle_cast_anim",
+                "Blind"
+            ],
+            [
+                "wexp",
+                -5
+            ]
+        ]
+    },
+    {
+        "nid": "Necro_Reanimate",
+        "name": "Reanimate",
+        "desc": "Reanimates the body of a previously defeated ally. Can only be used once.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            48
+        ],
+        "components": [
+            [
+                "eval_available",
+                "has_skill('Wynn', 'Bone_stack')"
+            ],
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Torch"
+            ],
+            [
+                "event_on_hit",
+                "Global Wynn reanimate"
+            ]
+        ]
+    },
+    {
         "nid": "Sx_Purse",
         "name": "Sx Purse",
         "desc": "Use this item to gain some Sx. Does not end unit's turn.",
@@ -55,6 +436,3435 @@
             [
                 "attack_after_combat",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "DivineSpells",
+        "name": "Divine Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            29
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "DivineHeal",
+                    "DivineRestore",
+                    "DivineMend",
+                    "DivinePhysic",
+                    "DivineFortify",
+                    "DivineLightning",
+                    "DivineShine"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DivineHeal",
+        "name": "Heal",
+        "desc": "Restores (User's MAG + 10) HP. Costs <blue>3 mana</>.",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "exp",
+                11
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "HEALSTAFF"
+            ],
+            [
+                "mana_cost",
+                3
+            ],
+            [
+                "map_cast_pose",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DivineRestore",
+        "name": "Cleanse",
+        "desc": "Cleanses the target of negative statuses. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "exp",
+                11
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "HEALSTAFF"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "restore",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DivineMend",
+        "name": "Mend",
+        "desc": "Restores (User's MAG + 20) HP. Costs <blue>5 mana</>.",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "exp",
+                12
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "HEAL"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "map_cast_pose",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DivineFortify",
+        "name": "Mass Heal",
+        "desc": "Restores (User's MAG + 20) HP for all allied units in range. Range is dependent on user's MAG. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            38
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "exp",
+                20
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "HEAL"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "max_equation_range",
+                "MAGIC_RANGE"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "equation_blast_aoe",
+                "MAGIC_RANGE"
+            ]
+        ]
+    },
+    {
+        "nid": "DivineLightning",
+        "name": "Smite",
+        "desc": "Hits an enemy with basic divine magic. Costs <blue>3 mana</>.",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "mana_cost",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "DivineShine",
+        "name": "Shine",
+        "desc": "Hits an enemy with intermediate divine magic. Costs <blue>5 mana</>.",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "prf_tags",
+                [
+                    "Shine_scroll"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "DivinePhysic",
+        "name": "Prayer",
+        "desc": "Restores (User's MAG + 20) HP from far away. Range is dependent on user's MAG. Costs <blue>8 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            21
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "HEAL"
+            ],
+            [
+                "mana_cost",
+                8
+            ],
+            [
+                "max_equation_range",
+                "MAGIC_RANGE"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "prf_tags",
+                [
+                    "Physic_scroll"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning",
+        "name": "Lightning",
+        "desc": "",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                630
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ]
+        ]
+    },
+    {
+        "nid": "Shine",
+        "name": "Shine",
+        "desc": "",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "value",
+                900
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Divine",
+        "name": "Divine",
+        "desc": "",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                25
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "value",
+                2500
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Purge",
+        "name": "Purge",
+        "desc": "",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                5
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "value",
+                3000
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Aura",
+        "name": "Aura",
+        "desc": "",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "uses",
+                20
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Ivaldi",
+        "name": "Ivaldi",
+        "desc": "Defense +5. Effective against monsters",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                30
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "status_on_equip",
+                "Defense_Plus5"
+            ],
+            [
+                "value",
+                900
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 1.0,
+                    "effective_bonus_damage": 34,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Fire",
+        "name": "Fire",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                560
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    96,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Thunder",
+        "name": "Thunder",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    251,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                700
+            ]
+        ]
+    },
+    {
+        "nid": "Elfire",
+        "name": "Elfire",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    96,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                1200
+            ],
+            [
+                "uses",
+                30
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "wexp",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Bolting",
+        "name": "Bolting",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                60
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                2500
+            ],
+            [
+                "uses",
+                5
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "siege_weapon",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fimbulvetr",
+        "name": "Fimbulvetr",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                20
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "value",
+                6000
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Excalibur",
+        "name": "Excalibur",
+        "desc": "Speed +5. Effective against monsters",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                30
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "status_on_equip",
+                "Speed_Plus5"
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 1.0,
+                    "effective_bonus_damage": 36,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneSpells",
+        "name": "Arcane Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "ArcaneFire",
+                    "ArcaneLightning",
+                    "ArcaneIce",
+                    "ArcaneHeal",
+                    "ArcanePoison",
+                    "AreaSpells",
+                    "FireLance",
+                    "LightningLance",
+                    "IceLance",
+                    "HealingLance",
+                    "ArcaneBolting"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneFire",
+        "name": "Fire",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    96,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Fire"
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneLightning",
+        "name": "Lightning",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    251,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Thunder"
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneIce",
+        "name": "Ice",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    47,
+                    255
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Ice"
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneHeal",
+        "name": "Heal",
+        "desc": "Restores (User's MAG) HP.",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "exp",
+                10
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    202,
+                    227,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "MAGIC_DAMAGE"
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
+            ]
+        ]
+    },
+    {
+        "nid": "ArcanePoison",
+        "name": "Poison",
+        "desc": "Enemy cannot move or attack.",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "status_on_hit",
+                "Poisoned"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "hit",
+                65
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "prf_unit",
+                [
+                    "Altina"
+                ]
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    62,
+                    255,
+                    52
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "FireLance",
+        "name": "Fire Lance",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    96,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                6
+            ],
+            [
+                "prf_unit",
+                [
+                    "Robin"
+                ]
+            ],
+            [
+                "prf_class",
+                [
+                    "Sage"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Flareblade"
+            ]
+        ]
+    },
+    {
+        "nid": "LightningLance",
+        "name": "Lightning Lance",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    213,
+                    224,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                6
+            ],
+            [
+                "prf_unit",
+                [
+                    "Robin"
+                ]
+            ],
+            [
+                "prf_class",
+                [
+                    "Sage"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Boltblade"
+            ]
+        ]
+    },
+    {
+        "nid": "IceLance",
+        "name": "Ice Lance",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    224,
+                    224
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                6
+            ],
+            [
+                "prf_unit",
+                [
+                    "Robin"
+                ]
+            ],
+            [
+                "prf_class",
+                [
+                    "Sage"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Ice2"
+            ]
+        ]
+    },
+    {
+        "nid": "HealingLance",
+        "name": "Healing Lance",
+        "desc": "Restores (User's MAG + 10) HP.",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "exp",
+                10
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    202,
+                    227,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "HEALSTAFF"
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "mana_cost",
+                6
+            ],
+            [
+                "prf_unit",
+                [
+                    "Robin"
+                ]
+            ],
+            [
+                "prf_class",
+                [
+                    "Mage_Knight"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneBolting",
+        "name": "Bolting",
+        "desc": "Hits an enemy from far away. Costs <blue>20 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "mana_cost",
+                20
+            ],
+            [
+                "prf_tags",
+                [
+                    "Bolting"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "AreaSpells",
+        "name": "Area Spells",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            2
+        ],
+        "components": [
+            [
+                "multi_item",
+                [
+                    "FireStorm",
+                    "LightningStorm",
+                    "IceStorm",
+                    "Quake",
+                    "PoisonStorm"
+                ]
+            ],
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Altina"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "FireStorm",
+        "name": "Fire Storm",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    96,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Fireball"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -2,
+                            -2
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            2,
+                            -2
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            2,
+                            2
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            -2,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "FireHit"
+            ]
+        ]
+    },
+    {
+        "nid": "LightningStorm",
+        "name": "Lightning Storm",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    224,
+                    15
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "Swoosh"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            1,
+                            0
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            0,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Thunder"
+            ]
+        ]
+    },
+    {
+        "nid": "IceStorm",
+        "name": "Ice Storm",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    224,
+                    217
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Blizzard"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            -2,
+                            0
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            0,
+                            0
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Fimbulvetr1"
+            ]
+        ]
+    },
+    {
+        "nid": "PoisonStorm",
+        "name": "Poison Storm",
+        "desc": "",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    129,
+                    71,
+                    144
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "map_target_cast_anim",
+                "MapPoison"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -2,
+                            -1
+                        ],
+                        [
+                            2,
+                            -1
+                        ],
+                        [
+                            2,
+                            1
+                        ],
+                        [
+                            -2,
+                            1
+                        ],
+                        [
+                            -1,
+                            -2
+                        ],
+                        [
+                            1,
+                            -2
+                        ],
+                        [
+                            1,
+                            2
+                        ],
+                        [
+                            -1,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Poison"
+            ],
+            [
+                "status_on_hit",
+                "Poisoned"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Altina"
+                ]
+            ],
+            [
+                "eval_available",
+                "any(u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Altina')))"
+            ]
+        ]
+    },
+    {
+        "nid": "Quake",
+        "name": "Quake",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            49
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    76,
+                    47,
+                    18
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Sandblast"
+            ],
+            [
+                "map_hit_sfx",
+                "StoneHit"
+            ],
+            [
+                "enemy_line_aoe",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flux",
+        "name": "Flux",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                900
+            ]
+        ]
+    },
+    {
+        "nid": "Luna",
+        "name": "Luna",
+        "desc": "Ignores enemy resistance",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "value",
+                4200
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "alternate_resist_formula",
+                "ZERO"
+            ],
+            [
+                "battle_cast_anim",
+                "Hex"
+            ]
+        ]
+    },
+    {
+        "nid": "Succubus_Kiss",
+        "name": "Succubus Kiss",
+        "desc": "User recovers HP equal to damage dealt.",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                3200
+            ],
+            [
+                "lifelink",
+                1.0
+            ],
+            [
+                "battle_cast_anim",
+                "Nyx"
+            ]
+        ]
+    },
+    {
+        "nid": "Eclipse",
+        "name": "Eclipse",
+        "desc": "Halve's the enemy's current HP",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                5
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "wexp",
+                8
+            ],
+            [
+                "value",
+                4000
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "status_on_hit",
+                "Eclipse_Helper"
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fenrir",
+        "name": "Fenrir",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                9000
+            ],
+            [
+                "uses",
+                20
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Gleipnir",
+        "name": "Gleipnir",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                30
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "status_on_equip",
+                "Skill_Plus5"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Naglfar",
+        "name": "Naglfar",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "SoulRescue",
+        "name": "Rescue",
+        "desc": "Bring an ally to a space adjacent to the user. Range is dependent on user's MAG. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "sequence_item",
+                [
+                    "Rescue1",
+                    "Rescue2"
+                ]
+            ],
+            [
+                "no_ai",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_equation_range",
+                "MAGIC_RANGE"
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "SoulWarp",
+        "name": "Warp",
+        "desc": "Move an ally to another square. Range is dependent on user's MAG. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "sequence_item",
+                [
+                    "Warp1",
+                    "Warp2"
+                ]
+            ],
+            [
+                "no_ai",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "mana_cost",
+                10
             ]
         ]
     },
@@ -391,6 +4201,10 @@
             [
                 "ignore_line_of_sight",
                 null
+            ],
+            [
+                "status_on_hit",
+                "Eclipse_Helper"
             ]
         ]
     },
@@ -661,12 +4475,15 @@
                 null
             ],
             [
-                "status_on_hit",
-                "Leaking"
-            ],
-            [
                 "ignore_line_of_sight",
                 null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Leaking",
+                    "Eclipse_Helper"
+                ]
             ]
         ]
     },
@@ -1728,7 +5545,7 @@
             ],
             [
                 "weapon_type",
-                "Staff"
+                "Light"
             ],
             [
                 "magic",
@@ -1816,11 +5633,15 @@
             ],
             [
                 "weapon_type",
-                "Staff"
+                "Light"
             ],
             [
                 "exp",
                 20
+            ],
+            [
+                "mana_cost",
+                10
             ]
         ]
     },
@@ -3402,10 +7223,10 @@
         "nid": "All_Embracing_Care_ability",
         "name": "All-Embracing Care",
         "desc": "",
-        "icon_nid": null,
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            14,
+            50
         ],
         "components": [
             [
@@ -4146,22 +7967,18 @@
         ]
     },
     {
-        "nid": "Shield_of_Purity_ability",
+        "nid": "Shield_of_Purity",
         "name": "Shield of Purity",
-        "desc": "",
-        "icon_nid": null,
+        "desc": "Raises nearby allies' DEF and RES for 2 turns. Costs <blue>6 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            10,
+            21
         ],
         "components": [
             [
                 "map_cast_sfx",
                 "Barrier"
-            ],
-            [
-                "target_ally",
-                null
             ],
             [
                 "spell",
@@ -4183,13 +8000,101 @@
                 "map_hit_add_blend",
                 [
                     255,
+                    248,
+                    34
+                ]
+            ],
+            [
+                "mana_cost",
+                6
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "exp",
+                13
+            ]
+        ]
+    },
+    {
+        "nid": "Revive",
+        "name": "Revive",
+        "desc": "Grants an ally the Revive status, which will prevent them from being defeated once. Costs <blue>20 mana</>.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            3
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "mana_cost",
+                20
+            ],
+            [
+                "status_on_hit",
+                "Revive_effect"
+            ],
+            [
+                "map_cast_anim",
+                "MapBigHealTrans"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
                     255,
                     255
                 ]
             ],
             [
-                "mana_cost",
-                5
+                "map_hit_sfx",
+                "Recover"
             ]
         ]
     },
@@ -5003,6 +8908,17 @@
                 }
             ]
         ]
+    },
+    {
+        "nid": "Illusion",
+        "name": "new_1",
+        "desc": "Fazer uma illusion magic pra yarra!",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Furious_Strikes_ability",
@@ -12227,2774 +16143,6 @@
         ]
     },
     {
-        "nid": "Lightning",
-        "name": "Lightning",
-        "desc": "",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "value",
-                630
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                95
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                6
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Light"
-            ],
-            [
-                "weapon_rank",
-                "E"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Shine"
-            ]
-        ]
-    },
-    {
-        "nid": "Shine",
-        "name": "Shine",
-        "desc": "",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "weapon_type",
-                "Light"
-            ],
-            [
-                "weapon_rank",
-                "D"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weight",
-                8
-            ],
-            [
-                "crit",
-                8
-            ],
-            [
-                "wexp",
-                2
-            ],
-            [
-                "value",
-                900
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    0
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Divine",
-        "name": "Divine",
-        "desc": "",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            2
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                8
-            ],
-            [
-                "hit",
-                85
-            ],
-            [
-                "weapon_type",
-                "Light"
-            ],
-            [
-                "weapon_rank",
-                "C"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                25
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                12
-            ],
-            [
-                "crit",
-                10
-            ],
-            [
-                "value",
-                2500
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    0
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Purge",
-        "name": "Purge",
-        "desc": "",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                75
-            ],
-            [
-                "weapon_type",
-                "Light"
-            ],
-            [
-                "weapon_rank",
-                "B"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                5
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                20
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "wexp",
-                3
-            ],
-            [
-                "value",
-                3000
-            ],
-            [
-                "min_range",
-                3
-            ],
-            [
-                "max_range",
-                10
-            ],
-            [
-                "siege_weapon",
-                null
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    0
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Aura",
-        "name": "Aura",
-        "desc": "",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "value",
-                8000
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                12
-            ],
-            [
-                "hit",
-                85
-            ],
-            [
-                "crit",
-                15
-            ],
-            [
-                "weight",
-                15
-            ],
-            [
-                "uses",
-                20
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Light"
-            ],
-            [
-                "weapon_rank",
-                "A"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Ivaldi",
-        "name": "Ivaldi",
-        "desc": "Defense +5. Effective against monsters",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                17
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "weapon_type",
-                "Light"
-            ],
-            [
-                "weapon_rank",
-                "S"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                8
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "status_on_equip",
-                "Defense_Plus5"
-            ],
-            [
-                "value",
-                900
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    0
-                ]
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Monster"
-                    ],
-                    "effective_multiplier": 1.0,
-                    "effective_bonus_damage": 34,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Fire",
-        "name": "Fire",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "value",
-                560
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                4
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "weapon_rank",
-                "E"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    224,
-                    96,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Thunder",
-        "name": "Thunder",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                8
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                6
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "weapon_rank",
-                "D"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    251,
-                    255,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                700
-            ]
-        ]
-    },
-    {
-        "nid": "Elfire",
-        "name": "Elfire",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            2
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                85
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                10
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "weapon_rank",
-                "C"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    224,
-                    96,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                1200
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "wexp",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Bolting",
-        "name": "Bolting",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                3
-            ],
-            [
-                "max_range",
-                10
-            ],
-            [
-                "damage",
-                12
-            ],
-            [
-                "hit",
-                60
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                20
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "weapon_rank",
-                "B"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                2500
-            ],
-            [
-                "uses",
-                5
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "siege_weapon",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Fimbulvetr",
-        "name": "Fimbulvetr",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                13
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "weapon_rank",
-                "A"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                20
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                12
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "value",
-                6000
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Excalibur",
-        "name": "Excalibur",
-        "desc": "Speed +5. Effective against monsters",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                18
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "weapon_rank",
-                "S"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                13
-            ],
-            [
-                "crit",
-                10
-            ],
-            [
-                "status_on_equip",
-                "Speed_Plus5"
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Monster"
-                    ],
-                    "effective_multiplier": 1.0,
-                    "effective_bonus_damage": 36,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "ArcaneSpells",
-        "name": "Arcane Spells",
-        "desc": "Access this unit's available spells.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            15
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "multi_item",
-                [
-                    "ArcaneFire",
-                    "ArcaneLightning",
-                    "ArcaneIce",
-                    "ArcaneHeal",
-                    "ArcanePoison",
-                    "AreaSpells",
-                    "FireLance",
-                    "LightningLance",
-                    "IceLance",
-                    "HealingLance"
-                ]
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "locked",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "ArcaneFire",
-        "name": "Fire",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                7
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    224,
-                    96,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                2
-            ],
-            [
-                "battle_cast_anim",
-                "Fire"
-            ]
-        ]
-    },
-    {
-        "nid": "ArcaneLightning",
-        "name": "Lightning",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                15
-            ],
-            [
-                "weight",
-                7
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    251,
-                    255,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                2
-            ],
-            [
-                "battle_cast_anim",
-                "Thunder"
-            ]
-        ]
-    },
-    {
-        "nid": "ArcaneIce",
-        "name": "Ice",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                110
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                6
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    0,
-                    47,
-                    255
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                2
-            ],
-            [
-                "battle_cast_anim",
-                "Ice"
-            ]
-        ]
-    },
-    {
-        "nid": "ArcaneHeal",
-        "name": "Heal",
-        "desc": "Restores (User's MAG) HP.",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "exp",
-                10
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    202,
-                    227,
-                    232
-                ]
-            ],
-            [
-                "equation_heal",
-                "MAGIC_DAMAGE"
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "battle_cast_anim",
-                "Heal"
-            ]
-        ]
-    },
-    {
-        "nid": "ArcanePoison",
-        "name": "Poison",
-        "desc": "Enemy cannot move or attack.",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "status_on_hit",
-                "Poisoned"
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "hit",
-                65
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "prf_unit",
-                [
-                    "Altina"
-                ]
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    62,
-                    255,
-                    52
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "FireLance",
-        "name": "Fire Lance",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            2
-        ],
-        "components": [
-            [
-                "damage",
-                11
-            ],
-            [
-                "hit",
-                85
-            ],
-            [
-                "crit",
-                10
-            ],
-            [
-                "weight",
-                8
-            ],
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    224,
-                    96,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                6
-            ],
-            [
-                "prf_unit",
-                [
-                    "Robin"
-                ]
-            ],
-            [
-                "prf_class",
-                [
-                    "Sage"
-                ]
-            ],
-            [
-                "battle_cast_anim",
-                "Flareblade"
-            ]
-        ]
-    },
-    {
-        "nid": "LightningLance",
-        "name": "Lightning Lance",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "damage",
-                7
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                25
-            ],
-            [
-                "weight",
-                10
-            ],
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    213,
-                    224,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                6
-            ],
-            [
-                "prf_unit",
-                [
-                    "Robin"
-                ]
-            ],
-            [
-                "prf_class",
-                [
-                    "Sage"
-                ]
-            ],
-            [
-                "battle_cast_anim",
-                "Boltblade"
-            ]
-        ]
-    },
-    {
-        "nid": "IceLance",
-        "name": "Ice Lance",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "damage",
-                8
-            ],
-            [
-                "hit",
-                130
-            ],
-            [
-                "crit",
-                10
-            ],
-            [
-                "weight",
-                9
-            ],
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    0,
-                    224,
-                    224
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                6
-            ],
-            [
-                "prf_unit",
-                [
-                    "Robin"
-                ]
-            ],
-            [
-                "prf_class",
-                [
-                    "Sage"
-                ]
-            ],
-            [
-                "battle_cast_anim",
-                "Ice2"
-            ]
-        ]
-    },
-    {
-        "nid": "HealingLance",
-        "name": "Healing Lance",
-        "desc": "Restores (User's MAG + 10) HP.",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "exp",
-                10
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    202,
-                    227,
-                    232
-                ]
-            ],
-            [
-                "equation_heal",
-                "HEALSTAFF"
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "mana_cost",
-                6
-            ],
-            [
-                "prf_unit",
-                [
-                    "Robin"
-                ]
-            ],
-            [
-                "prf_class",
-                [
-                    "Mage_Knight"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "AreaSpells",
-        "name": "Area Spells",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            2
-        ],
-        "components": [
-            [
-                "multi_item",
-                [
-                    "FireStorm",
-                    "LightningStorm",
-                    "IceStorm",
-                    "Quake",
-                    "PoisonStorm"
-                ]
-            ],
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Altina"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "FireStorm",
-        "name": "Fire Storm",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    224,
-                    96,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Fireball"
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -2,
-                            -2
-                        ],
-                        [
-                            1,
-                            -1
-                        ],
-                        [
-                            2,
-                            -2
-                        ],
-                        [
-                            1,
-                            1
-                        ],
-                        [
-                            2,
-                            2
-                        ],
-                        [
-                            -1,
-                            1
-                        ],
-                        [
-                            -2,
-                            2
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "map_hit_sfx",
-                "FireHit"
-            ]
-        ]
-    },
-    {
-        "nid": "LightningStorm",
-        "name": "Lightning Storm",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    224,
-                    224,
-                    15
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "map_target_cast_anim",
-                "Swoosh"
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            -1,
-                            0
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            0,
-                            -2
-                        ],
-                        [
-                            1,
-                            0
-                        ],
-                        [
-                            1,
-                            1
-                        ],
-                        [
-                            0,
-                            2
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "map_hit_sfx",
-                "Thunder"
-            ]
-        ]
-    },
-    {
-        "nid": "IceStorm",
-        "name": "Ice Storm",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    0,
-                    224,
-                    217
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Blizzard"
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            2,
-                            0
-                        ],
-                        [
-                            -2,
-                            0
-                        ],
-                        [
-                            0,
-                            -2
-                        ],
-                        [
-                            0,
-                            2
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            1
-                        ],
-                        [
-                            1,
-                            1
-                        ],
-                        [
-                            1,
-                            -1
-                        ],
-                        [
-                            0,
-                            0
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "map_hit_sfx",
-                "Fimbulvetr1"
-            ]
-        ]
-    },
-    {
-        "nid": "PoisonStorm",
-        "name": "Poison Storm",
-        "desc": "",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    129,
-                    71,
-                    144
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "map_target_cast_anim",
-                "MapPoison"
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            -2,
-                            -1
-                        ],
-                        [
-                            2,
-                            -1
-                        ],
-                        [
-                            2,
-                            1
-                        ],
-                        [
-                            -2,
-                            1
-                        ],
-                        [
-                            -1,
-                            -2
-                        ],
-                        [
-                            1,
-                            -2
-                        ],
-                        [
-                            1,
-                            2
-                        ],
-                        [
-                            -1,
-                            2
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "map_hit_sfx",
-                "Poison"
-            ],
-            [
-                "status_on_hit",
-                "Poisoned"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Altina"
-                ]
-            ],
-            [
-                "eval_available",
-                "any(u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Altina')))"
-            ]
-        ]
-    },
-    {
-        "nid": "Quake",
-        "name": "Quake",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            49
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                4
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    76,
-                    47,
-                    18
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Sandblast"
-            ],
-            [
-                "map_hit_sfx",
-                "StoneHit"
-            ],
-            [
-                "enemy_line_aoe",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Flux",
-        "name": "Flux",
-        "desc": "",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                7
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                8
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "D"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                900
-            ]
-        ]
-    },
-    {
-        "nid": "Luna",
-        "name": "Luna",
-        "desc": "Ignores enemy resistance",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                2
-            ],
-            [
-                "hit",
-                50
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "C"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weight",
-                12
-            ],
-            [
-                "crit",
-                3
-            ],
-            [
-                "value",
-                4200
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "alternate_resist_formula",
-                "ZERO"
-            ],
-            [
-                "battle_cast_anim",
-                "Hex"
-            ]
-        ]
-    },
-    {
-        "nid": "Succubus_Kiss",
-        "name": "Succubus Kiss",
-        "desc": "User recovers HP equal to damage dealt.",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            2
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                70
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                14
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "C"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                3200
-            ],
-            [
-                "lifelink",
-                1.0
-            ],
-            [
-                "battle_cast_anim",
-                "Nyx"
-            ]
-        ]
-    },
-    {
-        "nid": "Eclipse",
-        "name": "Eclipse",
-        "desc": "Halve's the enemy's current HP",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "hit",
-                30
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "B"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                5
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                12
-            ],
-            [
-                "wexp",
-                8
-            ],
-            [
-                "value",
-                4000
-            ],
-            [
-                "min_range",
-                3
-            ],
-            [
-                "max_range",
-                10
-            ],
-            [
-                "status_on_hit",
-                "Eclipse_Helper"
-            ],
-            [
-                "siege_weapon",
-                null
-            ],
-            [
-                "no_double",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Fenrir",
-        "name": "Fenrir",
-        "desc": "",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                15
-            ],
-            [
-                "hit",
-                70
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                18
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "A"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                9000
-            ],
-            [
-                "uses",
-                20
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Gleipnir",
-        "name": "Gleipnir",
-        "desc": "",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                23
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "S"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                20
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "status_on_equip",
-                "Skill_Plus5"
-            ],
-            [
-                "wexp",
-                3
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Naglfar",
-        "name": "Naglfar",
-        "desc": "",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                25
-            ],
-            [
-                "hit",
-                95
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "S"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weight",
-                18
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ]
-        ]
-    },
-    {
         "nid": "Wretched_Air",
         "name": "Wretched Air",
         "desc": "Ignore's enemy defence.",
@@ -19302,6 +20450,310 @@
             [
                 "restore",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "TestScroll",
+        "name": "Scroll template",
+        "desc": "",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            17
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Scroll Test"
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "Warp"
+            ],
+            [
+                "map_hit_sfx",
+                "StageClear"
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Scroll_Bolting",
+        "name": "[Bolting] Scroll ",
+        "desc": "Teaches the unit the <red>Arcane</> spell Bolting: Hits an enemy from far away. Costs <blue>20 mana</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            17
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Scroll Bolting"
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "Warp"
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "value",
+                1500
+            ]
+        ]
+    },
+    {
+        "nid": "Scroll_Shine",
+        "name": "[Shine] Scroll ",
+        "desc": "Teaches the unit the <red>Divine</> spell Shine: Hits an enemy with intermediate divine magic. Costs <blue>5 mana</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            17
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Scroll Shine"
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "Warp"
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "value",
+                1500
+            ]
+        ]
+    },
+    {
+        "nid": "Scroll_Physic",
+        "name": "[Prayer] Scroll ",
+        "desc": "Teaches the unit the <red>Divine</> spell Prayer: Restores (User's MAG + 20) HP from far away. Range is dependent on user's MAG. Costs <blue>8 mana</>.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            17
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Scroll Physic"
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "Warp"
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "value",
+                1500
+            ]
+        ]
+    },
+    {
+        "nid": "Reflection",
+        "name": "Reflection",
+        "desc": "Orcent takes a moment to indulge in his thoughts. Orcent can choose to remove 1 stack of Brutality, Serenity or both.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "map_hit_sfx",
+                "Map In"
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Orcent Reflection"
             ]
         ]
     }

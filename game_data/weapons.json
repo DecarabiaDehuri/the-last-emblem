@@ -137,7 +137,7 @@
         "nid": "Staff",
         "name": "Staff",
         "force_melee_anim": false,
-        "hide_from_display": false,
+        "hide_from_display": true,
         "rank_bonus": [],
         "advantage": [],
         "disadvantage": [],
@@ -155,7 +155,7 @@
         "rank_bonus": [],
         "advantage": [
             {
-                "weapon_type": "Dark",
+                "weapon_type": "Anima",
                 "weapon_rank": "All",
                 "damage": "1",
                 "resist": "0",
@@ -169,7 +169,7 @@
         ],
         "disadvantage": [
             {
-                "weapon_type": "Anima",
+                "weapon_type": "Dark",
                 "weapon_rank": "All",
                 "damage": "-1",
                 "resist": "0",
@@ -195,7 +195,7 @@
         "rank_bonus": [],
         "advantage": [
             {
-                "weapon_type": "Light",
+                "weapon_type": "Dark",
                 "weapon_rank": "All",
                 "damage": "1",
                 "resist": "0",
@@ -209,7 +209,7 @@
         ],
         "disadvantage": [
             {
-                "weapon_type": "Dark",
+                "weapon_type": "Light",
                 "weapon_rank": "All",
                 "damage": "-1",
                 "resist": "0",
@@ -235,7 +235,7 @@
         "rank_bonus": [],
         "advantage": [
             {
-                "weapon_type": "Anima",
+                "weapon_type": "Light",
                 "weapon_rank": "All",
                 "damage": "1",
                 "resist": "0",
@@ -249,7 +249,7 @@
         ],
         "disadvantage": [
             {
-                "weapon_type": "Light",
+                "weapon_type": "Anima",
                 "weapon_rank": "All",
                 "damage": "-1",
                 "resist": "0",
@@ -271,7 +271,7 @@
         "nid": "Whip",
         "name": "Whip",
         "force_melee_anim": false,
-        "hide_from_display": false,
+        "hide_from_display": true,
         "rank_bonus": [],
         "advantage": [],
         "disadvantage": [],
