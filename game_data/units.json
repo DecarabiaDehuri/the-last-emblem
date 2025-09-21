@@ -872,7 +872,16 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "LynineBuffAura"
+            ],
+            [
+                1,
+                "LynineNerfAura"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -1040,7 +1049,7 @@
         "nid": "Mestan",
         "name": "Mestan",
         "desc": "A young monk from Renais. He is a very forthright and pious man.",
-        "variant": null,
+        "variant": "",
         "level": 2,
         "klass": "Assassin",
         "tags": [],
@@ -1172,12 +1181,21 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Cautious_Swipes"
+            ],
+            [
+                1,
+                "Swift_Stab"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 false,
-                0,
+                31,
                 251
             ],
             "Lance": [
@@ -1207,12 +1225,12 @@
             ],
             "Anima": [
                 true,
-                71,
+                0,
                 251
             ],
             "Dark": [
                 false,
-                0,
+                1,
                 251
             ],
             "Default": [
@@ -1225,7 +1243,7 @@
             "Mercenary"
         ],
         "portrait_nid": "nalili2",
-        "affinity": "Anima",
+        "affinity": "Wind",
         "fields": []
     },
     {
@@ -1381,7 +1399,16 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "OriliseBuffAura"
+            ],
+            [
+                1,
+                "OriliseNerfAura"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -1962,7 +1989,7 @@
         "desc": "A young girl from a small village in Grado. She is honest and sincere.",
         "variant": null,
         "level": 1,
-        "klass": "Shaman",
+        "klass": "Slave_Mage",
         "tags": [],
         "bases": {
             "HP": 16,
@@ -1991,15 +2018,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Slim_Lance",
-                false
-            ],
-            [
-                "Speedwing",
-                false
-            ],
-            [
-                "Health_Potion",
+                "SoulSpells",
                 false
             ]
         ],
@@ -2559,11 +2578,7 @@
                 false
             ],
             [
-                "Flux",
-                false
-            ],
-            [
-                "Elixir",
+                "LustSpells",
                 false
             ]
         ],

@@ -1,5 +1,2778 @@
 [
     {
+        "nid": "Orcent_Snipe_Target",
+        "name": "Snipe Target",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            37
+        ],
+        "components": [
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "has_skill(target,'Orcent_Target')"
+            ],
+            [
+                "min_range",
+                4
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "cooldown",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Hop",
+        "name": "Hop",
+        "desc": "Dari hops to an empty space 2 tiles from her. Can attack after hopping. Costs <blue>5 mana</>.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            2
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Throw 1"
+            ],
+            [
+                "mana_cost",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Jump_over",
+        "name": "Jump over",
+        "desc": "Dari jumps over the unit, landing behind them. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            44
+        ],
+        "components": [
+            [
+                "pivot",
+                1
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Throw 2"
+            ],
+            [
+                "mana_cost",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Flaming_Thrust_ability",
+        "name": "Flaming Thrust",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "on_hit_effect",
+                "Fire"
+            ]
+        ]
+    },
+    {
+        "nid": "Cautious_Swipes_ability",
+        "name": "Cautious Swipes",
+        "desc": "[Hilstara] Releases weak but rapid strikes from behind cover.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            25
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "brave_on_attack",
+                null
+            ],
+            [
+                "weight",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "Swift_Stab_ability",
+        "name": "Swift Stab",
+        "desc": "<orange>[Aka]</> Attacks with blinding speed.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Martial_Masturbation_ability",
+        "name": "Martial Masturbation",
+        "desc": "Gain 4 mana. Buffs STR and DEF. [Cooldown: 2]",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "mana_cost",
+                -4
+            ],
+            [
+                "map_cast_anim",
+                "MapSurprise"
+            ],
+            [
+                "map_hit_sfx",
+                "Shine"
+            ],
+            [
+                "self_status_on_hit",
+                "Fap_buff"
+            ],
+            [
+                "cooldown",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Desperate_Masturbation_ability",
+        "name": "Desperate Masturbation",
+        "desc": "Costs 5 HP. Gain 4 mana. Buffs SKL and SPD. [Cooldown: 2]",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "mana_cost",
+                -4
+            ],
+            [
+                "map_cast_anim",
+                "MapSurprise"
+            ],
+            [
+                "map_hit_sfx",
+                "Shine"
+            ],
+            [
+                "self_status_on_hit",
+                "Fap_buff"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "eval_hp_cost",
+                "int(unit.get_max_hp() * 0.1)"
+            ]
+        ]
+    },
+    {
+        "nid": "Healing_Masturbation_ability",
+        "name": "Healing Masturbation",
+        "desc": "Heals HP and status effects. Gain 4 mana. [Cooldown: 2]",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "mana_cost",
+                -4
+            ],
+            [
+                "map_cast_anim",
+                "MapSurprise"
+            ],
+            [
+                "map_hit_sfx",
+                "Shine"
+            ],
+            [
+                "self_status_on_hit",
+                "Fap_buff"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "heal",
+                10
+            ],
+            [
+                "restore",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orgy_of_Blows",
+        "name": "Orgy of Blows",
+        "desc": "Nalili strikes up to 3 adjacent enemies. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            24
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Cleavage",
+        "name": "Cleavage",
+        "desc": "Nalili hits all enemies 2 tiles away. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            -2,
+                            0
+                        ],
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            1,
+                            -2
+                        ],
+                        [
+                            2,
+                            -2
+                        ],
+                        [
+                            2,
+                            -1
+                        ],
+                        [
+                            2,
+                            1
+                        ],
+                        [
+                            2,
+                            2
+                        ],
+                        [
+                            1,
+                            2
+                        ],
+                        [
+                            -1,
+                            2
+                        ],
+                        [
+                            -2,
+                            2
+                        ],
+                        [
+                            -2,
+                            1
+                        ],
+                        [
+                            -2,
+                            -1
+                        ],
+                        [
+                            -2,
+                            -2
+                        ],
+                        [
+                            -1,
+                            -2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Rally"
+            ]
+        ]
+    },
+    {
+        "nid": "LustSpells",
+        "name": "Lust Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Sexual_Torment",
+                    "Succubus_Kiss",
+                    "Haze_of_Sex",
+                    "Illusion",
+                    "Flirt",
+                    "Incubus_Kings_Emissary",
+                    "LustLuna",
+                    "LustEclipse"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sexual_Torment",
+        "name": "Sexual Torment",
+        "desc": "Attacks the target with sexual tension. Costs <blue>2 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            23
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Succubus_Kiss",
+        "name": "Succubus Kiss",
+        "desc": "User recovers HP equal to damage dealt. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            24
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "lifelink",
+                1.0
+            ],
+            [
+                "battle_cast_anim",
+                "Nyx"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "LustLuna",
+        "name": "Weaponized Tingling",
+        "desc": "Ignores enemy resistance. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            49
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "alternate_resist_formula",
+                "ZERO"
+            ],
+            [
+                "battle_cast_anim",
+                "Hex"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "LustEclipse",
+        "name": "Halted Orgasm",
+        "desc": "Halves the enemy's current HP. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            35
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "wexp",
+                8
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "status_on_hit",
+                "Eclipse_Helper"
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flux",
+        "name": "Flux",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                900
+            ]
+        ]
+    },
+    {
+        "nid": "Luna",
+        "name": "Luna",
+        "desc": "Ignores enemy resistance",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "value",
+                4200
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "alternate_resist_formula",
+                "ZERO"
+            ],
+            [
+                "battle_cast_anim",
+                "Hex"
+            ]
+        ]
+    },
+    {
+        "nid": "Eclipse",
+        "name": "Eclipse",
+        "desc": "Halve's the enemy's current HP",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                5
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "wexp",
+                8
+            ],
+            [
+                "value",
+                4000
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "status_on_hit",
+                "Eclipse_Helper"
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fenrir",
+        "name": "Fenrir",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                9000
+            ],
+            [
+                "uses",
+                20
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Gleipnir",
+        "name": "Gleipnir",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "uses",
+                30
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "status_on_equip",
+                "Skill_Plus5"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Naglfar",
+        "name": "Naglfar",
+        "desc": "",
+        "icon_nid": "Dark",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "SpecialWhips",
+        "name": "SpecialWhips",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            46
+        ],
+        "components": [
+            [
+                "multi_item",
+                [
+                    "Lightning_Whip_effect",
+                    "Earth_Whip_effect",
+                    "Pure_Whip_effect",
+                    "Lash_of_Torment_effect",
+                    "Wild_Lashing_effect"
+                ]
+            ],
+            [
+                "multi_item_hides_unavailable",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning_Whip_effect",
+        "name": "Lightning Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "magic_at_range",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "battle_cast_anim",
+                "Thunder_Lightning_spell"
+            ],
+            [
+                "no_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Earth_Whip_effect",
+        "name": "Earth Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Boulders"
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Whip_effect",
+        "name": "Pure Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            36
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "battle_cast_anim",
+                "ShineFlower"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Wild_Lashing_effect",
+        "name": "Wild Lashing",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            38
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "PromoRing"
+            ]
+        ]
+    },
+    {
+        "nid": "Lash_of_Torment_effect",
+        "name": "Lash of Torment",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "battle_cast_anim",
+                "Lash_of_Torment_spell"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Careful_Whip",
+        "name": "Careful Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            40
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "battle_cast_anim",
+                "Lash_of_Torment_spell"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Avoid5"
+            ]
+        ]
+    },
+    {
+        "nid": "Lustful_Emissaries_effect",
+        "name": "Lustful Emissaries",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "enemy_blast_aoe",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Lust_proc"
+            ],
+            [
+                "magic_at_range",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Lustful_Emissaries_spell"
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Kiss_effect",
+        "name": "Forceful Kiss",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Forceful_Kiss_spell"
+            ],
+            [
+                "crit",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy_effect",
+        "name": "Combat Fantasy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            45
+        ],
+        "components": [
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Combat_Fantasy_buff"
+            ],
+            [
+                "self_status_on_hit",
+                "Combat_Fantasy_buff"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ],
+            [
+                "map_cast_sfx",
+                "Heal2"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Haze_of_Sex",
+        "name": "Haze of Sex",
+        "desc": "Also affects enemies around the target. Chance of inflicting <red>[CHARMED]</>. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            26
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "enemy_blast_aoe",
+                1
+            ],
+            [
+                "status_on_equip",
+                "Proc_Charmed_Yarra"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Dance1"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "spell",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Illusion",
+        "name": "Illusion",
+        "desc": "Yarra illusions herself and allies close to her. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "ally_blast_aoe",
+                1
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Illusioned"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Flirt",
+        "name": "Flirt",
+        "desc": "Yarra flirts with the enemy, trying to make them <red>[CHARMED]</>. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Charmed_Yarra"
+            ],
+            [
+                "battle_cast_anim",
+                "Refresh"
+            ],
+            [
+                "hit",
+                60
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Incubus_Kings_Emissary",
+        "name": "Incubus King's Emissary",
+        "desc": "Also affects enemies around the target. Chance of inflicting <red>[LUST DEATH]</>. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            48
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    221,
+                    0,
+                    203
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "enemy_blast_aoe",
+                2
+            ],
+            [
+                "status_on_equip",
+                "Proc_LustDeath_Yarra"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "DemonLight"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "spell",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "testmana",
+        "name": "testmana",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "value",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "swap",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "gain_mana_after_combat",
+                "5 if 'Succubus' in target.tags else 0"
+            ]
+        ]
+    },
+    {
+        "nid": "SoulSpells",
+        "name": "Soulmancy Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            48
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "SoulCopy",
+                    "SoulRescue",
+                    "SoulWarp",
+                    "SoulShove",
+                    "SoulSwap",
+                    "SoulPuppetAI"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "SoulCopy",
+        "name": "Copy enemy",
+        "desc": "Trin copies the target enemy and replaces it with an allied version. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "value",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Trin copy"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "ShamanRune"
+            ],
+            [
+                "map_cast_anim",
+                "MapSpiritbane"
+            ],
+            [
+                "mana_cost",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "SoulRescue",
+        "name": "Rescue",
+        "desc": "Bring an ally to a space adjacent to the user. Range is dependent on user's MAG. Costs <blue>10 mana</>. Half the cost is refunded if used on a Trin's puppet.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "sequence_item",
+                [
+                    "Rescue1",
+                    "Rescue2"
+                ]
+            ],
+            [
+                "no_ai",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_equation_range",
+                "MAGIC_RANGE"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "gain_mana_after_combat",
+                "5 if 'puppet' in target.tags else 0"
+            ],
+            [
+                "target_unit",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "SoulWarp",
+        "name": "Warp",
+        "desc": "Move an ally to another square. Range is dependent on user's MAG. Costs <blue>10 mana</>. Half the cost is refunded if used on a Trin's puppet.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "sequence_item",
+                [
+                    "Warp1",
+                    "Warp2"
+                ]
+            ],
+            [
+                "no_ai",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "gain_mana_after_combat",
+                "5 if 'puppet' in target.tags else 0"
+            ]
+        ]
+    },
+    {
+        "nid": "SoulShove",
+        "name": "Shove",
+        "desc": "Trin pushes an unit 2 tiles away.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove_flex_stops",
+                2
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "exp",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "SoulSwap",
+        "name": "Swap",
+        "desc": "Trin swap places with the target.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "swap",
+                null
+            ],
+            [
+                "exp",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "SoulPuppetAI",
+        "name": "Command Puppets",
+        "desc": "Trin gives orders on what the copies' behavior should be.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Trin change copies AI"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "eval_available",
+                "game.game_vars['trincopies'] > 0"
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "SkillActivate"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "NecroSpells",
         "name": "Necromancy Spells",
         "desc": "Access this unit's available spells.",
@@ -137,11 +2910,11 @@
             ],
             [
                 "damage",
-                10
+                15
             ],
             [
                 "hit",
-                75
+                60
             ],
             [
                 "crit",
@@ -209,7 +2982,7 @@
             ],
             [
                 "damage",
-                10
+                7
             ],
             [
                 "hit",
@@ -325,7 +3098,7 @@
         "components": [
             [
                 "eval_available",
-                "has_skill('Wynn', 'Bone_stack')"
+                "(has_skill('Wynn', 'Bone_stack')) and (game.game_vars['wynnress'] == 1)"
             ],
             [
                 "empty_tile_target_restrict",
@@ -372,11 +3145,15 @@
             ],
             [
                 "map_cast_sfx",
-                "Torch"
+                "DebuffRecover"
             ],
             [
                 "event_on_hit",
                 "Global Wynn reanimate"
+            ],
+            [
+                "no_alert_on_break",
+                null
             ]
         ]
     },
@@ -3242,633 +6019,6 @@
         ]
     },
     {
-        "nid": "Flux",
-        "name": "Flux",
-        "desc": "",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                7
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                8
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "D"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                900
-            ]
-        ]
-    },
-    {
-        "nid": "Luna",
-        "name": "Luna",
-        "desc": "Ignores enemy resistance",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                2
-            ],
-            [
-                "hit",
-                50
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "C"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weight",
-                12
-            ],
-            [
-                "crit",
-                3
-            ],
-            [
-                "value",
-                4200
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "alternate_resist_formula",
-                "ZERO"
-            ],
-            [
-                "battle_cast_anim",
-                "Hex"
-            ]
-        ]
-    },
-    {
-        "nid": "Succubus_Kiss",
-        "name": "Succubus Kiss",
-        "desc": "User recovers HP equal to damage dealt.",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            2
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                70
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                14
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "C"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                3200
-            ],
-            [
-                "lifelink",
-                1.0
-            ],
-            [
-                "battle_cast_anim",
-                "Nyx"
-            ]
-        ]
-    },
-    {
-        "nid": "Eclipse",
-        "name": "Eclipse",
-        "desc": "Halve's the enemy's current HP",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "hit",
-                30
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "B"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                5
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                12
-            ],
-            [
-                "wexp",
-                8
-            ],
-            [
-                "value",
-                4000
-            ],
-            [
-                "min_range",
-                3
-            ],
-            [
-                "max_range",
-                10
-            ],
-            [
-                "status_on_hit",
-                "Eclipse_Helper"
-            ],
-            [
-                "siege_weapon",
-                null
-            ],
-            [
-                "no_double",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Fenrir",
-        "name": "Fenrir",
-        "desc": "",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                15
-            ],
-            [
-                "hit",
-                70
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                18
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "A"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "value",
-                9000
-            ],
-            [
-                "uses",
-                20
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Gleipnir",
-        "name": "Gleipnir",
-        "desc": "",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                23
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "S"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "uses",
-                30
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "weight",
-                20
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "status_on_equip",
-                "Skill_Plus5"
-            ],
-            [
-                "wexp",
-                3
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Naglfar",
-        "name": "Naglfar",
-        "desc": "",
-        "icon_nid": "Dark",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                25
-            ],
-            [
-                "hit",
-                95
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "S"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weight",
-                18
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "SoulRescue",
-        "name": "Rescue",
-        "desc": "Bring an ally to a space adjacent to the user. Range is dependent on user's MAG. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            51
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "exp",
-                15
-            ],
-            [
-                "sequence_item",
-                [
-                    "Rescue1",
-                    "Rescue2"
-                ]
-            ],
-            [
-                "no_ai",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_equation_range",
-                "MAGIC_RANGE"
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "SoulWarp",
-        "name": "Warp",
-        "desc": "Move an ally to another square. Range is dependent on user's MAG. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            50
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "exp",
-                15
-            ],
-            [
-                "sequence_item",
-                [
-                    "Warp1",
-                    "Warp2"
-                ]
-            ],
-            [
-                "no_ai",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "mana_cost",
-                10
-            ]
-        ]
-    },
-    {
         "nid": "Loot_Bag",
         "name": "Loot Bag",
         "desc": "Use this item to gain a random <green>stat booster</>. Does not end unit's turn.",
@@ -4694,17 +6844,6 @@
                 null
             ]
         ]
-    },
-    {
-        "nid": "new",
-        "name": "new",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
     },
     {
         "nid": "Masturbate",
@@ -6691,535 +8830,6 @@
         ]
     },
     {
-        "nid": "Flaming_Thrust_ability",
-        "name": "Flaming Thrust",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            18
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "on_hit_effect",
-                "Fire"
-            ]
-        ]
-    },
-    {
-        "nid": "Cautious_Swipes_ability",
-        "name": "Cautious Swipes",
-        "desc": "Releases weak but rapid strikes from behind cover.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            3,
-            25
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "damage",
-                3
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "brave_on_attack",
-                null
-            ],
-            [
-                "weight",
-                3
-            ]
-        ]
-    },
-    {
-        "nid": "Swift_Stab_ability",
-        "name": "Swift Stab",
-        "desc": "Attacks with blinding speed.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            46
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "cannot_be_countered",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Martial_Masturbation_ability",
-        "name": "Martial Masturbation",
-        "desc": "Gain 4 mana. Buffs STR and DEF. [Cooldown: 2]",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            9
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "mana_cost",
-                -4
-            ],
-            [
-                "map_cast_anim",
-                "MapSurprise"
-            ],
-            [
-                "map_hit_sfx",
-                "Shine"
-            ],
-            [
-                "self_status_on_hit",
-                "Fap_buff"
-            ],
-            [
-                "cooldown",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Desperate_Masturbation_ability",
-        "name": "Desperate Masturbation",
-        "desc": "Costs 5 HP. Gain 4 mana. Buffs SKL and SPD. [Cooldown: 2]",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            9
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "mana_cost",
-                -4
-            ],
-            [
-                "map_cast_anim",
-                "MapSurprise"
-            ],
-            [
-                "map_hit_sfx",
-                "Shine"
-            ],
-            [
-                "self_status_on_hit",
-                "Fap_buff"
-            ],
-            [
-                "cooldown",
-                2
-            ],
-            [
-                "eval_hp_cost",
-                "int(unit.get_max_hp() * 0.1)"
-            ]
-        ]
-    },
-    {
-        "nid": "Healing_Masturbation_ability",
-        "name": "Healing Masturbation",
-        "desc": "Heals HP and status effects. Gain 4 mana. [Cooldown: 2]",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            9
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "mana_cost",
-                -4
-            ],
-            [
-                "map_cast_anim",
-                "MapSurprise"
-            ],
-            [
-                "map_hit_sfx",
-                "Shine"
-            ],
-            [
-                "self_status_on_hit",
-                "Fap_buff"
-            ],
-            [
-                "cooldown",
-                2
-            ],
-            [
-                "heal",
-                10
-            ],
-            [
-                "restore",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Orgy_of_Blows",
-        "name": "Orgy of Blows",
-        "desc": "Nalili strikes up to 3 adjacent enemies. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            24
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "multi_target",
-                3
-            ],
-            [
-                "allow_less_than_max_targets",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "damage",
-                9
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "Cleavage",
-        "name": "Cleavage",
-        "desc": "Nalili hits all enemies 2 tiles away. Costs <blue>15 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            51
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            0,
-                            -2
-                        ],
-                        [
-                            -2,
-                            0
-                        ],
-                        [
-                            2,
-                            0
-                        ],
-                        [
-                            0,
-                            2
-                        ],
-                        [
-                            1,
-                            -2
-                        ],
-                        [
-                            2,
-                            -2
-                        ],
-                        [
-                            2,
-                            -1
-                        ],
-                        [
-                            2,
-                            1
-                        ],
-                        [
-                            2,
-                            2
-                        ],
-                        [
-                            1,
-                            2
-                        ],
-                        [
-                            -1,
-                            2
-                        ],
-                        [
-                            -2,
-                            2
-                        ],
-                        [
-                            -2,
-                            1
-                        ],
-                        [
-                            -2,
-                            -1
-                        ],
-                        [
-                            -2,
-                            -2
-                        ],
-                        [
-                            -1,
-                            -2
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Rally"
-            ]
-        ]
-    },
-    {
         "nid": "All_Embracing_Care_ability",
         "name": "All-Embracing Care",
         "desc": "",
@@ -8389,536 +9999,6 @@
                 null
             ]
         ]
-    },
-    {
-        "nid": "Lightning_Whip_effect",
-        "name": "Lightning Whip",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "magic_at_range",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "battle_cast_anim",
-                "Thunder_Lightning_spell"
-            ],
-            [
-                "no_double",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Earth_Whip_effect",
-        "name": "Earth Whip",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            7
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Boulders"
-            ]
-        ]
-    },
-    {
-        "nid": "Pure_Whip_effect",
-        "name": "Pure Whip",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "battle_cast_anim",
-                "ShineFlower"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Monster"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 0,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Lash_of_Torment_effect",
-        "name": "Lash of Torment",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "battle_cast_anim",
-                "Lash_of_Torment_spell"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "magic",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Wild_Lashing_effect",
-        "name": "Wild Lashing",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "PromoRing"
-            ]
-        ]
-    },
-    {
-        "nid": "Lustful_Emissaries_effect",
-        "name": "Lustful Emissaries",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "damage",
-                3
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "enemy_blast_aoe",
-                2
-            ],
-            [
-                "status_on_hit",
-                "Lust_proc"
-            ],
-            [
-                "magic_at_range",
-                null
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Lustful_Emissaries_spell"
-            ]
-        ]
-    },
-    {
-        "nid": "Forceful_Kiss_effect",
-        "name": "Forceful Kiss",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Forceful_Kiss_spell"
-            ],
-            [
-                "crit",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "Combat_Fantasy_effect",
-        "name": "Combat Fantasy",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            8
-        ],
-        "components": [
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Combat_Fantasy_buff"
-            ],
-            [
-                "self_status_on_hit",
-                "Combat_Fantasy_buff"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_anim",
-                "MapMediumHealTrans"
-            ],
-            [
-                "map_cast_sfx",
-                "Heal2"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Illusion",
-        "name": "new_1",
-        "desc": "Fazer uma illusion magic pra yarra!",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
     },
     {
         "nid": "Furious_Strikes_ability",

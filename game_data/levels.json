@@ -9215,8 +9215,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
-                    14
+                    4,
+                    15
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -9234,8 +9234,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    16,
-                    17
+                    18,
+                    20
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -18550,7 +18550,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
+                    5,
                     7
                 ],
                 "starting_traveler": null,
@@ -18562,7 +18562,10 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    6,
+                    8
+                ],
                 "starting_traveler": null,
                 "generic": false
             },
@@ -18572,7 +18575,10 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    10,
+                    6
+                ],
                 "starting_traveler": null,
                 "generic": false
             },
@@ -18594,7 +18600,7 @@
                 "ai_group": "",
                 "starting_position": [
                     9,
-                    7
+                    6
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -18659,8 +18665,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    6
+                    10,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -18685,8 +18691,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    14,
-                    2
+                    6,
+                    0
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -18705,12 +18711,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    1,
-                    6
+                    3,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -18729,12 +18735,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    7
+                    4,
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -18793,11 +18799,122 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
+                    4,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Trin",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 7,
+                "klass": "Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "NecroSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
                     5
                 ],
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 8,
+                "klass": "Troubadour",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "NecroSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "106",
+                "variant": null,
+                "level": 1,
+                "klass": "Pirate",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "NecroSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Lynine",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Hilstara",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [

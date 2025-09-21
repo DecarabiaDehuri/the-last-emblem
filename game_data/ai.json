@@ -1061,5 +1061,87 @@
         "priority": 5,
         "offense_bias": 2,
         "roam_ai": false
+    },
+    {
+        "nid": "DefendTrin",
+        "behaviours": [
+            {
+                "action": "Move_to",
+                "target": "Unit",
+                "target_spec": [
+                    "Name",
+                    "Trin"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": null,
+                "view_range": -2,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "None",
+                "target": "None",
+                "target_spec": null,
+                "view_range": 0,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2,
+        "roam_ai": false
+    },
+    {
+        "nid": "Charmed_Yarra",
+        "behaviours": [
+            {
+                "action": "Move_to",
+                "target": "Unit",
+                "target_spec": [
+                    "Name",
+                    "Yarra"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "None",
+                "target": "None",
+                "target_spec": 0,
+                "view_range": 0,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "None",
+                "target": "None",
+                "target_spec": null,
+                "view_range": 0,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2,
+        "roam_ai": false
     }
 ]

@@ -1,5 +1,1311 @@
 [
     {
+        "nid": "Slippery",
+        "name": "Slippery",
+        "desc": "Dari can pass through enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            41
+        ],
+        "components": [
+            [
+                "pass",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Triumphant",
+        "name": "Triumphant",
+        "desc": "Dari can move again after defeating an enemy unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            50
+        ],
+        "components": [
+            [
+                "modern_galeforce",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Scout",
+        "name": "Scout",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            41
+        ],
+        "components": [
+            [
+                "aura",
+                "Orcent_Target"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orcent_Target_proc",
+        "name": "Targeted PROC",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            23
+        ],
+        "components": [
+            [
+                "endstep_skill_gain",
+                "Orcent_Target"
+            ]
+        ]
+    },
+    {
+        "nid": "Orcent_Target",
+        "name": "Targeted TRUE",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            23
+        ],
+        "components": []
+    },
+    {
+        "nid": "new_1",
+        "name": "new_1",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Unpeople",
+        "name": "Severed Sexuality",
+        "desc": "Unpeople give off an aura that negatively affects Succubi nearby.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            42
+        ],
+        "components": [
+            [
+                "aura",
+                "Unpeople_effect"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "unit"
+            ]
+        ]
+    },
+    {
+        "nid": "Unpeople_effect",
+        "name": "Sexual dampening",
+        "desc": "This Succubus is repulsed by the presence of an Unperson nearby! Stats diminished.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            36
+        ],
+        "components": [
+            [
+                "condition",
+                "'Succubus' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        0.8
+                    ],
+                    [
+                        "MAG",
+                        0.8
+                    ],
+                    [
+                        "SKL",
+                        0.8
+                    ],
+                    [
+                        "SPD",
+                        0.8
+                    ],
+                    [
+                        "LCK",
+                        0.8
+                    ],
+                    [
+                        "DEF",
+                        0.8
+                    ],
+                    [
+                        "RES",
+                        0.8
+                    ]
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapStatDecrease"
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning_Whip",
+        "name": "Lightning Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "ability",
+                "Lightning_Whip_effect"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Earth_Whip",
+        "name": "Earth Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "ability",
+                "Earth_Whip_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Altina'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Earth"
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Whip",
+        "name": "Pure Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            36
+        ],
+        "components": [
+            [
+                "ability",
+                "Pure_Whip_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Vhala'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Pure"
+            ]
+        ]
+    },
+    {
+        "nid": "Wild_Lashing",
+        "name": "Wild Lashing",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            39
+        ],
+        "components": [
+            [
+                "ability",
+                "Wild_Lashing_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "astra_proc",
+                {
+                    "extra_attacks": 2,
+                    "damage_percent": 0.5,
+                    "show_proc_effects": false
+                }
+            ],
+            [
+                "alternate_battle_anim",
+                "Wild"
+            ]
+        ]
+    },
+    {
+        "nid": "Lash_of_Torment",
+        "name": "Lash of Torment",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "ability",
+                "Lash_of_Torment_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Wild"
+            ]
+        ]
+    },
+    {
+        "nid": "Lustful_Emissaries",
+        "name": "Lutsful Emissaries",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "ability",
+                "Lustful_Emissaries_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Attack"
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Kiss",
+        "name": "Forceful Kiss",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "ability",
+                "Forceful_Kiss_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Attack"
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy",
+        "name": "Combat Fantasy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "ability",
+                "Combat_Fantasy_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy_buff",
+        "name": "Combat Fantasy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "time",
+                6
+            ]
+        ]
+    },
+    {
+        "nid": "Illusioned",
+        "name": "Illusioned",
+        "desc": "Unit's presence is being veiled by Yarra's illusions. Lose this status after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "modify_ai_priority",
+                0.0
+            ],
+            [
+                "pass",
+                null
+            ],
+            [
+                "unit_tint",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Charmed_Yarra",
+        "name": "<red>[CHARMED]</>",
+        "desc": "Unit is charmed by Yarra's exquisite presence and will follow her without attacking. Status is lost when getting hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            52
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "change_ai",
+                "Charmed_Yarra"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    240,
+                    78,
+                    189
+                ]
+            ],
+            [
+                "lost_on_take_hit",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_Charmed_Yarra",
+        "name": "Proc Charmed Yarra",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 7"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Charmed_Yarra"
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_LustDeath_Yarra",
+        "name": "Proc LustDeath Yarra",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 9"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Lust_Death"
+            ]
+        ]
+    },
+    {
+        "nid": "Martial_Masturbation",
+        "name": "Martial Masturbation",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Desperate_Masturbation",
+        "name": "Desperate Masturbation",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Varia'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Healing_Masturbation",
+        "name": "Healing Masturbation",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            9
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flaming_Thrust",
+        "name": "Flaming Thrust",
+        "desc": "<green>[Robin]</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ],
+            [
+                "has_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Cautious_Swipes",
+        "name": "Cautious Swipes",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            20
+        ],
+        "components": [
+            [
+                "ability",
+                "Cautious_Swipes_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Swift_Stab",
+        "name": "Swift Stab",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            18
+        ],
+        "components": [
+            [
+                "ability",
+                "Swift_Stab_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Teste",
+        "name": "Teste",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    255,
+                    0,
+                    4
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "LynineBuffAura",
+        "name": "LynineBuffAura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            31
+        ],
+        "components": [
+            [
+                "aura",
+                "ResistBuff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "LynineNerfAura",
+        "name": "LynineNerfAura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            31
+        ],
+        "components": [
+            [
+                "aura",
+                "ResistNerf"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "OriliseBuffAura",
+        "name": "OriliseBuffAura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            31
+        ],
+        "components": [
+            [
+                "aura",
+                "DamageBuff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "OriliseNerfAura",
+        "name": "OriliseNerfAura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            31
+        ],
+        "components": [
+            [
+                "aura",
+                "DamageNerf"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "SuccubusGrowth",
+        "name": "Lynine's favor",
+        "desc": "This succubus is being inspired by Elder Lynine. While this is active, bonus growths when leveling up.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        10
+                    ],
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "'Succubus' in unit.tags"
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "ResistBuff",
+        "name": "Darghelon's blessing",
+        "desc": "Elder Lynine is granting this unit 30% more protection against enemy attacks.\n<red>Does not work if paired with Gheldaron's blessing.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            34
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.7000000000000001
+            ],
+            [
+                "self_nihil",
+                [
+                    "DamageBuff"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "ResistNerf",
+        "name": "Lynine's corruption",
+        "desc": "Elder Lynine is using lust magic to make this unit 30% more vulnerable against attacks.\n<red>Does not work if paired with Orilise's scheming.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            34
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                1.3
+            ],
+            [
+                "self_nihil",
+                [
+                    "DamageNerf"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DamageBuff",
+        "name": "Gheldaron's blessing",
+        "desc": "<green>Reliar</> Orilise is granting this unit 30% more damage.\n<red>Does not work if paired with Darghelon's blessing.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            34
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                1.3000000000000003
+            ],
+            [
+                "self_nihil",
+                [
+                    "ResistBuff"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DamageNerf",
+        "name": "Orilise's scheming",
+        "desc": "<green>Reliar</> Orilise's provocations are penalizing this unit with 30% less damage.\n<red>Does not work if paired with Lynine's corruption.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            34
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                0.7
+            ],
+            [
+                "self_nihil",
+                [
+                    "ResistNerf"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Copy_debuff",
+        "name": "Worthless",
+        "desc": "This puppet is but a shell of its former self. Its stats are diminished. This effect is stronger for each puppet currently on field.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            51
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "MAG",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "SKL",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "SPD",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "LCK",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "DEF",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "RES",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "CON",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "MOV",
+                        "-(game.game_vars['trincopies']) "
+                    ],
+                    [
+                        "HP",
+                        "-(2 * game.game_vars['trincopies']) "
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Trin_debuff",
+        "name": "Burden",
+        "desc": "Trin has one stack of this for each puppet currently on field. Decreases MOV by 1 and costs <blue>1 mana</> per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            51
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -1
+                    ]
+                ]
+            ],
+            [
+                "mana_regeneration",
+                -1
+            ]
+        ]
+    },
+    {
         "nid": "Active_Synergy",
         "name": "Active Synergy",
         "desc": "Unit is activating the synergy ability of an ally nearby.",
@@ -785,7 +2091,7 @@
     {
         "nid": "Lust_Death",
         "name": "<red>[LUST DEATH]</>",
-        "desc": "Unit is incapacitated.",
+        "desc": "Unit is incapacitated until the end of chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -7525,246 +8831,6 @@
         ]
     },
     {
-        "nid": "Martial_Masturbation",
-        "name": "Martial Masturbation",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            9
-        ],
-        "components": [
-            [
-                "ability",
-                "Flaming_Thrust_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Desperate_Masturbation",
-        "name": "Desperate Masturbation",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            9
-        ],
-        "components": [
-            [
-                "ability",
-                "Flaming_Thrust_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Varia'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Healing_Masturbation",
-        "name": "Healing Masturbation",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            9
-        ],
-        "components": [
-            [
-                "ability",
-                "Flaming_Thrust_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Flaming_Thrust",
-        "name": "Flaming Thrust",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            18
-        ],
-        "components": [
-            [
-                "ability",
-                "Flaming_Thrust_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Cautious_Swipes",
-        "name": "Cautious Swipes",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            20
-        ],
-        "components": [
-            [
-                "ability",
-                "Cautious_Swipes_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Swift_Stab",
-        "name": "Swift Stab",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            18
-        ],
-        "components": [
-            [
-                "ability",
-                "Swift_Stab_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Pretty_Lance",
         "name": "Pretty Lance",
         "desc": "",
@@ -8056,423 +9122,6 @@
             [
                 "combat_condition",
                 "unit2.team == 'enemy' or unit2.team == 'enemy2'"
-            ]
-        ]
-    },
-    {
-        "nid": "Lightning_Whip",
-        "name": "Lightning Whip",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "ability",
-                "Lightning_Whip_effect"
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
-            ]
-        ]
-    },
-    {
-        "nid": "Earth_Whip",
-        "name": "Earth Whip",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            7
-        ],
-        "components": [
-            [
-                "ability",
-                "Earth_Whip_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Altina'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "alternate_battle_anim",
-                "Earth"
-            ]
-        ]
-    },
-    {
-        "nid": "Pure_Whip",
-        "name": "Pure Whip",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "ability",
-                "Pure_Whip_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Vhala'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "alternate_battle_anim",
-                "Pure"
-            ]
-        ]
-    },
-    {
-        "nid": "Wild_Lashing",
-        "name": "Wild Lashing",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "ability",
-                "Wild_Lashing_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "astra_proc",
-                {
-                    "extra_attacks": 2,
-                    "damage_percent": 0.5,
-                    "show_proc_effects": false
-                }
-            ],
-            [
-                "alternate_battle_anim",
-                "Wild"
-            ]
-        ]
-    },
-    {
-        "nid": "Lash_of_Torment",
-        "name": "Lash of Torment",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "ability",
-                "Lash_of_Torment_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "alternate_battle_anim",
-                "Wild"
-            ]
-        ]
-    },
-    {
-        "nid": "Lustful_Emissaries",
-        "name": "Lutsful Emissaries",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "ability",
-                "Lustful_Emissaries_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "alternate_battle_anim",
-                "Attack"
-            ]
-        ]
-    },
-    {
-        "nid": "Forceful_Kiss",
-        "name": "Forceful Kiss",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "ability",
-                "Forceful_Kiss_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "alternate_battle_anim",
-                "Attack"
-            ]
-        ]
-    },
-    {
-        "nid": "Combat_Fantasy",
-        "name": "Combat Fantasy",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            8
-        ],
-        "components": [
-            [
-                "ability",
-                "Combat_Fantasy_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Combat_Fantasy_buff",
-        "name": "Combat Fantasy",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            52
-        ],
-        "components": [
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        1
-                    ],
-                    [
-                        "MAG",
-                        1
-                    ],
-                    [
-                        "DEF",
-                        1
-                    ],
-                    [
-                        "RES",
-                        1
-                    ]
-                ]
-            ],
-            [
-                "time",
-                6
-            ]
-        ]
-    },
-    {
-        "nid": "Illusioned",
-        "name": "Illusioned",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "modify_ai_priority",
-                0.0
-            ],
-            [
-                "pass",
-                null
-            ],
-            [
-                "unit_tint",
-                [
-                    0,
-                    0,
-                    0
-                ]
             ]
         ]
     },
@@ -10183,6 +10832,22 @@
                         1
                     ]
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Snipe_Target",
+        "name": "Snipe Target",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            37
+        ],
+        "components": [
+            [
+                "ability",
+                "Orcent_Snipe_Target"
             ]
         ]
     },
