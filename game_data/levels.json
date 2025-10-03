@@ -18524,7 +18524,7 @@
         "ai_groups": []
     },
     {
-        "nid": "9",
+        "nid": "teste2",
         "name": "Testetls",
         "tilemap": "Grado Keep",
         "bg_tilemap": null,
@@ -18550,7 +18550,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
+                    2,
                     7
                 ],
                 "starting_traveler": null,
@@ -18563,8 +18563,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    8
+                    15,
+                    2
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -18631,7 +18631,10 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    7,
+                    4
+                ],
                 "starting_traveler": null,
                 "generic": false
             },
@@ -18691,8 +18694,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    0
+                    5,
+                    4
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -18826,18 +18829,18 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "NecroSpells",
+                        "Iron_Lance",
                         false
                     ]
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    5
+                    14,
+                    1
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -18910,8 +18913,34 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    5
+                    6,
+                    3
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Balia",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    4,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Ginasta",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    4
                 ],
                 "starting_traveler": null,
                 "generic": false

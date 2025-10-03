@@ -12592,7 +12592,7 @@
     {
         "name": "New Event",
         "trigger": "level_start",
-        "level_nid": "9",
+        "level_nid": "teste2",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -12607,9 +12607,15 @@
             "give_item;Simon;testmana;;no_banner",
             "give_skill;Orcent;Snipe_Target;;no_banner",
             "give_skill;Dari;Scout;;no_banner",
+            "give_skill;Balia;Intervention;;no_banner",
+            "give_skill;Hilstara;Mighty_Bash;;no_banner",
+            "give_skill;Ginasta;Agile_Guard;;no_banner",
+            "give_item;Simon;manauses;;no_banner",
+            "give_skill;Orilise;Provoke;;no_banner",
+            "give_skill;Orilise;Irritate;;no_banner",
             "#kill_unit;Yarra"
         ],
-        "nid": "9 New Event"
+        "nid": "teste2 New Event"
     },
     {
         "name": "ReplaceProtect",
@@ -12931,7 +12937,7 @@
     {
         "name": "New Event_1",
         "trigger": "phase_change",
-        "level_nid": "9",
+        "level_nid": "teste2",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -12942,21 +12948,23 @@
             "give_skill;Wynn;Bone_stack;;no_banner",
             ""
         ],
-        "nid": "9 New Event_1"
+        "nid": "teste2 New Event_1"
     },
     {
         "name": "New Event_2",
         "trigger": "on_talk",
-        "level_nid": "9",
+        "level_nid": "teste2",
         "condition": "unit.nid == 'Simon' and unit2.nid == 'Wynn'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "kill_unit;Orilise;immediate",
-            "s;System;Orilise pos = {eval: repr(u('Orilise').position)}",
-            "s;System;Orilise dead = {eval: str(u('Orilise').dead)}",
-            "s;System;Orilise dying = {eval: str(u('Orilise').is_dying)}",
+            "give_skill;Orcent;Calm_Stack;;no_banner",
+            "give_skill;Lynine;Overgasm;;no_banner",
+            "#kill_unit;Orilise;immediate",
+            "#s;System;Orilise pos = {eval: repr(u('Orilise').position)}",
+            "#s;System;Orilise dead = {eval: str(u('Orilise').dead)}",
+            "#s;System;Orilise dying = {eval: str(u('Orilise').is_dying)}",
             "#s;system;{eval:[u.nid for u in game.get_all_player_units() if u.dead]}",
             "",
             "#level_var;testereanim;{eval:[u.nid for u in game.get_all_player_units() if u.dead]}",
@@ -12967,7 +12975,7 @@
             "#end",
             "    "
         ],
-        "nid": "9 New Event_2"
+        "nid": "teste2 New Event_2"
     },
     {
         "name": "Wynn can reanimate",
@@ -13104,5 +13112,64 @@
             "wait;300"
         ],
         "nid": "Global Trin change copies AI"
+    },
+    {
+        "name": "Balia Intervention resets Orcent stacks",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;300",
+            "multi_add_portrait;Balia;Left;Orcent;Right",
+            "remove_skill;Orcent;Brute_Stack;10;no_banner",
+            "remove_skill;Orcent;Calm_Stack;10;no_banner",
+            "s;Balia;There you go.",
+            "s;Orcent;I am most grateful for your aid.",
+            "multi_remove_portrait;Balia;Orcent",
+            "wait;300"
+        ],
+        "nid": "Global Balia Intervention resets Orcent stacks"
+    },
+    {
+        "name": "Trin copy kills Trin gains exp",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;100",
+            "give_exp;Trin;50",
+            "wait;100"
+        ],
+        "nid": "Global Trin copy kills Trin gains exp"
+    },
+    {
+        "name": "Lynine overgasm",
+        "trigger": "unit_wait",
+        "level_nid": null,
+        "condition": "any(u.nid == 'Lynine' and u.position for u in game.get_units_in_party())",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;{eval: item_funcs.num_stacks(u('Lynine'), 'Overgasm')} == 10",
+            "center_cursor;Lynine",
+            "wait;300",
+            "add_portrait;Lynine;Left",
+            "wait;100",
+            "expression;Lynine;CloseEyes,OpenMouth",
+            "s;Lynine;Aaaaaahhhh",
+            "r;Lynine",
+            "wait;300",
+            "    give_skill;Lynine;Paralysis;;no_banner",
+            "    remove_skill;Lynine;Overgasm;9;no_banner",
+            "end"
+        ],
+        "nid": "Global Lynine overgasm"
     }
 ]

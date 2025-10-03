@@ -1,8 +1,254 @@
 [
     {
+        "nid": "Provoke",
+        "name": "Provoke",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Boss' not in target.tags"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Provoked"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "MapBerserk"
+            ],
+            [
+                "map_cast_sfx",
+                "Berserk"
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Discourage",
+        "name": "Discourage",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            34
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Boss' not in target.tags"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Provoked"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "MapBerserk"
+            ],
+            [
+                "map_cast_sfx",
+                "Berserk"
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Discontent",
+        "name": "Discontent",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "manauses",
+        "name": "manauses",
+        "desc": "",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            11
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "mana_cost",
+                3
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Intervention",
+        "name": "Intervention",
+        "desc": "Balia sets Orcent's <red>Brutality</> and <blue>Serenity</> stacks to 0. Also restores any of Orcent's negative statuses.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            37
+        ],
+        "components": [
+            [
+                "eval_target_restrict_2",
+                "target.nid == 'Orcent'"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia Intervention resets Orcent stacks"
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "MapSmallHealTrans"
+            ],
+            [
+                "map_hit_sfx",
+                "MapHeal"
+            ]
+        ]
+    },
+    {
         "nid": "Orcent_Snipe_Target",
         "name": "Snipe Target",
-        "desc": "",
+        "desc": "<green>[Dari synergy]</> Orcent snipes a target scouted by Dari. Can be used only once per turn. Costs <blue>2 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -60,6 +306,14 @@
             [
                 "cooldown",
                 1
+            ],
+            [
+                "mana_cost",
+                2
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -100,6 +354,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -140,6 +398,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -544,6 +806,10 @@
             [
                 "mana_cost",
                 10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -669,6 +935,10 @@
             [
                 "map_target_cast_anim",
                 "AOE_Rally"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -778,6 +1048,10 @@
             [
                 "mana_cost",
                 2
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -866,6 +1140,10 @@
             [
                 "no_double",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -942,6 +1220,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -1009,6 +1291,10 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -2170,6 +2456,10 @@
             [
                 "spell",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -2228,6 +2518,10 @@
                 [
                     "Yarra"
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -2286,6 +2580,10 @@
                 [
                     "Yarra"
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -2387,6 +2685,10 @@
             ],
             [
                 "spell",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -2531,6 +2833,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -2585,6 +2891,10 @@
             ],
             [
                 "target_unit",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -2641,6 +2951,10 @@
             [
                 "gain_mana_after_combat",
                 "5 if 'puppet' in target.tags else 0"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -3083,6 +3397,10 @@
             [
                 "wexp",
                 -5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -3309,6 +3627,10 @@
             [
                 "map_cast_pose",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -3369,6 +3691,10 @@
             [
                 "restore",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -3424,6 +3750,10 @@
             ],
             [
                 "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -3485,6 +3815,10 @@
             [
                 "equation_blast_aoe",
                 "MAGIC_RANGE"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -3557,6 +3891,10 @@
             [
                 "mana_cost",
                 3
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -4793,6 +5131,10 @@
             [
                 "battle_cast_anim",
                 "Fire"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -4865,6 +5207,10 @@
             [
                 "battle_cast_anim",
                 "Thunder"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -4937,6 +5283,10 @@
             [
                 "battle_cast_anim",
                 "Ice"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -4993,6 +5343,10 @@
             [
                 "battle_cast_anim",
                 "Heal"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5063,6 +5417,10 @@
                     255,
                     52
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5147,6 +5505,10 @@
             [
                 "battle_cast_anim",
                 "Flareblade"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5231,6 +5593,10 @@
             [
                 "battle_cast_anim",
                 "Boltblade"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5315,6 +5681,10 @@
             [
                 "battle_cast_anim",
                 "Ice2"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5379,6 +5749,10 @@
                 [
                     "Mage_Knight"
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5453,6 +5827,10 @@
                 [
                     "Bolting"
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5598,6 +5976,10 @@
             [
                 "map_hit_sfx",
                 "FireHit"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5703,6 +6085,10 @@
             [
                 "map_hit_sfx",
                 "Thunder"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5816,6 +6202,10 @@
             [
                 "map_hit_sfx",
                 "Fimbulvetr1"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -5943,6 +6333,10 @@
             [
                 "eval_available",
                 "any(u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Altina')))"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -6014,6 +6408,10 @@
             ],
             [
                 "enemy_line_aoe",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -6507,6 +6905,10 @@
             [
                 "exp",
                 15
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -6962,6 +7364,10 @@
             [
                 "weapon",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7026,6 +7432,10 @@
             [
                 "exp",
                 15
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7066,6 +7476,10 @@
             [
                 "mana_cost",
                 10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7240,6 +7654,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7296,6 +7714,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7352,6 +7774,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7392,6 +7818,10 @@
             [
                 "exp",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7459,6 +7889,10 @@
             ],
             [
                 "weapon",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -7551,6 +7985,10 @@
             ],
             [
                 "spell",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -7721,6 +8159,10 @@
             [
                 "heal_exp",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7781,6 +8223,10 @@
             [
                 "mana_cost",
                 10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7837,6 +8283,10 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -7889,6 +8339,10 @@
             [
                 "eval_target_restrict_2",
                 "target is None or target == unit"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8011,6 +8465,10 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8059,6 +8517,10 @@
             [
                 "status_on_hit",
                 "Poisoned"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8099,6 +8561,10 @@
             [
                 "status_on_hit",
                 "Stalling_Stance_buff"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8143,6 +8609,10 @@
             [
                 "no_map_hp_display",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8179,6 +8649,10 @@
             [
                 "shove",
                 1
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8235,6 +8709,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8455,6 +8933,10 @@
             [
                 "exp",
                 15
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8507,6 +8989,10 @@
             [
                 "hit",
                 75
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8567,6 +9053,10 @@
             [
                 "exp",
                 15
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8666,6 +9156,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8722,6 +9216,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8778,6 +9276,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -8826,6 +9328,10 @@
             [
                 "damage",
                 3
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -9111,6 +9617,10 @@
             [
                 "target_enemy",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -9353,6 +9863,10 @@
                     0,
                     4
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -9413,6 +9927,10 @@
                     4,
                     255
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -9641,6 +10159,10 @@
             [
                 "exp",
                 13
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -9705,6 +10227,10 @@
             [
                 "map_hit_sfx",
                 "Recover"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -9893,6 +10419,10 @@
             [
                 "target_enemy",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -9945,6 +10475,10 @@
             [
                 "target_enemy",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -9996,6 +10530,10 @@
             ],
             [
                 "target_enemy",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -10069,6 +10607,10 @@
             [
                 "no_double",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -10125,6 +10667,10 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -10180,6 +10726,10 @@
             ],
             [
                 "attack_after_combat",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -10257,6 +10807,10 @@
             [
                 "mana_cost",
                 5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -10591,6 +11145,10 @@
                     0,
                     0
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -21180,6 +21738,10 @@
             [
                 "eval_target_restrict_2",
                 "not has_skill(target, 'Arcane_Shieldwall_buff') and not has_skill(target, 'Holy_Shieldwall_buff')\n"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -21224,6 +21786,10 @@
             [
                 "eval_target_restrict_2",
                 "not has_skill(target, 'Shieldwall_buff') and not has_skill(target, 'Arcane_Shieldwall_buff')\n"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -21268,6 +21834,10 @@
             [
                 "eval_target_restrict_2",
                 "not has_skill(target, 'Shieldwall_buff') and not has_skill(target, 'Holy_Shieldwall_buff')\n"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -21346,6 +21916,10 @@
                 [
                     "General"
                 ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -21490,6 +22064,82 @@
             [
                 "status_after_combat_on_hit",
                 "Stunned"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Mighty_Bash",
+        "name": "Mighty Bash",
+        "desc": "<green>[Uyae synergy]</> Paralyzes and shoves the enemy 2 tiles away. Costs <blue> 8 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            18
+        ],
+        "components": [
+            [
+                "shove_flexible_on_end_combat_initiate",
+                2
+            ],
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "mana_cost",
+                8
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Paralysis"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },

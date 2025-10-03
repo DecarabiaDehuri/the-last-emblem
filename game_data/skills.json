@@ -1,101 +1,366 @@
 [
     {
-        "nid": "Slippery",
-        "name": "Slippery",
-        "desc": "Dari can pass through enemies.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            41
-        ],
-        "components": [
-            [
-                "pass",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Triumphant",
-        "name": "Triumphant",
-        "desc": "Dari can move again after defeating an enemy unit.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            50
-        ],
-        "components": [
-            [
-                "modern_galeforce",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Scout",
-        "name": "Scout",
+        "nid": "OriliseBuffAura",
+        "name": "OriliseBuffAura",
         "desc": "",
         "icon_nid": "skill_icons",
         "icon_index": [
-            7,
-            41
+            8,
+            31
         ],
         "components": [
             [
                 "aura",
-                "Orcent_Target"
+                "DamageBuff"
             ],
             [
                 "aura_range",
-                1
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "OriliseNerfAura",
+        "name": "OriliseNerfAura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            31
+        ],
+        "components": [
+            [
+                "aura",
+                "Scheming_effect"
+            ],
+            [
+                "aura_range",
+                2
             ],
             [
                 "aura_target",
                 "enemy"
             ],
             [
-                "hide_aura",
+                "class_skill",
                 null
             ]
         ]
     },
     {
-        "nid": "Orcent_Target_proc",
-        "name": "Targeted PROC",
-        "desc": "",
+        "nid": "DamageBuff",
+        "name": "Gheldaron's blessing",
+        "desc": "<green>Reliar</> Orilise is granting this unit 30% more damage.\n<red>Does not work if paired with Darghelon's blessing.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            23
+            7,
+            34
         ],
         "components": [
             [
-                "endstep_skill_gain",
-                "Orcent_Target"
+                "damage_multiplier",
+                1.3000000000000003
+            ],
+            [
+                "self_nihil",
+                [
+                    "ResistBuff"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
     {
-        "nid": "Orcent_Target",
-        "name": "Targeted TRUE",
+        "nid": "DamageNerf",
+        "name": "Orilise's scheming",
+        "desc": "<green>Reliar</> Orilise's provocations are penalizing this unit with 30% less damage.\n<red>Does not work if paired with Lynine's corruption.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            34
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                0.7
+            ],
+            [
+                "self_nihil",
+                [
+                    "ResistNerf"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Scheming_aura",
+        "name": "Manipulated",
+        "desc": "Unit is unknowingly playing into <green>Reliar</> Orilise's schemes. Unit has an aura that reduces nearby allies' damage by 30%.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            40
+        ],
+        "components": [
+            [
+                "aura",
+                "Scheming_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Scheming_effect",
+        "name": "Orilise's scheming",
+        "desc": "<green>Reliar</> Orilise's schemes are penalizing this unit with 30% less damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            40
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                0.7
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Provoke",
+        "name": "Provoke",
+        "desc": "Orilise chooses an enemy to inflict <red>[PROVOKED]</>, which make their statuses diminished against Orilise.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Provoke"
+            ]
+        ]
+    },
+    {
+        "nid": "Provoked",
+        "name": "<red>[PROVOKED]</>",
+        "desc": "Unit's statuses are decreased against Orilise.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.nid == 'Orilise'"
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        0.8
+                    ],
+                    [
+                        "MAG",
+                        0.8
+                    ],
+                    [
+                        "SKL",
+                        0.8
+                    ],
+                    [
+                        "SPD",
+                        0.8
+                    ],
+                    [
+                        "LCK",
+                        0.8
+                    ],
+                    [
+                        "DEF",
+                        0.8
+                    ],
+                    [
+                        "RES",
+                        0.8
+                    ]
+                ]
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    188,
+                    64,
+                    64
+                ]
+            ],
+            [
+                "has_tags",
+                [
+                    "Provoked"
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Irritate",
+        "name": "Irritate",
+        "desc": "When defending against a <red>[PROVOKED]</> enemy, Orilise has a LUK% chance to make their attacks backfire.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            50
+        ],
+        "components": [
+            [
+                "defense_proc",
+                "Provoked_backfire"
+            ],
+            [
+                "proc_rate",
+                "PROCSTATUS"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "'Provoked' in unit2.tags"
+            ]
+        ]
+    },
+    {
+        "nid": "Provoked_backfire",
+        "name": "Irritating",
         "desc": "",
         "icon_nid": "skill_icons",
         "icon_index": [
-            8,
-            23
+            5,
+            50
         ],
-        "components": []
+        "components": [
+            [
+                "devil_axe_gba",
+                "Affect attacks done by enemy"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Discouraged",
+        "name": "<red>[DISCOURAGED]</>",
+        "desc": "Unit cannot double.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            46
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "cannot_double",
+                null
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    64,
+                    90,
+                    98
+                ]
+            ]
+        ]
     },
     {
         "nid": "new_1",
         "name": "new_1",
         "desc": "",
-        "icon_nid": null,
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            6,
+            35
         ],
-        "components": []
+        "components": [
+            [
+                "give_status_after_combat_on_hit",
+                "Discouraged"
+            ],
+            [
+                "attack_proc",
+                "OriliseBuffAura"
+            ],
+            [
+                "proc_rate",
+                "PROCSTATUS"
+            ]
+        ]
     },
     {
         "nid": "Unpeople",
@@ -175,6 +440,140 @@
             [
                 "unit_anim",
                 "MapStatDecrease"
+            ],
+            [
+                "self_nihil",
+                [
+                    "Unpeople_succubus"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Unpeople_succubus",
+        "name": "Sexy Unsexiness",
+        "desc": "This succubus is not affected by the Unpeople aura.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            46
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Slippery",
+        "name": "Slippery",
+        "desc": "Dari can pass through enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            41
+        ],
+        "components": [
+            [
+                "pass",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Triumphant",
+        "name": "Triumphant",
+        "desc": "Dari can move again after defeating an enemy unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            50
+        ],
+        "components": [
+            [
+                "modern_galeforce",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Scout",
+        "name": "Scout",
+        "desc": "<green>[Orcent Synergy]</> Dari scouts enemies adjacent to her, decreasing their avoid and marking them as possible sniping targets for Orcent.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            41
+        ],
+        "components": [
+            [
+                "aura",
+                "Orcent_Target"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orcent_Target",
+        "name": "<red>[SCOUTED]</>",
+        "desc": "Unit has -5 avoid. Can be targeted by Orcent's Snipe Target.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            23
+        ],
+        "components": [
+            [
+                "avoid",
+                -5
+            ],
+            [
+                "steal_icon",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Intervention",
+        "name": "Intervention",
+        "desc": "<green>[Orcent synergy]</> Balia can intervene with Orcent's emotions, resetting his <red>Brutality</> and <blue>Serenity</> stacks to 0.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Intervention"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
             ]
         ]
     },
@@ -924,15 +1323,36 @@
         ]
     },
     {
-        "nid": "new",
-        "name": "new",
-        "desc": "",
-        "icon_nid": null,
+        "nid": "Agile_Guard",
+        "name": "Agile Guard",
+        "desc": "<green>[Hilstara synergy]</> Ginasta raises her shield quickly, greatly reducing the damage from an enemy's counter.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            9,
+            46
         ],
-        "components": []
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Ginasta' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "resist_follow_up",
+                0.5
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
     },
     {
         "nid": "LynineBuffAura",
@@ -991,57 +1411,53 @@
         ]
     },
     {
-        "nid": "OriliseBuffAura",
-        "name": "OriliseBuffAura",
-        "desc": "",
+        "nid": "ResistBuff",
+        "name": "Darghelon's blessing",
+        "desc": "Elder Lynine is granting this unit 30% more protection against enemy attacks.\n<red>Does not work if paired with Gheldaron's blessing.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
-            31
+            34
         ],
         "components": [
             [
-                "aura",
-                "DamageBuff"
+                "resist_multiplier",
+                0.7000000000000001
             ],
             [
-                "aura_range",
-                2
+                "self_nihil",
+                [
+                    "DamageBuff"
+                ]
             ],
             [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "class_skill",
+                "grey_if_inactive",
                 null
             ]
         ]
     },
     {
-        "nid": "OriliseNerfAura",
-        "name": "OriliseNerfAura",
-        "desc": "",
+        "nid": "ResistNerf",
+        "name": "Lynine's corruption",
+        "desc": "Elder Lynine is using lust magic to make this unit 30% more vulnerable against attacks.\n<red>Does not work if paired with Orilise's scheming.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
-            31
+            34
         ],
         "components": [
             [
-                "aura",
-                "DamageNerf"
+                "resist_multiplier",
+                1.3
             ],
             [
-                "aura_range",
-                2
+                "self_nihil",
+                [
+                    "Scheming_effect"
+                ]
             ],
             [
-                "aura_target",
-                "enemy"
-            ],
-            [
-                "class_skill",
+                "grey_if_inactive",
                 null
             ]
         ]
@@ -1108,108 +1524,35 @@
         ]
     },
     {
-        "nid": "ResistBuff",
-        "name": "Darghelon's blessing",
-        "desc": "Elder Lynine is granting this unit 30% more protection against enemy attacks.\n<red>Does not work if paired with Gheldaron's blessing.</>",
+        "nid": "Overgasm",
+        "name": "Overgasm",
+        "desc": "Lynine's skills increase the Overgasm meter. When this reaches 10, Lynine is overstimulated and will suffer <red>[PARALYSIS]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            8,
-            34
+            0,
+            51
         ],
         "components": [
             [
-                "resist_multiplier",
-                0.7000000000000001
+                "stack",
+                10
             ],
             [
-                "self_nihil",
-                [
-                    "DamageBuff"
-                ]
-            ],
-            [
-                "grey_if_inactive",
+                "class_skill",
                 null
             ]
         ]
     },
     {
-        "nid": "ResistNerf",
-        "name": "Lynine's corruption",
-        "desc": "Elder Lynine is using lust magic to make this unit 30% more vulnerable against attacks.\n<red>Does not work if paired with Orilise's scheming.</>",
-        "icon_nid": "skill_icons",
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": null,
         "icon_index": [
-            8,
-            34
+            0,
+            0
         ],
-        "components": [
-            [
-                "resist_multiplier",
-                1.3
-            ],
-            [
-                "self_nihil",
-                [
-                    "DamageNerf"
-                ]
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "DamageBuff",
-        "name": "Gheldaron's blessing",
-        "desc": "<green>Reliar</> Orilise is granting this unit 30% more damage.\n<red>Does not work if paired with Darghelon's blessing.</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            34
-        ],
-        "components": [
-            [
-                "damage_multiplier",
-                1.3000000000000003
-            ],
-            [
-                "self_nihil",
-                [
-                    "ResistBuff"
-                ]
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "DamageNerf",
-        "name": "Orilise's scheming",
-        "desc": "<green>Reliar</> Orilise's provocations are penalizing this unit with 30% less damage.\n<red>Does not work if paired with Lynine's corruption.</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            34
-        ],
-        "components": [
-            [
-                "damage_multiplier",
-                0.7
-            ],
-            [
-                "self_nihil",
-                [
-                    "ResistNerf"
-                ]
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
+        "components": []
     },
     {
         "nid": "Copy_debuff",
@@ -1269,6 +1612,10 @@
                         "-(2 * game.game_vars['trincopies']) "
                     ]
                 ]
+            ],
+            [
+                "event_after_kill",
+                "Global Trin copy kills Trin gains exp"
             ]
         ]
     },
@@ -1330,46 +1677,6 @@
         ]
     },
     {
-        "nid": "Bone_stack",
-        "name": "Bone pile",
-        "desc": "Each stack of Bone pile enables an use of Wynn's Necromancy Spells.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            5,
-            35
-        ],
-        "components": [
-            [
-                "stack",
-                999
-            ]
-        ]
-    },
-    {
-        "nid": "Collect_Souls",
-        "name": "Collect Souls",
-        "desc": "Wynn is on the lookout for nearby corpses. For each enemy defeated (by Wynn or any ally) within 3 tiles, gain one stack of <blue>Bone pile</>.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            6,
-            10
-        ],
-        "components": [
-            [
-                "aura",
-                "Soul_Reaping"
-            ],
-            [
-                "aura_range",
-                3
-            ],
-            [
-                "aura_target",
-                "ally"
-            ]
-        ]
-    },
-    {
         "nid": "Soul_Reaping",
         "name": "Soul Reaping",
         "desc": "If this unit kills an enemy, Wynn will collect their soul.",
@@ -1406,6 +1713,46 @@
             [
                 "gain_skill_after_kill",
                 "Bone_stack"
+            ]
+        ]
+    },
+    {
+        "nid": "Collect_Souls",
+        "name": "Collect Souls",
+        "desc": "Wynn is on the lookout for nearby corpses. For each enemy defeated (by Wynn or any ally) within 3 tiles, gain one stack of <blue>Bone pile</>.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            10
+        ],
+        "components": [
+            [
+                "aura",
+                "Soul_Reaping"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Bone_stack",
+        "name": "Bone pile",
+        "desc": "Each stack of Bone pile enables an use of Wynn's Necromancy Spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            35
+        ],
+        "components": [
+            [
+                "stack",
+                999
             ]
         ]
     },
@@ -1523,6 +1870,26 @@
         ]
     },
     {
+        "nid": "Unaffected",
+        "name": "Unaffected",
+        "desc": "Unit reflects negative statuses back at the enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            44
+        ],
+        "components": [
+            [
+                "reflect_status",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Fucking_Invincible",
         "name": "Fucking Invincible",
         "desc": "The Incubus King has powers beyond understanding, granting him exceptional strength and defense.",
@@ -1604,26 +1971,6 @@
                     31,
                     32
                 ]
-            ]
-        ]
-    },
-    {
-        "nid": "Unaffected",
-        "name": "Unaffected",
-        "desc": "Unit reflects negative statuses back at the enemy.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            44
-        ],
-        "components": [
-            [
-                "reflect_status",
-                null
-            ],
-            [
-                "class_skill",
-                null
             ]
         ]
     },
@@ -2303,6 +2650,30 @@
             [
                 "time",
                 3
+            ]
+        ]
+    },
+    {
+        "nid": "Indecisive",
+        "name": "Indecisive",
+        "desc": "Unit can either move or attack, but not both on the same turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            36
+        ],
+        "components": [
+            [
+                "no_attack_after_move",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "negative",
+                null
             ]
         ]
     },
@@ -10587,6 +10958,38 @@
         ]
     },
     {
+        "nid": "Mighty_Bash",
+        "name": "Mighty Bash",
+        "desc": "<green>[Uyae synergy]</> Paralyses and shoves an enemy 2 tiles away. Costs <blue>8 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            18
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Mighty_Bash"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Hilstara' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
         "nid": "Careful_Positioning",
         "name": "Careful Positioning",
         "desc": "Orcent can forfeit other actions to move a number of tiles beyond regular movement.",
@@ -10723,6 +11126,14 @@
             [
                 "recoil",
                 5
+            ],
+            [
+                "unit_tint",
+                [
+                    65,
+                    21,
+                    22
+                ]
             ]
         ]
     },
@@ -10759,6 +11170,14 @@
             [
                 "damage",
                 -2
+            ],
+            [
+                "unit_tint",
+                [
+                    0,
+                    9,
+                    91
+                ]
             ]
         ]
     },
@@ -10848,6 +11267,10 @@
             [
                 "ability",
                 "Orcent_Snipe_Target"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
             ]
         ]
     },
