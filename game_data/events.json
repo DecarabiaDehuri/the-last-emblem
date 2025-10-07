@@ -12599,6 +12599,7 @@
         "priority": 20,
         "_source": [
             "#prep;t",
+            "enable_turnwheel;t",
             "give_item;Robin;Scroll_Bolting;;no_banner",
             "give_item;Robin;Scroll_Shine;;no_banner",
             "set_current_hp;101;1",
@@ -12613,6 +12614,10 @@
             "give_item;Simon;manauses;;no_banner",
             "give_skill;Orilise;Provoke;;no_banner",
             "give_skill;Orilise;Irritate;;no_banner",
+            "give_skill;Lynine;Emergency_Shelter;;no_banner",
+            "give_skill;Lynine;Affiliate_skill;;no_banner",
+            "give_skill;Balia;Summon_orc;;no_banner",
+            "give_skill;Wynn;Bone_stack;;no_banner",
             "#kill_unit;Yarra"
         ],
         "nid": "teste2 New Event"
@@ -13171,5 +13176,52 @@
             "end"
         ],
         "nid": "Global Lynine overgasm"
+    },
+    {
+        "name": "Emergency_shelter",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;Lynine;200",
+            "wait;300",
+            "add_portrait;Lynine;Left;;NoSmile",
+            "s;Lynine;Here I go!",
+            "remove_portrait;Lynine",
+            "pose_unit;{target};start_cast;down",
+            "map_anim;AOE_Rally;Lynine",
+            "sound;CutinCrit",
+            "level_var;lynpos;{eval:u('Lynine').position}",
+            "move_unit;Lynine;{eval:target};swoosh;stack",
+            "wait;500",
+            "pair_up;{eval:target};{unit}",
+            "wait;200",
+            "move_unit;Lynine;{v:lynpos};swoosh",
+            "wait;300",
+            "reset;Lynine",
+            "wait;300",
+            "give_skill;Lynine;Overgasm;;no_banner",
+            "give_skill;Lynine;Emergency_Shelter_buff;;no_banner"
+        ],
+        "nid": "Global Emergency_shelter"
+    },
+    {
+        "name": "Summon orc balia",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "make_generic;;Orc;{e:unit.level};other;Pursue;Orc;;Iron_Axe",
+            "add_unit;{created_unit};{eval:target_pos};warp",
+            "add_tag;{created_unit};Summon",
+            "wait;200"
+        ],
+        "nid": "Global Summon orc balia"
     }
 ]

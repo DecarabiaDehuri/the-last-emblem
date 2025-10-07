@@ -872,16 +872,7 @@
                 false
             ]
         ],
-        "learned_skills": [
-            [
-                1,
-                "LynineBuffAura"
-            ],
-            [
-                1,
-                "LynineNerfAura"
-            ]
-        ],
+        "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -5890,6 +5881,46 @@
         "alternate_classes": [],
         "portrait_nid": "Iris",
         "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Esmera",
+        "name": "Esmera",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Inquisitor",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Keranii",
+        "name": "Keranii",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "High_Priestess",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "kerannii",
+        "affinity": null,
         "fields": []
     }
 ]

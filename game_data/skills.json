@@ -1,5 +1,325 @@
 [
     {
+        "nid": "LynineBuffAura",
+        "name": "LynineBuffAura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            31
+        ],
+        "components": [
+            [
+                "aura",
+                "ResistBuff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "LynineNerfAura",
+        "name": "LynineNerfAura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            31
+        ],
+        "components": [
+            [
+                "aura",
+                "ResistNerf"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "ResistBuff",
+        "name": "Darghelon's blessing",
+        "desc": "Elder Lynine is granting this unit 30% more protection against enemy attacks.\n<red>Does not work if paired with Gheldaron's blessing.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            34
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.7000000000000001
+            ],
+            [
+                "self_nihil",
+                [
+                    "DamageBuff"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "ResistNerf",
+        "name": "Lynine's corruption",
+        "desc": "Elder Lynine is using lust magic to make this unit 30% more vulnerable against attacks.\n<red>Does not work if paired with Orilise's scheming.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            34
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                1.3
+            ],
+            [
+                "self_nihil",
+                [
+                    "Scheming_effect"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "SuccubusGrowth",
+        "name": "Lynine's favor",
+        "desc": "This succubus is being inspired by Elder Lynine. While this is active, bonus growths when leveling up.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        10
+                    ],
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "'Succubus' in unit.tags"
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Overgasm",
+        "name": "Overgasm",
+        "desc": "Lynine's skills increase the Overgasm meter. When this reaches 10, Lynine is overstimulated and will suffer <red>[PARALYSIS]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "stack",
+                10
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Emergency_Shelter",
+        "name": "Emergency Shelter",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Emergency_Shelter"
+            ]
+        ]
+    },
+    {
+        "nid": "Emergency_Shelter_buff",
+        "name": "Emergency Shelter",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "no_attack_after_move",
+                null
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    126,
+                    241,
+                    187
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Affiliate_skill",
+        "name": "Affiliate",
+        "desc": "<orange>[Megail] synergy</> Lynine can mark an ally as an affiliate. For 3 turns, Lynine can move next to them, regardless of distance. Marking costs <blue>5 mana</> and in creases <red>Overgasm</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "ability",
+                "Affiliate"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Lynine' for u in target_system.get_adj_units(game.get_unit('Megail'))])"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Affiliate_lynine",
+        "name": "Affiliate",
+        "desc": "Lynine can move next to affiliated unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "witch_warp_expression",
+                "'Lynined' in unit.tags"
+            ],
+            [
+                "unit_anim",
+                "MapFlying"
+            ]
+        ]
+    },
+    {
+        "nid": "Affiliate_target",
+        "name": "Affiliated",
+        "desc": "Elder Lynine can move next to this unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Lynined"
+                ]
+            ],
+            [
+                "time",
+                3
+            ]
+        ]
+    },
+    {
         "nid": "OriliseBuffAura",
         "name": "OriliseBuffAura",
         "desc": "",
@@ -132,6 +452,10 @@
             [
                 "negative",
                 null
+            ],
+            [
+                "time",
+                3
             ]
         ]
     },
@@ -155,6 +479,18 @@
             ],
             [
                 "negative",
+                null
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    75,
+                    54,
+                    73
+                ]
+            ],
+            [
+                "display_skill_icon_in_combat",
                 null
             ]
         ]
@@ -251,13 +587,17 @@
             [
                 "time",
                 4
+            ],
+            [
+                "unit_anim",
+                "MapBerserk"
             ]
         ]
     },
     {
         "nid": "Irritate",
         "name": "Irritate",
-        "desc": "When defending against a <red>[PROVOKED]</> enemy, Orilise has a LUK% chance to make their attacks backfire.",
+        "desc": "When defending against a <red>[PROVOKED]</> enemy, <green>Reliar</> Orilise has a LUK% chance to make their attacks backfire.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -339,9 +679,9 @@
         ]
     },
     {
-        "nid": "new_1",
-        "name": "new_1",
-        "desc": "",
+        "nid": "Battle_Sophism",
+        "name": "Battle Sophism",
+        "desc": "<green>Reliar</> Orilise has a LUK%/2 chance to inflict <red>[DISCOURAGED]</> when attacking. <red>[DISCOURAGED]</>: Unit cannot double.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -358,7 +698,7 @@
             ],
             [
                 "proc_rate",
-                "PROCSTATUS"
+                "HALFLUCK"
             ]
         ]
     },
@@ -574,6 +914,126 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc",
+        "name": "Summon orc",
+        "desc": "Summons a basic orc. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Summon_orc_1"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc_thrower",
+        "name": "Summon orc thrower",
+        "desc": "Summons a ranged orc. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Summon_orc_1"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc_elite",
+        "name": "Summon elite orc",
+        "desc": "Summons an elite orc. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Summon_orc_1"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc_ogre",
+        "name": "Summon ogre",
+        "desc": "Summons an ogre. Costs <blue>20 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Summon_orc_1"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_imp",
+        "name": "Summon imp",
+        "desc": "Summons a basic imp. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Summon_orc_1"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_imp_elite",
+        "name": "Summon elite imp",
+        "desc": "Summons an elite imp. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Summon_orc_1"
             ]
         ]
     },
@@ -1355,206 +1815,6 @@
         ]
     },
     {
-        "nid": "LynineBuffAura",
-        "name": "LynineBuffAura",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            31
-        ],
-        "components": [
-            [
-                "aura",
-                "ResistBuff"
-            ],
-            [
-                "aura_range",
-                2
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "LynineNerfAura",
-        "name": "LynineNerfAura",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            31
-        ],
-        "components": [
-            [
-                "aura",
-                "ResistNerf"
-            ],
-            [
-                "aura_range",
-                2
-            ],
-            [
-                "aura_target",
-                "enemy"
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "ResistBuff",
-        "name": "Darghelon's blessing",
-        "desc": "Elder Lynine is granting this unit 30% more protection against enemy attacks.\n<red>Does not work if paired with Gheldaron's blessing.</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            34
-        ],
-        "components": [
-            [
-                "resist_multiplier",
-                0.7000000000000001
-            ],
-            [
-                "self_nihil",
-                [
-                    "DamageBuff"
-                ]
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "ResistNerf",
-        "name": "Lynine's corruption",
-        "desc": "Elder Lynine is using lust magic to make this unit 30% more vulnerable against attacks.\n<red>Does not work if paired with Orilise's scheming.</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            34
-        ],
-        "components": [
-            [
-                "resist_multiplier",
-                1.3
-            ],
-            [
-                "self_nihil",
-                [
-                    "Scheming_effect"
-                ]
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "SuccubusGrowth",
-        "name": "Lynine's favor",
-        "desc": "This succubus is being inspired by Elder Lynine. While this is active, bonus growths when leveling up.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            24
-        ],
-        "components": [
-            [
-                "growth_change",
-                [
-                    [
-                        "HP",
-                        10
-                    ],
-                    [
-                        "STR",
-                        10
-                    ],
-                    [
-                        "MAG",
-                        10
-                    ],
-                    [
-                        "SKL",
-                        10
-                    ],
-                    [
-                        "SPD",
-                        10
-                    ],
-                    [
-                        "LCK",
-                        10
-                    ],
-                    [
-                        "DEF",
-                        10
-                    ],
-                    [
-                        "RES",
-                        10
-                    ]
-                ]
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "'Succubus' in unit.tags"
-            ],
-            [
-                "time",
-                4
-            ]
-        ]
-    },
-    {
-        "nid": "Overgasm",
-        "name": "Overgasm",
-        "desc": "Lynine's skills increase the Overgasm meter. When this reaches 10, Lynine is overstimulated and will suffer <red>[PARALYSIS]</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            51
-        ],
-        "components": [
-            [
-                "stack",
-                10
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "new",
-        "name": "new",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
         "nid": "Copy_debuff",
         "name": "Worthless",
         "desc": "This puppet is but a shell of its former self. Its stats are diminished. This effect is stronger for each puppet currently on field.",
@@ -1753,6 +2013,66 @@
             [
                 "stack",
                 999
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Defiance",
+        "name": "Death Defiance",
+        "desc": "Wynn can select an orc summoned by Balia to grant <green>[Death Defiance]</>:Upon death, unit is revived with full HP. Status is lost at the end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Wynn' for u in target_system.get_adj_units(game.get_unit('Balia'))])"
+            ],
+            [
+                "ability",
+                "Death_Defiance"
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Defiance_effect",
+        "name": "Death Defiance",
+        "desc": "Upon death, unit is revived with full HP. Status is lost at the end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            28
+        ],
+        "components": [
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "full_miracle",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    255,
+                    255
+                ]
             ]
         ]
     },
@@ -10868,6 +11188,10 @@
             [
                 "hidden_if_inactive",
                 null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
             ]
         ]
     },
@@ -10986,6 +11310,62 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Bikini_Armor",
+        "name": "Bikini Armor",
+        "desc": "<green>[Nalili synergy]</> ",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Hilstara' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
+            ],
+            [
+                "ability",
+                "Provoke"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Bikini_Armor_effect",
+        "name": "Bikini Armor",
+        "desc": "Hilstara took off her armor and is enjoying a cool breeze. Bonus avoid, penalty in damage resistance.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "avoid",
+                25
+            ],
+            [
+                "resist",
+                -5
+            ],
+            [
+                "time",
+                2
             ]
         ]
     },
