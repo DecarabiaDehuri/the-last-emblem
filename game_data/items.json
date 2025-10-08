@@ -323,6 +323,62 @@
         ]
     },
     {
+        "nid": "Succubus_Growth",
+        "name": "Succubus Fan",
+        "desc": "<green>[Yarra synergy]</> Elder Lynine increases the growth rates of nearby Succubi. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "ally_blast_aoe",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Succubus_Growth_skill"
+            ],
+            [
+                "map_cast_sfx",
+                "Rally"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Intervention",
         "name": "Intervention",
         "desc": "Balia sets Orcent's <red>Brutality</> and <blue>Serenity</> stacks to 0. Also restores any of Orcent's negative statuses.",
@@ -9719,6 +9775,66 @@
             [
                 "map_hit_sfx",
                 "Select 1"
+            ]
+        ]
+    },
+    {
+        "nid": "Multitask",
+        "name": "Multitask",
+        "desc": "Simon duplicates himself. The copy lasts for one combat, or until the end of the turn. Costs <blue> 10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            50
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "FormationSelect"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Trin copy Simon"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
             ]
         ]
     },

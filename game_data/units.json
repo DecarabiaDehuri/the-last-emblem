@@ -1872,109 +1872,6 @@
         "fields": []
     },
     {
-        "nid": "Skypiercer",
-        "name": "Skypiercer",
-        "desc": "A young lady of Frelia. She is both cheery and sociable.",
-        "variant": "",
-        "level": 4,
-        "klass": "Griffon_Rider",
-        "tags": [],
-        "bases": {
-            "HP": 20,
-            "STR": 7,
-            "MAG": 4,
-            "SKL": 9,
-            "SPD": 13,
-            "LCK": 8,
-            "DEF": 6,
-            "RES": 7,
-            "CON": 5,
-            "MOV": 7
-        },
-        "growths": {
-            "HP": 65,
-            "STR": 45,
-            "MAG": 25,
-            "SKL": 40,
-            "SPD": 65,
-            "LCK": 60,
-            "DEF": 20,
-            "RES": 25,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Heavy_Spear",
-                false
-            ],
-            [
-                "Javelin",
-                false
-            ],
-            [
-                "Health_Potion",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                true,
-                31,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [
-            "Paladin"
-        ],
-        "portrait_nid": "Laraib",
-        "affinity": "Wind",
-        "fields": []
-    },
-    {
         "nid": "Trin",
         "name": "Trin",
         "desc": "A young girl from a small village in Grado. She is honest and sincere.",
@@ -2534,7 +2431,7 @@
         "nid": "Yarra",
         "name": "Yarra",
         "desc": "A young woman from Rausten. She fights for justice and honour.",
-        "variant": null,
+        "variant": "",
         "level": 3,
         "klass": "Suc_Yarra",
         "tags": [],
@@ -2661,6 +2558,109 @@
         ],
         "portrait_nid": "yarra5",
         "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Skypiercer",
+        "name": "Skypiercer",
+        "desc": "A young lady of Frelia. She is both cheery and sociable.",
+        "variant": "",
+        "level": 4,
+        "klass": "Griffon_Rider",
+        "tags": [],
+        "bases": {
+            "HP": 20,
+            "STR": 7,
+            "MAG": 4,
+            "SKL": 9,
+            "SPD": 13,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 7,
+            "CON": 5,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 65,
+            "STR": 45,
+            "MAG": 25,
+            "SKL": 40,
+            "SPD": 65,
+            "LCK": 60,
+            "DEF": 20,
+            "RES": 25,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Heavy_Spear",
+                false
+            ],
+            [
+                "Javelin",
+                false
+            ],
+            [
+                "Health_Potion",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                true,
+                31,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [
+            "Paladin"
+        ],
+        "portrait_nid": "Laraib",
+        "affinity": "Wind",
         "fields": []
     },
     {
@@ -3273,82 +3273,6 @@
         "fields": []
     },
     {
-        "nid": "Cassian",
-        "name": "Cassian",
-        "desc": "Mercenary recruited to protect Monica. He is a carefree spirit.",
-        "variant": "Cassian",
-        "level": 5,
-        "klass": "Cavalier",
-        "tags": [
-            "Mounted"
-        ],
-        "bases": {
-            "HP": 20,
-            "STR": 5,
-            "MAG": 0,
-            "SKL": 4,
-            "SPD": 6,
-            "LCK": 1,
-            "DEF": 6,
-            "RES": 2,
-            "CON": 9,
-            "MOV": 7
-        },
-        "growths": {
-            "HP": 70,
-            "STR": 60,
-            "MAG": 0,
-            "SKL": 45,
-            "SPD": 55,
-            "LCK": 30,
-            "DEF": 20,
-            "RES": 10,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "starting_items": [
-            [
-                "Iron_Sword",
-                false
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Twice_the_Threat_Cassian"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                31,
-                null
-            ],
-            "Lance": [
-                false,
-                31,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Cassian",
-        "affinity": "Thunder",
-        "fields": []
-    },
-    {
         "nid": "Lucia",
         "name": "Lucia",
         "desc": "Mercenary recruited to protect Monica. She is a sharp observant.",
@@ -3423,6 +3347,82 @@
         "alternate_classes": [],
         "portrait_nid": "Lucia",
         "affinity": "Wind",
+        "fields": []
+    },
+    {
+        "nid": "Cassian",
+        "name": "Cassian",
+        "desc": "Mercenary recruited to protect Monica. He is a carefree spirit.",
+        "variant": "Cassian",
+        "level": 5,
+        "klass": "Cavalier",
+        "tags": [
+            "Mounted"
+        ],
+        "bases": {
+            "HP": 20,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 4,
+            "SPD": 6,
+            "LCK": 1,
+            "DEF": 6,
+            "RES": 2,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 60,
+            "MAG": 0,
+            "SKL": 45,
+            "SPD": 55,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "starting_items": [
+            [
+                "Iron_Sword",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Twice_the_Threat_Cassian"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                31,
+                null
+            ],
+            "Lance": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Cassian",
+        "affinity": "Thunder",
         "fields": []
     },
     {
@@ -3681,6 +3681,149 @@
         "alternate_classes": [],
         "portrait_nid": "Milena",
         "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Baruba",
+        "name": "Baruba",
+        "desc": "Veteran mercenary.",
+        "variant": "",
+        "level": 9,
+        "klass": "Hero",
+        "tags": [],
+        "bases": {
+            "HP": 25,
+            "STR": 12,
+            "MAG": 2,
+            "SKL": 12,
+            "SPD": 8,
+            "LCK": 8,
+            "DEF": 9,
+            "RES": 9,
+            "CON": 15,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 5,
+            "SKL": 40,
+            "SPD": 30,
+            "LCK": 20,
+            "DEF": 45,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Steel_Blade",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                181,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Baruba",
+        "affinity": "Anima",
+        "fields": []
+    },
+    {
+        "nid": "Geoff",
+        "name": "Geoff",
+        "desc": "Commander of the Ardoheim army. ",
+        "variant": null,
+        "level": 13,
+        "klass": "Sniper",
+        "tags": [],
+        "bases": {
+            "HP": 28,
+            "STR": 9,
+            "SKL": 11,
+            "SPD": 4,
+            "LCK": 6,
+            "DEF": 5,
+            "RES": 4,
+            "CON": 8,
+            "MOV": 6
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Longbow",
+                false
+            ],
+            [
+                "Long_Ballista",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Wary_Fighter"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Bow": [
+                false,
+                181,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Geoff",
+        "affinity": "None",
         "fields": []
     },
     {
@@ -4127,149 +4270,6 @@
         "alternate_classes": [],
         "portrait_nid": "Minerve",
         "affinity": "Dark",
-        "fields": []
-    },
-    {
-        "nid": "Baruba",
-        "name": "Baruba",
-        "desc": "Veteran mercenary.",
-        "variant": "",
-        "level": 9,
-        "klass": "Hero",
-        "tags": [],
-        "bases": {
-            "HP": 25,
-            "STR": 12,
-            "MAG": 2,
-            "SKL": 12,
-            "SPD": 8,
-            "LCK": 8,
-            "DEF": 9,
-            "RES": 9,
-            "CON": 15,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 85,
-            "STR": 55,
-            "MAG": 5,
-            "SKL": 40,
-            "SPD": 30,
-            "LCK": 20,
-            "DEF": 45,
-            "RES": 30,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Steel_Blade",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                181,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Baruba",
-        "affinity": "Anima",
-        "fields": []
-    },
-    {
-        "nid": "Geoff",
-        "name": "Geoff",
-        "desc": "Commander of the Ardoheim army. ",
-        "variant": null,
-        "level": 13,
-        "klass": "Sniper",
-        "tags": [],
-        "bases": {
-            "HP": 28,
-            "STR": 9,
-            "SKL": 11,
-            "SPD": 4,
-            "LCK": 6,
-            "DEF": 5,
-            "RES": 4,
-            "CON": 8,
-            "MOV": 6
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Longbow",
-                false
-            ],
-            [
-                "Long_Ballista",
-                false
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Wary_Fighter"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Bow": [
-                false,
-                181,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Geoff",
-        "affinity": "None",
         "fields": []
     },
     {
@@ -5704,31 +5704,63 @@
         "fields": []
     },
     {
-        "nid": "Debug",
-        "name": "Debug",
+        "nid": "SucBoss",
+        "name": "Elite Succubus",
         "desc": "",
         "variant": null,
-        "level": 1,
-        "klass": "Citizen",
-        "tags": [],
+        "level": 14,
+        "klass": "Suc_foe_2",
+        "tags": [
+            "Boss",
+            "Female",
+            "Succubus"
+        ],
         "bases": {
-            "MOV": 999,
-            "HP": 999,
-            "SPD": 99,
-            "DEF": 99,
-            "SKL": 99,
-            "RES": 99,
-            "CON": 99
+            "HP": 35,
+            "STR": 11,
+            "MAG": 11,
+            "SKL": 10,
+            "SPD": 6,
+            "LCK": 10,
+            "DEF": 8,
+            "RES": 9,
+            "CON": 12,
+            "MOV": 0
         },
         "growths": {},
         "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [],
+        "starting_items": [
+            [
+                "Iron_Scythe",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Creepy_Move"
+            ]
+        ],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Dark": [
+                false,
+                71,
+                null
+            ],
+            "Scythe": [
+                false,
+                71,
+                null
+            ]
+        },
         "alternate_classes": [],
-        "portrait_nid": "Eirika",
-        "affinity": null,
+        "portrait_nid": "SucBoss",
+        "affinity": "Dark",
         "fields": []
     },
     {
@@ -5791,63 +5823,31 @@
         "fields": []
     },
     {
-        "nid": "SucBoss",
-        "name": "Elite Succubus",
+        "nid": "Debug",
+        "name": "Debug",
         "desc": "",
         "variant": null,
-        "level": 14,
-        "klass": "Suc_foe_2",
-        "tags": [
-            "Boss",
-            "Female",
-            "Succubus"
-        ],
+        "level": 1,
+        "klass": "Citizen",
+        "tags": [],
         "bases": {
-            "HP": 35,
-            "STR": 11,
-            "MAG": 11,
-            "SKL": 10,
-            "SPD": 6,
-            "LCK": 10,
-            "DEF": 8,
-            "RES": 9,
-            "CON": 12,
-            "MOV": 0
+            "MOV": 999,
+            "HP": 999,
+            "SPD": 99,
+            "DEF": 99,
+            "SKL": 99,
+            "RES": 99,
+            "CON": 99
         },
         "growths": {},
         "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Scythe",
-                false
-            ],
-            [
-                "Loot_Bag",
-                true
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Creepy_Move"
-            ]
-        ],
+        "starting_items": [],
+        "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {
-            "Dark": [
-                false,
-                71,
-                null
-            ],
-            "Scythe": [
-                false,
-                71,
-                null
-            ]
-        },
+        "wexp_gain": {},
         "alternate_classes": [],
-        "portrait_nid": "SucBoss",
-        "affinity": "Dark",
+        "portrait_nid": "Eirika",
+        "affinity": "None",
         "fields": []
     },
     {
@@ -5891,15 +5891,37 @@
         "level": 1,
         "klass": "Inquisitor",
         "tags": [],
-        "bases": {},
-        "growths": {},
+        "bases": {
+            "STR": 8,
+            "HP": 28,
+            "MAG": 0,
+            "SKL": 7,
+            "SPD": 7,
+            "LCK": 3,
+            "DEF": 5,
+            "RES": 1,
+            "CON": 14,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
         "stat_cap_modifiers": {},
         "starting_items": [],
         "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {},
         "alternate_classes": [],
-        "portrait_nid": "",
+        "portrait_nid": "Lute",
         "affinity": "None",
         "fields": []
     },
@@ -5911,8 +5933,30 @@
         "level": 1,
         "klass": "High_Priestess",
         "tags": [],
-        "bases": {},
-        "growths": {},
+        "bases": {
+            "HP": 20,
+            "STR": 0,
+            "MAG": 4,
+            "SKL": 3,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 4,
+            "RES": 8,
+            "CON": 6,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 0,
+            "MAG": 35,
+            "SKL": 25,
+            "SPD": 45,
+            "LCK": 40,
+            "DEF": 10,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
         "stat_cap_modifiers": {},
         "starting_items": [],
         "learned_skills": [],

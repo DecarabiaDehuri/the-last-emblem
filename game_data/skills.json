@@ -108,8 +108,40 @@
         ]
     },
     {
-        "nid": "SuccubusGrowth",
-        "name": "Lynine's favor",
+        "nid": "Succubus_Growth",
+        "name": "Succubus Fan",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Lynine' for u in target_system.get_adj_units(game.get_unit('Yarra'))])"
+            ],
+            [
+                "ability",
+                "Succubus_Growth"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Succubus_Growth_skill",
+        "name": "Lynine's cheers",
         "desc": "This succubus is being inspired by Elder Lynine. While this is active, bonus growths when leveling up.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -171,7 +203,7 @@
     {
         "nid": "Overgasm",
         "name": "Overgasm",
-        "desc": "Lynine's skills increase the Overgasm meter. When this reaches 10, Lynine is overstimulated and will suffer <red>[PARALYSIS]</>.",
+        "desc": "Lynine's skills increase the Overgasm meter. When this reaches 3 stacks, Lynine is overstimulated and will suffer <red>[PARALYSIS]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -180,7 +212,7 @@
         "components": [
             [
                 "stack",
-                10
+                3
             ],
             [
                 "class_skill",
@@ -1052,20 +1084,8 @@
                 "Lightning_Whip_effect"
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "hide_aura",
                 null
-            ],
-            [
-                "aura",
-                "Active_Synergy"
             ],
             [
                 "hidden_if_inactive",
@@ -1096,24 +1116,8 @@
                 null
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Altina'))])"
-            ],
-            [
-                "hide_aura",
-                null
             ],
             [
                 "alternate_battle_anim",
@@ -1140,24 +1144,8 @@
                 null
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Vhala'))])"
-            ],
-            [
-                "hide_aura",
-                null
             ],
             [
                 "alternate_battle_anim",
@@ -1184,24 +1172,8 @@
                 null
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
-            ],
-            [
-                "hide_aura",
-                null
             ],
             [
                 "astra_proc",
@@ -1236,24 +1208,8 @@
                 null
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
-            ],
-            [
-                "hide_aura",
-                null
             ],
             [
                 "alternate_battle_anim",
@@ -1280,24 +1236,8 @@
                 null
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
-            ],
-            [
-                "hide_aura",
-                null
             ],
             [
                 "alternate_battle_anim",
@@ -1324,24 +1264,8 @@
                 null
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
-            ],
-            [
-                "hide_aura",
-                null
             ],
             [
                 "alternate_battle_anim",
@@ -1368,24 +1292,8 @@
                 null
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
-            ],
-            [
-                "hide_aura",
-                null
             ]
         ]
     },
@@ -1939,7 +1847,7 @@
     {
         "nid": "Soul_Reaping",
         "name": "Soul Reaping",
-        "desc": "If this unit kills an enemy, Wynn will collect their soul.",
+        "desc": "If this unit kills an enemy, Wynn will collect their body.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -1948,18 +1856,14 @@
         "components": [
             [
                 "event_after_kill",
-                "Global Wynn soul collect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
+                "Global Wynn soul collect2"
             ]
         ]
     },
     {
         "nid": "Wynn_collect_soul",
         "name": "Soul Reaping",
-        "desc": "If this unit kills an enemy, Wynn will collect their soul.",
+        "desc": "If this unit kills an enemy, Wynn will collect their body.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -1979,7 +1883,7 @@
     {
         "nid": "Collect_Souls",
         "name": "Collect Souls",
-        "desc": "Wynn is on the lookout for nearby corpses. For each enemy defeated (by Wynn or any ally) within 3 tiles, gain one stack of <blue>Bone pile</>.",
+        "desc": "Wynn is on the lookout for nearby corpses. Once per turn, for each enemy defeated by Wynn or any ally within 3 tiles, gain one stack of <blue>Bone pile</>.",
         "icon_nid": "Skills",
         "icon_index": [
             6,
@@ -9438,6 +9342,88 @@
                     26,
                     198
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Multitask",
+        "name": "Multitask",
+        "desc": "<green>[Trin synergy]</> Simon copies himself.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            50
+        ],
+        "components": [
+            [
+                "ability",
+                "Multitask"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Simon' for u in target_system.get_adj_units(game.get_unit('Trin'))])"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Multitask_effect",
+        "name": "MultiSimon",
+        "desc": "This Simon copy only remains until the next combat or end of its turn. ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            50
+        ],
+        "components": [
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": false,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": false,
+                    "only_if_initiated": false
+                }
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "event_on_remove",
+                "Global Trin copied Simon dies"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "cannot_trade",
+                null
+            ],
+            [
+                "unit_tint",
+                [
+                    141,
+                    141,
+                    141
+                ]
+            ],
+            [
+                "unselectable",
+                null
             ]
         ]
     },

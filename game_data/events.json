@@ -12618,7 +12618,8 @@
             "give_skill;Lynine;Affiliate_skill;;no_banner",
             "give_skill;Balia;Summon_orc;;no_banner",
             "give_skill;Wynn;Bone_stack;;no_banner",
-            "#kill_unit;Yarra"
+            "give_skill;Lynine;Succubus_Growth;;no_banner",
+            "give_skill;Simon;Multitask;;no_banner"
         ],
         "nid": "teste2 New Event"
     },
@@ -12966,6 +12967,10 @@
         "_source": [
             "give_skill;Orcent;Calm_Stack;;no_banner",
             "give_skill;Lynine;Overgasm;;no_banner",
+            "create_unit;Simon;CopiedSimon;;Simon;fade;closest;copy_stats",
+            "give_item;Rosa;Iron_Axe",
+            "#party_transfer;Simon;AramEsmera;;Doom King;Attack;;3",
+            "#party_transfer;Simon;AramKeranii;;Doom King;Defense;;3",
             "#kill_unit;Orilise;immediate",
             "#s;System;Orilise pos = {eval: repr(u('Orilise').position)}",
             "#s;System;Orilise dead = {eval: str(u('Orilise').dead)}",
@@ -13223,5 +13228,117 @@
             "wait;200"
         ],
         "nid": "Global Summon orc balia"
+    },
+    {
+        "name": "New Event",
+        "trigger": "turn_change",
+        "level_nid": "aram1",
+        "condition": "game.turncount == 2",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "win_game"
+        ],
+        "nid": "aram1 New Event"
+    },
+    {
+        "name": "New Event_1",
+        "trigger": "level_start",
+        "level_nid": "aram1",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "prep;t"
+        ],
+        "nid": "aram1 New Event_1"
+    },
+    {
+        "name": "New Event",
+        "trigger": "level_start",
+        "level_nid": "aram2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "prep;t"
+        ],
+        "nid": "aram2 New Event"
+    },
+    {
+        "name": "Wynn soul collect2",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;{v:soul_reap} == 0",
+            "    center_cursor;Wynn;200",
+            "    wait;200",
+            "    sound;Aura1",
+            "    map_anim;OverchargeAura;Wynn",
+            "    give_skill;Wynn;Bone_stack;;no_banner",
+            "    wait;300",
+            "    level_var;soul_reap;1",
+            "else",
+            "end"
+        ],
+        "nid": "Global Wynn soul collect2"
+    },
+    {
+        "name": "Wynn soul reaping turn resets to 0",
+        "trigger": "turn_change",
+        "level_nid": null,
+        "condition": "game.current_party == 'Simon' and game.check_alive('Wynn') == True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;soul_reap;0"
+        ],
+        "nid": "Global Wynn soul reaping turn resets to 0"
+    },
+    {
+        "name": "Trin copy Simon",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;300",
+            "center_cursor;Simon",
+            "wait;200",
+            "create_unit;Simon;Simoncopy;;Simon;fade;closest;copy_stats",
+            "change_team;Simoncopy;other",
+            "level_var;simonhp;{e: u('Simon').get_hp()}",
+            "set_current_hp;Simoncopy;{v:simonhp}",
+            "give_skill;Simoncopy;Multitask_effect;;no_banner",
+            "wait;300"
+        ],
+        "nid": "Global Trin copy Simon"
+    },
+    {
+        "name": "Trin copied Simon dies",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;200",
+            "center_cursor;Simoncopy;200",
+            "wait;200",
+            "kill_unit;Simoncopy",
+            "wait;200"
+        ],
+        "nid": "Global Trin copied Simon dies"
     }
 ]
