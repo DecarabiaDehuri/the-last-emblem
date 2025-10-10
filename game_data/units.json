@@ -2001,19 +2001,16 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Might_Claw",
-                false
-            ],
-            [
-                "Spirit_Claw",
-                false
-            ],
-            [
-                "Switch_Stance",
+                "Claw_Neutral",
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Aura_of_Neutrality"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [

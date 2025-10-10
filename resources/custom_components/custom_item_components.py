@@ -1068,3 +1068,11 @@ class AddedCritDamage(ItemComponent):
 
     def added_crit_damage(self, unit, item):
         return self.value
+
+class Synergy(ItemComponent):
+    nid = 'synergy'
+    desc = "Heart appears above unit."
+    tag = ItemTags.AESTHETIC
+
+    def target_icon(self, unit, item, target) -> str:
+        return 'synergy' if item_funcs.available(unit, item) and skill_system.check_enemy(target, unit) else None

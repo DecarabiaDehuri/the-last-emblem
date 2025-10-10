@@ -3021,10 +3021,14 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;'Aura_of_Might_effect' in [skill.nid for skill in unit.skills]",
-            "    remove_skill;Uyae;Aura_of_Might_effect;no_banner",
-            "    remove_item;Uyae;Might_Claw;no_banner",
-            "end"
+            "for;claw_item;[item.nid for item in u('Uyae').items if item.nid.startswith('Claw_')]",
+            "    remove_item;Uyae;{claw_item};no_banner",
+            "endf",
+            "for;aura_skill;[skill.nid for skill in u('Uyae').skills if skill.nid.startswith('Aura_of')]",
+            "    remove_skill;Uyae;{aura_skill};no_banner",
+            "endf",
+            "give_skill;Uyae;Aura_of_Spirit",
+            "give_item;Uyae;Claw_Spirit;;no_banner"
         ],
         "nid": "Global UyaeSpiritStance"
     },
@@ -3037,9 +3041,14 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;'Aura_of_Spirit_effect' in [skill.nid for skill in unit.skills]",
-            "    remove_skill;Uyae;Aura_of_Spirit_effect;no_banner",
-            "end"
+            "for;claw_item;[item.nid for item in u('Uyae').items if item.nid.startswith('Claw_')]",
+            "    remove_item;Uyae;{claw_item};no_banner",
+            "endf",
+            "for;aura_skill;[skill.nid for skill in u('Uyae').skills if skill.nid.startswith('Aura_of')]",
+            "    remove_skill;Uyae;{aura_skill};no_banner",
+            "endf",
+            "give_skill;Uyae;Aura_of_Might",
+            "give_item;Uyae;Claw_Might;;no_banner"
         ],
         "nid": "Global UyaeMightStance"
     },
@@ -12619,7 +12628,15 @@
             "give_skill;Balia;Summon_orc;;no_banner",
             "give_skill;Wynn;Bone_stack;;no_banner",
             "give_skill;Lynine;Succubus_Growth;;no_banner",
-            "give_skill;Simon;Multitask;;no_banner"
+            "give_skill;Simon;Multitask;;no_banner",
+            "give_skill;Trin;Coated_weapon;;no_banner",
+            "give_skill;Uyae;Stance_Switch;;no_banner",
+            "set_current_hp;Simon;2",
+            "give_skill;Yarra;combattest;;no_banner",
+            "give_skill;Wynn;Efficient_Disposal;;no_banner",
+            "give_skill;Aka;Sneaky_Stabs;;no_banner",
+            "give_skill;Uyae;Agility_synergy;;no_banner",
+            "give_skill;Altina;Elven_Trio;;no_banner"
         ],
         "nid": "teste2 New Event"
     },
@@ -13015,7 +13032,14 @@
             "wait;200",
             "add_portrait;Trin;Left",
             "wait;300",
-            "s;Trin;Do I copy this motherfucker?|I'm managing {v:trincopies} copies. ",
+            "s;Trin;Do I copy this motherfucker?",
+            "if;{v:trincopies} == 0",
+            "    s;Trin;I'm not controlling anybody anyway.",
+            "elif;{v:trincopies} == 1",
+            "    s;Trin;I'm managing one copy.",
+            "else",
+            "    s;Trin;I'm managing {v:trincopies} copies.",
+            "end",
             "if;{v:trincopies} == 0",
             "    s;Trin;I'm bored as hell, let me do something!",
             "elif;{v:trincopies} == 1",
@@ -13042,6 +13066,16 @@
             "    else",
             "    end",
             "    give_skill;Trin;Trin_debuff;;no_banner",
+            "    #check synergies",
+            "    if;has_skill('Trin', 'Coated_weapon') == True",
+            "        give_skill;{target};Blind_attack;;no_banner",
+            "    else",
+            "    end",
+            "    if;has_skill('Wynn', 'Efficient_Disposal') == True",
+            "        give_skill;Wynn;Bone_stack;;no_banner",
+            "    else",
+            "    end",
+            "    #####",
             "    inc_game_var;trincopies;1",
             "    give_skill;{target};Copy_debuff;;no_banner",
             "    add_portrait;Trin;Left",
@@ -13316,10 +13350,15 @@
             "center_cursor;Simon",
             "wait;200",
             "create_unit;Simon;Simoncopy;;Simon;fade;closest;copy_stats",
-            "change_team;Simoncopy;other",
             "level_var;simonhp;{e: u('Simon').get_hp()}",
             "set_current_hp;Simoncopy;{v:simonhp}",
             "give_skill;Simoncopy;Multitask_effect;;no_banner",
+            "for;simon_item;[item.nid for item in u('Simon').items]",
+            "    remove_item;Simoncopy;{simon_item};Simon;no_banner",
+            "endf",
+            "give_item;Simoncopy;Iron_Axe;no_banner",
+            "give_item;Simoncopy;Iron_Lance;no_banner",
+            "give_item;Simoncopy;Iron_Sword;no_banner",
             "wait;300"
         ],
         "nid": "Global Trin copy Simon"
@@ -13340,5 +13379,65 @@
             "wait;200"
         ],
         "nid": "Global Trin copied Simon dies"
+    },
+    {
+        "name": "Uyae return neutral",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "for;claw_item;[item.nid for item in u('Uyae').items if item.nid.startswith('Claw_')]",
+            "    remove_item;Uyae;{claw_item};no_banner",
+            "endf",
+            "for;aura_skill;[skill.nid for skill in u('Uyae').skills if skill.nid.startswith('Aura_of')]",
+            "    remove_skill;Uyae;{aura_skill};no_banner",
+            "endf",
+            "give_skill;Uyae;Aura_of_Neutrality;;no_banner",
+            "give_item;Uyae;Claw_Neutral;;no_banner"
+        ],
+        "nid": "Global Uyae return neutral"
+    },
+    {
+        "name": "Uyae healing stance",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "for;claw_item;[item.nid for item in u('Uyae').items if item.nid.startswith('Claw_')]",
+            "    remove_item;Uyae;{claw_item};no_banner",
+            "endf",
+            "for;aura_skill;[skill.nid for skill in u('Uyae').skills if skill.nid.startswith('Aura_of')]",
+            "    remove_skill;Uyae;{aura_skill};no_banner",
+            "endf",
+            "give_skill;Uyae;Aura_of_Healing",
+            "give_item;Uyae;Claw_Healing;;no_banner"
+        ],
+        "nid": "Global Uyae healing stance"
+    },
+    {
+        "name": "Uyae agility stance",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "for;claw_item;[item.nid for item in u('Uyae').items if item.nid.startswith('Claw_')]",
+            "    remove_item;Uyae;{claw_item};no_banner",
+            "endf",
+            "for;aura_skill;[skill.nid for skill in u('Uyae').skills if skill.nid.startswith('Aura_of')]",
+            "    remove_skill;Uyae;{aura_skill};no_banner",
+            "endf",
+            "give_skill;Uyae;Aura_of_Agility",
+            "give_item;Uyae;Claw_Agility;;no_banner"
+        ],
+        "nid": "Global Uyae agility stance"
     }
 ]

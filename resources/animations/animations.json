@@ -437,7 +437,7 @@
         "frame_y": 1,
         "num_frames": 3,
         "speed": 150,
-        "frame_times": "9,9,9",
+        "frame_times": "9,9,9,1,1,1",
         "use_frame_time": false
     },
     {
@@ -573,6 +573,15 @@
         "num_frames": 3,
         "speed": 150,
         "frame_times": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1",
+        "use_frame_time": false
+    },
+    {
+        "nid": "synergy",
+        "frame_x": 2,
+        "frame_y": 1,
+        "num_frames": 2,
+        "speed": 500,
+        "frame_times": "1,1",
         "use_frame_time": false
     }
 ]
