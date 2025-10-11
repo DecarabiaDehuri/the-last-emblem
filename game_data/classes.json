@@ -9630,42 +9630,40 @@
         "fields": []
     },
     {
-        "nid": "Wall25",
-        "name": "Wall",
+        "nid": "Spider",
+        "name": "Spider",
         "desc": "",
         "tier": 1,
-        "movement_group": "Light Foot",
+        "movement_group": "Regular",
         "promotes_from": null,
         "turns_into": [],
         "tags": [
-            "Tile"
+            "Monster"
         ],
         "max_level": 20,
         "bases": {
             "HP": 10,
-            "STR": 0,
+            "STR": 2,
             "MAG": 0,
-            "SKL": 0,
-            "SPD": 40,
+            "SKL": 5,
+            "SPD": 3,
             "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
+            "DEF": 4,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 2
         },
         "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
+            "HP": 82,
+            "STR": 50,
+            "MAG": 20,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 15,
+            "DEF": 18,
+            "RES": 13,
             "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
+            "MOV": 0
         },
         "growth_bonus": {
             "HP": 0,
@@ -9677,8 +9675,7 @@
             "DEF": 0,
             "RES": 0,
             "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
+            "MOV": 0
         },
         "promotion": {
             "HP": 0,
@@ -9690,73 +9687,61 @@
             "DEF": 0,
             "RES": 0,
             "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
+            "MOV": 0
         },
         "max_stats": {
-            "HP": 100,
+            "HP": 60,
             "STR": 30,
             "MAG": 30,
             "SKL": 30,
-            "SPD": 40,
+            "SPD": 30,
             "LCK": 30,
             "DEF": 30,
             "RES": 30,
-            "CON": 30,
-            "MOV": 30,
-            "LEAD": 60,
-            "New Stat": 30
+            "CON": 25,
+            "MOV": 15
         },
-        "learned_skills": [
-            [
-                1,
-                "NoAvoid"
-            ],
-            [
-                1,
-                "Void_Curse"
-            ]
-        ],
+        "learned_skills": [],
         "wexp_gain": {
             "Sword": [
                 false,
                 0,
-                251
+                null
             ],
             "Lance": [
                 false,
                 0,
-                251
+                null
             ],
             "Axe": [
                 false,
                 0,
-                251
+                null
             ],
             "Bow": [
-                false,
+                true,
                 0,
-                251
+                null
             ],
             "Staff": [
                 false,
                 0,
-                251
+                null
             ],
             "Light": [
                 false,
                 0,
-                251
+                null
             ],
             "Anima": [
                 false,
                 0,
-                251
+                null
             ],
             "Dark": [
-                false,
+                true,
                 0,
-                251
+                null
             ],
             "Whip": [
                 false,
@@ -9766,7 +9751,7 @@
             "Default": [
                 false,
                 0,
-                251
+                null
             ],
             "Scythe": [
                 false,
@@ -9779,653 +9764,13 @@
                 null
             ]
         },
-        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_nid": "Portrait Editor fetls memory.gba_157@9D Bael_8ADCF0",
         "icon_index": [
             0,
             0
         ],
-        "map_sprite_nid": "Invisible",
-        "combat_anim_nid": null,
-        "fields": []
-    },
-    {
-        "nid": "ReinforcedWall",
-        "name": "Wall",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Tile"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 80,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 40,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 100,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 40,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 30,
-            "MOV": 30,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [
-            [
-                1,
-                "NoAvoid"
-            ],
-            [
-                1,
-                "Void_Curse"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Citizen",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Invisible",
-        "combat_anim_nid": null,
-        "fields": []
-    },
-    {
-        "nid": "root",
-        "name": "root",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Tile"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 1,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 40,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 100,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 40,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 30,
-            "MOV": 30,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [
-            [
-                1,
-                "NoAvoid"
-            ],
-            [
-                1,
-                "Void_Curse"
-            ],
-            [
-                1,
-                "target"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Citizen",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Invisible",
-        "combat_anim_nid": null,
-        "fields": []
-    },
-    {
-        "nid": "Snag20",
-        "name": "Snag",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Tile"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 10,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 40,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 30,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 40,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 30,
-            "MOV": 30,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [
-            [
-                1,
-                "NoAvoid"
-            ],
-            [
-                1,
-                "Void_Curse"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Citizen",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Invisible",
-        "combat_anim_nid": null,
-        "fields": []
-    },
-    {
-        "nid": "MagicBarrier",
-        "name": "MagicBarrier",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Tile"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 50,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 50,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 40,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 30,
-            "MOV": 30,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [
-            [
-                1,
-                "NoAvoid"
-            ],
-            [
-                1,
-                "Void_Curse"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Citizen",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Invisible",
-        "combat_anim_nid": null,
+        "map_sprite_nid": "Spider",
+        "combat_anim_nid": "Spider",
         "fields": []
     },
     {
@@ -11300,6 +10645,154 @@
         "fields": []
     },
     {
+        "nid": "Mirage_Mage",
+        "name": "Mirage Mage",
+        "desc": "Curious practioners of anima magic.",
+        "tier": 2,
+        "movement_group": "Mages",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 16,
+            "STR": 0,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 0,
+            "DEF": 3,
+            "RES": 4,
+            "CON": 5,
+            "MOV": 5,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 55,
+            "STR": 0,
+            "MAG": 55,
+            "SKL": 40,
+            "SPD": 35,
+            "LCK": 20,
+            "DEF": 5,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 1,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 1,
+            "MOV": -99,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 20,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                true,
+                31,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Mage (1)",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Tactician (U) {SALVAGED}-stand",
+        "combat_anim_nid": "Mirage_Mage",
+        "fields": []
+    },
+    {
         "nid": "Protector",
         "name": "Protector",
         "desc": "Heavily armored knights with poor movement.",
@@ -11603,154 +11096,6 @@
         "fields": []
     },
     {
-        "nid": "Mirage_Mage",
-        "name": "Mirage Mage",
-        "desc": "Curious practioners of anima magic.",
-        "tier": 2,
-        "movement_group": "Mages",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [],
-        "max_level": 20,
-        "bases": {
-            "HP": 16,
-            "STR": 0,
-            "MAG": 1,
-            "SKL": 3,
-            "SPD": 3,
-            "LCK": 0,
-            "DEF": 3,
-            "RES": 4,
-            "CON": 5,
-            "MOV": 5,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 55,
-            "STR": 0,
-            "MAG": 55,
-            "SKL": 40,
-            "SPD": 35,
-            "LCK": 20,
-            "DEF": 5,
-            "RES": 40,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 1,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 1,
-            "SPD": 2,
-            "LCK": 0,
-            "DEF": 1,
-            "RES": 2,
-            "CON": 1,
-            "MOV": -99,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 20,
-            "MAG": 20,
-            "SKL": 20,
-            "SPD": 20,
-            "LCK": 30,
-            "DEF": 20,
-            "RES": 20,
-            "CON": 20,
-            "MOV": 15,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                true,
-                31,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Mage (1)",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Tactician (U) {SALVAGED}-stand",
-        "combat_anim_nid": "Mirage_Mage",
-        "fields": []
-    },
-    {
         "nid": "Manumitter",
         "name": "Manumitter",
         "desc": "",
@@ -11898,154 +11243,6 @@
         ],
         "map_sprite_nid": "Lord (F) Priestess Sword {blood}-stand",
         "combat_anim_nid": "Manumitter",
-        "fields": []
-    },
-    {
-        "nid": "Suc_Minerve",
-        "name": "Succubus",
-        "desc": "??",
-        "tier": 1,
-        "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [],
-        "max_level": 20,
-        "bases": {
-            "HP": 14,
-            "STR": 1,
-            "MAG": 1,
-            "SKL": 2,
-            "SPD": 7,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 1,
-            "CON": 4,
-            "MOV": 5,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 45,
-            "STR": 45,
-            "MAG": 45,
-            "SKL": 30,
-            "SPD": 60,
-            "LCK": 70,
-            "DEF": 0,
-            "RES": 13,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 20,
-            "MAG": 20,
-            "SKL": 20,
-            "SPD": 20,
-            "LCK": 30,
-            "DEF": 20,
-            "RES": 20,
-            "CON": 20,
-            "MOV": 15,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                true,
-                0,
-                251
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Citizen",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Dancer",
-        "combat_anim_nid": "Suc_Minerve",
         "fields": []
     },
     {
@@ -12201,314 +11398,6 @@
         ],
         "map_sprite_nid": "Dancer",
         "combat_anim_nid": "Yarra",
-        "fields": []
-    },
-    {
-        "nid": "Suc_Lamia",
-        "name": "Lamia Succubus",
-        "desc": "??",
-        "tier": 1,
-        "movement_group": "Pirates",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [],
-        "max_level": 20,
-        "bases": {
-            "HP": 14,
-            "STR": 1,
-            "MAG": 1,
-            "SKL": 2,
-            "SPD": 7,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 1,
-            "CON": 4,
-            "MOV": 5,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 45,
-            "STR": 45,
-            "MAG": 45,
-            "SKL": 30,
-            "SPD": 60,
-            "LCK": 70,
-            "DEF": 0,
-            "RES": 13,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 20,
-            "MAG": 20,
-            "SKL": 20,
-            "SPD": 20,
-            "LCK": 30,
-            "DEF": 20,
-            "RES": 20,
-            "CON": 20,
-            "MOV": 15,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [
-            [
-                1,
-                "Dance"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                true,
-                1,
-                251
-            ],
-            "Whip": [
-                true,
-                1,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                true,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Citizen",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Lamia (F) {Dutch Introvert}-stand",
-        "combat_anim_nid": "Lamia",
-        "fields": []
-    },
-    {
-        "nid": "Suc_Riala",
-        "name": "Succubus Mage",
-        "desc": "??",
-        "tier": 1,
-        "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 14,
-            "STR": 1,
-            "MAG": 1,
-            "SKL": 2,
-            "SPD": 7,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 1,
-            "CON": 4,
-            "MOV": 5,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 45,
-            "STR": 45,
-            "MAG": 45,
-            "SKL": 30,
-            "SPD": 60,
-            "LCK": 70,
-            "DEF": 0,
-            "RES": 13,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 20,
-            "MAG": 20,
-            "SKL": 20,
-            "SPD": 20,
-            "LCK": 30,
-            "DEF": 20,
-            "RES": 20,
-            "CON": 20,
-            "MOV": 15,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [
-            [
-                1,
-                "Dance"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                false,
-                0,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                true,
-                1,
-                251
-            ],
-            "Whip": [
-                true,
-                1,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Citizen",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Sage (F) Limstella {FE7if}-stand",
-        "combat_anim_nid": "Riala",
         "fields": []
     },
     {
@@ -12818,6 +11707,462 @@
         "fields": []
     },
     {
+        "nid": "Suc_Riala",
+        "name": "Succubus Mage",
+        "desc": "??",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 2,
+            "SPD": 7,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 1,
+            "CON": 4,
+            "MOV": 5,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 45,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 60,
+            "LCK": 70,
+            "DEF": 0,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 20,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Dance"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                true,
+                1,
+                251
+            ],
+            "Whip": [
+                true,
+                1,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Sage (F) Limstella {FE7if}-stand",
+        "combat_anim_nid": "Riala",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Minerve",
+        "name": "Succubus",
+        "desc": "??",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 2,
+            "SPD": 7,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 1,
+            "CON": 4,
+            "MOV": 5,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 45,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 60,
+            "LCK": 70,
+            "DEF": 0,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 20,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                true,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dancer",
+        "combat_anim_nid": "Suc_Minerve",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Lamia",
+        "name": "Lamia Succubus",
+        "desc": "??",
+        "tier": 1,
+        "movement_group": "Pirates",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 2,
+            "SPD": 7,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 1,
+            "CON": 4,
+            "MOV": 5,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 45,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 60,
+            "LCK": 70,
+            "DEF": 0,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 20,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Dance"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                true,
+                1,
+                251
+            ],
+            "Whip": [
+                true,
+                1,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                true,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Lamia (F) {Dutch Introvert}-stand",
+        "combat_anim_nid": "Lamia",
+        "fields": []
+    },
+    {
         "nid": "Supplier",
         "name": "Supplier",
         "desc": "",
@@ -13109,445 +12454,6 @@
         ],
         "map_sprite_nid": "Lord (M) Roy T2 Redesign {Jeorge Reds}-stand",
         "combat_anim_nid": "Chosen",
-        "fields": []
-    },
-    {
-        "nid": "Spider",
-        "name": "Spider",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Regular",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Monster"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 10,
-            "STR": 2,
-            "MAG": 0,
-            "SKL": 5,
-            "SPD": 3,
-            "LCK": 0,
-            "DEF": 4,
-            "RES": 2,
-            "CON": 5,
-            "MOV": 2
-        },
-        "growths": {
-            "HP": 82,
-            "STR": 50,
-            "MAG": 20,
-            "SKL": 30,
-            "SPD": 20,
-            "LCK": 15,
-            "DEF": 18,
-            "RES": 13,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                true,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                true,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Portrait Editor fetls memory.gba_157@9D Bael_8ADCF0",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Spider",
-        "combat_anim_nid": "Spider",
-        "fields": []
-    },
-    {
-        "nid": "Suc_Spider",
-        "name": "<narrow>Spider Succubus</>",
-        "desc": "Succubus of the Spider variant.",
-        "tier": 1,
-        "movement_group": "Regular",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Monster",
-            "Female",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 10,
-            "STR": 2,
-            "MAG": 0,
-            "SKL": 5,
-            "SPD": 3,
-            "LCK": 5,
-            "DEF": 4,
-            "RES": 2,
-            "CON": 5,
-            "MOV": 2
-        },
-        "growths": {
-            "HP": 82,
-            "STR": 60,
-            "MAG": 20,
-            "SKL": 40,
-            "SPD": 30,
-            "LCK": 25,
-            "DEF": 30,
-            "RES": 20,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Poison_attack"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                false,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                true,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "216cad6a-e59b-4346-baea-d280df025119",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Bael Widow (F) {MeatOfJustice}-stand",
-        "combat_anim_nid": "SucSpider",
-        "fields": []
-    },
-    {
-        "nid": "SpiderEmpress",
-        "name": "Spider",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "SpiderEmpress",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Monster"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 10,
-            "STR": 2,
-            "MAG": 0,
-            "SKL": 5,
-            "SPD": 3,
-            "LCK": 0,
-            "DEF": 4,
-            "RES": 2,
-            "CON": 5,
-            "MOV": 2
-        },
-        "growths": {
-            "HP": 82,
-            "STR": 50,
-            "MAG": 20,
-            "SKL": 30,
-            "SPD": 20,
-            "LCK": 15,
-            "DEF": 18,
-            "RES": 13,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                true,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                true,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Portrait Editor fetls memory.gba_157@9D Bael_8ADCF0",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "SpiderEmpress",
-        "combat_anim_nid": "SpiderEmpress",
         "fields": []
     },
     {
@@ -13845,6 +12751,290 @@
         "fields": []
     },
     {
+        "nid": "Militia",
+        "name": "Militia",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 20,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 3,
+            "RES": 0,
+            "CON": 12,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 82,
+            "STR": 50,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 15,
+            "DEF": 10,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                true,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Militia (F) Deserter Lance Helmet {Rasdel, Epicer}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Militia (M) Deserter Lance {Alusq}-stand",
+        "combat_anim_nid": "Militia",
+        "fields": []
+    },
+    {
+        "nid": "Incubus_Emperor",
+        "name": "Incubus King",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Regular",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                true,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Sage (M) Battle Sage {Unknown}-stand",
+        "combat_anim_nid": "Incubus_King",
+        "fields": []
+    },
+    {
         "nid": "Orc",
         "name": "Orc",
         "desc": "Brute monsters with a lust for violence.",
@@ -13997,7 +13187,7 @@
     },
     {
         "nid": "Orc_Elite",
-        "name": "Orc",
+        "name": "Elite Orc",
         "desc": "Seasoned orc warriors.",
         "tier": 1,
         "movement_group": "Bandits",
@@ -14599,320 +13789,39 @@
         "fields": []
     },
     {
-        "nid": "Militia",
-        "name": "Militia",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Light Foot",
-        "promotes_from": null,
+        "nid": "Imp_Elite",
+        "name": "Elite Imp",
+        "desc": "A race of orcs. They have frail constitution, yet are fearsome nevertheless.",
+        "tier": 2,
+        "movement_group": "Fliers",
+        "promotes_from": "Imp",
         "turns_into": [],
-        "tags": [],
+        "tags": [
+            "Flying",
+            "Monster"
+        ],
         "max_level": 20,
         "bases": {
-            "HP": 20,
-            "STR": 5,
+            "HP": 6,
+            "STR": 8,
             "MAG": 0,
-            "SKL": 1,
-            "SPD": 5,
-            "LCK": 0,
-            "DEF": 3,
-            "RES": 0,
-            "CON": 12,
+            "SKL": 4,
+            "SPD": 6,
+            "LCK": 7,
+            "DEF": 2,
+            "RES": 1,
+            "CON": 16,
             "MOV": 5
         },
         "growths": {
-            "HP": 82,
-            "STR": 50,
-            "MAG": 0,
-            "SKL": 30,
-            "SPD": 20,
-            "LCK": 15,
-            "DEF": 10,
-            "RES": 13,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
+            "HP": 70,
+            "STR": 40,
+            "MAG": 25,
+            "SKL": 60,
+            "SPD": 70,
+            "LCK": 40,
             "DEF": 30,
             "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                true,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                false,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Militia (F) Deserter Lance Helmet {Rasdel, Epicer}",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Militia (M) Deserter Lance {Alusq}-stand",
-        "combat_anim_nid": "Militia",
-        "fields": []
-    },
-    {
-        "nid": "Incubus_Emperor",
-        "name": "Incubus King",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Regular",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [],
-        "max_level": 20,
-        "bases": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                false,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                true,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Sage (M) Battle Sage {Unknown}-stand",
-        "combat_anim_nid": "Incubus_King",
-        "fields": []
-    },
-    {
-        "nid": "Batgal",
-        "name": "Bat Succubus",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Fliers",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [],
-        "max_level": 20,
-        "bases": {
-            "HP": 10,
-            "STR": 2,
-            "MAG": 0,
-            "SKL": 5,
-            "SPD": 3,
-            "LCK": 0,
-            "DEF": 4,
-            "RES": 2,
-            "CON": 5,
-            "MOV": 2
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
             "CON": 0,
             "MOV": 0
         },
@@ -14955,7 +13864,11 @@
         "learned_skills": [
             [
                 1,
-                "Confusion_attack"
+                "Flying"
+            ],
+            [
+                1,
+                "Blind_attack"
             ]
         ],
         "wexp_gain": {
@@ -14965,7 +13878,7 @@
                 null
             ],
             "Lance": [
-                false,
+                true,
                 0,
                 null
             ],
@@ -15000,7 +13913,7 @@
                 null
             ],
             "Whip": [
-                true,
+                false,
                 0,
                 null
             ],
@@ -15020,13 +13933,13 @@
                 null
             ]
         },
-        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_nid": "Gargoyle Deathgoyle Lance {IS}",
         "icon_index": [
             0,
             0
         ],
-        "map_sprite_nid": "Succubus (F) {SkidMarc25}-stand",
-        "combat_anim_nid": "SuccubusBat",
+        "map_sprite_nid": "Goyle (U) T2 Lance {L95}-stand",
+        "combat_anim_nid": "Imp",
         "fields": []
     },
     {
@@ -15337,6 +14250,448 @@
         ],
         "map_sprite_nid": "EliteSuc-stand",
         "combat_anim_nid": "Succubus_2",
+        "fields": []
+    },
+    {
+        "nid": "Batgal",
+        "name": "Bat Succubus",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 3,
+            "LCK": 0,
+            "DEF": 4,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Confusion_attack"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                true,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Succubus (F) {SkidMarc25}-stand",
+        "combat_anim_nid": "SuccubusBat",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Spider",
+        "name": "<narrow>Spider Succubus</>",
+        "desc": "Succubus of the Spider variant.",
+        "tier": 1,
+        "movement_group": "Regular",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 3,
+            "LCK": 5,
+            "DEF": 4,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 82,
+            "STR": 60,
+            "MAG": 20,
+            "SKL": 40,
+            "SPD": 30,
+            "LCK": 25,
+            "DEF": 30,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Poison_attack"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                true,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "216cad6a-e59b-4346-baea-d280df025119",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Bael Widow (F) {MeatOfJustice}-stand",
+        "combat_anim_nid": "SucSpider",
+        "fields": []
+    },
+    {
+        "nid": "SpiderEmpress",
+        "name": "Spider",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "SpiderEmpress",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Monster"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 3,
+            "LCK": 0,
+            "DEF": 4,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 82,
+            "STR": 50,
+            "MAG": 20,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 15,
+            "DEF": 18,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                true,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Portrait Editor fetls memory.gba_157@9D Bael_8ADCF0",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "SpiderEmpress",
+        "combat_anim_nid": "SpiderEmpress",
         "fields": []
     },
     {
@@ -16820,7 +16175,7 @@
             0
         ],
         "map_sprite_nid": "Marshall (U) Lance {Nuramon}-stand_1",
-        "combat_anim_nid": null,
+        "combat_anim_nid": "DoomKing",
         "fields": []
     },
     {
@@ -17110,6 +16465,805 @@
             0
         ],
         "map_sprite_nid": null,
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Wall25",
+        "name": "Wall",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Tile"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 40,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 100,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 30,
+            "MOV": 30,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "NoAvoid"
+            ],
+            [
+                1,
+                "Void_Curse"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Invisible",
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "ReinforcedWall",
+        "name": "Wall",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Tile"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 80,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 40,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 100,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 30,
+            "MOV": 30,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "NoAvoid"
+            ],
+            [
+                1,
+                "Void_Curse"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Invisible",
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "root",
+        "name": "root",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Tile"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 1,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 40,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 100,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 30,
+            "MOV": 30,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "NoAvoid"
+            ],
+            [
+                1,
+                "Void_Curse"
+            ],
+            [
+                1,
+                "target"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Invisible",
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Snag20",
+        "name": "Snag",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Tile"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 40,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 30,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 30,
+            "MOV": 30,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "NoAvoid"
+            ],
+            [
+                1,
+                "Void_Curse"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Invisible",
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "MagicBarrier",
+        "name": "MagicBarrier",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Tile"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 50,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 50,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 30,
+            "MOV": 30,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "NoAvoid"
+            ],
+            [
+                1,
+                "Void_Curse"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Invisible",
         "combat_anim_nid": null,
         "fields": []
     }

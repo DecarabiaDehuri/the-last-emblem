@@ -10429,6 +10429,38 @@
         ]
     },
     {
+        "nid": "Equip_Armor",
+        "name": "Equip Armor",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Debug Setup"
+            ]
+        ]
+    },
+    {
         "nid": "Supplier_to_Wagon",
         "name": "Ride Wagon",
         "desc": "",
@@ -10924,6 +10956,54 @@
             [
                 "mana_cost_as_uses",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Burst_Cleanse",
+        "name": "Burst Cleanse",
+        "desc": "<green>[Lynine synergy]</> Carina releases a burst of divine magic around her, cleasing negative effects. Costs <blue>10 mana</>. Increases Lynine's Overgasm.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            7
+        ],
+        "components": [
+            [
+                "ally_blast_aoe",
+                2
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Lynine overgasm"
             ]
         ]
     },

@@ -5913,10 +5913,21 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Iron_Axe",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Axe": [
+                false,
+                71,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "Lute",
         "affinity": "None",

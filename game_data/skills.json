@@ -531,7 +531,7 @@
     {
         "nid": "Overgasm",
         "name": "Overgasm",
-        "desc": "Lynine's skills increase the Overgasm meter. When this reaches 3 stacks, Lynine is overstimulated and will suffer <red>[PARALYSIS]</>.",
+        "desc": "When this reaches 3 stacks, Lynine is overstimulated and will suffer <red>[OVERGASMED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -545,6 +545,62 @@
             [
                 "class_skill",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Overgasm_Info",
+        "name": "Overgasm",
+        "desc": "Lynine's skills increase the Overgasm meter. When it reaches 3 stacks, she suffers <red>[OVERGASMED]</>: unable to act for one turn, with increasing turn counts each time it's triggered on a chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Overgasmed",
+        "name": "<red>[OVERGASMED]</>",
+        "desc": "Lynine has fainted and can't act again until she recovers. Enemies may try to attack her.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            38
+        ],
+        "components": [
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "cannot_trade",
+                null
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "grounded",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "modify_ai_priority",
+                1.5000000000000002
+            ],
+            [
+                "unit_anim",
+                "MapStun"
             ]
         ]
     },
@@ -608,7 +664,7 @@
     {
         "nid": "Affiliate_skill",
         "name": "Affiliate",
-        "desc": "<orange>[Megail] synergy</> Lynine can mark an ally as an affiliate. For 3 turns, Lynine can move next to them, regardless of distance. Marking costs <blue>5 mana</> and in creases <red>Overgasm</>.",
+        "desc": "<orange>[Megail] synergy</> Lynine can mark an ally as an affiliate. For 3 turns, Lynine can move next to them, regardless of distance. Marking costs <blue>5 mana</> and increases <red>[OVERGASM]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -650,10 +706,6 @@
             [
                 "witch_warp_expression",
                 "'Lynined' in unit.tags"
-            ],
-            [
-                "unit_anim",
-                "MapFlying"
             ]
         ]
     },
@@ -1254,30 +1306,6 @@
         ]
     },
     {
-        "nid": "Intervention",
-        "name": "Intervention",
-        "desc": "<green>[Orcent synergy]</> Balia can intervene with Orcent's emotions, resetting his <red>Brutality</> and <blue>Serenity</> stacks to 0.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            37
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Intervention"
-            ],
-            [
-                "menu_category",
-                "<orange>Synergy</>"
-            ]
-        ]
-    },
-    {
         "nid": "Summon_orc",
         "name": "Summon orc",
         "desc": "Summons a basic orc. Costs <blue>5 mana</>.",
@@ -1396,6 +1424,41 @@
                 "Summon_orc_1"
             ]
         ]
+    },
+    {
+        "nid": "Intervention",
+        "name": "Intervention",
+        "desc": "<green>[Orcent synergy]</> Balia can intervene with Orcent's emotions, resetting his <red>Brutality</> and <blue>Serenity</> stacks to 0.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Intervention"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "new",
+        "name": "new",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Lightning_Whip",
@@ -9627,12 +9690,12 @@
                 "Supplier_to_Wagon"
             ],
             [
-                "hidden",
-                null
-            ],
-            [
                 "change_variant",
                 "_Supplier"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -9686,6 +9749,54 @@
             [
                 "ignore_rescue_penalty",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Deep_Loot",
+        "name": "Deep Loot",
+        "desc": "<green>[Wynn synergy]</> When Megail kills an enemy unit, 50% chance of looting a potion.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            32
+        ],
+        "components": [
+            [
+                "attack_pre_proc",
+                "Deep_Loot_proc"
+            ],
+            [
+                "proc_rate",
+                "MOEDA"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Megail' for u in target_system.get_adj_units(game.get_unit('Wynn'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Deep_Loot_proc",
+        "name": "Deep Loot",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            32
+        ],
+        "components": [
+            [
+                "event_after_kill",
+                "Global Megail Wynn kill event"
             ]
         ]
     },
@@ -9940,6 +10051,10 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
             ]
         ]
     },
@@ -9962,24 +10077,8 @@
                 null
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
-            ],
-            [
-                "hide_aura",
-                null
             ]
         ]
     },
@@ -10105,6 +10204,34 @@
             [
                 "combat_condition",
                 "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ]
+        ]
+    },
+    {
+        "nid": "Burst_Cleanse",
+        "name": "Burst Cleanse",
+        "desc": "<green>[Lynine synergy]</> Carina releases a burst of divine magic around her, cleasing negative effects. Costs <blue>10 mana</>. Increases Lynine's Overgasm.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            7
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Burst_Cleanse"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Carina' for u in target_system.get_adj_units(game.get_unit('Lynine'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ]
         ]
     },
@@ -10623,22 +10750,6 @@
                 "Disrupt"
             ],
             [
-                "aura_range",
-                1
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
                 "hidden_if_inactive",
                 null
             ],
@@ -10973,6 +11084,30 @@
             [
                 "give_status_after_combat_on_hit",
                 "Proc_disrupt_stun"
+            ]
+        ]
+    },
+    {
+        "nid": "Read_Them",
+        "name": "Read Them",
+        "desc": "<green>[Orilise synergy]</> Robin is keenly reading the enemies' moves, granting her bonus avoidance.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            10
+        ],
+        "components": [
+            [
+                "condition",
+                "any([u.nid == 'Robin' for u in target_system.get_adj_units(game.get_unit('Orilise'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "avoid",
+                20
             ]
         ]
     },

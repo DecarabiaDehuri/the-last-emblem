@@ -12636,7 +12636,10 @@
             "give_skill;Wynn;Efficient_Disposal;;no_banner",
             "give_skill;Aka;Sneaky_Stabs;;no_banner",
             "give_skill;Uyae;Agility_synergy;;no_banner",
-            "give_skill;Altina;Elven_Trio;;no_banner"
+            "give_skill;Altina;Elven_Trio;;no_banner",
+            "give_skill;Carina;Burst_Cleanse;;no_banner",
+            "give_skill;Lynine;Overgasm_Info;;no_banner",
+            "give_skill;Megail;Deep_Loot;;no_banner"
         ],
         "nid": "teste2 New Event"
     },
@@ -12982,10 +12985,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "give_skill;Orcent;Calm_Stack;;no_banner",
+            "#give_skill;Orcent;Calm_Stack;;no_banner",
             "give_skill;Lynine;Overgasm;;no_banner",
-            "create_unit;Simon;CopiedSimon;;Simon;fade;closest;copy_stats",
-            "give_item;Rosa;Iron_Axe",
+            "#create_unit;Simon;CopiedSimon;;Simon;fade;closest;copy_stats",
+            "#give_item;Rosa;Iron_Axe",
             "#party_transfer;Simon;AramEsmera;;Doom King;Attack;;3",
             "#party_transfer;Simon;AramKeranii;;Doom King;Defense;;3",
             "#kill_unit;Orilise;immediate",
@@ -12999,8 +13002,7 @@
             "#    choice;replacement;Choose replacement:;{eval:[u.nid for u in game.get_all_player_units() if u.dead]};64;v;center;menu_bg_dark;;type_unit;3,3;center;expression;",
             "#else",
             "#    s;system;Tem nao.",
-            "#end",
-            "    "
+            "#end"
         ],
         "nid": "teste2 New Event_2"
     },
@@ -13194,24 +13196,37 @@
     },
     {
         "name": "Lynine overgasm",
-        "trigger": "unit_wait",
+        "trigger": null,
         "level_nid": null,
-        "condition": "any(u.nid == 'Lynine' and u.position for u in game.get_units_in_party())",
+        "condition": "",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;{eval: item_funcs.num_stacks(u('Lynine'), 'Overgasm')} == 10",
-            "center_cursor;Lynine",
-            "wait;300",
-            "add_portrait;Lynine;Left",
-            "wait;100",
-            "expression;Lynine;CloseEyes,OpenMouth",
-            "s;Lynine;Aaaaaahhhh",
-            "r;Lynine",
-            "wait;300",
-            "    give_skill;Lynine;Paralysis;;no_banner",
-            "    remove_skill;Lynine;Overgasm;9;no_banner",
+            "give_skill;Lynine;Overgasm;;no_banner",
+            "",
+            "if;{v:lyntime} == None",
+            "    level_var;lyntime;3",
+            "else",
+            "    inc_level_var;lyntime;1",
+            "end",
+            "",
+            "if;{eval: item_funcs.num_stacks(u('Lynine'), 'Overgasm')} == 3",
+            "    center_cursor;Lynine",
+            "    wait;300",
+            "    add_portrait;Lynine;Left",
+            "    wait;100",
+            "    expression;Lynine;CloseEyes,OpenMouth",
+            "    s;Lynine;Aaaaaahhhhhhhh",
+            "    r;Lynine",
+            "    wait;300",
+            "    map_anim;Snag;Lynine;no_block",
+            "    sound;Restore",
+            "    give_skill;Lynine;Overgasmed;;no_banner",
+            "    remove_skill_component;Lynine;Overgasmed;time",
+            "    add_skill_component;Lynine;Overgasmed;time;{v:lyntime}",
+            "    remove_skill;Lynine;Overgasm;3;no_banner",
+            "    wait;1000",
             "end"
         ],
         "nid": "Global Lynine overgasm"
@@ -13267,7 +13282,7 @@
         "name": "New Event",
         "trigger": "turn_change",
         "level_nid": "aram1",
-        "condition": "game.turncount == 2",
+        "condition": "game.turncount == 3",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -13285,7 +13300,9 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "prep;t"
+            "change_team_palette;player;map_sprite_dark_red;GenericRed;red",
+            "change_team_palette;enemy;map_sprite_blue;GenericBlue;blue",
+            ""
         ],
         "nid": "aram1 New Event_1"
     },
@@ -13439,5 +13456,70 @@
             "give_item;Uyae;Claw_Agility;;no_banner"
         ],
         "nid": "Global Uyae agility stance"
+    },
+    {
+        "name": "Megail Wynn kill event",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_random(1, 3) <= 2",
+            "    give_item;{unit};Health_Potion",
+            "else",
+            "    give_item;{unit};Mana_Potion",
+            "end"
+        ],
+        "nid": "Global Megail Wynn kill event"
+    },
+    {
+        "name": "Balia summon orc elite",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "make_generic;;Orc_Elite;{e:unit.level};other;Pursue;Orc;;Steel_Axe",
+            "add_unit;{created_unit};{eval:target_pos};warp",
+            "add_tag;{created_unit};Summon",
+            "wait;200"
+        ],
+        "nid": "Global Balia summon orc elite"
+    },
+    {
+        "name": "Balia summon orc thrower",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "make_generic;;Orc_Thrower;{e:unit.level};other;Pursue;Orc;;Rock",
+            "add_unit;{created_unit};{eval:target_pos};warp",
+            "add_tag;{created_unit};Summon",
+            "wait;200"
+        ],
+        "nid": "Global Balia summon orc thrower"
+    },
+    {
+        "name": "Balia summon imp",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "make_generic;;Imp;{e:unit.level};other;Pursue;Orc;;Steel_Axe",
+            "add_unit;{created_unit};{eval:target_pos};warp",
+            "add_tag;{created_unit};Summon",
+            "wait;200"
+        ],
+        "nid": "Global Balia summon imp"
     }
 ]
