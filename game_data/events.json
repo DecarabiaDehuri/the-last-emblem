@@ -12639,7 +12639,8 @@
             "give_skill;Altina;Elven_Trio;;no_banner",
             "give_skill;Carina;Burst_Cleanse;;no_banner",
             "give_skill;Lynine;Overgasm_Info;;no_banner",
-            "give_skill;Megail;Deep_Loot;;no_banner"
+            "give_skill;Megail;Deep_Loot;;no_banner",
+            "give_skill;Wynn;Orc_Cauldron;;no_banner"
         ],
         "nid": "teste2 New Event"
     },
@@ -13272,6 +13273,7 @@
         "priority": 20,
         "_source": [
             "make_generic;;Orc;{e:unit.level};other;Pursue;Orc;;Iron_Axe",
+            "sound;CyclopsBattleCry",
             "add_unit;{created_unit};{eval:target_pos};warp",
             "add_tag;{created_unit};Summon",
             "wait;200"

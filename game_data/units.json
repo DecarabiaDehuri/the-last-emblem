@@ -215,7 +215,7 @@
         "nid": "Altina",
         "name": "Altina",
         "desc": "An earnest and compassionate cavalier from Renais.",
-        "variant": null,
+        "variant": "Altina",
         "level": 1,
         "klass": "Mage",
         "tags": [],
@@ -2559,6 +2559,109 @@
     },
     {
         "nid": "Skypiercer",
+        "name": "Skypiercer",
+        "desc": "A young lady of Frelia. She is both cheery and sociable.",
+        "variant": "",
+        "level": 4,
+        "klass": "Griffon_Rider",
+        "tags": [],
+        "bases": {
+            "HP": 20,
+            "STR": 7,
+            "MAG": 4,
+            "SKL": 9,
+            "SPD": 13,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 7,
+            "CON": 5,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 65,
+            "STR": 45,
+            "MAG": 25,
+            "SKL": 40,
+            "SPD": 65,
+            "LCK": 60,
+            "DEF": 20,
+            "RES": 25,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Heavy_Spear",
+                false
+            ],
+            [
+                "Javelin",
+                false
+            ],
+            [
+                "Health_Potion",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                true,
+                31,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [
+            "Paladin"
+        ],
+        "portrait_nid": "Laraib",
+        "affinity": "Wind",
+        "fields": []
+    },
+    {
+        "nid": "Skypiercer_2",
         "name": "Skypiercer",
         "desc": "A young lady of Frelia. She is both cheery and sociable.",
         "variant": "",
@@ -5929,7 +6032,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Lute",
+        "portrait_nid": "Esmera",
         "affinity": "None",
         "fields": []
     },
@@ -5972,6 +6075,46 @@
         "wexp_gain": {},
         "alternate_classes": [],
         "portrait_nid": "kerannii",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Impaler",
+        "name": "The Impaler",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Orc_Elite",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Impaler2",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Ralke",
+        "name": "Ralke",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Orc_Hero",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Ralke3_1",
         "affinity": null,
         "fields": []
     }

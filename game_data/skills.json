@@ -1115,6 +1115,39 @@
         ]
     },
     {
+        "nid": "Peer_Review",
+        "name": "Peer Review",
+        "desc": "<green>[Balia Synergy]</> Sometimes we need others to point our blind spots. <green>Reliar</> Orilise has bonus LUK.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            29
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Orilise' for u in target_system.get_adj_units(game.get_unit('Balia'))])"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ]
+        ]
+    },
+    {
         "nid": "Unpeople",
         "name": "Severed Sexuality",
         "desc": "Unpeople give off an aura that negatively affects Succubi nearby.",
@@ -2154,6 +2187,35 @@
         ]
     },
     {
+        "nid": "Fateful_Determination",
+        "name": "Fateful Determination",
+        "desc": "<green>[Varia synergy]</> Ginasta has increased LUK.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            11,
+            7
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Ginasta' for u in target_system.get_adj_units(game.get_unit('Varia'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ]
+        ]
+    },
+    {
         "nid": "Copy_debuff",
         "name": "Worthless",
         "desc": "This puppet is but a shell of its former self. Its stats are diminished. This effect is stronger for each puppet currently on field.",
@@ -2357,8 +2419,8 @@
     },
     {
         "nid": "Bone_stack",
-        "name": "Bone pile",
-        "desc": "Each stack of Bone pile enables an use of Wynn's Necromancy Spells.",
+        "name": "Bone Pile",
+        "desc": "Each stack of Bone Pile enables an use of Wynn's Necromancy Spells.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -2382,7 +2444,7 @@
     {
         "nid": "Death_Defiance",
         "name": "Death Defiance",
-        "desc": "Wynn can select an orc summoned by Balia to grant <green>[Death Defiance]</>:Upon death, unit is revived with full HP. Status is lost at the end of the turn.",
+        "desc": "<green>[Balia Synergy]</> Wynn can select an orc summoned by Balia to grant <green>[Death Defiance]</>:Upon death, unit is revived with full HP. Status is lost at the end of the turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -2460,6 +2522,46 @@
             [
                 "unit_anim",
                 "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Orc_Cauldron",
+        "name": "Orc Cauldron",
+        "desc": "<green>[Balia synergy]</> While this skill is active, when Balia summons an orc, that orc will gain Borrowed Bone: when unit dies, Wynn gains one Bone Pile.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            9
+        ],
+        "components": [
+            [
+                "condition",
+                "any([u.nid == 'Wynn' for u in target_system.get_adj_units(game.get_unit('Balia'))])"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Borrowed_Bone",
+        "name": "Borrowed Bone",
+        "desc": "When this unit dies, Wynn gains one Bone Pile.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            9
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -10059,6 +10161,34 @@
         ]
     },
     {
+        "nid": "Ivala_Compassion",
+        "name": "Ivala's Compassion",
+        "desc": "<green>[Carina synergy]</> Altina bonds with Carina over Ivala's unending compassion. Altina recovers mana at the beginning of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            35
+        ],
+        "components": [
+            [
+                "condition",
+                "any([u.nid == 'Altina' for u in target_system.get_adj_units(game.get_unit('Carina'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "mana_regeneration",
+                2
+            ]
+        ]
+    },
+    {
         "nid": "Pretty_Lance",
         "name": "Pretty Lance",
         "desc": "",
@@ -12064,7 +12194,7 @@
     {
         "nid": "Snipe_Target",
         "name": "Snipe Target",
-        "desc": "",
+        "desc": "<green>[Dari synergy]</> Orcent can attack a target scouted by Dari.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -12078,6 +12208,30 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Perceptiveness",
+        "name": "Perceptiveness",
+        "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has greater chance to avoid enemy critical hits.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            14
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                25
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Orcent' for u in target_system.get_adj_units(game.get_unit('Wynn'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ]
         ]
     },
