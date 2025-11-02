@@ -697,7 +697,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Ginasta",
+        "portrait_nid": "Ginasta3",
         "affinity": "Fire",
         "fields": []
     },
@@ -1453,107 +1453,6 @@
         ],
         "portrait_nid": "orilise2",
         "affinity": "Wind",
-        "fields": []
-    },
-    {
-        "nid": "Palina",
-        "name": "Palina",
-        "desc": "The prince of Renais. He is a man of great honour and bravery.",
-        "variant": null,
-        "level": 4,
-        "klass": "General",
-        "tags": [],
-        "bases": {
-            "HP": 23,
-            "STR": 8,
-            "MAG": 4,
-            "SKL": 9,
-            "SPD": 11,
-            "LCK": 8,
-            "DEF": 7,
-            "RES": 2,
-            "CON": 8,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 80,
-            "STR": 55,
-            "MAG": 25,
-            "SKL": 55,
-            "SPD": 45,
-            "LCK": 50,
-            "DEF": 35,
-            "RES": 25,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Reginleif",
-                false
-            ],
-            [
-                "Steel_Lance",
-                false
-            ],
-            [
-                "Elixir",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                251
-            ],
-            "Lance": [
-                true,
-                31,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Palina",
-        "affinity": "Fire",
         "fields": []
     },
     {
@@ -2558,6 +2457,107 @@
         "fields": []
     },
     {
+        "nid": "Palina",
+        "name": "Palina",
+        "desc": "The prince of Renais. He is a man of great honour and bravery.",
+        "variant": null,
+        "level": 4,
+        "klass": "General",
+        "tags": [],
+        "bases": {
+            "HP": 23,
+            "STR": 8,
+            "MAG": 4,
+            "SKL": 9,
+            "SPD": 11,
+            "LCK": 8,
+            "DEF": 7,
+            "RES": 2,
+            "CON": 8,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 55,
+            "SPD": 45,
+            "LCK": 50,
+            "DEF": 35,
+            "RES": 25,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Reginleif",
+                false
+            ],
+            [
+                "Steel_Lance",
+                false
+            ],
+            [
+                "Elixir",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                true,
+                31,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Palina2_1",
+        "affinity": "Fire",
+        "fields": []
+    },
+    {
         "nid": "Skypiercer",
         "name": "Skypiercer",
         "desc": "A young lady of Frelia. She is both cheery and sociable.",
@@ -2765,6 +2765,105 @@
     },
     {
         "nid": "Zaynab",
+        "name": "Zaynab",
+        "desc": "A berserker from Rausten. He\u2019s a hearty man with a thirst for life.",
+        "variant": null,
+        "level": 1,
+        "klass": "Sage",
+        "tags": [],
+        "bases": {
+            "HP": 43,
+            "STR": 16,
+            "MAG": 0,
+            "SKL": 11,
+            "SPD": 9,
+            "LCK": 4,
+            "DEF": 11,
+            "RES": 6,
+            "CON": 16,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 50,
+            "MAG": 0,
+            "SKL": 35,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 25,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Battle_Axe",
+                false
+            ],
+            [
+                "Elixir",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                true,
+                121,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ]
+        },
+        "alternate_classes": [
+            "Berserker"
+        ],
+        "portrait_nid": "Zaynab",
+        "affinity": "Thunder",
+        "fields": []
+    },
+    {
+        "nid": "Zaynab_1",
         "name": "Zaynab",
         "desc": "A berserker from Rausten. He\u2019s a hearty man with a thirst for life.",
         "variant": null,
@@ -6086,8 +6185,30 @@
         "level": 1,
         "klass": "Orc_Elite",
         "tags": [],
-        "bases": {},
-        "growths": {},
+        "bases": {
+            "HP": 20,
+            "STR": 8,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 7,
+            "LCK": 4,
+            "DEF": 5,
+            "RES": 3,
+            "CON": 16,
+            "MOV": 4
+        },
+        "growths": {
+            "HP": 40,
+            "STR": 30,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 25,
+            "LCK": 15,
+            "DEF": 25,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
         "stat_cap_modifiers": {},
         "starting_items": [],
         "learned_skills": [],
@@ -6106,6 +6227,132 @@
         "level": 1,
         "klass": "Orc_Hero",
         "tags": [],
+        "bases": {
+            "HP": 15,
+            "STR": 7,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 5,
+            "LCK": 4,
+            "DEF": 6,
+            "RES": 3,
+            "CON": 16,
+            "MOV": 4
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 70,
+            "MAG": 25,
+            "SKL": 30,
+            "SPD": 45,
+            "LCK": 30,
+            "DEF": 45,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Ralke3_1",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Stark",
+        "name": "Stark",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Orc",
+        "tags": [],
+        "bases": {
+            "HP": 7,
+            "STR": 3,
+            "MAG": 2,
+            "SKL": 4,
+            "SPD": 3,
+            "LCK": 4,
+            "DEF": 5,
+            "RES": 6,
+            "MOV": 4,
+            "CON": 16
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 70,
+            "MAG": 25,
+            "SKL": 25,
+            "SPD": 40,
+            "LCK": 25,
+            "DEF": 40,
+            "RES": 25,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Implevon",
+        "name": "Implevon The Third",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Imp",
+        "tags": [],
+        "bases": {
+            "HP": 11,
+            "STR": 6,
+            "MAG": 9,
+            "SKL": 4,
+            "SPD": 6,
+            "LCK": 7,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 16,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 40,
+            "MAG": 25,
+            "SKL": 60,
+            "SPD": 70,
+            "LCK": 40,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Gargoyle {Mel}",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Amin1",
+        "name": "Amin",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Warrior",
+        "tags": [],
         "bases": {},
         "growths": {},
         "stat_cap_modifiers": {},
@@ -6114,7 +6361,187 @@
         "unit_notes": [],
         "wexp_gain": {},
         "alternate_classes": [],
-        "portrait_nid": "Ralke3_1",
+        "portrait_nid": "Amin1",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Razar",
+        "name": "Razar",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Swordmaster",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Razar2",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Heraenan",
+        "name": "Heraenan",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Mage_Knight",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Heraenan",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Anwyr",
+        "name": "Anwyr",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Paladin",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Anwyr",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Lahath",
+        "name": "Lahath",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "General",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Lahath",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "ArHassan",
+        "name": "Ar'Hassan",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Berserker",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Ar'Hassan",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Oneram",
+        "name": "Oneram",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Ranger",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Oneram",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Gahari",
+        "name": "Gahari",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Great_Knight",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Gahari",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Almar",
+        "name": "Almar",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Myrmidon",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Almar",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Nasser",
+        "name": "King Nasser",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Citizen",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Nasser",
         "affinity": null,
         "fields": []
     }
