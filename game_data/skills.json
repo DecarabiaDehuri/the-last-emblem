@@ -2604,7 +2604,7 @@
     },
     {
         "nid": "Succubus_Mana",
-        "name": "Succubus Mana",
+        "name": "Succubus",
         "desc": "Playable succubi start each chapter with <blue>0 mana</>. They regain mana passively, on hit and on kill. They can <green>masturbate</> to regain <blue>4 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -2631,6 +2631,18 @@
             [
                 "ability",
                 "Masturbate"
+            ],
+            [
+                "global",
+                null
+            ],
+            [
+                "condition",
+                "'Succubus' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
             ]
         ]
     },

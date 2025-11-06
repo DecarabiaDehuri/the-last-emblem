@@ -3,7 +3,7 @@
         "nid": "Simon",
         "name": "Simon",
         "desc": "The princess of the Kingdom of\nRenais. She's elegant and kind.",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "IncubusKing",
         "tags": [
@@ -11,37 +11,41 @@
             "Incubus"
         ],
         "bases": {
-            "HP": 16,
-            "STR": 4,
-            "MAG": 2,
-            "SKL": 8,
-            "SPD": 9,
+            "HP": 25,
+            "STR": 7,
+            "MAG": 6,
+            "SKL": 11,
+            "SPD": 5,
             "LCK": 5,
-            "DEF": 3,
-            "CON": 5,
+            "DEF": 11,
+            "CON": 3,
             "MOV": 5,
-            "RES": 1
+            "RES": 8
         },
         "growths": {
-            "HP": 70,
-            "STR": 40,
-            "MAG": 20,
-            "SKL": 60,
-            "SPD": 60,
-            "LCK": 60,
-            "DEF": 30,
+            "HP": 80,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 20,
+            "SPD": 25,
+            "LCK": 10,
+            "DEF": 40,
             "CON": 0,
             "MOV": 0,
-            "RES": 30
+            "RES": 40
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Health_Potion",
+                "Iron_Sword",
                 false
             ],
             [
-                "Rapier",
+                "Iron_Lance",
+                false
+            ],
+            [
+                "Iron_Axe",
                 false
             ]
         ],
@@ -57,27 +61,23 @@
             [
                 1,
                 "All_Embracing_Care"
-            ],
-            [
-                1,
-                "Testing_skill"
             ]
         ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 true,
-                1,
+                100,
                 251
             ],
             "Lance": [
                 false,
-                0,
+                100,
                 251
             ],
             "Axe": [
                 false,
-                0,
+                100,
                 251
             ],
             "Bow": [
@@ -87,7 +87,7 @@
             ],
             "Staff": [
                 false,
-                0,
+                100,
                 251
             ],
             "Light": [
@@ -102,7 +102,7 @@
             ],
             "Dark": [
                 false,
-                0,
+                100,
                 251
             ],
             "Default": [
@@ -123,27 +123,29 @@
         "variant": "",
         "level": 1,
         "klass": "Thief",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 30,
-            "STR": 14,
-            "MAG": 7,
-            "SKL": 13,
-            "SPD": 12,
-            "LCK": 13,
-            "DEF": 11,
-            "CON": 11,
-            "MOV": 8,
-            "RES": 8
+            "HP": 17,
+            "STR": 9,
+            "MAG": 6,
+            "SKL": 14,
+            "SPD": 15,
+            "LCK": 10,
+            "DEF": 4,
+            "CON": 2,
+            "MOV": 6,
+            "RES": 6
         },
         "growths": {
-            "HP": 90,
-            "STR": 50,
-            "MAG": 25,
-            "SKL": 45,
-            "SPD": 45,
-            "LCK": 25,
-            "DEF": 40,
+            "HP": 60,
+            "STR": 40,
+            "MAG": 5,
+            "SKL": 60,
+            "SPD": 55,
+            "LCK": 50,
+            "DEF": 20,
             "CON": 0,
             "MOV": 0,
             "RES": 30
@@ -205,7 +207,7 @@
             ]
         },
         "alternate_classes": [
-            "Myrmidon"
+            "Archer"
         ],
         "portrait_nid": "aka3",
         "affinity": "Anima",
@@ -218,32 +220,36 @@
         "variant": "Altina",
         "level": 1,
         "klass": "Mage",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 20,
-            "STR": 7,
-            "MAG": 3,
-            "SKL": 5,
-            "SPD": 7,
-            "LCK": 2,
-            "DEF": 6,
-            "CON": 9,
-            "MOV": 7,
-            "RES": 1
+            "HP": 16,
+            "STR": 6,
+            "MAG": 8,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 5,
+            "DEF": 4,
+            "CON": 0,
+            "MOV": 5,
+            "RES": 7
         },
         "growths": {
-            "HP": 80,
-            "STR": 40,
-            "MAG": 20,
-            "SKL": 40,
-            "SPD": 50,
-            "LCK": 40,
-            "DEF": 25,
+            "HP": 60,
+            "STR": 5,
+            "MAG": 50,
+            "SKL": 50,
+            "SPD": 20,
+            "LCK": 60,
+            "DEF": 50,
             "CON": 0,
             "MOV": 0,
-            "RES": 20
+            "RES": 50
         },
-        "stat_cap_modifiers": {},
+        "stat_cap_modifiers": {
+            "HP": 0
+        },
         "starting_items": [
             [
                 "ArcaneSpells",
@@ -305,7 +311,7 @@
             ]
         },
         "alternate_classes": [
-            "Mage"
+            "Priestess"
         ],
         "portrait_nid": "altina3",
         "affinity": "Light",
@@ -315,33 +321,35 @@
         "nid": "Balia",
         "name": "Balia",
         "desc": "An armoured knight from Frelia. He's quiet yet dependable.",
-        "variant": null,
-        "level": 4,
+        "variant": "",
+        "level": 1,
         "klass": "Summoner",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 25,
-            "STR": 9,
-            "MAG": 5,
-            "SKL": 6,
+            "HP": 10,
+            "STR": 2,
+            "MAG": 13,
+            "SKL": 13,
             "SPD": 3,
-            "LCK": 3,
-            "DEF": 9,
-            "CON": 14,
+            "LCK": 5,
+            "DEF": 3,
+            "CON": 0,
             "MOV": 4,
-            "RES": 3
+            "RES": 5
         },
         "growths": {
-            "HP": 90,
-            "STR": 45,
-            "MAG": 20,
-            "SKL": 35,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 55,
+            "HP": 100,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
             "CON": 0,
             "MOV": 0,
-            "RES": 20
+            "RES": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [],
@@ -403,46 +411,40 @@
         "nid": "Carina",
         "name": "Carina",
         "desc": "A sincere, honest, and honourable pegasus knight of Frelia.",
-        "variant": "",
+        "variant": "Carina",
         "level": 1,
-        "klass": "Cleric",
-        "tags": [],
+        "klass": "Priestess",
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 17,
-            "STR": 5,
-            "MAG": 2,
+            "HP": 10,
+            "STR": 3,
+            "MAG": 9,
             "SKL": 7,
-            "SPD": 11,
-            "LCK": 4,
-            "DEF": 6,
-            "RES": 5,
-            "CON": 5,
-            "MOV": 7
+            "SPD": 4,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 12,
+            "CON": 3,
+            "MOV": 5
         },
         "growths": {
-            "HP": 50,
-            "STR": 35,
-            "MAG": 20,
-            "SKL": 55,
-            "SPD": 60,
+            "HP": 60,
+            "STR": 0,
+            "MAG": 50,
+            "SKL": 40,
+            "SPD": 50,
             "LCK": 50,
             "DEF": 20,
-            "RES": 30,
+            "RES": 60,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Slim_Lance",
-                false
-            ],
-            [
-                "Javelin",
-                false
-            ],
-            [
-                "Health_Potion",
+                "DivineSpells",
                 false
             ]
         ],
@@ -511,46 +513,50 @@
         "nid": "Dari",
         "name": "Dari",
         "desc": "A mature priest of Frelia. He's gentle and reassuring.",
-        "variant": null,
-        "level": 3,
+        "variant": "",
+        "level": 1,
         "klass": "Recruit",
-        "tags": [],
+        "tags": [
+            "Female",
+            "Unpeople"
+        ],
         "bases": {
-            "HP": 20,
-            "STR": 6,
-            "MAG": 4,
-            "SKL": 6,
-            "SPD": 9,
-            "LCK": 1,
-            "DEF": 2,
-            "RES": 5,
-            "CON": 9,
-            "MOV": 5
+            "HP": 13,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 12,
+            "DEF": 5,
+            "RES": 6,
+            "CON": 1,
+            "MOV": 6
         },
         "growths": {
-            "HP": 70,
-            "STR": 50,
+            "HP": 80,
+            "STR": 80,
             "MAG": 40,
-            "SKL": 50,
-            "SPD": 40,
-            "LCK": 20,
-            "DEF": 25,
-            "RES": 25,
+            "SKL": 55,
+            "SPD": 65,
+            "LCK": 50,
+            "DEF": 50,
+            "RES": 50,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Heal",
-                false
-            ],
-            [
-                "Health_Potion",
+                "Slim_Lance",
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Unpeople"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -611,28 +617,30 @@
         "variant": null,
         "level": 1,
         "klass": "Manumitter",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 15,
-            "STR": 5,
-            "MAG": 2,
-            "SKL": 2,
-            "SPD": 3,
-            "LCK": 8,
-            "DEF": 3,
-            "RES": 0,
-            "CON": 8,
+            "HP": 23,
+            "STR": 11,
+            "MAG": 6,
+            "SKL": 11,
+            "SPD": 12,
+            "LCK": 5,
+            "DEF": 11,
+            "RES": 5,
+            "CON": 3,
             "MOV": 5
         },
         "growths": {
-            "HP": 80,
+            "HP": 60,
             "STR": 60,
-            "MAG": 35,
-            "SKL": 45,
-            "SPD": 40,
-            "LCK": 50,
-            "DEF": 30,
-            "RES": 25,
+            "MAG": 60,
+            "SKL": 60,
+            "SPD": 60,
+            "LCK": 60,
+            "DEF": 60,
+            "RES": 60,
             "CON": 0,
             "MOV": 0
         },
@@ -640,10 +648,6 @@
         "starting_items": [
             [
                 "Light_Brand",
-                false
-            ],
-            [
-                "Health_Potion",
                 false
             ]
         ],
@@ -698,7 +702,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Ginasta3",
-        "affinity": "Fire",
+        "affinity": "Thunder",
         "fields": []
     },
     {
@@ -706,30 +710,32 @@
         "name": "Hilstara",
         "desc": "A villager from Renais. He was once a feared military leader.",
         "variant": "",
-        "level": 4,
+        "level": 1,
         "klass": "Protector",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 28,
-            "STR": 8,
-            "MAG": 0,
-            "SKL": 7,
-            "SPD": 7,
-            "LCK": 3,
-            "DEF": 5,
-            "RES": 1,
-            "CON": 14,
-            "MOV": 5
+            "HP": 30,
+            "STR": 5,
+            "MAG": 3,
+            "SKL": 5,
+            "SPD": 1,
+            "LCK": 5,
+            "DEF": 10,
+            "RES": 4,
+            "CON": 5,
+            "MOV": 4
         },
         "growths": {
-            "HP": 80,
-            "STR": 65,
-            "MAG": 0,
-            "SKL": 40,
-            "SPD": 20,
-            "LCK": 40,
-            "DEF": 25,
-            "RES": 15,
+            "HP": 70,
+            "STR": 60,
+            "MAG": 5,
+            "SKL": 30,
+            "SPD": 10,
+            "LCK": 30,
+            "DEF": 70,
+            "RES": 30,
             "CON": 0,
             "MOV": 0
         },
@@ -737,14 +743,6 @@
         "starting_items": [
             [
                 "Iron_Axe",
-                false
-            ],
-            [
-                "Hand_Axe",
-                false
-            ],
-            [
-                "Health_Potion",
                 false
             ]
         ],
@@ -836,39 +834,37 @@
         "variant": "Female",
         "level": 1,
         "klass": "Pegasus_Knight",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 17,
-            "STR": 4,
-            "MAG": 2,
-            "SKL": 5,
-            "SPD": 6,
-            "LCK": 4,
-            "DEF": 3,
-            "RES": 2,
-            "CON": 5,
-            "MOV": 5
+            "HP": 19,
+            "STR": 3,
+            "MAG": 3,
+            "SKL": 10,
+            "SPD": 12,
+            "LCK": 10,
+            "DEF": 4,
+            "RES": 7,
+            "CON": 3,
+            "MOV": 7
         },
         "growths": {
-            "HP": 55,
-            "STR": 45,
-            "MAG": 25,
-            "SKL": 50,
-            "SPD": 60,
-            "LCK": 50,
-            "DEF": 15,
-            "RES": 35,
+            "HP": 50,
+            "STR": 55,
+            "MAG": 5,
+            "SKL": 70,
+            "SPD": 70,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 30,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Bow",
-                false
-            ],
-            [
-                "Health_Potion",
+                "Slim_Lance",
                 false
             ]
         ],
@@ -933,45 +929,39 @@
         "name": "Megail",
         "desc": "A childhood friend of Neimi who hails from Renais. He can be snide.",
         "variant": "",
-        "level": 2,
+        "level": 1,
         "klass": "Supplier",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 18,
-            "STR": 4,
-            "MAG": 2,
+            "HP": 15,
+            "STR": 3,
+            "MAG": 0,
             "SKL": 4,
-            "SPD": 10,
+            "SPD": 7,
             "LCK": 8,
             "DEF": 3,
             "RES": 1,
-            "CON": 6,
+            "CON": 4,
             "MOV": 6
         },
         "growths": {
             "HP": 70,
             "STR": 40,
-            "MAG": 20,
+            "MAG": 0,
             "SKL": 40,
             "SPD": 65,
             "LCK": 45,
-            "DEF": 25,
-            "RES": 20,
+            "DEF": 35,
+            "RES": 35,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Lance",
-                false
-            ],
-            [
-                "Lockpick",
-                false
-            ],
-            [
-                "Health_Potion",
+                "Slim_Lance",
                 false
             ]
         ],
@@ -1029,11 +1019,9 @@
                 251
             ]
         },
-        "alternate_classes": [
-            "Fighter"
-        ],
+        "alternate_classes": [],
         "portrait_nid": "Megail",
-        "affinity": "Light",
+        "affinity": "Thunder",
         "fields": []
     },
     {
@@ -1041,41 +1029,37 @@
         "name": "Mestan",
         "desc": "A young monk from Renais. He is a very forthright and pious man.",
         "variant": "",
-        "level": 2,
+        "level": 1,
         "klass": "Assassin",
         "tags": [],
         "bases": {
-            "HP": 19,
-            "STR": 0,
-            "MAG": 6,
-            "SKL": 6,
-            "SPD": 8,
-            "LCK": 2,
-            "DEF": 2,
-            "RES": 6,
-            "CON": 6,
-            "MOV": 5
+            "HP": 23,
+            "STR": 9,
+            "MAG": 5,
+            "SKL": 7,
+            "SPD": 17,
+            "LCK": 12,
+            "DEF": 7,
+            "RES": 8,
+            "CON": 3,
+            "MOV": 6
         },
         "growths": {
-            "HP": 55,
-            "STR": 0,
-            "MAG": 50,
+            "HP": 70,
+            "STR": 40,
+            "MAG": 20,
             "SKL": 50,
-            "SPD": 40,
-            "LCK": 25,
-            "DEF": 15,
-            "RES": 55,
+            "SPD": 60,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 50,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Lightning",
-                false
-            ],
-            [
-                "Health_Potion",
+                "Killing_Edge",
                 false
             ]
         ],
@@ -1140,28 +1124,30 @@
         "variant": "Female",
         "level": 1,
         "klass": "Suc_Nalili",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 17,
-            "STR": 0,
-            "MAG": 6,
-            "SKL": 6,
-            "SPD": 7,
-            "LCK": 8,
-            "DEF": 3,
-            "RES": 5,
-            "CON": 3,
-            "MOV": 5
+            "HP": 20,
+            "STR": 8,
+            "MAG": 4,
+            "SKL": 10,
+            "SPD": 11,
+            "LCK": 9,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 2,
+            "MOV": 6
         },
         "growths": {
-            "HP": 45,
-            "STR": 0,
-            "MAG": 65,
-            "SKL": 30,
-            "SPD": 45,
-            "LCK": 45,
-            "DEF": 15,
-            "RES": 40,
+            "HP": 40,
+            "STR": 80,
+            "MAG": 5,
+            "SKL": 55,
+            "SPD": 60,
+            "LCK": 40,
+            "DEF": 20,
+            "RES": 10,
             "CON": 0,
             "MOV": 0
         },
@@ -1228,9 +1214,15 @@
                 false,
                 0,
                 251
+            ],
+            "Refresh": [
+                false,
+                1,
+                null
             ]
         },
         "alternate_classes": [
+            "Myrmidon",
             "Mercenary"
         ],
         "portrait_nid": "nalili2",
@@ -1246,26 +1238,26 @@
         "klass": "Orc_Orcent",
         "tags": [],
         "bases": {
-            "HP": 50,
-            "STR": 0,
-            "MAG": 2,
-            "SKL": 4,
-            "SPD": 8,
-            "LCK": 6,
-            "DEF": 2,
-            "RES": 6,
+            "HP": 20,
+            "STR": 10,
+            "MAG": 1,
+            "SKL": 8,
+            "SPD": 7,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 1,
             "CON": 4,
             "MOV": 5
         },
         "growths": {
-            "HP": 50,
-            "STR": 0,
-            "MAG": 60,
-            "SKL": 25,
-            "SPD": 40,
-            "LCK": 60,
-            "DEF": 15,
-            "RES": 55,
+            "HP": 85,
+            "STR": 65,
+            "MAG": 5,
+            "SKL": 45,
+            "SPD": 45,
+            "LCK": 45,
+            "DEF": 45,
+            "RES": 5,
             "CON": 0,
             "MOV": 0
         },
@@ -1356,37 +1348,39 @@
         "name": "Orilise",
         "desc": "A wandering sword fighter from Jehanna. He loves to gamble.",
         "variant": "",
-        "level": 5,
+        "level": 1,
         "klass": "Wyvern Rider",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 24,
-            "STR": 8,
-            "MAG": 4,
-            "SKL": 13,
-            "SPD": 14,
+            "HP": 19,
+            "STR": 5,
+            "MAG": 7,
+            "SKL": 8,
+            "SPD": 8,
             "LCK": 7,
             "DEF": 5,
-            "RES": 2,
-            "CON": 8,
-            "MOV": 5
+            "RES": 6,
+            "CON": 3,
+            "MOV": 7
         },
         "growths": {
             "HP": 80,
-            "STR": 35,
-            "MAG": 20,
-            "SKL": 55,
-            "SPD": 55,
-            "LCK": 30,
-            "DEF": 20,
-            "RES": 20,
+            "STR": 5,
+            "MAG": 60,
+            "SKL": 40,
+            "SPD": 10,
+            "LCK": 20,
+            "DEF": 60,
+            "RES": 60,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Killing_Edge",
+                "Iron_Lance",
                 false
             ]
         ],
@@ -1459,31 +1453,34 @@
         "nid": "Qum",
         "name": "Qum'Dumpe",
         "desc": "A cavalier from Renais. He is skilled, but reckless. He\u2019s Franz\u2019s brother.",
-        "variant": null,
-        "level": 6,
+        "variant": "",
+        "level": 1,
         "klass": "Suc_Qum",
-        "tags": [],
+        "tags": [
+            "Female",
+            "Succubus"
+        ],
         "bases": {
-            "HP": 24,
-            "STR": 7,
-            "MAG": 4,
-            "SKL": 8,
-            "SPD": 8,
-            "LCK": 7,
-            "DEF": 8,
-            "RES": 2,
-            "CON": 9,
-            "MOV": 7
+            "HP": 13,
+            "STR": 5,
+            "MAG": 10,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 1,
+            "RES": 6,
+            "CON": 0,
+            "MOV": 5
         },
         "growths": {
-            "HP": 85,
+            "HP": 80,
             "STR": 40,
-            "MAG": 25,
-            "SKL": 50,
-            "SPD": 45,
-            "LCK": 35,
-            "DEF": 20,
-            "RES": 25,
+            "MAG": 50,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 30,
+            "RES": 30,
             "CON": 0,
             "MOV": 0
         },
@@ -1545,9 +1542,15 @@
                 false,
                 0,
                 251
+            ],
+            "Refresh": [
+                false,
+                1,
+                null
             ]
         },
         "alternate_classes": [
+            "Priestess",
             "Mage"
         ],
         "portrait_nid": "qum2",
@@ -1559,45 +1562,44 @@
         "name": "Riala",
         "desc": "A steadfast and honourable cavalier in sworn service to Renais.",
         "variant": "",
-        "level": 5,
+        "level": 1,
         "klass": "Suc_Riala",
-        "tags": [],
+        "tags": [
+            "Female",
+            "Succubus"
+        ],
         "bases": {
-            "HP": 25,
-            "STR": 9,
-            "MAG": 4,
-            "SKL": 6,
-            "SPD": 7,
-            "LCK": 6,
-            "DEF": 9,
-            "RES": 1,
-            "CON": 10,
-            "MOV": 7
+            "HP": 18,
+            "STR": 5,
+            "MAG": 11,
+            "SKL": 15,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 1,
+            "MOV": 5
         },
         "growths": {
-            "HP": 90,
-            "STR": 50,
-            "MAG": 25,
-            "SKL": 40,
-            "SPD": 40,
-            "LCK": 20,
-            "DEF": 25,
-            "RES": 20,
+            "HP": 30,
+            "STR": 0,
+            "MAG": 20,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 10,
+            "DEF": 30,
+            "RES": 30,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Flux",
+                "LustSpells",
                 false
             ],
             [
-                "Steel_Lance",
-                false
-            ],
-            [
-                "Health_Potion",
+                "ArcaneSpells",
                 false
             ]
         ],
@@ -1657,6 +1659,11 @@
                 false,
                 0,
                 251
+            ],
+            "Refresh": [
+                false,
+                1,
+                null
             ]
         },
         "alternate_classes": [
@@ -1671,30 +1678,32 @@
         "name": "Robin",
         "desc": "A cavalier of Renais. He\u2019s a devoted husband and a serene and quiet man.",
         "variant": "Female",
-        "level": 3,
+        "level": 1,
         "klass": "Mage",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 34,
-            "STR": 15,
+            "HP": 17,
+            "STR": 3,
             "MAG": 8,
-            "SKL": 13,
-            "SPD": 11,
-            "LCK": 4,
-            "DEF": 13,
-            "RES": 7,
-            "CON": 12,
-            "MOV": 8
+            "SKL": 10,
+            "SPD": 7,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 9,
+            "CON": 1,
+            "MOV": 5
         },
         "growths": {
-            "HP": 80,
-            "STR": 55,
-            "MAG": 30,
-            "SKL": 45,
-            "SPD": 40,
-            "LCK": 25,
-            "DEF": 45,
-            "RES": 30,
+            "HP": 70,
+            "STR": 0,
+            "MAG": 60,
+            "SKL": 60,
+            "SPD": 60,
+            "LCK": 60,
+            "DEF": 60,
+            "RES": 60,
             "CON": 0,
             "MOV": 0
         },
@@ -1764,40 +1773,43 @@
             ]
         },
         "alternate_classes": [
-            "Archer"
+            "Archer",
+            "Priestess"
         ],
         "portrait_nid": "robin3",
-        "affinity": "None",
+        "affinity": "Ice",
         "fields": []
     },
     {
         "nid": "Trin",
         "name": "Trin",
         "desc": "A young girl from a small village in Grado. She is honest and sincere.",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "Slave_Mage",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 16,
-            "STR": 4,
-            "MAG": 2,
-            "SKL": 3,
-            "SPD": 4,
-            "LCK": 6,
-            "DEF": 2,
-            "RES": 3,
-            "CON": 6,
+            "HP": 15,
+            "STR": 2,
+            "MAG": 5,
+            "SKL": 7,
+            "SPD": 6,
+            "LCK": 5,
+            "DEF": 4,
+            "RES": 10,
+            "CON": 2,
             "MOV": 4
         },
         "growths": {
-            "HP": 70,
-            "STR": 45,
-            "MAG": 30,
+            "HP": 50,
+            "STR": 0,
+            "MAG": 50,
             "SKL": 50,
             "SPD": 50,
-            "LCK": 60,
-            "DEF": 35,
+            "LCK": 50,
+            "DEF": 20,
             "RES": 20,
             "CON": 0,
             "MOV": 0
@@ -1869,31 +1881,33 @@
         "nid": "Uyae",
         "name": "Uyae",
         "desc": "The prince of Frelia. He\u2019s brash and arrogant, but good at heart.",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "Zirantian",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 31,
-            "STR": 14,
-            "MAG": 0,
-            "SKL": 13,
-            "SPD": 15,
-            "LCK": 14,
-            "DEF": 10,
-            "RES": 9,
-            "CON": 9,
+            "HP": 18,
+            "STR": 8,
+            "MAG": 8,
+            "SKL": 12,
+            "SPD": 11,
+            "LCK": 3,
+            "DEF": 6,
+            "RES": 6,
+            "CON": 2,
             "MOV": 6
         },
         "growths": {
-            "HP": 75,
-            "STR": 40,
-            "MAG": 0,
-            "SKL": 40,
-            "SPD": 45,
-            "LCK": 45,
-            "DEF": 20,
-            "RES": 25,
+            "HP": 45,
+            "STR": 50,
+            "MAG": 50,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 40,
+            "DEF": 40,
+            "RES": 40,
             "CON": 0,
             "MOV": 0
         },
@@ -1970,30 +1984,32 @@
         "name": "Varia",
         "desc": "A mercenary leader from Jehanna. He's better known as the Desert Tiger.",
         "variant": "Female",
-        "level": 10,
+        "level": 1,
         "klass": "Myrmidon",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 32,
-            "STR": 1,
-            "MAG": 7,
-            "SKL": 13,
-            "SPD": 13,
-            "LCK": 15,
-            "DEF": 10,
-            "RES": 4,
-            "CON": 13,
+            "HP": 16,
+            "STR": 7,
+            "MAG": 1,
+            "SKL": 14,
+            "SPD": 15,
+            "LCK": 17,
+            "DEF": 2,
+            "RES": 1,
+            "CON": 2,
             "MOV": 5
         },
         "growths": {
-            "HP": 90,
-            "STR": 45,
-            "MAG": 20,
+            "HP": 60,
+            "STR": 40,
+            "MAG": 10,
             "SKL": 40,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 35,
-            "RES": 25,
+            "SPD": 40,
+            "LCK": 60,
+            "DEF": 40,
+            "RES": 40,
             "CON": 0,
             "MOV": 0
         },
@@ -2001,14 +2017,6 @@
         "starting_items": [
             [
                 "Iron_Sword",
-                false
-            ],
-            [
-                "Hero_Crest",
-                false
-            ],
-            [
-                "Health_Potion",
                 false
             ]
         ],
@@ -2100,28 +2108,31 @@
         "variant": "Female",
         "level": 1,
         "klass": "Archer",
-        "tags": [],
+        "tags": [
+            "Female",
+            "Unpeople"
+        ],
         "bases": {
-            "HP": 18,
-            "STR": 1,
-            "MAG": 1,
-            "SKL": 2,
-            "SPD": 12,
-            "LCK": 10,
-            "DEF": 5,
-            "RES": 4,
-            "CON": 5,
+            "HP": 22,
+            "STR": 7,
+            "MAG": 7,
+            "SKL": 13,
+            "SPD": 6,
+            "LCK": 5,
+            "DEF": 8,
+            "RES": 5,
+            "CON": 3,
             "MOV": 5
         },
         "growths": {
-            "HP": 85,
-            "STR": 5,
-            "MAG": 5,
-            "SKL": 10,
-            "SPD": 70,
-            "LCK": 80,
-            "DEF": 30,
-            "RES": 75,
+            "HP": 60,
+            "STR": 40,
+            "MAG": 30,
+            "SKL": 50,
+            "SPD": 50,
+            "LCK": 40,
+            "DEF": 50,
+            "RES": 50,
             "CON": 0,
             "MOV": 0
         },
@@ -2129,14 +2140,6 @@
         "starting_items": [
             [
                 "Iron_Bow",
-                false
-            ],
-            [
-                "Goddess_Icon",
-                false
-            ],
-            [
-                "Health_Potion",
                 false
             ]
         ],
@@ -2160,6 +2163,10 @@
             [
                 1,
                 "Blinding_Rain"
+            ],
+            [
+                1,
+                "Unpeople"
             ]
         ],
         "unit_notes": [],
@@ -2222,30 +2229,32 @@
         "name": "Wynn",
         "desc": "An aloof sword fighter from Jehanna. She\u2019s known as the Crimson Flash.",
         "variant": "",
-        "level": 5,
+        "level": 1,
         "klass": "Necromancer",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 23,
-            "STR": 7,
-            "MAG": 4,
-            "SKL": 12,
-            "SPD": 13,
-            "LCK": 9,
-            "DEF": 4,
-            "RES": 3,
-            "CON": 5,
+            "HP": 16,
+            "STR": 1,
+            "MAG": 8,
+            "SKL": 9,
+            "SPD": 6,
+            "LCK": 8,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 1,
             "MOV": 5
         },
         "growths": {
-            "HP": 75,
-            "STR": 30,
-            "MAG": 20,
-            "SKL": 55,
-            "SPD": 60,
+            "HP": 60,
+            "STR": 0,
+            "MAG": 40,
+            "SKL": 50,
+            "SPD": 50,
             "LCK": 50,
-            "DEF": 15,
-            "RES": 25,
+            "DEF": 50,
+            "RES": 50,
             "CON": 0,
             "MOV": 0
         },
@@ -2328,30 +2337,33 @@
         "name": "Yarra",
         "desc": "A young woman from Rausten. She fights for justice and honour.",
         "variant": "",
-        "level": 3,
+        "level": 1,
         "klass": "Suc_Yarra",
-        "tags": [],
+        "tags": [
+            "Female",
+            "Succubus"
+        ],
         "bases": {
-            "HP": 18,
-            "STR": 5,
+            "HP": 20,
+            "STR": 6,
             "MAG": 10,
-            "SKL": 6,
-            "SPD": 10,
-            "LCK": 12,
-            "DEF": 5,
-            "RES": 8,
-            "CON": 5,
-            "MOV": 6
+            "SKL": 12,
+            "SPD": 8,
+            "LCK": 10,
+            "DEF": 6,
+            "RES": 7,
+            "CON": 1,
+            "MOV": 5
         },
         "growths": {
-            "HP": 45,
-            "STR": 0,
+            "HP": 70,
+            "STR": 50,
             "MAG": 50,
-            "SKL": 45,
-            "SPD": 45,
-            "LCK": 65,
-            "DEF": 15,
-            "RES": 50,
+            "SKL": 50,
+            "SPD": 50,
+            "LCK": 40,
+            "DEF": 40,
+            "RES": 40,
             "CON": 0,
             "MOV": 0
         },
@@ -2447,10 +2459,15 @@
                 false,
                 71,
                 null
+            ],
+            "Refresh": [
+                false,
+                1,
+                null
             ]
         },
         "alternate_classes": [
-            "Shaman"
+            "Cavalier"
         ],
         "portrait_nid": "yarra5",
         "affinity": "Dark",
@@ -2463,17 +2480,19 @@
         "variant": null,
         "level": 4,
         "klass": "General",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
-            "HP": 23,
-            "STR": 8,
+            "HP": 45,
+            "STR": 17,
             "MAG": 4,
-            "SKL": 9,
-            "SPD": 11,
-            "LCK": 8,
-            "DEF": 7,
-            "RES": 2,
-            "CON": 8,
+            "SKL": 16,
+            "SPD": 5,
+            "LCK": 15,
+            "DEF": 13,
+            "RES": 8,
+            "CON": 4,
             "MOV": 5
         },
         "growths": {
@@ -2491,15 +2510,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Reginleif",
-                false
-            ],
-            [
-                "Steel_Lance",
-                false
-            ],
-            [
-                "Elixir",
+                "Swordreaver",
                 false
             ]
         ],
@@ -2770,7 +2781,9 @@
         "variant": null,
         "level": 1,
         "klass": "Sage",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
             "HP": 43,
             "STR": 16,
@@ -3302,7 +3315,9 @@
         "variant": "Monica",
         "level": 5,
         "klass": "Priestess",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
             "HP": 17,
             "STR": 5,
@@ -3818,10 +3833,6 @@
             [
                 1,
                 "Subtle_Slithering"
-            ],
-            [
-                1,
-                "Succubus_Mana"
             ]
         ],
         "unit_notes": [],
@@ -6086,10 +6097,12 @@
         "nid": "Esmera",
         "name": "Esmera",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "Inquisitor",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
             "STR": 8,
             "HP": 28,
@@ -6142,7 +6155,9 @@
         "variant": null,
         "level": 1,
         "klass": "High_Priestess",
-        "tags": [],
+        "tags": [
+            "Female"
+        ],
         "bases": {
             "HP": 20,
             "STR": 0,
@@ -6542,6 +6557,85 @@
         "wexp_gain": {},
         "alternate_classes": [],
         "portrait_nid": "Nasser",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Testeman",
+        "name": "Testeman do nome mais comprido do universo",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Citizen",
+        "tags": [],
+        "bases": {
+            "HP": 30
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Forde",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Darian",
+        "name": "Darian",
+        "desc": "",
+        "variant": null,
+        "level": 7,
+        "klass": "Cavalier",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 7,
+            "MAG": 2,
+            "SKL": 7,
+            "SPD": 8,
+            "LCK": 9,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Sword",
+                false
+            ],
+            [
+                "Javelin",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                71,
+                null
+            ],
+            "Sword": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Caellach",
         "affinity": null,
         "fields": []
     }
