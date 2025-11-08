@@ -63,7 +63,12 @@
                 "All_Embracing_Care"
             ]
         ],
-        "unit_notes": [],
+        "unit_notes": [
+            [
+                "Teste",
+                "Sim"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -82,7 +87,7 @@
             ],
             "Bow": [
                 false,
-                0,
+                100,
                 251
             ],
             "Staff": [
@@ -167,7 +172,7 @@
             ],
             "Lance": [
                 true,
-                181,
+                0,
                 251
             ],
             "Axe": [
@@ -266,7 +271,7 @@
         "wexp_gain": {
             "Sword": [
                 true,
-                10,
+                0,
                 251
             ],
             "Lance": [
@@ -363,7 +368,7 @@
             ],
             "Lance": [
                 true,
-                71,
+                0,
                 251
             ],
             "Axe": [
@@ -513,7 +518,7 @@
         "nid": "Dari",
         "name": "Dari",
         "desc": "A mature priest of Frelia. He's gentle and reassuring.",
-        "variant": "",
+        "variant": "Dari",
         "level": 1,
         "klass": "Recruit",
         "tags": [
@@ -566,7 +571,7 @@
             ],
             "Lance": [
                 false,
-                0,
+                1,
                 251
             ],
             "Axe": [
@@ -581,7 +586,7 @@
             ],
             "Staff": [
                 true,
-                71,
+                0,
                 251
             ],
             "Light": [
@@ -878,7 +883,7 @@
             ],
             "Lance": [
                 false,
-                0,
+                31,
                 251
             ],
             "Axe": [
@@ -888,7 +893,7 @@
             ],
             "Bow": [
                 true,
-                31,
+                0,
                 251
             ],
             "Staff": [
@@ -1068,7 +1073,7 @@
         "wexp_gain": {
             "Sword": [
                 false,
-                0,
+                181,
                 251
             ],
             "Lance": [
@@ -1121,7 +1126,7 @@
         "nid": "Nalili",
         "name": "Nalili",
         "desc": "A young mage of Renais. She believes she is a prodigy.",
-        "variant": "Female",
+        "variant": "Nalili",
         "level": 1,
         "klass": "Suc_Nalili",
         "tags": [
@@ -1155,6 +1160,10 @@
         "starting_items": [
             [
                 "Iron_Sword",
+                false
+            ],
+            [
+                "LustSpells",
                 false
             ]
         ],
@@ -1314,7 +1323,7 @@
             ],
             "Staff": [
                 true,
-                31,
+                0,
                 251
             ],
             "Light": [
@@ -1398,12 +1407,12 @@
         "wexp_gain": {
             "Sword": [
                 true,
-                71,
+                0,
                 251
             ],
             "Lance": [
                 false,
-                0,
+                31,
                 251
             ],
             "Axe": [
@@ -1485,7 +1494,12 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "LustSpells",
+                false
+            ]
+        ],
         "learned_skills": [
             [
                 1,
@@ -1535,7 +1549,7 @@
             ],
             "Dark": [
                 false,
-                0,
+                31,
                 251
             ],
             "Default": [
@@ -1831,7 +1845,7 @@
             ],
             "Lance": [
                 true,
-                1,
+                0,
                 251
             ],
             "Axe": [
@@ -1889,8 +1903,8 @@
         ],
         "bases": {
             "HP": 18,
-            "STR": 8,
-            "MAG": 8,
+            "STR": 4,
+            "MAG": 4,
             "SKL": 12,
             "SPD": 11,
             "LCK": 3,
@@ -1921,7 +1935,7 @@
         "learned_skills": [
             [
                 1,
-                "Aura_of_Neutrality"
+                "Stance_Switch"
             ]
         ],
         "unit_notes": [],
@@ -1943,7 +1957,7 @@
             ],
             "Bow": [
                 true,
-                181,
+                0,
                 251
             ],
             "Staff": [
@@ -6566,17 +6580,133 @@
         "desc": "",
         "variant": null,
         "level": 1,
-        "klass": "Citizen",
+        "klass": "Testeman",
         "tags": [],
         "bases": {
             "HP": 30
         },
         "growths": {},
         "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {},
+        "starting_items": [
+            [
+                "Iron_Blade",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Shelter"
+            ],
+            [
+                1,
+                "Like_a_champ"
+            ],
+            [
+                1,
+                "Defiant_Strike"
+            ],
+            [
+                1,
+                "Firewall"
+            ],
+            [
+                1,
+                "Shieldwall"
+            ],
+            [
+                1,
+                "Exposed_Immune"
+            ],
+            [
+                1,
+                "Silence_Immune"
+            ],
+            [
+                1,
+                "Blinded_Immune"
+            ],
+            [
+                1,
+                "Confused_Immune"
+            ],
+            [
+                1,
+                "Sleep_Immune"
+            ],
+            [
+                1,
+                "Lust_Death_Immune"
+            ],
+            [
+                1,
+                "Lust_Drain_Immune"
+            ],
+            [
+                1,
+                "Paralysis_Immune"
+            ],
+            [
+                1,
+                "testesynergy1"
+            ],
+            [
+                1,
+                "testesynergy2"
+            ]
+        ],
+        "unit_notes": [
+            [
+                "Name",
+                "Is very long because he likes long entries in text files"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                100,
+                null
+            ],
+            "Lance": [
+                false,
+                100,
+                null
+            ],
+            "Axe": [
+                false,
+                100,
+                null
+            ],
+            "Bow": [
+                false,
+                100,
+                null
+            ],
+            "Staff": [
+                false,
+                100,
+                null
+            ],
+            "Light": [
+                false,
+                100,
+                null
+            ],
+            "Anima": [
+                false,
+                100,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "Forde",
         "affinity": null,
@@ -6586,7 +6716,7 @@
         "nid": "Darian",
         "name": "Darian",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 7,
         "klass": "Cavalier",
         "tags": [
@@ -6608,7 +6738,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Sword",
+                "Iron_Lance",
                 false
             ],
             [
@@ -6637,6 +6767,205 @@
         "alternate_classes": [],
         "portrait_nid": "Caellach",
         "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Trisha",
+        "name": "Trisha",
+        "desc": "",
+        "variant": "Female",
+        "level": 8,
+        "klass": "Myrmidon",
+        "tags": [
+            "Boss",
+            "Female"
+        ],
+        "bases": {
+            "HP": 26,
+            "STR": 8,
+            "MAG": 0,
+            "SKL": 12,
+            "SPD": 11,
+            "LCK": 9,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Sword",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Blind_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Sword": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Marisa",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Marlo",
+        "name": "Marlo",
+        "desc": "",
+        "variant": "",
+        "level": 8,
+        "klass": "Fighter",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 29,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 8,
+            "SPD": 4,
+            "LCK": 8,
+            "DEF": 7,
+            "RES": 3,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Axe",
+                false
+            ],
+            [
+                "Hatchet",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Stun_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Garcia",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Perese",
+        "name": "Perese",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Noble",
+        "tags": [],
+        "bases": {
+            "HP": 8
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Innes",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Yett",
+        "name": "Yett",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "General",
+        "tags": [],
+        "bases": {
+            "HP": 30,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 13,
+            "RES": 4,
+            "CON": 11,
+            "MOV": 5
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Steel_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Unmovable"
+            ],
+            [
+                1,
+                "Paralysis_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Cormag",
+        "affinity": "None",
         "fields": []
     }
 ]

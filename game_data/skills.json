@@ -1,5 +1,49 @@
 [
     {
+        "nid": "testesynergy1",
+        "name": "testesynergy1",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "testesynergy2",
+        "name": "testesynergy2",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Stance_Switch",
         "name": "Stance Switch",
         "desc": "Uyae can switch between different stances.",
@@ -1168,6 +1212,10 @@
             [
                 "aura_target",
                 "unit"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -1231,6 +1279,10 @@
                 [
                     "Unpeople_succubus"
                 ]
+            ],
+            [
+                "negative",
+                null
             ]
         ]
     },
@@ -10735,16 +10787,20 @@
     {
         "nid": "Explosives_ability",
         "name": "Place explosives",
-        "desc": "",
-        "icon_nid": "Consumable",
+        "desc": "Varia places an explosive on an empty tile. Damages, inflicts <red>[BURNED]</> and stops movement of anyone who crosses this tile. Can't kill units. Limited to 3 uses per chapter.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            11
+            13,
+            32
         ],
         "components": [
             [
                 "ability",
                 "Explosives"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -12268,6 +12324,139 @@
             [
                 "endstep_damage",
                 50
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_exposed",
+        "name": "Exposing Aura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            38
+        ],
+        "components": [
+            [
+                "aura",
+                "Exposed"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "aura_shape",
+                [
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        -1,
+                        1
+                    ],
+                    [
+                        -1,
+                        0
+                    ],
+                    [
+                        -1,
+                        -1
+                    ],
+                    [
+                        0,
+                        -1
+                    ],
+                    [
+                        1,
+                        -1
+                    ],
+                    [
+                        0,
+                        -2
+                    ],
+                    [
+                        0,
+                        -3
+                    ],
+                    [
+                        2,
+                        0
+                    ],
+                    [
+                        3,
+                        0
+                    ],
+                    [
+                        -3,
+                        0
+                    ],
+                    [
+                        -2,
+                        0
+                    ],
+                    [
+                        0,
+                        2
+                    ],
+                    [
+                        0,
+                        3
+                    ],
+                    [
+                        -1,
+                        2
+                    ],
+                    [
+                        -2,
+                        1
+                    ],
+                    [
+                        -2,
+                        -1
+                    ],
+                    [
+                        -1,
+                        -2
+                    ],
+                    [
+                        1,
+                        -2
+                    ],
+                    [
+                        2,
+                        -1
+                    ],
+                    [
+                        2,
+                        1
+                    ],
+                    [
+                        1,
+                        2
+                    ]
+                ]
+            ],
+            [
+                "show_aura",
+                [
+                    128,
+                    0,
+                    0
+                ]
             ]
         ]
     }
