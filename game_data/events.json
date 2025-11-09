@@ -14292,5 +14292,46 @@
             ""
         ],
         "nid": "P13 Magic3 destroy"
+    },
+    {
+        "name": "New Event",
+        "trigger": "level_start",
+        "level_nid": "11",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close",
+            "wait;1000",
+            "change_background;GradoCastle",
+            "music;Distant Roads",
+            "multi_add_portrait;Jack;Right;Tramond;Left",
+            "transition;open;2000",
+            "s;Tramond;Look at how far you've come! I'm proud of you.|You have recruited such great allies, you give us hope.",
+            "bop_portrait;Jack",
+            "s;Jack;This is just the beginning of my journey.|I will not rest until I save this kingdom!",
+            "s;Tramond;Most excellent. It seems you are ready to wield our sacred treasure.",
+            "s;Jack;Oh! Do you mean...",
+            "s;Tramond;The one and only.",
+            "give_item;Jack;Dragonspear",
+            "bop_portrait;Jack",
+            "expression;Jack;Smile,CloseEyes",
+            "s;Jack;Thank you, sir Tramond!|With this, I'm sure to defeat any great evil before me.",
+            "add_portrait;Logan;FarLeft;left;no_block",
+            "move_portrait;Tramond;MidLeft",
+            "music;Quiet Burn",
+            "s;Logan;It seems we were followed. They're moving to siege the castle.",
+            "s;Tramond;Such audacity! They're about to discover why we are the most secure location in the kingdom!",
+            "remove_portrait;Tramond;;right",
+            "s;Jack;Gather everyone!",
+            "mirror_portrait;Jack",
+            "remove_portrait;Jack;;right;no_block",
+            "mirror_portrait;Logan",
+            "remove_portrait;Logan;;left",
+            "transition;close;1000",
+            "center_cursor;13,11"
+        ],
+        "nid": "11 New Event"
     }
 ]
