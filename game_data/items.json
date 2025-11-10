@@ -118,6 +118,480 @@
         ]
     },
     {
+        "nid": "Intervention",
+        "name": "Intervention",
+        "desc": "Balia sets Orcent's <red>Brutality</> and <blue>Serenity</> stacks to 0. Also restores any of Orcent's negative statuses.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            37
+        ],
+        "components": [
+            [
+                "eval_target_restrict_2",
+                "target.nid == 'Orcent'"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia Intervention resets Orcent stacks"
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "MapSmallHealTrans"
+            ],
+            [
+                "map_hit_sfx",
+                "MapHeal"
+            ]
+        ]
+    },
+    {
+        "nid": "Orcmancy",
+        "name": "Orcmancy",
+        "desc": "Balia can summon orcs to fight alongside her.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            42
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Summon_orc"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc",
+        "name": "Summon orc",
+        "desc": "Summons a weak orc. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            28
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Summon orc balia"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc_elite",
+        "name": "Summon elite orc",
+        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            29
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon orc elite"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_imp",
+        "name": "Summon imp",
+        "desc": "Summons a weak imp. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            28
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon imp"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_imp_elite",
+        "name": "Summon elite imp",
+        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon imp elite"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc_thrower",
+        "name": "Summon orc thrower",
+        "desc": "Summons a rock throwing orc. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            44
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon orc thrower"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_ogre",
+        "name": "Summon ogre",
+        "desc": "Summons a powerful ogre. Costs <blue>20 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                20
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon ogre"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
         "nid": "Iron_Sword",
         "name": "Iron Sword",
         "desc": "",
@@ -673,7 +1147,7 @@
     {
         "nid": "DivineLightning",
         "name": "Smite",
-        "desc": "Hits an enemy with basic divine magic. Costs <blue>3 mana</>.",
+        "desc": "Hits an enemy with basic divine magic. Costs <blue>2 mana</>.",
         "icon_nid": "Light",
         "icon_index": [
             0,
@@ -738,7 +1212,7 @@
             ],
             [
                 "mana_cost",
-                3
+                2
             ],
             [
                 "mana_cost_as_uses",
@@ -753,7 +1227,7 @@
         "icon_nid": "Light",
         "icon_index": [
             0,
-            0
+            4
         ],
         "components": [
             [
@@ -774,7 +1248,7 @@
             ],
             [
                 "damage",
-                6
+                7
             ],
             [
                 "hit",
@@ -817,9 +1291,11 @@
                 5
             ],
             [
-                "prf_tags",
+                "prf_class",
                 [
-                    "Shine_scroll"
+                    "Ivalan_Mage",
+                    "Bishop",
+                    "High_Priestess"
                 ]
             ]
         ]
@@ -2345,12 +2821,6 @@
                 ]
             ],
             [
-                "prf_class",
-                [
-                    "Sage"
-                ]
-            ],
-            [
                 "battle_cast_anim",
                 "Flareblade"
             ],
@@ -2430,12 +2900,6 @@
                 "prf_unit",
                 [
                     "Robin"
-                ]
-            ],
-            [
-                "prf_class",
-                [
-                    "Sage"
                 ]
             ],
             [
@@ -2521,12 +2985,6 @@
                 ]
             ],
             [
-                "prf_class",
-                [
-                    "Sage"
-                ]
-            ],
-            [
                 "battle_cast_anim",
                 "Ice2"
             ],
@@ -2590,12 +3048,6 @@
                 "prf_unit",
                 [
                     "Robin"
-                ]
-            ],
-            [
-                "prf_class",
-                [
-                    "Mage_Knight"
                 ]
             ],
             [
@@ -3374,6 +3826,10 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "battle_cast_anim",
+                "Flux"
             ]
         ]
     },
@@ -3622,6 +4078,10 @@
             [
                 "weapon_rank",
                 "A"
+            ],
+            [
+                "battle_cast_anim",
+                "Howl"
             ]
         ]
     },
@@ -10751,126 +11211,6 @@
         ]
     },
     {
-        "nid": "Intervention",
-        "name": "Intervention",
-        "desc": "Balia sets Orcent's <red>Brutality</> and <blue>Serenity</> stacks to 0. Also restores any of Orcent's negative statuses.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            37
-        ],
-        "components": [
-            [
-                "eval_target_restrict_2",
-                "target.nid == 'Orcent'"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Balia Intervention resets Orcent stacks"
-            ],
-            [
-                "restore",
-                null
-            ],
-            [
-                "map_cast_anim",
-                "MapSmallHealTrans"
-            ],
-            [
-                "map_hit_sfx",
-                "MapHeal"
-            ]
-        ]
-    },
-    {
-        "nid": "Summon_orc_1",
-        "name": "Summon orc",
-        "desc": "Summons a weak orc. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            15
-        ],
-        "components": [
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_sfx",
-                "Summon"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "SkillActivate"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Summon orc balia"
-            ],
-            [
-                "map_cast_anim",
-                "OverchargeAura"
-            ]
-        ]
-    },
-    {
         "nid": "Orcent_Snipe_Target",
         "name": "Snipe Target",
         "desc": "<green>[Dari synergy]</> Orcent snipes a target scouted by Dari. Can be used only once per turn. Costs <blue>2 mana</>.",
@@ -13514,7 +13854,6 @@
             [
                 "prf_class",
                 [
-                    "Orc",
                     "Orc_Thrower"
                 ]
             ],
@@ -13529,6 +13868,10 @@
             [
                 "blast_aoe",
                 1
+            ],
+            [
+                "no_double",
+                null
             ]
         ]
     },
@@ -15951,7 +16294,7 @@
     {
         "nid": "Sneaky_Stabs",
         "name": "Sneaky Stabs",
-        "desc": "",
+        "desc": "Aka can use a variety of special stabs.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -15986,7 +16329,8 @@
                 "multi_item",
                 [
                     "Blinding_Stab",
-                    "Crippling_Stab"
+                    "Crippling_Stab",
+                    "Disabling_Assault"
                 ]
             ]
         ]
@@ -22861,6 +23205,10 @@
             ],
             [
                 "mana_cost_as_uses",
+                null
+            ],
+            [
+                "no_equip",
                 null
             ]
         ]
