@@ -10,8 +10,124 @@
         ],
         "components": [
             [
-                "do_nothing",
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Nothing_negative",
+        "name": "Nothing",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
                 1
+            ]
+        ]
+    },
+    {
+        "nid": "Nothing_negative_suc",
+        "name": "Nothing",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "ignore_fatigue",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Berserk_dancer",
+        "name": "Berserk",
+        "desc": "Unit is confused and can no longer tell friend from foe.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            8
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "change_ai",
+                "Pursue"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Enemy_dancer",
+        "name": "Enemy dance",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            38
+        ],
+        "components": [
+            [
+                "ignore_alliances",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "simonmagiccutscene",
+        "name": "new_1",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_anim",
+                "BlueDot"
             ],
             [
                 "hidden",
@@ -4234,12 +4350,20 @@
         ],
         "components": [
             [
-                "negative",
+                "hidden",
                 null
             ],
             [
-                "hidden",
+                "global",
                 null
+            ],
+            [
+                "upkeep_skill_gain",
+                "Nothing_negative"
+            ],
+            [
+                "endstep_skill_gain",
+                "Nothing_negative"
             ]
         ]
     },
@@ -4839,12 +4963,12 @@
     },
     {
         "nid": "Crippled",
-        "name": "Crippled",
-        "desc": "",
+        "name": "<red>[CRIPPLED]</>",
+        "desc": "Unit's stats are diminished.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
-            16
+            4
         ],
         "components": [
             [
@@ -4874,7 +4998,15 @@
             ],
             [
                 "time",
-                3
+                2
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    115,
+                    48,
+                    49
+                ]
             ]
         ]
     },
@@ -9504,6 +9636,42 @@
             [
                 "hidden",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Rialay_aura",
+        "name": "Riala_aura",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "aura",
+                "Nothing"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "show_aura",
+                [
+                    106,
+                    28,
+                    128
+                ]
             ]
         ]
     },

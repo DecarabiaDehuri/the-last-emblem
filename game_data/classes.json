@@ -12448,7 +12448,7 @@
                 null
             ],
             "Refresh": [
-                false,
+                true,
                 0,
                 null
             ]
@@ -14629,7 +14629,7 @@
             ],
             [
                 1,
-                "Sleep_attack"
+                "Lust_Drain_attack"
             ]
         ],
         "wexp_gain": {
@@ -14701,6 +14701,158 @@
         ],
         "map_sprite_nid": "Succubus (F) {SkidMarc25}-stand",
         "combat_anim_nid": "Succubus_1",
+        "fields": []
+    },
+    {
+        "nid": "Suc_dancer",
+        "name": "Succubus",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Flying",
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 1,
+            "MAG": 3,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 10,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 20,
+            "MAG": 50,
+            "SKL": 50,
+            "SPD": 30,
+            "LCK": 10,
+            "DEF": 15,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Flying"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                71,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                true,
+                121,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                true,
+                181,
+                null
+            ]
+        },
+        "icon_nid": "Succubus {SkidMarc25}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Suc sup-stand",
+        "combat_anim_nid": "SucSup",
         "fields": []
     },
     {
@@ -14785,7 +14937,7 @@
             ],
             [
                 1,
-                "Lust_Drain_attack"
+                "Lust_Death_attack"
             ]
         ],
         "wexp_gain": {
@@ -14864,7 +15016,7 @@
         "name": "<narrow>Mermaid Succubus</>",
         "desc": "",
         "tier": 1,
-        "movement_group": "Pirates",
+        "movement_group": "Mermaid",
         "promotes_from": null,
         "turns_into": [],
         "tags": [
@@ -14936,7 +15088,7 @@
         "learned_skills": [
             [
                 1,
-                "Lust_Death_attack"
+                "Sleep_attack"
             ]
         ],
         "wexp_gain": {
@@ -15574,7 +15726,7 @@
             "Dark": [
                 true,
                 0,
-                null
+                71
             ],
             "Whip": [
                 false,

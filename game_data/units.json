@@ -3865,7 +3865,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Flux",
+                "LustSpells",
                 false
             ]
         ],
@@ -4084,7 +4084,8 @@
         "level": 9,
         "klass": "Suc_Minerve",
         "tags": [
-            "Female"
+            "Female",
+            "Succubus"
         ],
         "bases": {
             "HP": 28,
@@ -4093,8 +4094,8 @@
             "SKL": 16,
             "SPD": 8,
             "LCK": 14,
-            "DEF": 11,
-            "RES": 12,
+            "DEF": 7,
+            "RES": 7,
             "CON": 7,
             "MOV": 5
         },
@@ -4113,18 +4114,14 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Luna",
+                "Dance_enemy",
                 false
             ]
         ],
         "learned_skills": [
             [
                 1,
-                "Lust_Drain_attack"
-            ],
-            [
-                1,
-                "Unmovable"
+                "Berserk_dancer"
             ]
         ],
         "unit_notes": [],
@@ -4173,6 +4170,11 @@
                 false,
                 0,
                 251
+            ],
+            "Refresh": [
+                false,
+                31,
+                null
             ]
         },
         "alternate_classes": [],
@@ -4188,7 +4190,8 @@
         "level": 9,
         "klass": "Suc_Minerve",
         "tags": [
-            "Female"
+            "Female",
+            "Succubus"
         ],
         "bases": {
             "HP": 28,
@@ -4293,7 +4296,8 @@
         "klass": "Suc_Minerve",
         "tags": [
             "Boss",
-            "Female"
+            "Female",
+            "Succubus"
         ],
         "bases": {
             "HP": 40,
@@ -4414,7 +4418,8 @@
         "klass": "Suc_Minerve",
         "tags": [
             "Boss",
-            "Female"
+            "Female",
+            "Succubus"
         ],
         "bases": {
             "HP": 40,
@@ -7824,6 +7829,63 @@
         "alternate_classes": [],
         "portrait_nid": "janine2",
         "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Enemy_dancer",
+        "name": "Enemy dancer",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Suc_dancer",
+        "tags": [],
+        "bases": {
+            "HP": 14,
+            "STR": 1,
+            "MAG": 3,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 10,
+            "MOV": 6
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Dance_enemy",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Berserk_dancer"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Refresh": [
+                false,
+                181,
+                null
+            ],
+            "Dark": [
+                false,
+                121,
+                null
+            ],
+            "Sword": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Vanessa",
+        "affinity": null,
         "fields": []
     }
 ]
