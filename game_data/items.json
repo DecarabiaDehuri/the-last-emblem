@@ -23077,13 +23077,21 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Heavy Foot Steps 1"
             ]
         ]
     },
     {
         "nid": "Holy_Shieldwall",
         "name": "Holy Shieldwall",
-        "desc": "Raises DEF, RES and draws the enemy's attention. Costs <blue>5 mana</>.",
+        "desc": "<green>[Carina synergy]</> Raises DEF, RES, draws the enemy's attention and gain health regeneration. Costs <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -23108,7 +23116,7 @@
             ],
             [
                 "mana_cost",
-                5
+                10
             ],
             [
                 "no_map_hp_display",
@@ -23131,7 +23139,7 @@
     {
         "nid": "Arcane_Shieldwall",
         "name": "Arcane Shieldwall",
-        "desc": "Raises STR, DEF, RES and draws the enemy's attention. Costs <blue>5 mana</>.",
+        "desc": "<green>[Riala synergy]</> Raises DEF, RES, draws the enemy's attention and gain mana regeneration. Costs <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -23156,7 +23164,7 @@
             ],
             [
                 "mana_cost",
-                5
+                10
             ],
             [
                 "no_map_hp_display",
@@ -23478,6 +23486,10 @@
             ],
             [
                 "mana_cost_as_uses",
+                null
+            ],
+            [
+                "no_equip",
                 null
             ]
         ]

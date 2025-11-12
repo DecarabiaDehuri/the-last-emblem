@@ -4125,7 +4125,7 @@
     {
         "nid": "Succubus_Mana",
         "name": "Succubus",
-        "desc": "Playable succubi start each chapter with <blue>0 mana</>. They regain mana passively, on hit and on kill. They can <green>masturbate</> to regain <blue>4 mana</>.",
+        "desc": "Succubi start each chapter with <blue>0 mana</>. They regain mana passively, on hit and on kill. Player succubi units can <green>masturbate</> to regain <blue>4 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -9480,6 +9480,66 @@
         ]
     },
     {
+        "nid": "Optimization",
+        "name": "Final Optimization",
+        "desc": "Iris is fully focusing on managing the strategies of her allies.\nAll allies gain bonus HIT and AVOID.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Optimization_buff"
+            ],
+            [
+                "aura_range",
+                99
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    40,
+                    49,
+                    223
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Optimization_buff",
+        "name": "Optimized",
+        "desc": "Unit has bonus HIT and AVOID.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            22
+        ],
+        "components": [
+            [
+                "hit",
+                20
+            ],
+            [
+                "avoid",
+                20
+            ],
+            [
+                "unit_anim",
+                "MapStatIncrease"
+            ]
+        ]
+    },
+    {
         "nid": "Backup_Plan",
         "name": "Backup Plan",
         "desc": "When unit is under 25% HP, attacks first.",
@@ -11500,7 +11560,7 @@
     {
         "nid": "Shieldwall",
         "name": "Shieldwall",
-        "desc": "",
+        "desc": "Raises DEF and draws the enemy's attention. Costs <blue>5 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -11520,7 +11580,7 @@
     {
         "nid": "Shieldwall_buff",
         "name": "Shieldwall",
-        "desc": "",
+        "desc": "DEF increased. Enemies are more likely to attack Hilstara.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -11613,7 +11673,7 @@
     {
         "nid": "Protect",
         "name": "Protect",
-        "desc": "",
+        "desc": "Hilstara can protect a unit, with its effects working as long as they are adjacent. Protected unit receives 20% less damage. Hilstara loses <blue>1 mana</> per turn. Both Unit and Hilstara have MOV -1 and SPD -5.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -11735,7 +11795,7 @@
     {
         "nid": "Bash",
         "name": "Bash",
-        "desc": "",
+        "desc": "Stuns and shoves the enemy 1 tile away.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -11789,7 +11849,7 @@
     {
         "nid": "Holy_Shieldwall",
         "name": "Holy Shieldwall",
-        "desc": "",
+        "desc": "<green>[Carina synergy]</> Raises DEF, RES, draws the enemy's attention and gain health regeneration. Costs <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -11815,13 +11875,17 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ]
         ]
     },
     {
         "nid": "Holy_Shieldwall_buff",
         "name": "Holy Shieldwall",
-        "desc": "",
+        "desc": "DEF and RES increased. 20% of HP regeneration per turn. Enemies are more likely to attack Hilstara.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -11837,11 +11901,11 @@
                 [
                     [
                         "DEF",
-                        4
+                        5
                     ],
                     [
                         "RES",
-                        6
+                        5
                     ]
                 ]
             ],
@@ -11856,13 +11920,53 @@
                     173,
                     234
                 ]
+            ],
+            [
+                "regeneration",
+                0.2
+            ]
+        ]
+    },
+    {
+        "nid": "Arcane_Shieldwall",
+        "name": "Arcane Shieldwall",
+        "desc": "<green>[Riala synergy]</> Raises DEF, RES, draws the enemy's attention and gain mana regeneration. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Arcane_Shieldwall"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Hilstara' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ]
         ]
     },
     {
         "nid": "Arcane_Shieldwall_buff",
         "name": "Arcane Shieldwall",
-        "desc": "",
+        "desc": "DEF and RES increased. 3 MP regeneration per turn. Enemies are more likely to attack Hilstara.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -11882,7 +11986,7 @@
                     ],
                     [
                         "RES",
-                        5
+                        7
                     ],
                     [
                         "STR",
@@ -11901,6 +12005,10 @@
                     173,
                     234
                 ]
+            ],
+            [
+                "mana_regeneration",
+                3
             ]
         ]
     },
@@ -11933,6 +12041,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ]
         ]
     },
@@ -11965,13 +12077,17 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ]
         ]
     },
     {
         "nid": "Bikini_Armor_effect",
         "name": "Bikini Armor",
-        "desc": "Hilstara took off her armor and is enjoying a cool breeze. Bonus avoid, penalty in damage resistance.",
+        "desc": "Hilstara took off her armor and is enjoying a cool breeze. Significant avoid bonus, but receives more damage.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -11980,7 +12096,7 @@
         "components": [
             [
                 "avoid",
-                25
+                30
             ],
             [
                 "resist",
