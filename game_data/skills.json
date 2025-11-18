@@ -16,6 +16,705 @@
         ]
     },
     {
+        "nid": "Duelists_Blow",
+        "name": "Duelist's Blow",
+        "desc": "+15 AVOID when initiating battle.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.team != target.team"
+            ],
+            [
+                "avoid",
+                15
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Blow",
+        "name": "Death Blow",
+        "desc": "+15 CRIT when initiating battle.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.team != target.team"
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Darting_Blow",
+        "name": "Darting Blow",
+        "desc": "+5 Attack Speed when initiating battle.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.team != target.team"
+            ],
+            [
+                "attack_speed",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Warding_Blow",
+        "name": "Warding Blow",
+        "desc": "+5 RES when initiating battle.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.team != target.team"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Armored_Blow",
+        "name": "Armored Blow",
+        "desc": "+5 DEF when initiating battle.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.team != target.team"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Certain_Blow",
+        "name": "Certain Blow",
+        "desc": "+15 HIT when initiating battle.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.team != target.team"
+            ],
+            [
+                "hit",
+                15
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Strength",
+        "name": "Spur Strength",
+        "desc": "Adjacent allies have +5 STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "aura",
+                "Spur_Strength_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Magic",
+        "name": "Spur Magic",
+        "desc": "Adjacent allies have +5 MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "aura",
+                "Spur_Magic_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Speed",
+        "name": "Spur Speed",
+        "desc": "Adjacent allies have +5 SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            4
+        ],
+        "components": [
+            [
+                "aura",
+                "Spur_Speed_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Skill",
+        "name": "Spur Skill",
+        "desc": "Adjacent allies have +5 SKL.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "aura",
+                "Spur_Skill_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Luck",
+        "name": "Spur Luck",
+        "desc": "Adjacent allies have +5 SKL.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            5
+        ],
+        "components": [
+            [
+                "aura",
+                "Spur_Luck_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Defense",
+        "name": "Spur Defense",
+        "desc": "Adjacent allies have +5 DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            6
+        ],
+        "components": [
+            [
+                "aura",
+                "Spur_Defense_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Resistance",
+        "name": "Spur Resistance",
+        "desc": "Adjacent allies have +5 RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            7
+        ],
+        "components": [
+            [
+                "aura",
+                "Spur_Defense_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Strength_effect",
+        "name": "Spur Strength",
+        "desc": "+5 STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Magic_effect",
+        "name": "Spur Magic",
+        "desc": "+5 MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Speed_effect",
+        "name": "Spur Magic",
+        "desc": "+5 SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            4
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Skill_effect",
+        "name": "Spur Skill",
+        "desc": "+5 SKL.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Luck_effect",
+        "name": "Spur Luck",
+        "desc": "+5 LUK.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Defense_effect",
+        "name": "Spur Defense",
+        "desc": "+5 DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            6
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Spur_Resistance_effect",
+        "name": "Spur Resistance",
+        "desc": "+5 RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            7
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Duelists_Parry",
+        "name": "Duelist's Blow",
+        "desc": "+15 AVOID when under attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense' and unit.team != target.team"
+            ],
+            [
+                "avoid",
+                15
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Counter",
+        "name": "Death Counter",
+        "desc": "+15 CRIT when under attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense' and unit.team != target.team"
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Darting_Counter",
+        "name": "Darting Counter",
+        "desc": "+5 Defense Speed when under attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense' and unit.team != target.team"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "defense_speed",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Warding_Counter",
+        "name": "Warding Counter",
+        "desc": "+5 RES when under attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense' and unit.team != target.team"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Armored_Counter",
+        "name": "Armored Counter",
+        "desc": "+5 DEF when under attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense' and unit.team != target.team"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Certain_Counter",
+        "name": "Certain Counter",
+        "desc": "+15 HIT when under attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense' and unit.team != target.team"
+            ],
+            [
+                "hit",
+                15
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Nothing_negative",
         "name": "Nothing",
         "desc": "",
