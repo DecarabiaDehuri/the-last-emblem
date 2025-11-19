@@ -40,6 +40,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -68,6 +74,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -96,6 +108,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -129,6 +147,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -162,6 +186,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -190,16 +220,22 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
     {
         "nid": "Spur_Strength",
         "name": "Spur Strength",
-        "desc": "Adjacent allies have +5 STR.",
+        "desc": "Adjacent allies have +3 STR.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             1
         ],
         "components": [
@@ -218,16 +254,22 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
     {
         "nid": "Spur_Magic",
         "name": "Spur Magic",
-        "desc": "Adjacent allies have +5 MAG.",
+        "desc": "Adjacent allies have +3 MAG.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             2
         ],
         "components": [
@@ -246,16 +288,22 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
     {
         "nid": "Spur_Speed",
         "name": "Spur Speed",
-        "desc": "Adjacent allies have +5 SPD.",
+        "desc": "Adjacent allies have +3 SPD.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             4
         ],
         "components": [
@@ -274,16 +322,22 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
     {
         "nid": "Spur_Skill",
         "name": "Spur Skill",
-        "desc": "Adjacent allies have +5 SKL.",
+        "desc": "Adjacent allies have +3 SKL.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             3
         ],
         "components": [
@@ -302,16 +356,22 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
     {
         "nid": "Spur_Luck",
         "name": "Spur Luck",
-        "desc": "Adjacent allies have +5 SKL.",
+        "desc": "Adjacent allies have +3 LUK.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             5
         ],
         "components": [
@@ -330,16 +390,22 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
     {
         "nid": "Spur_Defense",
         "name": "Spur Defense",
-        "desc": "Adjacent allies have +5 DEF.",
+        "desc": "Adjacent allies have +3 DEF.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             6
         ],
         "components": [
@@ -358,16 +424,22 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
     {
         "nid": "Spur_Resistance",
         "name": "Spur Resistance",
-        "desc": "Adjacent allies have +5 RES.",
+        "desc": "Adjacent allies have +3 RES.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             7
         ],
         "components": [
@@ -386,16 +458,22 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
     {
         "nid": "Spur_Strength_effect",
         "name": "Spur Strength",
-        "desc": "+5 STR.",
+        "desc": "+3 STR.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             1
         ],
         "components": [
@@ -404,7 +482,7 @@
                 [
                     [
                         "STR",
-                        5
+                        3
                     ]
                 ]
             ]
@@ -416,7 +494,7 @@
         "desc": "+5 MAG.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             2
         ],
         "components": [
@@ -425,7 +503,7 @@
                 [
                     [
                         "MAG",
-                        5
+                        3
                     ]
                 ]
             ]
@@ -433,11 +511,11 @@
     },
     {
         "nid": "Spur_Speed_effect",
-        "name": "Spur Magic",
+        "name": "Spur Speed",
         "desc": "+5 SPD.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             4
         ],
         "components": [
@@ -446,7 +524,7 @@
                 [
                     [
                         "SPD",
-                        5
+                        3
                     ]
                 ]
             ]
@@ -458,7 +536,7 @@
         "desc": "+5 SKL.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             3
         ],
         "components": [
@@ -467,7 +545,7 @@
                 [
                     [
                         "SKL",
-                        5
+                        3
                     ]
                 ]
             ]
@@ -479,8 +557,8 @@
         "desc": "+5 LUK.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
-            3
+            2,
+            5
         ],
         "components": [
             [
@@ -488,7 +566,7 @@
                 [
                     [
                         "LCK",
-                        5
+                        3
                     ]
                 ]
             ]
@@ -500,7 +578,7 @@
         "desc": "+5 DEF.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             6
         ],
         "components": [
@@ -509,7 +587,7 @@
                 [
                     [
                         "DEF",
-                        5
+                        3
                     ]
                 ]
             ]
@@ -521,7 +599,7 @@
         "desc": "+5 RES.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             7
         ],
         "components": [
@@ -530,7 +608,7 @@
                 [
                     [
                         "RES",
-                        5
+                        3
                     ]
                 ]
             ]
@@ -561,6 +639,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -589,6 +673,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -617,6 +707,12 @@
             [
                 "defense_speed",
                 5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -650,6 +746,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -683,6 +785,12 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -711,6 +819,721 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "SwordBreaker",
+        "name": "Sword Breaker",
+        "desc": "Unit is buffed if enemy is using a <red>Sword</>.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Sword'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "LanceBreaker",
+        "name": "Lance Breaker",
+        "desc": "Unit is buffed if enemy is using a <red>Lance</>.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Lance'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "AxeBreaker",
+        "name": "Axe Breaker",
+        "desc": "Unit is buffed if enemy is using an <red>Axe</>.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Axe'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "BowBreaker",
+        "name": "Bow Breaker",
+        "desc": "Unit is buffed if enemy is using a <red>Bow</>.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Bow'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "DivineBreaker",
+        "name": "Divine Breaker",
+        "desc": "Unit is buffed if enemy is using a <red>Divine</> tome.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            29
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Light'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneBreaker",
+        "name": "Arcane Breaker",
+        "desc": "Unit is buffed if enemy is using a <red>Arcane</> tome.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            31
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Anima'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "LustBreaker",
+        "name": "Lust Breaker",
+        "desc": "Unit is buffed if enemy is using a <red>Lust</> tome.\nDMG+10, HIT+30, DMG received -5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Dark'"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "resist",
+                5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "SwordFaire",
+        "name": "Sword Faire",
+        "desc": "Unit gains +4 damage when equipping a Sword.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Sword'"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "LanceFaire",
+        "name": "Lance Faire",
+        "desc": "Unit gains +4 damage when equipping a Lance.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Lance'"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "AxeFaire",
+        "name": "Axe Faire",
+        "desc": "Unit gains +4 damage when equipping an Axe.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Axe'"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "BowFaire",
+        "name": "Bow Faire",
+        "desc": "Unit gains +4 damage when equipping a Bow.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Bow'"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "TomeFaire",
+        "name": "Tome Faire",
+        "desc": "Unit gains +4 damage when equipping Divine, Arcane or Lust magic.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and (item_system.weapon_type(unit, unit.get_weapon()) == 'Light' or item_system.weapon_type(unit, unit.get_weapon()) == 'Anima' or item_system.weapon_type(unit, unit.get_weapon()) == 'Dark')"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Push_Strength",
+        "name": "Push Strength",
+        "desc": "When HP is full, gain +5 STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Push_Magic",
+        "name": "Push Magic",
+        "desc": "When HP is full, gain +5 MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Push_Speed",
+        "name": "Push Speed",
+        "desc": "When HP is full, gain +5 SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            4
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Push_Skill",
+        "name": "Push Skill",
+        "desc": "When HP is full, gain +5 SKL.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Push_Luck",
+        "name": "Push Luck",
+        "desc": "When HP is full, gain +5 LUK.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            5
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Push_Defense",
+        "name": "Push Defense",
+        "desc": "When HP is full, gain +5 DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Push_Resistance",
+        "name": "Push Resistance",
+        "desc": "When HP is full, gain +5 RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            7
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -2010,10 +2833,10 @@
         "nid": "testesynergy1",
         "name": "testesynergy1",
         "desc": "",
-        "icon_nid": "Affinity",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            3,
+            12
         ],
         "components": [
             [
@@ -2032,10 +2855,10 @@
         "nid": "testesynergy2",
         "name": "testesynergy2",
         "desc": "",
-        "icon_nid": "Affinity",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            2
+            3,
+            24
         ],
         "components": [
             [
@@ -4862,6 +5685,12 @@
             [
                 "hidden_if_inactive",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -10107,42 +10936,6 @@
         ]
     },
     {
-        "nid": "SwordBreaker",
-        "name": "Sword Breaker",
-        "desc": "Unit is buffed if enemy is using a <red>Sword</>.\nDMG+10, HIT+30, DMG received -5.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            28
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "combat_condition",
-                "item_system.weapon_type(target, target.get_weapon()) == 'Sword'"
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
-                "hit",
-                30
-            ],
-            [
-                "resist",
-                5
-            ]
-        ]
-    },
-    {
         "nid": "True_Form",
         "name": "True Form",
         "desc": "Minerve disperses the magic on her illusion, focusing instead on dealing damage through her true visage. She alternates between a single target powerful attack and a AoE attack.",
@@ -10732,6 +11525,10 @@
             [
                 "unit_anim",
                 "MapStatDecrease"
+            ],
+            [
+                "negative",
+                null
             ]
         ]
     },
@@ -10760,6 +11557,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },

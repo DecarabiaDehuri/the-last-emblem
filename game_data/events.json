@@ -13,7 +13,7 @@
             "music_clear;1000",
             "wait;1000",
             "transition;open",
-            "s;;Warning: this is a <red>+18</> game.|It contains explicit sexual language and imagery.|This is a fangame tribute to the adult RPG The Last Sovereign, made by Sierra Lee.|This game contains spoilers up to the end of Chapter 3 of The Last Sovereign.;center;;overworld_narration",
+            "s;;Warning: this is a <red>+18</> game.|It contains explicit sexual language and imagery.|This is a fangame tribute to the adult RPG The Last Sovereign, made by Sierra Lee.|This game contains spoilers up to the end of Chapter 3 of The Last Sovereign.|This game has no affiliation whatsoever to Intelligent Systems nor Sierra Lee.;center;;overworld_narration",
             "wait;4000",
             "end_skip",
             "music;FuckEmblem;3000",
@@ -49,7 +49,7 @@
             "    win_game",
             "elif;'{v:_last_choice}' == 'No'",
             "    game_var;prologue;0",
-            "    set_next_chapter;Limit",
+            "    set_next_chapter;Intro0",
             "    transition;close;2000",
             "    wait;1000",
             "    win_game",
@@ -5718,7 +5718,7 @@
         "priority": 20,
         "_source": [
             "transition;Close",
-            "shop;{unit};Health_Potion,Heal,Fire,Thunder,Elfire,Lightning,Shine,Flux;vendor",
+            "shop;{unit};Health_Potion,Scroll_Lightning,Scroll_Physic;vendor",
             "transition;Open"
         ],
         "nid": "P4 Shop Nodford"
@@ -6678,11 +6678,11 @@
             "    add_unit;Antarion;11,25;immediate;giveup;fade",
             "    add_talk;Chosen;Antarion",
             "end",
-            "if;game.check_alive('Cassian') == True",
+            "if;game.check_alive('Cassian') == True and u'(Cassian').team == 'player'",
             "    add_unit;Cassian;6,22;immediate;giveup;fade",
             "    add_talk;Chosen;Cassian",
             "end",
-            "if;game.check_alive('Lucia') == True",
+            "if;game.check_alive('Lucia') == True and u'(Lucia').team == 'player'",
             "    add_unit;Lucia;5,21;immediate;giveup;fade",
             "    add_talk;Chosen;Lucia",
             "end",
@@ -8706,7 +8706,7 @@
             "            remove_portrait;Duro",
             "        else",
             "        end",
-            "        if;game.check_alive('Monica')",
+            "        if;game.check_alive('Monica') == True and u('Monica').team == 'player'",
             "            add_portrait;Monica;Left;;CloseEyes",
             "            wait;1000",
             "            expression;Monica;OpenEyes",
@@ -8723,7 +8723,7 @@
             "            remove_portrait;Antarion",
             "        else",
             "        end",
-            "        if;game.check_alive('Cassian')",
+            "        if;game.check_alive('Cassian') == True and u('Cassian').team == 'player'",
             "            if;game.check_alive('Lucia')",
             "            add_portrait;Cassian;Left",
             "            s;Cassian;The battle? For sure!|Let's just go and hit them, man.|I wonder if we're gonna find other rare succubi races!",
@@ -8735,7 +8735,7 @@
             "            end",
             "        else",
             "        end",
-            "        if;game.check_alive('Lucia')",
+            "        if;game.check_alive('Lucia') == True and u('Lucia').team == 'player'",
             "            if;game.check_alive('Cassian')",
             "            add_portrait;Lucia;Left",
             "            s;Lucia;Us? That's not who you should be worried about.|Have you seen how {v:chosenname} looks at all those bouncing tits?|I'm afraid he won't see the Incubus King coming.",
@@ -8747,7 +8747,7 @@
             "            end",
             "        else",
             "        end",
-            "        if;game.check_alive('Safado')",
+            "        if;game.check_alive('Safado') == True and u('Safado').team == 'player'",
             "            add_portrait;Safado;Left;;CloseEyes",
             "            s;Safado;Deep breaths.{c:wait;400} Deep breaths.{c:wait;500} Deep...{c:wait;1000} breaths...{c:wait;1000}|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA I'M GONNA FUCKING DIE!!!!!;;;thought_bubble",
             "            expression;Safado;OpenEyes",
@@ -8755,7 +8755,7 @@
             "            remove_portrait;Safado",
             "        else",
             "        end",
-            "        if;game.check_alive('Rosa')",
+            "        if;game.check_alive('Rosa') == True and u('Rosa').team == 'player'",
             "            add_portrait;Rosa;Left;;CloseEyes",
             "            wait;1000",
             "            expression;Rosa;OpenEyes",
@@ -8764,7 +8764,7 @@
             "            remove_portrait;Rosa",
             "        else",
             "        end",
-            "        if;game.check_alive('Milena')",
+            "        if;game.check_alive('Milena') == True and u('Milena').team == 'player'",
             "            add_portrait;Milena;FarLeft",
             "            move_portrait;Milena;MidLeft",
             "            mirror_portrait;Milena",
@@ -9592,7 +9592,7 @@
         "priority": 20,
         "_source": [
             "transition;close",
-            "shop;{unit};Health_Potion,Large_Health_Potion,Huge_Health_Potion,Mana_Potion,Large_Mana_Potion,Huge_Mana_Potion,Shine,Elfire,Luna,Elixir,Sexy_Librarian_Glasses;vendor",
+            "shop;{unit};Health_Potion,Large_Health_Potion,Huge_Health_Potion,Mana_Potion,Large_Mana_Potion,Huge_Mana_Potion,Scroll_Shine,Elixir,Sexy_Librarian_Glasses;vendor",
             "transition;open"
         ],
         "nid": "P11 vendor"
@@ -10070,7 +10070,7 @@
         "name": "Seed -> Dragon",
         "trigger": "turn_change",
         "level_nid": "P14",
-        "condition": "True",
+        "condition": "(game.current_mode == 'Hard' or game.current_mode == 'Ironman') == True",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -10156,7 +10156,7 @@
         "name": "Iris spawns seeds",
         "trigger": "turn_change",
         "level_nid": "P14",
-        "condition": "game.level_vars['midleft'] == 0",
+        "condition": "game.level_vars['midleft'] == 0 and (game.current_mode == 'Hard' or game.current_mode == 'Ironman') == True",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -12787,8 +12787,8 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "give_item;{target};ArcaneBolting",
-            "remove_item;{target};ArcaneBolting;no_banner",
+            "sound;Item",
+            "alert;{target} learned Bolting!;ArcaneBolting",
             "add_tag;{target};Bolting"
         ],
         "nid": "Global Scroll Bolting"
@@ -12802,8 +12802,8 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "give_item;{target};DivineShine",
-            "remove_item;{target};DivineShine;no_banner",
+            "sound;Item",
+            "alert;{target} learned Shine!;DivineShine",
             "add_tag;{target};Shine_scroll"
         ],
         "nid": "Global Scroll Shine"
@@ -12817,8 +12817,8 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "give_item;{target};DivinePhysic",
-            "remove_item;{target};DivinePhysic;no_banner",
+            "sound;Item",
+            "alert;{target} learned Physic!;DivinePhysic",
             "add_tag;{target};Physic_scroll"
         ],
         "nid": "Global Scroll Physic"
@@ -13054,7 +13054,8 @@
             "#kill_unit;Aka;immediate",
             "#kill_unit;Dari;immediate",
             "give_skill;Wynn;Bone_stack;;no_banner",
-            "give_skill;Carina;Certain_Blow;;no_banner"
+            "give_skill;Carina;Certain_Blow;;no_banner",
+            "give_item;Carina;Scroll_Lightning;;no_banner"
         ],
         "nid": "teste2 New Event_1"
     },
@@ -13644,7 +13645,13 @@
             "unlock_support_rank;Testeman;Bruce;C",
             "unlock_support_rank;Testeman;Plank;C",
             "unlock_support_rank;Testeman;Wrecker;C",
-            ""
+            "give_skill;Simon;Duelists_Blow;;no_banner",
+            "give_skill;Testeman;Duelists_Blow;;no_banner",
+            "give_skill;Testeman;Death_Blow;;no_banner",
+            "give_skill;Testeman;Darting_Blow;;no_banner",
+            "give_skill;Testeman;Warding_Blow;;no_banner",
+            "give_skill;Testeman;Armored_Blow;;no_banner",
+            "give_skill;Testeman;Certain_Blow;;no_banner"
         ],
         "nid": "teste2 New Event_3"
     },
@@ -15513,16 +15520,18 @@
             "wait;1500",
             "multi_add_portrait;Lynine;Left;Orilise;Right",
             "s;Lynine;Sorry for the wait, everyone!|More reinforcements should be coming up soon!",
-            "s;Orilise;Meanwhile, we brought some people quite useful already.",
-            "move_portrait;Orilise;MidRight",
-            "add_unit;Megail;14,10;swoosh;push;fade",
-            "add_portrait;Megail;FarRight;right",
-            "s;Megail;Yeah, yeah. What are you sucking me up for?|Anyway, I've brought some potions. As usual, I'll be managing the convoy.",
-            "move_portrait;Lynine;CenterLeft",
-            "add_unit;Balia;12,10;swoosh;push;fade",
-            "add_portrait;Balia;FarLeft;left",
-            "s;Balia;I heard they want to get rid of the orcs.|Very boring people.",
-            "multi_remove_portrait;Lynine;Orilise;Balia;Megail"
+            "s;Orilise;Meanwhile, we'll help you deal with those lunatics.|They should make for easy preys.",
+            "#s;Orilise;Meanwhile, we brought some people quite useful already.",
+            "#move_portrait;Orilise;MidRight",
+            "#add_unit;Megail;14,10;swoosh;push;fade",
+            "#add_portrait;Megail;FarRight;right",
+            "#s;Megail;Yeah, yeah. What are you sucking me up for?|Anyway, I've brought some potions. As usual, I'll be managing the convoy.",
+            "#move_portrait;Lynine;CenterLeft",
+            "#add_unit;Balia;12,10;swoosh;push;fade",
+            "#add_portrait;Balia;FarLeft;left",
+            "#s;Balia;I heard they want to get rid of the orcs.|Very boring people.",
+            "#multi_remove_portrait;Lynine;Orilise;Balia;Megail",
+            "multi_remove_portrait;Lynine;Orilise"
         ],
         "nid": "Intro2 Reinforcements"
     },
@@ -16119,5 +16128,42 @@
             "music_fade_back"
         ],
         "nid": "P14 Geoff death"
+    },
+    {
+        "name": "Scroll Smite",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "sound;Item",
+            "alert;{target} learned Smite!;DivineLightning",
+            "add_tag;{target};Smite_scroll"
+        ],
+        "nid": "Global Scroll Smite"
+    },
+    {
+        "name": "New Event",
+        "trigger": "level_start",
+        "level_nid": "Intro4",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;19,22",
+            "sound;Wind",
+            "wait;1000",
+            "sound;Explosion7",
+            "screen_shake;1500",
+            "show_layer;ship1",
+            "screen_shake_end",
+            "music;Tension",
+            "center_cursor;29,15;2000",
+            "wait;2000"
+        ],
+        "nid": "Intro4 New Event"
     }
 ]

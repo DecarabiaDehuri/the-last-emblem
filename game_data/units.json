@@ -1000,12 +1000,7 @@
                 false
             ]
         ],
-        "learned_skills": [
-            [
-                1,
-                "Supply_mode"
-            ]
-        ],
+        "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -3800,7 +3795,7 @@
         },
         "starting_items": [
             [
-                "Fire",
+                "ArcaneSpells",
                 false
             ]
         ],
@@ -6617,7 +6612,7 @@
             "Required"
         ],
         "bases": {
-            "HP": 23,
+            "HP": 28,
             "STR": 8,
             "MAG": 5,
             "SKL": 10,
@@ -6679,7 +6674,7 @@
         "klass": "Archer",
         "tags": [],
         "bases": {
-            "HP": 17,
+            "HP": 22,
             "STR": 8,
             "MAG": 0,
             "SKL": 12,
@@ -6741,7 +6736,7 @@
         "klass": "Mage",
         "tags": [],
         "bases": {
-            "HP": 20,
+            "HP": 25,
             "STR": 0,
             "MAG": 11,
             "SKL": 8,
@@ -6803,7 +6798,7 @@
         "klass": "Mercenary",
         "tags": [],
         "bases": {
-            "HP": 23,
+            "HP": 28,
             "STR": 9,
             "MAG": 4,
             "SKL": 8,
@@ -6865,7 +6860,7 @@
         "klass": "Myrmidon",
         "tags": [],
         "bases": {
-            "HP": 21,
+            "HP": 27,
             "STR": 7,
             "MAG": 2,
             "SKL": 11,
@@ -6927,7 +6922,7 @@
         "klass": "Paladin",
         "tags": [],
         "bases": {
-            "HP": 27,
+            "HP": 32,
             "STR": 9,
             "MAG": 4,
             "SKL": 13,
@@ -6998,7 +6993,7 @@
         "klass": "Thief",
         "tags": [],
         "bases": {
-            "HP": 19,
+            "HP": 25,
             "STR": 7,
             "MAG": 3,
             "SKL": 13,
@@ -7060,7 +7055,7 @@
         "klass": "Knight",
         "tags": [],
         "bases": {
-            "HP": 25,
+            "HP": 30,
             "STR": 7,
             "MAG": 0,
             "SKL": 10,
@@ -7122,7 +7117,7 @@
         "klass": "Fighter",
         "tags": [],
         "bases": {
-            "HP": 26,
+            "HP": 31,
             "STR": 12,
             "MAG": 0,
             "SKL": 9,
@@ -7184,7 +7179,7 @@
         "klass": "Cavalier",
         "tags": [],
         "bases": {
-            "HP": 24,
+            "HP": 29,
             "STR": 6,
             "MAG": 2,
             "SKL": 6,
@@ -7246,7 +7241,7 @@
         "klass": "Cleric",
         "tags": [],
         "bases": {
-            "HP": 21,
+            "HP": 26,
             "STR": 0,
             "MAG": 11,
             "SKL": 9,
@@ -7370,10 +7365,6 @@
             [
                 1,
                 "Lust_Drain_Immune"
-            ],
-            [
-                1,
-                "Paralysis_Immune"
             ],
             [
                 1,
@@ -7690,6 +7681,136 @@
         },
         "alternate_classes": [],
         "portrait_nid": "{Lenh} OC 6 (Version 2) [F2E]",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Vinata",
+        "name": "Vinata",
+        "desc": "",
+        "variant": "Female",
+        "level": 7,
+        "klass": "Mage",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 25,
+            "STR": 0,
+            "MAG": 9,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 4,
+            "RES": 6,
+            "CON": 5,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 55,
+            "STR": 0,
+            "MAG": 55,
+            "SKL": 40,
+            "SPD": 35,
+            "LCK": 20,
+            "DEF": 5,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "ArcaneSpells",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{monk-han} Witch Lord (Version 3) [F2E]",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Namado",
+        "name": "Namado",
+        "desc": "",
+        "variant": "",
+        "level": 6,
+        "klass": "Pirate",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 7,
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 8,
+            "LCK": 0,
+            "DEF": 5,
+            "RES": 3,
+            "CON": 10,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 55,
+            "STR": 0,
+            "MAG": 55,
+            "SKL": 40,
+            "SPD": 35,
+            "LCK": 20,
+            "DEF": 5,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "ArcaneSpells",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                31,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{monk-han} Pirate Lord (Version 1) [F2E]",
         "affinity": "None",
         "fields": []
     },

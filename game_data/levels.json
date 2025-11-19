@@ -19731,16 +19731,6 @@
                 "generic": false
             },
             {
-                "nid": "Megail",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
                 "nid": "Balia",
                 "team": "player",
                 "ai": "None",
@@ -20609,6 +20599,270 @@
             }
         ],
         "ai_groups": []
+    },
+    {
+        "nid": "Intro4",
+        "name": "Intro4",
+        "tilemap": "Intro5simon",
+        "bg_tilemap": "ocean",
+        "party": "Simon",
+        "music": {},
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "Simon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    18,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Iris",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    19,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Megail",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    19,
+                    21
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Riala",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Balia",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    17
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Trin",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    20,
+                    25
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 3,
+                "klass": "Pirate",
+                "faction": "Yhilin",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    23,
+                    23
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 3,
+                "klass": "Pirate",
+                "faction": "Yhilin",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    19
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 3,
+                "klass": "Orc",
+                "faction": "Yhilin",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    15,
+                    26
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 3,
+                "klass": "Suc_foe_1",
+                "faction": "Yhilin",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    22,
+                    16
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 3,
+                "klass": "Suc_foe_1",
+                "faction": "Yhilin",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    19,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "e1",
+                "variant": null,
+                "level": 7,
+                "klass": "Pirate",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Vinata",
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Namado",
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            }
+        ],
+        "regions": [],
+        "unit_groups": [],
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "10",

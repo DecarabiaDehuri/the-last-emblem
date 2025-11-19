@@ -2355,7 +2355,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Darting_Blow"
+            ],
+            [
+                5,
+                "Push_Skill"
+            ],
+            [
+                9,
+                "Death_Counter"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -2818,7 +2831,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Push_Strength"
+            ],
+            [
+                5,
+                "Certain_Counter"
+            ],
+            [
+                9,
+                "Warding_Blow"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -3124,7 +3150,15 @@
         "learned_skills": [
             [
                 1,
+                "Locktouch"
+            ],
+            [
+                5,
                 "Steal"
+            ],
+            [
+                9,
+                "Poison_attack"
             ]
         ],
         "wexp_gain": {
@@ -3579,7 +3613,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Spur_Defense"
+            ],
+            [
+                5,
+                "Spur_Resistance"
+            ],
+            [
+                9,
+                "Blind_attack"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -3649,6 +3696,161 @@
         ],
         "map_sprite_nid": "Soldier",
         "combat_anim_nid": "Soldier",
+        "fields": []
+    },
+    {
+        "nid": "Militia",
+        "name": "Militia",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 20,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 3,
+            "RES": 0,
+            "CON": 12,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 82,
+            "STR": 50,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 15,
+            "DEF": 10,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Push_Defense"
+            ],
+            [
+                5,
+                "Push_Resistance"
+            ],
+            [
+                9,
+                "Push_Skill"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                true,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Militia (F) Deserter Lance Helmet {Rasdel, Epicer}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Militia (M) Deserter Lance {Alusq}-stand",
+        "combat_anim_nid": "Militia",
         "fields": []
     },
     {
@@ -3737,6 +3939,14 @@
             [
                 1,
                 "Canto"
+            ],
+            [
+                5,
+                "Push_Speed"
+            ],
+            [
+                9,
+                "Darting_Counter"
             ]
         ],
         "wexp_gain": {
@@ -4531,7 +4741,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Armored_Counter"
+            ],
+            [
+                5,
+                "Armored_Blow"
+            ],
+            [
+                9,
+                "Spur_Defense"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -4983,7 +5206,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Duelists_Parry"
+            ],
+            [
+                5,
+                "Push_Strength"
+            ],
+            [
+                9,
+                "Death_Counter"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -5222,7 +5458,7 @@
             "MAG": 0,
             "SKL": 2,
             "SPD": 6,
-            "LCK": 0,
+            "LCK": 5,
             "DEF": 3,
             "RES": 0,
             "CON": 10,
@@ -5235,7 +5471,7 @@
             "MAG": 0,
             "SKL": 35,
             "SPD": 25,
-            "LCK": 15,
+            "LCK": 25,
             "DEF": 10,
             "RES": 13,
             "CON": 0,
@@ -5282,7 +5518,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Confusion_attack"
+            ],
+            [
+                5,
+                "Spur_Luck_effect"
+            ],
+            [
+                9,
+                "Push_Luck"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -5585,7 +5834,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Spur_Strength"
+            ],
+            [
+                5,
+                "Death_Blow"
+            ],
+            [
+                9,
+                "Duelists_Blow"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -5736,7 +5998,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Certain_Blow"
+            ],
+            [
+                5,
+                "Spur_Skill"
+            ],
+            [
+                9,
+                "Death_Blow"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -6492,7 +6767,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Spur_Magic"
+            ],
+            [
+                5,
+                "Spur_Skill"
+            ],
+            [
+                9,
+                "Spur_Strength"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -6643,7 +6931,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Spur_Magic"
+            ],
+            [
+                5,
+                "Spur_Skill"
+            ],
+            [
+                9,
+                "Spur_Strength"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -7089,7 +7390,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Spur_Resistance"
+            ],
+            [
+                5,
+                "Warding_Counter"
+            ],
+            [
+                9,
+                "Push_Magic"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -11322,7 +11636,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Armored_Counter"
+            ],
+            [
+                5,
+                "Armored_Blow"
+            ],
+            [
+                9,
+                "Spur_Defense"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -12981,7 +13308,20 @@
             "CON": 25,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Certain_Blow"
+            ],
+            [
+                5,
+                "Certain_Counter"
+            ],
+            [
+                9,
+                "BowFaire"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -13133,7 +13473,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Duelists_Blow"
+            ],
+            [
+                5,
+                "Spur_Skill"
+            ],
+            [
+                9,
+                "Push_Skill"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -13203,148 +13556,6 @@
         ],
         "map_sprite_nid": "Noble (M) Launch T1 {VelvetKitsune}-stand",
         "combat_anim_nid": "DuelistAntarion",
-        "fields": []
-    },
-    {
-        "nid": "Militia",
-        "name": "Militia",
-        "desc": "",
-        "tier": 1,
-        "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [],
-        "max_level": 20,
-        "bases": {
-            "HP": 20,
-            "STR": 5,
-            "MAG": 0,
-            "SKL": 1,
-            "SPD": 5,
-            "LCK": 0,
-            "DEF": 3,
-            "RES": 0,
-            "CON": 12,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 82,
-            "STR": 50,
-            "MAG": 0,
-            "SKL": 30,
-            "SPD": 20,
-            "LCK": 15,
-            "DEF": 10,
-            "RES": 13,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                true,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                false,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Militia (F) Deserter Lance Helmet {Rasdel, Epicer}",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Militia (M) Deserter Lance {Alusq}-stand",
-        "combat_anim_nid": "Militia",
         "fields": []
     },
     {
@@ -13567,6 +13778,14 @@
             [
                 1,
                 "Stun_attack"
+            ],
+            [
+                5,
+                "Duelists_Blow"
+            ],
+            [
+                9,
+                "Push_Strength"
             ]
         ],
         "wexp_gain": {
@@ -13718,6 +13937,14 @@
             [
                 1,
                 "Stun_attack"
+            ],
+            [
+                5,
+                "SwordBreaker"
+            ],
+            [
+                9,
+                "AxeFaire"
             ]
         ],
         "wexp_gain": {
@@ -13868,6 +14095,14 @@
             [
                 1,
                 "Stun_attack"
+            ],
+            [
+                5,
+                "Spur_Strength"
+            ],
+            [
+                9,
+                "AxeFaire"
             ]
         ],
         "wexp_gain": {
@@ -14017,6 +14252,14 @@
             [
                 1,
                 "Rock_Throw"
+            ],
+            [
+                5,
+                "Push_Skill"
+            ],
+            [
+                9,
+                "Certain_Blow"
             ]
         ],
         "wexp_gain": {
@@ -14165,7 +14408,15 @@
         "learned_skills": [
             [
                 1,
-                "Stun_attack"
+                "Paralysis_attack"
+            ],
+            [
+                5,
+                "AxeFaire"
+            ],
+            [
+                9,
+                "ArcaneBreaker"
             ]
         ],
         "wexp_gain": {
@@ -14318,8 +14569,12 @@
                 "Flying"
             ],
             [
-                1,
+                5,
                 "Blind_attack"
+            ],
+            [
+                9,
+                "Darting_Blow"
             ]
         ],
         "wexp_gain": {
@@ -14472,8 +14727,12 @@
                 "Flying"
             ],
             [
-                1,
+                5,
                 "Blind_attack"
+            ],
+            [
+                9,
+                "LanceBreaker"
             ]
         ],
         "wexp_gain": {

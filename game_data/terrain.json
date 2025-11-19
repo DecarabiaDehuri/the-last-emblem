@@ -526,7 +526,7 @@
     },
     {
         "nid": "LavaCoast",
-        "name": "Lava Coast",
+        "name": "L.Coast",
         "color": [
             59,
             19,
@@ -551,6 +551,36 @@
         "platform": "Mountain",
         "background": "lava",
         "mtype": "Lava",
+        "opaque": false,
+        "status": null
+    },
+    {
+        "nid": "Ship",
+        "name": "Ship",
+        "color": [
+            85,
+            35,
+            0
+        ],
+        "minimap": "Pier",
+        "platform": "Deck",
+        "background": "ship",
+        "mtype": "Floor",
+        "opaque": false,
+        "status": null
+    },
+    {
+        "nid": "Ship_edge",
+        "name": "Edge",
+        "color": [
+            43,
+            17,
+            0
+        ],
+        "minimap": "Pier",
+        "platform": "Deck",
+        "background": "ship",
+        "mtype": "Cliff",
         "opaque": false,
         "status": null
     }
