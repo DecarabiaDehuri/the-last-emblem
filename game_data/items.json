@@ -594,7 +594,7 @@
     {
         "nid": "Iron_Sword",
         "name": "Iron Sword",
-        "desc": "",
+        "desc": "You will not believe me: it cuts things.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -654,7 +654,7 @@
     {
         "nid": "Iron_Lance",
         "name": "Iron Lance",
-        "desc": "",
+        "desc": "For those who prefer the longest sticks.",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -714,7 +714,7 @@
     {
         "nid": "Iron_Axe",
         "name": "Iron Axe",
-        "desc": "",
+        "desc": "Perfect for remodeling furniture and enemies.",
         "icon_nid": "Axe",
         "icon_index": [
             0,
@@ -774,7 +774,7 @@
     {
         "nid": "Iron_Bow",
         "name": "Iron Bow",
-        "desc": "",
+        "desc": "The best weapon for sparring when you have bad breath.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -22441,7 +22441,7 @@
     {
         "nid": "Sexy_Librarian_Glasses",
         "name": "<yellow>Sexy Librarian Glasses</>",
-        "desc": "Boosts MAG, RES and SPD. <red>Succubus only</>.",
+        "desc": "<red>Succubus only</>. Boosts MAG, RES and SPD. ",
         "icon_nid": "Boosters",
         "icon_index": [
             0,
@@ -22484,7 +22484,7 @@
     {
         "nid": "Fetish_Cat_Ears",
         "name": "<yellow>Fetish Cat Ears</>",
-        "desc": "Boosts MAG and SPD. <red>Succubus only</>.",
+        "desc": "<red>Succubus only</>. Boosts MAG and SPD.",
         "icon_nid": "Boosters",
         "icon_index": [
             0,
@@ -22523,7 +22523,7 @@
     {
         "nid": "Fetish_Bunny_Ears",
         "name": "<yellow>Fetish Bunny Ears</>",
-        "desc": "Boosts STR and SPD. <red>Succubus only</>.",
+        "desc": "<red>Succubus only</>. Boosts STR and SPD. ",
         "icon_nid": "Boosters",
         "icon_index": [
             0,
@@ -22556,6 +22556,36 @@
             [
                 "value",
                 1000
+            ]
+        ]
+    },
+    {
+        "nid": "Buttplug",
+        "name": "<yellow>Buttplug</>",
+        "desc": "<red>Succubus only</>. Starts chapter with 20 mana.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            49
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "prf_tags",
+                [
+                    "Succubus"
+                ]
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "status_on_equip",
+                "Suc_BP"
             ]
         ]
     },

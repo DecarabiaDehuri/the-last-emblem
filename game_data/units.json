@@ -35,20 +35,7 @@
             "RES": 40
         },
         "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Sword",
-                false
-            ],
-            [
-                "Iron_Lance",
-                false
-            ],
-            [
-                "Iron_Axe",
-                false
-            ]
-        ],
+        "starting_items": [],
         "learned_skills": [
             [
                 1,
@@ -72,27 +59,27 @@
         "wexp_gain": {
             "Sword": [
                 true,
-                100,
+                1,
                 251
             ],
             "Lance": [
                 false,
-                100,
+                1,
                 251
             ],
             "Axe": [
                 false,
-                100,
+                1,
                 251
             ],
             "Bow": [
                 false,
-                100,
+                0,
                 251
             ],
             "Staff": [
                 false,
-                100,
+                1,
                 251
             ],
             "Light": [
@@ -107,7 +94,7 @@
             ],
             "Dark": [
                 false,
-                100,
+                31,
                 251
             ],
             "Default": [
@@ -2413,36 +2400,7 @@
                 false
             ]
         ],
-        "learned_skills": [
-            [
-                1,
-                "Lightning_Whip"
-            ],
-            [
-                1,
-                "Earth_Whip"
-            ],
-            [
-                1,
-                "Pure_Whip"
-            ],
-            [
-                1,
-                "Lustful_Emissaries"
-            ],
-            [
-                1,
-                "Lash_of_Torment"
-            ],
-            [
-                1,
-                "Forceful_Kiss"
-            ],
-            [
-                1,
-                "Combat_Fantasy"
-            ]
-        ],
+        "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -6134,6 +6092,52 @@
         "fields": []
     },
     {
+        "nid": "Iris2",
+        "name": "Iris",
+        "desc": "Doom King's secretary. Has an optimization fetish.",
+        "variant": null,
+        "level": 6,
+        "klass": "Dancer",
+        "tags": [
+            "Female",
+            "Succubus"
+        ],
+        "bases": {
+            "HP": 17,
+            "STR": 1,
+            "MAG": 3,
+            "SKL": 14,
+            "SPD": 1,
+            "LCK": 11,
+            "DEF": 5,
+            "RES": 6,
+            "MOV": 0
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [
+            [
+                1,
+                "Refined_Dance"
+            ],
+            [
+                1,
+                "Optimization_main"
+            ],
+            [
+                1,
+                "Enhance"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Iris",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
         "nid": "Esmera",
         "name": "Esmera",
         "desc": "",
@@ -7786,7 +7790,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "ArcaneSpells",
+                "Iron_Axe",
                 false
             ]
         ],

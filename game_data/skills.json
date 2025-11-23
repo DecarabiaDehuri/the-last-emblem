@@ -16,6 +16,158 @@
         ]
     },
     {
+        "nid": "Suc_BP",
+        "name": "Buttplug effect",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Refined_Dance",
+        "name": "Refined Dance",
+        "desc": "Iris has meticulously calculated the best moves, though she has only enough stamina for the first three dances. Grants an ally <green>[REFINED]</>: Unit has +5 damage bonus and receives -5 damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            46
+        ],
+        "components": [
+            [
+                "drain_charge",
+                3
+            ],
+            [
+                "give_ally_status_after_combat",
+                "Refined"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Refined",
+        "name": "<green>[REFINED]</>",
+        "desc": "Unit has +5 damage bonus and receives -5 damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            46
+        ],
+        "components": [
+            [
+                "time",
+                2
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "resist",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Optimization_main",
+        "name": "Optimization",
+        "desc": "Iris is managing the strategies of her allies.\nAllies in range gain bonus HIT and AVOID.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Optimization_buff"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    40,
+                    49,
+                    223
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Enhance",
+        "name": "Enhance ally",
+        "desc": "When Iris is in guard stance in a pair-up, she boosts her lead ally's critical rate.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            23
+        ],
+        "components": [
+            [
+                "pairup_bonus",
+                "Enhanced"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Enhanced",
+        "name": "<green>[ENHANCED]</>",
+        "desc": "Unit has bonus critical rate.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            23
+        ],
+        "components": [
+            [
+                "combat_flickering_tint",
+                [
+                    170,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team"
+            ]
+        ]
+    },
+    {
         "nid": "Duelists_Blow",
         "name": "Duelist's Blow",
         "desc": "+15 AVOID when initiating battle.",
@@ -2088,6 +2240,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "has_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
