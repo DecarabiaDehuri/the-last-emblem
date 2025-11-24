@@ -52,8 +52,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    6
+                    7,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -90,7 +90,10 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    15,
+                    1
+                ],
                 "starting_traveler": null,
                 "generic": false
             },
@@ -150,8 +153,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    7
+                    4,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -163,8 +166,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    5
+                    4,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -202,8 +205,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    13,
-                    0
+                    12,
+                    1
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -289,8 +292,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    13,
-                    9
+                    12,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -350,8 +353,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
-                    7
+                    13,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -19582,6 +19585,69 @@
                 ],
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "ref_1",
+                "variant": null,
+                "level": 5,
+                "klass": "Cavalier",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "ref_2",
+                "variant": null,
+                "level": 5,
+                "klass": "Brigand",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "ref_3",
+                "variant": null,
+                "level": 5,
+                "klass": "Mercenary",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [
@@ -20358,6 +20424,214 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "v_1",
+                "variant": null,
+                "level": 1,
+                "klass": "Mage",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_2",
+                "variant": null,
+                "level": 1,
+                "klass": "Mage",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_3",
+                "variant": null,
+                "level": 1,
+                "klass": "Mage",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_4",
+                "variant": null,
+                "level": 1,
+                "klass": "Mage",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_5",
+                "variant": null,
+                "level": 1,
+                "klass": "Mage",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_6",
+                "variant": null,
+                "level": 1,
+                "klass": "Mage",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_7",
+                "variant": null,
+                "level": 1,
+                "klass": "Orc_Elite",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_8",
+                "variant": null,
+                "level": 1,
+                "klass": "Orc_Elite",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_9",
+                "variant": null,
+                "level": 1,
+                "klass": "Orc_Elite",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_10",
+                "variant": null,
+                "level": 1,
+                "klass": "Orc_Elite",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_11",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_foe_2",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_12",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_foe_2",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "v_13",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_foe_2",
+                "faction": "Yhilin",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [],
@@ -20530,21 +20804,93 @@
                     "Trisha"
                 ],
                 "positions": {
-                    "Trisha": [
-                        2,
-                        11
-                    ],
                     "120": [
-                        3,
-                        11
+                        8,
+                        20
                     ],
                     "119": [
-                        2,
-                        10
+                        13,
+                        19
                     ],
                     "121": [
-                        2,
+                        10,
+                        19
+                    ],
+                    "Trisha": [
+                        12,
+                        18
+                    ]
+                }
+            },
+            {
+                "nid": "vic",
+                "units": [
+                    "v_1",
+                    "v_2",
+                    "v_3",
+                    "v_4",
+                    "v_5",
+                    "v_6",
+                    "v_7",
+                    "v_8",
+                    "v_9",
+                    "v_10",
+                    "v_11",
+                    "v_12",
+                    "v_13"
+                ],
+                "positions": {
+                    "v_1": [
+                        10,
+                        9
+                    ],
+                    "v_2": [
+                        11,
+                        10
+                    ],
+                    "v_3": [
+                        15,
+                        10
+                    ],
+                    "v_4": [
+                        16,
+                        9
+                    ],
+                    "v_5": [
+                        10,
+                        11
+                    ],
+                    "v_6": [
+                        16,
+                        11
+                    ],
+                    "v_7": [
+                        9,
+                        10
+                    ],
+                    "v_8": [
+                        15,
                         12
+                    ],
+                    "v_9": [
+                        17,
+                        10
+                    ],
+                    "v_10": [
+                        11,
+                        12
+                    ],
+                    "v_11": [
+                        13,
+                        10
+                    ],
+                    "v_12": [
+                        12,
+                        11
+                    ],
+                    "v_13": [
+                        14,
+                        11
                     ]
                 }
             }
@@ -21247,7 +21593,10 @@
         "tilemap": "Intro5simon",
         "bg_tilemap": "ocean",
         "party": "Simon",
-        "music": {},
+        "music": {
+            "player_phase": "Battle6",
+            "enemy_phase": "Tension"
+        },
         "objective": {
             "simple": "",
             "win": "",
@@ -21267,7 +21616,7 @@
                 "ai_group": "",
                 "starting_position": [
                     18,
-                    5
+                    9
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -21280,7 +21629,7 @@
                 "ai_group": "",
                 "starting_position": [
                     19,
-                    5
+                    9
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -21328,7 +21677,7 @@
             {
                 "nid": "101",
                 "variant": null,
-                "level": 3,
+                "level": 2,
                 "klass": "Soldier",
                 "faction": "Yhilin",
                 "starting_items": [
@@ -21368,13 +21717,34 @@
                 "ai_group": "",
                 "starting_position": [
                     19,
-                    9
+                    4
                 ],
                 "starting_traveler": null,
                 "generic": true
             },
             {
                 "nid": "103",
+                "variant": null,
+                "level": 5,
+                "klass": "Orc",
+                "faction": "Yhilin",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
                 "variant": null,
                 "level": 3,
                 "klass": "Orc",
@@ -21391,32 +21761,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    16,
-                    23
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "104",
-                "variant": null,
-                "level": 3,
-                "klass": "Suc_foe_1",
-                "faction": "Yhilin",
-                "starting_items": [
-                    [
-                        "Iron_Scythe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    17,
-                    11
+                    18,
+                    28
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -21438,7 +21784,10 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    14,
+                    19
+                ],
                 "starting_traveler": null,
                 "generic": true
             },
@@ -21692,6 +22041,58 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "g_5",
+                "variant": null,
+                "level": 3,
+                "klass": "Militia",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "g_6",
+                "variant": null,
+                "level": 3,
+                "klass": "Militia",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Rimer",
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [],
@@ -21761,7 +22162,10 @@
                     "g_1",
                     "g_2",
                     "g_3",
-                    "g_4"
+                    "g_4",
+                    "g_5",
+                    "g_6",
+                    "Rimer"
                 ],
                 "positions": {
                     "g_1": [
@@ -21769,15 +22173,27 @@
                         16
                     ],
                     "g_2": [
-                        30,
-                        14
+                        32,
+                        16
                     ],
                     "g_3": [
-                        29,
+                        32,
                         18
                     ],
                     "g_4": [
                         32,
+                        17
+                    ],
+                    "g_5": [
+                        30,
+                        16
+                    ],
+                    "g_6": [
+                        30,
+                        20
+                    ],
+                    "Rimer": [
+                        31,
                         17
                     ]
                 }
@@ -26687,8 +27103,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
-                    6
+                    2,
+                    0
                 ],
                 "starting_traveler": null,
                 "generic": false

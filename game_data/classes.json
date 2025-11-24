@@ -3158,7 +3158,7 @@
             ],
             [
                 9,
-                "Poison_attack"
+                "Darting_Counter"
             ]
         ],
         "wexp_gain": {
@@ -3624,7 +3624,7 @@
             ],
             [
                 9,
-                "Blind_attack"
+                "Spur_Strength"
             ]
         ],
         "wexp_gain": {
@@ -5521,15 +5521,15 @@
         "learned_skills": [
             [
                 1,
-                "Confusion_attack"
+                "Push_Speed"
             ],
             [
                 5,
-                "Spur_Luck_effect"
+                "Certain_Blow"
             ],
             [
                 9,
-                "Push_Luck"
+                "Warding_Blow"
             ]
         ],
         "wexp_gain": {
@@ -6616,7 +6616,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Warding_Blow"
+            ],
+            [
+                5,
+                "Push_Resistance"
+            ],
+            [
+                9,
+                "Spur_Resistance"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,

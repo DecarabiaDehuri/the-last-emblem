@@ -16,6 +16,1008 @@
         ]
     },
     {
+        "nid": "Arousing_Kiss_effect",
+        "name": "<green>[AROUSED]</>",
+        "desc": "+5 STR and MAG",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            27
+        ],
+        "components": [
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    208,
+                    246
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "MAG",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Protective_Hug_effect",
+        "name": "<green>[HUGGED]</>",
+        "desc": "Hugged very tightly by Cumdump!",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            49
+        ],
+        "components": [
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    208,
+                    246
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "crit_avoid",
+                70
+            ],
+            [
+                "resist_multiplier",
+                0.25
+            ]
+        ]
+    },
+    {
+        "nid": "Pretty_Lance",
+        "name": "Pretty Lance",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "ability",
+                "Pretty_Lance_ability"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Mass_Kiss",
+        "name": "Mass Kiss",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "ability",
+                "Mass_Kiss_ability_core"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Yarra'))])"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Illusioned",
+        "name": "Illusioned",
+        "desc": "Unit's presence is being veiled by Yarra's illusions. Reduce enemy agression. Can pass between enemies. Lose this status after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "modify_ai_priority",
+                0.0
+            ],
+            [
+                "pass",
+                null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    153,
+                    153,
+                    153
+                ]
+            ],
+            [
+                "has_tags",
+                [
+                    "Stealth"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Charmed_Yarra",
+        "name": "<red>[CHARMED]</>",
+        "desc": "Unit is charmed by Yarra's exquisite presence and will follow her without attacking. Status is lost when getting hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            52
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "change_ai",
+                "Charmed_Yarra"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    240,
+                    78,
+                    189
+                ]
+            ],
+            [
+                "lost_on_take_hit",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_Charmed_Yarra",
+        "name": "Proc Charmed Yarra",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 7"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Charmed_Yarra"
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_LustDeath_Yarra",
+        "name": "Proc LustDeath Yarra",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 9"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Lust_Death"
+            ]
+        ]
+    },
+    {
+        "nid": "Shared_Fantasy_buff",
+        "name": "Shared Fantasy",
+        "desc": "DEF and RES +3.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    242,
+                    176,
+                    255
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "First_slut_buff",
+        "name": "First slut",
+        "desc": "All stats slightly increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            44
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "SKL",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        1
+                    ],
+                    [
+                        "LCK",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ],
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    242,
+                    176,
+                    255
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Flying_Yarra",
+        "name": "Flying",
+        "desc": "Can fly.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            10
+        ],
+        "components": [
+            [
+                "ignore_terrain",
+                null
+            ],
+            [
+                "has_tags",
+                [
+                    "Flying"
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapFlying"
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning_Whip",
+        "name": "Lightning Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "ability",
+                "Lightning_Whip_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Earth_Whip",
+        "name": "Earth Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "ability",
+                "Earth_Whip_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Altina'))])"
+            ],
+            [
+                "alternate_battle_anim",
+                "Earth"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Whip",
+        "name": "Pure Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            36
+        ],
+        "components": [
+            [
+                "ability",
+                "Pure_Whip_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Vhala'))])"
+            ],
+            [
+                "alternate_battle_anim",
+                "Pure"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Wild_Lashing",
+        "name": "Wild Lashing",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            39
+        ],
+        "components": [
+            [
+                "ability",
+                "Wild_Lashing_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ],
+            [
+                "astra_proc",
+                {
+                    "extra_attacks": 2,
+                    "damage_percent": 0.5,
+                    "show_proc_effects": false
+                }
+            ],
+            [
+                "alternate_battle_anim",
+                "Wild"
+            ]
+        ]
+    },
+    {
+        "nid": "Lash_of_Torment",
+        "name": "Lash of Torment",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "ability",
+                "Lash_of_Torment_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
+            ],
+            [
+                "alternate_battle_anim",
+                "Wild"
+            ]
+        ]
+    },
+    {
+        "nid": "Lustful_Emissaries",
+        "name": "Lutsful Emissaries",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "ability",
+                "Lustful_Emissaries_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
+            ],
+            [
+                "alternate_battle_anim",
+                "Attack"
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Kiss",
+        "name": "Forceful Kiss",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "ability",
+                "Forceful_Kiss_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ],
+            [
+                "alternate_battle_anim",
+                "Attack"
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy",
+        "name": "Combat Fantasy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "ability",
+                "Combat_Fantasy_effect"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy_buff",
+        "name": "Combat Fantasy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire",
+        "name": "Inspire",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "ability",
+                "Inspire_ability"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire_effect",
+        "name": "Inspire",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            50
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "mana_regeneration",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Anti_Tyrant",
+        "name": "Anti-Tyrant Essence",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "ability",
+                "AntiTyrant_ability"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ],
+            [
+                "aura",
+                "Active_Synergy"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Ginasta'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Anti_Tyrant_effect",
+        "name": "Anti-Tyrant Essence",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "time",
+                4
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -1
+                    ],
+                    [
+                        "MAG",
+                        -1
+                    ],
+                    [
+                        "SPD",
+                        -1
+                    ],
+                    [
+                        "LCK",
+                        -1
+                    ]
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapPoison"
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Swan_Song",
+        "name": "Swan Song",
+        "desc": "Riala is a seasoned, powerful unit. Yet, her time is approaching its limit. When leveling up, chance to lose attributes.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_storm_stun",
+        "name": "Proc storm lust stun",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 8"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Stunned"
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_fires_confuse",
+        "name": "Proc fires of lust confusion",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 8"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Confused"
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_bolt_death",
+        "name": "Proc bolt of lust death",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) == 10"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Lust_Death"
+            ]
+        ]
+    },
+    {
+        "nid": "Teleport",
+        "name": "Teleport",
+        "desc": "When Riala has <blue>10 or more mana</>, she can choose to teleport next to any unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "witch_warp_expression",
+                "True"
+            ],
+            [
+                "check_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Teleport_effect",
+        "name": "Teleport",
+        "desc": "Riala can choose to teleport next to any unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "witch_warp_expression",
+                "True"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "check_mana",
+                10
+            ]
+        ]
+    },
+    {
         "nid": "Suc_BP",
         "name": "Buttplug effect",
         "desc": "",
@@ -104,14 +1106,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    40,
-                    49,
-                    223
-                ]
             ]
         ]
     },
@@ -397,7 +1391,7 @@
             ],
             [
                 "aura_range",
-                2
+                1
             ],
             [
                 "aura_target",
@@ -431,7 +1425,7 @@
             ],
             [
                 "aura_range",
-                2
+                1
             ],
             [
                 "aura_target",
@@ -465,7 +1459,7 @@
             ],
             [
                 "aura_range",
-                2
+                1
             ],
             [
                 "aura_target",
@@ -499,7 +1493,7 @@
             ],
             [
                 "aura_range",
-                2
+                1
             ],
             [
                 "aura_target",
@@ -533,7 +1527,7 @@
             ],
             [
                 "aura_range",
-                2
+                1
             ],
             [
                 "aura_target",
@@ -567,7 +1561,7 @@
             ],
             [
                 "aura_range",
-                2
+                1
             ],
             [
                 "aura_target",
@@ -601,7 +1595,7 @@
             ],
             [
                 "aura_range",
-                2
+                1
             ],
             [
                 "aura_target",
@@ -2244,7 +3238,8 @@
             [
                 "has_tags",
                 [
-                    "Profession"
+                    "Profession",
+                    "Flying"
                 ]
             ]
         ]
@@ -4444,409 +5439,6 @@
             0
         ],
         "components": []
-    },
-    {
-        "nid": "Lightning_Whip",
-        "name": "Lightning Whip",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            42
-        ],
-        "components": [
-            [
-                "ability",
-                "Lightning_Whip_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ]
-        ]
-    },
-    {
-        "nid": "Earth_Whip",
-        "name": "Earth Whip",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            46
-        ],
-        "components": [
-            [
-                "ability",
-                "Earth_Whip_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Altina'))])"
-            ],
-            [
-                "alternate_battle_anim",
-                "Earth"
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ]
-        ]
-    },
-    {
-        "nid": "Pure_Whip",
-        "name": "Pure Whip",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            36
-        ],
-        "components": [
-            [
-                "ability",
-                "Pure_Whip_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Vhala'))])"
-            ],
-            [
-                "alternate_battle_anim",
-                "Pure"
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ]
-        ]
-    },
-    {
-        "nid": "Wild_Lashing",
-        "name": "Wild Lashing",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            39
-        ],
-        "components": [
-            [
-                "ability",
-                "Wild_Lashing_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
-            ],
-            [
-                "astra_proc",
-                {
-                    "extra_attacks": 2,
-                    "damage_percent": 0.5,
-                    "show_proc_effects": false
-                }
-            ],
-            [
-                "alternate_battle_anim",
-                "Wild"
-            ]
-        ]
-    },
-    {
-        "nid": "Lash_of_Torment",
-        "name": "Lash of Torment",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            37
-        ],
-        "components": [
-            [
-                "ability",
-                "Lash_of_Torment_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
-            ],
-            [
-                "alternate_battle_anim",
-                "Wild"
-            ]
-        ]
-    },
-    {
-        "nid": "Lustful_Emissaries",
-        "name": "Lutsful Emissaries",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            41
-        ],
-        "components": [
-            [
-                "ability",
-                "Lustful_Emissaries_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
-            ],
-            [
-                "alternate_battle_anim",
-                "Attack"
-            ]
-        ]
-    },
-    {
-        "nid": "Forceful_Kiss",
-        "name": "Forceful Kiss",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            45
-        ],
-        "components": [
-            [
-                "ability",
-                "Forceful_Kiss_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
-            ],
-            [
-                "alternate_battle_anim",
-                "Attack"
-            ]
-        ]
-    },
-    {
-        "nid": "Combat_Fantasy",
-        "name": "Combat Fantasy",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            50
-        ],
-        "components": [
-            [
-                "ability",
-                "Combat_Fantasy_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
-            ]
-        ]
-    },
-    {
-        "nid": "Combat_Fantasy_buff",
-        "name": "Combat Fantasy",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            50
-        ],
-        "components": [
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        1
-                    ],
-                    [
-                        "MAG",
-                        1
-                    ],
-                    [
-                        "DEF",
-                        1
-                    ],
-                    [
-                        "RES",
-                        1
-                    ]
-                ]
-            ],
-            [
-                "time",
-                6
-            ]
-        ]
-    },
-    {
-        "nid": "Illusioned",
-        "name": "Illusioned",
-        "desc": "Unit's presence is being veiled by Yarra's illusions. Lose this status after combat.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            34
-        ],
-        "components": [
-            [
-                "modify_ai_priority",
-                0.0
-            ],
-            [
-                "pass",
-                null
-            ],
-            [
-                "unit_tint",
-                [
-                    0,
-                    0,
-                    0
-                ]
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
-            ],
-            [
-                "time",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Charmed_Yarra",
-        "name": "<red>[CHARMED]</>",
-        "desc": "Unit is charmed by Yarra's exquisite presence and will follow her without attacking. Status is lost when getting hit.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            52
-        ],
-        "components": [
-            [
-                "negative",
-                null
-            ],
-            [
-                "time",
-                3
-            ],
-            [
-                "change_ai",
-                "Charmed_Yarra"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    240,
-                    78,
-                    189
-                ]
-            ],
-            [
-                "lost_on_take_hit",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Proc_Charmed_Yarra",
-        "name": "Proc Charmed Yarra",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "game.get_random(0,10) >= 7"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Charmed_Yarra"
-            ]
-        ]
-    },
-    {
-        "nid": "Proc_LustDeath_Yarra",
-        "name": "Proc LustDeath Yarra",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "game.get_random(0,10) >= 9"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Lust_Death"
-            ]
-        ]
     },
     {
         "nid": "Martial_Masturbation",
@@ -9989,6 +10581,12 @@
             [
                 "time",
                 4
+            ],
+            [
+                "has_tags",
+                [
+                    "Stealth"
+                ]
             ]
         ]
     },
@@ -12068,70 +12666,6 @@
         ]
     },
     {
-        "nid": "Pretty_Lance",
-        "name": "Pretty Lance",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "ability",
-                "Pretty_Lance_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
-            ]
-        ]
-    },
-    {
-        "nid": "Mass_Kiss",
-        "name": "Mass Kiss",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "ability",
-                "Mass_Kiss_ability_core"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Yarra'))])"
-            ],
-            [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Arrow_of_Ice",
         "name": "Arrow of Ice",
         "desc": "",
@@ -13040,180 +13574,6 @@
             [
                 "upkeep_charge_increase",
                 1
-            ]
-        ]
-    },
-    {
-        "nid": "Inspire",
-        "name": "Inspire",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "ability",
-                "Inspire_ability"
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
-            ]
-        ]
-    },
-    {
-        "nid": "Inspire_effect",
-        "name": "Inspire",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            50
-        ],
-        "components": [
-            [
-                "stat_change",
-                [
-                    [
-                        "MAG",
-                        3
-                    ],
-                    [
-                        "RES",
-                        3
-                    ]
-                ]
-            ],
-            [
-                "time",
-                2
-            ],
-            [
-                "mana_regeneration",
-                5
-            ]
-        ]
-    },
-    {
-        "nid": "Anti_Tyrant",
-        "name": "Anti-Tyrant Essence",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "ability",
-                "AntiTyrant_ability"
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "hide_aura",
-                null
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Ginasta'))])"
-            ]
-        ]
-    },
-    {
-        "nid": "Anti_Tyrant_effect",
-        "name": "Anti-Tyrant Essence",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            5,
-            34
-        ],
-        "components": [
-            [
-                "time",
-                4
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        -1
-                    ],
-                    [
-                        "MAG",
-                        -1
-                    ],
-                    [
-                        "SPD",
-                        -1
-                    ],
-                    [
-                        "LCK",
-                        -1
-                    ]
-                ]
-            ],
-            [
-                "unit_anim",
-                "MapPoison"
-            ],
-            [
-                "negative",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Swan_Song",
-        "name": "Swan Song",
-        "desc": "Riala is a seasoned, powerful unit. Yet, her time is approaching its limit. When leveling up, chance to lose attributes.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            35
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
             ]
         ]
     },

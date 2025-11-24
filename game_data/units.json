@@ -1633,6 +1633,10 @@
             [
                 1,
                 "Swan_Song"
+            ],
+            [
+                1,
+                "Teleport"
             ]
         ],
         "unit_notes": [],
@@ -2463,6 +2467,48 @@
             "Cavalier"
         ],
         "portrait_nid": "yarra5",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Iris2",
+        "name": "Iris",
+        "desc": "Doom King's secretary. Has an optimization fetish.",
+        "variant": null,
+        "level": 6,
+        "klass": "Dancer",
+        "tags": [
+            "Female",
+            "Succubus"
+        ],
+        "bases": {
+            "HP": 17,
+            "STR": 1,
+            "MAG": 3,
+            "SKL": 14,
+            "SPD": 1,
+            "LCK": 11,
+            "DEF": 5,
+            "RES": 6,
+            "MOV": 0
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [
+            [
+                1,
+                "Refined_Dance"
+            ],
+            [
+                1,
+                "Enhance"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Iris",
         "affinity": "Dark",
         "fields": []
     },
@@ -6092,52 +6138,6 @@
         "fields": []
     },
     {
-        "nid": "Iris2",
-        "name": "Iris",
-        "desc": "Doom King's secretary. Has an optimization fetish.",
-        "variant": null,
-        "level": 6,
-        "klass": "Dancer",
-        "tags": [
-            "Female",
-            "Succubus"
-        ],
-        "bases": {
-            "HP": 17,
-            "STR": 1,
-            "MAG": 3,
-            "SKL": 14,
-            "SPD": 1,
-            "LCK": 11,
-            "DEF": 5,
-            "RES": 6,
-            "MOV": 0
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [
-            [
-                1,
-                "Refined_Dance"
-            ],
-            [
-                1,
-                "Optimization_main"
-            ],
-            [
-                1,
-                "Enhance"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {},
-        "alternate_classes": [],
-        "portrait_nid": "Iris",
-        "affinity": "Dark",
-        "fields": []
-    },
-    {
         "nid": "Esmera",
         "name": "Esmera",
         "desc": "",
@@ -7528,6 +7528,10 @@
             [
                 1,
                 "Blind_attack"
+            ],
+            [
+                1,
+                "BowBreaker"
             ]
         ],
         "unit_notes": [],
@@ -7816,6 +7820,61 @@
         "alternate_classes": [],
         "portrait_nid": "{monk-han} Pirate Lord (Version 1) [F2E]",
         "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Rimer",
+        "name": "Rimer",
+        "desc": "",
+        "variant": "",
+        "level": 8,
+        "klass": "Knight",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 24,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 4,
+            "LCK": 3,
+            "DEF": 9,
+            "RES": 4,
+            "CON": 13,
+            "MOV": 4
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 40,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 15,
+            "LCK": 25,
+            "DEF": 28,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{CapibaraInSpace} Acheron [F2E]",
+        "affinity": null,
         "fields": []
     },
     {

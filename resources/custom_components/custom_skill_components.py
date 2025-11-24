@@ -1366,3 +1366,44 @@ class PostCombatHealing(SkillComponent):
             end_health = unit.get_hp() + self.value
             action.do(action.SetHP(unit, end_health))
             action.do(action.TriggerCharge(unit, self.skill))
+            
+class BuildChargeTLE(SkillComponent):
+    nid = 'build_chargeTLE'
+    desc = ("Skill gains 1 charge each turn. When charges reach the maximum "
+            "value, the skill activates for one turn, then resets to 0.")
+    tag = SkillTags.CHARGE
+
+    expose = ComponentType.Int
+    value = 10   # number of turns needed
+
+    ignore_conditional = True
+
+    def init(self, skill):
+        self.skill.data['charge'] = 0
+        self.skill.data['total_charge'] = self.value
+
+    def condition(self, unit, item):
+        return self.skill.data['charge'] >= self.skill.data['total_charge']
+
+    def on_start_turn(self, unit, skill):
+        # If skill was active, reset at start of turn
+        if self.condition(unit, skill):
+            # It was active LAST turn — reset now
+            self.skill.data['charge'] = 0
+        else:
+            # Otherwise build charge this turn
+            self.skill.data['charge'] += 1
+
+        # Clamp
+        if self.skill.data['charge'] > self.skill.data['total_charge']:
+            self.skill.data['charge'] = self.skill.data['total_charge']
+
+    def text(self) -> str:
+        return str(self.skill.data['charge'])
+
+    def cooldown(self):
+        total = self.skill.data.get('total_charge')
+        charge = self.skill.data.get('charge')
+        if total:
+            return charge / total
+        return 1
