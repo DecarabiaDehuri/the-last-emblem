@@ -6465,7 +6465,20 @@
             "LEAD": 60,
             "New Stat": 30
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Spur_Luck"
+            ],
+            [
+                5,
+                "Push_Resistance"
+            ],
+            [
+                9,
+                "LustBreaker"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -18628,6 +18641,98 @@
             0
         ],
         "map_sprite_nid": "Prince (M) {EldritchAbomination}-stand",
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Torch",
+        "name": "Torch",
+        "desc": "",
+        "tier": 1,
+        "movement_group": null,
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "ZeroMove",
+            "Tile"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 1
+        },
+        "growths": {},
+        "growth_bonus": {},
+        "promotion": {},
+        "max_stats": {},
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Torch (Flickering) {FE7if}-stand",
         "combat_anim_nid": null,
         "fields": []
     }

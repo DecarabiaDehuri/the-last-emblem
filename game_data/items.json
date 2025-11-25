@@ -59,6 +59,38 @@
         ]
     },
     {
+        "nid": "LustSpells_SucSup",
+        "name": "Lust Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                []
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Healing_Kiss_Qum",
         "name": "Healing Kiss",
         "desc": "Qum kisses and loves and healies! <blue>5 sparkles</>",
@@ -2507,6 +2539,117 @@
             [
                 "level_exp",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Fires_of_Lust_cutscene",
+        "name": "Fires of Lust",
+        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            42
+        ],
+        "components": [
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1,
+                            1
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_cast_sfx",
+                "FireCharge"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    4
+                ]
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Wyrmsfire"
+            ],
+            [
+                "map_hit_sfx",
+                "ElfireHit"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Proc_fires_confuse"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Riala"
+                ]
             ]
         ]
     },
@@ -14580,6 +14723,118 @@
         ]
     },
     {
+        "nid": "Hip_Check",
+        "name": "Hip Check",
+        "desc": "Nalili suddenly strikes the enemy with her hip, inflicting them with <red>[HIPPED]</>: -4 STR and MAG. Costs <blue>5 mana</> and <red>4 HP</>. <red>3 turns cooldown</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Hipped"
+            ],
+            [
+                "hp_cost",
+                4
+            ],
+            [
+                "hit",
+                80
+            ]
+        ]
+    },
+    {
+        "nid": "Blade_of_Lust",
+        "name": "Blade of Lust",
+        "desc": "Nalili combines her swordmanship with her lust to create the ultimate technique. Low chance to inflict the enemy with <red>[LUST DEATH]</>: Unit is incapacitated until the end of chapter. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            48
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "status_on_equip",
+                "Proc_blade_lust"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ]
+        ]
+    },
+    {
         "nid": "testmana",
         "name": "testmana",
         "desc": "",
@@ -19279,6 +19534,114 @@
             [
                 "mana_cost_as_uses",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Triple_Shot",
+        "name": "Triple Shot",
+        "desc": "Vhala unleashes three arrows at once, attacking up to 3 random targets within 3 tiles. Costs <blue>8 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Vhala triple shot"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Bow"
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "MapSurprise"
+            ],
+            [
+                "mana_cost",
+                8
+            ]
+        ]
+    },
+    {
+        "nid": "Triple_Shot_helper",
+        "name": "Triple Shot",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "cannot_counter",
+                null
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
             ]
         ]
     },

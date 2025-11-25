@@ -5290,6 +5290,26 @@
         ]
     },
     {
+        "nid": "Hunter",
+        "name": "Hunter",
+        "desc": "In the night or fog, Dari can see further than other units.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "sight_range_bonus",
+                3
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Slippery",
         "name": "Slippery",
         "desc": "Dari can pass through enemies.",
@@ -5643,6 +5663,63 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Hipped",
+        "name": "<red>[HIPPED]</>",
+        "desc": "-4 STR and MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -4
+                    ],
+                    [
+                        "MAG",
+                        -4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_blade_lust",
+        "name": "Proc lust death",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) == 10"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Lust_Death"
             ]
         ]
     },
@@ -12892,6 +12969,94 @@
                     170,
                     255
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Triple_Shot",
+        "name": "Triple Shot",
+        "desc": "Vhala unleashes three arrows at once, attacking up to 3 random targets within 3 tiles. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "ability",
+                "Triple_Shot"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                8
+            ]
+        ]
+    },
+    {
+        "nid": "Triple_Shot_old",
+        "name": "Triple_Shot",
+        "desc": "After 3 combats, Vhala can choose to use Triple Shot on her next attack, making her attack thrice.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Triple_Shot_effect"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "combat_charge_increase_better",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Triple_Shot_effect",
+        "name": "Triple_Shot",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "astra_proc",
+                {
+                    "extra_attacks": 2,
+                    "damage_percent": 0.5,
+                    "show_proc_effects": true
+                }
+            ],
+            [
+                "proc_rate",
+                "CERTEZA"
+            ],
+            [
+                "crit_accuracy_formula_override",
+                "ZERO"
+            ],
+            [
+                "hide_skill_icon_in_combat",
+                null
             ]
         ]
     },

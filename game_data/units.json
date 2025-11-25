@@ -577,6 +577,10 @@
             [
                 1,
                 "Unpeople"
+            ],
+            [
+                1,
+                "Hunter"
             ]
         ],
         "unit_notes": [],
@@ -1496,7 +1500,7 @@
         "growths": {
             "HP": 80,
             "STR": 40,
-            "MAG": 50,
+            "MAG": 65,
             "SKL": 40,
             "SPD": 40,
             "LCK": 40,
@@ -1508,7 +1512,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "LustSpells",
+                "LustSpells_SucSup",
                 false
             ]
         ],
@@ -7527,10 +7531,6 @@
         "learned_skills": [
             [
                 1,
-                "Blind_attack"
-            ],
-            [
-                1,
                 "BowBreaker"
             ]
         ],
@@ -7625,7 +7625,7 @@
         "desc": "",
         "variant": null,
         "level": 1,
-        "klass": "Noble",
+        "klass": "Queen",
         "tags": [],
         "bases": {
             "HP": 8
@@ -7637,7 +7637,7 @@
         "unit_notes": [],
         "wexp_gain": {},
         "alternate_classes": [],
-        "portrait_nid": "{Nickt} Scott",
+        "portrait_nid": "{Kanna} solae [F2E]",
         "affinity": null,
         "fields": []
     },
@@ -8069,6 +8069,152 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Vanessa",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Seyta",
+        "name": "Seyta",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Noble",
+        "tags": [],
+        "bases": {
+            "HP": 32
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "{Fatman} [F2E] OC 16",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Ship",
+        "name": "Ship",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Ship",
+        "tags": [],
+        "bases": {
+            "HP": 1
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Ouyna",
+        "name": "Ouyna",
+        "desc": "",
+        "variant": "Female",
+        "level": 1,
+        "klass": "Hero",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "{MeatofJustice, Melia} Mercenary F [F2E]",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Deguile",
+        "name": "Deguile",
+        "desc": "",
+        "variant": "",
+        "level": 1,
+        "klass": "Ranger",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "{LaurentLacroix} OC 21 [F2E]",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Koromin",
+        "name": "Koromin",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "General",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "{LaurentLacroix} OC 29 [F2E]",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Stoval",
+        "name": "Stoval",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Sage",
+        "tags": [],
+        "bases": {
+            "HP": 20,
+            "STR": 0,
+            "MAG": 5,
+            "SKL": 6,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 5,
+            "RES": 6,
+            "CON": 7,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 0,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 25,
+            "LCK": 15,
+            "DEF": 10,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "{Mexicancactus2911} Morphaeus [F2E]",
         "affinity": null,
         "fields": []
     }
