@@ -59,2737 +59,6 @@
         ]
     },
     {
-        "nid": "LustSpells_SucSup",
-        "name": "Lust Spells",
-        "desc": "Access this unit's available spells.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            28
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "multi_item",
-                []
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "locked",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Healing_Kiss_Qum",
-        "name": "Healing Kiss",
-        "desc": "Qum kisses and loves and healies! <blue>5 sparkles</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            34
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "heal",
-                20
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    178,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Heal"
-            ],
-            [
-                "map_cast_sfx",
-                "MapHeal"
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "heal_exp",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "eval_target_restrict_2",
-                "'Unpeople' not in target.tags"
-            ]
-        ]
-    },
-    {
-        "nid": "Orgasmic_Thoughts",
-        "name": "Orgasmic Thoughts",
-        "desc": "Cumdump loves Cumdump's friends lots and lots!! <blue>10 sparkles</> <red>one time!</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            41
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "heal",
-                20
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    178,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Heal"
-            ],
-            [
-                "map_cast_sfx",
-                "MapHeal"
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "heal_exp",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "ally_blast_aoe",
-                2
-            ],
-            [
-                "restore",
-                null
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Cleansing_Wink",
-        "name": "Cleansing Wink",
-        "desc": "Cumdump heals poor Cumdump's friend of the sickness!! <blue>6 sparkles</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            52
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                2
-            ],
-            [
-                "max_range",
-                6
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    178,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Restore"
-            ],
-            [
-                "map_cast_sfx",
-                "DebuffRecover"
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "mana_cost",
-                6
-            ],
-            [
-                "restore",
-                null
-            ],
-            [
-                "exp",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "Arousing_Kiss",
-        "name": "Arousing Kiss",
-        "desc": "Cumdump helps Cumdump's friend get very strong!! <blue>8 sparkles</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            27
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    178,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Stun"
-            ],
-            [
-                "map_cast_sfx",
-                "Fortify"
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "mana_cost",
-                8
-            ],
-            [
-                "exp",
-                10
-            ],
-            [
-                "status_after_combat_on_hit",
-                "Arousing_Kiss_effect"
-            ]
-        ]
-    },
-    {
-        "nid": "Cumdump",
-        "name": "Cumdump",
-        "desc": "Cumdump Cumdumps Cumdump's friend!! <blue>12 sparkles</> <red>3 times!</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            46
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    178,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Physic"
-            ],
-            [
-                "map_cast_sfx",
-                "Barrier"
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "mana_cost",
-                12
-            ],
-            [
-                "exp",
-                10
-            ],
-            [
-                "event_after_combat_on_hit",
-                "Global Qum cumdump mana"
-            ],
-            [
-                "c_uses",
-                3
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Arousing_Aura",
-        "name": "Arousing Aura",
-        "desc": "Cumdump helps Cumdump's many friends get very strong!! <blue>15 sparkles</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            51
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    178,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Stun"
-            ],
-            [
-                "map_cast_sfx",
-                "Fortify"
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "exp",
-                15
-            ],
-            [
-                "ally_blast_aoe",
-                3
-            ],
-            [
-                "status_after_combat_on_hit",
-                "Arousing_Kiss_effect"
-            ],
-            [
-                "target_unit",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Illusory_Orgy",
-        "name": "Illusory Orgy",
-        "desc": "Cumdump imagines Cumdump's friends in happy sex!! <blue>13 sparkles</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            24
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_unit",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    178,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Restore"
-            ],
-            [
-                "map_cast_sfx",
-                "DebuffRecover"
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "mana_cost",
-                13
-            ],
-            [
-                "restore",
-                null
-            ],
-            [
-                "exp",
-                15
-            ],
-            [
-                "heal",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "Protective_Hug",
-        "name": "Protective Hug",
-        "desc": "Cumdump saves Cumdump's friend! <blue>5 sparkles</> <red>once!</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            49
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    178,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Fortune"
-            ],
-            [
-                "map_cast_sfx",
-                "Barrier"
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "exp",
-                15
-            ],
-            [
-                "status_after_combat_on_hit",
-                "Protective_Hug_effect"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Pretty_Lance_ability",
-        "name": "Pretty Lance",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            25
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "magic_at_range",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    19,
-                    255
-                ]
-            ],
-            [
-                "battle_cast_anim",
-                "Silence"
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Mass_Kiss_ability_core",
-        "name": "Mass Kiss",
-        "desc": "Cumdump infinite kisses!! Kisses kisses kisses kisses",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            24
-        ],
-        "components": [
-            [
-                "sequence_item",
-                [
-                    "Mass_Kiss_enemies",
-                    "Mass_Kiss_allies"
-                ]
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "smart_blast_aoe",
-                3
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "map_cast_sfx",
-                "RefreshDanceMap"
-            ]
-        ]
-    },
-    {
-        "nid": "Mass_Kiss_enemies",
-        "name": "Mass Kiss",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            24
-        ],
-        "components": [
-            [
-                "damage",
-                6
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "smart_blast_aoe",
-                3
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "map_hit_sfx",
-                "Attack Hit 3"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    238,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "map_cast_anim",
-                "AOE_Rally"
-            ]
-        ]
-    },
-    {
-        "nid": "Mass_Kiss_allies",
-        "name": "Mass Kiss",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            24
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "heal",
-                10
-            ],
-            [
-                "smart_blast_aoe",
-                3
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "Heal2"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    0,
-                    251
-                ]
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ]
-        ]
-    },
-    {
-        "nid": "SpecialWhips",
-        "name": "SpecialWhips",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            46
-        ],
-        "components": [
-            [
-                "multi_item",
-                [
-                    "Lightning_Whip_effect",
-                    "Earth_Whip_effect",
-                    "Pure_Whip_effect",
-                    "Lash_of_Torment_effect",
-                    "Wild_Lashing_effect"
-                ]
-            ],
-            [
-                "multi_item_hides_unavailable",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Lightning_Whip_effect",
-        "name": "Lightning Whip",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            42
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "magic_at_range",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "battle_cast_anim",
-                "Thunder_Lightning_spell"
-            ],
-            [
-                "no_double",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Earth_Whip_effect",
-        "name": "Earth Whip",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            46
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Boulders"
-            ]
-        ]
-    },
-    {
-        "nid": "Pure_Whip_effect",
-        "name": "Pure Whip",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            36
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "battle_cast_anim",
-                "ShineFlower"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Monster"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 0,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Wild_Lashing_effect",
-        "name": "Wild Lashing",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            38
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "PromoRing"
-            ]
-        ]
-    },
-    {
-        "nid": "Lash_of_Torment_effect",
-        "name": "Lash of Torment",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            37
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "battle_cast_anim",
-                "Lash_of_Torment_spell"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "magic",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Careful_Whip",
-        "name": "Careful Whip",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            40
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "hit",
-                115
-            ],
-            [
-                "crit",
-                3
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "weight",
-                5
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Whip"
-            ],
-            [
-                "battle_cast_anim",
-                "Lash_of_Torment_spell"
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "status_on_equip",
-                "Avoid5"
-            ]
-        ]
-    },
-    {
-        "nid": "YarraSpells",
-        "name": "Yarra's spells",
-        "desc": "Access Yarra's available spells.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            28
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "multi_item",
-                []
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "locked",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Yarra"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Haze_of_Sex",
-        "name": "Haze of Sex",
-        "desc": "Also affects enemies around the target. Chance of inflicting <red>[CHARMED]</>. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            26
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "enemy_blast_aoe",
-                1
-            ],
-            [
-                "status_on_equip",
-                "Proc_Charmed_Yarra"
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_sfx",
-                "Dance1"
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Reinforce"
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Shared_Fantasy",
-        "name": "Shared Fantasy",
-        "desc": "Puts a partner into a fulfilling fantasy, increasing their DEF and RES for a few turns. Costs <blue>7 mana</>. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            34
-        ],
-        "components": [
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Shared_Fantasy_buff"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_anim",
-                "MapMediumHealTrans"
-            ],
-            [
-                "map_cast_sfx",
-                "RefreshDanceMap"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "mana_cost",
-                7
-            ]
-        ]
-    },
-    {
-        "nid": "Flirt",
-        "name": "Flirt",
-        "desc": "Yarra flirts with the enemy, trying to make them <red>[CHARMED]</>. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            46
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Charmed_Yarra"
-            ],
-            [
-                "battle_cast_anim",
-                "Refresh"
-            ],
-            [
-                "hit",
-                50
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "prf_unit",
-                [
-                    "Yarra"
-                ]
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Sexual_Mana",
-        "name": "Sexual Mana",
-        "desc": "Yarra transfers <blue>10 mana</> to an ally. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            26
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_sfx",
-                "Restore"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    165,
-                    246
-                ]
-            ],
-            [
-                "event_after_combat_on_hit",
-                "Global Yarra sexual mana"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "First_Slut",
-        "name": "First Slut",
-        "desc": "Yarra heals and buffs herself, increasing all stats for a few turns. Costs <blue>10 mana</>. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            44
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "target_unit",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "heal",
-                30
-            ],
-            [
-                "status_on_hit",
-                "Nothing"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    166,
-                    221
-                ]
-            ],
-            [
-                "map_cast_sfx",
-                "RefreshDanceMap"
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Doom_Kings_Emissary",
-        "name": "Doom King's Emissary",
-        "desc": "Also affects enemies around the target. Chance of inflicting <red>[LUST DEATH]</>. Costs <blue>15 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            48
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                8
-            ],
-            [
-                "hit",
-                85
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    221,
-                    0,
-                    203
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "enemy_blast_aoe",
-                2
-            ],
-            [
-                "status_on_equip",
-                "Proc_LustDeath_Yarra"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Yarra"
-                ]
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_sfx",
-                "DemonLight"
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Reinforce"
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Lustful_Emissaries_effect",
-        "name": "Lustful Emissaries",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            41
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "damage",
-                3
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "enemy_blast_aoe",
-                2
-            ],
-            [
-                "status_on_hit",
-                "Lust_proc"
-            ],
-            [
-                "magic_at_range",
-                null
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Lustful_Emissaries_spell"
-            ]
-        ]
-    },
-    {
-        "nid": "Forceful_Kiss_effect",
-        "name": "Forceful Kiss",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            45
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Forceful_Kiss_spell"
-            ],
-            [
-                "crit",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "Combat_Fantasy_effect",
-        "name": "Combat Fantasy",
-        "desc": "<green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. Costs <blue>10 mana</>. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            45
-        ],
-        "components": [
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Combat_Fantasy_buff"
-            ],
-            [
-                "self_status_on_hit",
-                "Combat_Fantasy_buff"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_anim",
-                "MapMediumHealTrans"
-            ],
-            [
-                "map_cast_sfx",
-                "RefreshDanceMap"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "Illusion",
-        "name": "Illusion",
-        "desc": "Yarra illusions herself and allies close to her. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            34
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "ally_blast_aoe",
-                1
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Yarra"
-                ]
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "status_after_combat_on_hit",
-                "Illusioned"
-            ],
-            [
-                "map_cast_sfx",
-                "Silence1"
-            ]
-        ]
-    },
-    {
-        "nid": "Take_flight",
-        "name": "Take flight",
-        "desc": "Yarra soars up high with her wings and flies for a couple of turns. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            31
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_unit",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "status_on_hit",
-                "Flying_Yarra"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "Heavy Wing Flap"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "attack_after_combat",
-                null
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Inspire_ability",
-        "name": "Inspire",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Inspire_effect"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    255
-                ]
-            ],
-            [
-                "map_hit_sfx",
-                "MapHeal"
-            ]
-        ]
-    },
-    {
-        "nid": "AntiTyrant_ability",
-        "name": "Anti-Tyrant Essence",
-        "desc": "Riala supresses an enemy with pure damage. <blue> 10 Mana </>.",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "status_on_hit",
-                "Anti_Tyrant_effect"
-            ],
-            [
-                "map_cast_sfx",
-                "DemonLight"
-            ],
-            [
-                "map_cast_anim",
-                "AOE_Wyrmsfire"
-            ],
-            [
-                "map_hit_sub_blend",
-                [
-                    0,
-                    0,
-                    0
-                ]
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "RialaSpells",
-        "name": "Riala's spells",
-        "desc": "Access Riala's available spells.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            28
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "multi_item",
-                [
-                    "Storm_of_Lust",
-                    "Fires_of_Lust",
-                    "Bolt_of_Lust"
-                ]
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "locked",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Riala"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Storm_of_Lust",
-        "name": "Storm of Lust",
-        "desc": "A storm of ice and lust. Chance to inflict <red>[STUNNED]</>. Costs <blue>15 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            38
-        ],
-        "components": [
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            -1,
-                            0
-                        ],
-                        [
-                            0,
-                            -1
-                        ],
-                        [
-                            0,
-                            1
-                        ],
-                        [
-                            1,
-                            0
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                8
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_cast_sfx",
-                "FireCharge"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    0,
-                    213,
-                    255
-                ]
-            ],
-            [
-                "map_cast_anim",
-                "AOE_Blizzard"
-            ],
-            [
-                "map_hit_sfx",
-                "Gust"
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "status_on_equip",
-                "Proc_storm_stun"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Riala"
-                ]
-            ],
-            [
-                "level_exp",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Fires_of_Lust",
-        "name": "Fires of Lust",
-        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <blue>15 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            42
-        ],
-        "components": [
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            1,
-                            1
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                75
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_cast_sfx",
-                "FireCharge"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    0,
-                    4
-                ]
-            ],
-            [
-                "map_cast_anim",
-                "AOE_Wyrmsfire"
-            ],
-            [
-                "map_hit_sfx",
-                "ElfireHit"
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "status_on_equip",
-                "Proc_fires_confuse"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Riala"
-                ]
-            ],
-            [
-                "level_exp",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Fires_of_Lust_cutscene",
-        "name": "Fires of Lust",
-        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <blue>15 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            42
-        ],
-        "components": [
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            1,
-                            1
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                8
-            ],
-            [
-                "hit",
-                100
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_cast_sfx",
-                "FireCharge"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    0,
-                    4
-                ]
-            ],
-            [
-                "map_cast_anim",
-                "AOE_Wyrmsfire"
-            ],
-            [
-                "map_hit_sfx",
-                "ElfireHit"
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "status_on_equip",
-                "Proc_fires_confuse"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Riala"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Bolt_of_Lust",
-        "name": "Bolt of Lust",
-        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <blue>15 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            42
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                2
-            ],
-            [
-                "max_range",
-                4
-            ],
-            [
-                "damage",
-                15
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_cast_sfx",
-                "Bolting1"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    247,
-                    0
-                ]
-            ],
-            [
-                "map_cast_anim",
-                "Swoosh"
-            ],
-            [
-                "map_hit_sfx",
-                "Bolting2"
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "status_on_equip",
-                "Proc_bolt_death"
-            ],
-            [
-                "battle_cast_anim",
-                "Thunder"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Riala"
-                ]
-            ],
-            [
-                "level_exp",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Teleport",
-        "name": "Teleport",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            37
-        ],
-        "components": [
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "target_unit",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "statuses_after_combat_on_hit",
-                [
-                    "Teleport_effect"
-                ]
-            ],
-            [
-                "spell",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Loot_Bag",
         "name": "Loot Bag",
         "desc": "Use this item to gain a random <green>stat booster</>. Does not end unit's turn.",
@@ -2845,480 +114,6 @@
             [
                 "attack_after_combat",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Intervention",
-        "name": "Intervention",
-        "desc": "Balia sets Orcent's <red>Brutality</> and <blue>Serenity</> stacks to 0. Also restores any of Orcent's negative statuses.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            37
-        ],
-        "components": [
-            [
-                "eval_target_restrict_2",
-                "target.nid == 'Orcent'"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Balia Intervention resets Orcent stacks"
-            ],
-            [
-                "restore",
-                null
-            ],
-            [
-                "map_cast_anim",
-                "MapSmallHealTrans"
-            ],
-            [
-                "map_hit_sfx",
-                "MapHeal"
-            ]
-        ]
-    },
-    {
-        "nid": "Orcmancy",
-        "name": "Orcmancy",
-        "desc": "Balia can summon orcs to fight alongside her.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            42
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "locked",
-                null
-            ],
-            [
-                "multi_item",
-                [
-                    "Summon_orc"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Summon_orc",
-        "name": "Summon orc",
-        "desc": "Summons a weak orc. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            28
-        ],
-        "components": [
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_sfx",
-                "Summon"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "SkillActivate"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Summon orc balia"
-            ],
-            [
-                "map_cast_anim",
-                "OverchargeAura"
-            ]
-        ]
-    },
-    {
-        "nid": "Summon_orc_elite",
-        "name": "Summon elite orc",
-        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            29
-        ],
-        "components": [
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_sfx",
-                "Summon"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "SkillActivate"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Balia summon orc elite"
-            ],
-            [
-                "map_cast_anim",
-                "OverchargeAura"
-            ]
-        ]
-    },
-    {
-        "nid": "Summon_imp",
-        "name": "Summon imp",
-        "desc": "Summons a weak imp. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            28
-        ],
-        "components": [
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_sfx",
-                "Summon"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "SkillActivate"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Balia summon imp"
-            ],
-            [
-                "map_cast_anim",
-                "OverchargeAura"
-            ]
-        ]
-    },
-    {
-        "nid": "Summon_imp_elite",
-        "name": "Summon elite imp",
-        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            29
-        ],
-        "components": [
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_sfx",
-                "Summon"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "SkillActivate"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Balia summon imp elite"
-            ],
-            [
-                "map_cast_anim",
-                "OverchargeAura"
-            ]
-        ]
-    },
-    {
-        "nid": "Summon_orc_thrower",
-        "name": "Summon orc thrower",
-        "desc": "Summons a rock throwing orc. Costs <blue>15 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            44
-        ],
-        "components": [
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_sfx",
-                "Summon"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "SkillActivate"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Balia summon orc thrower"
-            ],
-            [
-                "map_cast_anim",
-                "OverchargeAura"
-            ]
-        ]
-    },
-    {
-        "nid": "Summon_ogre",
-        "name": "Summon ogre",
-        "desc": "Summons a powerful ogre. Costs <blue>20 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            34
-        ],
-        "components": [
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_sfx",
-                "Summon"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                20
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "SkillActivate"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Balia summon ogre"
-            ],
-            [
-                "map_cast_anim",
-                "OverchargeAura"
             ]
         ]
     },
@@ -7342,6 +4137,3211 @@
             [
                 "max_range",
                 2
+            ]
+        ]
+    },
+    {
+        "nid": "LustSpells_SucSup",
+        "name": "Lust Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                []
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Healing_Kiss_Qum",
+        "name": "Healing Kiss",
+        "desc": "Qum kisses and loves and healies! <blue>5 sparkles</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "heal",
+                20
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    178,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
+            ],
+            [
+                "map_cast_sfx",
+                "MapHeal"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Unpeople' not in target.tags"
+            ]
+        ]
+    },
+    {
+        "nid": "Orgasmic_Thoughts",
+        "name": "Orgasmic Thoughts",
+        "desc": "Cumdump loves Cumdump's friends lots and lots!! <blue>10 sparkles</> <red>one time!</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "heal",
+                20
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    178,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
+            ],
+            [
+                "map_cast_sfx",
+                "MapHeal"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "ally_blast_aoe",
+                2
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Cleansing_Wink",
+        "name": "Cleansing Wink",
+        "desc": "Cumdump heals poor Cumdump's friend of the sickness!! <blue>6 sparkles</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            52
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    178,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Restore"
+            ],
+            [
+                "map_cast_sfx",
+                "DebuffRecover"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "mana_cost",
+                6
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "exp",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Arousing_Kiss",
+        "name": "Arousing Kiss",
+        "desc": "Cumdump helps Cumdump's friend get very strong!! <blue>8 sparkles</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            27
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    178,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Stun"
+            ],
+            [
+                "map_cast_sfx",
+                "Fortify"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "mana_cost",
+                8
+            ],
+            [
+                "exp",
+                10
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Arousing_Kiss_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "Cumdump",
+        "name": "Cumdump",
+        "desc": "Cumdump Cumdumps Cumdump's friend!! <blue>12 sparkles</> <red>3 times!</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    178,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Physic"
+            ],
+            [
+                "map_cast_sfx",
+                "Barrier"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "mana_cost",
+                12
+            ],
+            [
+                "exp",
+                10
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Qum cumdump mana"
+            ],
+            [
+                "c_uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Arousing_Aura",
+        "name": "Arousing Aura",
+        "desc": "Cumdump helps Cumdump's many friends get very strong!! <blue>15 sparkles</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    178,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Stun"
+            ],
+            [
+                "map_cast_sfx",
+                "Fortify"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "ally_blast_aoe",
+                3
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Arousing_Kiss_effect"
+            ],
+            [
+                "target_unit",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Illusory_Orgy",
+        "name": "Illusory Orgy",
+        "desc": "Cumdump imagines Cumdump's friends in happy sex!! <blue>13 sparkles</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            24
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    178,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Restore"
+            ],
+            [
+                "map_cast_sfx",
+                "DebuffRecover"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "mana_cost",
+                13
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "heal",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Protective_Hug",
+        "name": "Protective Hug",
+        "desc": "Cumdump saves Cumdump's friend! <blue>5 sparkles</> <red>once!</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            49
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    178,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Fortune"
+            ],
+            [
+                "map_cast_sfx",
+                "Barrier"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Protective_Hug_effect"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Pretty_Lance_ability",
+        "name": "Pretty Lance",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            25
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "magic_at_range",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    19,
+                    255
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Silence"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Mass_Kiss_ability_core",
+        "name": "Mass Kiss",
+        "desc": "Cumdump infinite kisses!! Kisses kisses kisses kisses",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            24
+        ],
+        "components": [
+            [
+                "sequence_item",
+                [
+                    "Mass_Kiss_enemies",
+                    "Mass_Kiss_allies"
+                ]
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "smart_blast_aoe",
+                3
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ]
+        ]
+    },
+    {
+        "nid": "Mass_Kiss_enemies",
+        "name": "Mass Kiss",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            24
+        ],
+        "components": [
+            [
+                "damage",
+                6
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "smart_blast_aoe",
+                3
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 3"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    238,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
+            ]
+        ]
+    },
+    {
+        "nid": "Mass_Kiss_allies",
+        "name": "Mass Kiss",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            24
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "heal",
+                10
+            ],
+            [
+                "smart_blast_aoe",
+                3
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Heal2"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    251
+                ]
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "SpecialWhips",
+        "name": "SpecialWhips",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            46
+        ],
+        "components": [
+            [
+                "multi_item",
+                [
+                    "Lightning_Whip_effect",
+                    "Earth_Whip_effect",
+                    "Pure_Whip_effect",
+                    "Lash_of_Torment_effect",
+                    "Wild_Lashing_effect"
+                ]
+            ],
+            [
+                "multi_item_hides_unavailable",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning_Whip_effect",
+        "name": "Lightning Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "magic_at_range",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "battle_cast_anim",
+                "Thunder_Lightning_spell"
+            ],
+            [
+                "no_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Earth_Whip_effect",
+        "name": "Earth Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Boulders"
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Whip_effect",
+        "name": "Pure Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            36
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "battle_cast_anim",
+                "ShineFlower"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Wild_Lashing_effect",
+        "name": "Wild Lashing",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            38
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "PromoRing"
+            ]
+        ]
+    },
+    {
+        "nid": "Lash_of_Torment_effect",
+        "name": "Lash of Torment",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "battle_cast_anim",
+                "Lash_of_Torment_spell"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Careful_Whip",
+        "name": "Careful Whip",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            40
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Whip"
+            ],
+            [
+                "battle_cast_anim",
+                "Lash_of_Torment_spell"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Avoid5"
+            ]
+        ]
+    },
+    {
+        "nid": "YarraSpells",
+        "name": "Yarra's spells",
+        "desc": "Access Yarra's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                []
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Haze_of_Sex",
+        "name": "Haze of Sex",
+        "desc": "Also affects enemies around the target. Chance of inflicting <red>[CHARMED]</>. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            26
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "enemy_blast_aoe",
+                1
+            ],
+            [
+                "status_on_equip",
+                "Proc_Charmed_Yarra"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Dance1"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Shared_Fantasy",
+        "name": "Shared Fantasy",
+        "desc": "Puts a partner into a fulfilling fantasy, increasing their DEF and RES for a few turns. Costs <blue>7 mana</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Shared_Fantasy_buff"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost",
+                7
+            ]
+        ]
+    },
+    {
+        "nid": "Flirt",
+        "name": "Flirt",
+        "desc": "Yarra flirts with the enemy, trying to make them <red>[CHARMED]</>. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Charmed_Yarra"
+            ],
+            [
+                "battle_cast_anim",
+                "Refresh"
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sexual_Mana",
+        "name": "Sexual Mana",
+        "desc": "Yarra transfers <blue>10 mana</> to an ally. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            26
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Restore"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    165,
+                    246
+                ]
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Yarra sexual mana"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "First_Slut",
+        "name": "First Slut",
+        "desc": "Yarra heals and buffs herself, increasing all stats for a few turns. Costs <blue>10 mana</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            44
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "heal",
+                30
+            ],
+            [
+                "status_on_hit",
+                "Nothing"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    166,
+                    221
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Doom_Kings_Emissary",
+        "name": "Doom King's Emissary",
+        "desc": "Also affects enemies around the target. Chance of inflicting <red>[LUST DEATH]</>. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            48
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    221,
+                    0,
+                    203
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "enemy_blast_aoe",
+                2
+            ],
+            [
+                "status_on_equip",
+                "Proc_LustDeath_Yarra"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "DemonLight"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lustful_Emissaries_effect",
+        "name": "Lustful Emissaries",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "enemy_blast_aoe",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Lust_proc"
+            ],
+            [
+                "magic_at_range",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Lustful_Emissaries_spell"
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Kiss_effect",
+        "name": "Forceful Kiss",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Forceful_Kiss_spell"
+            ],
+            [
+                "crit",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy_effect",
+        "name": "Combat Fantasy",
+        "desc": "<green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. Costs <blue>10 mana</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            45
+        ],
+        "components": [
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Combat_Fantasy_buff"
+            ],
+            [
+                "self_status_on_hit",
+                "Combat_Fantasy_buff"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Illusion",
+        "name": "Illusion",
+        "desc": "Yarra illusions herself and allies close to her. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "ally_blast_aoe",
+                1
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Illusioned"
+            ],
+            [
+                "map_cast_sfx",
+                "Silence1"
+            ]
+        ]
+    },
+    {
+        "nid": "Take_flight",
+        "name": "Take flight",
+        "desc": "Yarra soars up high with her wings and flies for a couple of turns. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            31
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "status_on_hit",
+                "Flying_Yarra"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Heavy Wing Flap"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire_ability",
+        "name": "Inspire",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Inspire_effect"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "MapHeal"
+            ]
+        ]
+    },
+    {
+        "nid": "AntiTyrant_ability",
+        "name": "Anti-Tyrant Essence",
+        "desc": "Riala supresses an enemy with pure damage. <blue> 10 Mana </>.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "status_on_hit",
+                "Anti_Tyrant_effect"
+            ],
+            [
+                "map_cast_sfx",
+                "DemonLight"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Wyrmsfire"
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "RialaSpells",
+        "name": "Riala's spells",
+        "desc": "Access Riala's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Storm_of_Lust",
+                    "Fires_of_Lust",
+                    "Bolt_of_Lust"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Riala"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Storm_of_Lust",
+        "name": "Storm of Lust",
+        "desc": "A storm of ice and lust. Chance to inflict <red>[STUNNED]</>. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            38
+        ],
+        "components": [
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            0,
+                            -1
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            1,
+                            0
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_cast_sfx",
+                "FireCharge"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    213,
+                    255
+                ]
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Blizzard"
+            ],
+            [
+                "map_hit_sfx",
+                "Gust"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "status_on_equip",
+                "Proc_storm_stun"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Riala"
+                ]
+            ],
+            [
+                "level_exp",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fires_of_Lust",
+        "name": "Fires of Lust",
+        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            42
+        ],
+        "components": [
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1,
+                            1
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_cast_sfx",
+                "FireCharge"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    4
+                ]
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Wyrmsfire"
+            ],
+            [
+                "map_hit_sfx",
+                "ElfireHit"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "status_on_equip",
+                "Proc_fires_confuse"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Riala"
+                ]
+            ],
+            [
+                "level_exp",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fires_of_Lust_cutscene",
+        "name": "Fires of Lust",
+        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            42
+        ],
+        "components": [
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1,
+                            1
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_cast_sfx",
+                "FireCharge"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    4
+                ]
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Wyrmsfire"
+            ],
+            [
+                "map_hit_sfx",
+                "ElfireHit"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Proc_fires_confuse"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Riala"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Bolt_of_Lust",
+        "name": "Bolt of Lust",
+        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            42
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_cast_sfx",
+                "Bolting1"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    247,
+                    0
+                ]
+            ],
+            [
+                "map_cast_anim",
+                "Swoosh"
+            ],
+            [
+                "map_hit_sfx",
+                "Bolting2"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "status_on_equip",
+                "Proc_bolt_death"
+            ],
+            [
+                "battle_cast_anim",
+                "Thunder"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Riala"
+                ]
+            ],
+            [
+                "level_exp",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Teleport",
+        "name": "Teleport",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            37
+        ],
+        "components": [
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "statuses_after_combat_on_hit",
+                [
+                    "Teleport_effect"
+                ]
+            ],
+            [
+                "spell",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Intervention",
+        "name": "Intervention",
+        "desc": "Balia sets Orcent's <red>Brutality</> and <blue>Serenity</> stacks to 0. Also restores any of Orcent's negative statuses.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            37
+        ],
+        "components": [
+            [
+                "eval_target_restrict_2",
+                "target.nid == 'Orcent'"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia Intervention resets Orcent stacks"
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "MapSmallHealTrans"
+            ],
+            [
+                "map_hit_sfx",
+                "MapHeal"
+            ]
+        ]
+    },
+    {
+        "nid": "Orcmancy",
+        "name": "Orcmancy",
+        "desc": "Balia can summon orcs to fight alongside her.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            42
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Summon_orc"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc",
+        "name": "Summon orc",
+        "desc": "Summons a weak orc. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            28
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Summon orc balia"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc_elite",
+        "name": "Summon elite orc",
+        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            29
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon orc elite"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_imp",
+        "name": "Summon imp",
+        "desc": "Summons a weak imp. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            28
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon imp"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_imp_elite",
+        "name": "Summon elite imp",
+        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon imp elite"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc_thrower",
+        "name": "Summon orc thrower",
+        "desc": "Summons a rock throwing orc. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            44
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon orc thrower"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_ogre",
+        "name": "Summon ogre",
+        "desc": "Summons a powerful ogre. Costs <blue>20 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                20
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon ogre"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
             ]
         ]
     },
@@ -12783,6 +12783,184 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ]
+        ]
+    },
+    {
+        "nid": "Ballista_CD1",
+        "name": "Ballista",
+        "desc": "",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                60
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "wexp",
+                4
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "prf_class",
+                [
+                    "Archer",
+                    "Sniper"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 1.0,
+                    "effective_bonus_damage": 16,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Ballista_CD2",
+        "name": "Ballista",
+        "desc": "",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                60
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "wexp",
+                4
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "prf_class",
+                [
+                    "Archer",
+                    "Sniper"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 1.0,
+                    "effective_bonus_damage": 16,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "start_cooldown",
+                null
             ]
         ]
     },

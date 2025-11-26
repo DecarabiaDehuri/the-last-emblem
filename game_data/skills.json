@@ -16,6 +16,94 @@
         ]
     },
     {
+        "nid": "BossMiracle_1",
+        "name": "Two Phases",
+        "desc": "This boss has two health bars. Upon death, restores full health. Triggers once.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "full_miracle",
+                null
+            ],
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "BossMiracle_2",
+        "name": "Three Phases",
+        "desc": "This boss has three health bars. Upon death, restores full health. Triggers twice.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "full_miracle",
+                null
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "SecondPhase",
+        "name": "<red>Second Phase</>",
+        "desc": "<red>Immunity to negative status effects. Damage increased. Less damage received. Bonus accuracy. Counter from any distance.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            52
+        ],
+        "components": [
+            [
+                "unit_flickering_tint",
+                [
+                    180,
+                    21,
+                    24
+                ]
+            ],
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "resist_multiplier",
+                0.7999999999999999
+            ],
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "hit",
+                15
+            ]
+        ]
+    },
+    {
         "nid": "Arousing_Kiss_effect",
         "name": "<green>[AROUSED]</>",
         "desc": "+5 STR and MAG",
@@ -11787,7 +11875,7 @@
     {
         "nid": "Creepy_Move",
         "name": "Creepy Move",
-        "desc": "Unit can teleport next to any enemy target.",
+        "desc": "Unit can teleport next to any enemy target. 1 turn cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -11800,7 +11888,7 @@
             ],
             [
                 "witch_warp_expression",
-                "unit.team == 'player'"
+                "unit.team == 'player' and game.turncount % 2 == 1"
             ]
         ]
     },
