@@ -958,6 +958,8 @@
         "level": 1,
         "klass": "Supplier",
         "tags": [
+            "Convoy",
+            "AdjConvoy",
             "Female"
         ],
         "bases": {
@@ -991,7 +993,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Supplier"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -1512,7 +1519,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "LustSpells_SucSup",
+                "LustSpells_Qum",
                 false
             ]
         ],
@@ -5667,7 +5674,7 @@
     {
         "nid": "Incubus_King",
         "name": "Incubus King",
-        "desc": "",
+        "desc": "THE Incubus King.",
         "variant": "",
         "level": 20,
         "klass": "Incubus_Emperor",
@@ -5964,7 +5971,7 @@
     {
         "nid": "SucBoss",
         "name": "Elite Succubus",
-        "desc": "",
+        "desc": "Elite succubus.",
         "variant": null,
         "level": 14,
         "klass": "Suc_foe_2",
@@ -6024,7 +6031,7 @@
     {
         "nid": "SucCentaurBoss",
         "name": "Centaur Boss",
-        "desc": "",
+        "desc": "Centaur succubus leader.",
         "variant": "",
         "level": 12,
         "klass": "Suc_Centaur_Boss",
@@ -6112,7 +6119,7 @@
         "nid": "Iris",
         "name": "Iris",
         "desc": "Incubus King's secretary. Has an optimization fetish.",
-        "variant": null,
+        "variant": "",
         "level": 6,
         "klass": "Dancer",
         "tags": [
@@ -7112,7 +7119,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "{Nickt} Rose",
+        "portrait_nid": "{Nickt} Rose_1",
         "affinity": null,
         "fields": []
     },
@@ -8311,8 +8318,7 @@
         "level": 5,
         "klass": "Knight",
         "tags": [
-            "Boss",
-            "ZeroMove"
+            "Boss"
         ],
         "bases": {
             "HP": 20,

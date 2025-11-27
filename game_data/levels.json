@@ -21740,7 +21740,12 @@
         "tilemap": "Intro4",
         "bg_tilemap": null,
         "party": "Simon",
-        "music": {},
+        "music": {
+            "player_phase": "Final Battle",
+            "enemy_phase": "Prologue enemy phase",
+            "other_phase": "Other theme",
+            "boss_battle": "Boss1"
+        },
         "objective": {
             "simple": "Seize the castles",
             "win": "Seize both castles",
@@ -22212,7 +22217,7 @@
             {
                 "nid": "Yorem",
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Guard",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -22632,8 +22637,26 @@
                 "nid": "vendor",
                 "region_type": "event",
                 "position": [
-                    27,
-                    7
+                    24,
+                    11
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "armory",
+                "region_type": "event",
+                "position": [
+                    36,
+                    5
                 ],
                 "size": [
                     1,
@@ -22665,6 +22688,24 @@
                 "hide_time": false
             },
             {
+                "nid": "house",
+                "region_type": "event",
+                "position": [
+                    37,
+                    11
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
                 "nid": "board",
                 "region_type": "event",
                 "position": [
@@ -22677,6 +22718,24 @@
                 ],
                 "sub_nid": "Board",
                 "condition": "unit.nid != 'Simon'",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "simon",
+                "region_type": "normal",
+                "position": [
+                    19,
+                    6
+                ],
+                "size": [
+                    9,
+                    20
+                ],
+                "sub_nid": "",
+                "condition": "True",
                 "time_left": null,
                 "only_once": false,
                 "interrupt_move": false,
@@ -22744,12 +22803,12 @@
                         13
                     ],
                     "archer_4": [
-                        12,
-                        9
+                        28,
+                        15
                     ],
                     "soldier_1": [
-                        30,
-                        10
+                        27,
+                        7
                     ],
                     "soldier_3": [
                         19,
@@ -22764,40 +22823,40 @@
                         14
                     ],
                     "soldier_5": [
-                        11,
-                        8
+                        28,
+                        20
                     ],
                     "misc_1": [
-                        30,
-                        23
+                        7,
+                        22
                     ],
                     "misc_2": [
                         16,
                         6
                     ],
                     "misc_3": [
-                        24,
-                        14
+                        21,
+                        22
                     ],
                     "misc_4": [
                         15,
                         20
                     ],
                     "misc_5": [
-                        4,
-                        16
+                        25,
+                        18
                     ],
                     "misc_6": [
-                        12,
-                        11
+                        26,
+                        15
                     ],
                     "misc_7": [
-                        13,
-                        11
+                        26,
+                        14
                     ],
                     "misc_8": [
-                        14,
-                        11
+                        26,
+                        13
                     ]
                 }
             },
@@ -22825,6 +22884,144 @@
                     "merc_4": [
                         3,
                         22
+                    ]
+                }
+            },
+            {
+                "nid": "yarra",
+                "units": [
+                    "Carina",
+                    "Hilstara",
+                    "Varia",
+                    "Yarra",
+                    "Robin"
+                ],
+                "positions": {
+                    "Hilstara": [
+                        39,
+                        20
+                    ],
+                    "Varia": [
+                        39,
+                        18
+                    ],
+                    "Yarra": [
+                        38,
+                        19
+                    ],
+                    "Robin": [
+                        39,
+                        19
+                    ],
+                    "Carina": [
+                        40,
+                        19
+                    ]
+                }
+            },
+            {
+                "nid": "orcent",
+                "units": [
+                    "Altina",
+                    "Orcent",
+                    "Qum",
+                    "Vhala",
+                    "Lynine",
+                    "Orilise"
+                ],
+                "positions": {
+                    "Altina": [
+                        40,
+                        3
+                    ],
+                    "Orcent": [
+                        39,
+                        2
+                    ],
+                    "Qum": [
+                        38,
+                        2
+                    ],
+                    "Vhala": [
+                        40,
+                        1
+                    ],
+                    "Lynine": [
+                        38,
+                        0
+                    ],
+                    "Orilise": [
+                        39,
+                        0
+                    ]
+                }
+            },
+            {
+                "nid": "aka",
+                "units": [
+                    "Aka",
+                    "Dari",
+                    "Uyae",
+                    "Wynn",
+                    "Nalili"
+                ],
+                "positions": {
+                    "Aka": [
+                        40,
+                        10
+                    ],
+                    "Dari": [
+                        41,
+                        10
+                    ],
+                    "Uyae": [
+                        40,
+                        11
+                    ],
+                    "Wynn": [
+                        41,
+                        8
+                    ],
+                    "Nalili": [
+                        40,
+                        9
+                    ]
+                }
+            },
+            {
+                "nid": "simon",
+                "units": [
+                    "Simon",
+                    "Trin",
+                    "Riala",
+                    "Balia",
+                    "Megail",
+                    "Iris2"
+                ],
+                "positions": {
+                    "Simon": [
+                        12,
+                        25
+                    ],
+                    "Trin": [
+                        11,
+                        25
+                    ],
+                    "Riala": [
+                        13,
+                        25
+                    ],
+                    "Megail": [
+                        11,
+                        26
+                    ],
+                    "Balia": [
+                        13,
+                        26
+                    ],
+                    "Iris2": [
+                        12,
+                        26
                     ]
                 }
             }
@@ -26838,8 +27035,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    0,
-                    4
+                    9,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -27191,8 +27388,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    12,
-                    12
+                    7,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -27456,8 +27653,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    8,
-                    4
+                    14,
+                    0
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -27469,8 +27666,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
-                    4
+                    10,
+                    0
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -27482,8 +27679,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
-                    4
+                    1,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -27503,13 +27700,13 @@
             },
             {
                 "nid": "Safado",
-                "team": "player",
+                "team": "enemy",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    7
+                    13,
+                    0
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -27639,13 +27836,10 @@
             {
                 "nid": "Minerve",
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    4,
-                    4
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
             },
@@ -27687,12 +27881,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    6
+                    14,
+                    1
                 ],
                 "starting_traveler": null,
                 "generic": true

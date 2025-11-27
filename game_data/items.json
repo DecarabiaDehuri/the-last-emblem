@@ -393,7 +393,8 @@
                     "DivinePhysic",
                     "DivineFortify",
                     "DivineLightning",
-                    "DivineShine"
+                    "DivineShine",
+                    "DivineSpells_Monica"
                 ]
             ],
             [
@@ -4141,9 +4142,571 @@
         ]
     },
     {
-        "nid": "LustSpells_SucSup",
+        "nid": "All_Embracing_Care_ability",
+        "name": "All-Embracing Care",
+        "desc": "Simon will always be there for his allies. Enables him to teleport to any ally. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            50
+        ],
+        "components": [
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "All_Embracing_Care_effect"
+            ],
+            [
+                "map_hit_sfx",
+                "Unsheathe"
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Command",
+        "name": "Command",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "sequence_item",
+                [
+                    "CommandSelect"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "CommandSelect",
+        "name": "Command",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            3
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global CommandSwap"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Select 1"
+            ]
+        ]
+    },
+    {
+        "nid": "Multitask",
+        "name": "Multitask",
+        "desc": "Simon duplicates himself. The copy lasts for one combat, or until the end of the turn. Costs <blue> 10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            50
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "FormationSelect"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Trin copy Simon"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Equip_Armor",
+        "name": "Equip Armor",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Debug Setup"
+            ]
+        ]
+    },
+    {
+        "nid": "Support_Allies",
+        "name": "Support Allies",
+        "desc": "Simon heals and cures negative status effects of himself and nearby allies. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "ally_blast_aoe",
+                2
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Restore"
+            ],
+            [
+                "map_target_cast_anim",
+                "MapSmallHealTrans"
+            ],
+            [
+                "equation_heal",
+                "HEAL"
+            ]
+        ]
+    },
+    {
+        "nid": "Commanding_Presence",
+        "name": "Commanding Presence",
+        "desc": "Deals damage to enemies around Simon, with a high chance of inflicting <red>[STUNNED]</>. Costs <blue>10 mana</>. <red>[STUNNED]</>: Unit cannot act for the remainder of their turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            1,
+                            0
+                        ],
+                        [
+                            0,
+                            -1
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -2,
+                            0
+                        ],
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            1,
+                            2
+                        ],
+                        [
+                            2,
+                            2
+                        ],
+                        [
+                            2,
+                            1
+                        ],
+                        [
+                            2,
+                            -1
+                        ],
+                        [
+                            2,
+                            -2
+                        ],
+                        [
+                            1,
+                            -2
+                        ],
+                        [
+                            -1,
+                            -2
+                        ],
+                        [
+                            -2,
+                            -2
+                        ],
+                        [
+                            -2,
+                            -1
+                        ],
+                        [
+                            -2,
+                            1
+                        ],
+                        [
+                            -2,
+                            2
+                        ],
+                        [
+                            -1,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "status_on_equip",
+                "Commanding_Presence_stun"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "DemonKingRoar"
+            ],
+            [
+                "map_cast_anim",
+                "Swoosh"
+            ],
+            [
+                "map_target_cast_anim",
+                "Snag"
+            ]
+        ]
+    },
+    {
+        "nid": "Incubus_Assault",
+        "name": "Incubus Assault",
+        "desc": "Simon uses his Emblem to viciously strike 3 random enemies. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Simon incubus assault"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "CutinCrit"
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "MapProvoke"
+            ],
+            [
+                "mana_cost",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Incubus_Assault_helper",
+        "name": "Incubus Assault",
+        "desc": "Simon uses his Emblem to viciously strike 3 random enemies. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            50
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "cannot_counter",
+                null
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "LustSpells_Qum",
         "name": "Lust Spells",
-        "desc": "Access this unit's available spells.",
+        "desc": "Access this Qum's unique spells.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -7156,7 +7719,7 @@
     {
         "nid": "Summon_imp_elite",
         "name": "Summon elite imp",
-        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
+        "desc": "Summons an elite imp. Costs <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -15156,6 +15719,10 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Boss' not in target.tags"
             ]
         ]
     },
@@ -17617,6 +18184,47 @@
         ]
     },
     {
+        "nid": "DivineSpells_Monica",
+        "name": "Divine Spells",
+        "desc": "Access this Monica's unique spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            29
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Soothing_Presence_effect",
+                    "Penitence"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Monica"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Soothing_Presence_effect",
         "name": "Soothing Presence",
         "desc": "Restores an ally's HP from afar with double the potency. Costs <blue>5 mana</>.",
@@ -18133,7 +18741,7 @@
     {
         "nid": "Social_Distancing",
         "name": "Social Distancing",
-        "desc": "Safado shoves any unit 1 tile away. Can attack after.\nCosts <blue>2 mana</>.",
+        "desc": "Safado shoves any unit 1 tile away. Can attack after.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -18149,10 +18757,6 @@
                 null
             ],
             [
-                "mana_cost",
-                2
-            ],
-            [
                 "min_range",
                 1
             ],
@@ -18163,10 +18767,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ]
         ]
     },
@@ -18198,11 +18798,11 @@
             ],
             [
                 "damage",
-                6
+                8
             ],
             [
                 "hit",
-                80
+                100
             ],
             [
                 "level_exp",
@@ -18847,227 +19447,6 @@
             [
                 "mana_cost_as_uses",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "All_Embracing_Care_ability",
-        "name": "All-Embracing Care",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            50
-        ],
-        "components": [
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "self_status_on_hit",
-                "All_Embracing_Care_effect"
-            ],
-            [
-                "map_hit_sfx",
-                "Unsheathe"
-            ],
-            [
-                "map_cast_anim",
-                "MapSurprise"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "cooldown",
-                3
-            ],
-            [
-                "attack_after_combat",
-                null
-            ],
-            [
-                "menu_after_combat",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Command",
-        "name": "Command",
-        "desc": "",
-        "icon_nid": "Skills",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "sequence_item",
-                [
-                    "CommandSelect"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "CommandSelect",
-        "name": "Command",
-        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
-        "icon_nid": "Skills",
-        "icon_index": [
-            6,
-            3
-        ],
-        "components": [
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "event_after_combat_on_hit",
-                "Global CommandSwap"
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                5
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "Select 1"
-            ]
-        ]
-    },
-    {
-        "nid": "Multitask",
-        "name": "Multitask",
-        "desc": "Simon duplicates himself. The copy lasts for one combat, or until the end of the turn. Costs <blue> 10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            50
-        ],
-        "components": [
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "target_unit",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "FormationSelect"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Trin copy Simon"
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "attack_after_combat",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Equip_Armor",
-        "name": "Equip Armor",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            34
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Debug Setup"
             ]
         ]
     },
