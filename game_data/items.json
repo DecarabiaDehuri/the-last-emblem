@@ -118,6 +118,25 @@
         ]
     },
     {
+        "nid": "testmulti",
+        "name": "testmulti",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "multi_item",
+                [
+                    "Iron_Sword",
+                    "Steel_Axe"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Iron_Sword",
         "name": "Iron Sword",
         "desc": "You will not believe me: it cuts things.",
@@ -11412,7 +11431,7 @@
     {
         "nid": "Siegmund",
         "name": "Siegmund",
-        "desc": "Ephraim only. Strength +5. Effective against monsters.",
+        "desc": "Jack only. Strength +5. Effective against monsters.",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -11463,10 +11482,6 @@
                 "Strength_Plus5"
             ],
             [
-                "crit",
-                0
-            ],
-            [
                 "min_range",
                 1
             ],
@@ -11485,6 +11500,12 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jack"
+                ]
             ]
         ]
     },
@@ -25476,7 +25497,7 @@
         ],
         "components": [
             [
-                "weapon",
+                "spell",
                 null
             ],
             [

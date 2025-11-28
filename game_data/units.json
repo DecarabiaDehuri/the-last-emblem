@@ -48,14 +48,13 @@
             [
                 1,
                 "All_Embracing_Care"
-            ]
-        ],
-        "unit_notes": [
+            ],
             [
-                "Teste",
-                "Sim"
+                1,
+                "Nothing"
             ]
         ],
+        "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -528,7 +527,7 @@
             "Pegasus_Knight"
         ],
         "portrait_nid": "carina2",
-        "affinity": "Anima",
+        "affinity": "None",
         "fields": []
     },
     {
@@ -8136,13 +8135,51 @@
             "Boss",
             "Female"
         ],
-        "bases": {},
-        "growths": {},
+        "bases": {
+            "HP": 22,
+            "STR": 6,
+            "MAG": 1,
+            "SKL": 10,
+            "SPD": 11,
+            "LCK": 0,
+            "DEF": 8,
+            "RES": 3,
+            "CON": 11,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 30,
+            "MAG": 5,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 25,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Silver_Sword",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Sword": [
+                false,
+                181,
+                null
+            ],
+            "Axe": [
+                false,
+                121,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "{MeatofJustice, Melia} Mercenary F [F2E]",
         "affinity": null,
@@ -8158,13 +8195,46 @@
         "tags": [
             "Boss"
         ],
-        "bases": {},
-        "growths": {},
+        "bases": {
+            "HP": 21,
+            "STR": 7,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 7,
+            "LCK": 0,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 60,
+            "STR": 25,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 35,
+            "LCK": 25,
+            "DEF": 15,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Steel_Bow",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Bow": [
+                false,
+                181,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "{LaurentLacroix} OC 21 [F2E]",
         "affinity": null,
@@ -8174,19 +8244,67 @@
         "nid": "Koromin",
         "name": "Koromin",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "General",
         "tags": [
             "Boss"
         ],
-        "bases": {},
-        "growths": {},
+        "bases": {
+            "HP": 30,
+            "STR": 10,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 13,
+            "RES": 4,
+            "CON": 11,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 30,
+            "MAG": 0,
+            "SKL": 25,
+            "SPD": 10,
+            "LCK": 20,
+            "DEF": 23,
+            "RES": 25,
+            "CON": 0,
+            "MOV": 0
+        },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Steel_Axe",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                121,
+                null
+            ],
+            "Lance": [
+                false,
+                121,
+                null
+            ],
+            "Sword": [
+                false,
+                121,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "{LaurentLacroix} OC 29 [F2E]",
         "affinity": null,
