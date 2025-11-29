@@ -1746,6 +1746,391 @@
         ]
     },
     {
+        "nid": "Rally_Strength_buff",
+        "name": "Strength bonus",
+        "desc": "Strength increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Magic_buff",
+        "name": "Magic bonus",
+        "desc": "Magic increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Skill_buff",
+        "name": "Skill bonus",
+        "desc": "Skill increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Speed_buff",
+        "name": "Speed bonus",
+        "desc": "Speed increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Luck_buff",
+        "name": "Luck bonus",
+        "desc": "Luck increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Defense_buff",
+        "name": "Defense bonus",
+        "desc": "Defense increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Resistance_buff",
+        "name": "Resistance bonus",
+        "desc": "Resistance increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Strength",
+        "name": "Rally Strength",
+        "desc": "Increases STR of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Strength"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Magic",
+        "name": "Rally Magic",
+        "desc": "Increases MAG of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Magic"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Skill",
+        "name": "Rally Skill",
+        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Skill"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Speed",
+        "name": "Rally Speed",
+        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Speed"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Luck",
+        "name": "Rally Luck",
+        "desc": "Increases LCK of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Luck"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Resistance",
+        "name": "Rally Resistance",
+        "desc": "Increases RES of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Resistance"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Defense",
+        "name": "Rally Defense",
+        "desc": "Increases DEF of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Defense"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Command",
         "name": "Command",
         "desc": "Simon swaps one currently active character for a undeployed one.",
@@ -3292,55 +3677,6 @@
         ]
     },
     {
-        "nid": "Rally_Resistance",
-        "name": "Rally Resistance",
-        "desc": "Monica has faith that everything is going to be okay, and those around her feel the same. She can use <green>Rally Resistance</>, increasing RES of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Resistance"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Resistance_buff",
-        "name": "Resistance bonus",
-        "desc": "Resistance increased by Monica.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "RES",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
         "nid": "Awkward_Silence_proc",
         "name": "Awkward Silence",
         "desc": "Monica has MAG% at the beginning of the turn to gain the Awkward Silence aura. Enemies affected by this aura gain [SILENCED].",
@@ -3520,6 +3856,125 @@
                     227,
                     232
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Sacred_Field",
+        "name": "Sacred Field",
+        "desc": "Monica implants a holy field on the ground. Allies standing on it restore 2 mana per turn. Monsters take damage. Lasts 5 turns. Costs <blue>15 mana</>. One use per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            41
+        ],
+        "components": [
+            [
+                "ability",
+                "Sacred_Field"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sacred_Field_effect",
+        "name": "Sacred Field",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            41
+        ],
+        "components": [
+            [
+                "multi_skill",
+                [
+                    "Sacred_Field_effect_ally",
+                    "Sacred_Field_effect_monster"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sacred_Field_effect_ally",
+        "name": "Sacred Field",
+        "desc": "Unit feels that everything is going to be okay. Restores 2 mana per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            41
+        ],
+        "components": [
+            [
+                "mana_regeneration",
+                2
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "condition",
+                "unit.team == 'player'"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sacred_Field_effect_monster",
+        "name": "Sacred Field",
+        "desc": "Monster is being damaged by the sacred field.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            41
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "upkeep_damage",
+                2
+            ],
+            [
+                "upkeep_animation",
+                "MapSpiritbane"
+            ],
+            [
+                "upkeep_sound",
+                "Attack Hit 1"
+            ],
+            [
+                "condition",
+                "'Monster' in unit.tags"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
             ]
         ]
     },
@@ -6067,6 +6522,10 @@
             [
                 "unit_anim",
                 "MapStatIncrease"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -13738,7 +14197,7 @@
     {
         "nid": "Defenders_Frenzy_effect",
         "name": "Defender's Frenzy",
-        "desc": "",
+        "desc": "Varia is slightly dealing more damage",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -13750,40 +14209,27 @@
                 3
             ],
             [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        1
-                    ],
-                    [
-                        "DEF",
-                        1
-                    ],
-                    [
-                        "RES",
-                        1
-                    ]
-                ]
-            ],
-            [
-                "upkeep_damage",
-                -5
-            ],
-            [
                 "condition",
                 "not 'Servants_Frenzy_effect' in [skill.nid for skill in unit.skills]"
+            ],
+            [
+                "damage_multiplier",
+                1.0999999999999999
+            ],
+            [
+                "resist_multiplier",
+                1.0999999999999999
             ]
         ]
     },
     {
         "nid": "Explosives_ability",
-        "name": "Place explosives",
+        "name": "Plant explosive",
         "desc": "Varia places an explosive on an empty tile. Damages, inflicts <red>[BURNED]</> and stops movement of anyone who crosses this tile. Can't kill units. Limited to 3 uses per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            13,
-            32
+            12,
+            42
         ],
         "components": [
             [
@@ -13792,6 +14238,10 @@
             ],
             [
                 "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
                 null
             ]
         ]
@@ -13820,10 +14270,10 @@
         "nid": "Servants_Frenzy",
         "name": "Servant's Frenzy",
         "desc": "",
-        "icon_nid": "Valuable",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            1
+            13,
+            52
         ],
         "components": [
             [
@@ -13838,8 +14288,8 @@
     },
     {
         "nid": "Servants_Frenzy_effect",
-        "name": "Servant's Frenzy",
-        "desc": "",
+        "name": "<green>[FRENZIED]</>",
+        "desc": "Varia is currently dealing and receiving more damage. Regenerates a bit of her health at each turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -13851,25 +14301,16 @@
                 3
             ],
             [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        2
-                    ],
-                    [
-                        "DEF",
-                        -2
-                    ],
-                    [
-                        "RES",
-                        -2
-                    ]
-                ]
+                "regeneration",
+                0.10000000000000003
             ],
             [
-                "upkeep_damage",
-                -5
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "resist_multiplier",
+                0.7999999999999999
             ]
         ]
     },
@@ -13888,7 +14329,7 @@
                 "Furious_Strikes_ability"
             ],
             [
-                "hidden",
+                "class_skill",
                 null
             ]
         ]
@@ -13896,7 +14337,7 @@
     {
         "nid": "Blade_Dance",
         "name": "Blade Dance",
-        "desc": "",
+        "desc": "Varia has LUCK% chance of activating Blade Dance in combat. When activated, Varia wildly strikes multiple times.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -13913,15 +14354,223 @@
             ],
             [
                 "proc_rate",
-                "HALFLUCK"
+                "PROCSTATUS"
             ],
             [
-                "cannot_double",
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Destined_Endurance",
+        "name": "Destined Endurance",
+        "desc": "Varia has LUCK% chance of healing herself each start of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            48
+        ],
+        "components": [
+            [
+                "proc_turn_skill",
+                "Destined_Endurance_heal"
+            ],
+            [
+                "proc_rate",
+                "PROCSTATUS"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Destined_Endurance_heal",
+        "name": "Heal Varia",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "regeneration",
+                0.9999999999999999
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Encouraged",
+        "name": "<green>[ENCOURAGED]</>",
+        "desc": "Unit has slightly better STR and MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            33
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        2
+                    ],
+                    [
+                        "MAG",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Channeled_Luck",
+        "name": "Channeled Luck",
+        "desc": "Varia can use Channeled Luck, which doubles her Luck stat for a single turn. One use per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            45
+        ],
+        "components": [
+            [
+                "class_skill",
                 null
             ],
             [
-                "hit",
-                -5
+                "ability",
+                "Channeled_Luck"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Serendipity",
+        "name": "Serendipity",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            45
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "LCK",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    236,
+                    197,
+                    3
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Cursed_Blessing",
+        "name": "Cursed Blessing",
+        "desc": "When defending any strike, Varia has half luck % of not dying. Whenever Varia escapes death by this skill, Varia loses 10% of max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            50
+        ],
+        "components": [
+            [
+                "proc_rate",
+                "HALFLUCK"
+            ],
+            [
+                "defense_proc",
+                "Nothing"
+            ]
+        ]
+    },
+    {
+        "nid": "Cursed_Blessing_effect",
+        "name": "Cursed Blessing",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            50
+        ],
+        "components": [
+            [
+                "True_Miracle_Event",
+                "Global Varia death cursed"
+            ]
+        ]
+    },
+    {
+        "nid": "Cursed_Varia",
+        "name": "Cursed_Fate",
+        "desc": "Varia has luck stat and luck growth penalty for each time she narrowly escaped death.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        -1
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "LCK",
+                        -5
+                    ]
+                ]
             ]
         ]
     },
@@ -14393,10 +15042,10 @@
     {
         "nid": "Aegis_Assault",
         "name": "Aegis Assault",
-        "desc": "",
+        "desc": "Hilstara lunges forward with her shield. <red>Uses DEF to determine damage instead of STR.</>. Costs <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            2,
             42
         ],
         "components": [

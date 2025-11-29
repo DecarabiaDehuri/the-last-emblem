@@ -1267,7 +1267,9 @@
         "variant": "",
         "level": 1,
         "klass": "Orc_Orcent",
-        "tags": [],
+        "tags": [
+            "Monster"
+        ],
         "bases": {
             "HP": 20,
             "STR": 10,
@@ -6631,7 +6633,7 @@
             "MAG": 5,
             "SKL": 10,
             "SPD": 7,
-            "LCK": 0,
+            "LCK": 4,
             "DEF": 7,
             "RES": 5,
             "CON": 8,
@@ -6675,7 +6677,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "{LaurentLacroix} OC 19 [F2E]",
+        "portrait_nid": "{LaurentLacroix} OC 19 [F2E]_1",
         "affinity": "None",
         "fields": []
     },
@@ -7936,20 +7938,25 @@
         "klass": "DoomKing",
         "tags": [],
         "bases": {
-            "HP": 40,
-            "STR": 12,
-            "MAG": 10,
-            "SKL": 10,
-            "SPD": 6,
-            "LCK": 13,
-            "DEF": 11,
-            "RES": 12,
-            "CON": 11,
-            "MOV": 5
+            "HP": 50,
+            "STR": 16,
+            "MAG": 11,
+            "SKL": 17,
+            "SPD": 8,
+            "LCK": 9,
+            "DEF": 18,
+            "RES": 18,
+            "CON": 8,
+            "MOV": 3
         },
         "growths": {},
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Killer_Lance",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
