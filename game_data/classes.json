@@ -138,13 +138,161 @@
                 null
             ]
         },
-        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_nid": "Villager (U) Updated {Ghast, HyperGammaSpaces}",
         "icon_index": [
             0,
             0
         ],
         "map_sprite_nid": "Citizen",
-        "combat_anim_nid": null,
+        "combat_anim_nid": "Citizen_Armed",
+        "fields": []
+    },
+    {
+        "nid": "Citizen_Armed",
+        "name": "Citizen",
+        "desc": "An armed commoner.",
+        "tier": 0,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 10,
+        "bases": {
+            "HP": 10,
+            "STR": 3,
+            "MAG": 0,
+            "SKL": 2,
+            "SPD": 1,
+            "LCK": 3,
+            "DEF": 2,
+            "CON": 5,
+            "MOV": 4,
+            "RES": 2,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 65,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 35,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "CON": 20,
+            "MOV": 15,
+            "RES": 20,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                0,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Villager (U) Updated {Ghast, HyperGammaSpaces}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Citizen_Armed",
+        "combat_anim_nid": "Citizen_Armed",
         "fields": []
     },
     {
@@ -6924,16 +7072,16 @@
         },
         "learned_skills": [
             [
-                1,
+                3,
                 "Spur_Magic"
             ],
             [
-                5,
+                6,
                 "Spur_Skill"
             ],
             [
                 9,
-                "Spur_Strength"
+                "Push_Defense"
             ]
         ],
         "wexp_gain": {
@@ -11886,11 +12034,11 @@
         },
         "learned_skills": [
             [
-                1,
+                3,
                 "Armored_Counter"
             ],
             [
-                5,
+                6,
                 "Armored_Blow"
             ],
             [
@@ -13580,11 +13728,11 @@
         },
         "learned_skills": [
             [
-                2,
+                3,
                 "Certain_Blow"
             ],
             [
-                5,
+                6,
                 "Certain_Counter"
             ],
             [
@@ -19032,6 +19180,93 @@
         ],
         "map_sprite_nid": "Torch (Flickering) {FE7if}-stand",
         "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Sovereign",
+        "name": "Sovereign",
+        "desc": "",
+        "tier": 1,
+        "movement_group": null,
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {},
+        "growths": {},
+        "growth_bonus": {},
+        "promotion": {},
+        "max_stats": {},
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Great Lord (M) Ephraim-Infantry Alt Lance {Dellhonne}-stand",
+        "combat_anim_nid": "Sovereign",
         "fields": []
     }
 ]

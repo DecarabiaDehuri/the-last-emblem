@@ -7179,7 +7179,7 @@
     {
         "nid": "Illusioned",
         "name": "Illusioned",
-        "desc": "Unit's presence is being veiled by Yarra's illusions. Reduce enemy agression. Can pass between enemies. Lose this status after combat.",
+        "desc": "Unit's presence is being veiled by Yarra's illusions. Become invisible to enemies and can pass between them. Lose this status after combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -7221,6 +7221,10 @@
                 [
                     "Stealth"
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -13283,7 +13287,7 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "PROCSTATUS"
             ],
             [
                 "class_skill",
@@ -13323,7 +13327,7 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "PROCSTATUS"
             ],
             [
                 "class_skill",
@@ -13363,7 +13367,7 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "PROCSTATUS"
             ],
             [
                 "class_skill",
@@ -13399,11 +13403,11 @@
         "components": [
             [
                 "attack_proc",
-                "Active_Synergy"
+                "Stun_proc"
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "PROCSTATUS"
             ],
             [
                 "class_skill",
@@ -13443,7 +13447,7 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "HALFLUCK"
             ],
             [
                 "class_skill",
@@ -13483,7 +13487,7 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "PROCSTATUS"
             ],
             [
                 "class_skill",
@@ -13523,7 +13527,7 @@
             ],
             [
                 "proc_rate",
-                "CRIT_AVOID"
+                "HALFLUCK"
             ],
             [
                 "class_skill",
@@ -15476,7 +15480,7 @@
     {
         "nid": "Bikini_Armor",
         "name": "Bikini Armor",
-        "desc": "<green>[Nalili synergy]</> ",
+        "desc": "<green>[Nalili synergy]</> Hilstara follows Nalili's advice and takes off some of her armor, which somehow makes it better to resist magic. Doubles her RES but halves her DEF. Costs <blue>7 mana</>.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -15497,7 +15501,7 @@
             ],
             [
                 "ability",
-                "Provoke"
+                "Bikini_Armor"
             ],
             [
                 "menu_category",
@@ -15512,7 +15516,7 @@
     {
         "nid": "Bikini_Armor_effect",
         "name": "Bikini Armor",
-        "desc": "Hilstara took off her armor and is enjoying a cool breeze. Significant avoid bonus, but receives more damage.",
+        "desc": "Hilstara took off her armor and is enjoying a cool breeze. Double RES but half DEF.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -15520,18 +15524,38 @@
         ],
         "components": [
             [
-                "avoid",
-                30
-            ],
-            [
-                "resist",
-                -5
-            ],
-            [
                 "time",
                 2
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        2.0
+                    ],
+                    [
+                        "DEF",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
+    },
+    {
+        "nid": "new_2",
+        "name": "new_2",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Careful_Positioning",
@@ -15839,6 +15863,26 @@
             [
                 "unit_anim",
                 "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Unorthodox",
+        "name": "Unorthodox",
+        "desc": "Orcent can use Bows at 1 range.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            40
+        ],
+        "components": [
+            [
+                "modify_minimum_range",
+                1
+            ],
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Bow'"
             ]
         ]
     },

@@ -26490,7 +26490,7 @@
     {
         "nid": "Bash",
         "name": "Bash",
-        "desc": "Stuns and shoves the enemy 1 tile away.",
+        "desc": "Shoves the enemy 1 tile away. Chance to stun the enemy afterwards. Costs <blue>5 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -26498,12 +26498,12 @@
         ],
         "components": [
             [
-                "shove_on_end_combat",
-                1
+                "spell",
+                null
             ],
             [
-                "weapon",
-                null
+                "shove_on_end_combat",
+                1
             ],
             [
                 "min_range",
@@ -26519,7 +26519,7 @@
             ],
             [
                 "damage",
-                4
+                6
             ],
             [
                 "hit",
@@ -26528,10 +26528,6 @@
             [
                 "crit",
                 5
-            ],
-            [
-                "weight",
-                8
             ],
             [
                 "exempt_from_dual_strike",
@@ -26546,33 +26542,29 @@
                 5
             ],
             [
-                "no_double",
-                null
-            ],
-            [
-                "status_after_combat_on_hit",
-                "Stunned"
-            ],
-            [
                 "mana_cost_as_uses",
                 null
             ],
             [
-                "no_equip",
-                null
+                "status_on_equip",
+                "Stun_attack"
             ]
         ]
     },
     {
         "nid": "Mighty_Bash",
         "name": "Mighty Bash",
-        "desc": "<green>[Uyae synergy]</> Paralyzes and shoves the enemy 2 tiles away. Costs <blue> 8 mana</>.",
+        "desc": "<green>[Uyae synergy]</> Shoves the enemy 2 tiles away. Chance to paralyze the enemy afterwards. Costs <blue> 8 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
             18
         ],
         "components": [
+            [
+                "spell",
+                null
+            ],
             [
                 "shove_flexible_on_end_combat_initiate",
                 2
@@ -26595,19 +26587,11 @@
             ],
             [
                 "damage",
-                6
+                9
             ],
             [
                 "hit",
-                80
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                11
+                85
             ],
             [
                 "exempt_from_dual_strike",
@@ -26622,20 +26606,12 @@
                 8
             ],
             [
-                "no_double",
-                null
-            ],
-            [
-                "status_after_combat_on_hit",
-                "Paralysis"
-            ],
-            [
                 "mana_cost_as_uses",
                 null
             ],
             [
-                "no_equip",
-                null
+                "status_on_equip",
+                "Paralysis_attack"
             ]
         ]
     },
@@ -26682,7 +26658,7 @@
     {
         "nid": "Bikini_Armor",
         "name": "Bikini Armor",
-        "desc": "<green>[Nalili synergy]</> Hilstara takes off some of her armor, making her more likely to dodge but increasing damage taken. Costs <blue>5 mana</>.",
+        "desc": "<green>[Nalili synergy]</> Hilstara follows Nalili's advice and takes off some of her armor, which somehow makes it better to resist magic. Doubles her RES but halves her DEF. Costs <blue>7 mana</>.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -26695,7 +26671,7 @@
             ],
             [
                 "mana_cost",
-                5
+                7
             ],
             [
                 "status_after_combat_on_hit",
