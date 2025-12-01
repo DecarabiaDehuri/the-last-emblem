@@ -2873,6 +2873,86 @@
         ]
     },
     {
+        "nid": "Peacocking_Rivalry",
+        "name": "Peacocking Rivalry",
+        "desc": "<green>[Antarion Synergy]</> Every time Antarion makes a flashy move, the Chosen tries to respond with something even more ridiculous. The Chosen gains mana after defeating an enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Chosen' for u in target_system.get_adj_units(game.get_unit('Antarion'))])"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "mana_on_kill",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Peacocking_Rivalry_pair",
+        "name": "Peacocking Rivalry",
+        "desc": "<green>[Antarion Synergy]</> Every time Antarion makes a flashy move, the Chosen tries to respond with something even more ridiculous. The Chosen gains mana after defeating an enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Chosen').traveler == 'Antarion'"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "mana_on_kill",
+                4
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Safe_Approach_merged",
         "name": "Safe Approach",
         "desc": "<green>[Simon Synergy]</> The Chosen has begrudgingly decided to hear Simon's advice for once. Unit has bonus damage when defending.",
@@ -3179,6 +3259,123 @@
         ]
     },
     {
+        "nid": "Reprimand",
+        "name": "Reprimand",
+        "desc": "<green>[Lucia Synergy]</> Simon and Lucia bond over the hardships of managing others' recklessness. When attacking, Simon has DEF% chance to inflict <red>[REPRIMANDED]</>: No movement for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Simonyoung' for u in target_system.get_adj_units(game.get_unit('Lucia'))])"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "proc_rate",
+                "DEFENSE"
+            ],
+            [
+                "attack_proc",
+                "Reprimand_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "Reprimand_pair",
+        "name": "Reprimand",
+        "desc": "<green>[Lucia Synergy]</> Simon and Lucia bond over the hardships of managing others' recklessness. When attacking, Simon has DEF% chance to inflict <red>[REPRIMANDED]</>: No movement for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Simonyoung').traveler == 'Lucia'"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "proc_rate",
+                "DEFENSE"
+            ],
+            [
+                "attack_proc",
+                "Reprimand_effect"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Reprimand_effect",
+        "name": "<red>[REPRIMANDED]</>",
+        "desc": "No movement for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            50
+        ],
+        "components": [
+            [
+                "time",
+                2
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Aptitude",
         "name": "Aptitude",
         "desc": "Unit has higher growths.",
@@ -3197,7 +3394,7 @@
     {
         "nid": "Revenge_Driven",
         "name": "Revenge Driven",
-        "desc": "While at less than half of MAX HP, Mira can double attack on defense.",
+        "desc": "While at less than half of MAX HP, Mira deals 20% more damage.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -3215,6 +3412,10 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "damage_multiplier",
+                1.2
             ]
         ]
     },
@@ -3305,6 +3506,74 @@
             ],
             [
                 "canto_plus",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Unintentional_Boost",
+        "name": "Unintentional Boost",
+        "desc": "<green>[Safado synergy]</> Safado lectures Mira about letting go of anger\u2026 listing every single awful thing the Incubus King ever did. Mira emerges shaking with rage and motivation. Mira heals HP after defeating an enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            50
+        ],
+        "components": [
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "heal_on_kill",
+                10
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Unintentional_Boost_pair",
+        "name": "Unintentional Boost",
+        "desc": "<green>[Safado synergy]</> Safado lectures Mira about letting go of anger\u2026 listing every single awful thing the Incubus King ever did. Mira emerges shaking with rage and motivation. Mira heals HP after defeating an enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            50
+        ],
+        "components": [
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "heal_on_kill",
+                10
+            ],
+            [
+                "class_skill",
                 null
             ],
             [
@@ -3613,6 +3882,96 @@
             [
                 "regeneration",
                 0.30000000000000004
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Shield",
+        "name": "Burning Shield",
+        "desc": "<green>[Rosa synergy]</> Rosa enchants Duro's shield with an arcane barrier, though Duro dislikes how hot it becomes. Duro has increased RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "condition",
+                "Falseaany([u.nid == 'Duro' for u in target_system.get_adj_units(game.get_unit('Rosa'))])"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Shield_pair",
+        "name": "Burning Shield",
+        "desc": "<green>[Rosa synergy]</> Rosa enchants Duro's shield with an arcane barrier, though Duro dislikes how hot it becomes. Duro has increased RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "condition",
+                "u('Duro').traveler == 'Rosa'"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -4069,6 +4428,78 @@
         ]
     },
     {
+        "nid": "Comforting_Anchor",
+        "name": "Comforting Anchor",
+        "desc": "<green>[Simon synergy]</> Even when chaos erupts, Simon keeps cool. Monica draws strength from that stillness. Monica can't be doubled.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            44
+        ],
+        "components": [
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Monica' for u in target_system.get_adj_units(game.get_unit('Simonyoung'))])"
+            ],
+            [
+                "defense_speed",
+                999
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Comforting_Anchor_pair",
+        "name": "Comforting Anchor",
+        "desc": "<green>[Simon synergy]</> Even when chaos erupts, Simon keeps cool. Monica draws strength from that stillness. Monica can't be doubled.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            44
+        ],
+        "components": [
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "condition",
+                "u('Monica').traveler == 'Simonyoung'"
+            ],
+            [
+                "defense_speed",
+                999
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Flashy_Strike_beta",
         "name": "Flashy Strike beta",
         "desc": "Antarion can use his special attack <green>Flashy Strike</>. It most certainly defeats any enemy with one strike.",
@@ -4109,68 +4540,6 @@
             [
                 "grey_if_inactive",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Attention_Is_All_You_Need",
-        "name": "Attention Is All You Need",
-        "desc": "<green>[Milena Synergy]</>. Nothing makes Antarion happier than the gaze of a beautiful lady. Antarion heals adjacent allies 50% of damage dealt.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            37
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Antarion' for u in target_system.get_adj_units(game.get_unit('Milena'))])"
-            ],
-            [
-                "ally_lifelink",
-                0.5
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ],
-            [
-                "skill_tags",
-                [
-                    "Synergy"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Attention_Is_All_You_Need_pair",
-        "name": "Attention Is All You Need",
-        "desc": "<green>[Milena Synergy]</>. Nothing makes Antarion happier than the gaze of a beautiful lady. Antarion heals adjacent allies 50% of damage dealt.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            37
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "u('Antarion').traveler == 'Milena'"
-            ],
-            [
-                "ally_lifelink",
-                0.5
             ]
         ]
     },
@@ -4309,6 +4678,10 @@
                     "lost_on_splash": true,
                     "only_if_initiated": false
                 }
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -4337,26 +4710,6 @@
             [
                 "combat_condition",
                 "unit2.team == 'enemy' or unit2.team == 'enemy2'"
-            ]
-        ]
-    },
-    {
-        "nid": "Clutch_King",
-        "name": "Clutch King",
-        "desc": "Antarion gains more crit damage the less health he has.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            32
-        ],
-        "components": [
-            [
-                "eval_crit_additional",
-                "10 if (unit.get_hp() / unit.get_max_hp()) <= 0.1 else int((1 - (unit.get_hp() / unit.get_max_hp())) * 10)"
-            ],
-            [
-                "class_skill",
-                null
             ]
         ]
     },
@@ -4393,6 +4746,314 @@
             ],
             [
                 "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Clutch_King",
+        "name": "Clutch King",
+        "desc": "Antarion gains more AVOID the less health he has.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            32
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "eval_avoid",
+                "eval:((10 * (1 - (unit.get_hp() / unit.get_max_hp()))) if (unit.get_hp() / unit.get_max_hp()) >= 0.1 else 10)\n"
+            ]
+        ]
+    },
+    {
+        "nid": "Powerful_Headcanon",
+        "name": "Powerful Headcanon",
+        "desc": "<green>[Monica synergy]</> Antarion sees admiration for his form in Monica's face, as he is unable to truly read women's expressions. Antarion heals adjacent allies 50% of damage dealt.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "ally_lifelink",
+                0.5
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Antarion' for u in target_system.get_adj_units(game.get_unit('Monica'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Powerful_Headcanon_pair",
+        "name": "Poweful Headcanon",
+        "desc": "<green>[Monica synergy]</> Antarion sees admiration for his form in Monica's face, as he is unable to truly read women's expressions. Antarion heals adjacent allies 50% of damage dealt.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "ally_lifelink",
+                0.5
+            ],
+            [
+                "condition",
+                "u('Antarion').traveler == 'Monica'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Attention_Is_All_You_Need",
+        "name": "Attention Is All You Need",
+        "desc": "<green>[Milena Synergy]</>. Antarion misunderstands Milena's curiosity for passionate admiration. Antarion has better crit chance on his second strike in a combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Antarion' for u in target_system.get_adj_units(game.get_unit('Milena'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "pcc_static",
+                1.5000000000000004
+            ]
+        ]
+    },
+    {
+        "nid": "Attention_Is_All_You_Need_pair",
+        "name": "Attention Is All You Need",
+        "desc": "<green>[Milena Synergy]</>. Nothing makes Antarion happier than the gaze of a beautiful lady. ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            37
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "u('Antarion').traveler == 'Milena'"
+            ],
+            [
+                "ally_lifelink",
+                0.5
+            ],
+            [
+                "pcc_static",
+                1.5000000000000004
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Advance",
+        "name": "Burning Advance",
+        "desc": "<green>[Rosa Synergy]</>. Rosa kindly sets Cassian's weapons ablaze. Cassian has a chance to inflict <red>[BURNED]</> on his attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            25
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Cassian' for u in target_system.get_adj_units(game.get_unit('Rosa'))])"
+            ],
+            [
+                "attack_proc",
+                "Hot_Business_proc"
+            ],
+            [
+                "proc_rate",
+                "PROCSTATUS"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Advance_pair",
+        "name": "Burning Advance",
+        "desc": "<green>[Rosa Synergy]</>. Rosa kindly sets Cassian's weapons ablaze. Cassian has LUK% chance to inflict <red>[BURNED]</> on his attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            25
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "u('Cassian').traveler == 'Rosa'"
+            ],
+            [
+                "attack_proc",
+                "Hot_Business_proc"
+            ],
+            [
+                "proc_rate",
+                "CRIT_AVOID"
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Motive",
+        "name": "Pure Motive",
+        "desc": "<green>[Mira Synergy]</>. Cassian doesn't really get Mira's actions, but he feels her sadness and wants to make her smile again. Cassian has bonuts accuracy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            39
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Cassian' for u in target_system.get_adj_units(game.get_unit('Mira'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "hit",
+                30
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Motive_pair",
+        "name": "Pure Motive",
+        "desc": "<green>[Mira Synergy]</>. Cassian doesn't really get Mira's actions, but he feels her sadness and wants to make her smile again. Cassian has bonuts accuracy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            39
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Cassian').traveler == 'Mira'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hit",
+                30
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -4480,79 +5141,9 @@
         ]
     },
     {
-        "nid": "Burning_Advance",
-        "name": "Burning Advance",
-        "desc": "<green>[Rosa Synergy]</>. Rosa kindly sets Cassian's weapons ablaze. Cassian has a chance to inflict <red>[BURNED]</> on his attacks.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            25
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Cassian' for u in target_system.get_adj_units(game.get_unit('Rosa'))])"
-            ],
-            [
-                "attack_proc",
-                "Hot_Business_proc"
-            ],
-            [
-                "proc_rate",
-                "PROCSTATUS"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ],
-            [
-                "skill_tags",
-                [
-                    "Synergy"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Burning_Advance_pair",
-        "name": "Burning Advance",
-        "desc": "<green>[Rosa Synergy]</>. Rosa kindly sets Cassian's weapons ablaze. Cassian has LUK% chance to inflict <red>[BURNED]</> on his attacks.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            25
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "u('Cassian').traveler == 'Rosa'"
-            ],
-            [
-                "attack_proc",
-                "Hot_Business_proc"
-            ],
-            [
-                "proc_rate",
-                "CRIT_AVOID"
-            ]
-        ]
-    },
-    {
         "nid": "Defiant_Strike",
         "name": "Defiant Strike",
-        "desc": "For the first 3 combats this chapter, Cassian has incrased defense when attacking.",
+        "desc": "For the first 3 combats this chapter, Cassian has increased defense when attacking.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -4576,7 +5167,7 @@
     {
         "nid": "Defiant_Strike_buff",
         "name": "Defiant Strike",
-        "desc": "",
+        "desc": "Reduced damage taken.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -4586,6 +5177,10 @@
             [
                 "resist",
                 5
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -4822,10 +5417,6 @@
                 "Make_way_ability"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "unit_anim",
                 "synergy"
             ],
@@ -4834,6 +5425,10 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -4858,6 +5453,82 @@
             [
                 "ability",
                 "Make_way_ability"
+            ]
+        ]
+    },
+    {
+        "nid": "Encouraging_Mistakes",
+        "name": "Encouraging Mistakes",
+        "desc": "<green>[Cassian Synergy]</>. Cassian tries to make Lucia proud by showing her \"cool lance moves\", all absolutely flawed. She corrects him, but is proud nevertheless. Lucia can double attack on defense.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            48
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Lucia' for u in target_system.get_adj_units(game.get_unit('Cassian'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "can_double_on_defense",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Encouraging_Mistakes_pair",
+        "name": "Encouraging Mistakes",
+        "desc": "<green>[Cassian Synergy]</>. Cassian tries to make Lucia proud by showing her \"cool lance moves\", all absolutely flawed. She corrects him, but is proud nevertheless. Lucia can double attack on defense.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            48
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Lucia').traveler == 'Cassian'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "can_double_on_defense",
+                null
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -4925,10 +5596,6 @@
                 "Flashy_Escape_ability"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "unit_anim",
                 "synergy"
             ],
@@ -4937,6 +5604,10 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -4957,6 +5628,86 @@
             [
                 "ability",
                 "Flashy_Escape_ability"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flustered_Focus",
+        "name": "Flustered Focus",
+        "desc": "<green>[Milena Synergy]</> Safado is so afraid of a possible sexual tension with Milena that he gets pathetically anxious near her. Even enemies pity him. After combat with an enemy, Safado's target takes damage equal to 20% of their max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            44
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Safado' for u in target_system.get_adj_units(game.get_unit('Milena'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "post_combat_damage_percent",
+                0.2
+            ],
+            [
+                "combat_condition",
+                "target.team != 'player'"
+            ]
+        ]
+    },
+    {
+        "nid": "Flustered_Focus_pair",
+        "name": "Flustered Focus",
+        "desc": "<green>[Milena Synergy]</> Safado is so afraid of a possible sexual tension with Milena that he gets pathetically anxious near her. Even enemies pity him. After combat with an enemy, Safado's target takes damage equal to 20% of their max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            44
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Safado').traveler == 'Milena'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "post_combat_damage_percent",
+                0.2
             ],
             [
                 "hidden",
@@ -5543,7 +6294,7 @@
     {
         "nid": "Firewall_v2",
         "name": "Firewall",
-        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Costs <blue>6 mana</>.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
+        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -5564,7 +6315,7 @@
             ],
             [
                 "cost_mana",
-                6
+                5
             ]
         ]
     },
@@ -5595,7 +6346,7 @@
     {
         "nid": "Cozy_Warmth",
         "name": "Cozy Warmth",
-        "desc": "While Rosa is standing on a <red>Firewall</> and equipping <red>Fire</> magic, +2 to all stats and CRIT greatly increased.",
+        "desc": "While Rosa is standing on a <red>Firewall</>, Rosa has bonus CRIT and regenerates 2 mana at the end of her turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -5611,53 +6362,16 @@
                 null
             ],
             [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        2
-                    ],
-                    [
-                        "MAG",
-                        2
-                    ],
-                    [
-                        "SKL",
-                        2
-                    ],
-                    [
-                        "LCK",
-                        2
-                    ],
-                    [
-                        "SPD",
-                        2
-                    ],
-                    [
-                        "DEF",
-                        2
-                    ],
-                    [
-                        "RES",
-                        2
-                    ],
-                    [
-                        "CON",
-                        2
-                    ],
-                    [
-                        "MOV",
-                        2
-                    ]
-                ]
-            ],
-            [
                 "class_skill",
                 null
             ],
             [
                 "crit",
-                30
+                20
+            ],
+            [
+                "mana_regeneration",
+                2
             ]
         ]
     },
@@ -5850,68 +6564,6 @@
         ]
     },
     {
-        "nid": "Fast_Fire",
-        "name": "Fast Fire",
-        "desc": "<green>[Cassjan Synergy]</>. Rosa learned with Cassian that, sometimes, it's better to act quick and think later. Rosa has increased attack speed.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            42
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Rosa' for u in target_system.get_adj_units(game.get_unit('Cassian'))])"
-            ],
-            [
-                "attack_speed",
-                10
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ],
-            [
-                "skill_tags",
-                [
-                    "Synergy"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Fast_Fire_pair",
-        "name": "Fast Fire",
-        "desc": "<green>[Cassjan Synergy]</>. Rosa learned with Cassian that, sometimes, it's better to act quick and think later. Rosa has increased attack speed.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            42
-        ],
-        "components": [
-            [
-                "condition",
-                "u('Rosa').traveler == 'Cassian'"
-            ],
-            [
-                "attack_speed",
-                10
-            ],
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Fan_the_Flames",
         "name": "Fan the Flames",
         "desc": "Some people just want to watch the world burn. Rosa has bonus damage and damage reduction against <red>[BURNED]</> enemies.",
@@ -6049,6 +6701,144 @@
         ]
     },
     {
+        "nid": "Fast_Fire",
+        "name": "Fast Fire",
+        "desc": "<green>[Cassian Synergy]</>. Rosa learned with Cassian that, sometimes, it's better to act quick and think later. Rosa has increased attack speed.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Rosa' for u in target_system.get_adj_units(game.get_unit('Cassian'))])"
+            ],
+            [
+                "attack_speed",
+                10
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fast_Fire_pair",
+        "name": "Fast Fire",
+        "desc": "<green>[Cassjan Synergy]</>. Rosa learned with Cassian that, sometimes, it's better to act quick and think later. Rosa has increased attack speed.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            42
+        ],
+        "components": [
+            [
+                "condition",
+                "u('Rosa').traveler == 'Cassian'"
+            ],
+            [
+                "attack_speed",
+                10
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Fireworks",
+        "name": "Heroic Fireworks",
+        "desc": "<green>[Chosen Synergy]</>. The Chosen usually begs Rosa for her to use fire magic as a spectacle for his entrance. While standing on a <red>Firewall</>, Rosa can use Heroic Fireworks: deals damage to enemies around her. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Rosa' for u in target_system.get_adj_units(game.get_unit('Chosen'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "FireStorm_Rosa"
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Fireworks_pair",
+        "name": "Heroic Fireworks",
+        "desc": "<green>[Chosen Synergy]</>. The Chosen usually begs Rosa for her to use fire magic as a spectacle for his entrance. While standing on a <red>Firewall</>, Rosa can use Heroic Fireworks: deals damage to enemies around her. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Rosa').traveler == 'Chosen'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "FireStorm_Rosa"
+            ]
+        ]
+    },
+    {
         "nid": "Post_Nut_Prayer",
         "name": "Post Nut Prayer",
         "desc": "<green>[Monica Synergy]</>. Milena learned from Monica the relaxing effect of spiritual pursuit. When dancing, also grants the ally <green>[PNP]</>.\n<green>[PNP]</>: Unit has bonus attack and defense speed.",
@@ -6139,10 +6929,72 @@
                     212,
                     88
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Waggish_Reassurance",
+        "name": "Waggish Reassurance",
+        "desc": "<green>[Duro Synergy]</> Duro jokes with Milena without fear or prejudice, which she finds endearing. Milena receives 20% less damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            52
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.7999999999999999
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Milena' for u in target_system.get_adj_units(game.get_unit('Duro'))])"
             ],
             [
                 "unit_anim",
-                "MapFlying"
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Waggish_Reassurance_pair",
+        "name": "Waggish Reassurance",
+        "desc": "<green>[Duro Synergy]</> Duro jokes with Milena without fear or prejudice, which she finds endearing. Milena receives 20% less damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            52
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.7999999999999999
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Milena').traveler == 'Duro'"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -16361,6 +17213,108 @@
         "components": [
             [
                 "unselectable",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "synergy_adj",
+        "name": "synergy adj",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "condition",
+                "any([u.nid == 'Cassian' for u in target_system.get_adj_units(game.get_unit('Lucia'))])"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "synergy_pair",
+        "name": "synergy pair",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "condition",
+                "u('Cassian').traveler == 'Lucia'"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "synergy_both",
+        "name": "synergy pair",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "{eval:(game.get_unit('Cassian') and game.get_unit('Lucia') and (any(u.nid=='Lucia' for u in target_system.get_adj_units(game.get_unit('Cassian'))) or game.get_unit('Cassian').traveler=='Lucia' or game.get_unit('Lucia').traveler=='Cassian'))}"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "class_skill",
                 null
             ]
         ]

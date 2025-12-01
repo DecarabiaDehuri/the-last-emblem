@@ -18515,7 +18515,7 @@
     {
         "nid": "Firewall_ability_v2",
         "name": "Firewall",
-        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Costs <blue>6 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
+        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start of unit's turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -18540,7 +18540,7 @@
             ],
             [
                 "mana_cost",
-                6
+                5
             ],
             [
                 "map_cast_sfx",
@@ -18565,6 +18565,143 @@
             [
                 "mana_cost_as_uses",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "FireStorm_Rosa",
+        "name": "Heroic Fireworks",
+        "desc": "<green>[Chosen synergy]</> Rosa deals damage to enemies around her. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            42
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Wyrmsfire"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            -1
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -2,
+                            0
+                        ],
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            0
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Explosion7"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
             ]
         ]
     },
