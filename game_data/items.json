@@ -137,13 +137,51 @@
         ]
     },
     {
+        "nid": "ArcaneSpells_Altina",
+        "name": "Arcane Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "ArcaneFire",
+                    "ArcaneLightning",
+                    "ArcaneIce",
+                    "ArcanePoison",
+                    "AreaSpells"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "AreaSpells",
         "name": "Area Spells",
         "desc": "",
         "icon_nid": "skill_icons",
         "icon_index": [
-            6,
-            2
+            15,
+            39
         ],
         "components": [
             [
@@ -151,9 +189,7 @@
                 [
                     "FireStorm",
                     "LightningStorm",
-                    "IceStorm",
-                    "Quake",
-                    "PoisonStorm"
+                    "IceStorm"
                 ]
             ],
             [
@@ -171,11 +207,11 @@
     {
         "nid": "FireStorm",
         "name": "Fire Storm",
-        "desc": "",
-        "icon_nid": "Anima",
+        "desc": "Engulfs an area with flames. Considerable damage. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            9,
+            39
         ],
         "components": [
             [
@@ -196,11 +232,11 @@
             ],
             [
                 "damage",
-                4
+                12
             ],
             [
                 "hit",
-                90
+                70
             ],
             [
                 "level_exp",
@@ -288,11 +324,11 @@
     {
         "nid": "LightningStorm",
         "name": "Lightning Storm",
-        "desc": "",
-        "icon_nid": "Anima",
+        "desc": "Calls upon a sequence of thunders. Critical chance. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            1
+            10,
+            39
         ],
         "components": [
             [
@@ -313,7 +349,7 @@
             ],
             [
                 "damage",
-                4
+                5
             ],
             [
                 "hit",
@@ -391,17 +427,21 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "crit",
+                15
             ]
         ]
     },
     {
         "nid": "IceStorm",
         "name": "Ice Storm",
-        "desc": "",
-        "icon_nid": "Anima",
+        "desc": "Summons an agonizing ice storm. Guaranteed to hit. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            4
+            13,
+            39
         ],
         "components": [
             [
@@ -422,11 +462,7 @@
             ],
             [
                 "damage",
-                4
-            ],
-            [
-                "hit",
-                90
+                8
             ],
             [
                 "level_exp",
@@ -514,11 +550,11 @@
     {
         "nid": "Quake",
         "name": "Quake",
-        "desc": "",
+        "desc": "Invokes an earthquake between Altina and the target, damaging each enemy on its line. Costs <blue>15 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
-            49
+            12,
+            39
         ],
         "components": [
             [
@@ -539,7 +575,7 @@
             ],
             [
                 "damage",
-                6
+                10
             ],
             [
                 "hit",
@@ -590,11 +626,11 @@
     {
         "nid": "PoisonStorm",
         "name": "Poison Storm",
-        "desc": "",
-        "icon_nid": "Anima",
+        "desc": "Curses the air around the target with a poison effect. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            5
+            11,
+            39
         ],
         "components": [
             [
@@ -615,7 +651,7 @@
             ],
             [
                 "damage",
-                1
+                3
             ],
             [
                 "hit",
@@ -658,36 +694,36 @@
                             0
                         ],
                         [
-                            -2,
+                            1,
                             -1
                         ],
                         [
-                            2,
+                            0,
                             -1
                         ],
                         [
-                            2,
-                            1
-                        ],
-                        [
-                            -2,
-                            1
+                            -1,
+                            -1
                         ],
                         [
                             -1,
-                            -2
-                        ],
-                        [
-                            1,
-                            -2
-                        ],
-                        [
-                            1,
-                            2
+                            0
                         ],
                         [
                             -1,
-                            2
+                            1
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            0
                         ]
                     ],
                     "target": "enemy",
@@ -709,11 +745,42 @@
                 ]
             ],
             [
-                "eval_available",
-                "any(u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Altina')))"
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DivineSpells_dmg_Altina",
+        "name": "Divine Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            29
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
             ],
             [
-                "mana_cost_as_uses",
+                "multi_item",
+                [
+                    "DivineLightning",
+                    "DivineShine"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
                 null
             ]
         ]
@@ -989,13 +1056,7 @@
                 "multi_item",
                 [
                     "DivineHeal",
-                    "DivineRestore",
-                    "DivineMend",
-                    "DivinePhysic",
-                    "DivineFortify",
-                    "DivineLightning",
-                    "DivineShine",
-                    "DivineSpells_Monica"
+                    "DivineRestore"
                 ]
             ],
             [
@@ -1069,6 +1130,10 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
             ]
         ]
     },
@@ -1133,6 +1198,47 @@
             [
                 "weapon_rank",
                 "D"
+            ],
+            [
+                "battle_cast_anim",
+                "Restore"
+            ]
+        ]
+    },
+    {
+        "nid": "DivineSpells_T2",
+        "name": "Divine Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            29
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "DivineHeal",
+                    "DivineRestore",
+                    "DivineMend",
+                    "DivineFortify"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
             ]
         ]
     },
@@ -1197,6 +1303,10 @@
             [
                 "weapon_rank",
                 "C"
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
             ]
         ]
     },
@@ -1259,12 +1369,119 @@
                 null
             ],
             [
-                "weapon_rank",
-                "B"
-            ],
-            [
                 "ally_equation_blast_aoe",
                 "MAGIC_RANGE"
+            ]
+        ]
+    },
+    {
+        "nid": "DivineSpells_dmg",
+        "name": "Divine Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            29
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "DivineLightning",
+                    "DivineShine"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DivineLightning",
+        "name": "Smite",
+        "desc": "Hits an enemy with basic divine magic. Costs <blue>2 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            32
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "mana_cost",
+                2
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -1341,7 +1558,6 @@
             [
                 "prf_class",
                 [
-                    "Ivalan_Mage",
                     "Bishop",
                     "High_Priestess"
                 ]
@@ -1406,88 +1622,6 @@
                 "prf_tags",
                 [
                     "Physic_scroll"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "DivineLightning",
-        "name": "Smite",
-        "desc": "Hits an enemy with basic divine magic. Costs <blue>2 mana</>.",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                95
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                6
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Light"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Shine"
-            ],
-            [
-                "mana_cost",
-                2
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "prf_tags",
-                [
-                    "Smite_scroll"
                 ]
             ]
         ]
@@ -2491,15 +2625,7 @@
                 [
                     "ArcaneFire",
                     "ArcaneLightning",
-                    "ArcaneIce",
-                    "ArcaneHeal",
-                    "ArcanePoison",
-                    "AreaSpells",
-                    "FireLance",
-                    "LightningLance",
-                    "IceLance",
-                    "HealingLance",
-                    "ArcaneBolting"
+                    "ArcaneIce"
                 ]
             ],
             [
@@ -2519,7 +2645,7 @@
     {
         "nid": "ArcaneFire",
         "name": "Fire",
-        "desc": "",
+        "desc": "Basic fire magic. Strong but unreliable. Costs <blue>1 mana</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2544,7 +2670,7 @@
             ],
             [
                 "damage",
-                7
+                8
             ],
             [
                 "hit",
@@ -2552,7 +2678,7 @@
             ],
             [
                 "crit",
-                5
+                1
             ],
             [
                 "weight",
@@ -2580,7 +2706,7 @@
             ],
             [
                 "mana_cost",
-                2
+                1
             ],
             [
                 "battle_cast_anim",
@@ -2595,7 +2721,7 @@
     {
         "nid": "ArcaneLightning",
         "name": "Lightning",
-        "desc": "",
+        "desc": "Basic lightning magic. Weak but high chance of critical. Costs <blue>1 mana</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2620,7 +2746,7 @@
             ],
             [
                 "damage",
-                4
+                5
             ],
             [
                 "hit",
@@ -2656,7 +2782,7 @@
             ],
             [
                 "mana_cost",
-                2
+                1
             ],
             [
                 "battle_cast_anim",
@@ -2671,7 +2797,7 @@
     {
         "nid": "ArcaneIce",
         "name": "Ice",
-        "desc": "",
+        "desc": "Basic ice magic. Medium damage, can't double or be doubled. Costs <blue>1 mana</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2696,11 +2822,11 @@
             ],
             [
                 "damage",
-                4
+                5
             ],
             [
                 "hit",
-                110
+                95
             ],
             [
                 "crit",
@@ -2732,7 +2858,7 @@
             ],
             [
                 "mana_cost",
-                2
+                1
             ],
             [
                 "battle_cast_anim",
@@ -2741,6 +2867,10 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "status_on_equip",
+                "Wary_Fighter_ice"
             ]
         ]
     },
@@ -2807,7 +2937,7 @@
     {
         "nid": "ArcanePoison",
         "name": "Poison",
-        "desc": "Enemy cannot move or attack.",
+        "desc": "Deals magic damage and poisons the enemy on hit. Costs <blue>5 mana</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2815,7 +2945,7 @@
         ],
         "components": [
             [
-                "weapon",
+                "spell",
                 null
             ],
             [
@@ -2831,6 +2961,10 @@
                 1
             ],
             [
+                "max_range",
+                2
+            ],
+            [
                 "status_on_hit",
                 "Poisoned"
             ],
@@ -2840,15 +2974,7 @@
             ],
             [
                 "hit",
-                65
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "max_range",
-                1
+                70
             ],
             [
                 "level_exp",
@@ -2875,13 +3001,56 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "damage",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneSpells_T2",
+        "name": "Arcane Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "ArcaneFire",
+                    "ArcaneLightning",
+                    "ArcaneIce",
+                    "FireLance",
+                    "LightningLance",
+                    "IceLance"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
             ]
         ]
     },
     {
         "nid": "FireLance",
         "name": "Fire Lance",
-        "desc": "",
+        "desc": "Advanced fire magic. Strongest but unreliable. Costs <blue>4 mana</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2942,7 +3111,7 @@
             ],
             [
                 "mana_cost",
-                6
+                4
             ],
             [
                 "battle_cast_anim",
@@ -2957,7 +3126,7 @@
     {
         "nid": "LightningLance",
         "name": "Lightning Lance",
-        "desc": "",
+        "desc": "Advanced lightning magic. Weakest but highest chance of critical. Costs <blue>4 mana</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -3018,7 +3187,7 @@
             ],
             [
                 "mana_cost",
-                6
+                4
             ],
             [
                 "battle_cast_anim",
@@ -3033,7 +3202,7 @@
     {
         "nid": "IceLance",
         "name": "Ice Lance",
-        "desc": "",
+        "desc": "Advanced ice magic. Medium damage, highest precision, can't double or be doubled. Costs <blue>4 mana</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -3046,7 +3215,7 @@
             ],
             [
                 "hit",
-                130
+                150
             ],
             [
                 "crit",
@@ -3103,6 +3272,10 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "status_on_equip",
+                "Wary_Fighter_ice"
             ]
         ]
     },
@@ -3259,14 +3432,7 @@
                 [
                     "Sexual_Torment",
                     "Succubus_Kiss",
-                    "Haze_of_Sex",
-                    "Illusion",
-                    "Flirt",
-                    "Doom_Kings_Emissary",
-                    "LustLuna",
-                    "LustEclipse",
-                    "LustFlux",
-                    "RialaSpells"
+                    "LustFlux"
                 ]
             ],
             [
@@ -3523,6 +3689,44 @@
             ],
             [
                 "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "LustSpells_T2",
+        "name": "Lust Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Sexual_Torment",
+                    "Succubus_Kiss",
+                    "LustFlux",
+                    "LustLuna",
+                    "LustEclipse"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
                 null
             ]
         ]
@@ -4710,7 +4914,9 @@
             ],
             [
                 "multi_item",
-                []
+                [
+                    "Healing_Kiss_Qum"
+                ]
             ],
             [
                 "unstealable",
@@ -4729,7 +4935,7 @@
     {
         "nid": "Healing_Kiss_Qum",
         "name": "Healing Kiss",
-        "desc": "Qum kisses and loves and healies! <blue>5 sparkles</>",
+        "desc": "Qum kisses and loves and healies! <blue>3 sparkles</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -4745,12 +4951,12 @@
                 "Dark"
             ],
             [
-                "heal",
-                20
-            ],
-            [
                 "target_ally",
                 null
+            ],
+            [
+                "equation_heal",
+                "HEALPLUS"
             ],
             [
                 "min_range",
@@ -4790,7 +4996,7 @@
             ],
             [
                 "mana_cost",
-                5
+                3
             ],
             [
                 "eval_target_restrict_2",
@@ -7510,7 +7716,12 @@
             [
                 "multi_item",
                 [
-                    "Summon_orc"
+                    "Summon_orc",
+                    "Summon_imp",
+                    "Summon_orc_elite",
+                    "Summon_imp_elite",
+                    "Summon_orc_thrower",
+                    "Summon_ogre"
                 ]
             ]
         ]
@@ -7580,70 +7791,6 @@
         ]
     },
     {
-        "nid": "Summon_orc_elite",
-        "name": "Summon elite orc",
-        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            29
-        ],
-        "components": [
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_sfx",
-                "Summon"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "SkillActivate"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Balia summon orc elite"
-            ],
-            [
-                "map_cast_anim",
-                "OverchargeAura"
-            ]
-        ]
-    },
-    {
         "nid": "Summon_imp",
         "name": "Summon imp",
         "desc": "Summons a weak imp. Costs <blue>5 mana</>.",
@@ -7704,6 +7851,78 @@
             [
                 "map_cast_anim",
                 "OverchargeAura"
+            ],
+            [
+                "eval_available",
+                "unit.level >= 2"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_orc_elite",
+        "name": "Summon elite orc",
+        "desc": "Summons an elite orc. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            29
+        ],
+        "components": [
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_sfx",
+                "Summon"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "SkillActivate"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Balia summon orc elite"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ],
+            [
+                "eval_available",
+                "unit.level >= 4"
             ]
         ]
     },
@@ -7768,6 +7987,10 @@
             [
                 "map_cast_anim",
                 "OverchargeAura"
+            ],
+            [
+                "eval_available",
+                "unit.level >= 6"
             ]
         ]
     },
@@ -7832,6 +8055,10 @@
             [
                 "map_cast_anim",
                 "OverchargeAura"
+            ],
+            [
+                "eval_available",
+                "unit.level >= 8"
             ]
         ]
     },
@@ -7896,6 +8123,10 @@
             [
                 "map_cast_anim",
                 "OverchargeAura"
+            ],
+            [
+                "eval_available",
+                "unit.level >= 10"
             ]
         ]
     },
@@ -11428,7 +11659,7 @@
             ],
             [
                 "hit",
-                80
+                90
             ],
             [
                 "weapon_type",
@@ -18193,8 +18424,8 @@
             [
                 "multi_item",
                 [
-                    "Soothing_Presence_effect",
-                    "Penitence"
+                    "DivineHeal",
+                    "DivineRestore"
                 ]
             ],
             [
@@ -19244,9 +19475,45 @@
         ]
     },
     {
+        "nid": "LustSpells_Milena",
+        "name": "Lust Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Sexual_Torment",
+                    "Succubus_Kiss",
+                    "LustFlux"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Dancing_Line",
         "name": "Dancing Line",
-        "desc": "",
+        "desc": "Milena selects an ally up to 5 tiles away. Any ally between Milena and their target is refreshed. Costs <blue> 20 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -19824,6 +20091,68 @@
         ]
     },
     {
+        "nid": "Aka_knife",
+        "name": "Aka's custom knife",
+        "desc": "A dagger personally made for Aka. Enhances her overall battle stats.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            12
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                9
+            ],
+            [
+                "weight",
+                2
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Aka"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Aka_knife_boost"
+            ]
+        ]
+    },
+    {
         "nid": "Sneaky_Stabs",
         "name": "Sneaky Stabs",
         "desc": "Aka can use a variety of special stabs.",
@@ -19847,7 +20176,7 @@
             ],
             [
                 "max_range",
-                0
+                1
             ],
             [
                 "min_range",
@@ -19859,18 +20188,14 @@
             ],
             [
                 "multi_item",
-                [
-                    "Blinding_Stab",
-                    "Crippling_Stab",
-                    "Disabling_Assault"
-                ]
+                []
             ]
         ]
     },
     {
-        "nid": "Blinding_Stab",
-        "name": "Blinding Stab",
-        "desc": "Blinds an opponent.\n<blue>5 mana.</>",
+        "nid": "Piercing_Stab",
+        "name": "Piercing Stab",
+        "desc": "Aka attacks the target, inflicting <red>[PIERCED]</> if it hits. Costs <blue>5 mana</>. <red>[PIERCED]</>: Unit loses 5 DEF.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -19887,7 +20212,7 @@
             ],
             [
                 "min_range",
-                0
+                1
             ],
             [
                 "max_range",
@@ -19899,11 +20224,7 @@
             ],
             [
                 "hit",
-                70
-            ],
-            [
-                "weight",
-                7
+                65
             ],
             [
                 "level_exp",
@@ -19915,7 +20236,7 @@
             ],
             [
                 "status_on_hit",
-                "Blinded"
+                "Pierced"
             ],
             [
                 "mana_cost",
@@ -19924,16 +20245,20 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
             ]
         ]
     },
     {
-        "nid": "Crippling_Stab",
-        "name": "Crippling Stab",
-        "desc": "Slows an opponent.\n<blue>5 mana.</>",
+        "nid": "Disconcerting_Stab",
+        "name": "Disconcerting Stab",
+        "desc": "Aka attacks the target, inflicting <red>[DISCONCERTED]</> if it hits. Costs <blue>5 mana</>. <red>[DISCONCERTED]</>: Unit loses 5 MAG.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            2,
+            6,
             23
         ],
         "components": [
@@ -19947,7 +20272,7 @@
             ],
             [
                 "min_range",
-                0
+                1
             ],
             [
                 "max_range",
@@ -19959,11 +20284,7 @@
             ],
             [
                 "hit",
-                70
-            ],
-            [
-                "weight",
-                7
+                65
             ],
             [
                 "level_exp",
@@ -19975,7 +20296,7 @@
             ],
             [
                 "status_on_hit",
-                "Blinded"
+                "Disconcerted"
             ],
             [
                 "mana_cost",
@@ -19984,13 +20305,17 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
             ]
         ]
     },
     {
-        "nid": "Disabling_Assault",
-        "name": "Disabling_Assault",
-        "desc": "Disables an opponent.\n<blue>5 mana.</>",
+        "nid": "Weakening_Stab",
+        "name": "Weakening Stab",
+        "desc": "Aka attacks the target, inflicting <red>[WEAKENED]</> if it hits. Costs <blue>5 mana</>. <red>[WEAKENED]</>: Unit loses 5 STR.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -20007,7 +20332,7 @@
             ],
             [
                 "min_range",
-                0
+                1
             ],
             [
                 "max_range",
@@ -20019,11 +20344,127 @@
             ],
             [
                 "hit",
-                70
+                65
             ],
             [
-                "weight",
-                7
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "status_on_hit",
+                "Weakened"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Crippling_Stab",
+        "name": "Crippling Stab",
+        "desc": "Aka attacks the target, inflicting <red>[SLOWED]</> if it hits. Costs <blue>5 mana</>. <red>[SLOWED]</>: Unit loses 5 SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            23
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                65
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "status_on_hit",
+                "Slowed"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Stab",
+        "name": "Blinding Stab",
+        "desc": "Aka attacks the target, inflicting <red>[BLIND]</> if it hits. Costs <blue>10 mana</>. <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            23
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                65
             ],
             [
                 "level_exp",
@@ -20039,10 +20480,253 @@
             ],
             [
                 "mana_cost",
-                5
+                10
             ],
             [
                 "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Lunge",
+        "name": "Forceful Lunge",
+        "desc": "A powerful attack with greater critical chance. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            44
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "crit",
+                15
+            ]
+        ]
+    },
+    {
+        "nid": "Disabling_Assault",
+        "name": "Disabling Assault",
+        "desc": "Aka attacks the target, inflicting <red>[DISABLED]</> if it hits. Costs <blue>15 mana</>. <red>[DISABLED]</>: -5 STR, MAG, SPD, DEF, RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            39
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                60
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "status_on_hit",
+                "Disabled"
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Deathblow",
+        "name": "Deathblow",
+        "desc": "Aka attacks the target, inflicting <red>[DEATHBLOW]</> if it hits. Costs <blue>20 mana</>. <red>[DEATHBLOW]</>: Unit dies on the next turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            35
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                60
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "status_on_hit",
+                "Deathblow_effect"
+            ],
+            [
+                "mana_cost",
+                20
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lethal_Intent",
+        "name": "Lethal Intent",
+        "desc": "Aka fully focuses on her killing intent, temporarily granting her bonus damage, HIT and CRIT. One use per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "CutinCrit"
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Lethal_Intent_effect"
+            ],
+            [
+                "attack_after_combat",
                 null
             ]
         ]
@@ -20050,7 +20734,7 @@
     {
         "nid": "Poisoned_Blade",
         "name": "Poisoned Blade",
-        "desc": "Aka poisons her blade, inflicting <red>[POISON]</> on her attack.\nCosts <blue>10 mana</>.",
+        "desc": "\nAka attacks the target, inflicting <red>[POISON]</> if it hits. Costs <blue>10 mana</>. <red>[POISON]</>: Unit randomly receives up to 5 damage per turn.\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -20091,10 +20775,511 @@
             ],
             [
                 "damage",
-                3
+                4
             ],
             [
                 "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flaming_Stab",
+        "name": "Flaming Stab",
+        "desc": "<green>[Robin synergy]</> Aka stabs the opponent with a <blue>magical</> stab. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Stab",
+        "name": "Pure Stab",
+        "desc": "<green>[Vhala synergy]</> Vhala enchants Aka's weapon with anti-lust properties. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            23
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type_exempt",
+                "Light"
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sexual_Stab",
+        "name": "Sexual Stab",
+        "desc": "<green>[Yarra synergy]</> Yarra enchants Aka's weapon with lust properties. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type_exempt",
+                "Dark"
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Healing_Hilt",
+        "name": "Healing Hilt",
+        "desc": "<green>[Uyae synergy]</> Aka learned from Uyae how to channel healing into her weapon's hilt. Heals an ally. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            37
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "heal",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Weakening_Assault",
+        "name": "Weakening Assault",
+        "desc": "<green>[Ginasta synergy]</> Weakens opponents' attack in an area. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            43
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "status_on_hit",
+                "Weakened"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            -1
+                        ],
+                        [
+                            1,
+                            -2
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            -1,
+                            -2
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            0
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            2,
+                            -1
+                        ],
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            1,
+                            2
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            -1,
+                            2
+                        ],
+                        [
+                            -2,
+                            2
+                        ],
+                        [
+                            -2,
+                            1
+                        ],
+                        [
+                            -2,
+                            0
+                        ],
+                        [
+                            -2,
+                            -1
+                        ],
+                        [
+                            -2,
+                            -2
+                        ],
+                        [
+                            2,
+                            -2
+                        ],
+                        [
+                            2,
+                            1
+                        ],
+                        [
+                            2,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "target_tile",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flourished_Flurry",
+        "name": "Flourished Flurry",
+        "desc": "<green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Aka moves to the other side of the target. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            46
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Weapon Click"
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Aka flourished flurry"
+            ],
+            [
+                "never_use_battle_animation",
+                null
+            ],
+            [
+                "pivot",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Flourished_Flurries_helper",
+        "name": "Flourished_Flurries",
+        "desc": "<green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            46
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "exempt_from_dual_strike",
                 null
             ]
         ]
@@ -20257,13 +21442,7 @@
                 "multi_item",
                 [
                     "DivineHeal",
-                    "DivineRestore",
-                    "DivineMend",
-                    "DivinePhysic",
-                    "DivineFortify",
-                    "DivineLightning",
-                    "DivineShine",
-                    "DivineSpells_Monica"
+                    "DivineRestore"
                 ]
             ],
             [

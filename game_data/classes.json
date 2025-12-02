@@ -306,7 +306,9 @@
             "Lancer",
             "Wanderer"
         ],
-        "tags": [],
+        "tags": [
+            "AutoPromote"
+        ],
         "max_level": 10,
         "bases": {
             "HP": 13,
@@ -2513,12 +2515,8 @@
         },
         "learned_skills": [
             [
-                1,
-                "Darting_Blow"
-            ],
-            [
                 5,
-                "Push_Skill"
+                "Darting_Blow"
             ],
             [
                 9,
@@ -3005,16 +3003,12 @@
         },
         "learned_skills": [
             [
-                1,
-                "Push_Strength"
-            ],
-            [
                 5,
                 "Certain_Counter"
             ],
             [
                 9,
-                "Warding_Blow"
+                "Armored_Blow"
             ]
         ],
         "wexp_gain": {
@@ -3821,16 +3815,12 @@
         },
         "learned_skills": [
             [
-                1,
+                5,
                 "Spur_Defense"
             ],
             [
-                5,
-                "Spur_Resistance"
-            ],
-            [
                 9,
-                "Spur_Strength"
+                "Spur_Resistance"
             ]
         ],
         "wexp_gain": {
@@ -3976,12 +3966,8 @@
         },
         "learned_skills": [
             [
-                1,
-                "Push_Defense"
-            ],
-            [
                 5,
-                "Push_Resistance"
+                "Push_Defense"
             ],
             [
                 9,
@@ -4148,11 +4134,11 @@
             ],
             [
                 5,
-                "Push_Speed"
+                "Spur_Speed"
             ],
             [
                 9,
-                "Darting_Counter"
+                "Push_Speed"
             ]
         ],
         "wexp_gain": {
@@ -4648,7 +4634,7 @@
             ],
             [
                 1,
-                "Shelter"
+                "Shelter_generic"
             ]
         ],
         "wexp_gain": {
@@ -4719,7 +4705,7 @@
             0
         ],
         "map_sprite_nid": "PegasusKnight",
-        "combat_anim_nid": null,
+        "combat_anim_nid": "Pegasus_Knight",
         "fields": []
     },
     {
@@ -4965,16 +4951,12 @@
         },
         "learned_skills": [
             [
-                1,
-                "Armored_Counter"
-            ],
-            [
                 5,
                 "Armored_Blow"
             ],
             [
                 9,
-                "Spur_Defense"
+                "Armored_Counter"
             ]
         ],
         "wexp_gain": {
@@ -5222,7 +5204,9 @@
             "Fighter",
             "Pirate"
         ],
-        "tags": [],
+        "tags": [
+            "AutoPromote"
+        ],
         "max_level": 10,
         "bases": {
             "HP": 14,
@@ -5443,16 +5427,12 @@
         },
         "learned_skills": [
             [
-                1,
+                5,
                 "Duelists_Parry"
             ],
             [
-                5,
-                "Push_Strength"
-            ],
-            [
                 9,
-                "Deadly_Counter"
+                "Push_Strength"
             ]
         ],
         "wexp_gain": {
@@ -5768,16 +5748,12 @@
         },
         "learned_skills": [
             [
-                1,
-                "Push_Speed"
-            ],
-            [
                 5,
-                "Certain_Blow"
+                "Push_Luck"
             ],
             [
                 9,
-                "Warding_Blow"
+                "Deadly_Blow"
             ]
         ],
         "wexp_gain": {
@@ -6092,16 +6068,12 @@
         },
         "learned_skills": [
             [
-                1,
-                "Spur_Strength"
-            ],
-            [
                 5,
-                "Deadly_Blow"
+                "Darting_Blow"
             ],
             [
                 9,
-                "Duelists_Blow"
+                "Push_Strength"
             ]
         ],
         "wexp_gain": {
@@ -6256,12 +6228,8 @@
         },
         "learned_skills": [
             [
-                1,
-                "Certain_Blow"
-            ],
-            [
                 5,
-                "Spur_Skill"
+                "Certain_Blow"
             ],
             [
                 9,
@@ -6744,16 +6712,12 @@
         },
         "learned_skills": [
             [
-                1,
-                "Spur_Luck"
-            ],
-            [
                 5,
                 "Push_Resistance"
             ],
             [
                 9,
-                "LustBreaker"
+                "Warding_Blow"
             ]
         ],
         "wexp_gain": {
@@ -6908,16 +6872,12 @@
         },
         "learned_skills": [
             [
-                3,
-                "Warding_Blow"
-            ],
-            [
                 5,
                 "Push_Resistance"
             ],
             [
                 9,
-                "Spur_Resistance"
+                "Warding_Blow"
             ]
         ],
         "wexp_gain": {
@@ -7071,10 +7031,6 @@
             "New Stat": 30
         },
         "learned_skills": [
-            [
-                3,
-                "Spur_Magic"
-            ],
             [
                 6,
                 "Spur_Skill"
@@ -7236,16 +7192,12 @@
         },
         "learned_skills": [
             [
-                1,
-                "Spur_Magic"
-            ],
-            [
                 5,
                 "Spur_Skill"
             ],
             [
                 9,
-                "Spur_Strength"
+                "Spur_Magic"
             ]
         ],
         "wexp_gain": {
@@ -7316,7 +7268,7 @@
             0
         ],
         "map_sprite_nid": "ClericMonica",
-        "combat_anim_nid": "ClericMonica",
+        "combat_anim_nid": "Priestess",
         "fields": []
     },
     {
@@ -7715,10 +7667,6 @@
             "New Stat": 30
         },
         "learned_skills": [
-            [
-                1,
-                "Spur_Resistance"
-            ],
             [
                 5,
                 "Warding_Counter"
@@ -8688,7 +8636,7 @@
             ],
             [
                 1,
-                "Shelter"
+                "Shelter_generic"
             ]
         ],
         "wexp_gain": {
@@ -12035,7 +11983,7 @@
         "learned_skills": [
             [
                 3,
-                "Armored_Counter"
+                "Spur_Defense"
             ],
             [
                 6,
@@ -12043,7 +11991,7 @@
             ],
             [
                 9,
-                "Spur_Defense"
+                "Armored_Counter"
             ]
         ],
         "wexp_gain": {
@@ -13897,12 +13845,12 @@
         },
         "learned_skills": [
             [
-                1,
+                2,
                 "Duelists_Blow"
             ],
             [
                 5,
-                "Spur_Skill"
+                "Duelists_Parry"
             ],
             [
                 9,
@@ -14357,16 +14305,12 @@
         },
         "learned_skills": [
             [
-                1,
-                "Stun_attack"
-            ],
-            [
                 5,
-                "SwordBreaker"
+                "AxeFaire"
             ],
             [
                 9,
-                "AxeFaire"
+                "SwordBreaker"
             ]
         ],
         "wexp_gain": {
@@ -14919,7 +14863,9 @@
         "tier": 1,
         "movement_group": "Fliers",
         "promotes_from": null,
-        "turns_into": [],
+        "turns_into": [
+            "Imp_Elite"
+        ],
         "tags": [
             "Flying",
             "Monster"
@@ -14996,7 +14942,7 @@
             ],
             [
                 9,
-                "Darting_Blow"
+                "Push_Speed"
             ]
         ],
         "wexp_gain": {
@@ -15150,7 +15096,7 @@
             ],
             [
                 5,
-                "Blind_attack"
+                "Darting_Blow"
             ],
             [
                 9,
@@ -15623,10 +15569,6 @@
             [
                 1,
                 "Lust_Death_attack"
-            ],
-            [
-                5,
-                "Push_Luck"
             ],
             [
                 9,
@@ -17256,7 +17198,7 @@
         ],
         "max_level": 20,
         "bases": {
-            "HP": 40,
+            "HP": 30,
             "STR": 9,
             "MAG": 16,
             "SKL": 12,
@@ -19187,7 +19129,7 @@
         "name": "Sovereign",
         "desc": "",
         "tier": 1,
-        "movement_group": null,
+        "movement_group": "Light Foot",
         "promotes_from": null,
         "turns_into": [],
         "tags": [],

@@ -11,14 +11,14 @@
             "Incubus"
         ],
         "bases": {
-            "HP": 25,
+            "HP": 28,
             "STR": 7,
             "MAG": 6,
             "SKL": 11,
             "SPD": 5,
             "LCK": 5,
             "DEF": 11,
-            "CON": 3,
+            "CON": 8,
             "MOV": 5,
             "RES": 8
         },
@@ -118,14 +118,14 @@
             "Female"
         ],
         "bases": {
-            "HP": 17,
+            "HP": 20,
             "STR": 9,
             "MAG": 6,
             "SKL": 14,
             "SPD": 15,
             "LCK": 10,
             "DEF": 4,
-            "CON": 2,
+            "CON": 7,
             "MOV": 6,
             "RES": 6
         },
@@ -154,8 +154,20 @@
                 "Sneaky_Stabs"
             ],
             [
-                3,
-                "Poisoned_Blade"
+                2,
+                "Piercing_Stab"
+            ],
+            [
+                4,
+                "Disconcerting_Stab"
+            ],
+            [
+                6,
+                "Weakening_Stab"
+            ],
+            [
+                8,
+                "Crippling_Stab"
             ]
         ],
         "unit_notes": [],
@@ -224,14 +236,14 @@
             "Female"
         ],
         "bases": {
-            "HP": 16,
+            "HP": 19,
             "STR": 6,
             "MAG": 8,
             "SKL": 10,
             "SPD": 10,
             "LCK": 5,
             "DEF": 4,
-            "CON": 0,
+            "CON": 5,
             "MOV": 5,
             "RES": 7
         },
@@ -340,14 +352,14 @@
             "Female"
         ],
         "bases": {
-            "HP": 10,
+            "HP": 13,
             "STR": 2,
             "MAG": 13,
             "SKL": 13,
             "SPD": 3,
             "LCK": 5,
             "DEF": 3,
-            "CON": 0,
+            "CON": 4,
             "MOV": 4,
             "RES": 5
         },
@@ -435,7 +447,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 10,
+            "HP": 13,
             "STR": 3,
             "MAG": 9,
             "SKL": 7,
@@ -443,7 +455,7 @@
             "LCK": 5,
             "DEF": 5,
             "RES": 12,
-            "CON": 3,
+            "CON": 7,
             "MOV": 5
         },
         "growths": {
@@ -468,11 +480,19 @@
         "learned_skills": [
             [
                 1,
+                "Ivala_Voice"
+            ],
+            [
+                4,
+                "Mass_Heal"
+            ],
+            [
+                7,
                 "Shield_of_Purity"
             ],
             [
-                5,
-                "Ivala_Voice"
+                10,
+                "Revive"
             ]
         ],
         "unit_notes": [],
@@ -542,7 +562,7 @@
             "Unpeople"
         ],
         "bases": {
-            "HP": 13,
+            "HP": 16,
             "STR": 4,
             "MAG": 2,
             "SKL": 12,
@@ -550,7 +570,7 @@
             "LCK": 12,
             "DEF": 5,
             "RES": 6,
-            "CON": 1,
+            "CON": 5,
             "MOV": 6
         },
         "growths": {
@@ -741,7 +761,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 30,
+            "HP": 33,
             "STR": 5,
             "MAG": 3,
             "SKL": 5,
@@ -749,7 +769,7 @@
             "LCK": 5,
             "DEF": 10,
             "RES": 4,
-            "CON": 5,
+            "CON": 10,
             "MOV": 4
         },
         "growths": {
@@ -863,7 +883,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 19,
+            "HP": 22,
             "STR": 3,
             "MAG": 3,
             "SKL": 10,
@@ -871,7 +891,7 @@
             "LCK": 10,
             "DEF": 4,
             "RES": 7,
-            "CON": 3,
+            "CON": 9,
             "MOV": 7
         },
         "growths": {
@@ -962,7 +982,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 15,
+            "HP": 18,
             "STR": 3,
             "MAG": 0,
             "SKL": 4,
@@ -1068,7 +1088,7 @@
             "LCK": 12,
             "DEF": 7,
             "RES": 8,
-            "CON": 3,
+            "CON": 11,
             "MOV": 6
         },
         "growths": {
@@ -1155,7 +1175,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 20,
+            "HP": 23,
             "STR": 8,
             "MAG": 4,
             "SKL": 10,
@@ -1163,7 +1183,7 @@
             "LCK": 9,
             "DEF": 6,
             "RES": 4,
-            "CON": 2,
+            "CON": 8,
             "MOV": 6
         },
         "growths": {
@@ -1271,7 +1291,7 @@
             "Monster"
         ],
         "bases": {
-            "HP": 20,
+            "HP": 27,
             "STR": 10,
             "MAG": 1,
             "SKL": 8,
@@ -1279,7 +1299,7 @@
             "LCK": 5,
             "DEF": 5,
             "RES": 1,
-            "CON": 4,
+            "CON": 12,
             "MOV": 5
         },
         "growths": {
@@ -1387,7 +1407,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 19,
+            "HP": 23,
             "STR": 5,
             "MAG": 7,
             "SKL": 8,
@@ -1395,7 +1415,7 @@
             "LCK": 7,
             "DEF": 5,
             "RES": 6,
-            "CON": 3,
+            "CON": 7,
             "MOV": 7
         },
         "growths": {
@@ -1494,7 +1514,7 @@
             "Succubus"
         ],
         "bases": {
-            "HP": 13,
+            "HP": 16,
             "STR": 5,
             "MAG": 10,
             "SKL": 5,
@@ -1502,7 +1522,7 @@
             "LCK": 10,
             "DEF": 1,
             "RES": 6,
-            "CON": 0,
+            "CON": 4,
             "MOV": 5
         },
         "growths": {
@@ -1607,7 +1627,7 @@
             "Succubus"
         ],
         "bases": {
-            "HP": 26,
+            "HP": 29,
             "STR": 5,
             "MAG": 11,
             "SKL": 15,
@@ -1615,7 +1635,7 @@
             "LCK": 10,
             "DEF": 7,
             "RES": 7,
-            "CON": 1,
+            "CON": 6,
             "MOV": 5
         },
         "growths": {
@@ -1722,7 +1742,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 17,
+            "HP": 20,
             "STR": 3,
             "MAG": 8,
             "SKL": 10,
@@ -1730,7 +1750,7 @@
             "LCK": 5,
             "DEF": 6,
             "RES": 9,
-            "CON": 1,
+            "CON": 6,
             "MOV": 5
         },
         "growths": {
@@ -1829,7 +1849,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 15,
+            "HP": 18,
             "STR": 2,
             "MAG": 5,
             "SKL": 7,
@@ -1926,7 +1946,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 18,
+            "HP": 21,
             "STR": 4,
             "MAG": 4,
             "SKL": 12,
@@ -1934,7 +1954,7 @@
             "LCK": 3,
             "DEF": 6,
             "RES": 6,
-            "CON": 2,
+            "CON": 7,
             "MOV": 6
         },
         "growths": {
@@ -2028,7 +2048,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 16,
+            "HP": 20,
             "STR": 7,
             "MAG": 1,
             "SKL": 14,
@@ -2036,7 +2056,7 @@
             "LCK": 17,
             "DEF": 2,
             "RES": 1,
-            "CON": 2,
+            "CON": 7,
             "MOV": 5
         },
         "growths": {
@@ -2151,7 +2171,7 @@
             "Unpeople"
         ],
         "bases": {
-            "HP": 22,
+            "HP": 25,
             "STR": 7,
             "MAG": 7,
             "SKL": 13,
@@ -2159,7 +2179,7 @@
             "LCK": 5,
             "DEF": 8,
             "RES": 5,
-            "CON": 3,
+            "CON": 6,
             "MOV": 5
         },
         "growths": {
@@ -2273,7 +2293,7 @@
             "Female"
         ],
         "bases": {
-            "HP": 16,
+            "HP": 19,
             "STR": 1,
             "MAG": 8,
             "SKL": 9,
@@ -2281,7 +2301,7 @@
             "LCK": 8,
             "DEF": 5,
             "RES": 5,
-            "CON": 1,
+            "CON": 3,
             "MOV": 5
         },
         "growths": {
@@ -2382,7 +2402,7 @@
             "Succubus"
         ],
         "bases": {
-            "HP": 20,
+            "HP": 25,
             "STR": 6,
             "MAG": 10,
             "SKL": 12,
@@ -2390,7 +2410,7 @@
             "LCK": 10,
             "DEF": 6,
             "RES": 7,
-            "CON": 1,
+            "CON": 6,
             "MOV": 5
         },
         "growths": {
@@ -2494,7 +2514,7 @@
             "Succubus"
         ],
         "bases": {
-            "HP": 17,
+            "HP": 20,
             "STR": 1,
             "MAG": 3,
             "SKL": 14,
@@ -2502,7 +2522,8 @@
             "LCK": 11,
             "DEF": 5,
             "RES": 6,
-            "MOV": 0
+            "MOV": 0,
+            "CON": 2
         },
         "growths": {},
         "stat_cap_modifiers": {},
@@ -3811,7 +3832,7 @@
         },
         "starting_items": [
             [
-                "ArcaneSpells",
+                "ArcaneSpells_Rosa",
                 false
             ]
         ],
@@ -3876,7 +3897,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "LustSpells",
+                "LustSpells_Milena",
                 false
             ]
         ],
@@ -6420,7 +6441,7 @@
         "nid": "Amin1",
         "name": "Amin",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "Warrior",
         "tags": [],
@@ -6433,7 +6454,7 @@
         "wexp_gain": {},
         "alternate_classes": [],
         "portrait_nid": "Amin1",
-        "affinity": null,
+        "affinity": "None",
         "fields": []
     },
     {
@@ -6620,15 +6641,15 @@
         "nid": "Jack",
         "name": "Jack",
         "desc": "",
-        "variant": null,
-        "level": 1,
+        "variant": "",
+        "level": 8,
         "klass": "Ephraim_Lord",
         "tags": [
             "Lord",
             "Required"
         ],
         "bases": {
-            "HP": 28,
+            "HP": 32,
             "STR": 8,
             "MAG": 5,
             "SKL": 10,
@@ -6654,7 +6675,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Lance",
+                "Steel_Lance",
                 false
             ],
             [
@@ -6690,14 +6711,14 @@
         "klass": "Archer",
         "tags": [],
         "bases": {
-            "HP": 22,
-            "STR": 8,
+            "HP": 26,
+            "STR": 10,
             "MAG": 0,
             "SKL": 12,
-            "SPD": 4,
+            "SPD": 6,
             "LCK": 0,
-            "DEF": 5,
-            "RES": 3,
+            "DEF": 8,
+            "RES": 6,
             "CON": 7,
             "MOV": 5
         },
@@ -6716,7 +6737,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Bow",
+                "Steel_Bow",
                 false
             ],
             [
@@ -6727,7 +6748,11 @@
         "learned_skills": [
             [
                 1,
-                "Crit_Plus15"
+                "LanceBreaker"
+            ],
+            [
+                1,
+                "Certain_Revenge"
             ]
         ],
         "unit_notes": [],
@@ -6748,18 +6773,18 @@
         "name": "Goreon",
         "desc": "",
         "variant": "",
-        "level": 5,
+        "level": 9,
         "klass": "Mage",
         "tags": [],
         "bases": {
             "HP": 25,
             "STR": 0,
-            "MAG": 11,
-            "SKL": 8,
-            "SPD": 4,
+            "MAG": 13,
+            "SKL": 10,
+            "SPD": 7,
             "LCK": 0,
-            "DEF": 3,
-            "RES": 6,
+            "DEF": 5,
+            "RES": 8,
             "CON": 7,
             "MOV": 5
         },
@@ -6789,7 +6814,11 @@
         "learned_skills": [
             [
                 1,
-                "Silence_Immune"
+                "ArcaneBreaker"
+            ],
+            [
+                1,
+                "DivineBreaker"
             ]
         ],
         "unit_notes": [],
@@ -6815,11 +6844,11 @@
         "tags": [],
         "bases": {
             "HP": 28,
-            "STR": 9,
+            "STR": 12,
             "MAG": 4,
-            "SKL": 8,
+            "SKL": 14,
             "SPD": 9,
-            "LCK": 3,
+            "LCK": 6,
             "DEF": 6,
             "RES": 6,
             "CON": 9,
@@ -6840,7 +6869,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Blade",
+                "Steel_Blade",
                 false
             ],
             [
@@ -6851,7 +6880,11 @@
         "learned_skills": [
             [
                 1,
-                "Sword_Hit_Plus10"
+                "Deadly_Revenge"
+            ],
+            [
+                1,
+                "SwordBreaker"
             ]
         ],
         "unit_notes": [],
@@ -6877,14 +6910,14 @@
         "tags": [],
         "bases": {
             "HP": 27,
-            "STR": 7,
+            "STR": 10,
             "MAG": 2,
-            "SKL": 11,
-            "SPD": 10,
+            "SKL": 16,
+            "SPD": 13,
             "LCK": 0,
-            "DEF": 5,
-            "RES": 5,
-            "CON": 8,
+            "DEF": 6,
+            "RES": 6,
+            "CON": 11,
             "MOV": 5
         },
         "growths": {
@@ -6902,7 +6935,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Sword",
+                "Killing_Edge",
                 false
             ],
             [
@@ -6913,14 +6946,18 @@
         "learned_skills": [
             [
                 1,
-                "Blind_attack"
+                "Darting_Revenge"
+            ],
+            [
+                1,
+                "SwordFaire"
             ]
         ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 false,
-                31,
+                181,
                 null
             ]
         },
@@ -6934,19 +6971,19 @@
         "name": "Barios",
         "desc": "",
         "variant": "",
-        "level": 7,
+        "level": 11,
         "klass": "Paladin",
         "tags": [],
         "bases": {
             "HP": 32,
-            "STR": 9,
+            "STR": 11,
             "MAG": 4,
             "SKL": 13,
-            "SPD": 11,
+            "SPD": 8,
             "LCK": 5,
-            "DEF": 8,
-            "RES": 7,
-            "CON": 11,
+            "DEF": 10,
+            "RES": 10,
+            "CON": 9,
             "MOV": 8
         },
         "growths": {
@@ -6964,11 +7001,11 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Lance",
+                "Silver_Lance",
                 false
             ],
             [
-                "Iron_Sword",
+                "Silver_Sword",
                 false
             ],
             [
@@ -6979,7 +7016,11 @@
         "learned_skills": [
             [
                 1,
-                "Resistance_Plus5"
+                "LustBreaker"
+            ],
+            [
+                1,
+                "LanceFaire"
             ]
         ],
         "unit_notes": [],
@@ -7005,19 +7046,19 @@
         "name": "Raylene",
         "desc": "",
         "variant": "Female",
-        "level": 4,
+        "level": 6,
         "klass": "Thief",
         "tags": [],
         "bases": {
             "HP": 25,
-            "STR": 7,
+            "STR": 8,
             "MAG": 3,
             "SKL": 13,
-            "SPD": 10,
+            "SPD": 15,
             "LCK": 0,
-            "DEF": 4,
-            "RES": 4,
-            "CON": 6,
+            "DEF": 6,
+            "RES": 6,
+            "CON": 10,
             "MOV": 6
         },
         "growths": {
@@ -7035,7 +7076,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Slim_Sword",
+                "Poison_Sword",
                 false
             ],
             [
@@ -7046,14 +7087,18 @@
         "learned_skills": [
             [
                 1,
-                "Skill_Plus5"
+                "Rally_Speed"
+            ],
+            [
+                1,
+                "Darting_Blow"
             ]
         ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 false,
-                31,
+                71,
                 null
             ]
         },
@@ -7067,7 +7112,7 @@
         "name": "Tima",
         "desc": "",
         "variant": "Female",
-        "level": 5,
+        "level": 7,
         "klass": "Knight",
         "tags": [],
         "bases": {
@@ -7097,7 +7142,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Lance",
+                "Steel_Lance",
                 false
             ],
             [
@@ -7108,7 +7153,11 @@
         "learned_skills": [
             [
                 1,
-                "Wary_Fighter"
+                "Armored_Revenge"
+            ],
+            [
+                1,
+                "Rally_Defense"
             ]
         ],
         "unit_notes": [],
@@ -7137,11 +7186,11 @@
             "STR": 12,
             "MAG": 0,
             "SKL": 9,
-            "SPD": 6,
+            "SPD": 5,
             "LCK": 11,
             "DEF": 7,
             "RES": 6,
-            "CON": 11,
+            "CON": 8,
             "MOV": 5
         },
         "growths": {
@@ -7159,7 +7208,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Axe",
+                "Steel_Axe",
                 false
             ],
             [
@@ -7170,7 +7219,11 @@
         "learned_skills": [
             [
                 1,
-                "Strength_Plus2"
+                "Duelists_Revenge"
+            ],
+            [
+                1,
+                "Rally_Strength"
             ]
         ],
         "unit_notes": [],
@@ -7191,18 +7244,18 @@
         "name": "Zaryca",
         "desc": "",
         "variant": "Female",
-        "level": 6,
+        "level": 8,
         "klass": "Cavalier",
         "tags": [],
         "bases": {
-            "HP": 29,
-            "STR": 6,
+            "HP": 32,
+            "STR": 8,
             "MAG": 2,
-            "SKL": 6,
-            "SPD": 6,
+            "SKL": 9,
+            "SPD": 9,
             "LCK": 0,
-            "DEF": 5,
-            "RES": 5,
+            "DEF": 8,
+            "RES": 8,
             "CON": 9,
             "MOV": 7
         },
@@ -7221,7 +7274,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Lance",
+                "Axereaver",
                 false
             ],
             [
@@ -7232,14 +7285,18 @@
         "learned_skills": [
             [
                 1,
-                "Defense_Plus5"
+                "Warding_Revenge"
+            ],
+            [
+                1,
+                "BowBreaker"
             ]
         ],
         "unit_notes": [],
         "wexp_gain": {
             "Lance": [
                 false,
-                31,
+                121,
                 null
             ]
         },
@@ -7253,17 +7310,17 @@
         "name": "Dytri",
         "desc": "",
         "variant": "",
-        "level": 3,
+        "level": 5,
         "klass": "Cleric",
         "tags": [],
         "bases": {
-            "HP": 26,
+            "HP": 28,
             "STR": 0,
             "MAG": 11,
             "SKL": 9,
             "SPD": 9,
             "LCK": 0,
-            "DEF": 4,
+            "DEF": 6,
             "RES": 9,
             "CON": 5,
             "MOV": 5
@@ -7294,7 +7351,11 @@
         "learned_skills": [
             [
                 1,
-                "Stunned_Immune"
+                "Rally_Resistance"
+            ],
+            [
+                1,
+                "Rally_Magic"
             ]
         ],
         "unit_notes": [],
@@ -7449,7 +7510,7 @@
         "name": "Darian",
         "desc": "",
         "variant": "",
-        "level": 7,
+        "level": 4,
         "klass": "Cavalier",
         "tags": [
             "Boss"
@@ -7565,7 +7626,7 @@
         "name": "Marlo",
         "desc": "",
         "variant": "",
-        "level": 8,
+        "level": 5,
         "klass": "Fighter",
         "tags": [
             "Boss"
@@ -7653,7 +7714,7 @@
         "nid": "Yett",
         "name": "Yett",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 8,
         "klass": "Great_Knight",
         "tags": [],
@@ -8089,8 +8150,8 @@
         "nid": "Seyta",
         "name": "Seyta",
         "desc": "",
-        "variant": null,
-        "level": 1,
+        "variant": "",
+        "level": 10,
         "klass": "Noble",
         "tags": [],
         "bases": {
@@ -8136,7 +8197,7 @@
         "name": "Ouyna",
         "desc": "",
         "variant": "Female",
-        "level": 1,
+        "level": 9,
         "klass": "Hero",
         "tags": [
             "Boss",
@@ -8197,7 +8258,7 @@
         "name": "Deguile",
         "desc": "",
         "variant": "",
-        "level": 1,
+        "level": 6,
         "klass": "Ranger",
         "tags": [
             "Boss"
@@ -8252,7 +8313,7 @@
         "name": "Koromin",
         "desc": "",
         "variant": "",
-        "level": 1,
+        "level": 7,
         "klass": "General",
         "tags": [
             "Boss"
@@ -8322,7 +8383,7 @@
         "name": "Stoval",
         "desc": "",
         "variant": "",
-        "level": 1,
+        "level": 7,
         "klass": "Sage",
         "tags": [
             "Boss"

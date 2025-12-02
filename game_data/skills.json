@@ -2131,6 +2131,26 @@
         ]
     },
     {
+        "nid": "Shelter_generic",
+        "name": "Shelter",
+        "desc": "Unit can rescue an adjacent ally.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Shelter_ability"
+            ]
+        ]
+    },
+    {
         "nid": "Command",
         "name": "Command",
         "desc": "Simon swaps one currently active character for a undeployed one.",
@@ -7242,6 +7262,30 @@
         ]
     },
     {
+        "nid": "Dancing_Line",
+        "name": "Dancing Line",
+        "desc": "Milena gather a happy line of dancing friends. She can select an ally up to 5 tiles away. All allies in a line between Milena and the target get their turn refreshed. Costs <blue>20 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            49
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                20
+            ]
+        ]
+    },
+    {
         "nid": "Rock_Throw",
         "name": "Rock Throw",
         "desc": "ORC THROW BIG ROCK!",
@@ -7973,6 +8017,34 @@
             [
                 "resist_multiplier",
                 0.25
+            ]
+        ]
+    },
+    {
+        "nid": "Qumbomb_1",
+        "name": "Bubbly",
+        "desc": "Hugged very tightly by Cumdump!",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unit_anim",
+                "MapStatIncrease"
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "damage_multiplier",
+                1.5000000000000002
             ]
         ]
     },
@@ -9213,8 +9285,32 @@
         ]
     },
     {
-        "nid": "Revive_effect",
+        "nid": "Revive",
         "name": "Revive",
+        "desc": "Carina can grant select an ally to grant <green>[REVIVE]</>: Unit will recover HP and lose this status once it is defeated. Costs <blue>20 mana</>.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                20
+            ]
+        ]
+    },
+    {
+        "nid": "Revive_effect",
+        "name": "<green>[REVIVE]</>",
         "desc": "Unit will revive and lose this status once it is defeated.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -9305,6 +9401,26 @@
                     154,
                     57
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Mass_Heal",
+        "name": "Mass Heal",
+        "desc": "Carina restores HP for all allied units in range. Range is dependent on Carinar's MAG. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            38
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                10
             ]
         ]
     },
@@ -9958,6 +10074,12 @@
             [
                 "sight_range_bonus",
                 3
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -9978,6 +10100,12 @@
             [
                 "locktouch",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -11804,6 +11932,14 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -11820,12 +11956,20 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
     {
         "nid": "Summon_Orc_3",
-        "name": "Summon Elite Orc",
+        "name": "Summon imp",
         "desc": "Balia can summon a weak imp. Costs <blue>5 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -11836,12 +11980,20 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                5
             ]
         ]
     },
     {
         "nid": "Summon_Orc_4",
-        "name": "Summon Elite Orc",
+        "name": "Summon Elite Imp",
         "desc": "Balia can summon an elite imp. Costs <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -11852,12 +12004,20 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                10
             ]
         ]
     },
     {
         "nid": "Summon_Orc_5",
-        "name": "Summon Elite Orc",
+        "name": "Summon Rock Hurler",
         "desc": "Balia can summon a rock throwing orc. Costs <blue>15 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -11868,6 +12028,14 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                15
             ]
         ]
     },
@@ -11884,6 +12052,14 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                20
             ]
         ]
     },
@@ -13112,6 +13288,34 @@
         ]
     },
     {
+        "nid": "Wary_Fighter_ice",
+        "name": "Wary Fighter",
+        "desc": "Can't double attack or be double attacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            32
+        ],
+        "components": [
+            [
+                "attack_speed",
+                -99
+            ],
+            [
+                "defense_speed",
+                99
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Unaffected",
         "name": "Unaffected",
         "desc": "Unit reflects negative statuses back at the enemy.",
@@ -13270,7 +13474,7 @@
             ],
             [
                 "time",
-                4
+                3
             ],
             [
                 "gba_poison",
@@ -14591,11 +14795,11 @@
     {
         "nid": "Sneaky_Stabs",
         "name": "Sneaky Stabs",
-        "desc": "",
+        "desc": "Aka can use a series of stab skills aimed at debuffing her opponents.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            7,
-            23
+            1,
+            15
         ],
         "components": [
             [
@@ -14611,7 +14815,7 @@
     {
         "nid": "Blinding_Stab",
         "name": "Blinding Stab",
-        "desc": "",
+        "desc": "Aka attacks the target, inflicting <red>[BLIND]</> if it hits. Costs <blue>10 mana</>. <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -14625,13 +14829,324 @@
             [
                 "ability",
                 "Blinding_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Piercing_Stab",
+        "name": "Piercing Stab",
+        "desc": "Aka attacks the target, inflicting <red>[PIERCED]</> if it hits. Costs <blue>5 mana</>. <red>[PIERCED]</>: Unit loses 5 DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Crippling_Stab",
+        "name": "Crippling Stab",
+        "desc": "Aka attacks the target, inflicting <red>[SLOWED]</> if it hits. Costs <blue>5 mana</>. <red>[SLOWED]</>: Unit loses 5 SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Crippling_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Weakening_Stab",
+        "name": "Weakening Stab",
+        "desc": "Aka attacks the target, inflicting <red>[WEAKENED]</> if it hits. Costs <blue>5 mana</>. <red>[WEAKENED]</>: Unit loses 5 STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Weakening_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Disconcerting_Stab",
+        "name": "Disconcerting Stab",
+        "desc": "Aka attacks the target, inflicting <red>[DISCONCERTED]</> if it hits. Costs <blue>5 mana</>. <red>[DISCONCERTED]</>: Unit loses 5 MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Disconcerting_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Lunge",
+        "name": "Forceful Lunge",
+        "desc": "A powerful attack with greater critical chance. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            44
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Forceful_Lunge"
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Disabling_Assault",
+        "name": "Disabling Assault",
+        "desc": "Aka attacks the target, inflicting <red>[DISABLED]</> if it hits. Costs <blue>15 mana</>. <red>[DISABLED]</>: -5 STR, MAG, SPD, DEF, RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            39
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Disabling_Assault"
+            ],
+            [
+                "cost_mana",
+                15
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Deathblow",
+        "name": "Deathblow",
+        "desc": "Aka attacks the target, inflicting <red>[DEATH'S DOOR]</> if it hits. Costs <blue>20 mana</>. <red>[DEATH'S DOOR]</>: On the next turn, unit's HP is set to 1.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Deathblow"
+            ],
+            [
+                "cost_mana",
+                20
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Deathblow_effect",
+        "name": "<red>[DEATH'S DOOR]</>",
+        "desc": "Unit's HP is set to 1 when this is removed.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            35
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "end_time",
+                2
+            ],
+            [
+                "event_on_remove",
+                "Global Aka deathblow death's door"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    108,
+                    16,
+                    18
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Lethal_Intent",
+        "name": "Lethal Intent",
+        "desc": "Aka fully focuses on her killing intent, temporarily granting her bonus damage, HIT and CRIT. One use per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            51
+        ],
+        "components": []
+    },
+    {
+        "nid": "Lethal_Intent_effect",
+        "name": "Lethal Intent",
+        "desc": "Aka is fully focusing on her killing intent, temporarily granting her bonus damage, HIT and CRIT.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            51
+        ],
+        "components": [
+            [
+                "damage",
+                5
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "hit",
+                25
+            ],
+            [
+                "avoid",
+                25
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    63,
+                    53,
+                    170
+                ]
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    65,
+                    43,
+                    175
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Unite_the_Harem",
+        "name": "Unite the Harem",
+        "desc": "Aka's high spirit motivates the party. Aka can use Rally Strength.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Strength"
             ]
         ]
     },
     {
         "nid": "Poisoned_Blade",
         "name": "Poisoned Blade",
-        "desc": "Aka can poison her blade, inflicting <red>[POISON]</> on her attack.\nCosts <blue>10 mana</>.",
+        "desc": "Aka attacks the target, inflicting <red>[POISON]</> if it hits. Costs <blue>10 mana</>. <red>[POISON]</>: Unit randomly receives up to 5 damage per turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -14645,6 +15160,772 @@
             [
                 "ability",
                 "Poisoned_Blade"
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Slowed",
+        "name": "<red>[SLOWED]</>",
+        "desc": "Unit loses 5 SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            8
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Weakened",
+        "name": "<red>[WEAKENED]</>",
+        "desc": "Unit loses 5 STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            1
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Pierced",
+        "name": "<red>[PIERCED]</>",
+        "desc": "Unit loses 5 DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            6
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Disconcerted",
+        "name": "<red>[DISCONCERTED]</>",
+        "desc": "Unit loses 5 RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            7
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Disabled",
+        "name": "<red>[DISABLED]</>",
+        "desc": "Unit loses 5 STR, MAG, SPD, DEF, RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            51
+        ],
+        "components": [
+            [
+                "multi_skill",
+                [
+                    "Slowed",
+                    "Weakened",
+                    "Pierced",
+                    "Disconcerted"
+                ]
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Aka_knife_boost",
+        "name": "Aka's custom knife",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        2
+                    ],
+                    [
+                        "SPD",
+                        2
+                    ],
+                    [
+                        "DEF",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "avoid",
+                10
+            ],
+            [
+                "crit",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Stab",
+        "name": "Pure Stab",
+        "desc": "<green>[Vhala synergy]</> Vhala enchants Aka's weapon with anti-lust properties. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Pure_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Aka' for u in target_system.get_adj_units(game.get_unit('Vhala'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Stab_pair",
+        "name": "Pure Stab",
+        "desc": "<green>[Vhala synergy]</> Vhala enchants Aka's weapon with anti-lust properties. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Pure_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "condition",
+                "u('Aka').traveler == 'Vhala'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flaming_Stab",
+        "name": "Flaming Stab",
+        "desc": "<green>[Robin synergy]</> Robin enchants Aka's weapon with magical properties. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Flaming_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Aka' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flaming_Stab_pair",
+        "name": "Flaming Stab",
+        "desc": "<green>[Robin synergy]</> Robin enchants Aka's weapon with magical properties. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Flaming_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "condition",
+                "u('Aka').traveler == 'Robin'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sexual_Stab",
+        "name": "Sexual Stab",
+        "desc": "<green>[Yarra synergy]</> Yarra enchants Aka's weapon with lust properties. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Sexual_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Aka' for u in target_system.get_adj_units(game.get_unit('Yarra'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Sexual_Stab_pair",
+        "name": "Sexual Stab",
+        "desc": "<green>[Yarra synergy]</> Yarra enchants Aka's weapon with lust properties. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Sexual_Stab"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "condition",
+                "u('Aka').traveler == 'Yarra'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Healing_Hilt",
+        "name": "Healing Hilt",
+        "desc": "<green>[Uyae synergy]</> Aka learned from Uyae how to channel healing into her weapon's hilt. Heals an ally. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Healing_Hilt"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Aka' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Healing_Hilt_pair",
+        "name": "Healing Hilt",
+        "desc": "<green>[Uyae synergy]</> Aka learned from Uyae how to channel healing into her weapon's hilt. Heals an ally. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Healing_Hilt"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "condition",
+                "u('Aka').traveler == 'Uyae'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Weakening_Assault",
+        "name": "Weakening Assault",
+        "desc": "<green>[Ginasta synergy]</> Weakens opponents' attack in an area. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Weakening_Assault"
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Aka' for u in target_system.get_adj_units(game.get_unit('Ginasta'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Weakening_Assault_pair",
+        "name": "Weakening Assault",
+        "desc": "<green>[Ginasta synergy]</> Weakens opponents' attack in an area. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Weakening_Assault"
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "condition",
+                "u('Aka').traveler == 'Ginasta'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flourished_Flurry",
+        "name": "Flourished Flurry",
+        "desc": "<green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Aka moves to the other side of the target. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            46
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Flourished_Flurry"
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Aka' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Flourished_Flurry_pair",
+        "name": "Flourished Flurry",
+        "desc": "<green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            46
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Flourished_Flurry"
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Aka' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -16160,6 +17441,12 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
             ]
         ]
     },
