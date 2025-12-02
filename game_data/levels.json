@@ -6352,10 +6352,6 @@
             {
                 "nid": "2",
                 "trigger_threshold": 1
-            },
-            {
-                "nid": "",
-                "trigger_threshold": 1
             }
         ]
     },
@@ -8389,12 +8385,7 @@
                 }
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "P13",
@@ -10034,10 +10025,6 @@
         "ai_groups": [
             {
                 "nid": "2",
-                "trigger_threshold": 1
-            },
-            {
-                "nid": "",
                 "trigger_threshold": 1
             }
         ]
@@ -12733,10 +12720,6 @@
             },
             {
                 "nid": "ref2",
-                "trigger_threshold": 1
-            },
-            {
-                "nid": "",
                 "trigger_threshold": 1
             }
         ]
@@ -16779,7 +16762,7 @@
                 "nid": "yhilin_soldier_1",
                 "variant": null,
                 "level": 6,
-                "klass": "Soldier",
+                "klass": "Knight",
                 "faction": "Soldier",
                 "starting_items": [
                     [
@@ -16789,7 +16772,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Defend",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -16821,7 +16804,7 @@
                 "nid": "yhilin_soldier_3",
                 "variant": null,
                 "level": 6,
-                "klass": "Soldier",
+                "klass": "Knight",
                 "faction": "Soldier",
                 "starting_items": [
                     [
@@ -16905,7 +16888,7 @@
                 "nid": "yhilin_soldier_7",
                 "variant": null,
                 "level": 6,
-                "klass": "Soldier",
+                "klass": "Cavalier",
                 "faction": "Soldier",
                 "starting_items": [
                     [
@@ -16926,11 +16909,11 @@
                 "nid": "yhilin_soldier_8",
                 "variant": null,
                 "level": 6,
-                "klass": "Soldier",
+                "klass": "Cavalier",
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Lance",
+                        "Iron_Sword",
                         false
                     ]
                 ],
@@ -17280,10 +17263,52 @@
                 "generic": true
             },
             {
-                "nid": "yhilin_orc_2",
+                "nid": "yhilin_orc_7",
                 "variant": null,
                 "level": 6,
                 "klass": "Orc",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "yhilin_orc_8",
+                "variant": null,
+                "level": 6,
+                "klass": "Orc",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "yhilin_orc_2",
+                "variant": null,
+                "level": 6,
+                "klass": "Orc_Elite",
                 "faction": "Soldier",
                 "starting_items": [
                     [
@@ -17325,7 +17350,7 @@
                 "nid": "yhilin_orc_4",
                 "variant": null,
                 "level": 6,
-                "klass": "Orc",
+                "klass": "Orc_Elite",
                 "faction": "Soldier",
                 "starting_items": [
                     [
@@ -17364,9 +17389,30 @@
                 "generic": true
             },
             {
-                "nid": "imp_1",
+                "nid": "yhilin_orc_6",
                 "variant": null,
                 "level": 6,
+                "klass": "Ogre",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "imp_1",
+                "variant": null,
+                "level": 10,
                 "klass": "Imp",
                 "faction": "Soldier",
                 "starting_items": [
@@ -18518,6 +18564,48 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "e_rein_7",
+                "variant": null,
+                "level": 5,
+                "klass": "Ogre",
+                "faction": "Yhilin",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "e_rein_8",
+                "variant": null,
+                "level": 5,
+                "klass": "Ogre",
+                "faction": "Yhilin",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [
@@ -18843,19 +18931,15 @@
                     ],
                     "yhilin_merc_2": [
                         3,
-                        10
+                        17
                     ],
                     "yhilin_merc_3": [
                         4,
                         14
                     ],
                     "yhilin_merc_1": [
-                        5,
-                        11
-                    ],
-                    "yhilin_merc_4": [
-                        5,
-                        16
+                        1,
+                        15
                     ],
                     "yhilin_archer_1": [
                         3,
@@ -18866,12 +18950,16 @@
                         15
                     ],
                     "yhilin_archer_3": [
-                        2,
-                        12
+                        5,
+                        16
                     ],
                     "yhilin_archer_4": [
                         0,
                         17
+                    ],
+                    "yhilin_merc_4": [
+                        5,
+                        18
                     ]
                 }
             },
@@ -18898,36 +18986,36 @@
                         13
                     ],
                     "yhilin_mage_1": [
-                        22,
-                        10
+                        23,
+                        13
                     ],
                     "yhilin_mage_2": [
                         25,
                         13
                     ],
                     "yhilin_mage_3": [
-                        24,
+                        23,
                         11
                     ],
                     "yhilin_mage_4": [
-                        23,
-                        8
+                        22,
+                        12
                     ],
                     "yhilin_suc_1": [
-                        21,
-                        7
+                        23,
+                        9
                     ],
                     "yhilin_suc_2": [
-                        25,
-                        9
+                        24,
+                        15
                     ],
                     "yhilin_suc_3": [
-                        21,
-                        9
+                        24,
+                        10
                     ],
                     "yhilin_suc_4": [
-                        23,
-                        12
+                        24,
+                        13
                     ]
                 }
             },
@@ -18939,7 +19027,10 @@
                     "yhilin_orc_4",
                     "yhilin_orc_5",
                     "imp_1",
-                    "imp_2"
+                    "imp_2",
+                    "yhilin_orc_6",
+                    "yhilin_orc_7",
+                    "yhilin_orc_8"
                 ],
                 "positions": {
                     "yhilin_soldier_10": [
@@ -18947,12 +19038,12 @@
                         23
                     ],
                     "yhilin_orc_1": [
-                        14,
+                        15,
                         23
                     ],
                     "yhilin_orc_2": [
-                        10,
-                        22
+                        14,
+                        26
                     ],
                     "yhilin_orc_3": [
                         16,
@@ -18960,11 +19051,11 @@
                     ],
                     "yhilin_orc_4": [
                         12,
-                        23
+                        26
                     ],
                     "yhilin_orc_5": [
-                        16,
-                        22
+                        11,
+                        23
                     ],
                     "yhilin_soldier_4": [
                         15,
@@ -18979,12 +19070,24 @@
                         22
                     ],
                     "imp_1": [
-                        11,
-                        24
+                        9,
+                        25
                     ],
                     "imp_2": [
-                        15,
+                        17,
+                        25
+                    ],
+                    "yhilin_orc_6": [
+                        13,
                         24
+                    ],
+                    "yhilin_orc_7": [
+                        12,
+                        22
+                    ],
+                    "yhilin_orc_8": [
+                        14,
+                        22
                     ]
                 }
             },
@@ -19128,9 +19231,63 @@
                         5
                     ]
                 }
+            },
+            {
+                "nid": "e_reinleft",
+                "units": [
+                    "e_rein_1",
+                    "e_rein_2",
+                    "e_rein_3"
+                ],
+                "positions": {
+                    "e_rein_1": [
+                        1,
+                        17
+                    ],
+                    "e_rein_2": [
+                        0,
+                        16
+                    ],
+                    "e_rein_3": [
+                        0,
+                        18
+                    ]
+                }
+            },
+            {
+                "nid": "e_reinright",
+                "units": [
+                    "e_rein_7",
+                    "e_rein_4",
+                    "e_rein_5",
+                    "e_rein_6"
+                ],
+                "positions": {
+                    "e_rein_7": [
+                        23,
+                        12
+                    ],
+                    "e_rein_4": [
+                        25,
+                        10
+                    ],
+                    "e_rein_5": [
+                        25,
+                        14
+                    ],
+                    "e_rein_6": [
+                        25,
+                        12
+                    ]
+                }
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "Introreunion",
