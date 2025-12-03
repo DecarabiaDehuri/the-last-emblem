@@ -17,7 +17,7 @@
             "SKL": 11,
             "SPD": 5,
             "LCK": 5,
-            "DEF": 11,
+            "DEF": 6,
             "CON": 8,
             "MOV": 5,
             "RES": 8
@@ -35,7 +35,12 @@
             "RES": 40
         },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Large_Health_Potion",
+                false
+            ]
+        ],
         "learned_skills": [
             [
                 1,
@@ -104,7 +109,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "simonold2",
-        "affinity": "Dark",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -145,6 +150,10 @@
         "starting_items": [
             [
                 "Slim_Sword",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -222,7 +231,7 @@
             "Archer"
         ],
         "portrait_nid": "aka3",
-        "affinity": "Anima",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -269,6 +278,10 @@
             ],
             [
                 "DivineSpells",
+                false
+            ],
+            [
+                "Mana_Potion",
                 false
             ]
         ],
@@ -338,7 +351,7 @@
             "Priestess"
         ],
         "portrait_nid": "altina3",
-        "affinity": "Light",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -354,7 +367,7 @@
         "bases": {
             "HP": 13,
             "STR": 2,
-            "MAG": 13,
+            "MAG": 10,
             "SKL": 13,
             "SPD": 3,
             "LCK": 5,
@@ -380,9 +393,34 @@
             [
                 "Orcmancy",
                 false
+            ],
+            [
+                "Mana_Potion",
+                false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                3,
+                "Summon_Orc_3"
+            ],
+            [
+                5,
+                "Summon_Orc_2"
+            ],
+            [
+                7,
+                "Summon_Orc_4"
+            ],
+            [
+                10,
+                "Summon_Orc_5"
+            ],
+            [
+                13,
+                "Summon_Orc_6"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -433,7 +471,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "balia2",
-        "affinity": "Thunder",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -474,6 +512,10 @@
         "starting_items": [
             [
                 "DivineSpells",
+                false
+            ],
+            [
+                "Mana_Potion",
                 false
             ]
         ],
@@ -547,7 +589,7 @@
             "Pegasus_Knight"
         ],
         "portrait_nid": "carina2",
-        "affinity": "None",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -565,11 +607,11 @@
             "HP": 16,
             "STR": 4,
             "MAG": 2,
-            "SKL": 12,
-            "SPD": 10,
-            "LCK": 12,
-            "DEF": 5,
-            "RES": 6,
+            "SKL": 5,
+            "SPD": 3,
+            "LCK": 7,
+            "DEF": 2,
+            "RES": 2,
             "CON": 5,
             "MOV": 6
         },
@@ -589,6 +631,10 @@
         "starting_items": [
             [
                 "Slim_Lance",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -652,7 +698,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "dari2",
-        "affinity": "Anima",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -672,7 +718,7 @@
             "SKL": 11,
             "SPD": 12,
             "LCK": 5,
-            "DEF": 11,
+            "DEF": 8,
             "RES": 5,
             "CON": 3,
             "MOV": 5
@@ -747,7 +793,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Ginasta3",
-        "affinity": "Thunder",
+        "affinity": "Homo",
         "fields": []
     },
     {
@@ -767,7 +813,7 @@
             "SKL": 5,
             "SPD": 1,
             "LCK": 5,
-            "DEF": 10,
+            "DEF": 8,
             "RES": 4,
             "CON": 10,
             "MOV": 4
@@ -779,7 +825,7 @@
             "SKL": 30,
             "SPD": 10,
             "LCK": 30,
-            "DEF": 70,
+            "DEF": 60,
             "RES": 30,
             "CON": 0,
             "MOV": 0
@@ -789,6 +835,10 @@
             [
                 "Iron_Axe",
                 false
+            ],
+            [
+                "Health_Potion",
+                false
             ]
         ],
         "learned_skills": [
@@ -797,24 +847,24 @@
                 "Shieldwall"
             ],
             [
-                1,
-                "Aegis_Assault"
-            ],
-            [
-                1,
-                "Protect"
-            ],
-            [
-                1,
-                "Bash"
-            ],
-            [
-                1,
+                2,
                 "Indomitable_Will"
             ],
             [
-                1,
-                "Holy_Shieldwall"
+                4,
+                "Bash"
+            ],
+            [
+                6,
+                "Tactical_Eye"
+            ],
+            [
+                9,
+                "Harem_Tactics"
+            ],
+            [
+                10,
+                "Protect"
             ]
         ],
         "unit_notes": [],
@@ -869,7 +919,7 @@
             "Mercenary"
         ],
         "portrait_nid": "hilstaraold2",
-        "affinity": "Fire",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -910,6 +960,10 @@
         "starting_items": [
             [
                 "Slim_Lance",
+                false
+            ],
+            [
+                "Mana_Potion",
                 false
             ]
         ],
@@ -966,7 +1020,7 @@
             "Cavalier"
         ],
         "portrait_nid": "lynine2",
-        "affinity": "Fire",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -1068,7 +1122,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Megail",
-        "affinity": "Thunder",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -1161,7 +1215,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "mestan2",
-        "affinity": "Ice",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -1206,6 +1260,10 @@
             ],
             [
                 "LustSpells",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -1277,7 +1335,7 @@
             "Mercenary"
         ],
         "portrait_nid": "nalili2",
-        "affinity": "Wind",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -1292,7 +1350,7 @@
         ],
         "bases": {
             "HP": 27,
-            "STR": 10,
+            "STR": 9,
             "MAG": 1,
             "SKL": 8,
             "SPD": 7,
@@ -1322,6 +1380,10 @@
             ],
             [
                 "Iron_Axe",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -1393,7 +1455,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Orcent2",
-        "affinity": "Ice",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -1434,6 +1496,10 @@
         "starting_items": [
             [
                 "Iron_Lance",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -1499,7 +1565,7 @@
             "Cavalier"
         ],
         "portrait_nid": "orilise2",
-        "affinity": "Wind",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -1541,6 +1607,10 @@
         "starting_items": [
             [
                 "LustSpells_Qum",
+                false
+            ],
+            [
+                "Mana_Potion",
                 false
             ]
         ],
@@ -1612,7 +1682,7 @@
             "Mage"
         ],
         "portrait_nid": "qum2",
-        "affinity": "Wind",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -1633,8 +1703,8 @@
             "SKL": 15,
             "SPD": 7,
             "LCK": 10,
-            "DEF": 7,
-            "RES": 7,
+            "DEF": 5,
+            "RES": 5,
             "CON": 6,
             "MOV": 5
         },
@@ -1658,6 +1728,10 @@
             ],
             [
                 "ArcaneSpells",
+                false
+            ],
+            [
+                "Mana_Potion",
                 false
             ]
         ],
@@ -1728,7 +1802,7 @@
             "Mage"
         ],
         "portrait_nid": "riala4",
-        "affinity": "Ice",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -1744,11 +1818,11 @@
         "bases": {
             "HP": 20,
             "STR": 3,
-            "MAG": 8,
+            "MAG": 6,
             "SKL": 10,
             "SPD": 7,
             "LCK": 5,
-            "DEF": 6,
+            "DEF": 4,
             "RES": 9,
             "CON": 6,
             "MOV": 5
@@ -1769,6 +1843,10 @@
         "starting_items": [
             [
                 "ArcaneSpells",
+                false
+            ],
+            [
+                "Mana_Potion",
                 false
             ]
         ],
@@ -1835,7 +1913,7 @@
             "Priestess"
         ],
         "portrait_nid": "robin3",
-        "affinity": "Ice",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -1855,8 +1933,8 @@
             "SKL": 7,
             "SPD": 6,
             "LCK": 5,
-            "DEF": 4,
-            "RES": 10,
+            "DEF": 3,
+            "RES": 6,
             "CON": 2,
             "MOV": 4
         },
@@ -1876,6 +1954,10 @@
         "starting_items": [
             [
                 "SoulSpells",
+                false
+            ],
+            [
+                "Mana_Potion",
                 false
             ]
         ],
@@ -1932,7 +2014,7 @@
             "Fighter"
         ],
         "portrait_nid": "trin2",
-        "affinity": "Thunder",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -1973,6 +2055,10 @@
         "starting_items": [
             [
                 "Claw_Neutral",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -2034,7 +2120,7 @@
             "Knight"
         ],
         "portrait_nid": "uyae2",
-        "affinity": "Ice",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -2054,8 +2140,8 @@
             "SKL": 14,
             "SPD": 15,
             "LCK": 17,
-            "DEF": 2,
-            "RES": 1,
+            "DEF": 3,
+            "RES": 2,
             "CON": 7,
             "MOV": 5
         },
@@ -2075,6 +2161,10 @@
         "starting_items": [
             [
                 "Iron_Sword",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -2156,7 +2246,7 @@
             "Archer"
         ],
         "portrait_nid": "varia3",
-        "affinity": "Thunder",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -2172,13 +2262,13 @@
         ],
         "bases": {
             "HP": 25,
-            "STR": 7,
-            "MAG": 7,
+            "STR": 6,
+            "MAG": 5,
             "SKL": 13,
             "SPD": 6,
             "LCK": 5,
-            "DEF": 8,
-            "RES": 5,
+            "DEF": 5,
+            "RES": 4,
             "CON": 6,
             "MOV": 5
         },
@@ -2198,6 +2288,10 @@
         "starting_items": [
             [
                 "Iron_Bow",
+                false
+            ],
+            [
+                "Health_Potion",
                 false
             ]
         ],
@@ -2279,7 +2373,7 @@
             "Knight"
         ],
         "portrait_nid": "vhala2",
-        "affinity": "Fire",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -2299,7 +2393,7 @@
             "SKL": 9,
             "SPD": 6,
             "LCK": 8,
-            "DEF": 5,
+            "DEF": 3,
             "RES": 5,
             "CON": 3,
             "MOV": 5
@@ -2324,6 +2418,10 @@
             ],
             [
                 "ArcaneSpells",
+                false
+            ],
+            [
+                "Mana_Potion",
                 false
             ]
         ],
@@ -2387,7 +2485,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "wynn2",
-        "affinity": "Ice",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -2404,11 +2502,11 @@
         "bases": {
             "HP": 25,
             "STR": 6,
-            "MAG": 10,
+            "MAG": 7,
             "SKL": 12,
             "SPD": 8,
             "LCK": 10,
-            "DEF": 6,
+            "DEF": 4,
             "RES": 7,
             "CON": 6,
             "MOV": 5
@@ -2433,6 +2531,10 @@
             ],
             [
                 "LustSpells",
+                false
+            ],
+            [
+                "Lust_Draught",
                 false
             ]
         ],
@@ -2499,7 +2601,7 @@
             "Cavalier"
         ],
         "portrait_nid": "yarra5",
-        "affinity": "Dark",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -2520,8 +2622,8 @@
             "SKL": 14,
             "SPD": 1,
             "LCK": 11,
-            "DEF": 5,
-            "RES": 6,
+            "DEF": 2,
+            "RES": 4,
             "MOV": 0,
             "CON": 2
         },
@@ -2542,7 +2644,7 @@
         "wexp_gain": {},
         "alternate_classes": [],
         "portrait_nid": "Iris",
-        "affinity": "Dark",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -2637,7 +2739,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Palina2_1",
-        "affinity": "Fire",
+        "affinity": "Unknown",
         "fields": []
     },
     {
@@ -2740,7 +2842,7 @@
             "Paladin"
         ],
         "portrait_nid": "Laraib",
-        "affinity": "Wind",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -2843,7 +2945,7 @@
             "Paladin"
         ],
         "portrait_nid": "Laraib",
-        "affinity": "Wind",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -2944,7 +3046,7 @@
             "Berserker"
         ],
         "portrait_nid": "Zaynab",
-        "affinity": "Thunder",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -3043,7 +3145,7 @@
             "Berserker"
         ],
         "portrait_nid": "Zaynab",
-        "affinity": "Thunder",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -3145,7 +3247,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Chosen",
-        "affinity": "Light",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -3213,7 +3315,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Simonyoung",
-        "affinity": "Ice",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -3273,7 +3375,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Mira",
-        "affinity": "Fire",
+        "affinity": "Unknown",
         "fields": []
     },
     {
@@ -3377,7 +3479,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Duro",
-        "affinity": "Thunder",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -3453,7 +3555,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Monica",
-        "affinity": "Light",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -3555,7 +3657,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Antarion",
-        "affinity": "Wind",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -3632,7 +3734,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Lucia",
-        "affinity": "Wind",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -3708,7 +3810,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Cassian",
-        "affinity": "Thunder",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -3781,7 +3883,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Safado",
-        "affinity": "Anima",
+        "affinity": "Unknown",
         "fields": []
     },
     {
@@ -3856,7 +3958,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Rosa",
-        "affinity": "Fire",
+        "affinity": "Homo",
         "fields": []
     },
     {
@@ -3962,7 +4064,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Milena",
-        "affinity": "Dark",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -4055,7 +4157,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Baruba",
-        "affinity": "Anima",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -4105,7 +4207,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Geoff",
-        "affinity": "None",
+        "affinity": "Unknown",
         "fields": []
     },
     {
@@ -4211,7 +4313,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Minerve",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -4316,7 +4418,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Minerve",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -4438,7 +4540,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Minerve",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -4556,7 +4658,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Minerve",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -4680,7 +4782,7 @@
             "Mage"
         ],
         "portrait_nid": "Rialayoung",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -4789,7 +4891,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "SpiderQueen",
-        "affinity": "Fire",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -4893,7 +4995,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "SpiderQueen",
-        "affinity": "Fire",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -5003,7 +5105,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "SpiderQueen",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -5126,7 +5228,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Planta",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -6047,7 +6149,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "SucBoss",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -6167,7 +6269,7 @@
         "wexp_gain": {},
         "alternate_classes": [],
         "portrait_nid": "Iris",
-        "affinity": "Dark",
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -8542,6 +8644,58 @@
         "alternate_classes": [],
         "portrait_nid": "{Nickt} Scott",
         "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Dargai",
+        "name": "???",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "dargai",
+        "tags": [],
+        "bases": {
+            "HP": 28,
+            "STR": 7,
+            "MAG": 6,
+            "SKL": 11,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 11,
+            "RES": 8,
+            "CON": 8,
+            "MOV": 5
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                181,
+                null
+            ],
+            "Lance": [
+                false,
+                181,
+                null
+            ],
+            "Axe": [
+                false,
+                181,
+                null
+            ],
+            "Dark": [
+                false,
+                181,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "dargai",
+        "affinity": "None",
         "fields": []
     }
 ]

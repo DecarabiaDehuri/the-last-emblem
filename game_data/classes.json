@@ -19210,5 +19210,103 @@
         "map_sprite_nid": "Great Lord (M) Ephraim-Infantry Alt Lance {Dellhonne}-stand",
         "combat_anim_nid": "Sovereign",
         "fields": []
+    },
+    {
+        "nid": "dargai",
+        "name": "???",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 28,
+            "STR": 7,
+            "MAG": 6,
+            "SKL": 11,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 11,
+            "RES": 8,
+            "CON": 8,
+            "MOV": 5
+        },
+        "growths": {},
+        "growth_bonus": {},
+        "promotion": {},
+        "max_stats": {},
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                null
+            ],
+            "Lance": [
+                true,
+                0,
+                null
+            ],
+            "Axe": [
+                true,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "dargai",
+        "combat_anim_nid": null,
+        "fields": []
     }
 ]

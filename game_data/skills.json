@@ -8977,17 +8977,6 @@
         ]
     },
     {
-        "nid": "new_1",
-        "name": "new_1",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
         "nid": "Refined_Dance",
         "name": "Refined Dance",
         "desc": "Iris has meticulously calculated the best moves, though she has only enough stamina for the first three dances. Grants an ally <green>[REFINED]</>: Unit has +5 damage bonus and receives -5 damage.",
@@ -17151,7 +17140,7 @@
         "components": [
             [
                 "modify_ai_priority",
-                3.0000000000000013
+                9.99999999999998
             ],
             [
                 "stat_change",
@@ -17177,6 +17166,50 @@
         ]
     },
     {
+        "nid": "Tactical_Eye",
+        "name": "Tactical Eye",
+        "desc": "Hilstara's commands passively improves nearby allies' evasiveness and accuracy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            35
+        ],
+        "components": [
+            [
+                "aura",
+                "Tactical_Eye_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tactical_Eye_effect",
+        "name": "Tactical Eye",
+        "desc": "Unit has bonus AVOID and HIT.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            35
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Aegis_Assault",
         "name": "Aegis Assault",
         "desc": "Hilstara lunges forward with her shield. <red>Uses DEF to determine damage instead of STR.</>. Costs <blue>10 mana</>.",
@@ -17193,6 +17226,14 @@
             [
                 "ability",
                 "Aegis_Assault"
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -17233,9 +17274,78 @@
         ]
     },
     {
+        "nid": "Hold_The_Line",
+        "name": "Hold the Line!",
+        "desc": "Hilstara shouts to maintain formation. All allied units 3 tiles horizontally adjacent to Hilstara gain <green>[HOLD]</>: Less damage received. Cannot move. Lasts one turn. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            41
+        ],
+        "components": [
+            [
+                "ability",
+                "Hold_The_Line"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Hold_The_Line_effect",
+        "name": "<green>[HOLD]</>",
+        "desc": "Less damage received. Cannot move. Lasts one turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            41
+        ],
+        "components": [
+            [
+                "time",
+                2
+            ],
+            [
+                "resist_multiplier",
+                0.7
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    66,
+                    138,
+                    32
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Protect",
         "name": "Protect",
-        "desc": "Hilstara can protect a unit, with its effects working as long as they are adjacent. Protected unit receives 20% less damage. Hilstara loses <blue>1 mana</> per turn. Both Unit and Hilstara have MOV -1 and SPD -5.",
+        "desc": "Hilstara can protect a unit, with its effects working as long as they are adjacent. Protected unit receives 50% less damage. Hilstara loses <blue>2 mana</> per turn. Both Unit and Hilstara have MOV -1 and SPD -5.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -17255,7 +17365,7 @@
     {
         "nid": "Protected",
         "name": "Protected",
-        "desc": "Unit is being protected by Hilstara. Unit receives 20% less damage. MOV -1 and SPD -5.\nEffect is active as long as Hilstara is adjacent.",
+        "desc": "Unit is being protected by Hilstara. Unit receives 50% less damage. MOV -1 and SPD -5.\nEffect is active as long as Hilstara is adjacent.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -17264,7 +17374,7 @@
         "components": [
             [
                 "resist_multiplier",
-                0.7999999999999999
+                0.5000000000000001
             ],
             [
                 "condition",
@@ -17304,7 +17414,7 @@
     {
         "nid": "Protecting",
         "name": "Protecting",
-        "desc": "Hilstara is protecting a unit. Costs 1 mana per turn. MOV -1 and SPD -5.",
+        "desc": "Hilstara is protecting a unit. Costs 2 mana per turn. MOV -1 and SPD -5.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -17334,7 +17444,7 @@
             ],
             [
                 "mana_regeneration",
-                -1
+                -2
             ],
             [
                 "ability",
@@ -17351,6 +17461,94 @@
             [
                 "lost_on_end_chapter",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Vanguard",
+        "name": "Vanguard",
+        "desc": "When Hilstara is the lead unit in a pair-up, she has bonus damage and is less likely to be doubled.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.lead_unit == True"
+            ],
+            [
+                "defense_speed",
+                10
+            ],
+            [
+                "damage_multiplier",
+                1.2
+            ]
+        ]
+    },
+    {
+        "nid": "Active_Defense",
+        "name": "Active Defense",
+        "desc": "Whenever Hilstara is in a guard stance with other unit, grants them <green>[SHIELDED]</>: When attacked, small chance of completely negating damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            52
+        ],
+        "components": [
+            [
+                "pairup_bonus",
+                "Active_Defense_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "Active_Defense_effect",
+        "name": "<green>[SHIELDED]</>",
+        "desc": "When attacked, small chance of completely negating damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            52
+        ],
+        "components": [
+            [
+                "defense_proc",
+                "Active_Defense_proc"
+            ],
+            [
+                "proc_rate",
+                "MOVEMENT"
+            ]
+        ]
+    },
+    {
+        "nid": "Active_Defense_proc",
+        "name": "<green>[SHIELDED]</>",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            52
+        ],
+        "components": [
+            [
+                "ignore_damage",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    175,
+                    212,
+                    225
+                ]
             ]
         ]
     },
@@ -17377,7 +17575,7 @@
     {
         "nid": "Indomitable_Will",
         "name": "Indomitable Will",
-        "desc": "",
+        "desc": "When at 25% of max HP or less, Hilstara can use Indomitable Will. Heals full HP and removes any negative statuses.\nOne use per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -17393,18 +17591,36 @@
                 "Indomitable_Will"
             ],
             [
-                "hidden_if_inactive",
+                "condition",
+                "unit.get_hp() / unit.get_max_hp() <= 0.25"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Harem_Tactics",
+        "name": "Harem Tactics",
+        "desc": "Hilstara swaps one currently active character for a undeployed one. One use per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            49
+        ],
+        "components": [
+            [
+                "ability",
+                "Harem_Tactics"
+            ],
+            [
+                "class_skill",
                 null
             ],
             [
-                "condition",
-                "(unit.get_hp() / unit.get_max_hp() <= 0.25) and (game.current_mode.nid in ['Normal', 'Easy'])"
-            ],
-            [
-                "multi_skill",
-                [
-                    "Negative_Status_Restore"
-                ]
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -17684,17 +17900,6 @@
                 null
             ]
         ]
-    },
-    {
-        "nid": "new_2",
-        "name": "new_2",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
     },
     {
         "nid": "Careful_Positioning",

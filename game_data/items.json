@@ -16759,7 +16759,7 @@
     {
         "nid": "Rock",
         "name": "Rock",
-        "desc": "Long range improvised weapon used by orcs. Has an area of effect damage. Units hit by this are <red>[STUNNED]</>.\nHas 1 turn cooldown.\n<red>[STUNNED]</>: Cannot act for 1 turn.",
+        "desc": "Long range improvised weapon used by orcs. Has an area of effect damage. Units hit by this have a chance to be <red>[STUNNED]</>.\nHas 1 turn cooldown.\n<red>[STUNNED]</>: Cannot act for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -16795,10 +16795,6 @@
                 6
             ],
             [
-                "status_on_hit",
-                "Stunned"
-            ],
-            [
                 "prf_class",
                 [
                     "Orc_Thrower"
@@ -16819,6 +16815,14 @@
             [
                 "no_double",
                 null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Stun_attack"
             ]
         ]
     },
@@ -27968,6 +27972,95 @@
             [
                 "restore",
                 null
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Mend"
+            ],
+            [
+                "map_hit_sfx",
+                "CutinCrit"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Hold_The_Line",
+        "name": "Hold The Line!",
+        "desc": "Hilstara shouts to maintain formation. All allied units 3 tiles horizontally adjacent to Hilstara gain <green>[HOLD]</>: Less damage received. Cannot move. Lasts one turn. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            41
+        ],
+        "components": [
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -2,
+                            0
+                        ],
+                        [
+                            -3,
+                            0
+                        ],
+                        [
+                            1,
+                            0
+                        ],
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            3,
+                            0
+                        ]
+                    ],
+                    "target": "ally",
+                    "range": 1
+                }
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Hold_The_Line_effect"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Weapon Push"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Reinforce"
             ]
         ]
     },
@@ -28016,6 +28109,61 @@
             [
                 "map_cast_sfx",
                 "Map_Step_Armor2"
+            ]
+        ]
+    },
+    {
+        "nid": "Harem_Tactics",
+        "name": "Harem Tactics",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            49
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global CommandSwap"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Select 1"
             ]
         ]
     },
