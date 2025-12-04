@@ -7142,7 +7142,7 @@
     {
         "nid": "Constricting_Love",
         "name": "Constricting Love",
-        "desc": "Milena entangles an enemy, inflicting it with <red>[SQUEEZED]</>. Costs <blue>15 mana</>.\n<red>[SQUEEZED]</>: Unit cannot move, has decreased attack speed and defense speed.",
+        "desc": "Milena entangles an enemy, inflicting it with <red>[SQUEEZED]</>. Costs <orange>15 SP</>.\n<red>[SQUEEZED]</>: Unit cannot move, has decreased attack speed and defense speed.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -7264,7 +7264,7 @@
     {
         "nid": "Dancing_Line",
         "name": "Dancing Line",
-        "desc": "Milena gather a happy line of dancing friends. She can select an ally up to 5 tiles away. All allies in a line between Milena and the target get their turn refreshed. Costs <blue>20 mana</>.",
+        "desc": "Milena gather a happy line of dancing friends. She can select an ally up to 5 tiles away. All allies in a line between Milena and the target get their turn refreshed. Costs <orange>20 SP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -8907,7 +8907,7 @@
     {
         "nid": "Teleport",
         "name": "Teleport",
-        "desc": "When Riala has <blue>10 or more mana</>, she can choose to teleport next to any unit.",
+        "desc": "When Riala has <orange>10 or more SP</>, she can choose to teleport next to any unit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -12088,6 +12088,421 @@
         "components": []
     },
     {
+        "nid": "Hipped",
+        "name": "<red>[HIPPED]</>",
+        "desc": "-4 STR and MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -4
+                    ],
+                    [
+                        "MAG",
+                        -4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_blade_lust",
+        "name": "<red>[LUST DEATH]</>",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) == 10"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Lust_Death"
+            ]
+        ]
+    },
+    {
+        "nid": "Delayed_Gratification",
+        "name": "Delayed Gratification",
+        "desc": "Nalili learned with Simon that patience multiplies the pleasure. Nalili's skill share <blue>charges</>. Whenever Nalili starts an interaction with an enemy or ally, she gains <blue>1 charge</>. Defeating enemis build <blue>2 charges</>. Upon use of skill, <blue>reset all charges</blue>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orgasmic_Strike",
+        "name": "Orgasmic Strike",
+        "desc": "An attack with certain consequences for Nalili's body. Can't miss.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            49
+        ],
+        "components": [
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "active_combat_charge_increase",
+                1
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Orgasmic_Strike"
+            ],
+            [
+                "kill_charge_increase",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Cleavage",
+        "name": "Cleavage",
+        "desc": "Nalili distracts her enemies then slashes on an area around her.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            52
+        ],
+        "components": [
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "active_combat_charge_increase",
+                1
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Cleavage"
+            ],
+            [
+                "kill_charge_increase",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Orgy_of_Blows",
+        "name": "Orgy of Blows",
+        "desc": "Nalili strikes at three random enemies near her.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            27
+        ],
+        "components": [
+            [
+                "build_charge",
+                4
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "active_combat_charge_increase",
+                1
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Orgy_of_Blows"
+            ],
+            [
+                "kill_charge_increase",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Kiss_of_Steel",
+        "name": "Kiss of Steel",
+        "desc": "Nalili strikes the enemy and drains health based on damage dealt.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            24
+        ],
+        "components": [
+            [
+                "build_charge",
+                4
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "active_combat_charge_increase",
+                1
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Kiss_of_Steel"
+            ],
+            [
+                "kill_charge_increase",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Blade_of_Lust",
+        "name": "Kiss of Steel",
+        "desc": "Nalili combines her swordmanship with her lust to create the ultimate technique. Low chance to inflict the enemy with <red>[LUST DEATH]</>: Unit is incapacitated until the end of chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            48
+        ],
+        "components": [
+            [
+                "build_charge",
+                4
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "active_combat_charge_increase",
+                1
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Blade_of_Lust"
+            ],
+            [
+                "kill_charge_increase",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Dance_Nalili",
+        "name": "Swords Dance",
+        "desc": "Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target. Costs <orange> 5 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "ability",
+                "Dance_Nalili_Main"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Hip_Check",
+        "name": "Hip Check",
+        "desc": "Nalili suddenly strikes the enemy with her hip, inflicting them with <red>[HIPPED]</>: -4 STR and MAG. Costs <orange>5 SP</> and <red>4 HP</>. <red>3 turns cooldown</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "ability",
+                "Hip_Check"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Kiss_of_Steel_CA",
+        "name": "Kiss of Steel",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            26
+        ],
+        "components": [
+            [
+                "lifelink",
+                0.9999999999999999
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    168,
+                    85,
+                    203
+                ]
+            ],
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "event_after_combat",
+                "Global Nalili charge skill use all"
+            ]
+        ]
+    },
+    {
+        "nid": "Cleavage_CA",
+        "name": "Cleavage",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            26
+        ],
+        "components": [
+            [
+                "post_combat_splash",
+                10
+            ],
+            [
+                "post_combat_splash_aoe",
+                1
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    155,
+                    32,
+                    208
+                ]
+            ],
+            [
+                "damage_multiplier",
+                1.3
+            ],
+            [
+                "event_after_combat",
+                "Global Nalili charge skill use all"
+            ]
+        ]
+    },
+    {
+        "nid": "Orgasmic_Strike_CA",
+        "name": "Orgasmic Strike",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            26
+        ],
+        "components": [
+            [
+                "hit",
+                100
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    181,
+                    45,
+                    167
+                ]
+            ],
+            [
+                "damage_multiplier",
+                1.0999999999999999
+            ],
+            [
+                "event_after_combat",
+                "Global Nalili charge skill use all"
+            ]
+        ]
+    },
+    {
         "nid": "Martial_Masturbation",
         "name": "Martial Masturbation",
         "desc": "",
@@ -12099,30 +12514,24 @@
         "components": [
             [
                 "ability",
-                "Flaming_Thrust_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
+                "Martial_Masturbation_ability"
             ],
             [
                 "condition",
                 "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
             ],
             [
-                "hide_aura",
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
                 null
             ]
         ]
@@ -12139,31 +12548,25 @@
         "components": [
             [
                 "ability",
-                "Flaming_Thrust_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
+                "Desperate_Masturbation_ability"
             ],
             [
                 "condition",
                 "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Varia'))])"
             ],
             [
-                "hide_aura",
+                "grey_if_inactive",
                 null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
             ]
         ]
     },
@@ -12179,61 +12582,25 @@
         "components": [
             [
                 "ability",
-                "Flaming_Thrust_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
+                "Healing_Masturbation_ability"
             ],
             [
                 "condition",
                 "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
             ],
             [
-                "hide_aura",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Flaming_Thrust",
-        "name": "Flaming Thrust",
-        "desc": "<green>[Robin]</>",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            18
-        ],
-        "components": [
-            [
-                "ability",
-                "Flaming_Thrust_ability"
-            ],
-            [
-                "hidden_if_inactive",
+                "grey_if_inactive",
                 null
             ],
             [
-                "condition",
-                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
-            ],
-            [
-                "has_tags",
+                "skill_tags",
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ]
         ]
     },
@@ -12294,59 +12661,32 @@
         ]
     },
     {
-        "nid": "Hipped",
-        "name": "<red>[HIPPED]</>",
-        "desc": "-4 STR and MAG.",
+        "nid": "Flaming_Thrust",
+        "name": "Flaming Thrust",
+        "desc": "<green>[Robin]</>",
         "icon_nid": "skill_icons",
         "icon_index": [
-            10,
-            47
-        ],
-        "components": [
-            [
-                "negative",
-                null
-            ],
-            [
-                "time",
-                3
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        -4
-                    ],
-                    [
-                        "MAG",
-                        -4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Proc_blade_lust",
-        "name": "Proc lust death",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
             0,
-            0
+            18
         ],
         "components": [
             [
-                "hidden",
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "hidden_if_inactive",
                 null
             ],
             [
                 "condition",
-                "game.get_random(0,10) == 10"
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
             ],
             [
-                "give_status_after_combat_on_hit",
-                "Lust_Death"
+                "has_tags",
+                [
+                    "Synergy"
+                ]
             ]
         ]
     },
@@ -13101,7 +13441,7 @@
     {
         "nid": "Succubus_Mana",
         "name": "Succubus",
-        "desc": "Succubi start each chapter with <blue>0 mana</>. They regain mana passively, on hit and on kill. Player succubi units can <green>masturbate</> to regain <blue>4 mana</>.",
+        "desc": "Succubi start each chapter with <orange>0 SP</>. They regain SP passively, on hit and on kill. Player succubi units can <green>masturbate</> to gain <orange>4 SP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -14599,7 +14939,7 @@
     {
         "nid": "Dance",
         "name": "Dance",
-        "desc": "The unit can <green>refresh</> an ally, letting them act again this turn. Costs <blue>4 mana</>.",
+        "desc": "The unit can <green>refresh</> an ally, letting them act again this turn. Costs <orange>4 SP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -17924,7 +18264,7 @@
     {
         "nid": "Brutal_Nature",
         "name": "Brutal Nature",
-        "desc": "When attacking in <red>player phase</>, gain 1 stack of <red>Brutality</>.",
+        "desc": "When attacking in <blue>player phase</>, gain 1 stack of <red>Brutality</>: for each stack, Orcent deals 2 more damage and is dealt 5 recoil damage after combat. At 4 stacks, Orcent gets <red>[CONFUSED]</>. <blue>Only active in Player phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -17956,7 +18296,7 @@
     {
         "nid": "Introspective_Nature",
         "name": "Introspective Nature",
-        "desc": "After being attacked in <red>enemy phase</>, gain 1 stack of <blue>Serenity</>.",
+        "desc": "After being attacked in <red>enemy phase</>, gain 1 stack of <blue>Serenity</>: for each stack, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 4 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -17988,7 +18328,7 @@
     {
         "nid": "Reflection",
         "name": "Reflection",
-        "desc": "",
+        "desc": "Orcent takes a moment to indulge in his thoughts. Orcent can choose to remove 1 stack of Brutality, Serenity or both.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -18008,7 +18348,7 @@
     {
         "nid": "Brute_Stack",
         "name": "Brutality",
-        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage, and is dealt 5 recoil damage after combat. At 4 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
+        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage and is dealt 5 recoil damage after combat. At 4 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -18167,6 +18507,203 @@
         ]
     },
     {
+        "nid": "Aggressive_Attack_skill",
+        "name": "Aggressive Attack",
+        "desc": "Forceful attack. Can't miss. Axe only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            40
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Aggressive_Attack"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Aggressive_Attack",
+        "name": "Aggressive Attack",
+        "desc": "Forceful attack. Can't miss. Axe only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            40
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ]
+        ]
+    },
+    {
+        "nid": "Piercing_Attack_skill",
+        "name": "Piercing Attack",
+        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Piercing_Attack"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Piercing_Attack",
+        "name": "Piercing Attack",
+        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "hit",
+                999
+            ],
+            [
+                "post_combat_damage_percent",
+                0.2
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Attack_skill",
+        "name": "Defensive Attack",
+        "desc": "Weak attack. Debuffs oponent's SPD and STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            36
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Defensive_Attack"
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Attack",
+        "name": "Defensive Attack",
+        "desc": "Weak attack. Debuffs oponent's SPD and STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            36
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                0.7999999999999999
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Defensive_Attack_debuff"
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Attack_debuff",
+        "name": "<red>[HINDERED]</>",
+        "desc": "-5 SPD and STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            1
+        ],
+        "components": [
+            [
+                "time",
+                2
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -5
+                    ],
+                    [
+                        "SPD",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Snipe_Target",
         "name": "Snipe Target",
         "desc": "<green>[Dari synergy]</> Orcent can attack a target scouted by Dari.",
@@ -18189,7 +18726,7 @@
     {
         "nid": "Perceptiveness",
         "name": "Perceptiveness",
-        "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has greater chance to avoid enemy critical hits.",
+        "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has significantly greater chance to avoid enemy critical hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -18198,7 +18735,7 @@
         "components": [
             [
                 "crit_avoid",
-                25
+                40
             ],
             [
                 "condition",
@@ -18207,6 +18744,142 @@
             [
                 "unit_anim",
                 "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Attack_skill",
+        "name": "Blinding Attack",
+        "desc": "<green>[Simon synergy]</> A precise attack. Inflicts the opponent with <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ],
+            [
+                "combat_art",
+                "Blinding_Attack"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Attack",
+        "name": "Blinding Attack",
+        "desc": "<green>[Simon synergy]</> A precise attack. Inflicts the opponent with <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "give_status_after_combat_on_hit",
+                "Blinded"
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Attack_skill",
+        "name": "Burning Attack",
+        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Burning_Attack"
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Attack",
+        "name": "Burning Attack",
+        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "alternate_damage_formula",
+                "MAGIC_DAMAGE"
+            ],
+            [
+                "attack_proc",
+                "Burning_Attack_proc"
+            ],
+            [
+                "proc_rate",
+                "PROCSTATUS"
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Attack_proc",
+        "name": "Burning Attack",
+        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "give_status_after_combat_on_hit",
+                "Burned"
             ]
         ]
     },
@@ -18227,6 +18900,26 @@
             [
                 "condition",
                 "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Bow'"
+            ]
+        ]
+    },
+    {
+        "nid": "Orcent_no_Mana",
+        "name": "Orcent no mana",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "mana_regeneration",
+                -20
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
