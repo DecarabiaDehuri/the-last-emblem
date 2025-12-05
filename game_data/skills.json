@@ -7577,7 +7577,7 @@
         "components": [
             [
                 "regeneration",
-                1.0
+                50.0
             ],
             [
                 "hidden",
@@ -7586,7 +7586,7 @@
         ]
     },
     {
-        "nid": "Rialay_aura",
+        "nid": "Riala_aura",
         "name": "Riala_aura",
         "desc": "",
         "icon_nid": "skill_icons",
@@ -7927,6 +7927,274 @@
         ]
     },
     {
+        "nid": "Healing_Kiss",
+        "name": "Healing Kiss",
+        "desc": "Qum heals an ally. <orange> 3 SP</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orgasmic_Thoughts",
+        "name": "Orgasmic Thoughts",
+        "desc": "Qum heals allies in an area. <orange>10 SP</>. Once per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Cleansing_Wink",
+        "name": "Cleansing Wink",
+        "desc": "Qum cures an ally of an ailment. <orange>6 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Arousing_Kiss",
+        "name": "Arousing Kiss",
+        "desc": "Qum buffs an ally with <green>[AROUSED]</>: +5 STR and MAG. <orange>8 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            27
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Cumdump",
+        "name": "Cumdump",
+        "desc": "Qum transfers some of her <orange>SP</> to an ally's <blue>mana</>. <orange>12 SP</>. Can be used up to 3 times per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Little_Death",
+        "name": "Little Death",
+        "desc": "When Qum is supporting another unit in a Pair-up, that ally has <green>[CRADLED]</>: When defeated in combat, returns with 1 HP. Only triggers once per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            48
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "pairup_bonus",
+                "Little_Death_effect"
+            ],
+            [
+                "drain_charge",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Little_Death_effect",
+        "name": "<green>[CRADLED]</>",
+        "desc": "When defeated in combat, returns with 1 HP. Only triggers once per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            48
+        ],
+        "components": [
+            [
+                "True_Miracle_Event",
+                "Global Qum little death charges to 0"
+            ],
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "u('Qum').get_skill('Little_Death').data['charge'] > 0"
+            ]
+        ]
+    },
+    {
+        "nid": "Arousing_Aura",
+        "name": "Arousing Aura",
+        "desc": "Qum buffs allies in an area with <green>[AROUSED]</>: +5 STR and MAG. <orange>15 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Illusory_Orgy",
+        "name": "Illusory Orgy",
+        "desc": "Qum heals and restores allies of negative statuses in an area. <orange>13 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Happy_Tingles",
+        "name": "Happy Tingles",
+        "desc": "After Qum dances to an ally, they gain <green>[HAPPY]</>: Recovers a bit of HP and <mana> at the start of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            48
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_combat",
+                "Happy_Tingles_effect"
+            ],
+            [
+                "combat_condition",
+                "target.team == unit.team"
+            ]
+        ]
+    },
+    {
+        "nid": "Happy_Tingles_effect",
+        "name": "<green>[HAPPY]</>",
+        "desc": "Recovers a bit of HP and <mana> at the start of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            48
+        ],
+        "components": [
+            [
+                "mana_regeneration",
+                1
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "regeneration",
+                0.1
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Protective_Hug",
+        "name": "Protective Hug",
+        "desc": "Qum gives an ally <green>[HUGGED]</>, which significantly improves defense. <orange>5 SP</>. Usable once per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            49
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Arousing_Kiss_effect",
         "name": "<green>[AROUSED]</>",
         "desc": "+5 STR and MAG",
@@ -8052,10 +8320,10 @@
         "nid": "Pretty_Lance",
         "name": "Pretty Lance",
         "desc": "",
-        "icon_nid": "Affinity",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            3
+            7,
+            37
         ],
         "components": [
             [
@@ -8069,6 +8337,24 @@
             [
                 "condition",
                 "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -8933,6 +9219,66 @@
         ]
     },
     {
+        "nid": "Mana_Masturbation",
+        "name": "Mana Masturbation",
+        "desc": "Gain <orange>2 SP</>. Restores negative status effects.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            26
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Mana_Masturbation"
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Teleport",
+        "name": "Combat Teleport",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            32
+        ],
+        "components": [
+            [
+                "ability",
+                "Combat_Teleport"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Nostalgic_Lust",
+        "name": "Nostalgic Lust",
+        "desc": "Riala can use Lusting Gaze and Lethal Lust. Lusting Gaze: Riala inflicts a unit with <red>[DESIRED]</>: This unit can be the target of Lethal Lust: Riala targets her enemy with a rain of painful lust. Unit loses half of their health. Unit is inflicted with <red>[LEAKING]</>: Unit heals nearby enemies. <red>One use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Teleport_effect",
         "name": "Teleport",
         "desc": "Riala can choose to teleport next to any unit.",
@@ -8957,6 +9303,26 @@
             [
                 "check_mana",
                 10
+            ]
+        ]
+    },
+    {
+        "nid": "Cyclical_Fire",
+        "name": "Cyclical Fire",
+        "desc": "Advanced fire magic. Costs <orange>5 SP</>. 3 turns cooldown.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            26
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -10504,6 +10870,17 @@
         ]
     },
     {
+        "nid": "Zirantian_Warrior",
+        "name": "Zirantian Warrior",
+        "desc": "Uyae is a Zirantian, a race capable of transforming into beasts. Uyae does not use weapons, but she can enchant her claws with different properties.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            49
+        ],
+        "components": []
+    },
+    {
         "nid": "Stance_Switch",
         "name": "Stance Switch",
         "desc": "Uyae can switch between different stances.",
@@ -11033,139 +11410,6 @@
         ]
     },
     {
-        "nid": "Overgasm",
-        "name": "Overgasm",
-        "desc": "When this reaches 3 stacks, Lynine is overstimulated and will suffer <red>[OVERGASMED]</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            51
-        ],
-        "components": [
-            [
-                "stack",
-                3
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Overgasm_Info",
-        "name": "Overgasm",
-        "desc": "Lynine's skills increase the Overgasm meter. When it reaches 3 stacks, she suffers <red>[OVERGASMED]</>: unable to act for one turn, with increasing turn counts each time it's triggered on a chapter.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            51
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Overgasmed",
-        "name": "<red>[OVERGASMED]</>",
-        "desc": "Lynine has fainted and can't act again until she recovers. Enemies may try to attack her.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            38
-        ],
-        "components": [
-            [
-                "unselectable",
-                null
-            ],
-            [
-                "cannot_trade",
-                null
-            ],
-            [
-                "cannot_use_items",
-                null
-            ],
-            [
-                "grounded",
-                null
-            ],
-            [
-                "time",
-                2
-            ],
-            [
-                "modify_ai_priority",
-                1.5000000000000002
-            ],
-            [
-                "unit_anim",
-                "MapStun"
-            ]
-        ]
-    },
-    {
-        "nid": "Emergency_Shelter",
-        "name": "Emergency Shelter",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            47
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Emergency_Shelter"
-            ]
-        ]
-    },
-    {
-        "nid": "Emergency_Shelter_buff",
-        "name": "Emergency Shelter",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            47
-        ],
-        "components": [
-            [
-                "stat_change",
-                [
-                    [
-                        "MOV",
-                        2
-                    ]
-                ]
-            ],
-            [
-                "no_attack_after_move",
-                null
-            ],
-            [
-                "lost_on_endstep",
-                null
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    126,
-                    241,
-                    187
-                ]
-            ]
-        ]
-    },
-    {
         "nid": "Affiliate_skill",
         "name": "Affiliate",
         "desc": "<orange>[Megail] synergy</> Lynine can mark an ally as an affiliate. For 3 turns, Lynine can move next to them, regardless of distance. Marking costs <blue>5 mana</> and increases <red>[OVERGASM]</>.",
@@ -11232,6 +11476,394 @@
             [
                 "time",
                 3
+            ]
+        ]
+    },
+    {
+        "nid": "Overgasm",
+        "name": "Overgasm",
+        "desc": "When this reaches 3 stacks, Lynine is overstimulated and will suffer <red>[OVERGASMED]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "stack",
+                3
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Overgasm_Info",
+        "name": "Overgasm",
+        "desc": "Lynine's skills increase the Overgasm meter. When it reaches 3 stacks, she suffers <red>[OVERGASMED]</>: unable to act for one turn, with increasing turn counts each time it is triggered on a chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Overgasmed",
+        "name": "<red>[OVERGASMED]</>",
+        "desc": "Lynine has fainted and can't act again until she recovers. Can't be cured. Enemies are more inclined to attack her.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            38
+        ],
+        "components": [
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "cannot_trade",
+                null
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "grounded",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "modify_ai_priority",
+                1.5000000000000002
+            ],
+            [
+                "unit_anim",
+                "MapStun"
+            ]
+        ]
+    },
+    {
+        "nid": "Congenial_Presence",
+        "name": "Congenial Presence",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            46
+        ],
+        "components": [
+            [
+                "aura",
+                "Congenial_Presence_effect"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Congenial_Presence_effect",
+        "name": "Congenial Presence",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            46
+        ],
+        "components": [
+            [
+                "avoid",
+                20
+            ],
+            [
+                "crit_avoid",
+                20
+            ],
+            [
+                "condition",
+                "'Succubus' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Visionary_Perspective",
+        "name": "Visionary Perspective",
+        "desc": "On <green>Even</> turns, Lynine has bonus MOV.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            47
+        ],
+        "components": [
+            [
+                "condition",
+                "game.turncount % 2 == 0"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    21,
+                    120,
+                    195
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Emergency_Shelter",
+        "name": "Emergency Shelter",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Emergency_Shelter"
+            ]
+        ]
+    },
+    {
+        "nid": "Emergency_Shelter_buff",
+        "name": "Emergency Shelter",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "no_attack_after_move",
+                null
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    126,
+                    241,
+                    187
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "new_1",
+        "name": "new_1",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Tag_Team_Lynine",
+        "name": "Tag Team",
+        "desc": "Elder Lynine and <green>Reliar</> Orilise are fearsome when bickering, but even stronger when collaborating. If both are adjacent to an unit, give them Tag Team. If <blue> ally: Unit is immune to negative status effects. If <red>enemy</>: Unit can't double.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "aura",
+                "Tag_Team"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "unit"
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Team_Orilise",
+        "name": "Tag Team",
+        "desc": "Elder Lynine and <green>Reliar</> Orilise are fearsome when bickering, but even stronger when collaborating. If both are adjacent to an unit, give them Tag Team. If <blue> ally: Unit is immune to negative status effects. If <red>enemy</>: Unit can't double.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "aura",
+                "Tag_Team"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "unit"
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Team",
+        "name": "Tag Team",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "stack",
+                2
+            ],
+            [
+                "multi_skill",
+                [
+                    "Tag_Team_ally",
+                    "Tag_Team_enemy"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Team_ally",
+        "name": "Tag Team",
+        "desc": "Supported by Elder Lynine and <green>Reliar</> Orilise.\nUnit is immune to negative status effects.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "condition",
+                "(unit.team == 'player') and ([s.nid for s in unit.skills].count('Tag_Team') == 2)"
+            ],
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    36,
+                    63,
+                    126
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Team_enemy",
+        "name": "Tag Team",
+        "desc": "Sabotaged by Elder Lynine and <green>Reliar</> Orilise.\nUnit can't double.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "condition",
+                "(unit.team == 'enemy' or unit.team == 'enemy2') and ([s.nid for s in unit.skills].count('Tag_Team') == 2)"
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "cannot_double",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    147,
+                    36,
+                    38
+                ]
             ]
         ]
     },
@@ -11408,6 +12040,96 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Baleful_Presence",
+        "name": "Baleful Presence",
+        "desc": "Orilise's aura makes enemies more vulnerable to magic attacks. Passively reduces enemies' RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            46
+        ],
+        "components": [
+            [
+                "aura",
+                "Baleful_Presence_effect"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Baleful_Presence_effect",
+        "name": "Baleful Presence",
+        "desc": "Unit is having their RES diminished by 20% from Orilise.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            46
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        0.8
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Defiant_Perspective",
+        "name": "Defiant Perspective",
+        "desc": "On <red>Odd</> turns, Orilise has bonus MOV.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            47
+        ],
+        "components": [
+            [
+                "condition",
+                "game.turncount % 2 == 1"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    195,
+                    18,
+                    45
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
             ]
         ]
     },
@@ -11597,7 +12319,7 @@
     {
         "nid": "Battle_Sophism",
         "name": "Battle Sophism",
-        "desc": "<green>Reliar</> Orilise has a LUK%/2 chance to inflict <red>[DISCOURAGED]</> when attacking. <red>[DISCOURAGED]</>: Unit cannot double.",
+        "desc": "<green>Reliar</> Orilise has a LUK% chance to inflict <red>[DISCOURAGED]</> when attacking. <red>[DISCOURAGED]</>: Unit cannot double.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -11614,7 +12336,7 @@
             ],
             [
                 "proc_rate",
-                "HALFLUCK"
+                "PROCSTATUS"
             ]
         ]
     },

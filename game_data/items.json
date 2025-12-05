@@ -195,12 +195,6 @@
             [
                 "multi_item_hides_unavailable",
                 null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Altina"
-                ]
             ]
         ]
     },
@@ -4935,7 +4929,7 @@
     {
         "nid": "Healing_Kiss_Qum",
         "name": "Healing Kiss",
-        "desc": "Qum kisses and loves and healies! <blue>3 sparkles</>",
+        "desc": "Qum kisses and loves and healies! <orange>3 sparkles</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -4997,17 +4991,13 @@
             [
                 "mana_cost",
                 3
-            ],
-            [
-                "eval_target_restrict_2",
-                "'Unpeople' not in target.tags"
             ]
         ]
     },
     {
         "nid": "Orgasmic_Thoughts",
         "name": "Orgasmic Thoughts",
-        "desc": "Cumdump loves Cumdump's friends lots and lots!! <blue>10 sparkles</> <red>one time!</>",
+        "desc": "Cumdump loves Cumdump's friends lots and lots!! <orange>10 sparkles</> <red>one time!</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -5094,7 +5084,7 @@
     {
         "nid": "Cleansing_Wink",
         "name": "Cleansing Wink",
-        "desc": "Cumdump heals poor Cumdump's friend of the sickness!! <blue>6 sparkles</>",
+        "desc": "Cumdump heals poor Cumdump's friend of the sickness!! <orange>6 sparkles</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -5162,7 +5152,7 @@
     {
         "nid": "Arousing_Kiss",
         "name": "Arousing Kiss",
-        "desc": "Cumdump helps Cumdump's friend get very strong!! <blue>8 sparkles</>",
+        "desc": "Cumdump helps Cumdump's friend get very strong!! <orange>8 sparkles</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -5230,7 +5220,7 @@
     {
         "nid": "Cumdump",
         "name": "Cumdump",
-        "desc": "Cumdump Cumdumps Cumdump's friend!! <blue>12 sparkles</> <red>3 times!</>",
+        "desc": "Cumdump Cumdumps Cumdump's friend!! <orange>12 sparkles</> <red>3 times!</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -5309,7 +5299,7 @@
     {
         "nid": "Arousing_Aura",
         "name": "Arousing Aura",
-        "desc": "Cumdump helps Cumdump's many friends get very strong!! <blue>15 sparkles</>",
+        "desc": "Cumdump helps Cumdump's many friends get very strong!! <orange>15 sparkles</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -5381,7 +5371,7 @@
     {
         "nid": "Illusory_Orgy",
         "name": "Illusory Orgy",
-        "desc": "Cumdump imagines Cumdump's friends in happy sex!! <blue>13 sparkles</>",
+        "desc": "Cumdump imagines Cumdump's friends in happy sex!! <orange>13 sparkles</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -5453,7 +5443,7 @@
     {
         "nid": "Protective_Hug",
         "name": "Protective Hug",
-        "desc": "Cumdump saves Cumdump's friend! <blue>5 sparkles</> <red>once!</>",
+        "desc": "Cumdump saves Cumdump's friend! <orange>5 sparkles</> <red>once!</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -6990,121 +6980,6 @@
         ]
     },
     {
-        "nid": "Inspire_ability",
-        "name": "Inspire",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Inspire_effect"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    255
-                ]
-            ],
-            [
-                "map_hit_sfx",
-                "MapHeal"
-            ]
-        ]
-    },
-    {
-        "nid": "AntiTyrant_ability",
-        "name": "Anti-Tyrant Essence",
-        "desc": "Riala supresses an enemy with pure damage. <blue> 10 Mana </>.",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            6
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "status_on_hit",
-                "Anti_Tyrant_effect"
-            ],
-            [
-                "map_cast_sfx",
-                "DemonLight"
-            ],
-            [
-                "map_cast_anim",
-                "AOE_Wyrmsfire"
-            ],
-            [
-                "map_hit_sub_blend",
-                [
-                    0,
-                    0,
-                    0
-                ]
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "RialaSpells",
         "name": "Riala's spells",
         "desc": "Access Riala's available spells.",
@@ -7121,9 +6996,8 @@
             [
                 "multi_item",
                 [
-                    "Storm_of_Lust",
-                    "Fires_of_Lust",
-                    "Bolt_of_Lust"
+                    "RialaSpells_Arcane",
+                    "RialaSpells_Lust"
                 ]
             ],
             [
@@ -7147,13 +7021,88 @@
         ]
     },
     {
+        "nid": "RialaSpells_Arcane",
+        "name": "Arcane spells",
+        "desc": "Access Riala's Arcane spells.",
+        "icon_nid": "wexp_icons",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "ArcaneFire",
+                    "ArcaneLightning",
+                    "ArcaneIce"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "RialaSpells_Lust",
+        "name": "Lust spells",
+        "desc": "Access Riala's Arcane spells.",
+        "icon_nid": "wexp_icons",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "LustFlux",
+                    "Sexual_Torment",
+                    "Succubus_Kiss",
+                    "Fires_of_Lust",
+                    "Bolt_of_Lust",
+                    "Storm_of_Lust"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Storm_of_Lust",
         "name": "Storm of Lust",
         "desc": "A storm of ice and lust. Chance to inflict <red>[STUNNED]</>. Costs <orange>15 SP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            38
+            10,
+            32
         ],
         "components": [
             [
@@ -7585,6 +7534,472 @@
             ],
             [
                 "level_exp",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Cyclical_Fire",
+        "name": "Cyclical Fire",
+        "desc": "Advanced fire spell. Costs <orange>5 SP</>. 3 turns cooldown.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            26
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    38,
+                    41
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "battle_cast_anim",
+                "Flareblade"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Teleport",
+        "name": "Combat Teleport",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            32
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global CommandSwap"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Select 1"
+            ]
+        ]
+    },
+    {
+        "nid": "Nostalgic_lust",
+        "name": "Nostalgic Lust",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            36
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Lusting_Gaze_main",
+                    "Lethal_Lust_main"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Lusting_Gaze_main",
+        "name": "Lusting Gaze",
+        "desc": "Riala inflicts a unit with <red>[DESIRED]</>. This unit will be the victim of Riala's attack next turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            33
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Flux"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_after_combat_on_hit",
+                [
+                    "Desired",
+                    "Eclipse_Helper"
+                ]
+            ],
+            [
+                "siege_weapon",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lethal_Lust_main",
+        "name": "Lethal Lust",
+        "desc": "Riala targets her enemy with a rain of painful lust. Unit loses half of their health. Unit is inflicted with <red>[LEAKING]</>.\n<red>[LEAKING]</>: Unit heals nearby enemies. <red>One use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            36
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eclipse",
+                null
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "eval_target_restrict_2",
+                "has_skill(target, 'Desired')"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Hex"
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Leaking",
+                    "Eclipse_Helper"
+                ]
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Mana_Masturbation",
+        "name": "Mana Masturbation",
+        "desc": "Gain <orange>2 SP</>. Restores negative status effects.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            26
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "mana_cost",
+                -2
+            ],
+            [
+                "map_cast_anim",
+                "MapSurprise"
+            ],
+            [
+                "map_hit_sfx",
+                "Shine"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_target_cast_anim",
+                "synergy"
+            ],
+            [
+                "restore",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire_ability",
+        "name": "Inspire",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Inspire_effect"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "MapHeal"
+            ]
+        ]
+    },
+    {
+        "nid": "AntiTyrant_ability",
+        "name": "Anti-Tyrant Essence",
+        "desc": "Riala supresses an enemy with pure damage. <blue> 10 Mana </>.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "status_on_hit",
+                "Anti_Tyrant_effect"
+            ],
+            [
+                "map_cast_sfx",
+                "DemonLight"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Wyrmsfire"
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -8433,6 +8848,10 @@
             [
                 "mana_cost",
                 -10
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Succubus' not in unit.tags"
             ]
         ]
     },
@@ -8480,6 +8899,10 @@
             [
                 "mana_cost",
                 -20
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Succubus' not in unit.tags"
             ]
         ]
     },
@@ -8527,6 +8950,10 @@
             [
                 "mana_cost",
                 -10
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Succubus' in unit.tags"
             ]
         ]
     },
@@ -8574,6 +9001,10 @@
             [
                 "mana_cost",
                 -20
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Succubus' in unit.tags"
             ]
         ]
     },
@@ -14791,6 +15222,110 @@
         ]
     },
     {
+        "nid": "Hotblooded_Dive",
+        "name": "Hotblooded Dive",
+        "desc": "Lynine impulsively dives from above. Targets an enemy up to 5 tiles away. Lynine damages every enemy in the way to this target. She ends up on the other side after. Increases Overgasm. Costs half HP. ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            40
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "enemy_line_aoe",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "pivot",
+                2
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    69,
+                    255,
+                    218
+                ]
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Blizzard"
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 3"
+            ],
+            [
+                "self_status_on_hit",
+                "Overgasm"
+            ],
+            [
+                "map_cast_sfx",
+                "CutinCrit"
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "eval_hp_cost",
+                "unit.get_max_hp() / 2"
+            ]
+        ]
+    },
+    {
+        "nid": "Remodeling",
+        "name": "Remodeling",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            45
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                3
+            ]
+        ]
+    },
+    {
         "nid": "Shelter_ability_lynine",
         "name": "Shelter",
         "desc": "Rescues an adjacent unit.",
@@ -14874,6 +15409,10 @@
             ],
             [
                 "no_map_hp_display",
+                null
+            ],
+            [
+                "warning",
                 null
             ]
         ]
@@ -28349,7 +28888,7 @@
             ],
             [
                 "event_after_combat_on_hit",
-                "Global CommandSwap"
+                "Global Hilstara Harem Tactics"
             ],
             [
                 "spell",

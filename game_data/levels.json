@@ -31237,8 +31237,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    11,
-                    7
+                    12,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -31364,8 +31364,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    4,
-                    7
+                    12,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -31453,8 +31453,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    12,
-                    6
+                    11,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -31490,7 +31490,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    9,
+                    11,
                     6
                 ],
                 "starting_traveler": null,
@@ -31572,7 +31572,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    9,
+                    11,
                     4
                 ],
                 "starting_traveler": null,
@@ -31585,7 +31585,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
+                    11,
                     7
                 ],
                 "starting_traveler": null,
@@ -31757,7 +31757,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    9,
+                    11,
                     5
                 ],
                 "starting_traveler": null,
@@ -32449,8 +32449,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    3
+                    4,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -33489,30 +33489,6 @@
         "tags": [],
         "units": [
             {
-                "nid": "101",
-                "variant": null,
-                "level": 1,
-                "klass": "Protector",
-                "faction": "Soldier",
-                "starting_items": [
-                    [
-                        "Sx_Purse",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    13,
-                    8
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
                 "nid": "102",
                 "variant": null,
                 "level": 1,
@@ -33533,27 +33509,6 @@
                     10,
                     9
                 ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "103",
-                "variant": null,
-                "level": 1,
-                "klass": "Soldier",
-                "faction": "Soldier",
-                "starting_items": [
-                    [
-                        "Sx_Purse",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
@@ -33655,7 +33610,7 @@
             },
             {
                 "nid": "Incubus_King",
-                "team": "player",
+                "team": "enemy",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
@@ -33806,8 +33761,34 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    13,
-                    12
+                    15,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Qum",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Varia",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    16,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
