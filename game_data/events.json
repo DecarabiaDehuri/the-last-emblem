@@ -13738,6 +13738,8 @@
         "priority": 20,
         "_source": [
             "give_item;Lynine;Hotblooded_Dive;;no_banner",
+            "give_skill;Uyae;Stalk;;no_banner",
+            "set_current_hp;102;10",
             "give_item;Lynine;Remodeling;;no_banner",
             "set_current_hp;Vhala;1",
             "give_skill;Orilise;Tag_Team_Orilise;;no_banner",
@@ -17564,7 +17566,8 @@
             "#end",
             "reset;Nalili",
             "reset;Lynine",
-            "reset;Orilise"
+            "reset;Orilise",
+            "s;a;{e:[item.nid for item in u('Uyae').items if item.nid.startswith('Claw')]}"
         ],
         "nid": "teste2 Debug boss skill"
     },
@@ -19870,5 +19873,47 @@
             "end"
         ],
         "nid": "Global Riala level up skills"
+    },
+    {
+        "name": "Uyae takedown",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;utkd;{e:[item.nid for item in u('Uyae').items if item.nid.startswith('Claw')]}",
+            "level_var;uclaw;'{e:game.get_random_choice({v:utkd})}'",
+            "",
+            "interact_unit;Uyae;{target};;{v:uclaw};20"
+        ],
+        "nid": "Global Uyae takedown"
+    },
+    {
+        "name": "Uyae stalk setup",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;stalked;'{target}'"
+        ],
+        "nid": "Global Uyae stalk setup"
+    },
+    {
+        "name": "Uyae stalked prey dies",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "has_skill(unit, 'Stalked')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_skill;Uyae;Stalking"
+        ],
+        "nid": "Global Uyae stalked prey dies"
     }
 ]

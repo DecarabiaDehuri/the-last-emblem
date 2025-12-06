@@ -31312,8 +31312,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
-                    4
+                    12,
+                    5
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -31423,12 +31423,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
-                    9
+                    15,
+                    4
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -31744,8 +31744,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    5,
-                    1
+                    7,
+                    6
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -32944,7 +32944,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
+                    2,
                     5
                 ],
                 "starting_traveler": null,
@@ -32997,6 +32997,58 @@
                 "ai_group": "",
                 "starting_position": [
                     9,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Impaler",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Stark",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Implevon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Grubbak",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
                     4
                 ],
                 "starting_traveler": null,
@@ -33005,7 +33057,12 @@
         ],
         "regions": [],
         "unit_groups": [],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "aram2",
