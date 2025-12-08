@@ -19868,7 +19868,7 @@
         "_source": [
             "if;game.get_unit('Riala').level == 9",
             "    add_item_to_multiitem;Riala;RialaSpells_Arcane;Cyclical_Fire",
-            "elif;game.get_unit('Lucia').level == 11",
+            "elif;game.get_unit('Riala').level == 11",
             "    add_item_to_multiitem;Riala;RialaSpells_Lust;Nostalgic_lust",
             "end"
         ],
@@ -19915,5 +19915,28 @@
             "remove_skill;Uyae;Stalking"
         ],
         "nid": "Global Uyae stalked prey dies"
+    },
+    {
+        "name": "Trin level up skills",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "unit.nid == 'Trin' and source == 'exp_gain'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_unit('Trin').level == 2",
+            "    add_item_to_multiitem;Trin;SoulSpells;SoulSwap",
+            "elif;game.get_unit('Trin').level == 4",
+            "    add_item_to_multiitem;Trin;SoulSpells;SoulRescue",
+            "elif;game.get_unit('Trin').level == 6",
+            "    add_item_to_multiitem;Trin;SoulSpells;SoulPuppetAI",
+            "elif;game.get_unit('Trin').level == 8",
+            "    add_item_to_multiitem;Trin;SoulSpells;SoulShove",
+            "elif;game.get_unit('Trin').level == 10",
+            "    add_item_to_multiitem;Trin;SoulSpells;SoulWarp",
+            "end"
+        ],
+        "nid": "Global Trin level up skills"
     }
 ]

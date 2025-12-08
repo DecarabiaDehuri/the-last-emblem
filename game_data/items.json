@@ -16835,12 +16835,7 @@
             [
                 "multi_item",
                 [
-                    "SoulCopy",
-                    "SoulRescue",
-                    "SoulWarp",
-                    "SoulShove",
-                    "SoulSwap",
-                    "SoulPuppetAI"
+                    "SoulCopy"
                 ]
             ],
             [
@@ -16870,10 +16865,6 @@
             [
                 "spell",
                 null
-            ],
-            [
-                "value",
-                0
             ],
             [
                 "min_range",
@@ -16918,6 +16909,46 @@
             [
                 "eval_target_restrict_2",
                 "'Boss' not in target.tags"
+            ],
+            [
+                "exp",
+                15
+            ]
+        ]
+    },
+    {
+        "nid": "SoulSwap",
+        "name": "Swap",
+        "desc": "Trin swap places with the target.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "swap",
+                null
+            ],
+            [
+                "exp",
+                5
             ]
         ]
     },
@@ -16927,7 +16958,7 @@
         "desc": "Bring an ally to a space adjacent to the user. Range is dependent on user's MAG. Costs <blue>10 mana</>. Half the cost is refunded if used on a Trin's puppet.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            10,
+            14,
             51
         ],
         "components": [
@@ -16981,13 +17012,105 @@
         ]
     },
     {
+        "nid": "SoulPuppetAI",
+        "name": "Dictate",
+        "desc": "Trin gives orders on what the copies' behavior should be.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Trin change copies AI"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "eval_available",
+                "game.game_vars['trincopies'] > 0"
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "SkillActivate"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "SoulShove",
+        "name": "Shove",
+        "desc": "Trin pushes an unit 2 tiles away.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove_flex_stops",
+                2
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "exp",
+                5
+            ]
+        ]
+    },
+    {
         "nid": "SoulWarp",
         "name": "Warp",
         "desc": "Move an ally to another square. Range is dependent on user's MAG. Costs <blue>10 mana</>. Half the cost is refunded if used on a Trin's puppet.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            50
+            13,
+            51
         ],
         "components": [
             [
@@ -17035,134 +17158,6 @@
             ],
             [
                 "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "SoulShove",
-        "name": "Shove",
-        "desc": "Trin pushes an unit 2 tiles away.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            50
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "shove_flex_stops",
-                2
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "exp",
-                5
-            ]
-        ]
-    },
-    {
-        "nid": "SoulSwap",
-        "name": "Swap",
-        "desc": "Trin swap places with the target.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            5,
-            51
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "swap",
-                null
-            ],
-            [
-                "exp",
-                5
-            ]
-        ]
-    },
-    {
-        "nid": "SoulPuppetAI",
-        "name": "Obey!",
-        "desc": "Trin gives orders on what the copies' behavior should be.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            50
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "event_after_combat_on_hit",
-                "Global Trin change copies AI"
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_anim",
-                "AOE_Rally"
-            ],
-            [
-                "attack_after_combat",
-                null
-            ],
-            [
-                "eval_available",
-                "game.game_vars['trincopies'] > 0"
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "map_cast_sfx",
-                "SkillActivate"
-            ],
-            [
-                "no_map_hp_display",
                 null
             ]
         ]

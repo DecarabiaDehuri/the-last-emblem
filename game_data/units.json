@@ -2007,7 +2007,7 @@
     {
         "nid": "Trin",
         "name": "Trin",
-        "desc": "A young girl from a small village in Grado. She is honest and sincere.",
+        "desc": "Renthnoran Specialist",
         "variant": "",
         "level": 1,
         "klass": "Slave_Mage",
@@ -2049,7 +2049,32 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Multitasking"
+            ],
+            [
+                1,
+                "Copy"
+            ],
+            [
+                4,
+                "Swap"
+            ],
+            [
+                6,
+                "RescueTrin"
+            ],
+            [
+                8,
+                "Dictate"
+            ],
+            [
+                10,
+                "Warp"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -2098,9 +2123,7 @@
                 251
             ]
         },
-        "alternate_classes": [
-            "Fighter"
-        ],
+        "alternate_classes": [],
         "portrait_nid": "trin2",
         "affinity": "Hetero",
         "fields": []
@@ -2108,7 +2131,7 @@
     {
         "nid": "Uyae",
         "name": "Uyae",
-        "desc": "The prince of Frelia. He\u2019s brash and arrogant, but good at heart.",
+        "desc": "Wayward Claw",
         "variant": "",
         "level": 1,
         "klass": "Zirantian",
@@ -6883,7 +6906,7 @@
     {
         "nid": "Jack",
         "name": "Jack",
-        "desc": "",
+        "desc": "Son of the legendary fighter Barth.",
         "variant": "",
         "level": 8,
         "klass": "Ephraim_Lord",
@@ -6948,7 +6971,7 @@
     {
         "nid": "Logan",
         "name": "Logan",
-        "desc": "",
+        "desc": "Dreamy artist with a keen eye.",
         "variant": "",
         "level": 6,
         "klass": "Archer",
@@ -7014,7 +7037,7 @@
     {
         "nid": "Goreon",
         "name": "Goreon",
-        "desc": "",
+        "desc": "Mysterious mage from Zirantia.",
         "variant": "",
         "level": 9,
         "klass": "Mage",
@@ -7080,7 +7103,7 @@
     {
         "nid": "Numb",
         "name": "Numb",
-        "desc": "",
+        "desc": "Will stop at nothing until he avenges his family.",
         "variant": "",
         "level": 8,
         "klass": "Mercenary",
@@ -7146,7 +7169,7 @@
     {
         "nid": "Kirina",
         "name": "Kirina",
-        "desc": "",
+        "desc": "Fun-loving gal with a knack for dueling.",
         "variant": "Female",
         "level": 9,
         "klass": "Myrmidon",
@@ -7212,7 +7235,7 @@
     {
         "nid": "Barios",
         "name": "Barios",
-        "desc": "",
+        "desc": "Previously a companion of Barth, now serves as a mentor for his son Jack.",
         "variant": "",
         "level": 11,
         "klass": "Paladin",
@@ -7287,7 +7310,7 @@
     {
         "nid": "Raylene",
         "name": "Raylene",
-        "desc": "",
+        "desc": "A thief determined to buy her own castle.",
         "variant": "Female",
         "level": 6,
         "klass": "Thief",
@@ -7353,7 +7376,7 @@
     {
         "nid": "Tima",
         "name": "Tima",
-        "desc": "",
+        "desc": "Nothing can faze her, no matter what.",
         "variant": "Female",
         "level": 7,
         "klass": "Knight",
@@ -7419,7 +7442,7 @@
     {
         "nid": "Porhen",
         "name": "Porhen",
-        "desc": "",
+        "desc": "Former leader of bandits, now searches for true strength.",
         "variant": "",
         "level": 8,
         "klass": "Fighter",
@@ -7485,7 +7508,7 @@
     {
         "nid": "Zaryca",
         "name": "Zaryca",
-        "desc": "",
+        "desc": "Veteran with a heart of gold.",
         "variant": "Female",
         "level": 8,
         "klass": "Cavalier",
@@ -7551,7 +7574,7 @@
     {
         "nid": "Dytri",
         "name": "Dytri",
-        "desc": "",
+        "desc": "Their timid nature betrays a huge potential.",
         "variant": "",
         "level": 5,
         "klass": "Cleric",
@@ -7693,6 +7716,10 @@
             [
                 1,
                 "testesynergy2"
+            ],
+            [
+                2,
+                "Feat"
             ]
         ],
         "unit_notes": [

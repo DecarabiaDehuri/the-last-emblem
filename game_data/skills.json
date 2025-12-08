@@ -13977,6 +13977,38 @@
         ]
     },
     {
+        "nid": "Soulmancer",
+        "name": "Soulmancer",
+        "desc": "Trin is an exceedingly rare mage, capable of manipulating people's souls. She can't attack, but possesses an array of useful abilities.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Multitasking",
+        "name": "Multitasking",
+        "desc": "For every copied enemy in play, Trin loses 1 movement and <blue>1 mana</> per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Copy_debuff",
         "name": "Worthless",
         "desc": "This puppet is but a shell of its former self. Its stats are diminished. This effect is stronger for each puppet currently on field.",
@@ -14067,6 +14099,126 @@
             [
                 "mana_regeneration",
                 -1
+            ]
+        ]
+    },
+    {
+        "nid": "Copy",
+        "name": "Copy",
+        "desc": "Trin copies the target enemy and replaces it with an allied version. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Swap",
+        "name": "Swap",
+        "desc": "Trin swap places with the target.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "RescueTrin",
+        "name": "Rescue",
+        "desc": "Bring an ally to a space adjacent to the user. Range is dependent on user's MAG. Costs <blue>10 mana</>. Half the cost is refunded if used on a Trin's puppet.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Dictate",
+        "name": "Dictate",
+        "desc": "Trin gives orders on what the copies' behavior should be.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Shove",
+        "name": "Shove",
+        "desc": "Trin pushes an unit 2 tiles away.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Warp",
+        "name": "Warp",
+        "desc": "Move an ally to another square. Range is dependent on user's MAG. Costs <blue>10 mana</>. Half the cost is refunded if used on a Trin's puppet.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "cost_mana",
+                10
             ]
         ]
     },
@@ -20425,6 +20577,92 @@
             ],
             [
                 "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Feat",
+        "name": "Feat",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Str_feat",
+        "name": "Strength +1",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ],
+            [
+                "feat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Mag_feat",
+        "name": "Magic +1",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ],
+            [
+                "feat",
                 null
             ]
         ]
