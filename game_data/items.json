@@ -2639,7 +2639,7 @@
     {
         "nid": "ArcaneFire",
         "name": "Fire",
-        "desc": "Basic fire magic. Strong but unreliable. Costs <blue>1 mana</>.",
+        "desc": "Basic fire magic. Strong but unreliable. <blue>1 MP</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2705,17 +2705,13 @@
             [
                 "battle_cast_anim",
                 "Fire"
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ]
         ]
     },
     {
         "nid": "ArcaneLightning",
         "name": "Lightning",
-        "desc": "Basic lightning magic. Weak but high chance of critical. Costs <blue>1 mana</>.",
+        "desc": "Basic lightning magic. Weak but high chance of critical. <blue>1 MP</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2781,17 +2777,13 @@
             [
                 "battle_cast_anim",
                 "Thunder"
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ]
         ]
     },
     {
         "nid": "ArcaneIce",
         "name": "Ice",
-        "desc": "Basic ice magic. Medium damage, can't double or be doubled. Costs <blue>1 mana</>.",
+        "desc": "Basic ice magic. Medium damage, can't double or be doubled. <blue>1 MP</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2857,10 +2849,6 @@
             [
                 "battle_cast_anim",
                 "Ice"
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ],
             [
                 "status_on_equip",
@@ -2931,7 +2919,7 @@
     {
         "nid": "ArcanePoison",
         "name": "Poison",
-        "desc": "Deals magic damage and poisons the enemy on hit. Costs <blue>5 mana</>.",
+        "desc": "Deals magic damage and poisons the enemy on hit. <blue>5 MP</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -3044,7 +3032,7 @@
     {
         "nid": "FireLance",
         "name": "Fire Lance",
-        "desc": "Advanced fire magic. Strongest but unreliable. Costs <blue>4 mana</>.",
+        "desc": "Advanced fire magic. Strongest but unreliable. <blue>4 MP</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -3120,7 +3108,7 @@
     {
         "nid": "LightningLance",
         "name": "Lightning Lance",
-        "desc": "Advanced lightning magic. Weakest but highest chance of critical. Costs <blue>4 mana</>.",
+        "desc": "Advanced lightning magic. Weakest but highest chance of critical. <blue>4 MP</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -3196,7 +3184,7 @@
     {
         "nid": "IceLance",
         "name": "Ice Lance",
-        "desc": "Advanced ice magic. Medium damage, highest precision, can't double or be doubled. Costs <blue>4 mana</>.",
+        "desc": "Advanced ice magic. Medium damage, highest precision, can't double or be doubled. <blue>4 MP</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -14467,9 +14455,7 @@
                 [
                     "Aura_of_Neutrality",
                     "Aura_of_Might",
-                    "Aura_of_Spirit",
-                    "Aura_of_Healing",
-                    "Aura_of_Agility"
+                    "Aura_of_Spirit"
                 ]
             ],
             [
@@ -14553,7 +14539,7 @@
     {
         "nid": "Aura_of_Might",
         "name": "Aura of Might",
-        "desc": "Shifts power from magical to physical.\nCosts <blue>1 mana</> per turn. Lasts for 3 turns.",
+        "desc": "Shifts power from magical to physical. Costs <blue>5 mana</>.\nCosts <blue>1 mana</> per turn. Lasts for 3 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -14603,13 +14589,17 @@
             [
                 "eval_available",
                 "not has_skill(u('Uyae'), 'Aura_of_Might')"
+            ],
+            [
+                "mana_cost",
+                5
             ]
         ]
     },
     {
         "nid": "Aura_of_Spirit",
         "name": "Aura of Spirit",
-        "desc": "Shifts power from physical to magical.\nCosts <blue>1 mana</> per turn. Lasts for 3 turns.",
+        "desc": "Shifts power from physical to magical. Costs <blue>5 mana</>.\nCosts <blue>1 mana</> per turn. Lasts for 3 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -14659,13 +14649,17 @@
             [
                 "eval_available",
                 "not has_skill(u('Uyae'), 'Aura_of_Spirit')"
+            ],
+            [
+                "mana_cost",
+                5
             ]
         ]
     },
     {
         "nid": "Aura_of_Agility",
         "name": "Aura of Agility",
-        "desc": "Shifts power from defense to evasion.\nCosts <blue>1 mana</> per turn. Lasts for 3 turns.",
+        "desc": "Shifts power from defense to evasion. Costs <blue>5 mana</>.\nCosts <blue>1 mana</> per turn. Lasts for 3 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -14715,13 +14709,17 @@
             [
                 "eval_available",
                 "any([u.nid == 'Uyae' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "mana_cost",
+                5
             ]
         ]
     },
     {
         "nid": "Aura_of_Healing",
         "name": "Aura of Healing",
-        "desc": "Shifts power from attack to support.\nCosts <blue>2 mana</> per turn. Lasts for 3 turns.",
+        "desc": "Shifts power from attack to support. Costs <blue>5 mana</>.\nCosts <blue>2 mana</> per turn. Lasts for 3 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -14771,13 +14769,17 @@
             [
                 "eval_available",
                 "not has_skill(u('Uyae'), 'Aura_of_Healing')"
+            ],
+            [
+                "mana_cost",
+                5
             ]
         ]
     },
     {
         "nid": "Claw_Neutral",
         "name": "Claw [Neutral]",
-        "desc": "",
+        "desc": "Standard claw.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -14829,7 +14831,7 @@
     {
         "nid": "Claw_Might",
         "name": "Claw [Might]",
-        "desc": "",
+        "desc": "Strength-oriented claw.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -14881,7 +14883,7 @@
     {
         "nid": "Claw_Spirit",
         "name": "Claw [Spirit]",
-        "desc": "",
+        "desc": "Arcane-oriented claw.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -14937,7 +14939,7 @@
     {
         "nid": "Claw_Agility",
         "name": "Claw [Agility]",
-        "desc": "",
+        "desc": "Speed-oriented claw.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -14993,7 +14995,7 @@
     {
         "nid": "Claw_Healing",
         "name": "Claw [Heal]",
-        "desc": "",
+        "desc": "Support-oriented claw.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -15045,7 +15047,7 @@
     {
         "nid": "Shockwave",
         "name": "Shockwave",
-        "desc": "",
+        "desc": "Uyae unleashes a damaging scream damaging enemies around her. <blue>5 MP</>. Requires <green>Aura of Might</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -15069,10 +15071,6 @@
                 0
             ],
             [
-                "equation_blast_aoe",
-                "DAMAGE"
-            ],
-            [
                 "damage",
                 10
             ],
@@ -15086,14 +15084,14 @@
             ],
             [
                 "map_cast_sfx",
-                "Battle Cry"
+                "MautheDoogGrowl"
             ],
             [
                 "map_hit_sub_blend",
                 [
-                    74,
-                    27,
-                    28
+                    185,
+                    4,
+                    7
                 ]
             ],
             [
@@ -15103,6 +15101,179 @@
             [
                 "mana_cost",
                 10
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            0
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            0,
+                            -1
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "eval_available",
+                "has_skill('Uyae', 'Aura_of_Might')"
+            ]
+        ]
+    },
+    {
+        "nid": "Mana_Palm",
+        "name": "Mana Palm",
+        "desc": "Uyae strikes with concentrated mana. <blue>5 MP.</> Requires <green>Aura of Spirit</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            45
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "crit",
+                6
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    24,
+                    93,
+                    255
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 3"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "eval_available",
+                "has_skill('Uyae', 'Aura_of_Spirit')"
+            ],
+            [
+                "target_enemy",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Snuggly_Heal",
+        "name": "Snuggly Heal",
+        "desc": "Uyae cuddles with her nestmate and heals them. <blue>5 MP</>. Requires <green>Aura of Healing</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            34
+        ],
+        "components": [
+            [
+                "equation_heal",
+                "HEALPLUS"
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    222,
+                    34
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "MapHeal"
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
             ]
         ]
     },
@@ -15737,77 +15908,6 @@
             [
                 "mana_cost_as_uses",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Orcent_Snipe_Target",
-        "name": "Snipe Target",
-        "desc": "<green>[Dari synergy]</> Orcent snipes a target scouted by Dari. Can be used twice per chapter.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            37
-        ],
-        "components": [
-            [
-                "siege_weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "eval_target_restrict_2",
-                "has_skill(target,'Orcent_Target')"
-            ],
-            [
-                "min_range",
-                4
-            ],
-            [
-                "max_range",
-                10
-            ],
-            [
-                "battle_cast_anim",
-                "Arrow"
-            ],
-            [
-                "weapon_type",
-                "Bow"
-            ],
-            [
-                "damage",
-                12
-            ],
-            [
-                "hit",
-                100
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "weight",
-                13
-            ],
-            [
-                "c_uses",
-                2
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
             ]
         ]
     },
@@ -22684,7 +22784,7 @@
         ],
         "components": [
             [
-                "weapon",
+                "spell",
                 null
             ],
             [
@@ -22752,7 +22852,7 @@
         ],
         "components": [
             [
-                "weapon",
+                "spell",
                 null
             ],
             [
@@ -22796,8 +22896,8 @@
                 2
             ],
             [
-                "weapon_type",
-                "Bow"
+                "weapon_type_exempt",
+                "Dark"
             ],
             [
                 "battle_cast_anim",
@@ -22810,9 +22910,76 @@
         ]
     },
     {
+        "nid": "Snipe_Target",
+        "name": "Snipe Target",
+        "desc": "<green>[Dari synergy]</> Vhala snipes a target scouted by Dari. Can be used twice per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            37
+        ],
+        "components": [
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "has_skill(target,'Vhala_Target')"
+            ],
+            [
+                "min_range",
+                4
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "c_uses",
+                2
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "global_range",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Offensive_Rain_ability",
         "name": "Offensive Rain",
-        "desc": "Targets a group of enemies, hindering their defensive stats.\nCosts <blue>10 mana</>.",
+        "desc": "Targets a group of enemies, hindering their defensive stats. <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -22868,7 +23035,7 @@
     {
         "nid": "Defensive_Rain_ability",
         "name": "Defensive Rain",
-        "desc": "Targets a group of enemies, hindering their offensive stats.\nCosts <blue>10 mana</>.",
+        "desc": "Targets a group of enemies, hindering their offensive stats. <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -22924,7 +23091,7 @@
     {
         "nid": "Blinding_Rain_ability",
         "name": "Blinding Rain",
-        "desc": "Targets a group of enemies, possibly blinding them.\nCosts <blue>10 mana</>.",
+        "desc": "Targets a group of enemies, possibly blinding them. <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -22980,7 +23147,7 @@
     {
         "nid": "Triple_Shot",
         "name": "Triple Shot",
-        "desc": "Vhala unleashes three arrows at once, attacking up to 3 random targets within 3 tiles. Costs <blue>8 mana</>.",
+        "desc": "Vhala unleashes three arrows at once, attacking up to 3 random targets within 3 tiles. <blue>8 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -23086,9 +23253,471 @@
         ]
     },
     {
+        "nid": "Targeted_Shot",
+        "name": "Targeted Shot",
+        "desc": "Vhala takes a moment to perfectly aim at a target. Can't miss. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            48
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Arrow_of_Purity",
+        "name": "Arrow of Purity",
+        "desc": "An arrow coated with Divine magic. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            29
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type_exempt",
+                "Light"
+            ]
+        ]
+    },
+    {
+        "nid": "Sniping_Position",
+        "name": "Sniping Position",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            48
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Sniper"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Bow"
+            ]
+        ]
+    },
+    {
+        "nid": "Sniping_Attack",
+        "name": "Piercing Arrow",
+        "desc": "Vhala targets an enemy with a powerful arrow. All enemies in line to this target are also hit. <blue>15 MP.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            48
+        ],
+        "components": [
+            [
+                "eval_special_range",
+                "(x == 0 or y == 0)"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "enemy_line_aoe",
+                null
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "eval_max_range",
+                "(2 + v(\"rangechange\"))"
+            ]
+        ]
+    },
+    {
+        "nid": "Sniping_Cancel",
+        "name": "Cancel sniping position",
+        "desc": "Cancels the sniping position status.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            48
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Vhala sniper cancel"
+            ],
+            [
+                "map_hit_sfx",
+                "Bow Miss"
+            ]
+        ]
+    },
+    {
+        "nid": "Balanced_Nature",
+        "name": "Balanced Nature",
+        "desc": "Vhala heals herself to full health. One use per chapter. Cannot target Succubi.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            43
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "heal",
+                99
+            ],
+            [
+                "map_hit_sfx",
+                "MapHeal"
+            ],
+            [
+                "map_cast_anim",
+                "MapBigHealTrans"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Succubus' not in target.tags"
+            ]
+        ]
+    },
+    {
+        "nid": "Unhand",
+        "name": "Unhand",
+        "desc": "Vhala restores negative effects from an ally. Cannot target Succubi. <blue>5 MP.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Succubus' not in target.tags"
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "restore",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Vantage_View",
+        "name": "Vantage View",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            47
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Hilstara Harem Tactics"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Select 1"
+            ]
+        ]
+    },
+    {
+        "nid": "Defenders_Frenzy_ability",
+        "name": "Defender's Frenzy",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "map_cast_anim",
+                "MapBerserk"
+            ],
+            [
+                "map_cast_sfx",
+                "Berserk"
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "self_status_on_hit",
+                "Defenders_Frenzy_effect"
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    195,
+                    255
+                ]
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Furious_Strikes_ability",
         "name": "Furious Strikes",
-        "desc": "Varia quickly attacks up to 3 enemies within 2 tiles. Costs <red>20% of max HP</>. Costs <blue>5 mana</>.",
+        "desc": "Varia quickly attacks up to 3 enemies within 2 tiles. Costs <red>20% of max HP</>. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -23184,7 +23813,7 @@
     {
         "nid": "Blood_Strike",
         "name": "Blood Strike",
-        "desc": "Varia sacrifices some of her health to deal a poweful blow. Costs <red>10% of max HP</>. Costs <blue>5 mana</>.",
+        "desc": "Varia sacrifices some of her health to deal a poweful blow. Costs <red>10% of max HP</>. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -23244,7 +23873,7 @@
     {
         "nid": "Destined_Endurance",
         "name": "Destined Endurance",
-        "desc": "Varia restores her health. Can attack after. 3 turns cooldown. Costs <blue>10 mana</>.",
+        "desc": "Varia restores her health. Can attack after. 3 turns cooldown. <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -23278,73 +23907,13 @@
         ]
     },
     {
-        "nid": "Defenders_Frenzy_ability",
-        "name": "Defender's Frenzy",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "map_cast_anim",
-                "MapBerserk"
-            ],
-            [
-                "map_cast_sfx",
-                "Berserk"
-            ],
-            [
-                "warning",
-                null
-            ],
-            [
-                "target_unit",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "self_status_on_hit",
-                "Defenders_Frenzy_effect"
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    0,
-                    195,
-                    255
-                ]
-            ],
-            [
-                "attack_after_combat",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Servants_Frenzy_ability",
         "name": "Servant's Frenzy",
         "desc": "",
-        "icon_nid": "Valuable",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            1
+            13,
+            52
         ],
         "components": [
             [
@@ -23394,13 +23963,17 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "map_cast_pose",
+                null
             ]
         ]
     },
     {
         "nid": "Earth_Bomb_effect",
         "name": "Earth Bomb",
-        "desc": "<green>[Altina synergy]</> Varia throws a bomb magically infused by Altina. Cooldown 4 turns. Costs <red>25% of max HP.</> Costs <blue>10 mana</>. ",
+        "desc": "<green>[Altina synergy]</> Varia throws a bomb magically infused by Altina. Cooldown 4 turns. Costs <red>25% of max HP.</> <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -23539,7 +24112,7 @@
     {
         "nid": "Encourage",
         "name": "Encourage",
-        "desc": "Varia encourages an adjacent ally, slightly increasing their offensive capabilities. Costs <blue> 4 mana</>.",
+        "desc": "Varia encourages an adjacent ally, slightly increasing their offensive capabilities. <blue>4 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -23751,7 +24324,7 @@
     {
         "nid": "AmbientMana",
         "name": "Ambient Mana",
-        "desc": "Robin restores <blue>10 mana</>.",
+        "desc": "Robin restores <blue>10 mana</>. 3 uses per chapter. 3 turns cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -23830,15 +24403,43 @@
                 [
                     "ArcaneFire",
                     "ArcaneLightning",
-                    "ArcaneIce",
-                    "ArcaneHeal",
-                    "ArcanePoison",
-                    "AreaSpells",
+                    "ArcaneIce"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneSpells_Robin_Sage",
+        "name": "Lance Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
                     "FireLance",
                     "LightningLance",
-                    "IceLance",
-                    "HealingLance",
-                    "ArcaneBolting"
+                    "IceLance"
                 ]
             ],
             [

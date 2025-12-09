@@ -16,6 +16,349 @@
         ]
     },
     {
+        "nid": "Rally_Strength_buff",
+        "name": "Strength bonus",
+        "desc": "Strength increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Magic_buff",
+        "name": "Magic bonus",
+        "desc": "Magic increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Skill_buff",
+        "name": "Skill bonus",
+        "desc": "Skill increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Speed_buff",
+        "name": "Speed bonus",
+        "desc": "Speed increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Luck_buff",
+        "name": "Luck bonus",
+        "desc": "Luck increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Defense_buff",
+        "name": "Defense bonus",
+        "desc": "Defense increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Resistance_buff",
+        "name": "Resistance bonus",
+        "desc": "Resistance increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Strength",
+        "name": "Rally Strength",
+        "desc": "Increases STR of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Strength"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Magic",
+        "name": "Rally Magic",
+        "desc": "Increases MAG of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Magic"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Skill",
+        "name": "Rally Skill",
+        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Skill"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Speed",
+        "name": "Rally Speed",
+        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Speed"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Luck",
+        "name": "Rally Luck",
+        "desc": "Increases LCK of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Luck"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Resistance",
+        "name": "Rally Resistance",
+        "desc": "Increases RES of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Resistance"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Defense",
+        "name": "Rally Defense",
+        "desc": "Increases DEF of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Defense"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Duelists_Blow",
         "name": "Duelist's Blow",
         "desc": "+15 AVOID when initiating battle.",
@@ -1742,391 +2085,6 @@
             [
                 "hit",
                 999
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Strength_buff",
-        "name": "Strength bonus",
-        "desc": "Strength increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Magic_buff",
-        "name": "Magic bonus",
-        "desc": "Magic increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "MAG",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Skill_buff",
-        "name": "Skill bonus",
-        "desc": "Skill increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SKL",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Speed_buff",
-        "name": "Speed bonus",
-        "desc": "Speed increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SPD",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Luck_buff",
-        "name": "Luck bonus",
-        "desc": "Luck increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "LCK",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Defense_buff",
-        "name": "Defense bonus",
-        "desc": "Defense increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "DEF",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Resistance_buff",
-        "name": "Resistance bonus",
-        "desc": "Resistance increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "RES",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Strength",
-        "name": "Rally Strength",
-        "desc": "Increases STR of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Strength"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Profession"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Magic",
-        "name": "Rally Magic",
-        "desc": "Increases MAG of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Magic"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Profession"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Skill",
-        "name": "Rally Skill",
-        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Skill"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Profession"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Speed",
-        "name": "Rally Speed",
-        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Speed"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Profession"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Luck",
-        "name": "Rally Luck",
-        "desc": "Increases LCK of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Luck"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Profession"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Resistance",
-        "name": "Rally Resistance",
-        "desc": "Increases RES of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Resistance"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Profession"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Defense",
-        "name": "Rally Defense",
-        "desc": "Increases DEF of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Defense"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Profession"
-                ]
             ]
         ]
     },
@@ -10911,10 +10869,6 @@
         ],
         "components": [
             [
-                "lost_on_end_chapter",
-                null
-            ],
-            [
                 "mana_regeneration",
                 1
             ]
@@ -11037,7 +10991,7 @@
     {
         "nid": "Aura_of_Agility",
         "name": "Aura of Agility",
-        "desc": "<blue>SPD+5, SKL+5.</>\n<red>DEF-5, RES-5.</>",
+        "desc": "<blue>SPD+5, SKL+5. MOV+1</>\n<red>DEF-5, RES-5.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -11062,6 +11016,10 @@
                     [
                         "RES",
                         -5
+                    ],
+                    [
+                        "MOV",
+                        1
                     ]
                 ]
             ],
@@ -11181,6 +11139,90 @@
             [
                 "hidden",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Shockwave",
+        "name": "Shockwave",
+        "desc": "Uyae unleashes a damaging scream damaging enemies around her. <blue>5 MP</>. Requires <green>Aura of Might</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Shockwave"
+            ]
+        ]
+    },
+    {
+        "nid": "Mana_Palm",
+        "name": "Mana Palm",
+        "desc": "Uyae strikes with concentrated mana. <blue>5 MP.</> Requires <green>Aura of Spirit</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            45
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Mana_Palm"
+            ]
+        ]
+    },
+    {
+        "nid": "Snuggly_Heal",
+        "name": "Snuggly Heal",
+        "desc": "Uyae cuddles with her nestmate and heals them. <blue>5 MP</>. Requires <green>Aura of Healing</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Snuggly_Heal"
             ]
         ]
     },
@@ -12746,7 +12788,7 @@
     {
         "nid": "Scout",
         "name": "Scout",
-        "desc": "<green>[Orcent Synergy]</> Dari scouts enemies adjacent to her, decreasing their avoid and marking them as possible sniping targets for Orcent.",
+        "desc": "<green>[Vhala Synergy]</> Dari scouts enemies adjacent to her, decreasing their avoid and marking them as possible targets for Vhala, regardless of Vhala's position.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -12755,7 +12797,7 @@
         "components": [
             [
                 "aura",
-                "Orcent_Target"
+                "Vhala_Target"
             ],
             [
                 "aura_range",
@@ -12776,9 +12818,9 @@
         ]
     },
     {
-        "nid": "Orcent_Target",
+        "nid": "Vhala_Target",
         "name": "<red>[SCOUTED]</>",
-        "desc": "Unit has -5 avoid. Can be targeted by Orcent's Snipe Target.",
+        "desc": "Unit has -5 avoid. Can be targeted by Vhala.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -12790,8 +12832,8 @@
                 -5
             ],
             [
-                "steal_icon",
-                null
+                "unit_anim",
+                "MapSurprise"
             ]
         ]
     },
@@ -17336,6 +17378,36 @@
         ]
     },
     {
+        "nid": "Snipe_Target",
+        "name": "Snipe Target",
+        "desc": "<green>[Dari synergy]</> Vhala can attack a target scouted by Dari.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            37
+        ],
+        "components": [
+            [
+                "ability",
+                "Snipe_Target"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Arrow_of_Ice",
         "name": "Arrow of Ice",
         "desc": "",
@@ -17594,6 +17666,297 @@
         ]
     },
     {
+        "nid": "Targeted_Shot",
+        "name": "Targeted Shot",
+        "desc": "Vhala takes a moment to perfectly aim at a target. Can't miss. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            48
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "ability",
+                "Targeted_Shot"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Arrow_of_Purity",
+        "name": "Arrow_of_Purity",
+        "desc": "An arrow coated with Divine magic. <blue>5 MP</>.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            29
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "ability",
+                "Arrow_of_Purity"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Balanced_Nature",
+        "name": "Balanced_Nature",
+        "desc": "Vhala heals herself to full health. One use per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Balanced_Nature"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Unhand",
+        "name": "Unhand",
+        "desc": "Vhala restores negative effects from an ally. Cannot target Succubi. <blue>5 MP.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Unhand"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Vantage_View",
+        "name": "Vantage View",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            47
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Vantage_View"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sniping_Position",
+        "name": "Sniping Position",
+        "desc": "Vhala gets into an immobile stance. Every turn, her range increases. Loses his stance when engaging in combat with an enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            48
+        ],
+        "components": [
+            [
+                "ability",
+                "Sniping_Position"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sniper",
+        "name": "Sniper",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            48
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": false,
+                    "lost_on_ally": false,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "avoid",
+                -99
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    156,
+                    156,
+                    156
+                ]
+            ],
+            [
+                "event_on_remove",
+                "Global Vhala sniper reset range"
+            ],
+            [
+                "endstep_event",
+                "Global Vhala sniper skill setup upkeep"
+            ],
+            [
+                "ability",
+                "Sniping_Attack"
+            ],
+            [
+                "multi_skill",
+                [
+                    "Snipe_range",
+                    "Snipe_Cancel"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Snipe_Cancel",
+        "name": "Cancel sniping position",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "ability",
+                "Sniping_Cancel"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Snipe_range",
+        "name": "Snipe_range",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura",
+                "Nothing"
+            ],
+            [
+                "aura_target",
+                "unit"
+            ],
+            [
+                "aura_shape",
+                [
+                    [
+                        0,
+                        -1
+                    ],
+                    [
+                        1,
+                        0
+                    ],
+                    [
+                        -1,
+                        0
+                    ],
+                    [
+                        0,
+                        1
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "show_aura",
+                [
+                    22,
+                    44,
+                    124
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Triple_Shot_old",
         "name": "Triple_Shot",
         "desc": "After 3 combats, Vhala can choose to use Triple Shot on her next attack, making her attack thrice.",
@@ -17812,7 +18175,7 @@
     {
         "nid": "Servants_Frenzy",
         "name": "Servant's Frenzy",
-        "desc": "",
+        "desc": "Varia enters a frenzy which boosts her damage, at the cost of increasing damage received. Regenerates a bit of health each turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -17854,6 +18217,30 @@
             [
                 "resist_multiplier",
                 0.7999999999999999
+            ]
+        ]
+    },
+    {
+        "nid": "Blood_Strike",
+        "name": "Blood Strike",
+        "desc": "Varia strikes the target with a powerful hit, at the cost of a percentage of her <red>HP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            47
+        ],
+        "components": [
+            [
+                "ability",
+                "Blood_Strike"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -17975,6 +18362,34 @@
             [
                 "time",
                 2
+            ]
+        ]
+    },
+    {
+        "nid": "Encourage",
+        "name": "Encourage",
+        "desc": "Varia encourages an adjacent ally, slightly increasing their offensive capabilities. <blue>4 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            33
+        ],
+        "components": [
+            [
+                "cost_mana",
+                4
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Encourage"
             ]
         ]
     },
@@ -18496,10 +18911,10 @@
     {
         "nid": "AmbientMana",
         "name": "Ambient Mana",
-        "desc": "Robin can use Ambient Mana, which restores some of her <blue>mana</>. Has a limit, use and starting cooldown of 3.",
+        "desc": "Robin can use Ambient Mana, which restores some of her <blue>mana</>. Has a cooldown and use limit of 3.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
+            9,
             26
         ],
         "components": [
@@ -18514,14 +18929,6 @@
             [
                 "grey_if_inactive",
                 null
-            ],
-            [
-                "build_charge",
-                3
-            ],
-            [
-                "upkeep_charge_increase",
-                1
             ]
         ]
     },
@@ -19777,26 +20184,6 @@
             [
                 "negative",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Snipe_Target",
-        "name": "Snipe Target",
-        "desc": "<green>[Dari synergy]</> Orcent can attack a target scouted by Dari.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            37
-        ],
-        "components": [
-            [
-                "ability",
-                "Orcent_Snipe_Target"
-            ],
-            [
-                "menu_category",
-                "<orange>Synergy</>"
             ]
         ]
     },

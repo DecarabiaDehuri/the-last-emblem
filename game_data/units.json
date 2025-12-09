@@ -116,7 +116,7 @@
         "nid": "Aka",
         "name": "Aka",
         "desc": "Ardan Bounty Hunter",
-        "variant": "",
+        "variant": "Aka",
         "level": 1,
         "klass": "Thief",
         "tags": [
@@ -800,7 +800,7 @@
         "nid": "Hilstara",
         "name": "Hilstara",
         "desc": "Ardan Warrior",
-        "variant": "",
+        "variant": "Hilstara",
         "level": 1,
         "klass": "Protector",
         "tags": [
@@ -926,7 +926,7 @@
         "nid": "Lynine",
         "name": "Lynine",
         "desc": "Elder of Darghelon",
-        "variant": "Female",
+        "variant": "Lynine",
         "level": 1,
         "klass": "Pegasus_Knight",
         "tags": [
@@ -1506,7 +1506,7 @@
         "nid": "Orilise",
         "name": "Orilise",
         "desc": "Reliar of Gheldaron",
-        "variant": "",
+        "variant": "Orilise",
         "level": 1,
         "klass": "Wyvern Rider",
         "tags": [
@@ -1765,7 +1765,7 @@
         "nid": "Riala",
         "name": "Riala",
         "desc": "Admittedly Better Succubus",
-        "variant": "Riala",
+        "variant": "",
         "level": 1,
         "klass": "Suc_Riala",
         "tags": [
@@ -1897,7 +1897,7 @@
         "nid": "Robin",
         "name": "Robin",
         "desc": "Best Daughter",
-        "variant": "Female",
+        "variant": "Robin",
         "level": 1,
         "klass": "Mage",
         "tags": [
@@ -1930,7 +1930,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "ArcaneSpells",
+                "ArcaneSpells_Robin",
                 false
             ],
             [
@@ -1940,11 +1940,7 @@
         ],
         "learned_skills": [
             [
-                1,
-                "Disrupt"
-            ],
-            [
-                1,
+                5,
                 "AmbientMana"
             ]
         ],
@@ -2176,7 +2172,27 @@
         "learned_skills": [
             [
                 1,
+                "Zirantian_Warrior"
+            ],
+            [
+                1,
                 "Stance_Switch"
+            ],
+            [
+                2,
+                "Shockwave"
+            ],
+            [
+                4,
+                "Mana_Palm"
+            ],
+            [
+                8,
+                "Snuggly_Heal"
+            ],
+            [
+                10,
+                "Stalk"
             ]
         ],
         "unit_notes": [],
@@ -2238,7 +2254,7 @@
         "nid": "Varia",
         "name": "Varia",
         "desc": "Bandit Exile",
-        "variant": "Female",
+        "variant": "Varia",
         "level": 1,
         "klass": "Myrmidon",
         "tags": [
@@ -2282,27 +2298,31 @@
         "learned_skills": [
             [
                 1,
-                "Defenders_Frenzy"
-            ],
-            [
-                1,
-                "Servants_Frenzy"
+                "Cursed_Blessing"
             ],
             [
                 1,
                 "Explosives_ability"
             ],
             [
-                1,
-                "Furious_Strikes"
+                2,
+                "Blood_Strike"
             ],
             [
-                1,
-                "Earth_Bomb"
+                4,
+                "Encourage"
             ],
             [
-                1,
-                "Blade_Dance"
+                6,
+                "Servants_Frenzy"
+            ],
+            [
+                8,
+                "Destined_Endurance"
+            ],
+            [
+                10,
+                "Channeled_Luck"
             ]
         ],
         "unit_notes": [],
@@ -2364,7 +2384,7 @@
         "nid": "Vhala",
         "name": "Vhala",
         "desc": "Sarcastic Unwoman",
-        "variant": "Female",
+        "variant": "Vhala",
         "level": 1,
         "klass": "Archer",
         "tags": [
@@ -2409,27 +2429,47 @@
         "learned_skills": [
             [
                 1,
-                "Arrow_of_Ice"
+                "Unpeople"
             ],
             [
                 1,
-                "Arrow_of_Lust"
+                "Targeted_Shot"
             ],
             [
-                1,
-                "Offensive_Rain"
-            ],
-            [
-                1,
+                2,
                 "Defensive_Rain"
             ],
             [
-                1,
+                3,
+                "Offensive_Rain"
+            ],
+            [
+                4,
                 "Blinding_Rain"
             ],
             [
-                1,
-                "Unpeople"
+                5,
+                "Rally_Resistance"
+            ],
+            [
+                6,
+                "Arrow_of_Purity"
+            ],
+            [
+                7,
+                "Balanced_Nature"
+            ],
+            [
+                8,
+                "Unhand"
+            ],
+            [
+                9,
+                "Triple_Shot"
+            ],
+            [
+                10,
+                "Vantage_View"
             ]
         ],
         "unit_notes": [],
@@ -6387,7 +6427,7 @@
         "nid": "Esmera",
         "name": "Esmera",
         "desc": "",
-        "variant": "",
+        "variant": "Esmera",
         "level": 1,
         "klass": "Inquisitor",
         "tags": [
@@ -6442,7 +6482,7 @@
         "nid": "Keranii",
         "name": "Keranii",
         "desc": "",
-        "variant": null,
+        "variant": "Keranii",
         "level": 1,
         "klass": "High_Priestess",
         "tags": [
@@ -6654,7 +6694,7 @@
         "nid": "Grubbak",
         "name": "Grubbak",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "Orc_Mage",
         "tags": [],

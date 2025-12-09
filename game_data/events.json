@@ -12776,8 +12776,6 @@
             "give_skill;Simon;Provoked;;no_banner",
             "give_skill;Simon;Defiant_Strike_buff;;no_banner",
             "give_skill;Simon;Strength_Penalty;;no_banner",
-            "give_item;Robin;Scroll_Bolting;;no_banner",
-            "give_item;Robin;Scroll_Shine;;no_banner",
             "set_current_hp;101;1",
             "set_current_hp;102;12",
             "add_talk;Simon;Wynn",
@@ -13737,6 +13735,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "give_skill;Vhala;Sniping_Position;;no_banner",
             "give_item;Lynine;Hotblooded_Dive;;no_banner",
             "give_skill;Uyae;Stalk;;no_banner",
             "set_current_hp;102;10",
@@ -13759,7 +13758,6 @@
             "give_skill;Testeman;DamageNerf;;no_banner",
             "give_skill;Testeman;Striking_Defiance_buff;;no_banner",
             "give_skill;Carina;Ivala_Voice;;no_banner",
-            "give_skill;Robin;Optimization_buff;;no_banner",
             "set_current_hp;Orilise;1",
             "set_current_hp;Lynine;1",
             "set_current_hp;Altina;1",
@@ -19918,7 +19916,7 @@
     },
     {
         "name": "Trin level up skills",
-        "trigger": null,
+        "trigger": "unit_level_up",
         "level_nid": null,
         "condition": "unit.nid == 'Trin' and source == 'exp_gain'",
         "commands": [],
@@ -19938,5 +19936,118 @@
             "end"
         ],
         "nid": "Global Trin level up skills"
+    },
+    {
+        "name": "Uyae level up skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Trin' and source == 'exp_gain'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_unit('Trin').level == 6",
+            "    add_item_to_multiitem;Uyae;Switch_Stance;Aura_of_Healing",
+            "end"
+        ],
+        "nid": "Global Uyae level up skills"
+    },
+    {
+        "name": "Vhala sniper skill setup upkeep",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "inc_game_var;rangechange;1",
+            "modify_skill_component;Vhala;Snipe_range;aura_range;{e:{v:rangechange}}"
+        ],
+        "nid": "Global Vhala sniper skill setup upkeep"
+    },
+    {
+        "name": "Vhala sniper reset range",
+        "trigger": "level_end",
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "game_var;rangechange;0",
+            "modify_skill_component;Vhala;Snipe_range;aura_range;1"
+        ],
+        "nid": "Global Vhala sniper reset range"
+    },
+    {
+        "name": "Vhala sniper cancel",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_skill;Vhala;Sniper",
+            "game_var;rangechange;0",
+            "modify_skill_component;Vhala;Snipe_range;aura_range;1"
+        ],
+        "nid": "Global Vhala sniper cancel"
+    },
+    {
+        "name": "Vhala level up skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Vhala' and source == 'exp_gain'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;u('Vhala').klass == 'Sniper'",
+            "    if;game.get_unit('Vhala').level == 2",
+            "        give_skill;Vhala;Sniping_Position",
+            "    end",
+            "end"
+        ],
+        "nid": "Global Vhala level up skills"
+    },
+    {
+        "name": "Robin level up skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Robin'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;u('Robin').klass == 'Sage'",
+            "    if;game.get_unit('Robin').level == 1",
+            "        add_item_to_multiitem;Robin;ArcaneSpells_Robin;ArcaneSpells_Robin_Sage",
+            "    end",
+            "end"
+        ],
+        "nid": "Global Robin level up skills"
+    },
+    {
+        "name": "Varia level up skills",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Varia'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;u('Varia').klass == 'Bloomblade'",
+            "    if;game.get_unit('Varia').level == 1",
+            "        give_skill;Varia;Furious_Strikes",
+            "    end",
+            "elif;u('Varia').klass == 'Swordmaster'",
+            "    if;game.get_unit('Varia').level == 1",
+            "        give_skill;Varia;Blade_Dance",
+            "    end",
+            "end"
+        ],
+        "nid": "Global Varia level up skills"
     }
 ]
