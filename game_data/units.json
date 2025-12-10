@@ -44,19 +44,27 @@
         "learned_skills": [
             [
                 1,
-                "Canto"
+                "Strategic_Strikes"
             ],
             [
                 1,
-                "SupportAllies"
+                "Support_Allies"
             ],
             [
-                1,
+                2,
+                "Commanding_Presence"
+            ],
+            [
+                3,
+                "Command"
+            ],
+            [
+                5,
+                "Incubus_Assault"
+            ],
+            [
+                8,
                 "All_Embracing_Care"
-            ],
-            [
-                1,
-                "Nothing"
             ]
         ],
         "unit_notes": [],
@@ -646,6 +654,14 @@
             [
                 1,
                 "Hunter"
+            ],
+            [
+                6,
+                "Slippery"
+            ],
+            [
+                9,
+                "Triumphant"
             ]
         ],
         "unit_notes": [],
@@ -967,7 +983,28 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Overgasm"
+            ],
+            [
+                1,
+                "Congenial_Presence"
+            ],
+            [
+                2,
+                "Visionary_Perspective"
+            ],
+            [
+                3,
+                "Emergency_Shelter"
+            ],
+            [
+                5,
+                "Hotblooded_Dive"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -1550,11 +1587,23 @@
         "learned_skills": [
             [
                 1,
-                "OriliseBuffAura"
+                "Baleful_Presence"
             ],
             [
-                1,
-                "OriliseNerfAura"
+                2,
+                "Defiant_Perspective"
+            ],
+            [
+                3,
+                "Provoke"
+            ],
+            [
+                4,
+                "Irritate"
+            ],
+            [
+                5,
+                "Battle_Sophism"
             ]
         ],
         "unit_notes": [],
@@ -2689,7 +2738,44 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Take_Flight"
+            ],
+            [
+                2,
+                "Haze_of_Sex"
+            ],
+            [
+                3,
+                "Shared_Fantasy"
+            ],
+            [
+                4,
+                "Illusion"
+            ],
+            [
+                5,
+                "Flirt"
+            ],
+            [
+                6,
+                "Sexual_Mana"
+            ],
+            [
+                7,
+                "Harem_Mistress"
+            ],
+            [
+                8,
+                "First_slut"
+            ],
+            [
+                10,
+                "Doom_Kings_Emissary"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
@@ -2759,7 +2845,7 @@
         "nid": "Iris2",
         "name": "Iris",
         "desc": "Doom King's secretary. Has an optimization fetish.",
-        "variant": null,
+        "variant": "",
         "level": 6,
         "klass": "Dancer",
         "tags": [
@@ -4317,7 +4403,7 @@
         "desc": "Commander of the Ardoheim army. ",
         "variant": null,
         "level": 13,
-        "klass": "Sniper",
+        "klass": "Ballistician",
         "tags": [],
         "bases": {
             "HP": 28,
@@ -4334,11 +4420,11 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Longbow",
+                "Long_Ballista",
                 false
             ],
             [
-                "Long_Ballista",
+                "Ballista",
                 false
             ]
         ],

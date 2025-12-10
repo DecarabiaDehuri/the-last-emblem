@@ -620,7 +620,7 @@
     {
         "nid": "PoisonStorm",
         "name": "Poison Storm",
-        "desc": "Curses the air around the target with a poison effect. Costs <blue>15 mana</>.",
+        "desc": "<green>[Riala synergy]</> Curses the air around the target with a poison effect. <blue>15 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -5211,8 +5211,8 @@
         "desc": "Cumdump Cumdumps Cumdump's friend!! <orange>12 sparkles</> <red>3 times!</>",
         "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            46
+            6,
+            20
         ],
         "components": [
             [
@@ -5510,7 +5510,7 @@
     {
         "nid": "Pretty_Lance_ability",
         "name": "Pretty Lance",
-        "desc": "",
+        "desc": "Qum attacks like Simonette!",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -5578,7 +5578,7 @@
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
-            24
+            46
         ],
         "components": [
             [
@@ -5719,6 +5719,900 @@
             [
                 "map_cast_anim",
                 "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "YarraSpells",
+        "name": "Yarra's spells",
+        "desc": "Access Yarra's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "LustFlux",
+                    "Sexual_Torment",
+                    "Succubus_Kiss"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Haze_of_Sex",
+        "name": "Haze of Sex",
+        "desc": "Also affects enemies around the target. Chance of inflicting <red>[CHARMED]</>. <orange>10 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            26
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "enemy_blast_aoe",
+                1
+            ],
+            [
+                "status_on_equip",
+                "Proc_Charmed_Yarra"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Dance1"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Shared_Fantasy",
+        "name": "Shared Fantasy",
+        "desc": "Puts a partner into a fulfilling fantasy, increasing their DEF and RES for a few turns. <orange>7 SP</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Shared_Fantasy_buff"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost",
+                7
+            ]
+        ]
+    },
+    {
+        "nid": "Flirt",
+        "name": "Flirt",
+        "desc": "Yarra flirts with the enemy, trying to make them <red>[CHARMED]</>. <orange>10 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Charmed_Yarra"
+            ],
+            [
+                "battle_cast_anim",
+                "Refresh"
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sexual_Mana",
+        "name": "Sexual Mana",
+        "desc": "Yarra transfers <blue>10 mana</> to an ally. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            26
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "Restore"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    165,
+                    246
+                ]
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Yarra sexual mana"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "First_Slut",
+        "name": "First Slut",
+        "desc": "Yarra heals and buffs herself, increasing all stats for a few turns. <orange>10 SP</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            44
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "heal",
+                30
+            ],
+            [
+                "status_on_hit",
+                "Nothing"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    166,
+                    221
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Doom_Kings_Emissary",
+        "name": "Doom King's Emissary",
+        "desc": "Also affects enemies around the target. Chance of inflicting <red>[LUST DEATH]</>. <orange>15 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            48
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    221,
+                    0,
+                    203
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "enemy_blast_aoe",
+                2
+            ],
+            [
+                "status_on_equip",
+                "Proc_LustDeath_Yarra"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "DemonLight"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Harem_Mistress",
+        "name": "Harem Mistress",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            50
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Hilstara Harem Tactics"
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Select 1"
+            ]
+        ]
+    },
+    {
+        "nid": "Illusion",
+        "name": "Illusion",
+        "desc": "Yarra illusions herself and allies close to her. <orange>5 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "ally_blast_aoe",
+                1
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Yarra"
+                ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Illusioned"
+            ],
+            [
+                "map_cast_sfx",
+                "Silence1"
+            ]
+        ]
+    },
+    {
+        "nid": "Take_Flight",
+        "name": "Take Flight",
+        "desc": "Yarra soars up high with her wings and flies for a couple of turns. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            31
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "status_on_hit",
+                "Flying_Yarra"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Heavy Wing Flap"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lustful_Emissaries_effect",
+        "name": "Lustful Emissaries",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "enemy_blast_aoe",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Lust_proc"
+            ],
+            [
+                "magic_at_range",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Lustful_Emissaries_spell"
+            ],
+            [
+                "mana_cost",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Kiss_effect",
+        "name": "Forceful Kiss",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Forceful_Kiss_spell"
+            ],
+            [
+                "crit",
+                10
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy_effect",
+        "name": "Combat Fantasy",
+        "desc": "<green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. Costs <orange>10 SP</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            45
+        ],
+        "components": [
+            [
+                "map_hit_add_blend",
+                [
+                    217,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Combat_Fantasy_buff"
+            ],
+            [
+                "self_status_on_hit",
+                "Combat_Fantasy_buff"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "mana_cost",
+                10
             ]
         ]
     },
@@ -6137,833 +7031,6 @@
             [
                 "status_on_equip",
                 "Avoid5"
-            ]
-        ]
-    },
-    {
-        "nid": "YarraSpells",
-        "name": "Yarra's spells",
-        "desc": "Access Yarra's available spells.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            28
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "multi_item",
-                []
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "locked",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Yarra"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Haze_of_Sex",
-        "name": "Haze of Sex",
-        "desc": "Also affects enemies around the target. Chance of inflicting <red>[CHARMED]</>. Costs <orange>10 SP</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            26
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                4
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "enemy_blast_aoe",
-                1
-            ],
-            [
-                "status_on_equip",
-                "Proc_Charmed_Yarra"
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_sfx",
-                "Dance1"
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Reinforce"
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Shared_Fantasy",
-        "name": "Shared Fantasy",
-        "desc": "Puts a partner into a fulfilling fantasy, increasing their DEF and RES for a few turns. Costs <orange>7 SP</>. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            34
-        ],
-        "components": [
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Shared_Fantasy_buff"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_anim",
-                "MapMediumHealTrans"
-            ],
-            [
-                "map_cast_sfx",
-                "RefreshDanceMap"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "mana_cost",
-                7
-            ]
-        ]
-    },
-    {
-        "nid": "Flirt",
-        "name": "Flirt",
-        "desc": "Yarra flirts with the enemy, trying to make them <red>[CHARMED]</>. Costs <orange>10 SP</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            46
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Charmed_Yarra"
-            ],
-            [
-                "battle_cast_anim",
-                "Refresh"
-            ],
-            [
-                "hit",
-                50
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "prf_unit",
-                [
-                    "Yarra"
-                ]
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Sexual_Mana",
-        "name": "Sexual Mana",
-        "desc": "Yarra transfers <blue>10 mana</> to an ally. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            26
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_sfx",
-                "Restore"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    165,
-                    246
-                ]
-            ],
-            [
-                "event_after_combat_on_hit",
-                "Global Yarra sexual mana"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "First_Slut",
-        "name": "First Slut",
-        "desc": "Yarra heals and buffs herself, increasing all stats for a few turns. Costs <orange>10 SP</>. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            44
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "target_unit",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "heal",
-                30
-            ],
-            [
-                "status_on_hit",
-                "Nothing"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    166,
-                    221
-                ]
-            ],
-            [
-                "map_cast_sfx",
-                "RefreshDanceMap"
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Doom_Kings_Emissary",
-        "name": "Doom King's Emissary",
-        "desc": "Also affects enemies around the target. Chance of inflicting <red>[LUST DEATH]</>. Costs <orange>15 SP</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            48
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                8
-            ],
-            [
-                "hit",
-                85
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    221,
-                    0,
-                    203
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "enemy_blast_aoe",
-                2
-            ],
-            [
-                "status_on_equip",
-                "Proc_LustDeath_Yarra"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Yarra"
-                ]
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_cast_sfx",
-                "DemonLight"
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Reinforce"
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Lustful_Emissaries_effect",
-        "name": "Lustful Emissaries",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            41
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "damage",
-                3
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "enemy_blast_aoe",
-                2
-            ],
-            [
-                "status_on_hit",
-                "Lust_proc"
-            ],
-            [
-                "magic_at_range",
-                null
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Lustful_Emissaries_spell"
-            ]
-        ]
-    },
-    {
-        "nid": "Forceful_Kiss_effect",
-        "name": "Forceful Kiss",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            45
-        ],
-        "components": [
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Forceful_Kiss_spell"
-            ],
-            [
-                "crit",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "Combat_Fantasy_effect",
-        "name": "Combat Fantasy",
-        "desc": "<green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. Costs <orange>10 SP</>. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            45
-        ],
-        "components": [
-            [
-                "map_hit_add_blend",
-                [
-                    217,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Combat_Fantasy_buff"
-            ],
-            [
-                "self_status_on_hit",
-                "Combat_Fantasy_buff"
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "map_cast_anim",
-                "MapMediumHealTrans"
-            ],
-            [
-                "map_cast_sfx",
-                "RefreshDanceMap"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ]
-        ]
-    },
-    {
-        "nid": "Illusion",
-        "name": "Illusion",
-        "desc": "Yarra illusions herself and allies close to her. Costs <orange>5 SP</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            34
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                5
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "ally_blast_aoe",
-                1
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "Yarra"
-                ]
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "status_after_combat_on_hit",
-                "Illusioned"
-            ],
-            [
-                "map_cast_sfx",
-                "Silence1"
-            ]
-        ]
-    },
-    {
-        "nid": "Take_flight",
-        "name": "Take flight",
-        "desc": "Yarra soars up high with her wings and flies for a couple of turns. <red>1 use per chapter</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            31
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_unit",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "status_on_hit",
-                "Flying_Yarra"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    255,
-                    255
-                ]
-            ],
-            [
-                "map_cast_pose",
-                null
-            ],
-            [
-                "map_hit_sfx",
-                "Heavy Wing Flap"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "attack_after_combat",
-                null
-            ],
-            [
-                "no_map_hp_display",
-                null
             ]
         ]
     },
@@ -7880,7 +7947,7 @@
     {
         "nid": "Inspire_ability",
         "name": "Inspire",
-        "desc": "",
+        "desc": "<green>[Hilstara synergy]</> Riala buffs an ally with <green>[INSPIRED]</>: Unit has bonus MAG and RES. <blue> 5 MP</>",
         "icon_nid": "Affinity",
         "icon_index": [
             0,
@@ -7918,6 +7985,14 @@
             [
                 "map_hit_sfx",
                 "MapHeal"
+            ],
+            [
+                "mana_cost",
+                5
+            ],
+            [
+                "mana_cost_as_uses",
+                null
             ]
         ]
     },
@@ -14041,8 +14116,7 @@
             [
                 "prf_class",
                 [
-                    "Archer",
-                    "Sniper"
+                    "Ballistician"
                 ]
             ],
             [
@@ -14128,8 +14202,7 @@
             [
                 "prf_class",
                 [
-                    "Archer",
-                    "Sniper"
+                    "Ballistician"
                 ]
             ],
             [
@@ -14242,8 +14315,7 @@
             [
                 "prf_class",
                 [
-                    "Archer",
-                    "Sniper"
+                    "Ballistician"
                 ]
             ],
             [
@@ -14332,8 +14404,7 @@
             [
                 "prf_class",
                 [
-                    "Archer",
-                    "Sniper"
+                    "Ballistician"
                 ]
             ],
             [
@@ -14422,8 +14493,7 @@
             [
                 "prf_class",
                 [
-                    "Archer",
-                    "Sniper"
+                    "Ballistician"
                 ]
             ],
             [
@@ -14437,6 +14507,10 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "warning",
+                null
             ]
         ]
     },
@@ -14709,6 +14783,66 @@
             [
                 "eval_available",
                 "any([u.nid == 'Uyae' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "mana_cost",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_of_Agility_pair",
+        "name": "Aura of Agility",
+        "desc": "Shifts power from defense to evasion. Costs <blue>5 mana</>.\nCosts <blue>1 mana</> per turn. Lasts for 3 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            27
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "StatUpSpark"
+            ],
+            [
+                "map_hit_sfx",
+                "Battle Cry"
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    9,
+                    255,
+                    5
+                ]
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Uyae agility stance"
+            ],
+            [
+                "eval_available",
+                "u('Uyae').traveler == 'Aka'"
             ],
             [
                 "mana_cost",
@@ -15858,7 +15992,7 @@
     {
         "nid": "Succubus_Growth",
         "name": "Succubus Fan",
-        "desc": "<green>[Yarra synergy]</> Elder Lynine increases the growth rates of nearby Succubi. Costs <blue>5 mana</>.",
+        "desc": "<green>[Yarra synergy]</> Elder Lynine increases the growth rates of nearby Succubi. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -16529,7 +16663,7 @@
     {
         "nid": "Flaming_Thrust_ability",
         "name": "Flaming Thrust",
-        "desc": "",
+        "desc": "<green>[Robin synergy]</> Attacks with magically charged thrust. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -16597,7 +16731,7 @@
     {
         "nid": "Cautious_Swipes_ability",
         "name": "Cautious Swipes",
-        "desc": "[Hilstara] Releases weak but rapid strikes from behind cover.",
+        "desc": "<green>[Hilstara synergy]</> Releases weak but rapid strikes from behind Hilstara's cover. Always hits. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -16622,11 +16756,7 @@
             ],
             [
                 "damage",
-                3
-            ],
-            [
-                "hit",
-                90
+                4
             ],
             [
                 "crit",
@@ -16649,10 +16779,6 @@
                 5
             ],
             [
-                "brave_on_attack",
-                null
-            ],
-            [
                 "weight",
                 3
             ]
@@ -16661,11 +16787,11 @@
     {
         "nid": "Swift_Stab_ability",
         "name": "Swift Stab",
-        "desc": "<orange>[Aka]</> Attacks with blinding speed.",
+        "desc": "<green>[Aka synergy]</> Attacks with blinding speed. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            46
+            10,
+            18
         ],
         "components": [
             [
@@ -16711,17 +16837,21 @@
             [
                 "cannot_be_countered",
                 null
+            ],
+            [
+                "brave_on_attack",
+                null
             ]
         ]
     },
     {
         "nid": "Martial_Masturbation_ability",
         "name": "Martial Masturbation",
-        "desc": "Gain 4 mana. Buffs STR and DEF. [Cooldown: 2]",
+        "desc": "Gain 4 mana. Buffs STR and DEF. Cooldown: 2",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            9
+            1,
+            24
         ],
         "components": [
             [
@@ -16765,11 +16895,11 @@
     {
         "nid": "Desperate_Masturbation_ability",
         "name": "Desperate Masturbation",
-        "desc": "Costs 5 HP. Gain 4 mana. Buffs SKL and SPD. [Cooldown: 2]",
+        "desc": "Costs 5 HP. Gain 4 mana. Buffs SKL and SPD. Cooldown: 2",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            9
+            5,
+            24
         ],
         "components": [
             [
@@ -16817,11 +16947,11 @@
     {
         "nid": "Healing_Masturbation_ability",
         "name": "Healing Masturbation",
-        "desc": "Heals HP and status effects. Gain 4 mana. [Cooldown: 2]",
+        "desc": "Heals HP and status effects. Gain 4 mana. Cooldown: 2",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            9
+            2,
+            24
         ],
         "components": [
             [
@@ -17280,11 +17410,7 @@
                 "multi_item",
                 [
                     "Necro_Axe",
-                    "Necro_Axe_Ranged",
-                    "Necro_Bow",
-                    "Necro_Bind",
-                    "Necro_Reanimate",
-                    "Death_Defiance"
+                    "Necro_Axe_Ranged"
                 ]
             ],
             [
@@ -22245,7 +22371,7 @@
     {
         "nid": "Flourished_Flurry",
         "name": "Flourished Flurry",
-        "desc": "<green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Aka moves to the other side of the target. Costs <blue>10 mana</>.",
+        "desc": "<green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Aka moves to the other side of the target. <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -22308,7 +22434,7 @@
     },
     {
         "nid": "Flourished_Flurries_helper",
-        "name": "Flourished_Flurries",
+        "name": "Flourished Flurry",
         "desc": "<green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Costs <blue>10 mana</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -22672,7 +22798,7 @@
     {
         "nid": "Strong_Faith",
         "name": "Strong Faith",
-        "desc": "<green>[Uyae] synergy</>. Carina channels her faith to empower her martial arts capabilities. Costs <blue>5 mana</>.",
+        "desc": "<green>[Uyae] synergy</>. Carina channels her faith to empower her martial arts capabilities. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -22776,11 +22902,11 @@
     {
         "nid": "Arrow_of_Ice_effect",
         "name": "Arrow of Ice",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "desc": "<green>[Robin Synergy]</> Shoots a magically charged arrow. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            5
+            4,
+            35
         ],
         "components": [
             [
@@ -22838,17 +22964,21 @@
             [
                 "no_double",
                 null
+            ],
+            [
+                "mana_cost",
+                5
             ]
         ]
     },
     {
         "nid": "Arrow_of_Lust_effect",
         "name": "Arrow of Lust",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "desc": "<green>[Yarra synergy]</> Fires a sexually charged arrow. <blue>5 MP</>",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            1
+            14,
+            25
         ],
         "components": [
             [
@@ -23657,11 +23787,11 @@
     {
         "nid": "Defenders_Frenzy_ability",
         "name": "Defender's Frenzy",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "desc": "<green>[Hilstara synergy]</> Varia begins a frenzy to protect her allies. <blue>10 MP</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            3
+            2,
+            50
         ],
         "components": [
             [
@@ -23976,8 +24106,8 @@
         "desc": "<green>[Altina synergy]</> Varia throws a bomb magically infused by Altina. Cooldown 4 turns. Costs <red>25% of max HP.</> <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
-            49
+            11,
+            42
         ],
         "components": [
             [

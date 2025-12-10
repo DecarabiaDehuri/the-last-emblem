@@ -2187,7 +2187,7 @@
     {
         "nid": "Support_Allies",
         "name": "Support Allies",
-        "desc": "Simon heals negative status effects of himself and nearby allies. Costs <blue>10 mana</>.",
+        "desc": "Simon heals negative status effects of himself and nearby allies. <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -2207,7 +2207,7 @@
     {
         "nid": "Commanding_Presence",
         "name": "Commanding Presence",
-        "desc": "Deals damage to enemies around Simon, with a high chance of inflicting <red>[STUNNED]</>. Costs <blue>10 mana</>. <red>[STUNNED]</>: Unit cannot act for the remainder of their turn.",
+        "desc": "Deals damage to enemies around Simon, with a high chance of inflicting <red>[STUNNED]</>. <blue>10 MP</>. <red>[STUNNED]</>: Unit cannot act for the remainder of their turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -7970,8 +7970,8 @@
         "desc": "Qum transfers some of her <orange>SP</> to an ally's <blue>mana</>. <orange>12 SP</>. Can be used up to 3 times per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            46
+            6,
+            20
         ],
         "components": [
             [
@@ -8277,7 +8277,7 @@
     {
         "nid": "Pretty_Lance",
         "name": "Pretty Lance",
-        "desc": "",
+        "desc": "Deals damage to an enemy.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -8313,22 +8313,26 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
             ]
         ]
     },
     {
-        "nid": "Mass_Kiss",
-        "name": "Mass Kiss",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "nid": "Pretty_Lance_pair",
+        "name": "Pretty Lance",
+        "desc": "Deals damage to an enemy.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            3
+            7,
+            37
         ],
         "components": [
             [
                 "ability",
-                "Mass_Kiss_ability_core"
+                "Pretty_Lance_ability"
             ],
             [
                 "hidden_if_inactive",
@@ -8336,10 +8340,104 @@
             ],
             [
                 "condition",
+                "u('Qum').traveler == 'Robin'"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Mass_Kiss",
+        "name": "Mass Kiss",
+        "desc": "Deals damage to nearby enemies and heals allies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "ability",
+                "Mass_Kiss_ability_core"
+            ],
+            [
+                "condition",
                 "any([u.nid == 'Qum' for u in target_system.get_adj_units(game.get_unit('Yarra'))])"
             ],
             [
-                "hide_aura",
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Mass_Kiss_pair",
+        "name": "Mass Kiss",
+        "desc": "Deals damage to nearby enemies and heals allies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "ability",
+                "Mass_Kiss_ability_core"
+            ],
+            [
+                "condition",
+                "u('Qum').traveler == 'Yarra'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -8393,6 +8491,170 @@
             [
                 "lost_on_end_chapter",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Illusion",
+        "name": "Illusion",
+        "desc": "Become invisible to enemies and pass between them. Lose the status after combat. <orange>5 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Illusion"
+            ],
+            [
+                "cost_mana",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Haze_of_Sex",
+        "name": "Haze of Sex",
+        "desc": "Also affects enemies around the target. Chance of inflicting <red>[CHARMED]</>. <orange>10 SP</>. <red>[CHARMED]</>: Unit is charmed by Yarra's exquisite presence and will follow her without attacking. Status is lost when getting hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            26
+        ],
+        "components": [
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Shared_Fantasy",
+        "name": "Shared_Fantasy",
+        "desc": "Puts a partner into a fulfilling fantasy, increasing their DEF and RES for a few turns. <orange>7 SP</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "cost_mana",
+                7
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flirt",
+        "name": "Flirt",
+        "desc": "Yarra flirts with the enemy, trying to make them <red>[CHARMED]</>. <orange>10 SP</>. <red>[CHARMED]</>: Unit is charmed by Yarra's exquisite presence and will follow her without attacking. Status is lost when getting hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "cost_mana",
+                7
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sexual_Mana",
+        "name": "Sexual Mana",
+        "desc": "Yarra transfers <blue>10 mana</> to an ally. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            26
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Doom_Kings_Emissary",
+        "name": "Doom King's Emissary",
+        "desc": "Also affects enemies around the target. Chance of inflicting <red>[LUST DEATH]</>. <orange>15 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            48
+        ],
+        "components": [
+            [
+                "cost_mana",
+                15
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Harem_Mistress",
+        "name": "Harem Mistress",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            50
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Harem_Mistress"
             ]
         ]
     },
@@ -8591,6 +8853,30 @@
         ]
     },
     {
+        "nid": "First_slut",
+        "name": "First slut",
+        "desc": "Yarra heals and buffs herself, increasing all stats for a few turns. <orange>10 SP</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            44
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "cost_mana",
+                10
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Flying_Yarra",
         "name": "Flying",
         "desc": "Can fly.",
@@ -8630,9 +8916,33 @@
         ]
     },
     {
+        "nid": "Take_Flight",
+        "name": "Flying",
+        "desc": "Yarra soars up high with her wings and flies for a couple of turns. <red>1 use per chapter</>.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            10
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Take_Flight"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Lightning_Whip",
         "name": "Lightning Whip",
-        "desc": "",
+        "desc": "<green>[Robin synergy]</> Yarra strikes with Robin's assistance. <orange>5 SP</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -8644,23 +8954,71 @@
                 "Lightning_Whip_effect"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
             ],
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning_Whip_pair",
+        "name": "Lightning Whip",
+        "desc": "<green>[Robin synergy]</> Yarra strikes with Robin's assistance. <orange>5 SP</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "ability",
+                "Lightning_Whip_effect"
+            ],
+            [
+                "condition",
+                "u('Yarra').traveler == 'Robin'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Earth_Whip",
         "name": "Earth Whip",
-        "desc": "",
+        "desc": "<green>[Altina synergy]</> Yarra strikes with an earth magic from Altina. <orange>5 SP</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -8670,10 +9028,6 @@
             [
                 "ability",
                 "Earth_Whip_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
             ],
             [
                 "condition",
@@ -8686,13 +9040,69 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Earth_Whip_pair",
+        "name": "Earth Whip",
+        "desc": "<green>[Altina synergy]</> Yarra strikes with an earth magic from Altina. <orange>5 SP</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "ability",
+                "Earth_Whip_effect"
+            ],
+            [
+                "condition",
+                "u('Yarra').traveler == 'Altina'"
+            ],
+            [
+                "alternate_battle_anim",
+                "Earth"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Pure_Whip",
         "name": "Pure Whip",
-        "desc": "",
+        "desc": "<green>[Vhala synergy]</> Yarra strikes with anti-sexually charged magic. Eugh! <orange>5 SP</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -8702,10 +9112,6 @@
             [
                 "ability",
                 "Pure_Whip_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
             ],
             [
                 "condition",
@@ -8718,13 +9124,69 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Pure_Whip_pair",
+        "name": "Pure Whip",
+        "desc": "<green>[Vhala synergy]</> Yarra strikes with anti-sexually charged magic. Eugh! <orange>5 SP</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            36
+        ],
+        "components": [
+            [
+                "ability",
+                "Pure_Whip_effect"
+            ],
+            [
+                "condition",
+                "u('Yarra').traveler == 'Vhala'"
+            ],
+            [
+                "alternate_battle_anim",
+                "Pure"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Wild_Lashing",
         "name": "Wild Lashing",
-        "desc": "",
+        "desc": "<green>[Uyae synergy]</> Yarra strikes violently. <orange>5 SP</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -8734,10 +9196,6 @@
             [
                 "ability",
                 "Wild_Lashing_effect"
-            ],
-            [
-                "hidden_if_inactive",
-                null
             ],
             [
                 "condition",
@@ -8754,13 +9212,81 @@
             [
                 "alternate_battle_anim",
                 "Wild"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Wild_Lashing_pair",
+        "name": "Wild Lashing",
+        "desc": "<green>[Uyae synergy]</> Yarra strikes violently.  <orange>5 SP</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            39
+        ],
+        "components": [
+            [
+                "ability",
+                "Wild_Lashing_effect"
+            ],
+            [
+                "condition",
+                "u('Yarra').traveler == 'Uyae'"
+            ],
+            [
+                "astra_proc",
+                {
+                    "extra_attacks": 2,
+                    "damage_percent": 0.5,
+                    "show_proc_effects": false
+                }
+            ],
+            [
+                "alternate_battle_anim",
+                "Wild"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Lash_of_Torment",
         "name": "Lash of Torment",
-        "desc": "",
+        "desc": "<green>[Nalili synergy]</> Nalili and Yarra combine their lust to unleash a powerful attack. <orange>5 SP</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -8772,23 +9298,79 @@
                 "Lash_of_Torment_effect"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
             ],
             [
                 "alternate_battle_anim",
                 "Wild"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lash_of_Torment_pair",
+        "name": "Lash of Torment",
+        "desc": "<green>[Nalili synergy]</> Nalili and Yarra combine their lust to unleash a powerful attack. <orange>5 SP</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "ability",
+                "Lash_of_Torment_effect"
+            ],
+            [
+                "condition",
+                "u('Yarra').traveler == 'Nalili'"
+            ],
+            [
+                "alternate_battle_anim",
+                "Wild"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Lustful_Emissaries",
         "name": "Lutsful Emissaries",
-        "desc": "",
+        "desc": "<green>[Riala synergy]</> Together they're unstoppable. <orange>10 SP</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -8800,23 +9382,79 @@
                 "Lustful_Emissaries_effect"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
             ],
             [
                 "alternate_battle_anim",
                 "Attack"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Lustful_Emissaries_pair",
+        "name": "Lutsful Emissaries",
+        "desc": "<green>[Riala synergy]</> Together they're unstoppable. <orange>10 SP</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "ability",
+                "Lustful_Emissaries_effect"
+            ],
+            [
+                "condition",
+                "u('Yarra').traveler == 'Riala'"
+            ],
+            [
+                "alternate_battle_anim",
+                "Attack"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Forceful_Kiss",
         "name": "Forceful Kiss",
-        "desc": "",
+        "desc": "<green>[Hilstara synergy]</> Yarra blows a kiss of physical strength. <orange>5 SP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -8828,23 +9466,79 @@
                 "Forceful_Kiss_effect"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
             ],
             [
                 "alternate_battle_anim",
                 "Attack"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Forceful_Kiss_pair",
+        "name": "Forceful Kiss",
+        "desc": "<green>[Hilstara synergy]</> Yarra blows a kiss of physical strength. <orange>5 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "ability",
+                "Forceful_Kiss_effect"
+            ],
+            [
+                "condition",
+                "u('Yarra').traveler == 'Hilstara'"
+            ],
+            [
+                "alternate_battle_anim",
+                "Attack"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Combat_Fantasy",
         "name": "Combat Fantasy",
-        "desc": "",
+        "desc": "<green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. Costs <orange>10 SP</>. <red>1 use per chapter</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -8856,12 +9550,64 @@
                 "Combat_Fantasy_effect"
             ],
             [
-                "hidden_if_inactive",
+                "condition",
+                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+            ],
+            [
+                "grey_if_inactive",
                 null
             ],
             [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Fantasy_pair",
+        "name": "Combat Fantasy",
+        "desc": "<green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. Costs <orange>10 SP</>. <red>1 use per chapter</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            50
+        ],
+        "components": [
+            [
+                "ability",
+                "Combat_Fantasy_effect"
+            ],
+            [
                 "condition",
-                "any([u.nid == 'Yarra' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
+                "u('Yarra').traveler == 'Aka'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -8905,7 +9651,7 @@
     {
         "nid": "Inspire",
         "name": "Inspire",
-        "desc": "",
+        "desc": "<green>[Hilstara synergy]</> Riala buffs an ally with <green>[INSPIRED]</>: Unit has bonus MAG and RES. <blue> 5 MP</>",
         "icon_nid": "Affinity",
         "icon_index": [
             0,
@@ -8917,35 +9663,71 @@
                 "Inspire_ability"
             ],
             [
-                "aura_range",
-                1
+                "condition",
+                "any([u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
             ],
             [
-                "aura_target",
-                "ally"
-            ],
-            [
-                "hide_aura",
+                "grey_if_inactive",
                 null
             ],
             [
-                "aura",
-                "Active_Synergy"
+                "unit_anim",
+                "synergy"
             ],
             [
-                "hidden_if_inactive",
-                null
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire_pair",
+        "name": "Inspire",
+        "desc": "<green>[Hilstara synergy]</> Riala buffs an ally with <green>[INSPIRED]</>: Unit has bonus MAG and RES. <blue> 5 MP</>",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "ability",
+                "Inspire_ability"
             ],
             [
                 "condition",
-                "any([u.nid == 'Riala' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+                "u('Riala').traveler == 'Hilstara'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Inspire_effect",
-        "name": "Inspire",
-        "desc": "",
+        "name": "<green>[INSPIRED]</>",
+        "desc": "Unit has bonus MAG and RES.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -9748,10 +10530,6 @@
         ],
         "components": [
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "ability",
                 "Burst_Cleanse"
             ],
@@ -9766,6 +10544,162 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Burst_Cleanse_pair",
+        "name": "Burst Cleanse",
+        "desc": "<green>[Lynine synergy]</> Carina releases a burst of divine magic around her, cleasing negative effects. Costs <blue>10 mana</>. Increases Lynine's Overgasm.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            7
+        ],
+        "components": [
+            [
+                "ability",
+                "Burst_Cleanse"
+            ],
+            [
+                "condition",
+                "u('Carina').traveler == 'Lynine'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Strong_Faith",
+        "name": "Strong Faith",
+        "desc": "<green>[Uyae] synergy</>. Carina channels her faith to empower her martial arts capabilities. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            14
+        ],
+        "components": [
+            [
+                "ability",
+                "Strong_Faith"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Carina' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ]
+        ]
+    },
+    {
+        "nid": "Strong_Faith_pair",
+        "name": "Strong Faith",
+        "desc": "<green>[Uyae] synergy</>. Carina channels her faith to empower her martial arts capabilities. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            14
+        ],
+        "components": [
+            [
+                "ability",
+                "Strong_Faith"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "condition",
+                "u('Carina').traveler == 'Uyae'"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Empowered_effect",
+        "name": "Empowered",
+        "desc": "Carina is faster and deals bonus damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            5
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                1.5000000000000002
+            ],
+            [
+                "attack_speed",
+                5
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    225,
+                    219,
+                    49
+                ]
             ]
         ]
     },
@@ -11564,7 +12498,7 @@
     {
         "nid": "Succubus_Growth",
         "name": "Succubus Fan",
-        "desc": "",
+        "desc": "Lynine buffs the growths of nearby Succubi.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -11573,10 +12507,6 @@
         "components": [
             [
                 "class_skill",
-                null
-            ],
-            [
-                "hidden_if_inactive",
                 null
             ],
             [
@@ -11590,6 +12520,62 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ]
+        ]
+    },
+    {
+        "nid": "Succubus_Growth_pair",
+        "name": "Succubus Fan",
+        "desc": "Lynine buffs the growths of nearby Succubi.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Lynine').traveler == 'Yarra'"
+            ],
+            [
+                "ability",
+                "Succubus_Growth"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -11673,8 +12659,46 @@
                 "any([u.nid == 'Lynine' for u in target_system.get_adj_units(game.get_unit('Megail'))])"
             ],
             [
-                "hidden_if_inactive",
+                "class_skill",
                 null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "CritSpark"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Affiliate_skill_pair",
+        "name": "Affiliate",
+        "desc": "<orange>[Megail] synergy</> Lynine can mark an ally as an affiliate. For 3 turns, Lynine can move next to them, regardless of distance. Marking costs <blue>5 mana</> and increases <red>[OVERGASM]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            51
+        ],
+        "components": [
+            [
+                "ability",
+                "Affiliate"
+            ],
+            [
+                "condition",
+                "u('Lynine').traveler == 'Megail'"
             ],
             [
                 "class_skill",
@@ -11683,6 +12707,20 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "CritSpark"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -11747,7 +12785,7 @@
     {
         "nid": "Overgasm_Info",
         "name": "Overgasm",
-        "desc": "Lynine's skills increase the Overgasm meter. When it reaches 3 stacks, she suffers <red>[OVERGASMED]</>: unable to act for one turn, with increasing turn counts each time it is triggered on a chapter.",
+        "desc": "Some Lynine's skills increase the Overgasm meter. When it reaches 3 stacks, she suffers <red>[OVERGASMED]</>: unable to act for one turn, with increasing turn counts each time it is triggered on a chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -11803,7 +12841,7 @@
     {
         "nid": "Congenial_Presence",
         "name": "Congenial Presence",
-        "desc": "",
+        "desc": "Elder Lynine's supportive aura enhances the dodging capabilities of nearby Succubi.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -11827,7 +12865,7 @@
     {
         "nid": "Congenial_Presence_effect",
         "name": "Congenial Presence",
-        "desc": "",
+        "desc": "Succubus unit has more avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -11836,11 +12874,11 @@
         "components": [
             [
                 "avoid",
-                20
+                30
             ],
             [
                 "crit_avoid",
-                20
+                30
             ],
             [
                 "condition",
@@ -11896,7 +12934,7 @@
     {
         "nid": "Emergency_Shelter",
         "name": "Emergency Shelter",
-        "desc": "",
+        "desc": "Rescues a 3-tiles away unit. Elder Lynine returns to her position and can move again after rescuing, with bonus MOV. Increases Overgasm. Costs half HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -11910,6 +12948,10 @@
             [
                 "ability",
                 "Emergency_Shelter"
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
@@ -11951,15 +12993,28 @@
         ]
     },
     {
-        "nid": "new_1",
-        "name": "new_1",
-        "desc": "",
-        "icon_nid": null,
+        "nid": "Hotblooded_Dive",
+        "name": "Hotblooded Dive",
+        "desc": "Rescues a 3-tiles away unit. Elder Lynine returns to her position and can move again after rescuing, with bonus MOV. Increases Overgasm. Costs half HP.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            11,
+            40
         ],
-        "components": []
+        "components": [
+            [
+                "ability",
+                "Hotblooded_Dive"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
     },
     {
         "nid": "Tag_Team_Lynine",
@@ -12291,7 +13346,7 @@
     {
         "nid": "Baleful_Presence",
         "name": "Baleful Presence",
-        "desc": "Orilise's aura makes enemies more vulnerable to magic attacks. Passively reduces enemies' RES.",
+        "desc": "<green>Reliar</> Orilise's aura makes enemies more vulnerable to magic attacks. Passively reduces enemies' RES.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -12588,7 +13643,7 @@
     {
         "nid": "Peer_Review",
         "name": "Peer Review",
-        "desc": "<green>[Balia Synergy]</> Sometimes we need others to point our blind spots. <green>Reliar</> Orilise has bonus LUK.",
+        "desc": "<green>[Balia Synergy]</> Sometimes we need others to point our blind spots. <green>Reliar</> Orilise has bonus DEF.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -12599,7 +13654,7 @@
                 "stat_change",
                 [
                     [
-                        "LCK",
+                        "DEF",
                         5
                     ]
                 ]
@@ -12609,12 +13664,57 @@
                 "any([u.nid == 'Orilise' for u in target_system.get_adj_units(game.get_unit('Balia'))])"
             ],
             [
-                "hidden_if_inactive",
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "grey_if_inactive",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Peer_Review_pair",
+        "name": "Peer Review",
+        "desc": "<green>[Balia Synergy]</> Sometimes we need others to point our blind spots. <green>Reliar</> Orilise has bonus DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            29
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "u('Orilise').traveler == 'Balia'"
             ],
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -13472,11 +14572,11 @@
     {
         "nid": "Martial_Masturbation",
         "name": "Martial Masturbation",
-        "desc": "",
+        "desc": "Gain 4 mana. Buffs STR and DEF. Cooldown: 2",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            9
+            1,
+            24
         ],
         "components": [
             [
@@ -13500,17 +14600,59 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Martial_Masturbation_pair",
+        "name": "Martial Masturbation",
+        "desc": "Gain 4 mana. Buffs STR and DEF. Cooldown: 2",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Martial_Masturbation_ability"
+            ],
+            [
+                "condition",
+                "u('Nalili').traveler == 'Uyae'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
             ]
         ]
     },
     {
         "nid": "Desperate_Masturbation",
         "name": "Desperate Masturbation",
-        "desc": "",
+        "desc": "Costs 5 HP. Gain 4 mana. Buffs SKL and SPD. Cooldown: 2",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            9
+            5,
+            24
         ],
         "components": [
             [
@@ -13534,17 +14676,59 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Desperate_Masturbation_pair",
+        "name": "Desperate Masturbation",
+        "desc": "Costs 5 HP. Gain 4 mana. Buffs SKL and SPD. Cooldown: 2",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Desperate_Masturbation_ability"
+            ],
+            [
+                "condition",
+                "u('Nalili').traveler == 'Varia'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
             ]
         ]
     },
     {
         "nid": "Healing_Masturbation",
         "name": "Healing Masturbation",
-        "desc": "",
+        "desc": "Heals HP and status effects. Gain 4 mana. Cooldown: 2\n",
         "icon_nid": "skill_icons",
         "icon_index": [
-            15,
-            9
+            2,
+            24
         ],
         "components": [
             [
@@ -13568,30 +14752,6 @@
             [
                 "unit_anim",
                 "synergy"
-            ]
-        ]
-    },
-    {
-        "nid": "Cautious_Swipes",
-        "name": "Cautious Swipes",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            20
-        ],
-        "components": [
-            [
-                "ability",
-                "Cautious_Swipes_ability"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
             ],
             [
                 "menu_category",
@@ -13600,9 +14760,123 @@
         ]
     },
     {
+        "nid": "Healing_Masturbation_pair",
+        "name": "Healing Masturbation",
+        "desc": "Heals HP and status effects. Gain 4 mana. Cooldown: 2",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Healing_Masturbation_ability"
+            ],
+            [
+                "condition",
+                "u('Nalili').traveler == 'Aka'"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Cautious_Swipes",
+        "name": "Cautious Swipes",
+        "desc": "<green>[Hilstara synergy]</> Releases weak but rapid strikes from behind Hilstara's cover. Always hits. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            25
+        ],
+        "components": [
+            [
+                "ability",
+                "Cautious_Swipes_ability"
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Hilstara'))])"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Cautious_Swipes_pair",
+        "name": "Cautious Swipes",
+        "desc": "<green>[Hilstara synergy]</> Releases weak but rapid strikes from behind Hilstara's cover. Always hits. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            25
+        ],
+        "components": [
+            [
+                "ability",
+                "Cautious_Swipes_ability"
+            ],
+            [
+                "condition",
+                "u('Nalili').traveler == 'Hilstara'"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Swift_Stab",
         "name": "Swift Stab",
-        "desc": "",
+        "desc": "<green>[Aka synergy]</> Attacks with blinding speed. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -13614,23 +14888,71 @@
                 "Swift_Stab_ability"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Aka'))])"
             ],
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Swift_Stab_pair",
+        "name": "Swift Stab",
+        "desc": "<green>[Aka synergy]</> Attacks with blinding speed. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            18
+        ],
+        "components": [
+            [
+                "ability",
+                "Swift_Stab_ability"
+            ],
+            [
+                "condition",
+                "u('Nalili').traveler == 'Aka'"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ]
         ]
     },
     {
         "nid": "Flaming_Thrust",
         "name": "Flaming Thrust",
-        "desc": "<green>[Robin]</>",
+        "desc": "<green>[Robin synergy]</> Attacks with magically charged thrust. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -13642,10 +14964,6 @@
                 "Flaming_Thrust_ability"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Nalili' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
             ],
@@ -13654,6 +14972,56 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Flaming_Thrust_pair",
+        "name": "Flaming Thrust",
+        "desc": "<green>[Robin synergy]</> Attacks with magically charged thrust. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            18
+        ],
+        "components": [
+            [
+                "ability",
+                "Flaming_Thrust_ability"
+            ],
+            [
+                "condition",
+                "u('Nalili').traveler == 'Robin'"
+            ],
+            [
+                "has_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -13864,23 +15232,59 @@
                 "synergy"
             ],
             [
-                "hidden_if_inactive",
+                "mana_regeneration",
+                2
+            ],
+            [
+                "grey_if_inactive",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Ivala_Compassion_pair",
+        "name": "Ivala's Compassion",
+        "desc": "<green>[Carina synergy]</> Altina bonds with Carina over Ivala's unending compassion. Altina recovers mana at the beginning of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            35
+        ],
+        "components": [
+            [
+                "condition",
+                "u('Altina').traveler == 'Carina'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
             ],
             [
                 "mana_regeneration",
                 2
             ],
             [
-                "menu_category",
-                "<orange>Synergy</>"
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Poison_Storm",
         "name": "Poison Storm",
-        "desc": "",
+        "desc": "<green>[Riala synergy]</> Curses the air around the target with a poison effect. <blue>15 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -13892,8 +15296,42 @@
                 "any(u.nid == 'Altina' for u in target_system.get_adj_units(game.get_unit('Riala')))"
             ],
             [
-                "hidden_if_inactive",
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "grey_if_inactive",
                 null
+            ],
+            [
+                "ability",
+                "PoisonStorm"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Poison_Storm_pair",
+        "name": "Poison Storm",
+        "desc": "<green>[Riala synergy]</> Curses the air around the target with a poison effect. <blue>15 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            48
+        ],
+        "components": [
+            [
+                "condition",
+                "u('Altina').traveler == 'Riala'"
             ],
             [
                 "menu_category",
@@ -13902,6 +15340,20 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "PoisonStorm"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
             ]
         ]
     },
@@ -14283,7 +15735,51 @@
                 "any([u.nid == 'Vhala' for u in target_system.get_adj_units(game.get_unit('Trin'))])"
             ],
             [
-                "hidden_if_inactive",
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Coated_weapon_pair",
+        "name": "Coated weapon",
+        "desc": "<green>[Vhala synergy]</> Copies' attacks have a chance to inflict <red>[BLIND]</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Vhala').traveler == 'Trin'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -14411,10 +15907,6 @@
                 null
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "menu_category",
                 "<orange>Synergy</>"
             ],
@@ -14425,6 +15917,62 @@
             [
                 "ability",
                 "Death_Defiance"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Defiance_pair",
+        "name": "Death Defiance",
+        "desc": "<green>[Balia Synergy]</> Wynn can select an orc summoned by Balia to grant <green>[Death Defiance]</>:Upon death, unit is revived with full HP. Status is lost at the end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "condition",
+                "u('Wynn').traveler == 'Balia'"
+            ],
+            [
+                "ability",
+                "Death_Defiance"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
             ]
         ]
     },
@@ -16221,6 +17769,58 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Deep_Loot_pair",
+        "name": "Deep Loot",
+        "desc": "<green>[Wynn synergy]</> When Megail kills an enemy unit, 50% chance of looting a potion.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            32
+        ],
+        "components": [
+            [
+                "attack_pre_proc",
+                "Deep_Loot_proc"
+            ],
+            [
+                "proc_rate",
+                "MOEDA"
+            ],
+            [
+                "condition",
+                "u('Megail').traveler == 'Wynn'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -17355,7 +18955,7 @@
             ],
             [
                 "condition",
-                "any([u.nid == 'Aka' for u in target_system.get_adj_units(game.get_unit('Nalili'))])"
+                "u('Aka').traveler == 'Nalili'"
             ],
             [
                 "unit_anim",
@@ -17404,17 +19004,25 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
     {
         "nid": "Arrow_of_Ice",
         "name": "Arrow of Ice",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "desc": "<green>[Robin Synergy]</> Shoots a magically charged arrow. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            5
+            4,
+            35
         ],
         "components": [
             [
@@ -17422,27 +19030,63 @@
                 "Arrow_of_Ice_effect"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Vhala' for u in target_system.get_adj_units(game.get_unit('Robin'))])"
             ],
             [
-                "hide_aura",
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Arrow_of_Ice_pair",
+        "name": "Arrow of Ice",
+        "desc": "<green>[Robin Synergy]</> Shoots a magically charged arrow. <blue>5 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            35
+        ],
+        "components": [
+            [
+                "ability",
+                "Arrow_of_Ice_effect"
+            ],
+            [
+                "condition",
+                "u('Vhala').traveler == 'Robin'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -17450,11 +19094,11 @@
     {
         "nid": "Arrow_of_Lust",
         "name": "Arrow of Lust",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "desc": "<green>[Yarra synergy]</> Fires a sexually charged arrow. <blue>5 MP</>",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            1
+            14,
+            25
         ],
         "components": [
             [
@@ -17462,27 +19106,63 @@
                 "Arrow_of_Lust_effect"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Vhala' for u in target_system.get_adj_units(game.get_unit('Yarra'))])"
             ],
             [
-                "hide_aura",
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Arrow_of_Lust_pair",
+        "name": "Arrow of Lust",
+        "desc": "<green>[Yarra synergy]</> Fires a sexually charged arrow. <blue>5 MP</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            25
+        ],
+        "components": [
+            [
+                "ability",
+                "Arrow_of_Lust_effect"
+            ],
+            [
+                "condition",
+                "u('Vhala').traveler == 'Yarra'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -18019,11 +19699,11 @@
     {
         "nid": "Earth_Bomb",
         "name": "Earth Bomb",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "desc": "<green>[Altina synergy]</> Varia throws a bomb magically infused by Altina. Cooldown 4 turns. Costs <red>25% of max HP.</> <blue>10 MP</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            4
+            11,
+            42
         ],
         "components": [
             [
@@ -18031,43 +19711,75 @@
                 "Earth_Bomb_effect"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Varia' for u in target_system.get_adj_units(game.get_unit('Altina'))])"
             ],
             [
-                "hide_aura",
+                "grey_if_inactive",
                 null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Earth_Bomb_pair",
+        "name": "Earth Bomb",
+        "desc": "<green>[Altina synergy]</> Varia throws a bomb magically infused by Altina. Cooldown 4 turns. Costs <red>25% of max HP.</> <blue>10 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            42
+        ],
+        "components": [
+            [
+                "ability",
+                "Earth_Bomb_effect"
+            ],
+            [
+                "condition",
+                "u('Varia').traveler == 'Altina'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
             ],
             [
                 "hidden",
                 null
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
             ]
         ]
     },
     {
         "nid": "Defenders_Frenzy",
         "name": "Defender's Frenzy",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "desc": "<green>[Hilstara synergy]</> Varia begins a frenzy to protect her allies. <blue>10 MP</>.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            3
+            2,
+            50
         ],
         "components": [
             [
@@ -18075,27 +19787,63 @@
                 "Defenders_Frenzy_ability"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "aura_range",
-                1
-            ],
-            [
-                "aura",
-                "Active_Synergy"
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Varia' for u in target_system.get_adj_units(game.get_unit('Hilstara'))]) and not 'Defenders_Frenzy_effect' in [skill.nid for skill in unit.skills] and not 'Servants_Frenzy_effect' in [skill.nid for skill in unit.skills]"
             ],
             [
-                "hide_aura",
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Defenders_Frenzy_pair",
+        "name": "Defender's Frenzy",
+        "desc": "<green>[Hilstara synergy]</> Varia begins a frenzy to protect her allies. <blue>10 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            50
+        ],
+        "components": [
+            [
+                "ability",
+                "Defenders_Frenzy_ability"
+            ],
+            [
+                "condition",
+                "u('Varia').traveler == 'Hilstara' and not 'Defenders_Frenzy_effect' in [skill.nid for skill in unit.skills] and not 'Servants_Frenzy_effect' in [skill.nid for skill in unit.skills]"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -18535,7 +20283,7 @@
     {
         "nid": "Disrupt",
         "name": "Disrupt",
-        "desc": "Attempts to inflict various status effects on an enemy. <blue>\u27295</>",
+        "desc": "<green>[Qum synergy]</> Attempts to inflict various status effects on an enemy. <blue>5 MP</>",
         "icon_nid": "Affinity",
         "icon_index": [
             0,
@@ -18547,12 +20295,64 @@
                 "Disrupt"
             ],
             [
-                "hidden_if_inactive",
+                "condition",
+                "any([u.nid == 'Robin' for u in target_system.get_adj_units(game.get_unit('Qum'))])"
+            ],
+            [
+                "grey_if_inactive",
                 null
             ],
             [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Disrupt_pair",
+        "name": "Disrupt",
+        "desc": "<green>[Qum synergy]</> Attempts to inflict various status effects on an enemy. <blue>5 MP</>",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Disrupt"
+            ],
+            [
                 "condition",
-                "any([u.nid == 'Robin' for u in target_system.get_adj_units(game.get_unit('Qum'))])"
+                "u('Robin').traveler == 'Qum'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -18905,6 +20705,50 @@
             [
                 "avoid",
                 20
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Read_Them_pair",
+        "name": "Read Them",
+        "desc": "<green>[Orilise synergy]</> Robin is keenly reading the enemies' moves, granting her bonus avoidance.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            10
+        ],
+        "components": [
+            [
+                "condition",
+                "u('Robin').traveler == 'Orilise'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "avoid",
+                20
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -19451,7 +21295,7 @@
     {
         "nid": "Holy_Shieldwall",
         "name": "Holy Shieldwall",
-        "desc": "<green>[Carina synergy]</> Raises DEF, RES, draws the enemy's attention and gain health regeneration. Costs <blue>10 mana</>.",
+        "desc": "<green>[Carina synergy]</> Raises DEF, RES, draws the enemy's attention and gain health regeneration. <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -19471,8 +21315,46 @@
                 "any([u.nid == 'Hilstara' for u in target_system.get_adj_units(game.get_unit('Carina'))])"
             ],
             [
-                "hidden_if_inactive",
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Holy_Shieldwall_pair",
+        "name": "Holy Shieldwall",
+        "desc": "<green>[Carina synergy]</> Raises DEF, RES, draws the enemy's attention and gain health regeneration. <blue>10 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Holy_Shieldwall"
+            ],
+            [
+                "condition",
+                "u('Hilstara').traveler == 'Carina'"
             ],
             [
                 "menu_category",
@@ -19487,6 +21369,10 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -19538,7 +21424,7 @@
     {
         "nid": "Arcane_Shieldwall",
         "name": "Arcane Shieldwall",
-        "desc": "<green>[Riala synergy]</> Raises DEF, RES, draws the enemy's attention and gain mana regeneration. Costs <blue>10 mana</>.",
+        "desc": "<green>[Riala synergy]</> Raises DEF, RES, draws the enemy's attention and gain mana regeneration. <blue>10 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -19558,8 +21444,46 @@
                 "any([u.nid == 'Hilstara' for u in target_system.get_adj_units(game.get_unit('Riala'))])"
             ],
             [
-                "hidden_if_inactive",
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Arcane_Shieldwall_pair",
+        "name": "Arcane Shieldwall",
+        "desc": "<green>[Riala synergy]</> Raises DEF, RES, draws the enemy's attention and gain mana regeneration. <blue>10 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Arcane_Shieldwall"
+            ],
+            [
+                "condition",
+                "u('Hilstara').traveler == 'Riala'"
             ],
             [
                 "menu_category",
@@ -19568,6 +21492,16 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -19623,7 +21557,7 @@
     {
         "nid": "Mighty_Bash",
         "name": "Mighty Bash",
-        "desc": "<green>[Uyae synergy]</> Paralyses and shoves an enemy 2 tiles away. Costs <blue>8 mana</>.",
+        "desc": "<green>[Uyae synergy]</> Paralyses and shoves an enemy 2 tiles away. <blue>8 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -19639,10 +21573,6 @@
                 "Mighty_Bash"
             ],
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "condition",
                 "any([u.nid == 'Hilstara' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
             ],
@@ -19653,13 +21583,65 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Mighty_Bash_pair",
+        "name": "Mighty Bash",
+        "desc": "<green>[Uyae synergy]</> Paralyses and shoves an enemy 2 tiles away. <blue>8 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            18
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Mighty_Bash"
+            ],
+            [
+                "condition",
+                "u('Hilstara').traveler == 'Uyae'"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
     {
         "nid": "Bikini_Armor",
         "name": "Bikini Armor",
-        "desc": "<green>[Nalili synergy]</> Hilstara follows Nalili's advice and takes off some of her armor, which somehow makes it better to resist magic. Doubles her RES but halves her DEF. Costs <blue>7 mana</>.",
+        "desc": "<green>[Nalili synergy]</> Hilstara follows Nalili's advice and takes off some of her armor, which somehow makes it better to resist magic. Doubles her RES but halves her DEF. <blue>7 MP</>.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -19668,10 +21650,6 @@
         "components": [
             [
                 "class_skill",
-                null
-            ],
-            [
-                "hidden_if_inactive",
                 null
             ],
             [
@@ -19689,6 +21667,58 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Bikini_Armor_pair",
+        "name": "Bikini Armor",
+        "desc": "<green>[Nalili synergy]</> Hilstara follows Nalili's advice and takes off some of her armor, which somehow makes it better to resist magic. Doubles her RES but halves her DEF. <blue>7 MP</>.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "u('Hilstara').traveler == 'Nalili'"
+            ],
+            [
+                "ability",
+                "Bikini_Armor"
+            ],
+            [
+                "menu_category",
+                "<orange>Synergy</>"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -20208,6 +22238,50 @@
             [
                 "unit_anim",
                 "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Perceptiveness_pair",
+        "name": "Perceptiveness",
+        "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has significantly greater chance to avoid enemy critical hits.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            14
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                40
+            ],
+            [
+                "condition",
+                "u('Orcent').traveler == 'Wynn'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
