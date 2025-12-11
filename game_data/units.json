@@ -281,11 +281,11 @@
         },
         "starting_items": [
             [
-                "ArcaneSpells",
+                "ArcaneSpells_Altina",
                 false
             ],
             [
-                "DivineSpells",
+                "DivineSpells_dmg_Altina",
                 false
             ],
             [
@@ -336,7 +336,7 @@
             ],
             "Light": [
                 false,
-                1,
+                31,
                 251
             ],
             "Anima": [
@@ -7764,785 +7764,6 @@
         "fields": []
     },
     {
-        "nid": "Testeman",
-        "name": "Testeman do nome mais comprido do universo",
-        "desc": "",
-        "variant": null,
-        "level": 1,
-        "klass": "Testeman",
-        "tags": [],
-        "bases": {
-            "HP": 30
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Blade",
-                false
-            ],
-            [
-                "Loot_Bag",
-                true
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Shelter"
-            ],
-            [
-                1,
-                "Like_a_champ"
-            ],
-            [
-                1,
-                "Defiant_Strike"
-            ],
-            [
-                1,
-                "Firewall"
-            ],
-            [
-                1,
-                "Shieldwall"
-            ],
-            [
-                1,
-                "Exposed_Immune"
-            ],
-            [
-                1,
-                "Silence_Immune"
-            ],
-            [
-                1,
-                "Blinded_Immune"
-            ],
-            [
-                1,
-                "Confused_Immune"
-            ],
-            [
-                1,
-                "Sleep_Immune"
-            ],
-            [
-                1,
-                "Lust_Death_Immune"
-            ],
-            [
-                1,
-                "Lust_Drain_Immune"
-            ],
-            [
-                1,
-                "testesynergy1"
-            ],
-            [
-                1,
-                "testesynergy2"
-            ],
-            [
-                2,
-                "Feat"
-            ]
-        ],
-        "unit_notes": [
-            [
-                "Name",
-                "Is very long because he likes long entries in text files"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                100,
-                null
-            ],
-            "Lance": [
-                false,
-                100,
-                null
-            ],
-            "Axe": [
-                false,
-                100,
-                null
-            ],
-            "Bow": [
-                false,
-                100,
-                null
-            ],
-            "Staff": [
-                false,
-                100,
-                null
-            ],
-            "Light": [
-                false,
-                100,
-                null
-            ],
-            "Anima": [
-                false,
-                100,
-                null
-            ],
-            "Dark": [
-                false,
-                0,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Forde",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Darian",
-        "name": "Darian",
-        "desc": "",
-        "variant": "",
-        "level": 4,
-        "klass": "Cavalier",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 28,
-            "STR": 7,
-            "MAG": 2,
-            "SKL": 7,
-            "SPD": 8,
-            "LCK": 9,
-            "DEF": 6,
-            "RES": 4,
-            "CON": 9,
-            "MOV": 7
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Lance",
-                false
-            ],
-            [
-                "Javelin",
-                false
-            ],
-            [
-                "Loot_Bag",
-                true
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                71,
-                null
-            ],
-            "Sword": [
-                false,
-                71,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "{CaringCarrot} Cavalire brother1[F2E]",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Trisha",
-        "name": "Trisha",
-        "desc": "",
-        "variant": "Female",
-        "level": 8,
-        "klass": "Myrmidon",
-        "tags": [
-            "Boss",
-            "Female"
-        ],
-        "bases": {
-            "HP": 26,
-            "STR": 8,
-            "MAG": 0,
-            "SKL": 12,
-            "SPD": 11,
-            "LCK": 9,
-            "DEF": 5,
-            "RES": 5,
-            "CON": 9,
-            "MOV": 7
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Sword",
-                false
-            ],
-            [
-                "Loot_Bag",
-                true
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "BowBreaker"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Sword": [
-                false,
-                71,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "{JiroPaiPai} Red lady [F2E]",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Marlo",
-        "name": "Marlo",
-        "desc": "",
-        "variant": "",
-        "level": 5,
-        "klass": "Fighter",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 29,
-            "STR": 9,
-            "MAG": 0,
-            "SKL": 8,
-            "SPD": 4,
-            "LCK": 8,
-            "DEF": 7,
-            "RES": 3,
-            "CON": 9,
-            "MOV": 7
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Axe",
-                false
-            ],
-            [
-                "Hatchet",
-                false
-            ],
-            [
-                "Loot_Bag",
-                true
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Stun_attack"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                71,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "{XVI} Drunken Sailor 1 [F2E]",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Perese",
-        "name": "Perese",
-        "desc": "",
-        "variant": null,
-        "level": 1,
-        "klass": "Queen",
-        "tags": [],
-        "bases": {
-            "HP": 8
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {},
-        "alternate_classes": [],
-        "portrait_nid": "{Kanna} solae [F2E]",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Yett",
-        "name": "Yett",
-        "desc": "",
-        "variant": "",
-        "level": 8,
-        "klass": "Great_Knight",
-        "tags": [],
-        "bases": {
-            "HP": 30,
-            "STR": 9,
-            "MAG": 0,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 0,
-            "DEF": 13,
-            "RES": 4,
-            "CON": 11,
-            "MOV": 5
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Steel_Lance",
-                false
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Unmovable"
-            ],
-            [
-                1,
-                "Paralysis_attack"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                71,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "{Lenh} OC 6 (Version 2) [F2E]",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Vinata",
-        "name": "Vinata",
-        "desc": "",
-        "variant": "Female",
-        "level": 7,
-        "klass": "Mage",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 25,
-            "STR": 0,
-            "MAG": 9,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 0,
-            "DEF": 4,
-            "RES": 6,
-            "CON": 5,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 55,
-            "STR": 0,
-            "MAG": 55,
-            "SKL": 40,
-            "SPD": 35,
-            "LCK": 20,
-            "DEF": 5,
-            "RES": 40,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "ArcaneSpells",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                71,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "{monk-han} Witch Lord (Version 3) [F2E]",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Namado",
-        "name": "Namado",
-        "desc": "",
-        "variant": "",
-        "level": 6,
-        "klass": "Pirate",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 28,
-            "STR": 7,
-            "MAG": 0,
-            "SKL": 3,
-            "SPD": 8,
-            "LCK": 0,
-            "DEF": 5,
-            "RES": 3,
-            "CON": 10,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 55,
-            "STR": 0,
-            "MAG": 55,
-            "SKL": 40,
-            "SPD": 35,
-            "LCK": 20,
-            "DEF": 5,
-            "RES": 40,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Axe",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                31,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "{monk-han} Pirate Lord (Version 1) [F2E]",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Rimer",
-        "name": "Rimer",
-        "desc": "",
-        "variant": "",
-        "level": 8,
-        "klass": "Knight",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 24,
-            "STR": 9,
-            "MAG": 0,
-            "SKL": 6,
-            "SPD": 4,
-            "LCK": 3,
-            "DEF": 9,
-            "RES": 4,
-            "CON": 13,
-            "MOV": 4
-        },
-        "growths": {
-            "HP": 80,
-            "STR": 40,
-            "MAG": 0,
-            "SKL": 30,
-            "SPD": 15,
-            "LCK": 25,
-            "DEF": 28,
-            "RES": 20,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Lance",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                31,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "{CapibaraInSpace} Acheron [F2E]",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Halta",
-        "name": "Halta",
-        "desc": "",
-        "variant": null,
-        "level": 11,
-        "klass": "Cleric",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 22,
-            "STR": 0,
-            "MAG": 11,
-            "SKL": 7,
-            "SPD": 6,
-            "LCK": 8,
-            "DEF": 4,
-            "RES": 7,
-            "CON": 5,
-            "MOV": 5
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "DivineSpells",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Staff": [
-                false,
-                121,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Moulder",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "DoomKing",
-        "name": "Doom King",
-        "desc": "",
-        "variant": "",
-        "level": 20,
-        "klass": "DoomKing",
-        "tags": [],
-        "bases": {
-            "HP": 50,
-            "STR": 16,
-            "MAG": 11,
-            "SKL": 17,
-            "SPD": 8,
-            "LCK": 9,
-            "DEF": 18,
-            "RES": 18,
-            "CON": 8,
-            "MOV": 3
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Killer_Lance",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                121,
-                null
-            ],
-            "Axe": [
-                false,
-                121,
-                null
-            ],
-            "Sword": [
-                false,
-                121,
-                null
-            ],
-            "Dark": [
-                false,
-                121,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Doom-King4",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Tramond",
-        "name": "Tramond",
-        "desc": "",
-        "variant": null,
-        "level": 1,
-        "klass": "Noble",
-        "tags": [],
-        "bases": {},
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {},
-        "alternate_classes": [],
-        "portrait_nid": "{Nickt} Athilde",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Janine",
-        "name": "Janine",
-        "desc": "Queen of Yhilin",
-        "variant": null,
-        "level": 1,
-        "klass": "Queen",
-        "tags": [],
-        "bases": {
-            "HP": 5
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {},
-        "alternate_classes": [],
-        "portrait_nid": "janine2",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Enemy_dancer",
-        "name": "Enemy dancer",
-        "desc": "",
-        "variant": null,
-        "level": 1,
-        "klass": "Suc_dancer",
-        "tags": [],
-        "bases": {
-            "HP": 14,
-            "STR": 1,
-            "MAG": 3,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 1,
-            "DEF": 3,
-            "RES": 2,
-            "CON": 10,
-            "MOV": 6
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Dance_enemy",
-                false
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Berserk_dancer"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Refresh": [
-                false,
-                181,
-                null
-            ],
-            "Dark": [
-                false,
-                121,
-                null
-            ],
-            "Sword": [
-                false,
-                71,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Vanessa",
-        "affinity": null,
-        "fields": []
-    },
-    {
         "nid": "Seyta",
         "name": "Seyta",
         "desc": "",
@@ -8561,30 +7782,6 @@
         "wexp_gain": {},
         "alternate_classes": [],
         "portrait_nid": "{Fatman} [F2E] OC 16",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Ship",
-        "name": "Ship",
-        "desc": "",
-        "variant": "",
-        "level": 1,
-        "klass": "Ship",
-        "tags": [
-            "Tile"
-        ],
-        "bases": {
-            "HP": 1
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {},
-        "alternate_classes": [],
-        "portrait_nid": "",
         "affinity": null,
         "fields": []
     },
@@ -8893,6 +8090,467 @@
         "fields": []
     },
     {
+        "nid": "Rimer",
+        "name": "Rimer",
+        "desc": "",
+        "variant": "",
+        "level": 8,
+        "klass": "Knight",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 24,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 4,
+            "LCK": 3,
+            "DEF": 9,
+            "RES": 4,
+            "CON": 13,
+            "MOV": 4
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 40,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 15,
+            "LCK": 25,
+            "DEF": 28,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                31,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{CapibaraInSpace} Acheron [F2E]",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Namado",
+        "name": "Namado",
+        "desc": "",
+        "variant": "",
+        "level": 6,
+        "klass": "Pirate",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 7,
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 8,
+            "LCK": 0,
+            "DEF": 5,
+            "RES": 3,
+            "CON": 10,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 55,
+            "STR": 0,
+            "MAG": 55,
+            "SKL": 40,
+            "SPD": 35,
+            "LCK": 20,
+            "DEF": 5,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Axe",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                31,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{monk-han} Pirate Lord (Version 1) [F2E]",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Vinata",
+        "name": "Vinata",
+        "desc": "",
+        "variant": "Female",
+        "level": 7,
+        "klass": "Mage",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 25,
+            "STR": 0,
+            "MAG": 9,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 4,
+            "RES": 6,
+            "CON": 5,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 55,
+            "STR": 0,
+            "MAG": 55,
+            "SKL": 40,
+            "SPD": 35,
+            "LCK": 20,
+            "DEF": 5,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "ArcaneSpells",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{monk-han} Witch Lord (Version 3) [F2E]",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Yett",
+        "name": "Yett",
+        "desc": "",
+        "variant": "",
+        "level": 8,
+        "klass": "Great_Knight",
+        "tags": [],
+        "bases": {
+            "HP": 30,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 13,
+            "RES": 4,
+            "CON": 11,
+            "MOV": 5
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Steel_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Unmovable"
+            ],
+            [
+                1,
+                "Paralysis_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{Lenh} OC 6 (Version 2) [F2E]",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Perese",
+        "name": "Perese",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Queen",
+        "tags": [],
+        "bases": {
+            "HP": 8
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "{Kanna} solae [F2E]",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Marlo",
+        "name": "Marlo",
+        "desc": "",
+        "variant": "",
+        "level": 5,
+        "klass": "Fighter",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 29,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 8,
+            "SPD": 4,
+            "LCK": 8,
+            "DEF": 7,
+            "RES": 3,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Axe",
+                false
+            ],
+            [
+                "Hatchet",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Stun_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{XVI} Drunken Sailor 1 [F2E]",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Trisha",
+        "name": "Trisha",
+        "desc": "",
+        "variant": "Female",
+        "level": 8,
+        "klass": "Myrmidon",
+        "tags": [
+            "Boss",
+            "Female"
+        ],
+        "bases": {
+            "HP": 26,
+            "STR": 8,
+            "MAG": 0,
+            "SKL": 12,
+            "SPD": 11,
+            "LCK": 9,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Sword",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "BowBreaker"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Sword": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{JiroPaiPai} Red lady [F2E]",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Darian",
+        "name": "Darian",
+        "desc": "",
+        "variant": "",
+        "level": 4,
+        "klass": "Cavalier",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 7,
+            "MAG": 2,
+            "SKL": 7,
+            "SPD": 8,
+            "LCK": 9,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Lance",
+                false
+            ],
+            [
+                "Javelin",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                71,
+                null
+            ],
+            "Sword": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{CaringCarrot} Cavalire brother1[F2E]",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Tramond",
+        "name": "Tramond",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Noble",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "{Nickt} Athilde",
+        "affinity": "None",
+        "fields": []
+    },
+    {
         "nid": "Naro",
         "name": "Naro",
         "desc": "",
@@ -8937,6 +8595,361 @@
         },
         "alternate_classes": [],
         "portrait_nid": "{Nickt} Scott",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Halta",
+        "name": "Halta",
+        "desc": "",
+        "variant": "",
+        "level": 11,
+        "klass": "Cleric",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 22,
+            "STR": 0,
+            "MAG": 11,
+            "SKL": 7,
+            "SPD": 6,
+            "LCK": 8,
+            "DEF": 4,
+            "RES": 7,
+            "CON": 5,
+            "MOV": 5
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "DivineSpells",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Staff": [
+                false,
+                121,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Moulder",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Katahne",
+        "name": "Katahne",
+        "desc": "",
+        "variant": "Female",
+        "level": 1,
+        "klass": "Pegasus_Knight",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 8,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 7,
+            "LCK": 0,
+            "DEF": 5,
+            "RES": 3,
+            "CON": 11,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 0,
+            "SKL": 35,
+            "SPD": 30,
+            "LCK": 15,
+            "DEF": 15,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Toxin_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Duelists_Blow"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Selena",
+        "affinity": "Unknown",
+        "fields": []
+    },
+    {
+        "nid": "Testeman",
+        "name": "Testeman do nome mais comprido do universo",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Myrmidon",
+        "tags": [],
+        "bases": {
+            "HP": 30
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Blade",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [
+            [
+                2,
+                "Feat"
+            ],
+            [
+                3,
+                "Feat"
+            ]
+        ],
+        "unit_notes": [
+            [
+                "Name",
+                "Is very long because he likes long entries in text files"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                100,
+                null
+            ],
+            "Lance": [
+                false,
+                100,
+                null
+            ],
+            "Axe": [
+                false,
+                100,
+                null
+            ],
+            "Bow": [
+                false,
+                100,
+                null
+            ],
+            "Staff": [
+                false,
+                100,
+                null
+            ],
+            "Light": [
+                false,
+                100,
+                null
+            ],
+            "Anima": [
+                false,
+                100,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Forde",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "DoomKing",
+        "name": "Doom King",
+        "desc": "",
+        "variant": "",
+        "level": 20,
+        "klass": "DoomKing",
+        "tags": [],
+        "bases": {
+            "HP": 50,
+            "STR": 16,
+            "MAG": 11,
+            "SKL": 17,
+            "SPD": 8,
+            "LCK": 9,
+            "DEF": 18,
+            "RES": 18,
+            "CON": 8,
+            "MOV": 3
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Killer_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                121,
+                null
+            ],
+            "Axe": [
+                false,
+                121,
+                null
+            ],
+            "Sword": [
+                false,
+                121,
+                null
+            ],
+            "Dark": [
+                false,
+                121,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Doom-King4",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Janine",
+        "name": "Janine",
+        "desc": "Queen of Yhilin",
+        "variant": null,
+        "level": 1,
+        "klass": "Queen",
+        "tags": [],
+        "bases": {
+            "HP": 5
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "janine2",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Enemy_dancer",
+        "name": "Enemy dancer",
+        "desc": "",
+        "variant": null,
+        "level": 1,
+        "klass": "Suc_dancer",
+        "tags": [],
+        "bases": {
+            "HP": 14,
+            "STR": 1,
+            "MAG": 3,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 10,
+            "MOV": 6
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Dance_enemy",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Berserk_dancer"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Refresh": [
+                false,
+                181,
+                null
+            ],
+            "Dark": [
+                false,
+                121,
+                null
+            ],
+            "Sword": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Vanessa",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Ship",
+        "name": "Ship",
+        "desc": "",
+        "variant": "",
+        "level": 1,
+        "klass": "Ship",
+        "tags": [
+            "Tile"
+        ],
+        "bases": {
+            "HP": 1
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "",
         "affinity": null,
         "fields": []
     },

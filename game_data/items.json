@@ -2639,7 +2639,7 @@
     {
         "nid": "ArcaneFire",
         "name": "Fire",
-        "desc": "Basic fire magic. Strong but unreliable. <blue>1 MP</>.",
+        "desc": "Basic fire magic. Strong but unreliable. <blue>1 MP</>. Effective against <blue>Ice</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2705,13 +2705,31 @@
             [
                 "battle_cast_anim",
                 "Fire"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Ice"
+                    ],
+                    "effective_multiplier": 1.9999999999999991,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
             ]
         ]
     },
     {
         "nid": "ArcaneLightning",
         "name": "Lightning",
-        "desc": "Basic lightning magic. Weak but high chance of critical. <blue>1 MP</>.",
+        "desc": "Basic lightning magic. Weak but high chance of critical. <blue>1 MP</>. Effective against <red>Fire</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2777,13 +2795,31 @@
             [
                 "battle_cast_anim",
                 "Thunder"
+            ],
+            [
+                "item_tags",
+                [
+                    "Lightning"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Fire"
+                    ],
+                    "effective_multiplier": 2.0,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     },
     {
         "nid": "ArcaneIce",
         "name": "Ice",
-        "desc": "Basic ice magic. Medium damage, can't double or be doubled. <blue>1 MP</>.",
+        "desc": "Basic ice magic. Medium damage, can't double or be doubled. <blue>1 MP</>. Effective against <yellow>Lightning</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2853,6 +2889,24 @@
             [
                 "status_on_equip",
                 "Wary_Fighter_ice"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Lightning"
+                    ],
+                    "effective_multiplier": 2.0,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Ice"
+                ]
             ]
         ]
     },
@@ -3032,7 +3086,7 @@
     {
         "nid": "FireLance",
         "name": "Fire Lance",
-        "desc": "Advanced fire magic. Strongest but unreliable. <blue>4 MP</>.",
+        "desc": "Advanced fire magic. Strongest but unreliable. <blue>4 MP</>. Effective against <blue>Ice</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -3102,13 +3156,31 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Ice"
+                    ],
+                    "effective_multiplier": 2.0,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     },
     {
         "nid": "LightningLance",
         "name": "Lightning Lance",
-        "desc": "Advanced lightning magic. Weakest but highest chance of critical. <blue>4 MP</>.",
+        "desc": "Advanced lightning magic. Weakest but highest chance of critical. <blue>4 MP</>.  Effective against <red>Fire</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -3178,13 +3250,31 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "item_tags",
+                [
+                    "Lightning"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Fire"
+                    ],
+                    "effective_multiplier": 2.0,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     },
     {
         "nid": "IceLance",
         "name": "Ice Lance",
-        "desc": "Advanced ice magic. Medium damage, highest precision, can't double or be doubled. <blue>4 MP</>.",
+        "desc": "Advanced ice magic. Medium damage, highest precision, can't double or be doubled. <blue>4 MP</>. Effective against <yellow>Lightning</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -3258,6 +3348,24 @@
             [
                 "status_on_equip",
                 "Wary_Fighter_ice"
+            ],
+            [
+                "item_tags",
+                [
+                    "Ice"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Lightning"
+                    ],
+                    "effective_multiplier": 2.0,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     },

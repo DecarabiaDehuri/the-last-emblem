@@ -23127,5 +23127,159 @@
                 null
             ]
         ]
+    },
+    {
+        "nid": "Spd_feat",
+        "name": "Speed +1",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "condition",
+                "unit.klass == 'Cavalier'"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blow_Feat",
+        "name": "Attack blow",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            18
+        ],
+        "components": [
+            [
+                "multi_skill",
+                [
+                    "Duelists_Blow_feat",
+                    "Deadly_Blow_feat"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "feat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Duelists_Blow_feat",
+        "name": "Duelist's Blow",
+        "desc": "+15 AVOID when initiating battle.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.team != target.team"
+            ],
+            [
+                "avoid",
+                15
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.klass == 'Fighter'"
+            ]
+        ]
+    },
+    {
+        "nid": "Deadly_Blow_feat",
+        "name": "Deadly Blow",
+        "desc": "+15 CRIT when initiating battle.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.team != target.team"
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.klass == 'Myrmidon'"
+            ]
+        ]
     }
 ]

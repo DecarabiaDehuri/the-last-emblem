@@ -13766,12 +13766,6 @@
             "unlock_support_rank;Testeman;Plank;C",
             "unlock_support_rank;Testeman;Wrecker;C",
             "give_skill;Simon;Duelists_Blow;;no_banner",
-            "give_skill;Testeman;Duelists_Blow;;no_banner",
-            "give_skill;Testeman;Death_Blow;;no_banner",
-            "give_skill;Testeman;Darting_Blow;;no_banner",
-            "give_skill;Testeman;Warding_Blow;;no_banner",
-            "give_skill;Testeman;Armored_Blow;;no_banner",
-            "give_skill;Testeman;Certain_Blow;;no_banner",
             "give_item;Yarra;Buttplug;;no_banner",
             "",
             "#give_item;Riala;Fires_of_Lust;;no_banner",
@@ -17478,8 +17472,8 @@
     },
     {
         "name": "check death quote",
-        "trigger": "unit_death",
-        "level_nid": "teste2",
+        "trigger": "unit_level_up",
+        "level_nid": "DEBUG",
         "condition": "unit.nid == 'Marlo'",
         "commands": [],
         "only_once": false,
@@ -17489,7 +17483,7 @@
             "s;Marlo;Oh shit.",
             ""
         ],
-        "nid": "teste2 check death quote"
+        "nid": "DEBUG check death quote"
     },
     {
         "name": "Boss buff",
