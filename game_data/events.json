@@ -20603,5 +20603,18 @@
             "give_item;{unit};Gauntlets"
         ],
         "nid": "Intro5 Mansion visit"
+    },
+    {
+        "name": "New Event_1",
+        "trigger": "level_start",
+        "level_nid": "aram2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "base;tle campfire all4;First Choice"
+        ],
+        "nid": "aram2 New Event_1"
     }
 ]
