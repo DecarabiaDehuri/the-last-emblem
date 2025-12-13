@@ -14771,23 +14771,10 @@
             "CON": 25,
             "MOV": 15
         },
-        "learned_skills": [
-            [
-                1,
-                "Stun_attack"
-            ],
-            [
-                5,
-                "Spur_Strength"
-            ],
-            [
-                9,
-                "AxeFaire"
-            ]
-        ],
+        "learned_skills": [],
         "wexp_gain": {
             "Sword": [
-                false,
+                true,
                 0,
                 null
             ],
@@ -14797,7 +14784,7 @@
                 null
             ],
             "Axe": [
-                true,
+                false,
                 0,
                 null
             ],
@@ -14852,8 +14839,8 @@
             0,
             0
         ],
-        "map_sprite_nid": "Orc_Hero-stand",
-        "combat_anim_nid": "Orc_Elite",
+        "map_sprite_nid": "Orc_Hero_Ralke-stand",
+        "combat_anim_nid": "Lord_OrcRalke",
         "fields": []
     },
     {

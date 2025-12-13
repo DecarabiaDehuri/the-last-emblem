@@ -22021,203 +22021,6 @@
         ]
     },
     {
-        "nid": "Aggressive_Attack_skill",
-        "name": "Aggressive Attack",
-        "desc": "Forceful attack. Can't miss. Axe only.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            40
-        ],
-        "components": [
-            [
-                "drain_charge",
-                2
-            ],
-            [
-                "combat_art",
-                "Aggressive_Attack"
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Axe'"
-            ],
-            [
-                "menu_category",
-                "<red>Combat Arts</>"
-            ]
-        ]
-    },
-    {
-        "nid": "Aggressive_Attack",
-        "name": "Aggressive Attack",
-        "desc": "Forceful attack. Can't miss. Axe only.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            40
-        ],
-        "components": [
-            [
-                "damage_multiplier",
-                1.2
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Axe'"
-            ]
-        ]
-    },
-    {
-        "nid": "Piercing_Attack_skill",
-        "name": "Piercing Attack",
-        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            37
-        ],
-        "components": [
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "drain_charge",
-                2
-            ],
-            [
-                "combat_art",
-                "Piercing_Attack"
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Bow'"
-            ],
-            [
-                "menu_category",
-                "<red>Combat Arts</>"
-            ]
-        ]
-    },
-    {
-        "nid": "Piercing_Attack",
-        "name": "Piercing Attack",
-        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            37
-        ],
-        "components": [
-            [
-                "hit",
-                999
-            ],
-            [
-                "post_combat_damage_percent",
-                0.2
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Bow'"
-            ]
-        ]
-    },
-    {
-        "nid": "Defensive_Attack_skill",
-        "name": "Defensive Attack",
-        "desc": "Weak attack. Debuffs oponent's SPD and STR.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            36
-        ],
-        "components": [
-            [
-                "combat_art",
-                "Defensive_Attack"
-            ],
-            [
-                "drain_charge",
-                2
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "menu_category",
-                "<red>Combat Arts</>"
-            ]
-        ]
-    },
-    {
-        "nid": "Defensive_Attack",
-        "name": "Defensive Attack",
-        "desc": "Weak attack. Debuffs oponent's SPD and STR.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            36
-        ],
-        "components": [
-            [
-                "damage_multiplier",
-                0.7999999999999999
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Defensive_Attack_debuff"
-            ]
-        ]
-    },
-    {
-        "nid": "Defensive_Attack_debuff",
-        "name": "<red>[HINDERED]</>",
-        "desc": "-5 SPD and STR.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            1
-        ],
-        "components": [
-            [
-                "time",
-                2
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        -5
-                    ],
-                    [
-                        "SPD",
-                        -5
-                    ]
-                ]
-            ],
-            [
-                "negative",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Perceptiveness",
         "name": "Perceptiveness",
         "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has significantly greater chance to avoid enemy critical hits.",
@@ -22457,6 +22260,372 @@
             ],
             [
                 "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Aggressive_Attack_skill",
+        "name": "Aggressive Attack",
+        "desc": "Forceful attack. Can't miss. Axe only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            40
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Aggressive_Attack"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Aggressive_Attack",
+        "name": "Aggressive Attack",
+        "desc": "Forceful attack. Can't miss. Axe only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            40
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ]
+        ]
+    },
+    {
+        "nid": "Piercing_Attack_skill",
+        "name": "Piercing Attack",
+        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Piercing_Attack"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Piercing_Attack",
+        "name": "Piercing Attack",
+        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "hit",
+                999
+            ],
+            [
+                "post_combat_damage_percent",
+                0.2
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Attack_skill",
+        "name": "Defensive Attack",
+        "desc": "Weak attack. Debuffs oponent's SPD and STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            36
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Defensive_Attack"
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Attack",
+        "name": "Defensive Attack",
+        "desc": "Weak attack. Debuffs oponent's SPD and STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            36
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                0.7999999999999999
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Defensive_Attack_debuff"
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Attack_debuff",
+        "name": "<red>[HINDERED]</>",
+        "desc": "-5 SPD and STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            1
+        ],
+        "components": [
+            [
+                "time",
+                2
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -5
+                    ],
+                    [
+                        "SPD",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Immortality",
+        "name": "Immortality",
+        "desc": "Stark cannot die, however much he wishes to.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            44
+        ],
+        "components": [
+            [
+                "miracle",
+                null
+            ],
+            [
+                "fatal_block",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Impale_skill",
+        "name": "Impale",
+        "desc": "The Impaler's favorite. Always hits. Pierces the target's defense.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            47
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Impale"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Impale",
+        "name": "Impale",
+        "desc": "The Impaler's favorite. Always hits. Pierces the target's defense.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            47
+        ],
+        "components": [
+            [
+                "hit",
+                999
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    189,
+                    30,
+                    33
+                ]
+            ],
+            [
+                "dynamic_damage",
+                "target.get_stat('DEF')"
+            ]
+        ]
+    },
+    {
+        "nid": "Magic_Smasher_skill",
+        "name": "Magic Smasher",
+        "desc": "The Impaler's technique to deal with mages.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            33
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Impale"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Magic_Smasher",
+        "name": "Magic Smasher",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            33
+        ],
+        "components": [
+            [
+                "give_status_after_combat",
+                "Magic_Smasher_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "Magic_Smasher_effect",
+        "name": "<red>[SMASHED]</>",
+        "desc": "Unit has less MAG and SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            33
+        ],
+        "components": [
+            [
+                "time",
+                4
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        -5
+                    ],
+                    [
+                        "SPD",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    76,
+                    42,
+                    97
+                ]
+            ],
+            [
+                "negative",
                 null
             ]
         ]
@@ -23283,8 +23452,8 @@
         ]
     },
     {
-        "nid": "Absolute_Defense",
-        "name": "Absolute Defense",
+        "nid": "Resilient",
+        "name": "Resilient",
         "desc": "Negates all physical damage.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -23365,13 +23534,13 @@
         ]
     },
     {
-        "nid": "After_Images",
-        "name": "After",
-        "desc": "",
+        "nid": "Mirage",
+        "name": "Mirage",
+        "desc": "Unit has astounding dodging capabilities. This status is lost once this unit takes damage.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
-            32
+            40
         ],
         "components": [
             [
@@ -23389,14 +23558,365 @@
         ]
     },
     {
-        "nid": "new_1",
-        "name": "new_1",
+        "nid": "Trammel",
+        "name": "Trammel",
+        "desc": "Inflicts adjacent enemies with <red>[TRAMMELED]</>: Unit deals no damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            42
+        ],
+        "components": [
+            [
+                "aura",
+                "Trammel_effect"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "show_aura",
+                [
+                    86,
+                    30,
+                    41
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Trammel_effect",
+        "name": "<red>[TRAMMELED]</>",
+        "desc": "Unit deals no damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            42
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                2.7755575615628914e-17
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    91,
+                    49,
+                    57
+                ]
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sigma",
+        "name": "Sigma",
+        "desc": "Unit negates effective damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            47
+        ],
+        "components": [
+            [
+                "negate",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Modular",
+        "name": "Modular",
+        "desc": "Unit only takes 1 damage at a time.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "aura",
+                "Modular_effect"
+            ],
+            [
+                "aura_range",
+                99
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    159,
+                    161,
+                    51
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Modular_effect",
+        "name": "Modular",
         "desc": "",
-        "icon_nid": null,
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "damage_multiplier",
+                2.7755575615628914e-17
+            ],
+            [
+                "post_combat_damage",
+                1
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.klass == 'Pirate'"
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    158,
+                    154,
+                    51
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Meditation",
+        "name": "Meditation",
+        "desc": "Unit gets stronger at every turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "upkeep_skill_gain",
+                "Meditation_effect"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Meditation_effect",
+        "name": "Meditation",
+        "desc": "Unit gets stronger at every turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "stack",
+                20
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "MAG",
+                        1
+                    ],
+                    [
+                        "SKL",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        1
+                    ],
+                    [
+                        "LCK",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Ephemeral",
+        "name": "Ephemeral",
+        "desc": "Unit's stats are doubled, but takes 5 fatal damage at the start of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            38
+        ],
+        "components": [
+            [
+                "fatal_damage",
+                null
+            ],
+            [
+                "upkeep_damage",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    132,
+                    55,
+                    55
+                ]
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        2.0
+                    ],
+                    [
+                        "MAG",
+                        2.0
+                    ],
+                    [
+                        "SKL",
+                        2.0
+                    ],
+                    [
+                        "SPD",
+                        2.0
+                    ],
+                    [
+                        "LCK",
+                        2.0
+                    ],
+                    [
+                        "DEF",
+                        2.0
+                    ],
+                    [
+                        "RES",
+                        2.0
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Mirror",
+        "name": "Mirror",
+        "desc": "Unit reflects statuses back to their initiator.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            44
+        ],
+        "components": [
+            [
+                "reflect_status",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Vintage",
+        "name": "Vintage",
+        "desc": "Unit does not receive damage from Area of Effect attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            46
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "1000 if mode == 'splash' else 0"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Taint",
+        "name": "Taint",
+        "desc": "Unit deals triple damage against units with full HP.",
+        "icon_nid": "skill_icons",
         "icon_index": [
             0,
-            0
+            45
         ],
-        "components": []
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "damage_multiplier",
+                3.0000000000000013
+            ],
+            [
+                "combat_condition",
+                "target.get_max_hp() == target.get_current_hp()"
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    147,
+                    31,
+                    32
+                ]
+            ]
+        ]
     }
 ]

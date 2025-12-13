@@ -33875,7 +33875,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    11,
+                    13,
                     1
                 ],
                 "starting_traveler": null,
@@ -34069,7 +34069,7 @@
                     ]
                 ],
                 "starting_skills": [
-                    "Absolute_Defense"
+                    "Resilient"
                 ],
                 "team": "enemy",
                 "ai": "Attack",
@@ -34094,7 +34094,9 @@
                         false
                     ]
                 ],
-                "starting_skills": [],
+                "starting_skills": [
+                    "Sigma"
+                ],
                 "team": "enemy",
                 "ai": "None",
                 "roam_ai": null,
@@ -34112,20 +34114,17 @@
                 "level": 1,
                 "klass": "Pirate",
                 "faction": "Soldier",
-                "starting_items": [
-                    [
-                        "manauses",
-                        false
-                    ]
+                "starting_items": [],
+                "starting_skills": [
+                    "Modular"
                 ],
-                "starting_skills": [],
                 "team": "enemy",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    11,
-                    4
+                    7,
+                    2
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -35632,6 +35631,30 @@
                 ],
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 12,
+                "klass": "Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [],

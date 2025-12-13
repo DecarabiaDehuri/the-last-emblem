@@ -6641,10 +6641,21 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Iron_Axe",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Axe": [
+                false,
+                71,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "Impaler2",
         "affinity": null,
@@ -6683,10 +6694,21 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Zanbato",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Sword": [
+                false,
+                181,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "Ralke3_1",
         "affinity": null,

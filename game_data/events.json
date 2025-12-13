@@ -13498,9 +13498,8 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "change_team_palette;player;map_sprite_dark_red;GenericRed;red",
-            "change_team_palette;enemy;map_sprite_blue;GenericBlue;blue",
-            ""
+            "enable_turnwheel;t",
+            "give_skill;Impaler;Impale_skill;;no_banner"
         ],
         "nid": "aram1 New Event_1"
     },
@@ -20613,8 +20612,25 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "base;tle campfire all4;First Choice"
+            "change_background;campbase",
+            "add_portrait;Eirika;Middle",
+            "s;Eirika;omg!",
+            "change_background;bchosen;keep_portraits",
+            "s;Eirika;wow!"
         ],
         "nid": "aram2 New Event_1"
+    },
+    {
+        "name": "New Event_2",
+        "trigger": "on_base_start",
+        "level_nid": "aram2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "change_background;bchosen"
+        ],
+        "nid": "aram2 New Event_2"
     }
 ]
