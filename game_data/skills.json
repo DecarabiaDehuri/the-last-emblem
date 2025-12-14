@@ -22631,6 +22631,231 @@
         ]
     },
     {
+        "nid": "Cull_the_Weak_skill",
+        "name": "Cull the Weak",
+        "desc": "The Impaler strikes mercilessly. Deals bonus damage against targets with less STR than The Impaler.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            42
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Cull_the_Weak"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Cull_the_Weak",
+        "name": "Cull the Weak",
+        "desc": "The Impaler ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            42
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('STR') > target.get_stat('STR')"
+            ],
+            [
+                "damage_multiplier",
+                1.7000000000000004
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    165,
+                    36,
+                    38
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Magic_Attack_skill",
+        "name": "Magic Attack!",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            50
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "ability",
+                "Magic_Attack"
+            ]
+        ]
+    },
+    {
+        "nid": "Defeat_Human_King_skill",
+        "name": "Defeat Human King",
+        "desc": "Ralke's ultimate attack to defeat Human King.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            45
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Defeat_Human_King"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Defeat_Human_King",
+        "name": "Defeat Human King",
+        "desc": "Ralke's ultimate attack to defeat Human King. Deals more damage equal to Ralke's MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            45
+        ],
+        "components": [
+            [
+                "combat_flickering_tint",
+                [
+                    25,
+                    156,
+                    34
+                ]
+            ],
+            [
+                "hit",
+                40
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MAG')"
+            ]
+        ]
+    },
+    {
+        "nid": "Save_World",
+        "name": "Save World",
+        "desc": "Ralke will not rest until he saves the world. Buffs his stats and heals.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            52
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Sx_Purse"
+            ]
+        ]
+    },
+    {
+        "nid": "Saving_World",
+        "name": "Saving World",
+        "desc": "Ralke is currently saving the world.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            52
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "MAG",
+                        5
+                    ],
+                    [
+                        "DEF",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    194,
+                    194,
+                    194
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "time",
+                3
+            ]
+        ]
+    },
+    {
         "nid": "testPOSTCOMBATDMG",
         "name": "combatdmg",
         "desc": "",
@@ -23890,7 +24115,7 @@
     {
         "nid": "Taint",
         "name": "Taint",
-        "desc": "Unit deals triple damage against units with full HP.",
+        "desc": "Unit deals triple damage against enemies with full HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,

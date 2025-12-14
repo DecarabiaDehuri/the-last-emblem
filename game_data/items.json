@@ -30390,5 +30390,77 @@
                 null
             ]
         ]
+    },
+    {
+        "nid": "Magic_Attack",
+        "name": "Magic Attack!",
+        "desc": "Implevon The Third yells \"Magic Attack!\". He rehearsed this extensively last week.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    65,
+                    68
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "GargoyleBattleCry"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Meteor"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ]
+        ]
     }
 ]
