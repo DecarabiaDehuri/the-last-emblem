@@ -137,6 +137,38 @@
         ]
     },
     {
+        "nid": "Gimmick_warning",
+        "name": "",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "warning",
+                null
+            ],
+            [
+                "no_equip",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "accessory",
+                null
+            ],
+            [
+                "unavailable",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "ArcaneSpells_Altina",
         "name": "Arcane Spells",
         "desc": "Access this unit's available spells.",
@@ -30446,10 +30478,6 @@
                 ]
             ],
             [
-                "map_cast_sfx",
-                "GargoyleBattleCry"
-            ],
-            [
                 "map_cast_anim",
                 "AOE_Rally"
             ],
@@ -30460,6 +30488,125 @@
             [
                 "map_cast_pose",
                 null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "GargoyleBattleCry"
+            ]
+        ]
+    },
+    {
+        "nid": "Annoyance",
+        "name": "Annoyance",
+        "desc": "Implevon The Third starts talking nonstop, earning the ire of his foes (and allies alike). Makes enemies more likely to attack him. Doubles his DEF. Increases avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            50
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    211,
+                    198,
+                    50
+                ]
+            ],
+            [
+                "map_cast_anim",
+                "OverchargeAura"
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "GargoyleLaugh"
+            ],
+            [
+                "statuses_after_combat_on_hit",
+                [
+                    "Annoyance_effect",
+                    "Annoyance_aura"
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "GargoyleLaugh"
+            ]
+        ]
+    },
+    {
+        "nid": "Save_World",
+        "name": "Save World",
+        "desc": "Ralke will not rest until he saves the world. Buffs his stats and heals.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            52
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "map_cast_pose",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Level Up"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "status_after_combat_on_hit",
+                "Saving_World"
             ]
         ]
     }

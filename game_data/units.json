@@ -1451,7 +1451,7 @@
         "learned_skills": [
             [
                 1,
-                "Orcent_no_Mana"
+                "Orc_no_Mana"
             ],
             [
                 1,
@@ -6658,7 +6658,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Impaler2",
-        "affinity": null,
+        "affinity": "Homo",
         "fields": []
     },
     {
@@ -6711,7 +6711,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Ralke3_1",
-        "affinity": null,
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -6747,13 +6747,34 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [],
+        "starting_items": [
+            [
+                "Hatchet",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Immortality"
+            ]
+        ],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                1,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
-        "affinity": null,
+        "affinity": "Ace",
         "fields": []
     },
     {
@@ -6762,7 +6783,7 @@
         "desc": "",
         "variant": null,
         "level": 1,
-        "klass": "Imp",
+        "klass": "Imp_Implevon",
         "tags": [],
         "bases": {
             "HP": 11,
@@ -6789,13 +6810,34 @@
             "MOV": 0
         },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Slim_Lance",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                71,
+                null
+            ],
+            "Lance": [
+                false,
+                31,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "Gargoyle {Mel}",
-        "affinity": null,
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -6848,7 +6890,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Grubbak",
-        "affinity": "None",
+        "affinity": "Homo",
         "fields": []
     },
     {
