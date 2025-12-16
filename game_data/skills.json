@@ -11770,7 +11770,12 @@
             3,
             49
         ],
-        "components": []
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
     },
     {
         "nid": "Stance_Switch",
@@ -11805,6 +11810,22 @@
             [
                 "mana_regeneration",
                 1
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_of_Neutrality_display",
+        "name": "Aura of Neutrality",
+        "desc": "Uyae recovers <blue>1 mana</> per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            26
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -11866,6 +11887,22 @@
         ]
     },
     {
+        "nid": "Aura_of_Might_display",
+        "name": "Aura of Might",
+        "desc": "<red>STR+5, DEF+5.</>\n<blue>MAG-5, RES-5.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            26
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Aura_of_Spirit",
         "name": "Aura of Spirit",
         "desc": "<blue>MAG+5, RES+5.</>\n<red>STR-5, DEF-5.</>",
@@ -11919,6 +11956,22 @@
             [
                 "mana_regeneration",
                 -1
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_of_Spirit_display",
+        "name": "Aura of Spirit",
+        "desc": "<blue>MAG+5, RES+5.</>\n<red>STR-5, DEF-5.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            26
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -11980,6 +12033,28 @@
             [
                 "mana_regeneration",
                 -1
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_of_Agility_display",
+        "name": "Aura of Agility",
+        "desc": "<blue>SPD+5, SKL+5. MOV+1</>\n<red>DEF-5, RES-5.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            26
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -12053,6 +12128,22 @@
             [
                 "regeneration",
                 0.2
+            ]
+        ]
+    },
+    {
+        "nid": "Aura_of_Healing_display",
+        "name": "Aura of Healing",
+        "desc": "<blue>RES+5. DEF+5. Uyae and nearby allies recover health each turn.</>\n<red>STR-10. MAG-10.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            26
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -12859,6 +12950,10 @@
             [
                 "aura_target",
                 "ally"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -24557,6 +24652,30 @@
             [
                 "time",
                 2
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "buffcritsdisplay",
+        "name": "buffcritdisplay",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "crit",
+                50
+            ],
+            [
+                "hidden",
+                null
             ],
             [
                 "lost_on_end_chapter",
