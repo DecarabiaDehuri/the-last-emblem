@@ -16,6 +16,256 @@
         ]
     },
     {
+        "nid": "Star_anim",
+        "name": "Gimmick class skill indicator",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_anim",
+                "star"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Succubus_Mana",
+        "name": "Succubus",
+        "desc": "Succubi start each chapter with <orange>2 SP</>. They regain SP passively, on hit and on kill. Player succubi units can <green>masturbate</> to gain <orange>4 SP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            40
+        ],
+        "components": [
+            [
+                "mana_regeneration",
+                2
+            ],
+            [
+                "mana_on_hit",
+                1
+            ],
+            [
+                "mana_on_kill",
+                2
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Masturbate"
+            ],
+            [
+                "global",
+                null
+            ],
+            [
+                "condition",
+                "'Succubus' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Unmovable_Boss",
+        "name": "Unmovable",
+        "desc": "Unit can't be focibly moved.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            48
+        ],
+        "components": [
+            [
+                "grounded",
+                null
+            ],
+            [
+                "global",
+                null
+            ],
+            [
+                "condition",
+                "'Boss' in unit.tags"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Vintage_Boss",
+        "name": "Vintage",
+        "desc": "Unit does not receive damage from Area of Effect attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            46
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "'Boss' in unit.tags"
+            ],
+            [
+                "global",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "ignore_damage",
+                null
+            ],
+            [
+                "self_nihil",
+                [
+                    "Attack_the_Boss_helper"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Attack_the_Boss",
+        "name": "Enable attacking the boss",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "global",
+                null
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Attack_the_Boss_helper",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Attack_the_Boss_helper",
+        "name": "Enable attacking the boss",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Global_negative_gain",
+        "name": "Global negative gain",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "upkeep_skill_gain",
+                "Negative_Status_Restore"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "global",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Negative_Status_Restore",
+        "name": "Useless negative to enable Restore",
+        "desc": "because otherwise Restore won't work",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "global",
+                null
+            ],
+            [
+                "upkeep_skill_gain",
+                "Nothing_negative"
+            ],
+            [
+                "endstep_skill_gain",
+                "Nothing_negative"
+            ]
+        ]
+    },
+    {
         "nid": "Rally_Strength_buff",
         "name": "Strength bonus",
         "desc": "Strength increased.",
@@ -2105,6 +2355,12 @@
             [
                 "ability",
                 "Shelter_ability"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
             ]
         ]
     },
@@ -14309,7 +14565,7 @@
     {
         "nid": "Delayed_Gratification",
         "name": "Delayed Gratification",
-        "desc": "Nalili learned with Simon that patience multiplies the pleasure. Nalili's skill share <blue>charges</>. Whenever Nalili starts an interaction with an enemy or ally, she gains <blue>1 charge</>. Defeating enemis build <blue>2 charges</>. Upon use of skill, <blue>reset all charges</blue>.",
+        "desc": "Nalili learned with Simon that patience multiplies the pleasure. Nalili's skill share <blue>charges</>. Whenever Nalili starts an interaction with an enemy or ally, she gains <blue>1 charge</>. Defeating enemeis build <blue>2 charges</>. Upon use of skill, <blue>reset all charges</blue>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -15906,7 +16162,7 @@
     {
         "nid": "Soul_Reaping",
         "name": "Soul Reaping",
-        "desc": "If this unit kills an enemy, Wynn will collect their body.",
+        "desc": "If this unit defeats an enemy, Wynn will collect their body.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -15915,14 +16171,14 @@
         "components": [
             [
                 "event_after_kill",
-                "Global Wynn soul collect2"
+                "Global Wynn set charges necromancy"
             ]
         ]
     },
     {
         "nid": "Wynn_collect_soul",
         "name": "Soul Reaping",
-        "desc": "If this unit kills an enemy, Wynn will collect their body.",
+        "desc": "If Wynn defeats an enemy, Wynn will collect their body.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -15934,15 +16190,15 @@
                 null
             ],
             [
-                "gain_skill_after_kill",
-                "Bone_stack"
+                "event_after_kill",
+                "Global Wynn set charges necromancy"
             ]
         ]
     },
     {
         "nid": "Collect_Souls",
         "name": "Collect Souls",
-        "desc": "Wynn is on the lookout for nearby corpses. Once per turn, for each enemy defeated by Wynn or any ally within 3 tiles, gain one stack of Bone pile.",
+        "desc": "Wynn is on the lookout for nearby corpses. For each enemy defeated by Wynn or any ally within 3 tiles, charge her Necromancy.",
         "icon_nid": "Skills",
         "icon_index": [
             6,
@@ -15960,6 +16216,70 @@
             [
                 "aura_target",
                 "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Necromancy",
+        "name": "Necromancy",
+        "desc": "Wynn has access to a variety of additional weapons and spells. However, her Necromancy must be charged first.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            49
+        ],
+        "components": [
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "ability",
+                "NecroSpells"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    83,
+                    38,
+                    109
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Proc_Paralysis_Bind",
+        "name": "Proc_Paralysis_Bind",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "game.get_random(0,10) >= 7"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Paralysis"
             ]
         ]
     },
@@ -16197,140 +16517,6 @@
             [
                 "class_skill",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Succubus_Mana",
-        "name": "Succubus",
-        "desc": "Succubi start each chapter with <orange>0 SP</>. They regain SP passively, on hit and on kill. Player succubi units can <green>masturbate</> to gain <orange>4 SP</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            40
-        ],
-        "components": [
-            [
-                "mana_regeneration",
-                2
-            ],
-            [
-                "mana_on_hit",
-                1
-            ],
-            [
-                "mana_on_kill",
-                2
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Masturbate"
-            ],
-            [
-                "global",
-                null
-            ],
-            [
-                "condition",
-                "'Succubus' in unit.tags"
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Profession"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Unmovable_Boss",
-        "name": "Unmovable",
-        "desc": "Unit can't be focibly moved.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            48
-        ],
-        "components": [
-            [
-                "grounded",
-                null
-            ],
-            [
-                "hidden",
-                null
-            ],
-            [
-                "global",
-                null
-            ],
-            [
-                "condition",
-                "'Boss' in unit.tags"
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Global_negative_gain",
-        "name": "Global negative gain",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "upkeep_skill_gain",
-                "Negative_Status_Restore"
-            ],
-            [
-                "hidden",
-                null
-            ],
-            [
-                "global",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Negative_Status_Restore",
-        "name": "Useless negative to enable Restore",
-        "desc": "because otherwise Restore won't work",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "global",
-                null
-            ],
-            [
-                "upkeep_skill_gain",
-                "Nothing_negative"
-            ],
-            [
-                "endstep_skill_gain",
-                "Nothing_negative"
             ]
         ]
     },
@@ -20314,6 +20500,10 @@
             [
                 "defense_proc",
                 "Nothing"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -20335,7 +20525,7 @@
     },
     {
         "nid": "Cursed_Varia",
-        "name": "Cursed_Fate",
+        "name": "Cursed Fate",
         "desc": "Varia has luck stat and luck growth penalty for each time she narrowly escaped death.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -20358,10 +20548,6 @@
             ],
             [
                 "class_skill",
-                null
-            ],
-            [
-                "hidden_if_inactive",
                 null
             ],
             [
@@ -21873,7 +22059,7 @@
     {
         "nid": "Brutal_Nature",
         "name": "Brutal Nature",
-        "desc": "When attacking in <blue>player phase</>, gain 1 stack of <red>Brutality</>: for each stack, Orcent deals 2 more damage and is dealt 5 recoil damage after combat. At 4 stacks, Orcent gets <red>[CONFUSED]</>. <blue>Only active in Player phase</>.",
+        "desc": "When attacking in <blue>player phase</>, gain 1 stack of <red>Brutality</>: for each stack, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -21897,7 +22083,7 @@
                 {
                     "skill": "Brute_Stack",
                     "recipient": "self",
-                    "allegiance": "both"
+                    "allegiance": "enemy"
                 }
             ]
         ]
@@ -21905,7 +22091,7 @@
     {
         "nid": "Introspective_Nature",
         "name": "Introspective Nature",
-        "desc": "After being attacked in <red>enemy phase</>, gain 1 stack of <blue>Serenity</>: for each stack, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 4 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
+        "desc": "After being attacked in <red>enemy phase</>, gain 1 stack of <blue>Serenity</>: for each stack, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -21929,7 +22115,7 @@
                 {
                     "skill": "Calm_Stack",
                     "recipient": "self",
-                    "allegiance": "both"
+                    "allegiance": "enemy"
                 }
             ]
         ]
@@ -21957,7 +22143,7 @@
     {
         "nid": "Brute_Stack",
         "name": "Brutality",
-        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage and is dealt 5 recoil damage after combat. At 4 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
+        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -21995,13 +22181,17 @@
                     21,
                     22
                 ]
+            ],
+            [
+                "resist",
+                -2
             ]
         ]
     },
     {
         "nid": "Calm_Stack",
         "name": "Serenity",
-        "desc": "For each stack of <blue>Serenity</>, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 4 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
+        "desc": "For each stack of <blue>Serenity</>, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -22010,7 +22200,7 @@
         "components": [
             [
                 "stack",
-                4
+                5
             ],
             [
                 "post_combat_healing",
@@ -23898,10 +24088,6 @@
             [
                 "feat",
                 null
-            ],
-            [
-                "condition",
-                "unit.klass == 'Cavalier'"
             ],
             [
                 "hidden_if_inactive",

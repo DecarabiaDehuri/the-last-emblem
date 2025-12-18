@@ -270,5 +270,125 @@
             1,
             50
         ]
+    },
+    {
+        "nid": "Fire",
+        "name": "Fire",
+        "force_melee_anim": false,
+        "hide_from_display": true,
+        "rank_bonus": [],
+        "advantage": [
+            {
+                "weapon_type": "Ice",
+                "weapon_rank": "All",
+                "damage": 1,
+                "resist": 1,
+                "accuracy": 10,
+                "avoid": 0,
+                "crit": 0,
+                "dodge": 0,
+                "attack_speed": 0,
+                "defense_speed": 0
+            }
+        ],
+        "disadvantage": [
+            {
+                "weapon_type": "Lightning",
+                "weapon_rank": "All",
+                "damage": -1,
+                "resist": -1,
+                "accuracy": -10,
+                "avoid": 0,
+                "crit": 0,
+                "dodge": 0,
+                "attack_speed": 0,
+                "defense_speed": 0
+            }
+        ],
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            4
+        ]
+    },
+    {
+        "nid": "Lightning",
+        "name": "Lightning",
+        "force_melee_anim": false,
+        "hide_from_display": true,
+        "rank_bonus": [],
+        "advantage": [
+            {
+                "weapon_type": "Fire",
+                "weapon_rank": "All",
+                "damage": 1,
+                "resist": 1,
+                "accuracy": 10,
+                "avoid": 0,
+                "crit": 0,
+                "dodge": 0,
+                "attack_speed": 0,
+                "defense_speed": 0
+            }
+        ],
+        "disadvantage": [
+            {
+                "weapon_type": "Ice",
+                "weapon_rank": "All",
+                "damage": -1,
+                "resist": -1,
+                "accuracy": -10,
+                "avoid": 0,
+                "crit": 0,
+                "dodge": 0,
+                "attack_speed": 0,
+                "defense_speed": 0
+            }
+        ],
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            0
+        ]
+    },
+    {
+        "nid": "Ice",
+        "name": "Ice",
+        "force_melee_anim": false,
+        "hide_from_display": true,
+        "rank_bonus": [],
+        "advantage": [
+            {
+                "weapon_type": "Lightning",
+                "weapon_rank": "All",
+                "damage": 1,
+                "resist": 1,
+                "accuracy": 10,
+                "avoid": 0,
+                "crit": 0,
+                "dodge": 0,
+                "attack_speed": 0,
+                "defense_speed": 0
+            }
+        ],
+        "disadvantage": [
+            {
+                "weapon_type": "Fire",
+                "weapon_rank": "All",
+                "damage": -1,
+                "resist": -1,
+                "accuracy": -10,
+                "avoid": 0,
+                "crit": 0,
+                "dodge": 0,
+                "attack_speed": 0,
+                "defense_speed": 0
+            }
+        ],
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ]
     }
 ]

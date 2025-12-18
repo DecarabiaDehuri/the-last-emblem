@@ -20,7 +20,7 @@
             "DEF": 6,
             "CON": 8,
             "MOV": 5,
-            "RES": 8
+            "RES": 7
         },
         "growths": {
             "HP": 80,
@@ -140,7 +140,7 @@
             "DEF": 4,
             "CON": 7,
             "MOV": 6,
-            "RES": 6
+            "RES": 3
         },
         "growths": {
             "HP": 60,
@@ -171,7 +171,7 @@
                 "Sneaky_Stabs"
             ],
             [
-                2,
+                1,
                 "Piercing_Stab"
             ],
             [
@@ -262,19 +262,19 @@
             "DEF": 4,
             "CON": 5,
             "MOV": 5,
-            "RES": 7
+            "RES": 5
         },
         "growths": {
             "HP": 60,
             "STR": 5,
-            "MAG": 50,
-            "SKL": 50,
+            "MAG": 40,
+            "SKL": 40,
             "SPD": 20,
-            "LCK": 60,
-            "DEF": 50,
+            "LCK": 30,
+            "DEF": 25,
             "CON": 0,
             "MOV": 0,
-            "RES": 50
+            "RES": 40
         },
         "stat_cap_modifiers": {
             "HP": 0
@@ -500,7 +500,7 @@
             "SPD": 4,
             "LCK": 5,
             "DEF": 5,
-            "RES": 12,
+            "RES": 7,
             "CON": 7,
             "MOV": 5
         },
@@ -830,7 +830,7 @@
             "SPD": 1,
             "LCK": 5,
             "DEF": 8,
-            "RES": 4,
+            "RES": 2,
             "CON": 10,
             "MOV": 4
         },
@@ -867,7 +867,7 @@
                 "Indomitable_Will"
             ],
             [
-                4,
+                1,
                 "Bash"
             ],
             [
@@ -956,7 +956,7 @@
             "SPD": 12,
             "LCK": 10,
             "DEF": 4,
-            "RES": 7,
+            "RES": 6,
             "CON": 9,
             "MOV": 7
         },
@@ -997,7 +997,7 @@
                 "Visionary_Perspective"
             ],
             [
-                3,
+                1,
                 "Emergency_Shelter"
             ],
             [
@@ -1560,8 +1560,8 @@
             "SKL": 8,
             "SPD": 8,
             "LCK": 7,
-            "DEF": 5,
-            "RES": 6,
+            "DEF": 6,
+            "RES": 4,
             "CON": 7,
             "MOV": 7
         },
@@ -1598,7 +1598,7 @@
                 "Defiant_Perspective"
             ],
             [
-                3,
+                1,
                 "Provoke"
             ],
             [
@@ -1684,7 +1684,7 @@
             "SPD": 5,
             "LCK": 10,
             "DEF": 1,
-            "RES": 6,
+            "RES": 4,
             "CON": 4,
             "MOV": 5
         },
@@ -1964,7 +1964,7 @@
             "SPD": 7,
             "LCK": 5,
             "DEF": 4,
-            "RES": 9,
+            "RES": 5,
             "CON": 6,
             "MOV": 5
         },
@@ -2070,8 +2070,8 @@
             "SKL": 7,
             "SPD": 6,
             "LCK": 5,
-            "DEF": 3,
-            "RES": 6,
+            "DEF": 1,
+            "RES": 2,
             "CON": 2,
             "MOV": 4
         },
@@ -2194,8 +2194,8 @@
             "SKL": 12,
             "SPD": 11,
             "LCK": 3,
-            "DEF": 6,
-            "RES": 6,
+            "DEF": 5,
+            "RES": 5,
             "CON": 7,
             "MOV": 6
         },
@@ -2318,8 +2318,8 @@
             "STR": 7,
             "MAG": 1,
             "SKL": 14,
-            "SPD": 15,
-            "LCK": 17,
+            "SPD": 12,
+            "LCK": 13,
             "DEF": 3,
             "RES": 2,
             "CON": 7,
@@ -2358,7 +2358,7 @@
                 "Explosives_ability"
             ],
             [
-                2,
+                1,
                 "Blood_Strike"
             ],
             [
@@ -2366,7 +2366,7 @@
                 "Encourage"
             ],
             [
-                6,
+                2,
                 "Servants_Frenzy"
             ],
             [
@@ -2598,7 +2598,7 @@
             "SPD": 6,
             "LCK": 8,
             "DEF": 3,
-            "RES": 5,
+            "RES": 4,
             "CON": 3,
             "MOV": 5
         },
@@ -2637,6 +2637,10 @@
             [
                 1,
                 "Wynn_collect_soul"
+            ],
+            [
+                1,
+                "Necromancy"
             ]
         ],
         "unit_notes": [],
@@ -2711,7 +2715,7 @@
             "SPD": 8,
             "LCK": 10,
             "DEF": 4,
-            "RES": 7,
+            "RES": 5,
             "CON": 6,
             "MOV": 5
         },
@@ -8707,7 +8711,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Moulder",
-        "affinity": null,
+        "affinity": "None",
         "fields": []
     },
     {
@@ -8715,7 +8719,7 @@
         "name": "Katahne",
         "desc": "",
         "variant": "Female",
-        "level": 1,
+        "level": 6,
         "klass": "Pegasus_Knight",
         "tags": [
             "Boss"
@@ -8724,11 +8728,11 @@
             "HP": 28,
             "STR": 8,
             "MAG": 0,
-            "SKL": 6,
-            "SPD": 7,
+            "SKL": 8,
+            "SPD": 10,
             "LCK": 0,
             "DEF": 5,
-            "RES": 3,
+            "RES": 8,
             "CON": 11,
             "MOV": 5
         },

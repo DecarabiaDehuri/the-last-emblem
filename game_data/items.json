@@ -169,649 +169,6 @@
         ]
     },
     {
-        "nid": "ArcaneSpells_Altina",
-        "name": "Arcane Spells",
-        "desc": "Access this unit's available spells.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            28
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "multi_item",
-                [
-                    "ArcaneFire",
-                    "ArcaneLightning",
-                    "ArcaneIce",
-                    "ArcanePoison",
-                    "AreaSpells"
-                ]
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "locked",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "AreaSpells",
-        "name": "Area Spells",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            39
-        ],
-        "components": [
-            [
-                "multi_item",
-                [
-                    "FireStorm",
-                    "LightningStorm",
-                    "IceStorm"
-                ]
-            ],
-            [
-                "multi_item_hides_unavailable",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "FireStorm",
-        "name": "Fire Storm",
-        "desc": "Engulfs an area with flames. Considerable damage. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            39
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                12
-            ],
-            [
-                "hit",
-                70
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    224,
-                    96,
-                    0
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Fireball"
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -2,
-                            -2
-                        ],
-                        [
-                            1,
-                            -1
-                        ],
-                        [
-                            2,
-                            -2
-                        ],
-                        [
-                            1,
-                            1
-                        ],
-                        [
-                            2,
-                            2
-                        ],
-                        [
-                            -1,
-                            1
-                        ],
-                        [
-                            -2,
-                            2
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "map_hit_sfx",
-                "FireHit"
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "LightningStorm",
-        "name": "Lightning Storm",
-        "desc": "Calls upon a sequence of thunders. Critical chance. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            39
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    224,
-                    224,
-                    15
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "map_target_cast_anim",
-                "Swoosh"
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            -1,
-                            0
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            0,
-                            -2
-                        ],
-                        [
-                            1,
-                            0
-                        ],
-                        [
-                            1,
-                            1
-                        ],
-                        [
-                            0,
-                            2
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "map_hit_sfx",
-                "Thunder"
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "crit",
-                15
-            ]
-        ]
-    },
-    {
-        "nid": "IceStorm",
-        "name": "Ice Storm",
-        "desc": "Summons an agonizing ice storm. Guaranteed to hit. Costs <blue>10 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            39
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                8
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    0,
-                    224,
-                    217
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                10
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Blizzard"
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            2,
-                            0
-                        ],
-                        [
-                            -2,
-                            0
-                        ],
-                        [
-                            0,
-                            -2
-                        ],
-                        [
-                            0,
-                            2
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            1
-                        ],
-                        [
-                            1,
-                            1
-                        ],
-                        [
-                            1,
-                            -1
-                        ],
-                        [
-                            0,
-                            0
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "map_hit_sfx",
-                "Fimbulvetr1"
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Quake",
-        "name": "Quake",
-        "desc": "Invokes an earthquake between Altina and the target, damaging each enemy on its line. Costs <blue>15 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            39
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                4
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    76,
-                    47,
-                    18
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "map_target_cast_anim",
-                "AOE_Sandblast"
-            ],
-            [
-                "map_hit_sfx",
-                "StoneHit"
-            ],
-            [
-                "enemy_line_aoe",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "PoisonStorm",
-        "name": "Poison Storm",
-        "desc": "<green>[Riala synergy]</> Curses the air around the target with a poison effect. <blue>15 MP</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            39
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                3
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Anima"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    129,
-                    71,
-                    144
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "mana_cost",
-                15
-            ],
-            [
-                "map_target_cast_anim",
-                "MapPoison"
-            ],
-            [
-                "shape_blast_aoe",
-                {
-                    "shape": [
-                        [
-                            0,
-                            0
-                        ],
-                        [
-                            1,
-                            -1
-                        ],
-                        [
-                            0,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            0
-                        ],
-                        [
-                            -1,
-                            1
-                        ],
-                        [
-                            0,
-                            1
-                        ],
-                        [
-                            1,
-                            1
-                        ],
-                        [
-                            1,
-                            0
-                        ]
-                    ],
-                    "target": "enemy",
-                    "range": 1
-                }
-            ],
-            [
-                "map_hit_sfx",
-                "Poison"
-            ],
-            [
-                "status_on_hit",
-                "Poisoned"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Altina"
-                ]
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "DivineSpells_dmg_Altina",
-        "name": "Divine Spells",
-        "desc": "Access this unit's available spells.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            29
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "multi_item",
-                [
-                    "DivineLightning",
-                    "DivineShine"
-                ]
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "undiscardable",
-                null
-            ],
-            [
-                "locked",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Iron_Sword",
         "name": "Iron Sword",
         "desc": "You will not believe me: it cuts things.",
@@ -2739,22 +2096,8 @@
                 "Fire"
             ],
             [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Ice"
-                    ],
-                    "effective_multiplier": 1.9999999999999991,
-                    "effective_bonus_damage": 0,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
-                "item_tags",
-                [
-                    "Fire"
-                ]
+                "weapon_triangle_override",
+                "Fire"
             ]
         ]
     },
@@ -2829,22 +2172,8 @@
                 "Thunder"
             ],
             [
-                "item_tags",
-                [
-                    "Lightning"
-                ]
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Fire"
-                    ],
-                    "effective_multiplier": 2.0,
-                    "effective_bonus_damage": 0,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
+                "weapon_triangle_override",
+                "Lightning"
             ]
         ]
     },
@@ -2923,22 +2252,8 @@
                 "Wary_Fighter_ice"
             ],
             [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Lightning"
-                    ],
-                    "effective_multiplier": 2.0,
-                    "effective_bonus_damage": 0,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
-                "item_tags",
-                [
-                    "Ice"
-                ]
+                "weapon_triangle_override",
+                "Ice"
             ]
         ]
     },
@@ -3190,22 +2505,8 @@
                 null
             ],
             [
-                "item_tags",
-                [
-                    "Fire"
-                ]
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Ice"
-                    ],
-                    "effective_multiplier": 2.0,
-                    "effective_bonus_damage": 0,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
+                "weapon_triangle_override",
+                "Fire"
             ]
         ]
     },
@@ -3284,22 +2585,8 @@
                 null
             ],
             [
-                "item_tags",
-                [
-                    "Lightning"
-                ]
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Fire"
-                    ],
-                    "effective_multiplier": 2.0,
-                    "effective_bonus_damage": 0,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
+                "weapon_triangle_override",
+                "Lightning"
             ]
         ]
     },
@@ -3382,22 +2669,8 @@
                 "Wary_Fighter_ice"
             ],
             [
-                "item_tags",
-                [
-                    "Ice"
-                ]
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Lightning"
-                    ],
-                    "effective_multiplier": 2.0,
-                    "effective_bonus_damage": 0,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
+                "weapon_triangle_override",
+                "Ice"
             ]
         ]
     },
@@ -5016,6 +4289,649 @@
             ],
             [
                 "cannot_be_countered",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "ArcaneSpells_Altina",
+        "name": "Arcane Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            28
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "ArcaneFire",
+                    "ArcaneLightning",
+                    "ArcaneIce",
+                    "ArcanePoison",
+                    "AreaSpells"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "AreaSpells",
+        "name": "Area Spells",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            39
+        ],
+        "components": [
+            [
+                "multi_item",
+                [
+                    "FireStorm",
+                    "LightningStorm",
+                    "IceStorm"
+                ]
+            ],
+            [
+                "multi_item_hides_unavailable",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "FireStorm",
+        "name": "Fire Storm",
+        "desc": "Engulfs an area with flames. Considerable damage. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            39
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    96,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Fireball"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -2,
+                            -2
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            2,
+                            -2
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            2,
+                            2
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            -2,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "FireHit"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "LightningStorm",
+        "name": "Lightning Storm",
+        "desc": "Calls upon a sequence of thunders. Critical chance. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            39
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    224,
+                    224,
+                    15
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "Swoosh"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            1,
+                            0
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            0,
+                            2
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Thunder"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "crit",
+                15
+            ]
+        ]
+    },
+    {
+        "nid": "IceStorm",
+        "name": "Ice Storm",
+        "desc": "Summons an agonizing ice storm. Guaranteed to hit. Costs <blue>10 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            39
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    224,
+                    217
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                10
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Blizzard"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            -2,
+                            0
+                        ],
+                        [
+                            0,
+                            -2
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            0,
+                            0
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Fimbulvetr1"
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Quake",
+        "name": "Quake",
+        "desc": "Invokes an earthquake between Altina and the target, damaging each enemy on its line. Costs <blue>15 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            39
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    76,
+                    47,
+                    18
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Sandblast"
+            ],
+            [
+                "map_hit_sfx",
+                "StoneHit"
+            ],
+            [
+                "enemy_line_aoe",
+                null
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "PoisonStorm",
+        "name": "Poison Storm",
+        "desc": "<green>[Riala synergy]</> Curses the air around the target with a poison effect. <blue>15 MP</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            39
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    129,
+                    71,
+                    144
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "mana_cost",
+                15
+            ],
+            [
+                "map_target_cast_anim",
+                "MapPoison"
+            ],
+            [
+                "shape_blast_aoe",
+                {
+                    "shape": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1,
+                            -1
+                        ],
+                        [
+                            0,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            0
+                        ],
+                        [
+                            -1,
+                            1
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            1,
+                            0
+                        ]
+                    ],
+                    "target": "enemy",
+                    "range": 1
+                }
+            ],
+            [
+                "map_hit_sfx",
+                "Poison"
+            ],
+            [
+                "status_on_hit",
+                "Poisoned"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Altina"
+                ]
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DivineSpells_dmg_Altina",
+        "name": "Divine Spells",
+        "desc": "Access this unit's available spells.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            29
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "DivineLightning",
+                    "DivineShine"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "undiscardable",
+                null
+            ],
+            [
+                "locked",
                 null
             ]
         ]
@@ -16620,7 +16536,7 @@
     {
         "nid": "Dance_Nalili",
         "name": "Swords Dance",
-        "desc": "Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target. Costs <blue> 5 SP</>.",
+        "desc": "Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target. <orange> 5 SP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -16729,6 +16645,12 @@
                     112,
                     33,
                     105
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "AoE"
                 ]
             ]
         ]
@@ -17538,8 +17460,7 @@
             [
                 "multi_item",
                 [
-                    "Necro_Axe",
-                    "Necro_Axe_Ranged"
+                    "Necro_Axe"
                 ]
             ],
             [
@@ -17559,7 +17480,7 @@
     {
         "nid": "Necro_Axe",
         "name": "(Axe) Demise",
-        "desc": "",
+        "desc": "Wynn commands her corpse to attack with an axe.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -17584,11 +17505,11 @@
             ],
             [
                 "damage",
-                10
+                13
             ],
             [
                 "hit",
-                75
+                80
             ],
             [
                 "crit",
@@ -17611,27 +17532,19 @@
                 null
             ],
             [
+                "event_after_combat_even_miss",
+                "Global Wynn use necro"
+            ],
+            [
                 "weapon_type_exempt",
                 "Axe"
-            ],
-            [
-                "eval_available",
-                "has_skill('Wynn','Bone_stack')"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Wynn soul spend"
-            ],
-            [
-                "wexp",
-                -5
             ]
         ]
     },
     {
         "nid": "Necro_Axe_Ranged",
         "name": "(Axe) Decease",
-        "desc": "",
+        "desc": "Wynn commands her corpse to attack with an axe from afar.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -17656,11 +17569,11 @@
             ],
             [
                 "damage",
-                15
+                11
             ],
             [
                 "hit",
-                60
+                80
             ],
             [
                 "crit",
@@ -17683,27 +17596,15 @@
                 null
             ],
             [
-                "weapon_type_exempt",
+                "weapon_triangle_override",
                 "Axe"
-            ],
-            [
-                "eval_available",
-                "has_skill('Wynn','Bone_stack')"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Wynn soul spend"
-            ],
-            [
-                "wexp",
-                -5
             ]
         ]
     },
     {
         "nid": "Necro_Bow",
         "name": "(Bow) Departure",
-        "desc": "",
+        "desc": "Wynn commands her corpse to attack with a bow.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -17728,11 +17629,11 @@
             ],
             [
                 "damage",
-                7
+                10
             ],
             [
                 "hit",
-                75
+                85
             ],
             [
                 "crit",
@@ -17755,41 +17656,25 @@
                 null
             ],
             [
+                "event_after_combat_even_miss",
+                "Global Wynn use necro"
+            ],
+            [
                 "weapon_type_exempt",
                 "Bow"
-            ],
-            [
-                "eval_available",
-                "has_skill('Wynn','Bone_stack')"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Wynn soul spend"
-            ],
-            [
-                "wexp",
-                -5
             ]
         ]
     },
     {
         "nid": "Necro_Bind",
         "name": "Bind",
-        "desc": "Inflicts <red>[PARALYSIS]</> on an enemy. Costs <blue>5 mana</>.",
+        "desc": "Attempts to inflict <red>[PARALYSIS]</> on an enemy. <blue>5 MP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
             28
         ],
         "components": [
-            [
-                "eval_available",
-                "has_skill('Wynn','Bone_stack')"
-            ],
-            [
-                "event_after_combat_even_miss",
-                "Global Wynn soul spend"
-            ],
             [
                 "spell",
                 null
@@ -17811,45 +17696,45 @@
                 null
             ],
             [
-                "status_after_combat_on_hit",
-                "Paralysis"
-            ],
-            [
                 "mana_cost",
                 5
-            ],
-            [
-                "weapon_type_exempt",
-                "Staff"
             ],
             [
                 "battle_cast_anim",
                 "Blind"
             ],
             [
-                "wexp",
-                -5
-            ],
-            [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "status_on_hold",
+                "Proc_Paralysis_Bind"
+            ],
+            [
+                "event_after_combat_even_miss",
+                "Global Wynn use necro"
+            ],
+            [
+                "weapon_type",
+                "Anima"
             ]
         ]
     },
     {
         "nid": "Necro_Reanimate",
         "name": "Reanimate",
-        "desc": "Reanimates the body of a previously defeated ally. Can only be used once.",
+        "desc": "Reanimates the body of a previously defeated ally. <red>Can be used only once.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
             48
         ],
         "components": [
-            [
-                "eval_available",
-                "(has_skill('Wynn', 'Bone_stack')) and (game.game_vars['wynnress'] == 1)"
-            ],
             [
                 "empty_tile_target_restrict",
                 null
@@ -17954,12 +17839,8 @@
                 ]
             ],
             [
-                "eval_available",
-                "has_skill('Wynn','Bone_stack')"
-            ],
-            [
                 "event_after_combat_even_miss",
-                "Global Wynn soul spend"
+                "Global Wynn use necro"
             ],
             [
                 "status_after_combat_on_hit",
@@ -21513,7 +21394,9 @@
             ],
             [
                 "multi_item",
-                []
+                [
+                    "Piercing_Stab"
+                ]
             ]
         ]
     },
