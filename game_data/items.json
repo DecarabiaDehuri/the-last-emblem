@@ -30481,5 +30481,63 @@
                 "Saving_World"
             ]
         ]
+    },
+    {
+        "nid": "Hero_Sword",
+        "name": "Hero Sword",
+        "desc": "The sword that will slay the Human King. Effective against Kings. Ralke only.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            19
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ralke"
+                ]
+            ]
+        ]
     }
 ]
