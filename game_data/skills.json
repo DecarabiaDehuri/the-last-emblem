@@ -16226,7 +16226,7 @@
     {
         "nid": "Necromancy",
         "name": "Necromancy",
-        "desc": "Wynn has access to a variety of additional weapons and spells. However, her Necromancy must be charged first.",
+        "desc": "Wynn has access to a variety of additional weapons and spells. However, her Necromancy must be charged first. Necromancy abilites cannot be countered.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -16422,7 +16422,7 @@
     {
         "nid": "Efficient_Disposal",
         "name": "Efficient Disposal",
-        "desc": "<green>[Trin synergy]</> While this skill is active, when Trin copies an enemy, Wynn gains one Bone Pile.",
+        "desc": "<green>[Trin synergy]</> While this skill is active, when Trin copies an enemy, Wynn gains one Necromancy charge.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -22669,7 +22669,7 @@
             ],
             [
                 "condition",
-                "'Orc' in unit.tags"
+                "'Orc' in unit.tags and unit.nid != 'Grubbak'"
             ]
         ]
     },
@@ -22874,6 +22874,14 @@
             ],
             [
                 "fatal_block",
+                null
+            ],
+            [
+                "regeneration",
+                0.2
+            ],
+            [
+                "class_skill",
                 null
             ]
         ]
@@ -23090,7 +23098,7 @@
     {
         "nid": "Magic_Attack_skill",
         "name": "Magic Attack!",
-        "desc": "",
+        "desc": "Implevon The Third yells \"Magic Attack!\"... and attacks with magic, really.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -23255,7 +23263,7 @@
     {
         "nid": "Defeat_Human_King_skill",
         "name": "Defeat Human King",
-        "desc": "Ralke's ultimate attack to defeat Human King.",
+        "desc": "Ralke's ultimate attack to defeat Human King. Deals more damage equal to Ralke's MAG.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -23309,6 +23317,14 @@
             [
                 "dynamic_damage",
                 "unit.get_stat('MAG')"
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "battle_animation_music",
+                "Ginasta theme"
             ]
         ]
     },
@@ -23335,7 +23351,7 @@
                 null
             ],
             [
-                "ability",
+                "ability_parent",
                 "Save_World"
             ]
         ]
@@ -23386,6 +23402,74 @@
             [
                 "time",
                 3
+            ]
+        ]
+    },
+    {
+        "nid": "Orc_Leadership",
+        "name": "Orc Leadership",
+        "desc": "Grubbak inspires orcs with the dream of their own nation. Increases critical chance of nearby orcs.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            52
+        ],
+        "components": [
+            [
+                "aura",
+                "Orc_Leadership_effect"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orc_Leadership_effect",
+        "name": "Orc Leadership",
+        "desc": "Inspired by Grubbak. Bonus CRIT.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            52
+        ],
+        "components": [
+            [
+                "crit",
+                5
+            ],
+            [
+                "condition",
+                "'Orc' in unit.tags"
+            ]
+        ]
+    },
+    {
+        "nid": "Orc_Support",
+        "name": "Orc Support",
+        "desc": "Orgonon is a gentleman, err, a gentleorc who can support his peers.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            50
+        ],
+        "components": [
+            [
+                "ability",
+                "Dance_Orc"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },

@@ -6217,7 +6217,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
+        "portrait_nid": "Orc",
         "affinity": null,
         "fields": []
     },
@@ -6275,7 +6275,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
+        "portrait_nid": "Orc",
         "affinity": null,
         "fields": []
     },
@@ -6333,7 +6333,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
+        "portrait_nid": "Orc",
         "affinity": null,
         "fields": []
     },
@@ -6617,15 +6617,83 @@
         "fields": []
     },
     {
+        "nid": "Ralke",
+        "name": "Ralke",
+        "desc": "",
+        "variant": "",
+        "level": 1,
+        "klass": "Orc_Hero",
+        "tags": [
+            "Orc"
+        ],
+        "bases": {
+            "HP": 25,
+            "STR": 7,
+            "MAG": 5,
+            "SKL": 6,
+            "SPD": 5,
+            "LCK": 4,
+            "DEF": 6,
+            "RES": 3,
+            "CON": 16,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 50,
+            "MAG": 50,
+            "SKL": 30,
+            "SPD": 45,
+            "LCK": 30,
+            "DEF": 45,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Hero_Sword",
+                false
+            ],
+            [
+                "Orc_Potion",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                3,
+                "Defeat_Human_King_skill"
+            ],
+            [
+                1,
+                "Save_World"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Ralke3_1",
+        "affinity": "Hetero",
+        "fields": []
+    },
+    {
         "nid": "Impaler",
         "name": "The Impaler",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 1,
-        "klass": "Orc_Elite",
+        "klass": "Orc_Impaler",
         "tags": [],
         "bases": {
-            "HP": 20,
+            "HP": 30,
             "STR": 8,
             "MAG": 0,
             "SKL": 6,
@@ -6634,7 +6702,7 @@
             "DEF": 5,
             "RES": 3,
             "CON": 16,
-            "MOV": 4
+            "MOV": 5
         },
         "growths": {
             "HP": 40,
@@ -6651,14 +6719,36 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Axe",
+                "Iron_Lance",
+                false
+            ],
+            [
+                "Orc_Potion",
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Impale_skill"
+            ],
+            [
+                2,
+                "Magic_Smasher_skill"
+            ],
+            [
+                3,
+                "Cull_the_Weak_skill"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
                 false,
                 71,
                 null
@@ -6666,60 +6756,85 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Impaler2",
-        "affinity": "Homo",
+        "affinity": "Ace",
         "fields": []
     },
     {
-        "nid": "Ralke",
-        "name": "Ralke",
+        "nid": "Implevon",
+        "name": "Implevon III",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 1,
-        "klass": "Orc_Hero",
-        "tags": [],
+        "klass": "Imp_Implevon",
+        "tags": [
+            "Orc"
+        ],
         "bases": {
-            "HP": 15,
-            "STR": 7,
-            "MAG": 0,
-            "SKL": 6,
-            "SPD": 5,
-            "LCK": 4,
-            "DEF": 6,
-            "RES": 3,
+            "HP": 21,
+            "STR": 6,
+            "MAG": 9,
+            "SKL": 4,
+            "SPD": 6,
+            "LCK": 7,
+            "DEF": 3,
+            "RES": 2,
             "CON": 16,
-            "MOV": 4
+            "MOV": 6
         },
         "growths": {
             "HP": 70,
-            "STR": 70,
+            "STR": 40,
             "MAG": 25,
-            "SKL": 30,
-            "SPD": 45,
-            "LCK": 30,
-            "DEF": 45,
-            "RES": 35,
+            "SKL": 60,
+            "SPD": 70,
+            "LCK": 40,
+            "DEF": 30,
+            "RES": 30,
             "CON": 0,
             "MOV": 0
         },
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Zanbato",
+                "Slim_Lance",
+                false
+            ],
+            [
+                "Orc_Potion",
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Magic_Attack_skill"
+            ],
+            [
+                2,
+                "Annoyance"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
                 false,
-                181,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                71,
+                null
+            ],
+            "Lance": [
+                false,
+                31,
                 null
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Ralke3_1",
-        "affinity": "Hetero",
+        "portrait_nid": "Gargoyle {Mel}",
+        "affinity": "Bi",
         "fields": []
     },
     {
@@ -6729,9 +6844,11 @@
         "variant": null,
         "level": 1,
         "klass": "Orc",
-        "tags": [],
+        "tags": [
+            "Orc"
+        ],
         "bases": {
-            "HP": 7,
+            "HP": 10,
             "STR": 3,
             "MAG": 2,
             "SKL": 4,
@@ -6739,7 +6856,7 @@
             "LCK": 4,
             "DEF": 5,
             "RES": 6,
-            "MOV": 4,
+            "MOV": 5,
             "CON": 16
         },
         "growths": {
@@ -6781,71 +6898,8 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Cyclops (recolor) {L95, Alexsplode}",
-        "affinity": "Ace",
-        "fields": []
-    },
-    {
-        "nid": "Implevon",
-        "name": "Implevon The Third",
-        "desc": "",
-        "variant": null,
-        "level": 1,
-        "klass": "Imp_Implevon",
-        "tags": [],
-        "bases": {
-            "HP": 11,
-            "STR": 6,
-            "MAG": 9,
-            "SKL": 4,
-            "SPD": 6,
-            "LCK": 7,
-            "DEF": 3,
-            "RES": 2,
-            "CON": 16,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 70,
-            "STR": 40,
-            "MAG": 25,
-            "SKL": 60,
-            "SPD": 70,
-            "LCK": 40,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Slim_Lance",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                71,
-                null
-            ],
-            "Lance": [
-                false,
-                31,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Gargoyle {Mel}",
-        "affinity": "Bi",
+        "portrait_nid": "Orc",
+        "affinity": "Unknown",
         "fields": []
     },
     {
@@ -6855,9 +6909,11 @@
         "variant": "",
         "level": 1,
         "klass": "Orc_Mage",
-        "tags": [],
+        "tags": [
+            "Orc"
+        ],
         "bases": {
-            "HP": 10,
+            "HP": 23,
             "STR": 2,
             "MAG": 8,
             "SKL": 3,
@@ -6866,7 +6922,7 @@
             "DEF": 2,
             "RES": 1,
             "CON": 16,
-            "MOV": 4
+            "MOV": 5
         },
         "growths": {
             "HP": 70,
@@ -6885,9 +6941,18 @@
             [
                 "ArcaneSpells",
                 false
+            ],
+            [
+                "Orc_Potion",
+                false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Orc_Leadership"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Anima": [
@@ -6902,23 +6967,52 @@
         "fields": []
     },
     {
-        "nid": "Amin1",
-        "name": "Amin",
+        "nid": "Orgonon",
+        "name": "Orgonon",
         "desc": "",
-        "variant": "",
+        "variant": null,
         "level": 1,
-        "klass": "Warrior",
-        "tags": [],
-        "bases": {},
+        "klass": "Orc_Dancer",
+        "tags": [
+            "Orc"
+        ],
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 1,
+            "CON": 16,
+            "MOV": 5
+        },
         "growths": {},
         "stat_cap_modifiers": {},
-        "starting_items": [],
-        "learned_skills": [],
+        "starting_items": [
+            [
+                "Orc_Potion",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Orc_Support"
+            ]
+        ],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Refresh": [
+                false,
+                71,
+                null
+            ]
+        },
         "alternate_classes": [],
-        "portrait_nid": "Amin1",
-        "affinity": "None",
+        "portrait_nid": "Orgonon",
+        "affinity": "Hetero",
         "fields": []
     },
     {
@@ -8675,13 +8769,13 @@
         "name": "Halta",
         "desc": "",
         "variant": "",
-        "level": 11,
-        "klass": "Cleric",
+        "level": 8,
+        "klass": "Monk",
         "tags": [
             "Boss"
         ],
         "bases": {
-            "HP": 22,
+            "HP": 27,
             "STR": 0,
             "MAG": 11,
             "SKL": 7,
@@ -8696,7 +8790,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "DivineSpells",
+                "DivineSpells_dmg",
                 false
             ]
         ],
@@ -8705,7 +8799,12 @@
         "wexp_gain": {
             "Staff": [
                 false,
-                121,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                71,
                 null
             ]
         },
@@ -8772,6 +8871,50 @@
         "alternate_classes": [],
         "portrait_nid": "Selena",
         "affinity": "Unknown",
+        "fields": []
+    },
+    {
+        "nid": "Dobos",
+        "name": "Dobos",
+        "desc": "",
+        "variant": "",
+        "level": 3,
+        "klass": "Knight",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 25,
+            "STR": 6,
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 1,
+            "LCK": 0,
+            "DEF": 9,
+            "RES": 1,
+            "CON": 13,
+            "MOV": 4
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Lance",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Armour (Version 3) {Sphealnuke} [F2E]",
+        "affinity": "None",
         "fields": []
     },
     {
@@ -8994,6 +9137,26 @@
         "alternate_classes": [],
         "portrait_nid": "Vanessa",
         "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Amin1",
+        "name": "Amin",
+        "desc": "",
+        "variant": "",
+        "level": 1,
+        "klass": "Warrior",
+        "tags": [],
+        "bases": {},
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Amin1",
+        "affinity": "None",
         "fields": []
     },
     {

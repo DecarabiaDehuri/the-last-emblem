@@ -17260,7 +17260,7 @@
     {
         "name": "Intro1 lore",
         "trigger": "level_start",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -17343,7 +17343,7 @@
             "wait;1500",
             "prep;t;Combat Preparation"
         ],
-        "nid": "Intro5 Intro1 lore"
+        "nid": "Intro7 Intro1 lore"
     },
     {
         "name": "Vhala triple shot",
@@ -17379,7 +17379,7 @@
     {
         "name": "Board ship deprecated",
         "trigger": null,
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -17397,7 +17397,7 @@
             "else",
             "end"
         ],
-        "nid": "Intro5 Board ship deprecated"
+        "nid": "Intro7 Board ship deprecated"
     },
     {
         "name": "Check boss death",
@@ -17906,7 +17906,7 @@
     {
         "name": "Simon reinforcements deprecated",
         "trigger": null,
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "game.level_vars['simoncoming'] == 1",
         "commands": [],
         "only_once": false,
@@ -17929,12 +17929,12 @@
             "remove_portrait;Simon",
             "wait;500"
         ],
-        "nid": "Intro5 Simon reinforcements deprecated"
+        "nid": "Intro7 Simon reinforcements deprecated"
     },
     {
         "name": "Simon reinforc setup",
         "trigger": "unit_wait",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "any(game.level.regions.get('simon').contains(unit.position) for unit in game.get_units_in_party()) == True",
         "commands": [],
         "only_once": false,
@@ -17943,12 +17943,12 @@
             "#simon chega proximo turno",
             "level_var;simoncoming;1"
         ],
-        "nid": "Intro5 Simon reinforc setup"
+        "nid": "Intro7 Simon reinforc setup"
     },
     {
         "name": "Beef1",
         "trigger": "turn_change",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "game.turncount == 2",
         "commands": [],
         "only_once": false,
@@ -17992,12 +17992,12 @@
             "remove_portrait;Naro",
             "music_fade_back"
         ],
-        "nid": "Intro5 Beef1"
+        "nid": "Intro7 Beef1"
     },
     {
         "name": "Beef2",
         "trigger": "turn_change",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "game.turncount == 3",
         "commands": [],
         "only_once": false,
@@ -18049,7 +18049,7 @@
             "else",
             "end"
         ],
-        "nid": "Intro5 Beef2"
+        "nid": "Intro7 Beef2"
     },
     {
         "name": "Simon incubus assault",
@@ -18179,7 +18179,7 @@
     {
         "name": "Seize castle south",
         "trigger": "Seize",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "region.nid == 'gate1'",
         "commands": [],
         "only_once": false,
@@ -18190,12 +18190,12 @@
             "inc_level_var;seizes;1",
             ""
         ],
-        "nid": "Intro5 Seize castle south"
+        "nid": "Intro7 Seize castle south"
     },
     {
         "name": "Boss buff",
         "trigger": "combat_end",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "('Boss' in unit.tags or 'Boss' in unit2.tags) and game.level_vars['bossbuffed'] == 0",
         "commands": [],
         "only_once": false,
@@ -18223,7 +18223,7 @@
             "    level_var;bossbuffed;1",
             "end"
         ],
-        "nid": "Intro5 Boss buff"
+        "nid": "Intro7 Boss buff"
     },
     {
         "name": "Supply items",
@@ -18283,7 +18283,7 @@
     {
         "name": "Seize castle north",
         "trigger": "Seize",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "region.nid == 'gate2'",
         "commands": [],
         "only_once": false,
@@ -18291,12 +18291,12 @@
         "_source": [
             "inc_level_var;seizes;1"
         ],
-        "nid": "Intro5 Seize castle north"
+        "nid": "Intro7 Seize castle north"
     },
     {
         "name": "Both seizes VICTORY",
         "trigger": "unit_wait",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -18311,12 +18311,12 @@
             "else",
             "end"
         ],
-        "nid": "Intro5 Both seizes VICTORY"
+        "nid": "Intro7 Both seizes VICTORY"
     },
     {
         "name": "Merc trap activate",
         "trigger": "unit_wait",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "any(game.level.regions.get('merctrap').contains(unit.position) for unit in game.get_units_in_party()) == True",
         "commands": [],
         "only_once": true,
@@ -18337,12 +18337,12 @@
             "else",
             "end"
         ],
-        "nid": "Intro5 Merc trap activate"
+        "nid": "Intro7 Merc trap activate"
     },
     {
         "name": "Village visit",
         "trigger": "Visit",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "region.nid == 'village'",
         "commands": [],
         "only_once": false,
@@ -18364,7 +18364,7 @@
             "s;SoldierBlue;Your loss.",
             "end"
         ],
-        "nid": "Intro5 Village visit"
+        "nid": "Intro7 Village visit"
     },
     {
         "name": "Boss buffed set to 0 start chapter",
@@ -20339,7 +20339,7 @@
     {
         "name": "New Event",
         "trigger": null,
-        "level_nid": "10",
+        "level_nid": "O2",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -20418,7 +20418,7 @@
             "    elif;check_pair('Qum','Robin')",
             "        give_skill;Robin;Disrupt_pair;;persistent"
         ],
-        "nid": "10 New Event"
+        "nid": "O2 New Event"
     },
     {
         "name": "Intro",
@@ -20464,7 +20464,7 @@
     {
         "name": "Players intro deprecated",
         "trigger": null,
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -20499,12 +20499,12 @@
             "add_portrait;Yarra;Right;;Smile,CloseEyes",
             "s;Yarra;Let's wrap this up quickly to return home and have a big, nice bath!"
         ],
-        "nid": "Intro5 Players intro deprecated"
+        "nid": "Intro7 Players intro deprecated"
     },
     {
         "name": "Mansion visit",
         "trigger": "Visit",
-        "level_nid": "Intro5",
+        "level_nid": "Intro7",
         "condition": "region.nid == 'mansion'",
         "commands": [],
         "only_once": false,
@@ -20517,7 +20517,7 @@
             "wait;500",
             "give_item;{unit};Gauntlets"
         ],
-        "nid": "Intro5 Mansion visit"
+        "nid": "Intro7 Mansion visit"
     },
     {
         "name": "New Event_1",
@@ -20953,7 +20953,7 @@
     {
         "name": "Village destroy game over",
         "trigger": "Destructible",
-        "level_nid": "13",
+        "level_nid": "Intro6",
         "condition": "True",
         "commands": [],
         "only_once": true,
@@ -20967,12 +20967,12 @@
             "    lose_game",
             "end"
         ],
-        "nid": "13 Village destroy game over"
+        "nid": "Intro6 Village destroy game over"
     },
     {
         "name": "Bruiser arrives",
         "trigger": "turn_change",
-        "level_nid": "13",
+        "level_nid": "Intro6",
         "condition": "game.level_vars['bruiser'] == 1",
         "commands": [],
         "only_once": true,
@@ -21016,12 +21016,12 @@
             "flicker_cursor;11,10",
             "wait;300"
         ],
-        "nid": "13 Bruiser arrives"
+        "nid": "Intro6 Bruiser arrives"
     },
     {
         "name": "activate bruiser",
         "trigger": "unit_wait",
-        "level_nid": "13",
+        "level_nid": "Intro6",
         "condition": "any(game.level.regions.get('bruiser').contains(unit.position) for unit in game.get_units_in_party())",
         "commands": [],
         "only_once": true,
@@ -21029,12 +21029,12 @@
         "_source": [
             "level_var;bruiser;1"
         ],
-        "nid": "13 activate bruiser"
+        "nid": "Intro6 activate bruiser"
     },
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "13",
+        "level_nid": "Intro6",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -21043,12 +21043,12 @@
             "level_var;bruiser;0",
             ""
         ],
-        "nid": "13 Intro"
+        "nid": "Intro6 Intro"
     },
     {
         "name": "Boss activates move",
         "trigger": "turn_change",
-        "level_nid": "13",
+        "level_nid": "Intro6",
         "condition": "len(game.get_enemy_units()) <= 2",
         "commands": [],
         "only_once": true,
@@ -21068,12 +21068,12 @@
             "change_music;enemy_phase;Boss1",
             "change_music;other_phase;Boss1"
         ],
-        "nid": "13 Boss activates move"
+        "nid": "Intro6 Boss activates move"
     },
     {
         "name": "Boss buff",
         "trigger": null,
-        "level_nid": "13",
+        "level_nid": "Intro6",
         "condition": "('Boss' in unit.tags or 'Boss' in unit2.tags) and game.level_vars['bossbuffed'] == 0",
         "commands": [],
         "only_once": false,
@@ -21101,12 +21101,12 @@
             "    end",
             "end"
         ],
-        "nid": "13 Boss buff"
+        "nid": "Intro6 Boss buff"
     },
     {
         "name": "Enemies dead VICTORY",
         "trigger": "phase_change",
-        "level_nid": "13",
+        "level_nid": "Intro6",
         "condition": "len(game.get_enemy_units()) == 0",
         "commands": [],
         "only_once": true,
@@ -21118,7 +21118,7 @@
             "wait;1000",
             "win_game"
         ],
-        "nid": "13 Enemies dead VICTORY"
+        "nid": "Intro6 Enemies dead VICTORY"
     },
     {
         "name": "Wynn set charges necromancy",
@@ -21160,9 +21160,9 @@
         "nid": "Global Wynn start with 0 necro charge"
     },
     {
-        "name": "New Event",
-        "trigger": "level_start",
-        "level_nid": "18",
+        "name": "Intro deprecated",
+        "trigger": null,
+        "level_nid": "O1",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -21172,14 +21172,17 @@
             "add_weather;sunset",
             "center_cursor;10,15",
             "transition;open;1500",
-            "s;Soldier;Get back!",
+            "add_portrait;SoldierBlue;Left",
+            "s;SoldierBlue;Get back!",
+            "add_portrait;Orc;Right",
             "s;Orc;Hand over your ... stuff.",
-            "s;Soldier;You don't even know what we're carrying, damnit!",
+            "s;SoldierBlue;You don't even know what we're carrying, damnit!",
             "s;Orc;No matter. Give!",
-            "s;Soldier;Tsc... if only we had-",
+            "s;SoldierBlue;Tsc... if only we had-",
             "s;???;A hero?",
-            "s;Soldier;-run advance scouts, paid for safe passage, avoided a choke point-",
+            "s;SoldierBlue;-run advance scouts, paid for safe passage, avoided a choke point-",
             "s;???;Your hero is here!",
+            "multi_remove_portrait;SoldierBlue;Orc",
             "music;Prologue battles",
             "add_unit;Ralke;8,7;immediate",
             "center_cursor;Ralke;2000",
@@ -21208,6 +21211,7 @@
             "wait;500",
             "remove_unit;106;immediate",
             "wait;500",
+            "add_portrait;Orc;Left",
             "s;Orc;Why protect human?!",
             "add_portrait;Ralke;Right",
             "s;Ralke;I am on quest.{c:wait;300} With my party.|Ultimate orc quest.|We will...{c:wait;400} defeat the Human King.",
@@ -21215,6 +21219,7 @@
             "center_cursor;1,16;1500",
             "add_unit;Impaler;0,16;fade;giveup;west",
             "wait;1500",
+            "remove_portrait;Orc",
             "add_portrait;Impaler;Left",
             "wait;200",
             "s;Impaler;No, we won't.{c:wait;400} We're here to stablish supply points and secure the roads of Tak'kan.",
@@ -21226,21 +21231,23 @@
             "wait;1000",
             "center_cursor;103;1500",
             "wait;1000",
+            "remove_portrait;Impaler",
+            "add_portrait;Orc;Left",
             "s;Orc;Uh...{c:wait;400} Attack?",
             "wait;1000",
-            "multi_remove_portrait;Ralke;Impaler",
+            "multi_remove_portrait;Ralke;Orc",
             "move_unit;Ralke;2,15;no_block;no_follow",
             "move_unit;Impaler;2,16;no_block",
             "move_unit;102;10,14;no_block;no_follow",
             "move_unit;104;11,16;no_follow",
             "wait;1500"
         ],
-        "nid": "18 New Event"
+        "nid": "O1 Intro deprecated"
     },
     {
         "name": "reinf",
         "trigger": "turn_change",
-        "level_nid": "18",
+        "level_nid": "O1",
         "condition": "game.turncount == 3",
         "commands": [],
         "only_once": false,
@@ -21249,8 +21256,164 @@
             "center_cursor;1,16;1000",
             "wait;500",
             "spawn_group;reinf;west;reinf;normal;closest",
-            "wait;1000"
+            "wait;1000",
+            "add_portrait;Impaler;Right;;CloseEyes",
+            "s;Impaler;Tsc.{c:wait;300} Weaklings circling us.|{c:expression;Impaler;OpenEyes}The two of us are simply too few.",
+            "s;???;Then your Saviour has arrived!",
+            "s;Impaler;Shut the fuck up, Ralke. I'm not talking to you.",
+            "add_portrait;Ralke;FarRight",
+            "s;Ralke;What? Ralke says nothing.",
+            "s;Impaler;Huh?",
+            "music_clear;1000",
+            "multi_remove_portrait;Ralke;Impaler",
+            "wait;300",
+            "add_unit;Implevon;1,0",
+            "center_cursor;Implevon;1500",
+            "wait;200",
+            "music;Reinforcements",
+            "add_portrait;Implevon;Left",
+            "s;Implevon;Implevon the Third is here!|Sky attack!!",
+            "remove_portrait;Implevon",
+            "move_unit;Implevon;111;normal;closest",
+            "wait;100",
+            "interact_unit;Implevon;111;miss1,end",
+            "music_clear",
+            "wait;400",
+            "add_portrait;Implevon;Left",
+            "wait;300",
+            "s;Implevon;I tried.",
+            "music;Funny",
+            "wait;200",
+            "move_unit;Implevon;Impaler;normal;closest",
+            "wait;300",
+            "add_portrait;Impaler;Right",
+            "s;Impaler;Nope. I take it back. We are fine on our own.|Get out of here, useless imp.",
+            "s;Implevon;I will show you my prowess, master Imp!",
+            "add_portrait;Ralke;FarRight",
+            "s;Ralke;Impaler is imp?!",
+            "s;Impaler;The fuck? No. This abbreviation doesn't work, idiot.",
+            "s;Implevon;Your fault for having a long name!",
+            "s;Impaler;Look who's talking you son of a -",
+            "s;Implevon;No time to lose! Attack!{c:mirror_portrait;Implevon}{c:wait;300}{c:remove_portrait;Implevon;;left}",
+            "wait;400",
+            "s;Impaler;I'm gonna fucking lose it.",
+            "multi_remove_portrait;Impaler;Ralke",
+            "wait;400",
+            "sound;Level Up",
+            "alert;Implevon The Third has joined the party!"
         ],
-        "nid": "18 reinf"
+        "nid": "O1 reinf"
+    },
+    {
+        "name": "rout victory",
+        "trigger": "combat_end",
+        "level_nid": "O1",
+        "condition": "len(game.get_enemy_units()) == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1500",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
+            "win_game"
+        ],
+        "nid": "O1 rout victory"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "O1",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close",
+            "add_weather;sunset",
+            "center_cursor;10,15",
+            "transition;open;1500",
+            "add_portrait;SoldierBlue;Left",
+            "s;SoldierBlue;Get back!",
+            "add_portrait;Bandit1;Right",
+            "s;Bandit1;Hand over your ... stuff.",
+            "s;SoldierBlue;You don't even know what we're carrying, damnit!",
+            "s;Bandit1;Don't test my patience, fucker!",
+            "s;SoldierBlue;Tsc... if only we had-",
+            "s;???;A hero?",
+            "s;SoldierBlue;-run advance scouts, paid for safe passage, avoided a choke point...",
+            "s;???;Your hero is here!",
+            "multi_remove_portrait;SoldierBlue;Bandit1",
+            "music;Prologue battles",
+            "add_unit;Ralke;8,7;immediate",
+            "center_cursor;Ralke;2000",
+            "wait;2000",
+            "add_portrait;Ralke;Left",
+            "s;Ralke;I am Ralke!",
+            "wait;200",
+            "remove_portrait;Ralke",
+            "move_unit;Ralke;13,15;swoosh",
+            "center_cursor;10,14;1500",
+            "wait;1000",
+            "add_portrait;Ralke;Left",
+            "s;Ralke;Go!",
+            "remove_portrait;Ralke",
+            "move_unit;105;11,15;normal;stack;no_follow",
+            "move_unit;107;11,15;normal;stack;no_follow",
+            "move_unit;108;11,15;normal;stack;no_follow",
+            "remove_unit;105;immediate",
+            "remove_unit;107;immediate",
+            "remove_unit;108;immediate",
+            "wait;500",
+            "move_unit;106;0,17;no_block;no_follow",
+            "wait;300",
+            "move_unit;103;8,14;normal;push;no_block",
+            "move_unit;Ralke;8,15;normal;push;no_follow",
+            "wait;500",
+            "remove_unit;106;immediate",
+            "wait;500",
+            "add_portrait;Bandit1;Left",
+            "s;Bandit1;What the hell are you doing?",
+            "add_portrait;Ralke;Right",
+            "s;Ralke;I am on quest.{c:wait;300} With my party.|Ultimate orc quest.|We will...",
+            "music_clear",
+            "expression;Ralke;CloseEyes",
+            "wait;1000",
+            "expression;Ralke;OpenEyes",
+            "wait;1500",
+            "music;Ginasta theme",
+            "s;Ralke;Defeat Human King.",
+            "center_cursor;1,16;1500",
+            "add_unit;Impaler;0,16;fade;giveup;west",
+            "wait;1500",
+            "remove_portrait;Bandit1",
+            "add_portrait;Impaler;Left",
+            "wait;200",
+            "music_clear",
+            "s;Impaler;No, we won't.{c:wait;400} We're here to stablish supply points and secure the roads of Tak'kan.",
+            "music;Ginasta theme",
+            "s;Ralke;That is same thing.{c:wait;300} Tak'kan first step on defeating Human King.",
+            "expression;Impaler;CloseEyes",
+            "wait;1000",
+            "expression;Impaler;OpenEyes",
+            "s;Impaler;I hope you die on this very first battle so I will never have to listen to you again.",
+            "wait;1000",
+            "center_cursor;103;1500",
+            "wait;1000",
+            "remove_portrait;Impaler",
+            "add_portrait;Bandit1;Left",
+            "s;Bandit1;Uh...{c:wait;400} is it even worth fighting those clowns?",
+            "s;Ralke;We battle now!",
+            "s;Bandit1;Oh, okay.",
+            "wait;1000",
+            "multi_remove_portrait;Ralke;Bandit1",
+            "move_unit;Ralke;2,15;no_block;no_follow",
+            "move_unit;Impaler;2,16;no_block",
+            "move_unit;102;10,14;no_block;no_follow",
+            "move_unit;104;11,16;no_follow",
+            "wait;1500"
+        ],
+        "nid": "O1 Intro"
     }
 ]

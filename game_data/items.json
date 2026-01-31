@@ -9234,6 +9234,57 @@
         ]
     },
     {
+        "nid": "Orc_Potion",
+        "name": "Orc Potion",
+        "desc": "Restores 20 HP.",
+        "icon_nid": "Potions",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                300
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                3
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "heal",
+                20
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    232,
+                    59,
+                    97
+                ]
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Orc' in unit.tags"
+            ]
+        ]
+    },
+    {
         "nid": "Mana_Wine",
         "name": "Mana Wine",
         "desc": "Magical alcohol. Restores <blue>10 mana</>, but user is inflicted with <red>[CONFUSION]</>.",
@@ -9566,12 +9617,12 @@
     },
     {
         "nid": "Slim_Sword",
-        "name": "Slim Sword",
+        "name": "Dagger",
         "desc": "Just because it's thin doesn't mean it is worse, ok?",
         "icon_nid": "Sword",
         "icon_index": [
             0,
-            1
+            12
         ],
         "components": [
             [
@@ -18421,6 +18472,78 @@
             [
                 "mana_cost",
                 4
+            ]
+        ]
+    },
+    {
+        "nid": "Dance_Orc",
+        "name": "Orc Dance",
+        "desc": "<green>Refreshes</> an allied orc unit, letting them act again this turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            50
+        ],
+        "components": [
+            [
+                "refresh",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    177,
+                    41
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "battle_cast_anim",
+                "Refresh"
+            ],
+            [
+                "exp",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "weapon_type",
+                "Refresh"
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Orc' in target.tags"
             ]
         ]
     },
@@ -30298,7 +30421,7 @@
     {
         "nid": "Magic_Attack",
         "name": "Magic Attack!",
-        "desc": "Implevon The Third yells \"Magic Attack!\". He rehearsed this extensively last week.",
+        "desc": "Implevon The Third yells \"Magic Attack!\"... and attacks with magic, really.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -30368,6 +30491,14 @@
             [
                 "map_hit_sfx",
                 "GargoyleBattleCry"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Wind"
             ]
         ]
     },
@@ -30479,13 +30610,17 @@
             [
                 "status_after_combat_on_hit",
                 "Saving_World"
+            ],
+            [
+                "heal",
+                20
             ]
         ]
     },
     {
         "nid": "Hero_Sword",
         "name": "Hero Sword",
-        "desc": "The sword that will slay the Human King. Effective against Kings. Ralke only.",
+        "desc": "Effective against Human King. Ralke only.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -30510,7 +30645,7 @@
             ],
             [
                 "hit",
-                85
+                90
             ],
             [
                 "weapon_type",
