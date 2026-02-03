@@ -9509,7 +9509,10 @@
                 "prf_class",
                 [
                     "Thief",
-                    "Assassin"
+                    "Rogue",
+                    "Assassin",
+                    "Imp_Implevon",
+                    "Imp_Elite_Implevon"
                 ]
             ]
         ]
@@ -13340,6 +13343,70 @@
             [
                 "max_range",
                 1
+            ]
+        ]
+    },
+    {
+        "nid": "Holy_Axe",
+        "name": "Holy Axe",
+        "desc": "When you can't convert others by words alone. Magical damage.",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            14
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                65
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "crit",
+                4
+            ],
+            [
+                "value",
+                7500
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "alternate_damage_formula",
+                "MAGIC_DAMAGE"
             ]
         ]
     },
@@ -18472,78 +18539,6 @@
             [
                 "mana_cost",
                 4
-            ]
-        ]
-    },
-    {
-        "nid": "Dance_Orc",
-        "name": "Orc Dance",
-        "desc": "<green>Refreshes</> an allied orc unit, letting them act again this turn.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            50
-        ],
-        "components": [
-            [
-                "refresh",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "map_cast_anim",
-                "synergy"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    177,
-                    41
-                ]
-            ],
-            [
-                "map_cast_sfx",
-                "RefreshDanceMap"
-            ],
-            [
-                "battle_cast_anim",
-                "Refresh"
-            ],
-            [
-                "exp",
-                10
-            ],
-            [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
-                "weapon_type",
-                "Refresh"
-            ],
-            [
-                "eval_target_restrict_2",
-                "'Orc' in target.tags"
             ]
         ]
     },
@@ -30564,7 +30559,7 @@
     {
         "nid": "Save_World",
         "name": "Save World",
-        "desc": "Ralke will not rest until he saves the world. Buffs his stats and heals.",
+        "desc": "Ralke will not rest until he saves the world. Buffs his stats and heals. Once per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -30614,6 +30609,145 @@
             [
                 "heal",
                 20
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Dance_Orc",
+        "name": "Orc Dance",
+        "desc": "<green>Refreshes</> an allied orc unit, letting them act again this turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            50
+        ],
+        "components": [
+            [
+                "refresh",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "synergy"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    177,
+                    41
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "RefreshDanceMap"
+            ],
+            [
+                "battle_cast_anim",
+                "Refresh"
+            ],
+            [
+                "exp",
+                10
+            ],
+            [
+                "mana_cost_as_uses",
+                null
+            ],
+            [
+                "weapon_type",
+                "Refresh"
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Orc' in target.tags"
+            ]
+        ]
+    },
+    {
+        "nid": "Heal_Orc",
+        "name": "Heal",
+        "desc": "Restores (User's MAG + 10) HP to an allied Orc.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            52
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Refresh"
+            ],
+            [
+                "exp",
+                11
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "equation_heal",
+                "HEALSTAFF"
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Orc' in target.tags"
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
             ]
         ]
     },

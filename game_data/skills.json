@@ -23331,17 +23331,13 @@
     {
         "nid": "Save_World",
         "name": "Save World",
-        "desc": "Ralke will not rest until he saves the world. Buffs his stats and heals.",
+        "desc": "Ralke will not rest until he saves the world. Buffs his stats and heals. Once per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
             52
         ],
         "components": [
-            [
-                "drain_charge",
-                2
-            ],
             [
                 "grey_if_inactive",
                 null
@@ -23351,7 +23347,7 @@
                 null
             ],
             [
-                "ability_parent",
+                "ability",
                 "Save_World"
             ]
         ]
@@ -23408,7 +23404,7 @@
     {
         "nid": "Orc_Leadership",
         "name": "Orc Leadership",
-        "desc": "Grubbak inspires orcs with the dream of their own nation. Increases critical chance of nearby orcs.",
+        "desc": "Grubbak inspires orcs with the dream of their own nation. Increases movement of nearby orcs.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -23436,7 +23432,7 @@
     {
         "nid": "Orc_Leadership_effect",
         "name": "Orc Leadership",
-        "desc": "Inspired by Grubbak. Bonus CRIT.",
+        "desc": "Inspired by Grubbak. Bonus MOV.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -23444,19 +23440,24 @@
         ],
         "components": [
             [
-                "crit",
-                5
-            ],
-            [
                 "condition",
                 "'Orc' in unit.tags"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
             ]
         ]
     },
     {
         "nid": "Orc_Support",
-        "name": "Orc Support",
-        "desc": "Orgonon is a gentleman, err, a gentleorc who can support his peers.",
+        "name": "Support",
+        "desc": "Orgonon refreshes another ally, letting them act again.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -23466,6 +23467,26 @@
             [
                 "ability",
                 "Dance_Orc"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orc_Heal",
+        "name": "Heal",
+        "desc": "Orgonon heals another ally, restoring their HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            52
+        ],
+        "components": [
+            [
+                "ability",
+                "Heal_Orc"
             ],
             [
                 "class_skill",
@@ -24950,6 +24971,26 @@
             [
                 "lost_on_end_chapter",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "ignoregreen",
+        "name": "ignoregreen",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "modify_ai_priority",
+                0.0
             ]
         ]
     }
