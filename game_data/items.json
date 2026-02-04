@@ -459,7 +459,7 @@
     {
         "nid": "DivineHeal",
         "name": "Heal",
-        "desc": "Restores (User's MAG + 10) HP. Costs <blue>3 mana</>.",
+        "desc": "(<blue>3 MP</>) Restores (User's MAG + 10) HP. ",
         "icon_nid": "Light",
         "icon_index": [
             0,
@@ -795,7 +795,7 @@
     {
         "nid": "DivineLightning",
         "name": "Smite",
-        "desc": "Hits an enemy with basic divine magic. Costs <blue>2 mana</>.",
+        "desc": "(<blue>2 MP</>)Hits an enemy with basic divine magic. ",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -857,21 +857,13 @@
             [
                 "battle_cast_anim",
                 "Shine"
-            ],
-            [
-                "mana_cost",
-                2
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ]
         ]
     },
     {
         "nid": "DivineShine",
         "name": "Shine",
-        "desc": "Hits an enemy with intermediate divine magic. Costs <blue>5 mana</>.",
+        "desc": "(<blue>5 MP</>) Hits an enemy with intermediate divine magic.",
         "icon_nid": "Light",
         "icon_index": [
             0,
@@ -935,15 +927,15 @@
                 "Shine"
             ],
             [
-                "mana_cost",
-                5
-            ],
-            [
                 "prf_class",
                 [
                     "Bishop",
                     "High_Priestess"
                 ]
+            ],
+            [
+                "mana_cost",
+                5
             ]
         ]
     },

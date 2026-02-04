@@ -22866,6 +22866,16 @@
                 "generic": false
             },
             {
+                "nid": "Carina",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
                 "nid": "101",
                 "variant": null,
                 "level": 2,
@@ -23044,16 +23054,6 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
-            },
-            {
-                "nid": "Carina",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": false
             },
             {
                 "nid": "Darian",
@@ -26076,7 +26076,7 @@
         "name": "Arrival",
         "tilemap": "Arrival",
         "bg_tilemap": null,
-        "party": "ChosenParty",
+        "party": "Simon",
         "music": {},
         "objective": {
             "simple": "",
@@ -26096,7 +26096,7 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
+                    3,
                     20
                 ],
                 "starting_traveler": null,
@@ -26117,7 +26117,7 @@
                 "variant": null,
                 "level": 1,
                 "klass": "Wagon",
-                "faction": "Yhilin",
+                "faction": "Villager",
                 "starting_items": [],
                 "starting_skills": [],
                 "team": "other",
@@ -26146,8 +26146,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    12,
-                    9
+                    13,
+                    14
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -26170,8 +26170,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    8,
-                    9
+                    6,
+                    13
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -26217,7 +26217,10 @@
                 "ai": "Defend",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    11,
+                    6
+                ],
                 "starting_traveler": null,
                 "generic": true
             },
@@ -26287,8 +26290,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    13,
-                    11
+                    14,
+                    12
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -26311,8 +26314,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    12
+                    5,
+                    11
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -26335,8 +26338,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    8,
-                    11
+                    11,
+                    9
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -26346,7 +26349,7 @@
                 "variant": null,
                 "level": 4,
                 "klass": "Brigand",
-                "faction": "AntiDK",
+                "faction": "Bandit",
                 "starting_items": [
                     [
                         "Iron_Axe",
@@ -26376,9 +26379,9 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Seize",
                 "roam_ai": null,
-                "ai_group": "",
+                "ai_group": "cav",
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
@@ -26397,9 +26400,9 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Seize",
                 "roam_ai": null,
-                "ai_group": "",
+                "ai_group": "cav",
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
@@ -26418,9 +26421,9 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Seize",
                 "roam_ai": null,
-                "ai_group": "",
+                "ai_group": "cav",
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
@@ -26439,9 +26442,9 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Seize",
                 "roam_ai": null,
-                "ai_group": "",
+                "ai_group": "cav",
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
@@ -26539,8 +26542,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    7
+                    8,
+                    11
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -26564,7 +26567,7 @@
                 "ai_group": "",
                 "starting_position": [
                     13,
-                    7
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -26611,8 +26614,104 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    11,
-                    13
+                    12,
+                    17
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "sold_5",
+                "variant": null,
+                "level": 8,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    4,
+                    18
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "sold_6",
+                "variant": null,
+                "level": 8,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    5,
+                    19
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "sold_7",
+                "variant": null,
+                "level": 8,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    5,
+                    21
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "fly_1",
+                "variant": null,
+                "level": 8,
+                "klass": "Pegasus_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    19
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -26738,11 +26837,27 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "wagon2",
+                "variant": null,
+                "level": 1,
+                "klass": "Citizen",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [
             {
-                "nid": "New_Region",
+                "nid": "BoardEnable",
                 "region_type": "event",
                 "position": null,
                 "size": [
@@ -26753,6 +26868,60 @@
                 "condition": "True",
                 "time_left": null,
                 "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "Destructible",
+                "region_type": "event",
+                "position": [
+                    24,
+                    5
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Destructible",
+                "condition": "unit.team != 'player'",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "Enemy_Seize",
+                "region_type": "event",
+                "position": [
+                    14,
+                    3
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Enemy_Seize",
+                "condition": "unit.team == 'enemy'",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "Visit",
+                "region_type": "event",
+                "position": [
+                    24,
+                    5
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "game.level_vars['wagon'] == 1",
+                "time_left": null,
+                "only_once": true,
                 "interrupt_move": false,
                 "hide_time": false
             }
@@ -26801,16 +26970,16 @@
                         16
                     ],
                     "Megail": [
-                        15,
+                        16,
                         18
                     ],
                     "Riala": [
-                        14,
+                        13,
                         17
                     ],
                     "Balia": [
-                        16,
-                        18
+                        14,
+                        17
                     ],
                     "Trin": [
                         15,
@@ -26860,7 +27029,16 @@
                 }
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "cav",
+                "trigger_threshold": 1
+            },
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "Intro6",
@@ -41331,7 +41509,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "PursueVillage",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -41399,8 +41577,8 @@
                 "nid": "New_Region",
                 "region_type": "event",
                 "position": [
-                    8,
-                    3
+                    1,
+                    12
                 ],
                 "size": [
                     1,
