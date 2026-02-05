@@ -2302,10 +2302,6 @@
             [
                 "battle_cast_anim",
                 "Heal"
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ]
         ]
     },
@@ -2372,10 +2368,6 @@
                     255,
                     52
                 ]
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ],
             [
                 "damage",
@@ -2493,10 +2485,6 @@
                 "Flareblade"
             ],
             [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
                 "weapon_triangle_override",
                 "Fire"
             ]
@@ -2571,10 +2559,6 @@
             [
                 "battle_cast_anim",
                 "Boltblade"
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ],
             [
                 "weapon_triangle_override",
@@ -2653,10 +2637,6 @@
                 "Ice2"
             ],
             [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
                 "status_on_equip",
                 "Wary_Fighter_ice"
             ],
@@ -2715,10 +2695,6 @@
             [
                 "mana_cost",
                 6
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ]
         ]
     },
@@ -2975,10 +2951,6 @@
                 2
             ],
             [
-                "mana_cost_as_uses",
-                null
-            ],
-            [
                 "battle_cast_anim",
                 "Flux"
             ],
@@ -3072,10 +3044,6 @@
             ],
             [
                 "no_double",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
                 null
             ]
         ]
@@ -3191,10 +3159,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "mana_cost_as_uses",
-                null
             ]
         ]
     },
@@ -3262,10 +3226,6 @@
             ],
             [
                 "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "mana_cost_as_uses",
                 null
             ],
             [
@@ -7201,7 +7161,7 @@
     {
         "nid": "Storm_of_Lust",
         "name": "Storm of Lust",
-        "desc": "A storm of ice and lust. Chance to inflict <red>[STUNNED]</>. Costs <orange>15 SP</>.",
+        "desc": "<orange>(15 SP)</> A storm of ice and lust. Chance to inflict <red>[STUNNED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -7320,7 +7280,7 @@
     {
         "nid": "Fires_of_Lust",
         "name": "Fires of Lust",
-        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <orange>15 SP</>.",
+        "desc": "<orange>(15 SP)</> A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -7550,7 +7510,7 @@
     {
         "nid": "Bolt_of_Lust",
         "name": "Bolt of Lust",
-        "desc": "A storm of fire and lust. Chance to inflict <red>[CONFUSED]</>. Costs <orange>15 SP</>.",
+        "desc": "<orange>(15 SP)</> A powerful, long-range bolt of lust. Chance to inflict <red>[LUST DEATH]</>. ",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -29687,6 +29647,10 @@
             [
                 "status_on_equip",
                 "Stun_attack"
+            ],
+            [
+                "level_exp",
+                null
             ]
         ]
     },
@@ -29751,6 +29715,10 @@
             [
                 "status_on_equip",
                 "Paralysis_attack"
+            ],
+            [
+                "level_exp",
+                null
             ]
         ]
     },

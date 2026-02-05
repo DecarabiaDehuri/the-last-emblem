@@ -19371,7 +19371,7 @@
             {
                 "nid": "110",
                 "variant": null,
-                "level": 1,
+                "level": 3,
                 "klass": "Brigand",
                 "faction": "Bandit",
                 "starting_items": [
@@ -19388,6 +19388,30 @@
                 "starting_position": [
                     18,
                     15
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "114",
+                "variant": null,
+                "level": 1,
+                "klass": "Brigand",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    14
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -19415,6 +19439,27 @@
             },
             {
                 "nid": "112",
+                "variant": null,
+                "level": 2,
+                "klass": "Militia",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "113",
                 "variant": null,
                 "level": 2,
                 "klass": "Militia",
@@ -19547,7 +19592,8 @@
                 "nid": "reinf",
                 "units": [
                     "111",
-                    "112"
+                    "112",
+                    "113"
                 ],
                 "positions": {
                     "111": [
@@ -19556,6 +19602,10 @@
                     ],
                     "112": [
                         2,
+                        16
+                    ],
+                    "113": [
+                        0,
                         17
                     ]
                 }
@@ -19570,8 +19620,8 @@
         "bg_tilemap": null,
         "party": "ChosenParty",
         "music": {
-            "player_phase": "Orcs",
-            "enemy_phase": "Prologue enemy phase",
+            "player_phase": "OrcsCalm",
+            "enemy_phase": "Orcs",
             "boss_battle": "Boss1"
         },
         "objective": {
@@ -20109,7 +20159,10 @@
         "tilemap": "takkanwilds",
         "bg_tilemap": null,
         "party": "HeroParty",
-        "music": {},
+        "music": {
+            "player_phase": "OrcsCalm",
+            "enemy_phase": "Orcs"
+        },
         "objective": {
             "simple": "Defeat Entombed",
             "win": "Defeat Entombed",
@@ -20139,7 +20192,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Defend",
+                "ai": "Guard",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -20529,13 +20582,17 @@
             {
                 "nid": "ogre",
                 "variant": null,
-                "level": 20,
+                "level": 10,
                 "klass": "Ogre",
                 "faction": "Monster",
                 "starting_items": [
                     [
-                        "Killer_Axe",
+                        "Tomahawk",
                         false
+                    ],
+                    [
+                        "Loot_Bag",
+                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -20606,632 +20663,31 @@
                 "generic": false
             }
         ],
-        "regions": [],
-        "unit_groups": [],
-        "ai_groups": []
-    },
-    {
-        "nid": "O4",
-        "name": "Tarran'Kan",
-        "tilemap": "tarrankan",
-        "bg_tilemap": null,
-        "party": "ChosenParty",
-        "music": {},
-        "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
-        },
-        "roam": false,
-        "roam_unit": null,
-        "go_to_overworld": false,
-        "should_record": true,
-        "tags": [],
-        "units": [
-            {
-                "nid": "Stark",
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "orc_1",
-                "variant": null,
-                "level": 10,
-                "klass": "Orc",
-                "faction": "Orc",
-                "starting_items": [
-                    [
-                        "Iron_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "orc_2",
-                "variant": null,
-                "level": 10,
-                "klass": "Orc",
-                "faction": "Orc",
-                "starting_items": [
-                    [
-                        "Iron_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "orc_3",
-                "variant": null,
-                "level": 10,
-                "klass": "Orc",
-                "faction": "Orc",
-                "starting_items": [
-                    [
-                        "Iron_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "orc_4",
-                "variant": null,
-                "level": 10,
-                "klass": "Orc",
-                "faction": "Orc",
-                "starting_items": [
-                    [
-                        "Iron_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "orc_5",
-                "variant": null,
-                "level": 10,
-                "klass": "Orc",
-                "faction": "Orc",
-                "starting_items": [
-                    [
-                        "Iron_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "orc_6",
-                "variant": null,
-                "level": 10,
-                "klass": "Orc",
-                "faction": "Orc",
-                "starting_items": [
-                    [
-                        "Iron_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "Beholda",
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "ogre_1",
-                "variant": null,
-                "level": 1,
-                "klass": "Ogre",
-                "faction": "Cutthroat",
-                "starting_items": [
-                    [
-                        "Steel_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "ogre_2",
-                "variant": null,
-                "level": 1,
-                "klass": "Ogre",
-                "faction": "Cutthroat",
-                "starting_items": [
-                    [
-                        "Steel_Axe",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "monk_1",
-                "variant": null,
-                "level": 10,
-                "klass": "Monk",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "DivineSpells_dmg",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    6,
-                    13
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "monk_2",
-                "variant": null,
-                "level": 10,
-                "klass": "Monk",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "DivineSpells_dmg",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    12,
-                    8
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "monk_3",
-                "variant": null,
-                "level": 10,
-                "klass": "Monk",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "DivineSpells_dmg",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    15,
-                    11
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "monk_4",
-                "variant": null,
-                "level": 10,
-                "klass": "Monk",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "DivineSpells_dmg",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    11,
-                    14
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "monk_5",
-                "variant": null,
-                "level": 10,
-                "klass": "Monk",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "DivineSpells_dmg",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    13,
-                    18
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "soldier_1",
-                "variant": null,
-                "level": 5,
-                "klass": "Soldier",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "Iron_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    5,
-                    11
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "soldier_2",
-                "variant": null,
-                "level": 5,
-                "klass": "Soldier",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "Iron_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    13,
-                    23
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "soldier_3",
-                "variant": null,
-                "level": 5,
-                "klass": "Soldier",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "Iron_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    8,
-                    6
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "soldier_4",
-                "variant": null,
-                "level": 5,
-                "klass": "Soldier",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "Iron_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    18,
-                    17
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "Angelica",
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    20,
-                    13
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "priestess_1",
-                "variant": null,
-                "level": 10,
-                "klass": "Priestess",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "DivineSpells",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Heal",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    22,
-                    13
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "priestess_2",
-                "variant": null,
-                "level": 10,
-                "klass": "Priestess",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "DivineSpells",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Heal",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    10,
-                    10
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "priestess_3",
-                "variant": null,
-                "level": 10,
-                "klass": "Priestess",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "DivineSpells",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Heal",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    14,
-                    15
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "pala_1",
-                "variant": null,
-                "level": 1,
-                "klass": "Paladin",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "Silver_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "pala_2",
-                "variant": null,
-                "level": 1,
-                "klass": "Paladin",
-                "faction": "Church",
-                "starting_items": [
-                    [
-                        "Silver_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Defend",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": null,
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "Grubbak",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    2,
-                    13
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Impaler",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    2,
-                    12
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Implevon",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    2,
-                    10
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Orgonon",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    1,
-                    13
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Ralke",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    2,
-                    11
-                ],
-                "starting_traveler": null,
-                "generic": false
-            }
-        ],
         "regions": [
             {
-                "nid": "chest",
+                "nid": "Chest1",
                 "region_type": "event",
                 "position": [
-                    20,
-                    5
+                    2,
+                    2
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Chest",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "Chest2",
+                "region_type": "event",
+                "position": [
+                    5,
+                    22
                 ],
                 "size": [
                     1,
@@ -21253,32 +20709,22 @@
         "name": "Bloody Spire",
         "tilemap": "bloodyspire",
         "bg_tilemap": null,
-        "party": "ChosenParty",
-        "music": {},
+        "party": "HeroParty",
+        "music": {
+            "player_phase": "OrcsCalm",
+            "enemy_phase": "Orcs"
+        },
         "objective": {
             "simple": "",
             "win": "",
             "loss": ""
         },
-        "roam": false,
-        "roam_unit": null,
+        "roam": true,
+        "roam_unit": "Ralke",
         "go_to_overworld": false,
         "should_record": true,
         "tags": [],
         "units": [
-            {
-                "nid": "Beholda",
-                "team": "enemy",
-                "ai": "Guard",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    10,
-                    5
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
             {
                 "nid": "Stark",
                 "team": "other",
@@ -21286,8 +20732,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    14
+                    11,
+                    22
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -21306,12 +20752,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    13
+                    3,
+                    15
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -21330,12 +20776,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    9,
-                    14
+                    4,
+                    9
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -21354,12 +20800,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    11,
-                    14
+                    18,
+                    16
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -21378,12 +20824,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    15
+                    12,
+                    20
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -21402,11 +20848,11 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    8,
+                    7,
                     19
                 ],
                 "starting_traveler": null,
@@ -21426,12 +20872,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    14,
-                    17
+                    15,
+                    18
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -21450,7 +20896,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -21474,11 +20920,11 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    14,
+                    17,
                     12
                 ],
                 "starting_traveler": null,
@@ -21501,10 +20947,7 @@
                 "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    10,
-                    7
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
@@ -21514,15 +20957,10 @@
                 "level": 5,
                 "klass": "Orc_Thrower",
                 "faction": "Orc",
-                "starting_items": [
-                    [
-                        "Rock",
-                        false
-                    ]
-                ],
+                "starting_items": [],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -21538,15 +20976,10 @@
                 "level": 5,
                 "klass": "Orc_Thrower",
                 "faction": "Orc",
-                "starting_items": [
-                    [
-                        "Rock",
-                        false
-                    ]
-                ],
+                "starting_items": [],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -21651,11 +21084,1582 @@
                 ],
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "imp_5",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    20,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "imp_6",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    21
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "imp_7",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "imp_8",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "imp_9",
+                "variant": null,
+                "level": 10,
+                "klass": "Imp",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    3,
+                    16
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Ralke",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Kothan",
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Implevon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Impaler",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Grubbak",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Orgonon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "r1_orc_1",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r1_orc_2",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r1_orc_3",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Mage",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "ArcaneSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r2_orc_1",
+                "variant": null,
+                "level": 15,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r2_orc_2",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Thrower",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Rock",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r2_orc_3",
+                "variant": null,
+                "level": 15,
+                "klass": "Imp",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r2_orc_4",
+                "variant": null,
+                "level": 15,
+                "klass": "Imp",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [],
-        "unit_groups": [],
+        "unit_groups": [
+            {
+                "nid": "party",
+                "units": [
+                    "Orgonon",
+                    "Grubbak",
+                    "Impaler",
+                    "Implevon",
+                    "Ralke",
+                    "Stark"
+                ],
+                "positions": {
+                    "Ralke": [
+                        8,
+                        14
+                    ],
+                    "Impaler": [
+                        8,
+                        13
+                    ],
+                    "Grubbak": [
+                        8,
+                        15
+                    ],
+                    "Implevon": [
+                        7,
+                        13
+                    ],
+                    "Stark": [
+                        7,
+                        14
+                    ],
+                    "Orgonon": [
+                        7,
+                        15
+                    ]
+                }
+            },
+            {
+                "nid": "r1",
+                "units": [
+                    "r1_orc_1",
+                    "r1_orc_2",
+                    "r1_orc_3"
+                ],
+                "positions": {
+                    "r1_orc_1": [
+                        12,
+                        14
+                    ],
+                    "r1_orc_2": [
+                        13,
+                        13
+                    ],
+                    "r1_orc_3": [
+                        13,
+                        15
+                    ]
+                }
+            },
+            {
+                "nid": "r2",
+                "units": [
+                    "r2_orc_4",
+                    "r2_orc_3",
+                    "r2_orc_2",
+                    "r2_orc_1"
+                ],
+                "positions": {
+                    "r2_orc_2": [
+                        14,
+                        14
+                    ],
+                    "r2_orc_1": [
+                        12,
+                        14
+                    ],
+                    "r2_orc_3": [
+                        13,
+                        16
+                    ],
+                    "r2_orc_4": [
+                        13,
+                        12
+                    ]
+                }
+            }
+        ],
         "ai_groups": []
+    },
+    {
+        "nid": "O4",
+        "name": "Tarran'Kan",
+        "tilemap": "tarrankan",
+        "bg_tilemap": null,
+        "party": "ChosenParty",
+        "music": {
+            "player_phase": "OrcsCalm",
+            "enemy_phase": "Orcs",
+            "boss_battle": "Boss1"
+        },
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "orc_1",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc_2",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc_3",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc_4",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc_5",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "orc_6",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc",
+                "faction": "Orc",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Beholda",
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "ogre_1",
+                "variant": null,
+                "level": 1,
+                "klass": "Ogre",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Steel_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "ogre_2",
+                "variant": null,
+                "level": 1,
+                "klass": "Ogre",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Steel_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_1",
+                "variant": null,
+                "level": 10,
+                "klass": "Monk",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_2",
+                "variant": null,
+                "level": 10,
+                "klass": "Monk",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_3",
+                "variant": null,
+                "level": 10,
+                "klass": "Monk",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_4",
+                "variant": null,
+                "level": 10,
+                "klass": "Monk",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_5",
+                "variant": null,
+                "level": 10,
+                "klass": "Monk",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "soldier_1",
+                "variant": null,
+                "level": 5,
+                "klass": "Soldier",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "soldier_2",
+                "variant": null,
+                "level": 5,
+                "klass": "Soldier",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "soldier_3",
+                "variant": null,
+                "level": 5,
+                "klass": "Soldier",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "soldier_4",
+                "variant": null,
+                "level": 5,
+                "klass": "Soldier",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Angelica",
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "priestess_1",
+                "variant": null,
+                "level": 10,
+                "klass": "Priestess",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "DivineSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Heal",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "priestess_2",
+                "variant": null,
+                "level": 10,
+                "klass": "Priestess",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "DivineSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Heal",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "priestess_3",
+                "variant": null,
+                "level": 10,
+                "klass": "Priestess",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "DivineSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Heal",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "pala_1",
+                "variant": null,
+                "level": 1,
+                "klass": "Paladin",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "Silver_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "pala_2",
+                "variant": null,
+                "level": 1,
+                "klass": "Paladin",
+                "faction": "Church",
+                "starting_items": [
+                    [
+                        "Silver_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Grubbak",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Impaler",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    16
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Implevon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Orgonon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Ralke",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    13
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "suc_1",
+                "variant": null,
+                "level": 6,
+                "klass": "Suc_foe_1",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "suc_2",
+                "variant": null,
+                "level": 6,
+                "klass": "Suc_foe_1",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "suc_3",
+                "variant": null,
+                "level": 6,
+                "klass": "Suc_foe_1",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "suc_4",
+                "variant": null,
+                "level": 6,
+                "klass": "Suc_foe_1",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "suc_dance_1",
+                "variant": null,
+                "level": 6,
+                "klass": "Suc_dancer",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Dance_enemy",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "Enemy_dancer"
+                ],
+                "team": "enemy2",
+                "ai": "Dancer_enemy",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "elite_suc_1",
+                "variant": null,
+                "level": 8,
+                "klass": "Suc_foe_2",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "elite_suc_2",
+                "variant": null,
+                "level": 8,
+                "klass": "Suc_foe_2",
+                "faction": "Cutthroat",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "ally_1",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Elite",
+                "faction": "AlliedSoldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "a",
+                "starting_position": [
+                    11,
+                    15
+                ],
+                "starting_traveler": "ally_5",
+                "generic": true
+            },
+            {
+                "nid": "ally_2",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Elite",
+                "faction": "AlliedSoldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "a",
+                "starting_position": [
+                    12,
+                    15
+                ],
+                "starting_traveler": "ally_6",
+                "generic": true
+            },
+            {
+                "nid": "ally_3",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Elite",
+                "faction": "AlliedSoldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "a",
+                "starting_position": [
+                    14,
+                    15
+                ],
+                "starting_traveler": "ally_7",
+                "generic": true
+            },
+            {
+                "nid": "ally_4",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Elite",
+                "faction": "AlliedSoldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "a",
+                "starting_position": [
+                    15,
+                    15
+                ],
+                "starting_traveler": "ally_8",
+                "generic": true
+            },
+            {
+                "nid": "ally_5",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Elite",
+                "faction": "AlliedSoldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "ally_6",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Elite",
+                "faction": "AlliedSoldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "ally_7",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Elite",
+                "faction": "AlliedSoldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "ally_8",
+                "variant": null,
+                "level": 10,
+                "klass": "Orc_Elite",
+                "faction": "AlliedSoldier",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            }
+        ],
+        "regions": [
+            {
+                "nid": "chest",
+                "region_type": "event",
+                "position": [
+                    20,
+                    5
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Chest",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false,
+                "hide_time": false
+            }
+        ],
+        "unit_groups": [
+            {
+                "nid": "church1",
+                "units": [
+                    "monk_1",
+                    "monk_2",
+                    "monk_3",
+                    "monk_4",
+                    "monk_5",
+                    "soldier_1",
+                    "soldier_2",
+                    "soldier_3",
+                    "soldier_4",
+                    "Angelica",
+                    "priestess_1",
+                    "priestess_2",
+                    "priestess_3"
+                ],
+                "positions": {
+                    "Angelica": [
+                        8,
+                        13
+                    ],
+                    "priestess_1": [
+                        5,
+                        12
+                    ],
+                    "priestess_2": [
+                        5,
+                        13
+                    ],
+                    "priestess_3": [
+                        5,
+                        14
+                    ],
+                    "monk_2": [
+                        3,
+                        12
+                    ],
+                    "monk_3": [
+                        3,
+                        13
+                    ],
+                    "monk_5": [
+                        3,
+                        15
+                    ],
+                    "soldier_1": [
+                        7,
+                        11
+                    ],
+                    "soldier_2": [
+                        7,
+                        12
+                    ],
+                    "soldier_3": [
+                        7,
+                        14
+                    ],
+                    "soldier_4": [
+                        7,
+                        15
+                    ],
+                    "monk_4": [
+                        3,
+                        14
+                    ],
+                    "monk_1": [
+                        3,
+                        11
+                    ]
+                }
+            },
+            {
+                "nid": "suc1",
+                "units": [
+                    "elite_suc_2",
+                    "elite_suc_1",
+                    "suc_dance_1",
+                    "suc_4",
+                    "suc_3",
+                    "suc_2",
+                    "suc_1",
+                    "Beholda"
+                ],
+                "positions": {
+                    "Beholda": [
+                        18,
+                        13
+                    ],
+                    "suc_1": [
+                        22,
+                        14
+                    ],
+                    "suc_2": [
+                        21,
+                        11
+                    ],
+                    "suc_3": [
+                        22,
+                        12
+                    ],
+                    "suc_4": [
+                        21,
+                        15
+                    ],
+                    "suc_dance_1": [
+                        21,
+                        13
+                    ],
+                    "elite_suc_1": [
+                        19,
+                        14
+                    ],
+                    "elite_suc_2": [
+                        19,
+                        12
+                    ]
+                }
+            },
+            {
+                "nid": "pt",
+                "units": [
+                    "Grubbak",
+                    "Impaler",
+                    "Implevon",
+                    "Orgonon",
+                    "Ralke",
+                    "ally_1",
+                    "ally_2",
+                    "ally_3",
+                    "ally_4"
+                ],
+                "positions": {
+                    "Grubbak": [
+                        13,
+                        11
+                    ],
+                    "Impaler": [
+                        12,
+                        14
+                    ],
+                    "Implevon": [
+                        13,
+                        15
+                    ],
+                    "Orgonon": [
+                        14,
+                        14
+                    ],
+                    "Ralke": [
+                        13,
+                        13
+                    ],
+                    "ally_1": [
+                        11,
+                        13
+                    ],
+                    "ally_2": [
+                        10,
+                        14
+                    ],
+                    "ally_3": [
+                        15,
+                        13
+                    ],
+                    "ally_4": [
+                        16,
+                        14
+                    ]
+                }
+            },
+            {
+                "nid": "pt2",
+                "units": [
+                    "Grubbak",
+                    "Impaler",
+                    "Implevon",
+                    "Orgonon",
+                    "Ralke",
+                    "ally_1",
+                    "ally_2",
+                    "ally_3",
+                    "ally_4"
+                ],
+                "positions": {
+                    "Grubbak": [
+                        12,
+                        26
+                    ],
+                    "Impaler": [
+                        12,
+                        26
+                    ],
+                    "Implevon": [
+                        13,
+                        26
+                    ],
+                    "Orgonon": [
+                        11,
+                        26
+                    ],
+                    "Ralke": [
+                        12,
+                        26
+                    ],
+                    "ally_1": [
+                        12,
+                        25
+                    ],
+                    "ally_2": [
+                        12,
+                        25
+                    ],
+                    "ally_3": [
+                        12,
+                        25
+                    ],
+                    "ally_4": [
+                        12,
+                        25
+                    ]
+                }
+            }
+        ],
+        "ai_groups": [
+            {
+                "nid": "a",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "Oalgo",
@@ -26789,7 +27793,7 @@
                 "generic": true
             },
             {
-                "nid": "Iris",
+                "nid": "Iris2",
                 "team": "player",
                 "ai": "None",
                 "roam_ai": null,
@@ -26958,7 +27962,7 @@
                 "nid": "ship",
                 "units": [
                     "Simon",
-                    "Iris",
+                    "Iris2",
                     "Megail",
                     "Riala",
                     "Balia",
@@ -26985,7 +27989,7 @@
                         15,
                         16
                     ],
-                    "Iris": [
+                    "Iris2": [
                         15,
                         17
                     ]
@@ -26999,7 +28003,7 @@
                     "Balia",
                     "Riala",
                     "Megail",
-                    "Iris"
+                    "Iris2"
                 ],
                 "positions": {
                     "Simon": [
@@ -27022,7 +28026,7 @@
                         17,
                         18
                     ],
-                    "Iris": [
+                    "Iris2": [
                         17,
                         18
                     ]
@@ -27032,10 +28036,6 @@
         "ai_groups": [
             {
                 "nid": "cav",
-                "trigger_threshold": 1
-            },
-            {
-                "nid": "",
                 "trigger_threshold": 1
             }
         ]

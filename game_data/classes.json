@@ -16861,7 +16861,7 @@
                 null
             ],
             "Bow": [
-                false,
+                true,
                 0,
                 null
             ],
@@ -17241,6 +17241,21 @@
                 null
             ],
             "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
                 false,
                 0,
                 null
@@ -21083,7 +21098,7 @@
         "name": "Wagon",
         "desc": "",
         "tier": 1,
-        "movement_group": "Light Cav",
+        "movement_group": "Heavy Cav",
         "promotes_from": null,
         "turns_into": [],
         "tags": [],
