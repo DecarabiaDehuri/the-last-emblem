@@ -1305,5 +1305,181 @@
         "priority": 20,
         "offense_bias": 2,
         "roam_ai": false
+    },
+    {
+        "nid": "OrcProtectAllyL",
+        "behaviours": [
+            {
+                "action": "Move_to",
+                "target": "Ally",
+                "target_spec": [
+                    "Tag",
+                    "OrcprotectL"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": null,
+                "view_range": -2,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Move_to",
+                "target": "Unit",
+                "target_spec": [
+                    "Tag",
+                    "OrcprotectL"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2,
+        "roam_ai": false
+    },
+    {
+        "nid": "OrcProtectAllyC",
+        "behaviours": [
+            {
+                "action": "Move_to",
+                "target": "Ally",
+                "target_spec": [
+                    "Tag",
+                    "OrcprotectC"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": null,
+                "view_range": -2,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Move_to",
+                "target": "Unit",
+                "target_spec": [
+                    "Tag",
+                    "OrcprotectC"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2,
+        "roam_ai": false
+    },
+    {
+        "nid": "OrcProtectAllyR",
+        "behaviours": [
+            {
+                "action": "Move_to",
+                "target": "Ally",
+                "target_spec": [
+                    "Tag",
+                    "OrcprotectR"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": null,
+                "view_range": -2,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Move_to",
+                "target": "Unit",
+                "target_spec": [
+                    "Tag",
+                    "OrcprotectR"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2,
+        "roam_ai": false
+    },
+    {
+        "nid": "OrcProtectAlly",
+        "behaviours": [
+            {
+                "action": "Move_to",
+                "target": "Ally",
+                "target_spec": [
+                    "Tag",
+                    "Orcprotect"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": null,
+                "view_range": -2,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Move_to",
+                "target": "Unit",
+                "target_spec": [
+                    "Tag",
+                    "Orcprotect"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2,
+        "roam_ai": false
     }
 ]

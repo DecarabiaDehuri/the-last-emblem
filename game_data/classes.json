@@ -6352,6 +6352,177 @@
         "fields": []
     },
     {
+        "nid": "Zirantian_pirate",
+        "name": "Zir. Pirate",
+        "desc": "Untrained but fanatical combatant.",
+        "tier": 1,
+        "movement_group": "Pirates",
+        "promotes_from": null,
+        "turns_into": [
+            "Warrior",
+            "Berserker"
+        ],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 19,
+            "STR": 4,
+            "MAG": 0,
+            "SKL": 2,
+            "SPD": 6,
+            "LCK": 5,
+            "DEF": 3,
+            "RES": 0,
+            "CON": 10,
+            "MOV": 5,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 50,
+            "MAG": 0,
+            "SKL": 35,
+            "SPD": 25,
+            "LCK": 25,
+            "DEF": 10,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 2,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 1,
+            "LCK": 0,
+            "DEF": 1,
+            "RES": 0,
+            "CON": 2,
+            "MOV": -99,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 20,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Deadly_Blow"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                true,
+                31,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Pirate",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Brigand (U) Lizard Wildling {Tarantino500}-stand",
+        "combat_anim_nid": "Zirantian_pirate",
+        "fields": []
+    },
+    {
         "nid": "Berserker",
         "name": "Berserker",
         "desc": "Devotees of the axe. Relentless savages that deliver devastating stikes.",
@@ -6517,6 +6688,174 @@
         ],
         "map_sprite_nid": "Berserker",
         "combat_anim_nid": "Berserker",
+        "fields": []
+    },
+    {
+        "nid": "Zirantian_pirate_Captain",
+        "name": "Zir. Captain",
+        "desc": "Devotees of the axe. Relentless savages that deliver devastating stikes.",
+        "tier": 2,
+        "movement_group": "Pirates",
+        "promotes_from": "Pirate",
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 24,
+            "STR": 7,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 7,
+            "LCK": 0,
+            "DEF": 6,
+            "RES": 0,
+            "CON": 13,
+            "MOV": 6,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 50,
+            "MAG": 0,
+            "SKL": 35,
+            "SPD": 25,
+            "LCK": 15,
+            "DEF": 10,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 4,
+            "STR": 1,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 0,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 3,
+            "MOV": -99,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 20,
+            "SKL": 29,
+            "SPD": 28,
+            "LCK": 30,
+            "DEF": 23,
+            "RES": 21,
+            "CON": 25,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Deadly_Revenge"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                true,
+                40,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Berserker",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Berserker (M) Lizardzerker Axe {Seliost1}-stand",
+        "combat_anim_nid": "Zirantian_pirate_Captain",
         "fields": []
     },
     {
@@ -8211,7 +8550,7 @@
             0
         ],
         "map_sprite_nid": "War Cleric (F) Axe {Der}-stand",
-        "combat_anim_nid": "InquisitorMonica",
+        "combat_anim_nid": "Inquisitor",
         "fields": []
     },
     {
@@ -10733,6 +11072,21 @@
                 false,
                 0,
                 null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sword_Wight",
@@ -10885,6 +11239,21 @@
                 false,
                 0,
                 null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sword_Bonewalker",
@@ -11032,6 +11401,21 @@
                 null
             ],
             "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
                 false,
                 0,
                 null
@@ -14133,6 +14517,21 @@
                 true,
                 0,
                 null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -14297,6 +14696,181 @@
         ],
         "map_sprite_nid": "Lamia (F) {Dutch Introvert}-stand",
         "combat_anim_nid": "Lamia",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Beholda",
+        "name": "Elite Succubus",
+        "desc": "Elite Succubi who have dangerous abilities.",
+        "tier": 1,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Flying",
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 4,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 12,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 60,
+            "MAG": 70,
+            "SKL": 60,
+            "SPD": 50,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 50,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Flying"
+            ],
+            [
+                1,
+                "Lust_Death_attack"
+            ],
+            [
+                9,
+                "DivineBreaker"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                71,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                71,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                true,
+                71,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Succubus {SkidMarc25}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "EliteSuc-stand",
+        "combat_anim_nid": "Suc_foe_2Beholda",
         "fields": []
     },
     {
@@ -15099,7 +15673,7 @@
         ],
         "max_level": 20,
         "bases": {
-            "HP": 10,
+            "HP": 15,
             "STR": 5,
             "MAG": 0,
             "SKL": 3,
@@ -15111,8 +15685,8 @@
             "MOV": 4
         },
         "growths": {
-            "HP": 70,
-            "STR": 70,
+            "HP": 80,
+            "STR": 60,
             "MAG": 25,
             "SKL": 25,
             "SPD": 40,
@@ -15274,7 +15848,7 @@
         ],
         "max_level": 20,
         "bases": {
-            "HP": 15,
+            "HP": 20,
             "STR": 7,
             "MAG": 0,
             "SKL": 6,
@@ -15286,8 +15860,8 @@
             "MOV": 4
         },
         "growths": {
-            "HP": 70,
-            "STR": 70,
+            "HP": 80,
+            "STR": 60,
             "MAG": 25,
             "SKL": 30,
             "SPD": 45,
@@ -17738,6 +18312,21 @@
                 null
             ],
             "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
                 false,
                 0,
                 null
@@ -21001,12 +21590,20 @@
         "turns_into": [],
         "tags": [],
         "max_level": 20,
-        "bases": {},
+        "bases": {
+            "HP": 1,
+            "MOV": 1
+        },
         "growths": {},
         "growth_bonus": {},
         "promotion": {},
         "max_stats": {},
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Unselectable"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,

@@ -10519,6 +10519,26 @@
         ]
     },
     {
+        "nid": "Unselectable",
+        "name": "Unselectable",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Berserk_dancer",
         "name": "Berserk",
         "desc": "Unit is confused and can no longer tell friend from foe.",
@@ -23483,6 +23503,26 @@
         ]
     },
     {
+        "nid": "CommandOrcs",
+        "name": "Command Orcs",
+        "desc": "Grubbak can shout commands to allied orcs.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            52
+        ],
+        "components": [
+            [
+                "ability",
+                "CommandOrcs"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Orc_Support",
         "name": "Support",
         "desc": "Orgonon refreshes another ally, letting them act again.",
@@ -23521,6 +23561,39 @@
                 null
             ]
         ]
+    },
+    {
+        "nid": "left_battalion",
+        "name": "Skull",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            49
+        ],
+        "components": []
+    },
+    {
+        "nid": "center_battalion",
+        "name": "Fancy",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            29
+        ],
+        "components": []
+    },
+    {
+        "nid": "right_battalion",
+        "name": "Tusk",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            43
+        ],
+        "components": []
     },
     {
         "nid": "testPOSTCOMBATDMG",
