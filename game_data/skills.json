@@ -24683,6 +24683,10 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "hide_aura",
+                null
             ]
         ]
     },
@@ -24696,10 +24700,6 @@
             49
         ],
         "components": [
-            [
-                "time",
-                1
-            ],
             [
                 "negative",
                 null
@@ -24718,7 +24718,7 @@
             ],
             [
                 "combat_condition",
-                "target.klass == 'Pirate'"
+                "target.klass == 'Warden'"
             ],
             [
                 "combat_flickering_tint",

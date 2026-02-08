@@ -7980,6 +7980,306 @@
         "fields": []
     },
     {
+        "nid": "Dobos",
+        "name": "Dobos",
+        "desc": "",
+        "variant": "",
+        "level": 5,
+        "klass": "Knight",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 25,
+            "STR": 6,
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 1,
+            "LCK": 0,
+            "DEF": 9,
+            "RES": 1,
+            "CON": 13,
+            "MOV": 4
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Lance",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ],
+            [
+                "Axereaver",
+                true
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Lance": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Armour (Version 3) {Sphealnuke} [F2E]",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Kothan",
+        "name": "Kothan",
+        "desc": "",
+        "variant": "",
+        "level": 5,
+        "klass": "Orc_Elite",
+        "tags": [
+            "Boss",
+            "Orc"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 9,
+            "SPD": 4,
+            "LCK": 6,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 12,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 70,
+            "MAG": 25,
+            "SKL": 30,
+            "SPD": 45,
+            "LCK": 30,
+            "DEF": 45,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Steel_Axe",
+                false
+            ],
+            [
+                "Hand_Axe",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Aggressive_Attack_skill"
+            ],
+            [
+                1,
+                "Piercing_Attack_skill"
+            ],
+            [
+                1,
+                "Defensive_Attack_skill"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Axe": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Kothan",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Beholda",
+        "name": "Beholda",
+        "desc": "",
+        "variant": "",
+        "level": 12,
+        "klass": "Suc_Beholda",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 30,
+            "STR": 4,
+            "MAG": 12,
+            "SKL": 7,
+            "SPD": 8,
+            "LCK": 14,
+            "DEF": 7,
+            "RES": 8,
+            "CON": 12,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 60,
+            "MAG": 70,
+            "SKL": 60,
+            "SPD": 50,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 50,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "LustSpells_T2",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Dark": [
+                false,
+                121,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "SucElite",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Angelica",
+        "name": "Angelica",
+        "desc": "",
+        "variant": "",
+        "level": 8,
+        "klass": "Inquisitor",
+        "tags": [
+            "Boss",
+            "Female"
+        ],
+        "bases": {
+            "HP": 30,
+            "STR": 11,
+            "MAG": 12,
+            "SKL": 11,
+            "SPD": 6,
+            "LCK": 8,
+            "DEF": 8,
+            "RES": 9,
+            "CON": 13,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Holy_Axe",
+                false
+            ],
+            [
+                "DivineSpells_dmg",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Axe": [
+                false,
+                121,
+                null
+            ],
+            "Light": [
+                false,
+                121,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{WhatIsAnAubin} [F2E] OC 5",
+        "affinity": null,
+        "fields": []
+    },
+    {
+        "nid": "Bauron",
+        "name": "Bauron",
+        "desc": "",
+        "variant": "Armor",
+        "level": 15,
+        "klass": "Ogre",
+        "tags": [
+            "Boss",
+            "Monster"
+        ],
+        "bases": {
+            "HP": 40,
+            "STR": 13,
+            "MAG": 3,
+            "SKL": 11,
+            "SPD": 6,
+            "LCK": 4,
+            "DEF": 11,
+            "RES": 8,
+            "CON": 16,
+            "MOV": 4
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Tomahawk",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Stun_attack"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Axe": [
+                false,
+                181,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Orc",
+        "affinity": "None",
+        "fields": []
+    },
+    {
         "nid": "Seyta",
         "name": "Seyta",
         "desc": "",
@@ -8924,302 +9224,99 @@
         "fields": []
     },
     {
-        "nid": "Dobos",
-        "name": "Dobos",
-        "desc": "",
-        "variant": "",
-        "level": 5,
-        "klass": "Knight",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 25,
-            "STR": 6,
-            "MAG": 0,
-            "SKL": 3,
-            "SPD": 1,
-            "LCK": 0,
-            "DEF": 9,
-            "RES": 1,
-            "CON": 13,
-            "MOV": 4
-        },
-        "growths": {},
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Iron_Lance",
-                false
-            ],
-            [
-                "Loot_Bag",
-                true
-            ],
-            [
-                "Axereaver",
-                true
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Lance": [
-                false,
-                71,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Armour (Version 3) {Sphealnuke} [F2E]",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Beholda",
-        "name": "Beholda",
-        "desc": "",
-        "variant": "",
-        "level": 12,
-        "klass": "Suc_Beholda",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 30,
-            "STR": 4,
-            "MAG": 12,
-            "SKL": 7,
-            "SPD": 8,
-            "LCK": 14,
-            "DEF": 7,
-            "RES": 8,
-            "CON": 12,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 80,
-            "STR": 60,
-            "MAG": 70,
-            "SKL": 60,
-            "SPD": 50,
-            "LCK": 50,
-            "DEF": 40,
-            "RES": 50,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "LustSpells_T2",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Dark": [
-                false,
-                121,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "SucElite",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Angelica",
-        "name": "Angelica",
+        "nid": "Vivian",
+        "name": "Vivian",
         "desc": "",
         "variant": "",
         "level": 8,
-        "klass": "Inquisitor",
+        "klass": "Bruiser",
         "tags": [
             "Boss",
             "Female"
         ],
         "bases": {
-            "HP": 30,
-            "STR": 11,
-            "MAG": 12,
-            "SKL": 11,
+            "HP": 27,
+            "STR": 8,
+            "MAG": 2,
+            "SKL": 12,
             "SPD": 6,
-            "LCK": 8,
-            "DEF": 8,
-            "RES": 9,
-            "CON": 13,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
+            "LCK": 12,
+            "DEF": 7,
+            "RES": 5,
+            "CON": 9,
             "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Holy_Axe",
-                false
-            ],
-            [
-                "DivineSpells_dmg",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Axe": [
-                false,
-                121,
-                null
-            ],
-            "Light": [
-                false,
-                121,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "{WhatIsAnAubin} [F2E] OC 5",
-        "affinity": null,
-        "fields": []
-    },
-    {
-        "nid": "Ogreintro",
-        "name": "Khad",
-        "desc": "",
-        "variant": "Armor",
-        "level": 15,
-        "klass": "Ogre",
-        "tags": [
-            "Boss",
-            "Monster"
-        ],
-        "bases": {
-            "HP": 50,
-            "STR": 13,
-            "MAG": 3,
-            "SKL": 11,
-            "SPD": 6,
-            "LCK": 4,
-            "DEF": 11,
-            "RES": 8,
-            "CON": 16,
-            "MOV": 4
         },
         "growths": {},
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Tomahawk",
+                "Steel_Blade",
                 false
-            ]
-        ],
-        "learned_skills": [
+            ],
             [
-                1,
-                "Stun_attack"
+                "Loot_Bag",
+                true
             ]
         ],
+        "learned_skills": [],
         "unit_notes": [],
         "wexp_gain": {
-            "Axe": [
-                false,
-                181,
-                null
-            ]
-        },
-        "alternate_classes": [],
-        "portrait_nid": "Orc",
-        "affinity": "None",
-        "fields": []
-    },
-    {
-        "nid": "Kothan",
-        "name": "Kothan",
-        "desc": "",
-        "variant": "",
-        "level": 5,
-        "klass": "Orc_Elite",
-        "tags": [
-            "Boss",
-            "Orc"
-        ],
-        "bases": {
-            "HP": 28,
-            "STR": 9,
-            "MAG": 0,
-            "SKL": 9,
-            "SPD": 4,
-            "LCK": 6,
-            "DEF": 6,
-            "RES": 4,
-            "CON": 12,
-            "MOV": 5
-        },
-        "growths": {
-            "HP": 70,
-            "STR": 70,
-            "MAG": 25,
-            "SKL": 30,
-            "SPD": 45,
-            "LCK": 30,
-            "DEF": 45,
-            "RES": 35,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "Steel_Axe",
-                false
-            ],
-            [
-                "Hand_Axe",
-                false
-            ]
-        ],
-        "learned_skills": [
-            [
-                1,
-                "Aggressive_Attack_skill"
-            ],
-            [
-                1,
-                "Piercing_Attack_skill"
-            ],
-            [
-                1,
-                "Defensive_Attack_skill"
-            ]
-        ],
-        "unit_notes": [],
-        "wexp_gain": {
-            "Axe": [
+            "Sword": [
                 false,
                 71,
                 null
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Kothan",
+        "portrait_nid": "{Koni} OC 4",
+        "affinity": "None",
+        "fields": []
+    },
+    {
+        "nid": "Gynu",
+        "name": "Gynu",
+        "desc": "",
+        "variant": "",
+        "level": 8,
+        "klass": "Engineer",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 27,
+            "STR": 8,
+            "MAG": 2,
+            "SKL": 12,
+            "SPD": 6,
+            "LCK": 12,
+            "DEF": 5,
+            "RES": 7,
+            "CON": 9,
+            "MOV": 0
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Iron_Bow",
+                false
+            ],
+            [
+                "Loot_Bag",
+                true
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                71,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{MeatofJustice} OC 36",
         "affinity": "None",
         "fields": []
     },
