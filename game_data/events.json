@@ -17262,7 +17262,7 @@
     {
         "name": "Intro1 lore",
         "trigger": "level_start",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -17345,7 +17345,7 @@
             "wait;1500",
             "prep;t;Combat Preparation"
         ],
-        "nid": "Intro7 Intro1 lore"
+        "nid": "Intro8 Intro1 lore"
     },
     {
         "name": "Vhala triple shot",
@@ -17381,7 +17381,7 @@
     {
         "name": "Board ship deprecated",
         "trigger": null,
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -17399,7 +17399,7 @@
             "else",
             "end"
         ],
-        "nid": "Intro7 Board ship deprecated"
+        "nid": "Intro8 Board ship deprecated"
     },
     {
         "name": "Check boss death",
@@ -17908,7 +17908,7 @@
     {
         "name": "Simon reinforcements deprecated",
         "trigger": null,
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "game.level_vars['simoncoming'] == 1",
         "commands": [],
         "only_once": false,
@@ -17931,12 +17931,12 @@
             "remove_portrait;Simon",
             "wait;500"
         ],
-        "nid": "Intro7 Simon reinforcements deprecated"
+        "nid": "Intro8 Simon reinforcements deprecated"
     },
     {
         "name": "Simon reinforc setup",
         "trigger": "unit_wait",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "any(game.level.regions.get('simon').contains(unit.position) for unit in game.get_units_in_party()) == True",
         "commands": [],
         "only_once": false,
@@ -17945,12 +17945,12 @@
             "#simon chega proximo turno",
             "level_var;simoncoming;1"
         ],
-        "nid": "Intro7 Simon reinforc setup"
+        "nid": "Intro8 Simon reinforc setup"
     },
     {
         "name": "Beef1",
         "trigger": "turn_change",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "game.turncount == 2",
         "commands": [],
         "only_once": false,
@@ -17994,12 +17994,12 @@
             "remove_portrait;Naro",
             "music_fade_back"
         ],
-        "nid": "Intro7 Beef1"
+        "nid": "Intro8 Beef1"
     },
     {
         "name": "Beef2",
         "trigger": "turn_change",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "game.turncount == 3",
         "commands": [],
         "only_once": false,
@@ -18051,7 +18051,7 @@
             "else",
             "end"
         ],
-        "nid": "Intro7 Beef2"
+        "nid": "Intro8 Beef2"
     },
     {
         "name": "Simon incubus assault",
@@ -18181,7 +18181,7 @@
     {
         "name": "Seize castle south",
         "trigger": "Seize",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "region.nid == 'gate1'",
         "commands": [],
         "only_once": false,
@@ -18192,12 +18192,12 @@
             "inc_level_var;seizes;1",
             ""
         ],
-        "nid": "Intro7 Seize castle south"
+        "nid": "Intro8 Seize castle south"
     },
     {
         "name": "Boss buff",
         "trigger": "combat_end",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "('Boss' in unit.tags or 'Boss' in unit2.tags) and game.level_vars['bossbuffed'] == 0",
         "commands": [],
         "only_once": false,
@@ -18225,7 +18225,7 @@
             "    level_var;bossbuffed;1",
             "end"
         ],
-        "nid": "Intro7 Boss buff"
+        "nid": "Intro8 Boss buff"
     },
     {
         "name": "Supply items",
@@ -18285,7 +18285,7 @@
     {
         "name": "Seize castle north",
         "trigger": "Seize",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "region.nid == 'gate2'",
         "commands": [],
         "only_once": false,
@@ -18293,12 +18293,12 @@
         "_source": [
             "inc_level_var;seizes;1"
         ],
-        "nid": "Intro7 Seize castle north"
+        "nid": "Intro8 Seize castle north"
     },
     {
         "name": "Both seizes VICTORY",
         "trigger": "unit_wait",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -18313,12 +18313,12 @@
             "else",
             "end"
         ],
-        "nid": "Intro7 Both seizes VICTORY"
+        "nid": "Intro8 Both seizes VICTORY"
     },
     {
         "name": "Merc trap activate",
         "trigger": "unit_wait",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "any(game.level.regions.get('merctrap').contains(unit.position) for unit in game.get_units_in_party()) == True",
         "commands": [],
         "only_once": true,
@@ -18339,12 +18339,12 @@
             "else",
             "end"
         ],
-        "nid": "Intro7 Merc trap activate"
+        "nid": "Intro8 Merc trap activate"
     },
     {
         "name": "Village visit",
         "trigger": "Visit",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "region.nid == 'village'",
         "commands": [],
         "only_once": false,
@@ -18366,7 +18366,7 @@
             "s;SoldierBlue;Your loss.",
             "end"
         ],
-        "nid": "Intro7 Village visit"
+        "nid": "Intro8 Village visit"
     },
     {
         "name": "Boss buffed set to 0 start chapter",
@@ -20466,7 +20466,7 @@
     {
         "name": "Players intro deprecated",
         "trigger": null,
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -20501,12 +20501,12 @@
             "add_portrait;Yarra;Right;;Smile,CloseEyes",
             "s;Yarra;Let's wrap this up quickly to return home and have a big, nice bath!"
         ],
-        "nid": "Intro7 Players intro deprecated"
+        "nid": "Intro8 Players intro deprecated"
     },
     {
         "name": "Mansion visit",
         "trigger": "Visit",
-        "level_nid": "Intro7",
+        "level_nid": "Intro8",
         "condition": "region.nid == 'mansion'",
         "commands": [],
         "only_once": true,
@@ -20517,7 +20517,7 @@
             "wait;500",
             "give_item;{unit};Loot_Bag"
         ],
-        "nid": "Intro7 Mansion visit"
+        "nid": "Intro8 Mansion visit"
     },
     {
         "name": "New Event_1",
@@ -20949,7 +20949,7 @@
     {
         "name": "Village destroy game over",
         "trigger": "Destructible",
-        "level_nid": "Intro6",
+        "level_nid": "Intro6scrapped",
         "condition": "True",
         "commands": [],
         "only_once": true,
@@ -20963,12 +20963,12 @@
             "    lose_game",
             "end"
         ],
-        "nid": "Intro6 Village destroy game over"
+        "nid": "Intro6scrapped Village destroy game over"
     },
     {
         "name": "Bruiser arrives",
         "trigger": "turn_change",
-        "level_nid": "Intro6",
+        "level_nid": "Intro6scrapped",
         "condition": "game.level_vars['bruiser'] == 1",
         "commands": [],
         "only_once": true,
@@ -21012,12 +21012,12 @@
             "flicker_cursor;11,10",
             "wait;300"
         ],
-        "nid": "Intro6 Bruiser arrives"
+        "nid": "Intro6scrapped Bruiser arrives"
     },
     {
         "name": "activate bruiser",
         "trigger": "unit_wait",
-        "level_nid": "Intro6",
+        "level_nid": "Intro6scrapped",
         "condition": "any(game.level.regions.get('bruiser').contains(unit.position) for unit in game.get_units_in_party())",
         "commands": [],
         "only_once": true,
@@ -21025,12 +21025,12 @@
         "_source": [
             "level_var;bruiser;1"
         ],
-        "nid": "Intro6 activate bruiser"
+        "nid": "Intro6scrapped activate bruiser"
     },
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "Intro6",
+        "level_nid": "Intro6scrapped",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -21039,12 +21039,12 @@
             "level_var;bruiser;0",
             ""
         ],
-        "nid": "Intro6 Intro"
+        "nid": "Intro6scrapped Intro"
     },
     {
         "name": "Boss activates move",
         "trigger": "turn_change",
-        "level_nid": "Intro6",
+        "level_nid": "Intro6scrapped",
         "condition": "len(game.get_enemy_units()) <= 2",
         "commands": [],
         "only_once": true,
@@ -21064,12 +21064,12 @@
             "change_music;enemy_phase;Boss1",
             "change_music;other_phase;Boss1"
         ],
-        "nid": "Intro6 Boss activates move"
+        "nid": "Intro6scrapped Boss activates move"
     },
     {
         "name": "Boss buff",
         "trigger": null,
-        "level_nid": "Intro6",
+        "level_nid": "Intro6scrapped",
         "condition": "('Boss' in unit.tags or 'Boss' in unit2.tags) and game.level_vars['bossbuffed'] == 0",
         "commands": [],
         "only_once": false,
@@ -21097,12 +21097,12 @@
             "    end",
             "end"
         ],
-        "nid": "Intro6 Boss buff"
+        "nid": "Intro6scrapped Boss buff"
     },
     {
         "name": "Enemies dead VICTORY",
         "trigger": "phase_change",
-        "level_nid": "Intro6",
+        "level_nid": "Intro6scrapped",
         "condition": "len(game.get_enemy_units()) == 0",
         "commands": [],
         "only_once": true,
@@ -21114,7 +21114,7 @@
             "wait;1000",
             "win_game"
         ],
-        "nid": "Intro6 Enemies dead VICTORY"
+        "nid": "Intro6scrapped Enemies dead VICTORY"
     },
     {
         "name": "Wynn set charges necromancy",
@@ -22080,9 +22080,9 @@
         "name": "Simon arrives",
         "trigger": "turn_change",
         "level_nid": "Intro5",
-        "condition": "game.turncount == 5",
+        "condition": "game.turncount == 5 or game.level_vars['deguilerun'] == 1",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
             "wait;300",
@@ -22109,7 +22109,12 @@
             "center_cursor;Deguile;1000",
             "add_portrait;Deguile;Left",
             "s;Deguile;Damn, so they failed to stop the ship.|It's now or never for my cavalry.{c:wait;300} Send them the signal!",
-            "wait;500"
+            "wait;500",
+            "center_cursor;24,23;1500",
+            "wait;500",
+            "spawn_group;cav;south;cav;normal;push",
+            "wait;1000",
+            "change_objective_loss;Yarra defeated,Simon defeated"
         ],
         "nid": "Intro5 Simon arrives"
     },
@@ -22137,7 +22142,7 @@
         "nid": "Intro5 Board ship"
     },
     {
-        "name": "Wagon appears",
+        "name": "Wagon + brigand spawn",
         "trigger": "turn_change",
         "level_nid": "Intro5",
         "condition": "game.turncount == 2",
@@ -22186,20 +22191,7 @@
             "flicker_cursor;fly_1",
             "wait;300",
             "change_ai;fly_1;AttackWagon",
-            "wait;500"
-        ],
-        "nid": "Intro5 Wagon appears"
-    },
-    {
-        "name": "Brigand spawn",
-        "trigger": "turn_change",
-        "level_nid": "Intro5",
-        "condition": "game.turncount == 3",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "wait;500",
+            "wait;1000",
             "center_cursor;25,24;1500",
             "wait;300",
             "add_unit;brigand;24,24;fade;push;south",
@@ -22212,7 +22204,7 @@
             "flicker_cursor;24,4",
             "wait;1000"
         ],
-        "nid": "Intro5 Brigand spawn"
+        "nid": "Intro5 Wagon + brigand spawn"
     },
     {
         "name": "Intro",
@@ -22234,7 +22226,7 @@
     },
     {
         "name": "Boss buff",
-        "trigger": null,
+        "trigger": "combat_end",
         "level_nid": "Intro5",
         "condition": "('Boss' in unit.tags or 'Boss' in unit2.tags) and game.level_vars['bossbuffed'] == 0",
         "commands": [],
@@ -22279,7 +22271,7 @@
             "add_portrait;Hilstara;Left;;CloseEyes",
             "s;Hilstara;Damn.{c:wait;300} We were careless.",
             "remove_portrait;Hilstara",
-            "if;game.current_mode.permadeath",
+            "if;game.current_mode.nid == 'Ironman'",
             "    lose_game",
             "else",
             "    activate_turnwheel;t",
@@ -22296,7 +22288,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;{unit}.team == 'other'",
+            "if;u('{unit}').team == 'other'",
             "    if;{v:destroyed} == 0",
             "        center_cursor;wagon;500",
             "        change_background;VillageGate",
@@ -22307,12 +22299,13 @@
             "        change_background;;1000",
             "        alert;The village can now be visited.",
             "        wait;500",
+            "        remove_unit;wagon;fade;fade",
             "    else",
             "        center_cursor;wagon;500",
             "        add_portrait;Man2;Left;;CloseEyes",
             "        s;Man2;No...{c:wait;300} It can't be...",
             "    end",
-            "elif;{unit}.team == 'enemy'",
+            "elif;u('{unit}').team == 'enemy'",
             "    center_cursor;brigand;500",
             "    wait;500",
             "    sound;VillageDestroyed",
@@ -22337,13 +22330,13 @@
         "_source": [
             "change_background;Village",
             "multi_add_portrait;{unit};Left;OldMan1;Right",
-            "s;OldMan1;I heard you aided the delivery of our medicine.|You can have an useful potion as our thanks.",
+            "s;OldMan1;I heard you aided the delivery of our medicine.|You can have this as my thanks.",
+            "give_item;{unit};Barrier_Pin",
             "if;game.check_alive('brigand')",
             "    s;OldMan1;Hmm? An incoming attack?|I see, thanks for the warning.{c:wait;300} We will close the gates.",
             "else",
             "end",
             "change_background",
-            "give_item;{unit};Sylvan_Draught",
             "show_layer;safe",
             "if;game.check_alive('brigand')",
             "    center_cursor;brigand;1000",
@@ -22352,23 +22345,6 @@
             "end"
         ],
         "nid": "Intro5 Visit"
-    },
-    {
-        "name": "Cavalry appears",
-        "trigger": "turn_change",
-        "level_nid": "Intro5",
-        "condition": "game.turncount == 6",
-        "commands": [],
-        "only_once": false,
-        "priority": 20,
-        "_source": [
-            "center_cursor;24,23;1500",
-            "music;Tension",
-            "wait;500",
-            "spawn_group;cav;south;cav;normal;push",
-            "wait;1000"
-        ],
-        "nid": "Intro5 Cavalry appears"
     },
     {
         "name": "Implevon bothers",
@@ -23833,7 +23809,7 @@
     {
         "name": "plano",
         "trigger": null,
-        "level_nid": "10",
+        "level_nid": "Intro7",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -23841,12 +23817,12 @@
         "_source": [
             "primeiro os dois tem que dar visit. no caso do castelo, seize. vila visit. cada um vai levar 2builders, que vao pro meio. a\u00ed eles vao ter que proteger de raids, vindo por baixo na esquerda e cima na direita"
         ],
-        "nid": "10 plano"
+        "nid": "Intro7 plano"
     },
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "10",
+        "level_nid": "Intro7",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -23882,14 +23858,12 @@
             "center_cursor;2,21",
             "transition;open",
             "wait;1000",
-            "spawn_group;ptl;south;ptl;normal",
+            "spawn_group;ptl;south;ptl;normal;closest",
             "wait;1000",
             "add_portrait;Aka;Left",
             "s;Aka;Bastards.",
             "center_cursor;14,10;1500",
             "wait;1000",
-            "add_portrait;Yarra;FarLeft",
-            "s;Yarra;Oh...",
             "center_cursor;Aka;1500",
             "add_portrait;Orcent;Right",
             "s;Orcent;I envision our plan remains mostly undiminished for now.",
@@ -23897,18 +23871,18 @@
             "wait;1000",
             "center_cursor;Aka;1500",
             "s;Aka;Yeah.{c:wait;300} We still need to secure the castle.",
-            "s;Yarra;We have company, so let's get this party starting!",
+            "s;Orcent;After that we can procure methods to restore the bridge.",
             "remove_all_portraits",
             "wait;1000",
-            "alert;Yarra must <green>Seize</> the castle.",
+            "alert;Aka must <green>Seize</> the castle.",
             "wait;1000"
         ],
-        "nid": "10 Intro"
+        "nid": "Intro7 Intro"
     },
     {
         "name": "pt right arrives",
         "trigger": "turn_change",
-        "level_nid": "10",
+        "level_nid": "Intro7",
         "condition": "game.turncount == 2",
         "commands": [],
         "only_once": true,
@@ -23933,25 +23907,414 @@
             "center_cursor;Simon;1500",
             "add_portrait;Riala;Left",
             "s;Riala;We can coordinate with the other team.",
+            "add_portrait;Yarra;Right",
+            "s;Yarra;Let me talk to them!",
             "wait;300",
             "remove_all_portraits",
             "wait;1000",
-            "alert;Simon must <green>Visit</> the village.",
+            "alert;Yarra must <green>Visit</> the village.",
             "wait;1000"
         ],
-        "nid": "10 pt right arrives"
+        "nid": "Intro7 pt right arrives"
     },
     {
         "name": "Castle visit",
-        "trigger": "Visit",
-        "level_nid": "10",
+        "trigger": "Seize",
+        "level_nid": "Intro7",
+        "condition": "region.nid == 'Seize'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "center_cursor;6,3",
+            "transition;close;1000",
+            "add_unit;builder_1;5,4;immediate;closest;fade",
+            "add_unit;builder_2;7,4;immediate;closest;fade",
+            "transition;open",
+            "wait;500",
+            "alert;Protect the builders from the enemy.",
+            "wait;500",
+            "center_cursor;builder_1",
+            "flicker_cursor;builder_1",
+            "wait;500",
+            "center_cursor;builder_2",
+            "flicker_cursor;builder_2",
+            "wait;1000",
+            "center_cursor;13,11;1500",
+            "flicker_cursor;11,10",
+            "flicker_cursor;11,11",
+            "wait;1000",
+            "level_var;buildersr;1"
+        ],
+        "nid": "Intro7 Castle visit"
+    },
+    {
+        "name": "Boss dead VICTORY",
+        "trigger": "combat_end",
+        "level_nid": "Intro5",
+        "condition": "game.check_dead('Deguile')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
+            "win_game"
+        ],
+        "nid": "Intro5 Boss dead VICTORY"
+    },
+    {
+        "name": "Deguile run",
+        "trigger": "unit_wait",
+        "level_nid": "Intro5",
+        "condition": "any_unit_in_region('close', team='player')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "music;Tension",
+            "center_cursor;Deguile;1500",
+            "wait;300",
+            "add_portrait;Deguile;Left",
+            "wait;500",
+            "s;Deguile;{tgm}...",
+            "add_portrait;SoldierRed;Right;right",
+            "bop_portrait;SoldierRed",
+            "s;SoldierRed;S-sir!{c:wait;300} The enemy is closing in!",
+            "expression;Deguile;CloseEyes",
+            "wait;800",
+            "expression;Deguile;OpenEyes",
+            "s;Deguile;Keep them occupied.{c:wait;400} Time for my hail mary.",
+            "wait;400",
+            "remove_all_portraits",
+            "wait;500",
+            "move_unit;Deguile;2,15;normal;push",
+            "wait;100",
+            "remove_unit;Deguile;swoosh;fade",
+            "wait;100",
+            "center_cursor;2,13",
+            "sound;Heaviest",
+            "add_unit;Deguile;2,13;swoosh;push;fade",
+            "wait;800",
+            "music;Halfway change loop",
+            "change_music;player_phase;Halfway change loop",
+            "change_music;enemy_phase;Halfway change loop",
+            "change_music;other_phase;Halfway change loop",
+            "alert;Deguile will now move.",
+            "wait;1000",
+            "change_ai;Deguile;Seize",
+            "for;pursue;[u.nid for u in game.get_enemy_units() if u.nid.startswith('sold')]",
+            "    change_ai;{pursue};Pursue",
+            "endf",
+            "level_var;deguilerun;1"
+        ],
+        "nid": "Intro5 Deguile run"
+    },
+    {
+        "name": "Variables",
+        "trigger": "level_start",
+        "level_nid": "Intro5",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;deguilerun;0",
+            "level_var;destroyed;0"
+        ],
+        "nid": "Intro5 Variables"
+    },
+    {
+        "name": "Attack ally deprecated",
+        "trigger": null,
+        "level_nid": "Intro6",
+        "condition": "game.check_alive('pow')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;Halta;1500",
+            "wait;500",
+            "interact_unit;Halta;pow;hit1",
+            "wait;500"
+        ],
+        "nid": "Intro6 Attack ally deprecated"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "Intro6",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_weather;night",
+            "show_layer;towerL",
+            "show_layer;towerR",
+            "show_layer;lightC",
+            "add_weather;night",
+            "",
+            "spawn_group;ptl;west;ptl",
+            "",
+            "spawn_group;ptr;east;ptr"
+        ],
+        "nid": "Intro6 Intro"
+    },
+    {
+        "name": "Forts destroy",
+        "trigger": "unit_death",
+        "level_nid": "Intro6",
+        "condition": "unit.nid.startswith('fort')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;u('{unit}').nid == 'fortL'",
+            "    center_cursor;fortL;1500",
+            "    wait;300",
+            "    screen_shake;0",
+            "    sound;VillageDestroyed",
+            "    map_anim;Snag;{unit}",
+            "    hide_layer;towerL",
+            "    show_layer;ruinL",
+            "    screen_shake_end",
+            "    wait;500",
+            "    level_var;fortL;0",
+            "    if;{v:fortR} == 1",
+            "        wait;500",
+            "        sound;FormationSelect",
+            "        alert;Destroy the other fort this turn to stop the alarm.",
+            "    else",
+            "        sound;Item",
+            "        alert;Prevented the enemy alarm successfully.",
+            "    end",
+            "elif;u('{unit}').nid == 'fortR'",
+            "    center_cursor;fortR;1500",
+            "    wait;300",
+            "    screen_shake;0",
+            "    sound;VillageDestroyed",
+            "    map_anim;Snag;{unit}",
+            "    hide_layer;towerR",
+            "    show_layer;ruinR",
+            "    screen_shake_end",
+            "    wait;500",
+            "    level_var;fortR;0",
+            "        if;{v:fortL} == 1",
+            "        wait;500",
+            "        sound;FormationSelect",
+            "        alert;Destroy the other fort this turn to stop the alarm.",
+            "    else",
+            "        sound;Item",
+            "        alert;Prevented the enemy alarm successfully.",
+            "    end",
+            "end"
+        ],
+        "nid": "Intro6 Forts destroy"
+    },
+    {
+        "name": "Variables",
+        "trigger": "level_start",
+        "level_nid": "Intro6",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;fortL;1",
+            "level_var;fortR;1",
+            "level_var;alarmL;0",
+            "level_var;alarmR;0"
+        ],
+        "nid": "Intro6 Variables"
+    },
+    {
+        "name": "Alarm triggered",
+        "trigger": "enemy_turn_change",
+        "level_nid": "Intro6",
+        "condition": "game.level_vars['fortL'] == 0 and game.level_vars['fortR'] == 1 or game.level_vars['fortR'] == 0 and game.level_vars['fortL'] == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "music;IK attack",
+            "if;game.check_alive('fortL')",
+            "    level_var;alarmL;1",
+            "elif;game.check_alive('fortR')",
+            "    level_var;alarmR;1",
+            "end",
+            "if;{v:alarmL} == 1",
+            "    center_cursor;12,7",
+            "    map_anim;AOE_Reinforce;12,7;permanent",
+            "    add_group;alarmL;alarmL;fade;stack",
+            "    move_group;alarmL;alarmL_2;normal;push",
+            "end"
+        ],
+        "nid": "Intro6 Alarm triggered"
+    },
+    {
+        "name": "Test autolevel",
+        "trigger": "turn_change",
+        "level_nid": "Intro7",
         "condition": "True",
         "commands": [],
         "only_once": true,
         "priority": 20,
         "_source": [
-            "center_cursor;6,3"
+            "for;lvl;[u.nid for u in game.get_player_units()]",
+            "    autolevel_to;{lvl};5",
+            "endf",
+            "",
+            "for;k;[u.nid for u in game.get_enemy_units()]",
+            "    kill_unit;{k};immediate",
+            "endf"
         ],
-        "nid": "10 Castle visit"
+        "nid": "Intro7 Test autolevel"
+    },
+    {
+        "name": "Build bridge and VICTORY",
+        "trigger": "turn_change",
+        "level_nid": "Intro7",
+        "condition": "any_unit_in_region('Bridge', team='other')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;14,10",
+            "if;any_unit_in_region('left', team='other')",
+            "    if;{v:lb1} == 0",
+            "        wait;500",
+            "        sound;Weapon Push",
+            "        wait;300",
+            "        sound;Weapon Click",
+            "        wait;1000",
+            "        show_layer;lb1",
+            "        level_var;lb1;1",
+            "        wait;1000",
+            "    elif;{v:lb2} == 0",
+            "        wait;500",
+            "        sound;Weapon Push",
+            "        wait;300",
+            "        sound;Weapon Click",
+            "        wait;1000",
+            "        show_layer;lb2",
+            "        level_var;lb2;1",
+            "        wait;1000",
+            "    end",
+            "end",
+            "",
+            "if;any_unit_in_region('right', team='other')",
+            "    if;{v:rb1} == 0",
+            "        wait;500",
+            "        sound;Weapon Push",
+            "        wait;300",
+            "        sound;Weapon Click",
+            "        wait;1000",
+            "        show_layer;rb1",
+            "        level_var;rb1;1",
+            "        wait;1000",
+            "    elif;{v:rb2} == 0",
+            "        wait;500",
+            "        sound;Weapon Push",
+            "        wait;300",
+            "        sound;Weapon Click",
+            "        wait;1000",
+            "        show_layer;rb2",
+            "        level_var;rb2;1",
+            "        wait;1000",
+            "    end",
+            "end",
+            "",
+            "if;{v:lb2} == 1 and {v:rb2} == 1",
+            "    music_clear",
+            "    wait;500",
+            "    sound;Weapon Push",
+            "    wait;300",
+            "    sound;Weapon Click",
+            "    wait;1000",
+            "    sound;Level Up",
+            "    show_layer;bridge",
+            "    wait;1500",
+            "    victory_screen;Victory",
+            "    wait;1000",
+            "    win_game",
+            "end"
+        ],
+        "nid": "Intro7 Build bridge and VICTORY"
+    },
+    {
+        "name": "Village visit",
+        "trigger": "Visit",
+        "level_nid": "Intro7",
+        "condition": "region.nid == 'Visit'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;21,20",
+            "transition;close;1000",
+            "add_unit;builder_3;20,21;immediate;closest;fade",
+            "add_unit;builder_4;22,21;immediate;closest;fade",
+            "transition;open",
+            "wait;500",
+            "alert;Protect the builders from the enemy.",
+            "wait;500",
+            "center_cursor;builder_3",
+            "flicker_cursor;builder_3",
+            "wait;500",
+            "center_cursor;builder_4",
+            "flicker_cursor;builder_4",
+            "wait;1000",
+            "center_cursor;16,11;1500",
+            "flicker_cursor;16,10",
+            "flicker_cursor;16,11",
+            "wait;1000",
+            "level_var;buildersl;1",
+            ""
+        ],
+        "nid": "Intro7 Village visit"
+    },
+    {
+        "name": "Variables",
+        "trigger": "level_start",
+        "level_nid": "Intro7",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;lb1;0",
+            "level_var;lb2;0",
+            "level_var;rb1;0",
+            "level_var;rb2;0",
+            "level_var;buildersr;0",
+            "level_var;buildersl;0",
+            ""
+        ],
+        "nid": "Intro7 Variables"
+    },
+    {
+        "name": "Builders check defeat",
+        "trigger": "combat_end",
+        "level_nid": "Intro7",
+        "condition": "game.level_vars['buildersl'] == 1 and game.level_vars['buildersr'] == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;len([u.nid for u in game.get_other_units() if u.nid.startswith('builder')]) == 0",
+            "    wait;1000",
+            "    if;game.current_mode.nid == 'Ironman'",
+            "        lose_game",
+            "    else",
+            "        activate_turnwheel;t",
+            "    end",
+            "end"
+        ],
+        "nid": "Intro7 Builders check defeat"
     }
 ]

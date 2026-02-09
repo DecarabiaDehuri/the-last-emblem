@@ -9168,6 +9168,10 @@
             [
                 "unit_anim",
                 "MapFlying"
+            ],
+            [
+                "movement_type",
+                "Fliers"
             ]
         ]
     },
@@ -22057,615 +22061,6 @@
         ]
     },
     {
-        "nid": "Careful_Positioning",
-        "name": "Careful Positioning",
-        "desc": "Orcent can forfeit other actions to move a number of tiles beyond regular movement.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            2,
-            8
-        ],
-        "components": [
-            [
-                "xcom_movement",
-                3
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Brutal_Nature",
-        "name": "Brutal Nature",
-        "desc": "When attacking in <blue>player phase</>, gain 1 stack of <red>Brutality</>: for each stack, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            52
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "combat_condition",
-                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
-            ],
-            [
-                "condition",
-                "game.phase.get_current() == 'player'"
-            ],
-            [
-                "skill_before_combat",
-                {
-                    "skill": "Brute_Stack",
-                    "recipient": "self",
-                    "allegiance": "enemy"
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Introspective_Nature",
-        "name": "Introspective Nature",
-        "desc": "After being attacked in <red>enemy phase</>, gain 1 stack of <blue>Serenity</>: for each stack, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            52
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "combat_condition",
-                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
-            ],
-            [
-                "condition",
-                "game.phase.get_current() != 'player'"
-            ],
-            [
-                "skill_before_combat",
-                {
-                    "skill": "Calm_Stack",
-                    "recipient": "self",
-                    "allegiance": "enemy"
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Reflection",
-        "name": "Reflection",
-        "desc": "Orcent takes a moment to indulge in his thoughts. Orcent can choose to remove 1 stack of Brutality, Serenity or both.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            51
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Reflection"
-            ]
-        ]
-    },
-    {
-        "nid": "Brute_Stack",
-        "name": "Brutality",
-        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            52
-        ],
-        "components": [
-            [
-                "fatal_damage",
-                null
-            ],
-            [
-                "stack",
-                5
-            ],
-            [
-                "condition",
-                "game.phase.get_current() == 'player'"
-            ],
-            [
-                "damage",
-                2
-            ],
-            [
-                "event_after_combat",
-                "Global Orcent Brute remove calm stack and move again"
-            ],
-            [
-                "recoil",
-                5
-            ],
-            [
-                "unit_tint",
-                [
-                    65,
-                    21,
-                    22
-                ]
-            ],
-            [
-                "resist",
-                -2
-            ]
-        ]
-    },
-    {
-        "nid": "Calm_Stack",
-        "name": "Serenity",
-        "desc": "For each stack of <blue>Serenity</>, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            52
-        ],
-        "components": [
-            [
-                "stack",
-                5
-            ],
-            [
-                "post_combat_healing",
-                5
-            ],
-            [
-                "condition",
-                "game.phase.get_current() != 'player'"
-            ],
-            [
-                "crit",
-                10
-            ],
-            [
-                "event_after_combat",
-                "Global Orcent Calm remove brute stack"
-            ],
-            [
-                "damage",
-                -2
-            ],
-            [
-                "unit_tint",
-                [
-                    0,
-                    9,
-                    91
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Plenitude",
-        "name": "Plenitude",
-        "desc": "Orcent has balanced his complex nature. Has increased stats, bonus damage, crit and post combat healing for this turn.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            52
-        ],
-        "components": [
-            [
-                "lost_on_endstep",
-                null
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "crit",
-                20
-            ],
-            [
-                "post_combat_healing",
-                15
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    235,
-                    219,
-                    43
-                ]
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        1
-                    ],
-                    [
-                        "SKL",
-                        1
-                    ],
-                    [
-                        "SPD",
-                        1
-                    ],
-                    [
-                        "LCK",
-                        1
-                    ],
-                    [
-                        "DEF",
-                        1
-                    ],
-                    [
-                        "RES",
-                        1
-                    ],
-                    [
-                        "MOV",
-                        1
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Perceptiveness",
-        "name": "Perceptiveness",
-        "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has significantly greater chance to avoid enemy critical hits.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            14
-        ],
-        "components": [
-            [
-                "crit_avoid",
-                40
-            ],
-            [
-                "condition",
-                "any([u.nid == 'Orcent' for u in target_system.get_adj_units(game.get_unit('Wynn'))])"
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ],
-            [
-                "skill_tags",
-                [
-                    "Synergy"
-                ]
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Perceptiveness_pair",
-        "name": "Perceptiveness",
-        "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has significantly greater chance to avoid enemy critical hits.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            14
-        ],
-        "components": [
-            [
-                "crit_avoid",
-                40
-            ],
-            [
-                "condition",
-                "u('Orcent').traveler == 'Wynn'"
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ],
-            [
-                "skill_tags",
-                [
-                    "Synergy"
-                ]
-            ],
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Blinding_Attack_skill",
-        "name": "Blinding Attack",
-        "desc": "<green>[Simon synergy]</> A precise attack. Inflicts the opponent with <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            36
-        ],
-        "components": [
-            [
-                "menu_category",
-                "<red>Combat Arts</>"
-            ],
-            [
-                "combat_art",
-                "Blinding_Attack"
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ],
-            [
-                "drain_charge",
-                2
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "skill_tags",
-                [
-                    "Synergy"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Blinding_Attack",
-        "name": "Blinding Attack",
-        "desc": "<green>[Simon synergy]</> A precise attack. Inflicts the opponent with <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            36
-        ],
-        "components": [
-            [
-                "give_status_after_combat_on_hit",
-                "Blinded"
-            ]
-        ]
-    },
-    {
-        "nid": "Burning_Attack_skill",
-        "name": "Burning Attack",
-        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            37
-        ],
-        "components": [
-            [
-                "combat_art",
-                "Burning_Attack"
-            ],
-            [
-                "drain_charge",
-                2
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "unit_anim",
-                "synergy"
-            ],
-            [
-                "skill_tags",
-                [
-                    "Synergy"
-                ]
-            ],
-            [
-                "menu_category",
-                "<red>Combat Arts</>"
-            ]
-        ]
-    },
-    {
-        "nid": "Burning_Attack",
-        "name": "Burning Attack",
-        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            37
-        ],
-        "components": [
-            [
-                "alternate_damage_formula",
-                "MAGIC_DAMAGE"
-            ],
-            [
-                "attack_proc",
-                "Burning_Attack_proc"
-            ],
-            [
-                "proc_rate",
-                "PROCSTATUS"
-            ]
-        ]
-    },
-    {
-        "nid": "Burning_Attack_proc",
-        "name": "Burning Attack",
-        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            37
-        ],
-        "components": [
-            [
-                "give_status_after_combat_on_hit",
-                "Burned"
-            ]
-        ]
-    },
-    {
-        "nid": "Unorthodox",
-        "name": "Unorthodox",
-        "desc": "Orcent can use Bows at 1 range.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            40
-        ],
-        "components": [
-            [
-                "modify_minimum_range",
-                1
-            ],
-            [
-                "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Bow'"
-            ]
-        ]
-    },
-    {
-        "nid": "Aggressive_Attack_skill_orcent",
-        "name": "Aggressive Attack",
-        "desc": "Forceful attack. Axe only.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            40
-        ],
-        "components": [
-            [
-                "drain_charge",
-                2
-            ],
-            [
-                "combat_art",
-                "Aggressive_Attack_orcent"
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Axe'"
-            ],
-            [
-                "menu_category",
-                "<red>Combat Arts</>"
-            ]
-        ]
-    },
-    {
-        "nid": "Aggressive_Attack_orcent",
-        "name": "Aggressive Attack",
-        "desc": "Forceful attack. Axe only.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            40
-        ],
-        "components": [
-            [
-                "damage_multiplier",
-                1.2
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Axe'"
-            ]
-        ]
-    },
-    {
-        "nid": "Piercing_Attack_skill_orcent",
-        "name": "Piercing Attack",
-        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            37
-        ],
-        "components": [
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "drain_charge",
-                2
-            ],
-            [
-                "combat_art",
-                "Piercing_Attack_orcent"
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Bow'"
-            ],
-            [
-                "menu_category",
-                "<red>Combat Arts</>"
-            ]
-        ]
-    },
-    {
-        "nid": "Piercing_Attack_orcent",
-        "name": "Piercing Attack",
-        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            37
-        ],
-        "components": [
-            [
-                "hit",
-                999
-            ],
-            [
-                "post_combat_damage_percent",
-                0.2
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Bow'"
-            ]
-        ]
-    },
-    {
         "nid": "Orc_no_Mana",
         "name": "Orc no mana",
         "desc": "",
@@ -23594,6 +22989,743 @@
             43
         ],
         "components": []
+    },
+    {
+        "nid": "Careful_Positioning",
+        "name": "Careful Positioning",
+        "desc": "Orcent can forfeit other actions to move a number of tiles beyond regular movement.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            8
+        ],
+        "components": [
+            [
+                "xcom_movement",
+                3
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Brutal_Nature",
+        "name": "Brutal Nature",
+        "desc": "When attacking in <blue>player phase</>, gain 1 stack of <red>Brutality</>: for each stack, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "condition",
+                "game.phase.get_current() == 'player'"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Brute_Stack",
+                    "recipient": "self",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Introspective_Nature",
+        "name": "Introspective Nature",
+        "desc": "After being attacked in <red>enemy phase</>, gain 1 stack of <blue>Serenity</>: for each stack, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "condition",
+                "game.phase.get_current() != 'player'"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Calm_Stack",
+                    "recipient": "self",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Reflection",
+        "name": "Reflection",
+        "desc": "Orcent takes a moment to indulge in his thoughts. Orcent can choose to remove 1 stack of Brutality, Serenity or both.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Reflection"
+            ]
+        ]
+    },
+    {
+        "nid": "Brute_Stack",
+        "name": "Brutality",
+        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            52
+        ],
+        "components": [
+            [
+                "fatal_damage",
+                null
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "condition",
+                "game.phase.get_current() == 'player'"
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "event_after_combat",
+                "Global Orcent Brute remove calm stack and move again"
+            ],
+            [
+                "recoil",
+                5
+            ],
+            [
+                "unit_tint",
+                [
+                    65,
+                    21,
+                    22
+                ]
+            ],
+            [
+                "resist",
+                -2
+            ]
+        ]
+    },
+    {
+        "nid": "Calm_Stack",
+        "name": "Serenity",
+        "desc": "For each stack of <blue>Serenity</>, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            52
+        ],
+        "components": [
+            [
+                "stack",
+                5
+            ],
+            [
+                "post_combat_healing",
+                5
+            ],
+            [
+                "condition",
+                "game.phase.get_current() != 'player'"
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "event_after_combat",
+                "Global Orcent Calm remove brute stack"
+            ],
+            [
+                "damage",
+                -2
+            ],
+            [
+                "unit_tint",
+                [
+                    0,
+                    9,
+                    91
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Plenitude",
+        "name": "Plenitude",
+        "desc": "Orcent has balanced his complex nature. Has increased stats, bonus damage, crit and post combat healing for this turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            52
+        ],
+        "components": [
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "post_combat_healing",
+                15
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    235,
+                    219,
+                    43
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "SKL",
+                        1
+                    ],
+                    [
+                        "SPD",
+                        1
+                    ],
+                    [
+                        "LCK",
+                        1
+                    ],
+                    [
+                        "DEF",
+                        1
+                    ],
+                    [
+                        "RES",
+                        1
+                    ],
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Perceptiveness",
+        "name": "Perceptiveness",
+        "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has significantly greater chance to avoid enemy critical hits.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            14
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                40
+            ],
+            [
+                "condition",
+                "any([u.nid == 'Orcent' for u in target_system.get_adj_units(game.get_unit('Wynn'))])"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Perceptiveness_pair",
+        "name": "Perceptiveness",
+        "desc": "<green>[Wynn synergy]</> Admired by Orcent's intelligence, Wynn is magically enhancing his awareness. Orcent has significantly greater chance to avoid enemy critical hits.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            14
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                40
+            ],
+            [
+                "condition",
+                "u('Orcent').traveler == 'Wynn'"
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Attack_skill",
+        "name": "Blinding Attack",
+        "desc": "<green>[Simon synergy]</> A precise attack. Inflicts the opponent with <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ],
+            [
+                "combat_art",
+                "Blinding_Attack"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Attack",
+        "name": "Blinding Attack",
+        "desc": "<green>[Simon synergy]</> A precise attack. Inflicts the opponent with <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            36
+        ],
+        "components": [
+            [
+                "give_status_after_combat_on_hit",
+                "Blinded"
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Attack_skill",
+        "name": "Burning Attack",
+        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Burning_Attack"
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "unit_anim",
+                "synergy"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Attack",
+        "name": "Burning Attack",
+        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "alternate_damage_formula",
+                "MAGIC_DAMAGE"
+            ],
+            [
+                "attack_proc",
+                "Burning_Attack_proc"
+            ],
+            [
+                "proc_rate",
+                "PROCSTATUS"
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Attack_proc",
+        "name": "Burning Attack",
+        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "give_status_after_combat_on_hit",
+                "Burned"
+            ]
+        ]
+    },
+    {
+        "nid": "Zoning_Tactic",
+        "name": "Zoning Tactic",
+        "desc": "If Orcent last attacked using an axe, gain bonus damage on the next attack using a bow.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            40
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "multi_skill",
+                [
+                    "orcent_axe_bow"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "orcent_axe_bow",
+        "name": "axe to bow buff",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Axe'"
+            ],
+            [
+                "gain_skill_after_attack",
+                "orcent_axe_bow_effect"
+            ]
+        ]
+    },
+    {
+        "nid": "orcent_axe_bow_effect",
+        "name": "Zoning bonus",
+        "desc": "Increased next damage with a bow.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            40
+        ],
+        "components": [
+            [
+                "damage",
+                5
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Bow'"
+            ],
+            [
+                "lost_on_strike",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rushdown_Tactic",
+        "name": "Rushdown Tactic",
+        "desc": "If Orcent last attacked using a bow, gain bonus accuracy on the next attack using an axe.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "multi_skill",
+                [
+                    "orcent_bow_axe"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "orcent_bow_axe",
+        "name": "bow to axe buff",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Bow'"
+            ],
+            [
+                "gain_skill_after_attack",
+                "orcent_bow_axe"
+            ]
+        ]
+    },
+    {
+        "nid": "orcent_bow_axe_effect",
+        "name": "Rushdown bonus",
+        "desc": "Increased accuracy with next attack wielding an axe.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            28
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.team != target.team and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) == 'Axe'"
+            ],
+            [
+                "lost_on_strike",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hit",
+                30
+            ]
+        ]
+    },
+    {
+        "nid": "Aggressive_Attack_skill_orcent",
+        "name": "Aggressive Attack",
+        "desc": "Forceful attack. Axe only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            40
+        ],
+        "components": [
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Aggressive_Attack_orcent"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Aggressive_Attack_orcent",
+        "name": "Aggressive Attack",
+        "desc": "Forceful attack. Axe only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            40
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ]
+        ]
+    },
+    {
+        "nid": "Piercing_Attack_skill_orcent",
+        "name": "Piercing Attack",
+        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "combat_art",
+                "Piercing_Attack_orcent"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "menu_category",
+                "<red>Combat Arts</>"
+            ]
+        ]
+    },
+    {
+        "nid": "Piercing_Attack_orcent",
+        "name": "Piercing Attack",
+        "desc": "Careful attack. Can't miss. Deals damage post combat equal to 20% of target's max HP. Bow only.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "hit",
+                999
+            ],
+            [
+                "post_combat_damage_percent",
+                0.2
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ]
+        ]
     },
     {
         "nid": "testPOSTCOMBATDMG",
@@ -24701,22 +24833,6 @@
         ],
         "components": [
             [
-                "negative",
-                null
-            ],
-            [
-                "damage_multiplier",
-                2.7755575615628914e-17
-            ],
-            [
-                "post_combat_damage",
-                1
-            ],
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
                 "combat_condition",
                 "target.klass == 'Warden'"
             ],
@@ -24727,6 +24843,84 @@
                     154,
                     51
                 ]
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "damage_formula_override",
+                "ZERO"
+            ],
+            [
+                "damage",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Modular_2",
+        "name": "Modular",
+        "desc": "Unit only takes one instance of damage per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "skill_tags",
+                [
+                    "Profession"
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Modular_effect_2"
+            ]
+        ]
+    },
+    {
+        "nid": "Modular_effect_2",
+        "name": "Modular defense",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "ignore_damage",
+                null
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "combat_flickering_tint",
+                [
+                    255,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
             ]
         ]
     },
@@ -24971,7 +25165,7 @@
             ],
             [
                 "combat_condition",
-                "target.get_max_hp() == target.get_current_hp()"
+                "target.get_hp() == target.get_max_hp()"
             ],
             [
                 "combat_flickering_tint",
@@ -25108,6 +25302,60 @@
             [
                 "miracle",
                 null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "unit_dark",
+        "name": "unit on darkness",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    39,
+                    39,
+                    39
+                ]
+            ],
+            [
+                "self_nihil",
+                [
+                    "unit_light"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "unit_light",
+        "name": "unit_light",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    4,
+                    4,
+                    4
+                ]
             ],
             [
                 "hidden",

@@ -16973,7 +16973,7 @@
         "name": "Fracture",
         "tilemap": "Orcs1",
         "bg_tilemap": null,
-        "party": "Simon",
+        "party": "Yarraintro",
         "music": {
             "player_phase": "Battle6",
             "enemy_phase": "Tension",
@@ -17932,7 +17932,7 @@
         "name": "Barricade",
         "tilemap": "Intro2",
         "bg_tilemap": null,
-        "party": "Simon",
+        "party": "Orcentintro",
         "music": {
             "player_phase": "Boss2",
             "enemy_phase": "Boss2",
@@ -17942,7 +17942,7 @@
         "objective": {
             "simple": "Defend the village for 8 turns",
             "win": "Survive for 8 turns",
-            "loss": "Orcent is defeated"
+            "loss": "Enemy reaches village,Orcent defeated"
         },
         "roam": false,
         "roam_unit": null,
@@ -19642,14 +19642,14 @@
         "name": "Nightmare",
         "tilemap": "intro3rmk",
         "bg_tilemap": null,
-        "party": "Simon",
+        "party": "Akaintro",
         "music": {
             "player_phase": "Battle6"
         },
         "objective": {
             "simple": "Defeat boss until morning",
             "win": "Defeat before turn 13",
-            "loss": "Boss alive on turn 13"
+            "loss": "Boss alive on turn 13,Aka defeated"
         },
         "roam": false,
         "roam_unit": null,
@@ -21082,7 +21082,7 @@
         "objective": {
             "simple": "Defeat all enemies",
             "win": "Defeat all enemies",
-            "loss": "Simon is defeated"
+            "loss": "Simon defeated"
         },
         "roam": false,
         "roam_unit": null,
@@ -22847,11 +22847,16 @@
         "tilemap": "Arrival",
         "bg_tilemap": null,
         "party": "Simon",
-        "music": {},
+        "music": {
+            "player_phase": "Battle6",
+            "other_phase": "Battle6",
+            "enemy_phase": "Battle6",
+            "boss_battle": "Boss1"
+        },
         "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
+            "simple": "Defeat Deguile",
+            "win": "Defeat boss",
+            "loss": "Yarra defeated"
         },
         "roam": false,
         "roam_unit": null,
@@ -23692,6 +23697,24 @@
                 "condition": "game.level_vars['wagon'] == 1",
                 "time_left": null,
                 "only_once": true,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "close",
+                "region_type": "normal",
+                "position": [
+                    0,
+                    18
+                ],
+                "size": [
+                    13,
+                    7
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
                 "interrupt_move": false,
                 "hide_time": false
             }
@@ -25047,20 +25070,17 @@
     },
     {
         "nid": "Intro6",
-        "name": "Pollution",
-        "tilemap": "Fishvil",
+        "name": "Pincer",
+        "tilemap": "reunionB",
         "bg_tilemap": null,
-        "party": "ChosenParty",
+        "party": "Akaintro",
         "music": {
-            "player_phase": "Battle6",
-            "enemy_phase": "Tension2",
-            "other_phase": "Other theme",
-            "boss_battle": "Boss1"
+            "player_phase": "DarkTension"
         },
         "objective": {
-            "simple": "Defeat all enemies",
-            "win": "Defeat all enemies",
-            "loss": "Simon is defeated"
+            "simple": "",
+            "win": "",
+            "loss": ""
         },
         "roam": false,
         "roam_unit": null,
@@ -25069,315 +25089,452 @@
         "tags": [],
         "units": [
             {
-                "nid": "pirate_1",
+                "nid": "Aka",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Altina",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Dari",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Lynine",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Nalili",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Orcent",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Orilise",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Qum",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Varia",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Vhala",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Wynn",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Halta",
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "sold_1",
                 "variant": null,
                 "level": 6,
-                "klass": "Pirate",
-                "faction": "AntiDK",
+                "klass": "Soldier",
+                "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Axe",
+                        "Iron_Lance",
                         false
                     ]
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    1,
-                    5
+                    16,
+                    10
                 ],
                 "starting_traveler": null,
                 "generic": true
             },
             {
-                "nid": "pirate_2",
+                "nid": "sold_2",
                 "variant": null,
                 "level": 6,
-                "klass": "Pirate",
-                "faction": "AntiDK",
+                "klass": "Soldier",
+                "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Axe",
+                        "Iron_Lance",
                         false
                     ]
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    24,
-                    27
+                    43,
+                    9
                 ],
                 "starting_traveler": null,
                 "generic": true
             },
             {
-                "nid": "pirate_3",
+                "nid": "sold_3",
                 "variant": null,
                 "level": 6,
-                "klass": "Pirate",
-                "faction": "AntiDK",
+                "klass": "Soldier",
+                "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Axe",
+                        "Iron_Lance",
                         false
                     ]
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Guard",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    1,
-                    17
+                    30,
+                    9
                 ],
                 "starting_traveler": null,
                 "generic": true
             },
             {
-                "nid": "pirate_4",
+                "nid": "sold_4",
                 "variant": null,
                 "level": 6,
-                "klass": "Pirate",
-                "faction": "AntiDK",
+                "klass": "Soldier",
+                "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Axe",
+                        "Iron_Lance",
                         false
                     ]
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "Pursue",
+                "ai": "Guard",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    21,
+                    12,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "sold_5",
+                "variant": null,
+                "level": 6,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    38,
                     8
                 ],
                 "starting_traveler": null,
                 "generic": true
             },
             {
-                "nid": "suc_mer_1",
+                "nid": "sold_6",
                 "variant": null,
-                "level": 1,
-                "klass": "Suc_mermaid",
-                "faction": "Villager",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    9,
-                    15
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "suc_mer_2",
-                "variant": null,
-                "level": 1,
-                "klass": "Suc_mermaid",
-                "faction": "Villager",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    15,
-                    9
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "suc_mer_3",
-                "variant": null,
-                "level": 1,
-                "klass": "Suc_mermaid",
-                "faction": "Villager",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    9,
-                    6
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "suc_mer_4",
-                "variant": null,
-                "level": 1,
-                "klass": "Suc_mermaid",
-                "faction": "Villager",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    15,
-                    16
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "vil_1",
-                "variant": null,
-                "level": 1,
-                "klass": "Citizen",
-                "faction": "Villager",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    10,
-                    12
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "vil_2",
-                "variant": null,
-                "level": 1,
-                "klass": "Citizen",
-                "faction": "Villager",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    14,
-                    9
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "vil_3",
-                "variant": null,
-                "level": 1,
-                "klass": "Suc_foe_1",
-                "faction": "Villager",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    11,
-                    12
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "monk_1",
-                "variant": null,
-                "level": 4,
-                "klass": "Monk",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "DivineSpells_dmg",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Pursue",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    22,
-                    14
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "monk_2",
-                "variant": null,
-                "level": 4,
-                "klass": "Monk",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "DivineSpells_dmg",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Pursue",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    9,
-                    23
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "monk_3",
-                "variant": null,
-                "level": 4,
-                "klass": "Monk",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "DivineSpells_dmg",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Pursue",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    17,
-                    25
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "kni_1",
-                "variant": null,
-                "level": 4,
-                "klass": "Knight",
-                "faction": "AntiDK",
+                "level": 6,
+                "klass": "Soldier",
+                "faction": "Soldier",
                 "starting_items": [
                     [
                         "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    13
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "sold_7",
+                "variant": null,
+                "level": 6,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    45,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "sold_8",
+                "variant": null,
+                "level": 6,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    27,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "merc_1",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "merc_2",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "merc_3",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "merc_4",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "merc_5",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "merc_6",
+                "variant": null,
+                "level": 6,
+                "klass": "Mercenary",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "archer_1",
+                "variant": null,
+                "level": 6,
+                "klass": "Archer",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Bow",
                         false
                     ]
                 ],
@@ -25387,188 +25544,51 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    26
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "myr_1",
-                "variant": null,
-                "level": 6,
-                "klass": "Myrmidon",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "Iron_Sword",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    5,
-                    17
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "myr_2",
-                "variant": null,
-                "level": 6,
-                "klass": "Myrmidon",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "Iron_Sword",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    19,
-                    20
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "o_mit_1",
-                "variant": null,
-                "level": 2,
-                "klass": "Militia",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "Slim_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "Guard",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    16,
-                    13
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "o_mit_2",
-                "variant": null,
-                "level": 2,
-                "klass": "Militia",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "Slim_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "Guard",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    6,
-                    12
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "o_mit_3",
-                "variant": null,
-                "level": 2,
-                "klass": "Militia",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "Slim_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "Guard",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    7,
-                    8
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "o_mit_4",
-                "variant": null,
-                "level": 2,
-                "klass": "Militia",
-                "faction": "AntiDK",
-                "starting_items": [
-                    [
-                        "Slim_Lance",
-                        false
-                    ]
-                ],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "Guard",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    12,
-                    15
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "Katahne",
-                "team": "enemy",
-                "ai": "Attack",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    23,
+                    29,
                     5
                 ],
                 "starting_traveler": null,
-                "generic": false
+                "generic": true
             },
             {
-                "nid": "bruiser",
+                "nid": "archer_2",
                 "variant": null,
-                "level": 7,
-                "klass": "Bruiser",
+                "level": 6,
+                "klass": "Archer",
                 "faction": "AntiDK",
                 "starting_items": [
                     [
-                        "Steel_Blade",
+                        "Iron_Bow",
                         false
-                    ],
-                    [
-                        "Loot_Bag",
-                        true
                     ]
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "PursueVillage",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    21,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "archer_3",
+                "variant": null,
+                "level": 6,
+                "klass": "Archer",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -25576,246 +25596,575 @@
                 "generic": true
             },
             {
-                "nid": "Simon",
-                "team": "player",
+                "nid": "archer_4",
+                "variant": null,
+                "level": 6,
+                "klass": "Archer",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_1",
+                "variant": null,
+                "level": 6,
+                "klass": "Monk",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_2",
+                "variant": null,
+                "level": 6,
+                "klass": "Monk",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_3",
+                "variant": null,
+                "level": 6,
+                "klass": "Monk",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_4",
+                "variant": null,
+                "level": 6,
+                "klass": "Monk",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "pow",
+                "variant": null,
+                "level": 20,
+                "klass": "Knight",
+                "faction": "AlliedSoldier",
+                "starting_items": [],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "fortL",
+                "variant": null,
+                "level": 1,
+                "klass": "Wall30",
+                "faction": "Wall",
+                "starting_items": [],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    13,
-                    13
+                    12,
+                    7
                 ],
                 "starting_traveler": null,
-                "generic": false
+                "generic": true
+            },
+            {
+                "nid": "fortR",
+                "variant": null,
+                "level": 1,
+                "klass": "Wall30",
+                "faction": "Wall",
+                "starting_items": [],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmL_1",
+                "variant": null,
+                "level": 5,
+                "klass": "Sniper",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Longbow",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmL_2",
+                "variant": null,
+                "level": 5,
+                "klass": "Warrior",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Killer_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmL_3",
+                "variant": null,
+                "level": 5,
+                "klass": "Great_Knight",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmL_4",
+                "variant": null,
+                "level": 5,
+                "klass": "Great_Knight",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmL_5",
+                "variant": null,
+                "level": 5,
+                "klass": "Great_Knight",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_1",
+                "variant": null,
+                "level": 10,
+                "klass": "Swordmaster",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Shamshir",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_2",
+                "variant": null,
+                "level": 15,
+                "klass": "Knight",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_3",
+                "variant": null,
+                "level": 15,
+                "klass": "Knight",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_4",
+                "variant": null,
+                "level": 15,
+                "klass": "Knight",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_5",
+                "variant": null,
+                "level": 15,
+                "klass": "Ballistician",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Killer_Ballista",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_6",
+                "variant": null,
+                "level": 15,
+                "klass": "Fighter",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_7",
+                "variant": null,
+                "level": 15,
+                "klass": "Fighter",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_8",
+                "variant": null,
+                "level": 15,
+                "klass": "Fighter",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "ignoregreen"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_9",
+                "variant": null,
+                "level": 15,
+                "klass": "Mage",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "ArcaneSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_10",
+                "variant": null,
+                "level": 15,
+                "klass": "Mage",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "ArcaneSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "alarmR_11",
+                "variant": null,
+                "level": 15,
+                "klass": "Mage",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "ArcaneSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "wagon",
+                "variant": null,
+                "level": 1,
+                "klass": "Wagon",
+                "faction": "AntiDK",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [
             {
-                "nid": "formation_1",
-                "region_type": "formation",
-                "position": [
-                    16,
-                    30
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_2",
-                "region_type": "formation",
-                "position": [
-                    18,
-                    29
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_3",
-                "region_type": "formation",
-                "position": [
-                    16,
-                    28
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_4",
-                "region_type": "formation",
-                "position": [
-                    18,
-                    27
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_5",
-                "region_type": "formation",
-                "position": [
-                    15,
-                    27
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_6",
-                "region_type": "formation",
-                "position": [
-                    14,
-                    30
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_7",
-                "region_type": "formation",
-                "position": [
-                    19,
-                    31
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_8",
-                "region_type": "formation",
-                "position": [
-                    15,
-                    29
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_9",
-                "region_type": "formation",
-                "position": [
-                    19,
-                    28
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "formation_10",
-                "region_type": "formation",
-                "position": [
-                    17,
-                    27
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "",
-                "condition": "True",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "Village",
+                "nid": "Seize",
                 "region_type": "event",
                 "position": [
-                    11,
-                    11
+                    25,
+                    3
                 ],
                 "size": [
                     1,
                     1
                 ],
-                "sub_nid": "Visit",
-                "condition": "True",
+                "sub_nid": "Seize",
+                "condition": "unit.nid == 'Aka' or unit.nid == 'Orcent'",
                 "time_left": null,
                 "only_once": true,
                 "interrupt_move": false,
                 "hide_time": false
             },
             {
-                "nid": "villagedestroy",
-                "region_type": "event",
+                "nid": "New Region",
+                "region_type": "normal",
                 "position": [
-                    11,
+                    40,
                     10
                 ],
                 "size": [
                     1,
                     1
-                ],
-                "sub_nid": "Destructible",
-                "condition": "unit.team == 'enemy'",
-                "time_left": null,
-                "only_once": false,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
-                "nid": "bruiser",
-                "region_type": "normal",
-                "position": [
-                    0,
-                    7
-                ],
-                "size": [
-                    25,
-                    9
                 ],
                 "sub_nid": "",
                 "condition": "True",
@@ -25825,7 +26174,255 @@
                 "hide_time": false
             }
         ],
-        "unit_groups": [],
+        "unit_groups": [
+            {
+                "nid": "ptl",
+                "units": [
+                    "Aka",
+                    "Dari",
+                    "Nalili",
+                    "Vhala",
+                    "Wynn"
+                ],
+                "positions": {
+                    "Aka": [
+                        2,
+                        13
+                    ],
+                    "Dari": [
+                        1,
+                        12
+                    ],
+                    "Nalili": [
+                        3,
+                        12
+                    ],
+                    "Vhala": [
+                        3,
+                        14
+                    ],
+                    "Wynn": [
+                        1,
+                        14
+                    ]
+                }
+            },
+            {
+                "nid": "ptr",
+                "units": [
+                    "Altina",
+                    "Lynine",
+                    "Orcent",
+                    "Orilise",
+                    "Qum",
+                    "Varia"
+                ],
+                "positions": {
+                    "Orcent": [
+                        47,
+                        3
+                    ],
+                    "Lynine": [
+                        46,
+                        2
+                    ],
+                    "Orilise": [
+                        48,
+                        4
+                    ],
+                    "Qum": [
+                        48,
+                        2
+                    ],
+                    "Varia": [
+                        47,
+                        2
+                    ],
+                    "Altina": [
+                        48,
+                        3
+                    ]
+                }
+            },
+            {
+                "nid": "alarmL",
+                "units": [
+                    "alarmL_1",
+                    "alarmL_2",
+                    "alarmL_3",
+                    "alarmL_4",
+                    "alarmL_5"
+                ],
+                "positions": {
+                    "alarmL_1": [
+                        12,
+                        6
+                    ],
+                    "alarmL_2": [
+                        11,
+                        6
+                    ],
+                    "alarmL_3": [
+                        11,
+                        6
+                    ],
+                    "alarmL_4": [
+                        11,
+                        6
+                    ],
+                    "alarmL_5": [
+                        11,
+                        6
+                    ]
+                }
+            },
+            {
+                "nid": "alarmL_2",
+                "units": [
+                    "alarmL_5",
+                    "alarmL_4",
+                    "alarmL_3",
+                    "alarmL_2"
+                ],
+                "positions": {
+                    "alarmL_5": [
+                        12,
+                        9
+                    ],
+                    "alarmL_4": [
+                        14,
+                        8
+                    ],
+                    "alarmL_3": [
+                        13,
+                        9
+                    ],
+                    "alarmL_2": [
+                        13,
+                        8
+                    ]
+                }
+            },
+            {
+                "nid": "alarmR",
+                "units": [
+                    "alarmR_8",
+                    "alarmR_7",
+                    "alarmR_6",
+                    "alarmR_5",
+                    "alarmR_4",
+                    "alarmR_3",
+                    "alarmR_2",
+                    "alarmR_1",
+                    "alarmR_11",
+                    "alarmR_10",
+                    "alarmR_9"
+                ],
+                "positions": {
+                    "alarmR_5": [
+                        37,
+                        4
+                    ],
+                    "alarmR_4": [
+                        32,
+                        15
+                    ],
+                    "alarmR_3": [
+                        32,
+                        15
+                    ],
+                    "alarmR_2": [
+                        32,
+                        15
+                    ],
+                    "alarmR_1": [
+                        32,
+                        15
+                    ],
+                    "alarmR_8": [
+                        32,
+                        15
+                    ],
+                    "alarmR_7": [
+                        32,
+                        15
+                    ],
+                    "alarmR_6": [
+                        32,
+                        15
+                    ],
+                    "alarmR_11": [
+                        32,
+                        15
+                    ],
+                    "alarmR_10": [
+                        32,
+                        15
+                    ],
+                    "alarmR_9": [
+                        32,
+                        15
+                    ]
+                }
+            },
+            {
+                "nid": "alarmR_2",
+                "units": [
+                    "alarmR_8",
+                    "alarmR_7",
+                    "alarmR_6",
+                    "alarmR_4",
+                    "alarmR_3",
+                    "alarmR_2",
+                    "alarmR_1",
+                    "alarmR_11",
+                    "alarmR_10",
+                    "alarmR_9"
+                ],
+                "positions": {
+                    "alarmR_8": [
+                        31,
+                        13
+                    ],
+                    "alarmR_7": [
+                        32,
+                        13
+                    ],
+                    "alarmR_6": [
+                        33,
+                        13
+                    ],
+                    "alarmR_4": [
+                        31,
+                        12
+                    ],
+                    "alarmR_3": [
+                        32,
+                        12
+                    ],
+                    "alarmR_2": [
+                        33,
+                        12
+                    ],
+                    "alarmR_1": [
+                        32,
+                        11
+                    ],
+                    "alarmR_11": [
+                        31,
+                        14
+                    ],
+                    "alarmR_10": [
+                        32,
+                        14
+                    ],
+                    "alarmR_9": [
+                        33,
+                        14
+                    ]
+                }
+            }
+        ],
         "ai_groups": []
     },
     {
@@ -28410,16 +29007,18 @@
         ]
     },
     {
-        "nid": "10",
-        "name": "Chapter 10",
+        "nid": "Intro7",
+        "name": "Bridge",
         "tilemap": "riomeio",
         "bg_tilemap": null,
-        "party": "Simon",
-        "music": {},
+        "party": "Akaintro",
+        "music": {
+            "player_phase": "Battle6"
+        },
         "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
+            "simple": "Repair bridge",
+            "win": "Bridge repaired",
+            "loss": "Builders defeated"
         },
         "roam": false,
         "roam_unit": null,
@@ -28443,7 +29042,10 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    6,
+                    5
+                ],
                 "starting_traveler": null,
                 "generic": false
             },
@@ -28633,7 +29235,10 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": null,
+                "starting_position": [
+                    21,
+                    21
+                ],
                 "starting_traveler": null,
                 "generic": false
             },
@@ -28656,7 +29261,7 @@
                 "starting_items": [],
                 "starting_skills": [],
                 "team": "other",
-                "ai": "None",
+                "ai": "Builders",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -28672,7 +29277,7 @@
                 "starting_items": [],
                 "starting_skills": [],
                 "team": "other",
-                "ai": "None",
+                "ai": "Builders",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -28688,7 +29293,7 @@
                 "starting_items": [],
                 "starting_skills": [],
                 "team": "other",
-                "ai": "None",
+                "ai": "Builders",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -28704,7 +29309,7 @@
                 "starting_items": [],
                 "starting_skills": [],
                 "team": "other",
-                "ai": "None",
+                "ai": "Builders",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -28766,8 +29371,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    15
+                    2,
+                    16
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -28934,8 +29539,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    11
+                    4,
+                    15
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -29279,7 +29884,7 @@
                     1
                 ],
                 "sub_nid": "Seize",
-                "condition": "unit.nid == 'Yarra'",
+                "condition": "unit.nid == 'Aka'",
                 "time_left": null,
                 "only_once": true,
                 "interrupt_move": false,
@@ -29302,6 +29907,60 @@
                 "only_once": true,
                 "interrupt_move": false,
                 "hide_time": false
+            },
+            {
+                "nid": "Bridge",
+                "region_type": "normal",
+                "position": [
+                    11,
+                    10
+                ],
+                "size": [
+                    6,
+                    2
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "left",
+                "region_type": "normal",
+                "position": [
+                    11,
+                    10
+                ],
+                "size": [
+                    3,
+                    2
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "right",
+                "region_type": "normal",
+                "position": [
+                    14,
+                    10
+                ],
+                "size": [
+                    3,
+                    2
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
             }
         ],
         "unit_groups": [
@@ -29316,9 +29975,9 @@
                     "Riala",
                     "Trin",
                     "Uyae",
-                    "Wynn",
                     "Iris2",
-                    "Robin"
+                    "Robin",
+                    "Yarra"
                 ],
                 "positions": {
                     "Simon": [
@@ -29364,6 +30023,10 @@
                     "Carina": [
                         19,
                         3
+                    ],
+                    "Yarra": [
+                        23,
+                        4
                     ]
                 }
             },
@@ -29379,7 +30042,8 @@
                     "Orilise",
                     "Qum",
                     "Varia",
-                    "Vhala"
+                    "Vhala",
+                    "Wynn"
                 ],
                 "positions": {
                     "Aka": [
@@ -29399,7 +30063,7 @@
                         23
                     ],
                     "Nalili": [
-                        5,
+                        4,
                         20
                     ],
                     "Orcent": [
@@ -29415,12 +30079,16 @@
                         21
                     ],
                     "Vhala": [
-                        4,
-                        20
+                        5,
+                        21
                     ],
                     "Varia": [
                         1,
                         20
+                    ],
+                    "Wynn": [
+                        0,
+                        22
                     ]
                 }
             }
@@ -29433,7 +30101,375 @@
         ]
     },
     {
-        "nid": "Intro7",
+        "nid": "Introcastle",
+        "name": "Warcamp",
+        "tilemap": "TempIntrobase",
+        "bg_tilemap": null,
+        "party": "Simon",
+        "music": {
+            "player_phase": "Preparation"
+        },
+        "objective": {
+            "simple": "",
+            "win": "",
+            "loss": ""
+        },
+        "roam": true,
+        "roam_unit": "Simon",
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "Simon",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Aka",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": "RoamRandom",
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    15
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Altina",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    14
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Balia",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Carina",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    3
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Hilstara",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Lynine",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Megail",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Nalili",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Orcent",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    7
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Orilise",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    16
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Qum",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Riala",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Robin",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Trin",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    0,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Uyae",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Varia",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Vhala",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Dari",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Wynn",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    4,
+                    14
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Yarra",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Iris2",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 1,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    17
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 1,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    17
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    17
+                ],
+                "starting_traveler": null,
+                "generic": true
+            }
+        ],
+        "regions": [],
+        "unit_groups": [],
+        "ai_groups": []
+    },
+    {
+        "nid": "Intro8",
         "name": "Union",
         "tilemap": "Intro4",
         "bg_tilemap": null,
@@ -30991,375 +32027,7 @@
         ]
     },
     {
-        "nid": "Introcastle",
-        "name": "Warcamp",
-        "tilemap": "TempIntrobase",
-        "bg_tilemap": null,
-        "party": "Simon",
-        "music": {
-            "player_phase": "Preparation"
-        },
-        "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
-        },
-        "roam": true,
-        "roam_unit": "Simon",
-        "go_to_overworld": false,
-        "should_record": true,
-        "tags": [],
-        "units": [
-            {
-                "nid": "Simon",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    9,
-                    6
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Aka",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": "RoamRandom",
-                "ai_group": "",
-                "starting_position": [
-                    12,
-                    15
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Altina",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    13,
-                    14
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Balia",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    17,
-                    4
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Carina",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    6,
-                    3
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Hilstara",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    12,
-                    5
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Lynine",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    17,
-                    12
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Megail",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    10,
-                    10
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Nalili",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    7,
-                    9
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Orcent",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    11,
-                    7
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Orilise",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    6,
-                    16
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Qum",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    7,
-                    8
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Riala",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    7,
-                    5
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Robin",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    6,
-                    5
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Trin",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    0,
-                    2
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Uyae",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    14,
-                    10
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Varia",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    13,
-                    11
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Vhala",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    2,
-                    9
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Dari",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    1,
-                    9
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Wynn",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    4,
-                    14
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Yarra",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    11,
-                    4
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Iris2",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    11,
-                    10
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "101",
-                "variant": null,
-                "level": 1,
-                "klass": "Soldier",
-                "faction": "Soldier",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    8,
-                    17
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "102",
-                "variant": null,
-                "level": 1,
-                "klass": "Soldier",
-                "faction": "Soldier",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    10,
-                    17
-                ],
-                "starting_traveler": null,
-                "generic": true
-            },
-            {
-                "nid": "103",
-                "variant": null,
-                "level": 1,
-                "klass": "Suc_foe_1",
-                "faction": "Soldier",
-                "starting_items": [],
-                "starting_skills": [],
-                "team": "other",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": "",
-                "starting_position": [
-                    9,
-                    17
-                ],
-                "starting_traveler": null,
-                "generic": true
-            }
-        ],
-        "regions": [],
-        "unit_groups": [],
-        "ai_groups": []
-    },
-    {
-        "nid": "Intro8",
+        "nid": "Introseyta",
         "name": "Assault",
         "tilemap": "arikhancastle",
         "bg_tilemap": null,
@@ -41872,8 +42540,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
-                    3
+                    10,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -42041,8 +42709,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    8
+                    2,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -43002,7 +43670,7 @@
                 "nid": "101",
                 "variant": null,
                 "level": 12,
-                "klass": "Knight",
+                "klass": "Warden",
                 "faction": "Soldier",
                 "starting_items": [
                     [
@@ -46243,6 +46911,910 @@
                 "trigger_threshold": 1
             }
         ]
+    },
+    {
+        "nid": "Intro6scrapped",
+        "name": "Pollution",
+        "tilemap": "Fishvil",
+        "bg_tilemap": null,
+        "party": "Akaintro",
+        "music": {
+            "player_phase": "Battle6",
+            "enemy_phase": "Tension2",
+            "other_phase": "Other theme",
+            "boss_battle": "Boss1"
+        },
+        "objective": {
+            "simple": "Defeat all enemies",
+            "win": "Defeat all enemies",
+            "loss": "Simon is defeated"
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "pirate_1",
+                "variant": null,
+                "level": 6,
+                "klass": "Pirate",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "pirate_2",
+                "variant": null,
+                "level": 6,
+                "klass": "Pirate",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    24,
+                    27
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "pirate_3",
+                "variant": null,
+                "level": 6,
+                "klass": "Pirate",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    17
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "pirate_4",
+                "variant": null,
+                "level": 6,
+                "klass": "Pirate",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    21,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "suc_mer_1",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_mermaid",
+                "faction": "Villager",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    15
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "suc_mer_2",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_mermaid",
+                "faction": "Villager",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    15,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "suc_mer_3",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_mermaid",
+                "faction": "Villager",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    6
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "suc_mer_4",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_mermaid",
+                "faction": "Villager",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    15,
+                    16
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "vil_1",
+                "variant": null,
+                "level": 1,
+                "klass": "Citizen",
+                "faction": "Villager",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "vil_2",
+                "variant": null,
+                "level": 1,
+                "klass": "Citizen",
+                "faction": "Villager",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "vil_3",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_foe_1",
+                "faction": "Villager",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    11,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_1",
+                "variant": null,
+                "level": 4,
+                "klass": "Monk",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    22,
+                    14
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_2",
+                "variant": null,
+                "level": 4,
+                "klass": "Monk",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    23
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "monk_3",
+                "variant": null,
+                "level": 4,
+                "klass": "Monk",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "DivineSpells_dmg",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    25
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "kni_1",
+                "variant": null,
+                "level": 4,
+                "klass": "Knight",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    10,
+                    26
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "myr_1",
+                "variant": null,
+                "level": 6,
+                "klass": "Myrmidon",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    5,
+                    17
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "myr_2",
+                "variant": null,
+                "level": 6,
+                "klass": "Myrmidon",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    19,
+                    20
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "o_mit_1",
+                "variant": null,
+                "level": 2,
+                "klass": "Militia",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    16,
+                    13
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "o_mit_2",
+                "variant": null,
+                "level": 2,
+                "klass": "Militia",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "o_mit_3",
+                "variant": null,
+                "level": 2,
+                "klass": "Militia",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    7,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "o_mit_4",
+                "variant": null,
+                "level": 2,
+                "klass": "Militia",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Slim_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "other",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    15
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Katahne",
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    23,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "bruiser",
+                "variant": null,
+                "level": 7,
+                "klass": "Bruiser",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Steel_Blade",
+                        false
+                    ],
+                    [
+                        "Loot_Bag",
+                        true
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "PursueVillage",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Aka",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Altina",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Dari",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Lynine",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Nalili",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Orcent",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Orilise",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Qum",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Varia",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Vhala",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Wynn",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            }
+        ],
+        "regions": [
+            {
+                "nid": "formation_1",
+                "region_type": "formation",
+                "position": [
+                    16,
+                    30
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_2",
+                "region_type": "formation",
+                "position": [
+                    18,
+                    29
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_3",
+                "region_type": "formation",
+                "position": [
+                    16,
+                    28
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_4",
+                "region_type": "formation",
+                "position": [
+                    18,
+                    27
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_5",
+                "region_type": "formation",
+                "position": [
+                    15,
+                    27
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_6",
+                "region_type": "formation",
+                "position": [
+                    14,
+                    30
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_7",
+                "region_type": "formation",
+                "position": [
+                    19,
+                    31
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_8",
+                "region_type": "formation",
+                "position": [
+                    15,
+                    29
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_9",
+                "region_type": "formation",
+                "position": [
+                    19,
+                    28
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "formation_10",
+                "region_type": "formation",
+                "position": [
+                    17,
+                    27
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "Village",
+                "region_type": "event",
+                "position": [
+                    11,
+                    11
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "villagedestroy",
+                "region_type": "event",
+                "position": [
+                    11,
+                    10
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Destructible",
+                "condition": "unit.team == 'enemy'",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "bruiser",
+                "region_type": "normal",
+                "position": [
+                    0,
+                    7
+                ],
+                "size": [
+                    25,
+                    9
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            }
+        ],
+        "unit_groups": [
+            {
+                "nid": "ptn",
+                "units": [
+                    "Aka",
+                    "Dari",
+                    "Nalili",
+                    "Vhala",
+                    "Wynn"
+                ],
+                "positions": {}
+            },
+            {
+                "nid": "pts",
+                "units": [
+                    "Altina",
+                    "Lynine",
+                    "Orcent",
+                    "Orilise",
+                    "Qum",
+                    "Varia"
+                ],
+                "positions": {}
+            }
+        ],
+        "ai_groups": []
     },
     {
         "nid": "15",

@@ -8980,7 +8980,7 @@
     {
         "nid": "Lust_Draught",
         "name": "Lust Draught",
-        "desc": "Restores 10 Mana. <red>Usable only by Succubi</>.",
+        "desc": "Restores 10 SP. <red>Usable only by Succubi</>.",
         "icon_nid": "Potions",
         "icon_index": [
             0,
@@ -9031,7 +9031,7 @@
     {
         "nid": "Huge_Lust_Draught",
         "name": "Huge Lust Draught",
-        "desc": "Restores 20 Mana. <red>Usable only by Succubi</>.",
+        "desc": "Restores 20 SP. <red>Usable only by Succubi</>.",
         "icon_nid": "Potions",
         "icon_index": [
             0,
@@ -9188,7 +9188,7 @@
     {
         "nid": "Orc_Potion",
         "name": "Orc Potion",
-        "desc": "Restores 20 HP.",
+        "desc": "Restores 30 HP. <red>Usable only by Orcs</>.",
         "icon_nid": "Potions",
         "icon_index": [
             1,
@@ -30369,42 +30369,6 @@
         ]
     },
     {
-        "nid": "Reflection",
-        "name": "Reflection",
-        "desc": "Orcent takes a moment to indulge in his thoughts. Orcent can choose to remove 1 stack of Brutality, Serenity or both.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            51
-        ],
-        "components": [
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "min_range",
-                0
-            ],
-            [
-                "max_range",
-                0
-            ],
-            [
-                "map_hit_sfx",
-                "Map In"
-            ],
-            [
-                "event_after_combat_on_hit",
-                "Global Orcent Reflection"
-            ]
-        ]
-    },
-    {
         "nid": "test",
         "name": "test",
         "desc": "",
@@ -30449,6 +30413,117 @@
             [
                 "level_exp",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Bow_Orcent",
+        "name": "Short Bow",
+        "desc": "Orcent's exclusive bow. Shoots at close range, paradoxically akin to his nature.",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 2.000000000000001,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Orcent"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Reflection",
+        "name": "Reflection",
+        "desc": "Orcent takes a moment to indulge in his thoughts. Orcent can choose to remove 1 stack of Brutality, Serenity or both.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "map_hit_sfx",
+                "Map In"
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Orcent Reflection"
             ]
         ]
     },
