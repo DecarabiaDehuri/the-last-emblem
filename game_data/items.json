@@ -6,6 +6,65 @@
         "icon_nid": "Consumable",
         "icon_index": [
             0,
+            3
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Gain Sx"
+            ],
+            [
+                "map_cast_anim",
+                "MapSurprise"
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Big_Sx_Purse",
+        "name": "Big Sx Purse",
+        "desc": "Use this item to gain more Sx. Does not end unit's turn.",
+        "icon_nid": "Consumable",
+        "icon_index": [
+            0,
             4
         ],
         "components": [
@@ -16650,7 +16709,7 @@
     {
         "nid": "Dance_Nalili_Main",
         "name": "Swords Dance",
-        "desc": "Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target. Costs <orange> 5 SP</>.",
+        "desc": "Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target. Costs <orange> 8 SP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -16685,7 +16744,7 @@
     {
         "nid": "Dance_Nalili",
         "name": "Swords Dance",
-        "desc": "Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target. <orange> 5 SP</>.",
+        "desc": "<orange>(8 SP)</> Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -16750,7 +16809,7 @@
             ],
             [
                 "mana_cost",
-                5
+                8
             ]
         ]
     },
@@ -18504,7 +18563,7 @@
     {
         "nid": "Dance",
         "name": "Dance",
-        "desc": "<green>Refreshes</> an allied unit, letting them act again this turn. Costs <orange> 4 SP</>.",
+        "desc": "<orange>(6 SP)</>. <green>Refreshes</> an allied unit, letting them act again this turn. ",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -18569,7 +18628,7 @@
             ],
             [
                 "mana_cost",
-                4
+                6
             ]
         ]
     },
@@ -20868,7 +20927,7 @@
     {
         "nid": "Dancing_Line",
         "name": "Dancing Line",
-        "desc": "Milena selects an ally up to 5 tiles away. Any ally between Milena and their target is refreshed. Costs <\u00c3\u00b2range> 20 SP</>.",
+        "desc": "<orange>(20 SP)</> Milena selects an ally up to 5 tiles away. Any ally between Milena and their target is refreshed.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,

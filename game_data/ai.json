@@ -890,10 +890,7 @@
             {
                 "action": "Move_to",
                 "target": "Terrain",
-                "target_spec": [
-                    0,
-                    0
-                ],
+                "target_spec": "38",
                 "view_range": -4,
                 "invert_targeting": false,
                 "roam_speed": 100,
@@ -952,10 +949,13 @@
                 "condition": ""
             },
             {
-                "action": "None",
-                "target": "None",
-                "target_spec": null,
-                "view_range": 0,
+                "action": "Move_to",
+                "target": "Enemy",
+                "target_spec": [
+                    "Class",
+                    "Citizen"
+                ],
+                "view_range": -4,
                 "invert_targeting": false,
                 "roam_speed": 100,
                 "desired_proximity": 0,
@@ -1489,6 +1489,47 @@
                 "action": "Move_to",
                 "target": "Terrain",
                 "target_spec": "4",
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "None",
+                "target": "None",
+                "target_spec": null,
+                "view_range": 0,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "None",
+                "target": "None",
+                "target_spec": null,
+                "view_range": 0,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2,
+        "roam_ai": false
+    },
+    {
+        "nid": "Wagonnight",
+        "behaviours": [
+            {
+                "action": "Move_to",
+                "target": "Position",
+                "target_spec": [
+                    25,
+                    5
+                ],
                 "view_range": -4,
                 "invert_targeting": false,
                 "roam_speed": 100,

@@ -8,6 +8,7 @@
         "klass": "IncubusKing",
         "tags": [
             "Lord",
+            "Required",
             "Incubus"
         ],
         "bases": {
@@ -2859,7 +2860,7 @@
         "desc": "Doom King's secretary. Has an optimization fetish.",
         "variant": "",
         "level": 6,
-        "klass": "Dancer",
+        "klass": "Succubus",
         "tags": [
             "Female",
             "Succubus"
@@ -6521,7 +6522,13 @@
         "starting_items": [],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "Iris",
         "affinity": "Ace",
@@ -7310,7 +7317,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "{LaurentLacroix} OC 19 [F2E]_1",
+        "portrait_nid": "{Cravat} OC Arcanist (Version 1) [F2E]",
         "affinity": "None",
         "fields": []
     },
@@ -8301,7 +8308,7 @@
         "unit_notes": [],
         "wexp_gain": {},
         "alternate_classes": [],
-        "portrait_nid": "{Fatman} [F2E] OC 16",
+        "portrait_nid": "Duke {claire45} [F2E]",
         "affinity": "Hetero",
         "fields": []
     },
@@ -8362,7 +8369,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "{MeatofJustice, Melia} Mercenary F [F2E]",
+        "portrait_nid": "{Parrhesia} Kirsten [F2E]",
         "affinity": "Hetero",
         "fields": []
     },
@@ -8458,7 +8465,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Steel_Axe",
+                "Silver_Blade",
                 false
             ]
         ],
@@ -8487,66 +8494,17 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "{LaurentLacroix} OC 29 [F2E]",
+        "portrait_nid": "{WhatIsAnAubin} [F2E] OC 2",
         "affinity": "Homo",
-        "fields": []
-    },
-    {
-        "nid": "Stoval",
-        "name": "Stoval",
-        "desc": "",
-        "variant": "",
-        "level": 7,
-        "klass": "Sage",
-        "tags": [
-            "Boss"
-        ],
-        "bases": {
-            "HP": 20,
-            "STR": 0,
-            "MAG": 7,
-            "SKL": 6,
-            "SPD": 5,
-            "LCK": 0,
-            "DEF": 5,
-            "RES": 6,
-            "CON": 7,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 45,
-            "STR": 0,
-            "MAG": 45,
-            "SKL": 30,
-            "SPD": 25,
-            "LCK": 15,
-            "DEF": 10,
-            "RES": 40,
-            "CON": 0,
-            "MOV": 0
-        },
-        "stat_cap_modifiers": {},
-        "starting_items": [
-            [
-                "ArcaneSpells",
-                false
-            ]
-        ],
-        "learned_skills": [],
-        "unit_notes": [],
-        "wexp_gain": {},
-        "alternate_classes": [],
-        "portrait_nid": "{Mexicancactus2911} Morphaeus [F2E]",
-        "affinity": "Hetero",
         "fields": []
     },
     {
         "nid": "Yorem",
         "name": "Yorem",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 7,
-        "klass": "Sniper",
+        "klass": "Sage",
         "tags": [
             "Boss",
             "ZeroMove"
@@ -8578,11 +8536,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Longbow",
-                false
-            ],
-            [
-                "Short_Bow",
+                "ArcaneSpells_T2",
                 false
             ],
             [
@@ -8610,6 +8564,61 @@
         "fields": []
     },
     {
+        "nid": "Stoval",
+        "name": "Stoval",
+        "desc": "",
+        "variant": "Female",
+        "level": 7,
+        "klass": "Sage",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 25,
+            "STR": 0,
+            "MAG": 7,
+            "SKL": 6,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 5,
+            "RES": 6,
+            "CON": 7,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 0,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 25,
+            "LCK": 15,
+            "DEF": 10,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "ArcaneSpells_T2",
+                false
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Anima": [
+                false,
+                121,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{Ghostblade} OC Jinaya Summoner [F2E]",
+        "affinity": "Ace",
+        "fields": []
+    },
+    {
         "nid": "Rimer",
         "name": "Rimer",
         "desc": "",
@@ -8621,7 +8630,7 @@
         ],
         "bases": {
             "HP": 24,
-            "STR": 9,
+            "STR": 6,
             "MAG": 0,
             "SKL": 6,
             "SPD": 4,
@@ -8675,7 +8684,7 @@
             "Boss"
         ],
         "bases": {
-            "HP": 28,
+            "HP": 25,
             "STR": 7,
             "MAG": 0,
             "SKL": 3,
@@ -8742,7 +8751,7 @@
         "bases": {
             "HP": 25,
             "STR": 0,
-            "MAG": 9,
+            "MAG": 8,
             "SKL": 5,
             "SPD": 5,
             "LCK": 0,
@@ -8849,7 +8858,7 @@
         "nid": "Perese",
         "name": "Perese",
         "desc": "",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "Queen",
         "tags": [],
@@ -8878,7 +8887,7 @@
             "Boss"
         ],
         "bases": {
-            "HP": 29,
+            "HP": 23,
             "STR": 9,
             "MAG": 0,
             "SKL": 8,
@@ -9097,7 +9106,7 @@
         "starting_items": [
             [
                 "Toxin_Lance",
-                false
+                true
             ],
             [
                 "Sx_Purse",
@@ -9124,7 +9133,7 @@
         "desc": "",
         "variant": "",
         "level": 8,
-        "klass": "Punisher",
+        "klass": "Mercenary",
         "tags": [
             "Boss"
         ],
@@ -9144,7 +9153,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Steel_Axe",
+                "Steel_Blade",
                 false
             ],
             [
@@ -9166,6 +9175,11 @@
                 null
             ],
             "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
                 false,
                 71,
                 null
@@ -9331,6 +9345,54 @@
         "alternate_classes": [],
         "portrait_nid": "{MeatofJustice} OC 36",
         "affinity": "Hetero",
+        "fields": []
+    },
+    {
+        "nid": "Thonoda",
+        "name": "Thonoda",
+        "desc": "",
+        "variant": "",
+        "level": 13,
+        "klass": "Parrier",
+        "tags": [
+            "Boss"
+        ],
+        "bases": {
+            "HP": 28,
+            "STR": 8,
+            "MAG": 7,
+            "SKL": 12,
+            "SPD": 4,
+            "LCK": 13,
+            "DEF": 9,
+            "RES": 8,
+            "CON": 11,
+            "MOV": 0
+        },
+        "growths": {},
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Steel_Sword",
+                false
+            ],
+            [
+                "Big_Sx_Purse",
+                true
+            ]
+        ],
+        "learned_skills": [],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                121,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "{MeatofJustice} Lord (Version 2) [F2E]",
+        "affinity": "Ace",
         "fields": []
     },
     {

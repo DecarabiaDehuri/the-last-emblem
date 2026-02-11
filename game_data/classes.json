@@ -12835,6 +12835,21 @@
                 false,
                 0,
                 null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Soldier",
@@ -12842,7 +12857,7 @@
             0,
             0
         ],
-        "map_sprite_nid": "Soldier",
+        "map_sprite_nid": "Lancer (M) Lance {Jj09}-stand",
         "combat_anim_nid": "Aramite",
         "fields": []
     },
@@ -13761,6 +13776,174 @@
         "fields": []
     },
     {
+        "nid": "Succubus",
+        "name": "Succubus",
+        "desc": "A race specialized in dealing with Lust magic.",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 2,
+            "SPD": 7,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 1,
+            "CON": 4,
+            "MOV": 5,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 45,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 60,
+            "LCK": 70,
+            "DEF": 0,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 20,
+            "MOV": 15,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Dance"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                251
+            ],
+            "Lance": [
+                false,
+                0,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                true,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                true,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dancer",
+        "combat_anim_nid": "Succubus_generic",
+        "fields": []
+    },
+    {
         "nid": "Suc_Yarra",
         "name": "Succubus",
         "desc": "Yarra is a versatile Succubus.",
@@ -13903,6 +14086,21 @@
             "Refresh": [
                 true,
                 1,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
                 null
             ]
         },
@@ -14059,6 +14257,21 @@
                 true,
                 1,
                 null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -14214,6 +14427,21 @@
                 true,
                 1,
                 null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -14368,6 +14596,21 @@
             "Refresh": [
                 true,
                 1,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
                 null
             ]
         },
@@ -14687,6 +14930,21 @@
                 true,
                 1,
                 null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -14871,6 +15129,1765 @@
         ],
         "map_sprite_nid": "EliteSuc-stand",
         "combat_anim_nid": "Suc_foe_2Beholda",
+        "fields": []
+    },
+    {
+        "nid": "Suc_foe_1",
+        "name": "Succubus",
+        "desc": "A race well-versed in sexual magic.",
+        "tier": 1,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Flying",
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 10,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 60,
+            "STR": 50,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 50,
+            "LCK": 10,
+            "DEF": 30,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Flying"
+            ],
+            [
+                1,
+                "Lust_Drain_attack"
+            ],
+            [
+                9,
+                "Push_Luck"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                true,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Succubus {SkidMarc25}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Succubus (F) {SkidMarc25}-stand",
+        "combat_anim_nid": "Succubus_1",
+        "fields": []
+    },
+    {
+        "nid": "Suc_dancer",
+        "name": "Succubus",
+        "desc": "Succubus who focus on support magic.",
+        "tier": 1,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Flying",
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 1,
+            "MAG": 3,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 10,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 20,
+            "MAG": 50,
+            "SKL": 50,
+            "SPD": 30,
+            "LCK": 10,
+            "DEF": 15,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Flying"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                71,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                true,
+                121,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                true,
+                181,
+                null
+            ]
+        },
+        "icon_nid": "Succubus {SkidMarc25}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Suc sup-stand",
+        "combat_anim_nid": "SucSup",
+        "fields": []
+    },
+    {
+        "nid": "Suc_foe_2",
+        "name": "Elite Succubus",
+        "desc": "Elite Succubi who have dangerous abilities.",
+        "tier": 1,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Flying",
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 4,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 12,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 60,
+            "MAG": 70,
+            "SKL": 60,
+            "SPD": 50,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 50,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Flying"
+            ],
+            [
+                1,
+                "Lust_Death_attack"
+            ],
+            [
+                9,
+                "DivineBreaker"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                71,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                71,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                true,
+                71,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Succubus {SkidMarc25}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "EliteSuc-stand",
+        "combat_anim_nid": "Succubus_2",
+        "fields": []
+    },
+    {
+        "nid": "Suc_mermaid",
+        "name": "<narrow>Mermaid Succubus</>",
+        "desc": "Succubus who lives in waters.",
+        "tier": 1,
+        "movement_group": "Mermaid",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 19,
+            "STR": 7,
+            "MAG": 2,
+            "SKL": 8,
+            "SPD": 9,
+            "LCK": 4,
+            "DEF": 5,
+            "RES": 6,
+            "CON": 10,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 60,
+            "STR": 50,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 50,
+            "LCK": 10,
+            "DEF": 30,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Sleep_attack"
+            ],
+            [
+                5,
+                "Duelists_Blow"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                true,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Succubus {SkidMarc25}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Mermaid (F) {N426}-stand",
+        "combat_anim_nid": "Mermaid",
+        "fields": []
+    },
+    {
+        "nid": "Batgal",
+        "name": "Bat Succubus",
+        "desc": "Succubus most found in caverns.",
+        "tier": 1,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 3,
+            "LCK": 0,
+            "DEF": 4,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Confusion_attack"
+            ],
+            [
+                5,
+                "Duelists_Parry"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                true,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Succubus (F) {SkidMarc25}-stand",
+        "combat_anim_nid": "SuccubusBat",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Spider",
+        "name": "<narrow>Spider Succubus</>",
+        "desc": "Succubus of the Spider variant.",
+        "tier": 1,
+        "movement_group": "Regular",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 3,
+            "LCK": 5,
+            "DEF": 4,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 82,
+            "STR": 60,
+            "MAG": 20,
+            "SKL": 40,
+            "SPD": 30,
+            "LCK": 25,
+            "DEF": 30,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Poison_attack"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                true,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "216cad6a-e59b-4346-baea-d280df025119",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Bael Widow (F) {MeatOfJustice}-stand",
+        "combat_anim_nid": "SucSpider",
+        "fields": []
+    },
+    {
+        "nid": "SpiderEmpress",
+        "name": "Spider",
+        "desc": "A special spider Succubus.",
+        "tier": 1,
+        "movement_group": "SpiderEmpress",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 3,
+            "LCK": 0,
+            "DEF": 4,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 82,
+            "STR": 50,
+            "MAG": 20,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 15,
+            "DEF": 18,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Certain_Counter"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                true,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Portrait Editor fetls memory.gba_157@9D Bael_8ADCF0",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "SpiderEmpress",
+        "combat_anim_nid": "SpiderEmpress",
+        "fields": []
+    },
+    {
+        "nid": "Suc_foe_lamia",
+        "name": "<narrow>Lamia Succubus</>",
+        "desc": "Lamia Succubus who can paralyze their opponents.",
+        "tier": 1,
+        "movement_group": "Mages",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Female",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 14,
+            "STR": 3,
+            "MAG": 4,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 13,
+            "MOV": 4
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 10,
+            "MAG": 60,
+            "SKL": 60,
+            "SPD": 30,
+            "LCK": 40,
+            "DEF": 20,
+            "RES": 50,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Paralysis_attack"
+            ],
+            [
+                5,
+                "Warding_Blow"
+            ],
+            [
+                9,
+                "Push_Magic"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                0,
+                71
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "417a3038-e69e-4aab-bcd0-632433e5d66c",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Gorgon (U) {IS}-stand",
+        "combat_anim_nid": "Lamia_foe",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Centaur",
+        "name": "<narrow>Centaur Succubus</>",
+        "desc": "Succubi with superior land movement.",
+        "tier": 1,
+        "movement_group": "Light Cav",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 20,
+            "STR": 9,
+            "MAG": 2,
+            "SKL": 7,
+            "SPD": 13,
+            "LCK": 3,
+            "DEF": 6,
+            "CON": 9,
+            "MOV": 7,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 35,
+            "MAG": 17,
+            "SKL": 40,
+            "SPD": 28,
+            "LCK": 30,
+            "DEF": 15,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 15,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "CON": 25,
+            "MOV": 15,
+            "RES": 20,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto"
+            ],
+            [
+                5,
+                "Silence_attack"
+            ],
+            [
+                9,
+                "Push_Speed"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                251
+            ],
+            "Lance": [
+                false,
+                31,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Tarvos (M) Elder Centaur {Seal}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Tarvos (F) (Alfred Kamon's Anim) {Blood}-stand",
+        "combat_anim_nid": "SuccubusCentaur",
+        "fields": []
+    },
+    {
+        "nid": "Suc_Centaur_Boss",
+        "name": "<narrow>Centaur Succubus</>",
+        "desc": "Armored Succubi with superior land movement.",
+        "tier": 1,
+        "movement_group": "Heavy Cav",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 20,
+            "STR": 11,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 11,
+            "LCK": 0,
+            "DEF": 6,
+            "CON": 9,
+            "MOV": 7,
+            "RES": 7,
+            "LEAD": 0
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 50,
+            "MAG": 17,
+            "SKL": 60,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 25,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 25,
+            "LEAD": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0,
+            "LEAD": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "CON": 25,
+            "MOV": 15,
+            "RES": 20,
+            "LEAD": 60,
+            "New Stat": 30
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto"
+            ],
+            [
+                5,
+                "Darting_Counter"
+            ],
+            [
+                9,
+                "Darting_Revenge"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                251
+            ],
+            "Lance": [
+                false,
+                31,
+                251
+            ],
+            "Axe": [
+                false,
+                0,
+                251
+            ],
+            "Bow": [
+                false,
+                0,
+                251
+            ],
+            "Staff": [
+                false,
+                0,
+                251
+            ],
+            "Light": [
+                false,
+                0,
+                251
+            ],
+            "Anima": [
+                false,
+                0,
+                251
+            ],
+            "Dark": [
+                false,
+                0,
+                251
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                251
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Tarvos (M) Elder Centaur {Seal}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Tarvos (F) Centaur Sword {DATonDemand}-stand",
+        "combat_anim_nid": "SuccubusCentaurBoss",
+        "fields": []
+    },
+    {
+        "nid": "Plant",
+        "name": "Plant Succubus",
+        "desc": "A plant succubus, somehow.",
+        "tier": 1,
+        "movement_group": "Armors",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Succubus"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 30,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 25,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                true,
+                0,
+                null
+            ],
+            "Whip": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Scythe": [
+                false,
+                0,
+                null
+            ],
+            "Refresh": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dryad (F) {Stephano}-stand",
+        "combat_anim_nid": "Plant",
         "fields": []
     },
     {
@@ -17685,1765 +19702,6 @@
         "fields": []
     },
     {
-        "nid": "Suc_foe_1",
-        "name": "Succubus",
-        "desc": "A race well-versed in sexual magic.",
-        "tier": 1,
-        "movement_group": "Fliers",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Flying",
-            "Monster",
-            "Female",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 14,
-            "STR": 4,
-            "MAG": 2,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 1,
-            "DEF": 3,
-            "RES": 2,
-            "CON": 10,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 60,
-            "STR": 50,
-            "MAG": 40,
-            "SKL": 40,
-            "SPD": 50,
-            "LCK": 10,
-            "DEF": 30,
-            "RES": 20,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Flying"
-            ],
-            [
-                1,
-                "Lust_Drain_attack"
-            ],
-            [
-                9,
-                "Push_Luck"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                true,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                true,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ],
-            "Fire": [
-                false,
-                0,
-                null
-            ],
-            "Lightning": [
-                false,
-                0,
-                null
-            ],
-            "Ice": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Succubus {SkidMarc25}",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Succubus (F) {SkidMarc25}-stand",
-        "combat_anim_nid": "Succubus_1",
-        "fields": []
-    },
-    {
-        "nid": "Suc_dancer",
-        "name": "Succubus",
-        "desc": "Succubus who focus on support magic.",
-        "tier": 1,
-        "movement_group": "Fliers",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Flying",
-            "Monster",
-            "Female",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 14,
-            "STR": 1,
-            "MAG": 3,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 1,
-            "DEF": 3,
-            "RES": 2,
-            "CON": 10,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 50,
-            "STR": 20,
-            "MAG": 50,
-            "SKL": 50,
-            "SPD": 30,
-            "LCK": 10,
-            "DEF": 15,
-            "RES": 10,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Flying"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                true,
-                71,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                true,
-                121,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                true,
-                181,
-                null
-            ]
-        },
-        "icon_nid": "Succubus {SkidMarc25}",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Suc sup-stand",
-        "combat_anim_nid": "SucSup",
-        "fields": []
-    },
-    {
-        "nid": "Suc_foe_2",
-        "name": "Elite Succubus",
-        "desc": "Elite Succubi who have dangerous abilities.",
-        "tier": 1,
-        "movement_group": "Fliers",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Flying",
-            "Monster",
-            "Female",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 14,
-            "STR": 4,
-            "MAG": 2,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 4,
-            "DEF": 3,
-            "RES": 2,
-            "CON": 12,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 80,
-            "STR": 60,
-            "MAG": 70,
-            "SKL": 60,
-            "SPD": 50,
-            "LCK": 50,
-            "DEF": 40,
-            "RES": 50,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Flying"
-            ],
-            [
-                1,
-                "Lust_Death_attack"
-            ],
-            [
-                9,
-                "DivineBreaker"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                true,
-                71,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                true,
-                71,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                true,
-                71,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ],
-            "Fire": [
-                false,
-                0,
-                null
-            ],
-            "Lightning": [
-                false,
-                0,
-                null
-            ],
-            "Ice": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Succubus {SkidMarc25}",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "EliteSuc-stand",
-        "combat_anim_nid": "Succubus_2",
-        "fields": []
-    },
-    {
-        "nid": "Suc_mermaid",
-        "name": "<narrow>Mermaid Succubus</>",
-        "desc": "Succubus who lives in waters.",
-        "tier": 1,
-        "movement_group": "Mermaid",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Monster",
-            "Female",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 19,
-            "STR": 7,
-            "MAG": 2,
-            "SKL": 8,
-            "SPD": 9,
-            "LCK": 4,
-            "DEF": 5,
-            "RES": 6,
-            "CON": 10,
-            "MOV": 6
-        },
-        "growths": {
-            "HP": 60,
-            "STR": 50,
-            "MAG": 40,
-            "SKL": 40,
-            "SPD": 50,
-            "LCK": 10,
-            "DEF": 30,
-            "RES": 20,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Sleep_attack"
-            ],
-            [
-                5,
-                "Duelists_Blow"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                true,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                false,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ],
-            "Fire": [
-                false,
-                0,
-                null
-            ],
-            "Lightning": [
-                false,
-                0,
-                null
-            ],
-            "Ice": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Succubus {SkidMarc25}",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Mermaid (F) {N426}-stand",
-        "combat_anim_nid": "Mermaid",
-        "fields": []
-    },
-    {
-        "nid": "Batgal",
-        "name": "Bat Succubus",
-        "desc": "Succubus most found in caverns.",
-        "tier": 1,
-        "movement_group": "Fliers",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 10,
-            "STR": 2,
-            "MAG": 0,
-            "SKL": 5,
-            "SPD": 3,
-            "LCK": 0,
-            "DEF": 4,
-            "RES": 2,
-            "CON": 5,
-            "MOV": 2
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Confusion_attack"
-            ],
-            [
-                5,
-                "Duelists_Parry"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                false,
-                0,
-                null
-            ],
-            "Whip": [
-                true,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Citizen",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Succubus (F) {SkidMarc25}-stand",
-        "combat_anim_nid": "SuccubusBat",
-        "fields": []
-    },
-    {
-        "nid": "Suc_Spider",
-        "name": "<narrow>Spider Succubus</>",
-        "desc": "Succubus of the Spider variant.",
-        "tier": 1,
-        "movement_group": "Regular",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Monster",
-            "Female",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 10,
-            "STR": 2,
-            "MAG": 0,
-            "SKL": 5,
-            "SPD": 3,
-            "LCK": 5,
-            "DEF": 4,
-            "RES": 2,
-            "CON": 5,
-            "MOV": 2
-        },
-        "growths": {
-            "HP": 82,
-            "STR": 60,
-            "MAG": 20,
-            "SKL": 40,
-            "SPD": 30,
-            "LCK": 25,
-            "DEF": 30,
-            "RES": 20,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Poison_attack"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                false,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                true,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "216cad6a-e59b-4346-baea-d280df025119",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Bael Widow (F) {MeatOfJustice}-stand",
-        "combat_anim_nid": "SucSpider",
-        "fields": []
-    },
-    {
-        "nid": "SpiderEmpress",
-        "name": "Spider",
-        "desc": "A special spider Succubus.",
-        "tier": 1,
-        "movement_group": "SpiderEmpress",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Monster",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 10,
-            "STR": 2,
-            "MAG": 0,
-            "SKL": 5,
-            "SPD": 3,
-            "LCK": 0,
-            "DEF": 4,
-            "RES": 2,
-            "CON": 5,
-            "MOV": 2
-        },
-        "growths": {
-            "HP": 82,
-            "STR": 50,
-            "MAG": 20,
-            "SKL": 30,
-            "SPD": 20,
-            "LCK": 15,
-            "DEF": 18,
-            "RES": 13,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Certain_Counter"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                true,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                true,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Portrait Editor fetls memory.gba_157@9D Bael_8ADCF0",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "SpiderEmpress",
-        "combat_anim_nid": "SpiderEmpress",
-        "fields": []
-    },
-    {
-        "nid": "Suc_foe_lamia",
-        "name": "<narrow>Lamia Succubus</>",
-        "desc": "Lamia Succubus who can paralyze their opponents.",
-        "tier": 1,
-        "movement_group": "Mages",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Monster",
-            "Female",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 14,
-            "STR": 3,
-            "MAG": 4,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 3,
-            "DEF": 3,
-            "RES": 2,
-            "CON": 13,
-            "MOV": 4
-        },
-        "growths": {
-            "HP": 70,
-            "STR": 10,
-            "MAG": 60,
-            "SKL": 60,
-            "SPD": 30,
-            "LCK": 40,
-            "DEF": 20,
-            "RES": 50,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [
-            [
-                1,
-                "Paralysis_attack"
-            ],
-            [
-                5,
-                "Warding_Blow"
-            ],
-            [
-                9,
-                "Push_Magic"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                false,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                true,
-                0,
-                71
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "417a3038-e69e-4aab-bcd0-632433e5d66c",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Gorgon (U) {IS}-stand",
-        "combat_anim_nid": "Lamia_foe",
-        "fields": []
-    },
-    {
-        "nid": "Suc_Centaur",
-        "name": "<narrow>Centaur Succubus</>",
-        "desc": "Succubi with superior land movement.",
-        "tier": 1,
-        "movement_group": "Light Cav",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Horse",
-            "Mounted",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 20,
-            "STR": 9,
-            "MAG": 2,
-            "SKL": 7,
-            "SPD": 13,
-            "LCK": 3,
-            "DEF": 6,
-            "CON": 9,
-            "MOV": 7,
-            "RES": 0,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 75,
-            "STR": 35,
-            "MAG": 17,
-            "SKL": 40,
-            "SPD": 28,
-            "LCK": 30,
-            "DEF": 15,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 15,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 20,
-            "MAG": 20,
-            "SKL": 20,
-            "SPD": 20,
-            "LCK": 30,
-            "DEF": 20,
-            "CON": 25,
-            "MOV": 15,
-            "RES": 20,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [
-            [
-                1,
-                "Canto"
-            ],
-            [
-                5,
-                "Silence_attack"
-            ],
-            [
-                9,
-                "Push_Speed"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                true,
-                1,
-                251
-            ],
-            "Lance": [
-                false,
-                31,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Tarvos (M) Elder Centaur {Seal}",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Tarvos (F) (Alfred Kamon's Anim) {Blood}-stand",
-        "combat_anim_nid": "SuccubusCentaur",
-        "fields": []
-    },
-    {
-        "nid": "Suc_Centaur_Boss",
-        "name": "<narrow>Centaur Succubus</>",
-        "desc": "Armored Succubi with superior land movement.",
-        "tier": 1,
-        "movement_group": "Heavy Cav",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Horse",
-            "Mounted",
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 20,
-            "STR": 11,
-            "MAG": 2,
-            "SKL": 3,
-            "SPD": 11,
-            "LCK": 0,
-            "DEF": 6,
-            "CON": 9,
-            "MOV": 7,
-            "RES": 7,
-            "LEAD": 0
-        },
-        "growths": {
-            "HP": 75,
-            "STR": 50,
-            "MAG": 17,
-            "SKL": 60,
-            "SPD": 40,
-            "LCK": 40,
-            "DEF": 25,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 25,
-            "LEAD": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 0,
-            "LEAD": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 0,
-            "LEAD": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 20,
-            "MAG": 20,
-            "SKL": 20,
-            "SPD": 20,
-            "LCK": 30,
-            "DEF": 20,
-            "CON": 25,
-            "MOV": 15,
-            "RES": 20,
-            "LEAD": 60,
-            "New Stat": 30
-        },
-        "learned_skills": [
-            [
-                1,
-                "Canto"
-            ],
-            [
-                5,
-                "Darting_Counter"
-            ],
-            [
-                9,
-                "Darting_Revenge"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                true,
-                1,
-                251
-            ],
-            "Lance": [
-                false,
-                31,
-                251
-            ],
-            "Axe": [
-                false,
-                0,
-                251
-            ],
-            "Bow": [
-                false,
-                0,
-                251
-            ],
-            "Staff": [
-                false,
-                0,
-                251
-            ],
-            "Light": [
-                false,
-                0,
-                251
-            ],
-            "Anima": [
-                false,
-                0,
-                251
-            ],
-            "Dark": [
-                false,
-                0,
-                251
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                251
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Tarvos (M) Elder Centaur {Seal}",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Tarvos (F) Centaur Sword {DATonDemand}-stand",
-        "combat_anim_nid": "SuccubusCentaurBoss",
-        "fields": []
-    },
-    {
-        "nid": "Plant",
-        "name": "Plant Succubus",
-        "desc": "A plant succubus, somehow.",
-        "tier": 1,
-        "movement_group": "Armors",
-        "promotes_from": null,
-        "turns_into": [],
-        "tags": [
-            "Succubus"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growths": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
-        },
-        "max_stats": {
-            "HP": 60,
-            "STR": 30,
-            "MAG": 30,
-            "SKL": 30,
-            "SPD": 30,
-            "LCK": 30,
-            "DEF": 30,
-            "RES": 30,
-            "CON": 25,
-            "MOV": 15
-        },
-        "learned_skills": [],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                null
-            ],
-            "Lance": [
-                false,
-                0,
-                null
-            ],
-            "Axe": [
-                false,
-                0,
-                null
-            ],
-            "Bow": [
-                false,
-                0,
-                null
-            ],
-            "Staff": [
-                true,
-                0,
-                null
-            ],
-            "Light": [
-                false,
-                0,
-                null
-            ],
-            "Anima": [
-                false,
-                0,
-                null
-            ],
-            "Dark": [
-                true,
-                0,
-                null
-            ],
-            "Whip": [
-                false,
-                0,
-                null
-            ],
-            "Default": [
-                false,
-                0,
-                null
-            ],
-            "Scythe": [
-                false,
-                0,
-                null
-            ],
-            "Refresh": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Dryad (F) {Stephano}-stand",
-        "combat_anim_nid": "Plant",
-        "fields": []
-    },
-    {
         "nid": "RosaPhoenix",
         "name": "RosaPhoenix",
         "desc": "",
@@ -19571,6 +19829,21 @@
                 null
             ],
             "Refresh": [
+                false,
+                0,
+                null
+            ],
+            "Fire": [
+                false,
+                0,
+                null
+            ],
+            "Lightning": [
+                false,
+                0,
+                null
+            ],
+            "Ice": [
                 false,
                 0,
                 null

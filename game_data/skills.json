@@ -252,16 +252,12 @@
                 null
             ],
             [
-                "global",
+                "lost_on_endstep",
                 null
             ],
             [
-                "upkeep_skill_gain",
-                "Nothing_negative"
-            ],
-            [
-                "endstep_skill_gain",
-                "Nothing_negative"
+                "negative",
+                null
             ]
         ]
     },
@@ -17911,7 +17907,7 @@
     {
         "nid": "Dance",
         "name": "Dance",
-        "desc": "The unit can <green>refresh</> an ally, letting them act again this turn. Costs <orange>4 SP</>.",
+        "desc": "<orange>(6 SP)</> The unit can <green>refresh</> an ally, letting them act again this turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -17928,7 +17924,7 @@
             ],
             [
                 "cost_mana",
-                4
+                6
             ],
             [
                 "grey_if_inactive",
