@@ -13,7 +13,9 @@
             "music_clear;1000",
             "wait;1000",
             "transition;open",
-            "s;;Warning: this is a +18 game.|It contains explicit sexual language.|This is a fangame tribute to the adult RPG The Last Sovereign, made by Sierra Lee.|This game contains spoilers up to the end of Chapter 3 of The Last Sovereign.|This game has no affiliation whatsoever to Intelligent Systems nor Sierra Lee.;center;;overworld_narration",
+            "s;;Warning: this is a +18 game.|Though it does not exhibits explicit sexual images, sexual language is abundant.|This is a fangame tribute to the adult RPG The Last Sovereign, made by Sierra Lee.|This game contains spoilers up to the end of Chapter 3 of The Last Sovereign.|This game has no affiliation whatsoever to Intelligent Systems nor Sierra Lee.;center;;overworld_narration",
+            "wait;1000",
+            "s;;Warning: this game is under construction.|Expect various aspects to be incomplete.;center;;overworld_narration",
             "wait;4000",
             "end_skip",
             "music;FuckEmblem;3000",
@@ -12452,7 +12454,8 @@
         "priority": 20,
         "_source": [
             "add_talk;Trin;t1",
-            "add_talk;Trin;t2"
+            "add_talk;Trin;t2",
+            "add_item_to_multiitem;Trin;SoulSpells;SoulPuppetAI"
         ],
         "nid": "DEBUG Trin setup"
     },
@@ -13146,7 +13149,7 @@
             "    remove_portrait;Trin",
             "    center_cursor;{target};1000",
             "    sound;EvilEye",
-            "    map_anim;OverchargeAura;{target}",
+            "    map_anim;Special1;{target}",
             "    wait;500",
             "    change_team;{target};other",
             "    wait;1000",
@@ -13226,19 +13229,28 @@
             "        change_ai;{PUP};Pursue",
             "    endf",
             "    game_var;puppetAI;'Pursue'",
+            "    center_cursor;Trin",
+            "    sound;CutinCrit",
+            "    map_anim;CutinTrin;Trin;overlay",
             "    s;Trin;Kill them all!",
             "elif;'{v:_last_choice}' == 'Protect Trin'",
             "    for;PUP;[u.nid for u in game.get_all_units() if 'puppet' in u.tags]",
             "        change_ai;{PUP};DefendTrin",
             "    endf",
             "    game_var;puppetAI;'DefendTrin'",
+            "    center_cursor;Trin",
+            "    sound;CutinCrit",
+            "    map_anim;CutinTrin;Trin;overlay",
             "    s;Trin;Cover my ass, damnit!",
             "else",
             "    for;PUP;[u.nid for u in game.get_all_units() if 'puppet' in u.tags]",
             "        change_ai;{PUP};None",
             "    endf",
-            "    s;Trin;Stand still and entertain me, fools!",
             "    game_var;puppetAI;'None'",
+            "    center_cursor;Trin",
+            "    sound;CutinCrit",
+            "    map_anim;CutinTrin;Trin;overlay",
+            "    s;Trin;Stand still and entertain me, fools!",
             "end",
             "game_var;puppetAIchanged;1",
             "wait;300",
@@ -13398,7 +13410,12 @@
             "give_skill;Ralke;Save_World;;no_banner",
             "give_skill;Implevon;Annoyance;;no_banner",
             "give_item;Esmera;Holy_Axe;;no_banner",
-            "give_wexp;Esmera;Axe;500"
+            "give_wexp;Esmera;Axe;500",
+            "wait;500",
+            "center_cursor;Ralke",
+            "wait;300",
+            "sound;Shine",
+            "map_anim;lust;Ralke;overlay"
         ],
         "nid": "aram1 New Event_1"
     },
@@ -15349,7 +15366,7 @@
             "if;unit2.nid == 'Janine'",
             "multi_add_portrait;Janine;Left;Simon;Right",
             "expression;Janine;Smile",
-            "s;Janine;Hello, my dear. We need to talk about the current situation.",
+            "s;Janine;Hello, my dear.",
             "choice;advance;Proceed to next chapter?;Yes,No;backable",
             "    if;'{v:_last_choice}' == 'Yes'",
             "        music_clear;1500",
@@ -18285,11 +18302,11 @@
         "priority": 20,
         "_source": [
             "if;{v:seizes} == 2",
-            "wait;1500",
-            "music_clear",
-            "victory_screen;Victory",
-            "wait;1000",
-            "win_game",
+            "    wait;1500",
+            "    music_clear",
+            "    victory_screen;Victory",
+            "    wait;1000",
+            "    win_game",
             "else",
             "end"
         ],
@@ -24715,13 +24732,18 @@
     },
     {
         "name": "Intro",
-        "trigger": null,
+        "trigger": "level_start",
         "level_nid": "Intro9",
         "condition": "True",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
+            "center_cursor;9,17;immediate",
+            "transition;close",
+            "music_clear",
+            "center_cursor;37,3",
+            "transition;open",
             "prep;t;Preparation"
         ],
         "nid": "Intro9 Intro"
@@ -24883,7 +24905,7 @@
             "add_portrait;Simon;Left;;CloseEyes",
             "wait;1000",
             "expression;Simon;OpenEyes",
-            "s;Simon;Please lay down your weapons.{c:wait;300} If you do, I promise no harm will befall on you and your friends.",
+            "s;Simon;Please lay down your weapons.|If you do, I promise no harm will befall on you and your friends.",
             "wait;500",
             "add_portrait;Jack;FarRight;;CloseEyes",
             "s;Jack;{tgm}...",
@@ -24912,8 +24934,11 @@
             "expression;Seyta;CloseEyes",
             "s;Seyta;Capture me, execute me, do with me what you will.",
             "expression;Seyta;OpenEyes,Smile",
-            "s;Seyta;You may find that this really wasn't for nothing.{c:wait;500} Heh.",
+            "s;Seyta;You may find that this really wasn't for nothing.{c:wait;500} Heheh.",
             "s;Simon;{tgm}...",
+            "r;Seyta",
+            "wait;500",
+            "s;Simon;Everyone.{c:wait;500} We wrap things up here and return home.",
             "wait;1000",
             "transition;close;2000",
             "music_clear;2000",
@@ -25024,5 +25049,195 @@
             "set_overworld_position;Simon;13,28"
         ],
         "nid": "Intro8 tentativa fix overworld"
+    },
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "Titledrop",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;Simon;immediate",
+            "transition;close",
+            "music_clear",
+            "add_weather;smoke",
+            "add_weather;smoke",
+            "add_weather;smoke",
+            "transition;open;1000",
+            "wait;1000",
+            "add_portrait;Simon;Right;right",
+            "wait;200",
+            "bop_portrait;Simon",
+            "s;Simon;No!",
+            "r;Simon;;left",
+            "move_unit;Simon;9,26;normal;;150;",
+            "wait;500",
+            "center_cursor;10,31;500",
+            "wait;500",
+            "spawn_group;group;south;group;normal;closest;no_follow",
+            "music;Main Theme_TLS",
+            "wait;2000",
+            "center_cursor;7,20;4000",
+            "center_cursor;7,15;4000",
+            "center_cursor;7,10;4000",
+            "wait;2500",
+            "change_background;ingametitledrop5;1000",
+            "wait;3000",
+            "s;;The Aram War;bottom_left;;cinematic;7;yellow;;;",
+            "wait;1000",
+            "transition;close;2000",
+            "music_clear;2000",
+            "skip_save;t",
+            "win_game"
+        ],
+        "nid": "Titledrop Intro"
+    },
+    {
+        "name": "New Event",
+        "trigger": "a",
+        "level_nid": "titletst",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "change_background;ingametitledrop5;100",
+            "wait;5000"
+        ],
+        "nid": "titletst New Event"
+    },
+    {
+        "name": "Ship arrives on Destination",
+        "trigger": "Destination",
+        "level_nid": "Intro9",
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;1000",
+            "center_cursor;7,16;1500",
+            "music;Tension2",
+            "wait;500",
+            "add_group;ship;ship;fade;closest",
+            "wait;500"
+        ],
+        "nid": "Intro9 Ship arrives on Destination"
+    },
+    {
+        "name": "Ship arrives",
+        "trigger": "turn_change",
+        "level_nid": "Intro9",
+        "condition": "game.turncount == 2",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "center_cursor;3,0;1500",
+            "wait;500",
+            "add_unit;ship;3,0;fade;push;north",
+            "wait;500",
+            "center_cursor;7,16;1500",
+            "wait;500",
+            "flicker_cursor;7,16",
+            "wait;500"
+        ],
+        "nid": "Intro9 Ship arrives"
+    },
+    {
+        "name": "Ambush",
+        "trigger": "unit_wait",
+        "level_nid": "Intro9",
+        "condition": "any_unit_in_region('ambush', team='player') and game.check_alive('Ouyna') == True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "center_cursor;Ouyna;1500",
+            "wait;500",
+            "add_portrait;Ouyna;Left",
+            "bop_portrait;Ouyna",
+            "s;Ouyna;Move out!",
+            "r;Ouyna",
+            "center_cursor;36,19;1500",
+            "wait;500",
+            "spawn_group;wyv;east;wyv;normal;closest",
+            "wait;500"
+        ],
+        "nid": "Intro9 Ambush"
+    },
+    {
+        "name": "Seize VICTORY",
+        "trigger": "Seize",
+        "level_nid": "Intro9",
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;1500",
+            "music_clear",
+            "victory_screen;Victory",
+            "wait;1000",
+            "win_game"
+        ],
+        "nid": "Intro9 Seize VICTORY"
+    },
+    {
+        "name": "House1",
+        "trigger": "Visit",
+        "level_nid": "Intro9",
+        "condition": "region.nid == 'House1'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "give_item;{unit};Buttplug"
+        ],
+        "nid": "Intro9 House1"
+    },
+    {
+        "name": "House2",
+        "trigger": "Visit",
+        "level_nid": "Intro9",
+        "condition": "region.nid == 'House2'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "give_item;{unit};Fetish_Cat_Ears"
+        ],
+        "nid": "Intro9 House2"
+    },
+    {
+        "name": "House3",
+        "trigger": "Visit",
+        "level_nid": "Intro9",
+        "condition": "region.nid == 'House3'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "give_item;{unit};Mana_Wine"
+        ],
+        "nid": "Intro9 House3"
+    },
+    {
+        "name": "House4",
+        "trigger": "Visit",
+        "level_nid": "Intro9",
+        "condition": "region.nid == 'House4'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "give_item;{unit};Headband"
+        ],
+        "nid": "Intro9 House4"
     }
 ]

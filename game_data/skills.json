@@ -19621,7 +19621,7 @@
     {
         "nid": "Triple_Shot",
         "name": "Triple Shot",
-        "desc": "Vhala unleashes three arrows at once, attacking up to 3 random targets within 3 tiles. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Vhala unleashes three arrows at once, attacking up to 3 random targets within 3 tiles.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -19642,7 +19642,7 @@
             ],
             [
                 "cost_mana",
-                8
+                10
             ]
         ]
     },
@@ -25306,6 +25306,31 @@
         ]
     },
     {
+        "nid": "shipmove",
+        "name": "shipmove",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        3
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "unit_dark",
         "name": "unit on darkness",
         "desc": "",
@@ -25356,6 +25381,28 @@
             [
                 "hidden",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "no_copy",
+        "name": "Impervious Soul",
+        "desc": "Unit cannot be copied by Trin.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "has_tags",
+                [
+                    "no_copy"
+                ]
             ]
         ]
     }

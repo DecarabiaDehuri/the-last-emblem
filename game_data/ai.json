@@ -1560,5 +1560,23 @@
         "priority": 20,
         "offense_bias": 2,
         "roam_ai": false
+    },
+    {
+        "nid": "MoveDestination",
+        "behaviours": [
+            {
+                "action": "Move_to",
+                "target": "Event",
+                "target_spec": "Destination",
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2,
+        "roam_ai": false
     }
 ]
