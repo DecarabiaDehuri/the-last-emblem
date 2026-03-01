@@ -12662,7 +12662,7 @@
     },
     {
         "name": "New Event",
-        "trigger": "level_start",
+        "trigger": null,
         "level_nid": "teste2",
         "condition": "True",
         "commands": [],
@@ -13021,7 +13021,7 @@
     },
     {
         "name": "New Event_1",
-        "trigger": "phase_change",
+        "trigger": null,
         "level_nid": "teste2",
         "condition": "True",
         "commands": [],
@@ -13035,7 +13035,7 @@
             "#give_item;Carina;Scroll_Lightning;;no_banner",
             "#set_current_mana;Riala;20",
             "set_current_mana;Qum;20",
-            ""
+            "interact_unit;Simon;Lahath;crit1"
         ],
         "nid": "teste2 New Event_1"
     },
@@ -13410,12 +13410,9 @@
             "give_skill;Ralke;Save_World;;no_banner",
             "give_skill;Implevon;Annoyance;;no_banner",
             "give_item;Esmera;Holy_Axe;;no_banner",
-            "give_wexp;Esmera;Axe;500",
-            "wait;500",
-            "center_cursor;Ralke",
-            "wait;300",
-            "sound;Shine",
-            "map_anim;lust;Ralke;overlay"
+            "give_wexp;Esmera;Axe;500;no_banner",
+            "give_skill;Ralke;multidesc_main;;no_banner",
+            "give_skill;Ralke;multidesc_test;;no_banner"
         ],
         "nid": "aram1 New Event_1"
     },
@@ -13643,7 +13640,7 @@
     },
     {
         "name": "New Event_3",
-        "trigger": "level_start",
+        "trigger": null,
         "level_nid": "teste2",
         "condition": "True",
         "commands": [],
@@ -15734,7 +15731,7 @@
             "add_portrait;Orcent;Left",
             "add_portrait;Succubus;Right",
             "s;Succubus;Ah, finally! Please, protect us from those raids...",
-            "s;Orcent;Of course.|We believe the location of your settlement has been leaked to extremist groups.",
+            "s;Orcent;Of course.|We believe the location of your settlement has been leaked to rebel groups.",
             "s;Succubus;Oh no...",
             "s;Orcent;However, as of today we will secure your position.",
             "s;Succubus;Oh, thank you so much!{c:wait;300} Before you work so hard, what about a quickie?",
@@ -17093,6 +17090,8 @@
             "add_unit;Simon;0,10;fade;;west",
             "wait;500",
             "move_unit;Simon;18,5;normal",
+            "wait;1000",
+            "flicker_cursor;Seyta",
             "wait;1000",
             "multi_add_portrait;Simon;Left;Seyta;Right",
             "wait;1500",
@@ -21404,7 +21403,8 @@
             "multi_remove_portrait;Impaler;Ralke",
             "wait;400",
             "sound;Level Up",
-            "alert;Implevon The Third has joined the party!"
+            "alert;Implevon The Third has joined the party!",
+            "game_var;implevon_yap;1"
         ],
         "nid": "O1 reinf"
     },
@@ -21434,6 +21434,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "game_var;implevon_yap;0",
             "music_clear",
             "transition;close",
             "add_weather;sunset",
@@ -22489,13 +22490,14 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;{e:game.get_random_float()} <= 0.2",
-            "    wait;100",
-            "    add_portrait;Implevon;Left;left",
-            "    wait;100",
-            "    s;Implevon;{e:game.get_random_choice(game.get_data('Implevonquotes'))}",
-            "    remove_portrait;Implevon",
-            "else",
+            "if;{v:implevon_yap} == 1",
+            "    if;{e:game.get_random_float()} <= 0.2",
+            "        wait;100",
+            "        add_portrait;Implevon;Left;left",
+            "        wait;100",
+            "        s;Implevon;{e:game.get_random_choice(game.get_data('Implevonquotes'))}",
+            "        remove_portrait;Implevon",
+            "    end",
             "end"
         ],
         "nid": "Global Implevon bothering"
@@ -25002,7 +25004,7 @@
         "nid": "O7 Intro"
     },
     {
-        "name": "Overworld start",
+        "name": "Overworld start deprecated",
         "trigger": "overworld_start",
         "level_nid": "Intro8",
         "condition": "True",
@@ -25019,20 +25021,18 @@
             "reveal_overworld_road;Introstart;Bridge",
             "wait;1000"
         ],
-        "nid": "Intro8 Overworld start"
+        "nid": "Intro8 Overworld start deprecated"
     },
     {
         "name": "Overworld config",
-        "trigger": "level_end",
+        "trigger": null,
         "level_nid": "Intro7",
         "condition": "True",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "game_var;_go_to_overworld_nid;'MainOverworld'",
-            "reveal_overworld_node;Bridge;immediate",
-            "set_overworld_position;Simon;Bridge;no_animate"
+            "game_var;_go_to_overworld_nid;'MainOverworld'"
         ],
         "nid": "Intro7 Overworld config"
     },
@@ -25239,5 +25239,33 @@
             "give_item;{unit};Headband"
         ],
         "nid": "Intro9 House4"
+    },
+    {
+        "name": "New Event",
+        "trigger": "level_end",
+        "level_nid": "Titledrop",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "game_var;_go_to_overworld_nid;'MainOverworld'"
+        ],
+        "nid": "Titledrop New Event"
+    },
+    {
+        "name": "New Event_4",
+        "trigger": "level_start",
+        "level_nid": "teste2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_skill;Simon;multidesc_main;;no_banner",
+            "give_skill;Simon;Commanding_Presence;;no_banner",
+            "give_skill;Simon;Aura_Blighting;;no_banner"
+        ],
+        "nid": "teste2 New Event_4"
     }
 ]

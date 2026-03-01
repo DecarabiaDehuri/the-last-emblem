@@ -16,6 +16,39 @@
         ]
     },
     {
+        "nid": "multidesc_main",
+        "name": "multidesc main",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "multidesc_test"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "multidesc_test",
+        "name": "multidesc_test",
+        "desc": "<red>[TEST]</>: faz o jogo funcionar.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            38
+        ],
+        "components": []
+    },
+    {
         "nid": "Star_anim",
         "name": "Gimmick class skill indicator",
         "desc": "",
@@ -2459,7 +2492,7 @@
     {
         "nid": "Commanding_Presence",
         "name": "Commanding Presence",
-        "desc": "Deals damage to enemies around Simon, with a high chance of inflicting <red>[STUNNED]</>. <blue>10 MP</>. <red>[STUNNED]</>: Unit cannot act for the remainder of their turn.",
+        "desc": "<blue>(10 MP)</> Deals damage to enemies around Simon, with a high chance of inflicting <red>[STUNNED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -2473,6 +2506,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Stunned"
+                ]
             ]
         ]
     },
@@ -2503,7 +2542,7 @@
     {
         "nid": "Incubus_Assault",
         "name": "Incubus Assault",
-        "desc": "Simon uses his Emblem to viciously strike 3 random enemies. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP</>) Simon uses his F.Emblem to viciously strike 3 random enemies.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -2764,7 +2803,7 @@
     {
         "nid": "Heroic_Blow",
         "name": "Heroic Blow",
-        "desc": "The Chosen can use a powerful attack. Effective against monsters.\nCosts <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> The Chosen can use a powerful attack. Effective against monsters.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -2784,7 +2823,7 @@
     {
         "nid": "Heroic_Assault",
         "name": "Heroic Assault",
-        "desc": "The Chosen can unleash an all-powerful attack around it, damaging nearby enemies.\nCosts <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> The Chosen can unleash an all-powerful attack around it, damaging nearby enemies.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -2804,7 +2843,7 @@
     {
         "nid": "Heroic_Aura",
         "name": "Heroic Aura",
-        "desc": "When at less than full health, the Chosen can call upon Ivala to heal their wounds.\nCosts <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> When at less than full health, the Chosen can call upon Ivala to heal their wounds.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -2848,7 +2887,7 @@
     {
         "nid": "Aura_Blighting",
         "name": "Aura Blighting",
-        "desc": "The Chosen heavily benefits from adjacent female units, gaining bonus combat stats and a chance to gain <green>[CONCEITED]</> at the start of the turn. The women, however, are debuffed with <red>[REPULSED]</>.\n<green>[CONCEITED]</>: Bonus CRIT. Lasts for one combat.\n<red>[REPULSED]</>: -2 to all stats as long as he is nearby.",
+        "desc": "The Chosen heavily benefits from adjacent female units, gaining bonus combat stats and a chance to gain <green>[CONCEITED]</> at the start of the turn. The women, however, are debuffed with <red>[REPULSED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -2874,6 +2913,13 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Conceited",
+                    "Repulsed"
+                ]
             ]
         ]
     },
@@ -2923,7 +2969,7 @@
     },
     {
         "nid": "Conceited",
-        "name": "Conceited",
+        "name": "<green>[CONCEITED]</>",
         "desc": "\"I have to show them how awesome I am!\"\nBonus CRIT. Lasts for one combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -2961,8 +3007,8 @@
     },
     {
         "nid": "Repulsed",
-        "name": "Repulsed",
-        "desc": "If only he was as torelable as he is powerful.\n-2 to all stats.",
+        "name": "<red>[REPULSED]</>",
+        "desc": "\"If only he was as torelable as he is powerful.\"\n-2 to all stats.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -3248,7 +3294,7 @@
     {
         "nid": "Blinding_Strike",
         "name": "Blinding Strike",
-        "desc": "Simon can use Blinding Strike. Costs <blue>5 mana</>.\n<red>[BLINDED]</>: Unit loses HIT and AVOID. Duration: 2 turns.",
+        "desc": "<blue>(5 MP)</> Simon can use Blinding Strike.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -3266,13 +3312,19 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Blinded"
+                ]
             ]
         ]
     },
     {
         "nid": "Silencing_Strike",
         "name": "Silencing Strike",
-        "desc": "Simon can use Silencing Strike. Costs <blue>5 mana</>.\n<red>SILENCE</>: Unit cannot use magic items. Duration: 3 turns.",
+        "desc": "<blue>(5 MP)</> Simon can use Silencing Strike.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -3290,13 +3342,19 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Silence"
+                ]
             ]
         ]
     },
     {
         "nid": "Stunning_Strike",
         "name": "Stunning Strike",
-        "desc": "Simon can use Stunning Strike. Costs <blue>5 mana</>.\n<red>STUN</>: Unit cannot act. Duration: 1 turn.",
+        "desc": "<blue>(5 MP)</> Simon can use Stunning Strike.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -3314,13 +3372,19 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Stunned"
+                ]
             ]
         ]
     },
     {
         "nid": "Rebuke",
         "name": "Rebuke",
-        "desc": "Cures negative status effects from a nearby ally.\nCosts <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> Cures negative status effects from a nearby ally.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -3425,7 +3489,7 @@
     {
         "nid": "Heroic_Imitation",
         "name": "Heroic Imitation",
-        "desc": "<green>[Chosen Synergy]</> Simon can attempt to copy the Chosen's power.\nEffective against monsters. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> <green>[Chosen Synergy]</> Simon can attempt to copy the Chosen's power.\nEffective against monsters.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -3491,7 +3555,7 @@
     {
         "nid": "Reprimand",
         "name": "Reprimand",
-        "desc": "<green>[Lucia Synergy]</> Simon and Lucia bond over the hardships of managing others' recklessness. When attacking, Simon has DEF% chance to inflict <red>[REPRIMANDED]</>: No movement for 2 turns.",
+        "desc": "<green>[Lucia Synergy]</> Simon and Lucia bond over the hardships of managing others' recklessness. When attacking, Simon has DEF% chance to inflict <red>[REPRIMANDED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -3527,6 +3591,12 @@
             [
                 "attack_proc",
                 "Reprimand_effect"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Reprimand_effect"
+                ]
             ]
         ]
     },
@@ -4290,6 +4360,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Silence"
+                ]
             ]
         ]
     },
@@ -4332,7 +4408,7 @@
     {
         "nid": "Soothing_Presence",
         "name": "Soothing Presence",
-        "desc": "Monica's presence might not be heard, but is definitely felt. Monica can heal an ally from far away.\nCosts <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> Monica's presence might not be heard, but is definitely felt. Monica can heal an ally from far away.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -4377,7 +4453,7 @@
     {
         "nid": "Penitence",
         "name": "Penitence",
-        "desc": "When at more than half health, Monica can use Penitence: Heals in an area. Allies gain <green>[BLESSED]</>. Costs <red>HP equal to half of MAX HP</> and <blue>10 mana</>.\n<green>[BLESSED]</>: Unit takes half damage in the next combat.",
+        "desc": "<blue>(10 MP)</> <red>(1/2 HP)</> When at more than half health, Monica can use Penitence: Heals in an area. Allies gain <green>[BLESSED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -4391,6 +4467,12 @@
             [
                 "ability",
                 "Penitence"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Penitence_effect"
+                ]
             ]
         ]
     },
@@ -4451,7 +4533,7 @@
     {
         "nid": "Sacred_Field",
         "name": "Sacred Field",
-        "desc": "Monica implants a holy field on the ground. Allies standing on it restore 2 mana per turn. Monsters take damage. Lasts 5 turns. Costs <blue>15 mana</>. One use per chapter.",
+        "desc": "<blue>(15 MP)</> Monica implants a holy field on the ground. Allies standing on it restore 2 mana per turn. Monsters take damage. Lasts 5 turns. One use per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -4856,7 +4938,7 @@
     {
         "nid": "Critical_Boost",
         "name": "Critical Boost",
-        "desc": "Antarion gaints +10 CRIT. After a critical attack, he gains <red>[OVERCONFIDENCE]</>: +15 HIT, -15 AVOID. Lasts until end of next combat.",
+        "desc": "Antarion gaints +10 CRIT. After a critical attack, he gains [OVERCONFIDENCE].",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -4878,12 +4960,18 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Overconfidence"
+                ]
             ]
         ]
     },
     {
         "nid": "Overconfidence",
-        "name": "Overconfidence",
+        "name": "[OVERCONFIDENCE]",
         "desc": "Antarion is too focused on his own success. HIT+15, AVOID-15. Lasts until end of next combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -5181,6 +5269,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Burned"
+                ]
             ]
         ]
     },
@@ -5417,7 +5511,7 @@
     {
         "nid": "Exposing_Crash",
         "name": "Exposing Crash",
-        "desc": "Cassian has a chance to inflict <red>[EXPOSED]</> when attacking an enemy.\n<red>[EXPOSED]</>: Unit is more likely to receive critical attacks. Can be stacked.",
+        "desc": "Cassian has a chance to inflict <red>[EXPOSED]</> when attacking an enemy.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -5439,6 +5533,12 @@
             [
                 "attack_proc",
                 "Exposing_Crash_proc"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Exposed"
+                ]
             ]
         ]
     },
@@ -5583,7 +5683,7 @@
     {
         "nid": "Exposing_Guard",
         "name": "Exposing Guard",
-        "desc": "Lucia has a chance to inflict <red>[EXPOSED]</> when defending a hit by an enemy.\n<red>[EXPOSED]</>: Unit is more likely to receive critical attacks. Can be stacked.",
+        "desc": "Lucia has a chance to inflict <red>[EXPOSED]</> when defending a hit by an enemy.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -5605,6 +5705,12 @@
             [
                 "defense_proc",
                 "Exposing_Guard_proc"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Exposed"
+                ]
             ]
         ]
     },
@@ -5627,7 +5733,7 @@
     {
         "nid": "Make_Way",
         "name": "Make Way",
-        "desc": "<green>[Safado Synergy]</>. Safado accidentaly teaches Lucia how to push people away. Lucia can use Make Way, which damages and pushes opponents. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> <green>[Safado Synergy]</>. Safado accidentaly teaches Lucia how to push people away. Lucia can use Make Way, which damages and pushes opponents.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -5806,7 +5912,7 @@
     {
         "nid": "Flashy_Escape",
         "name": "Flashy Escape",
-        "desc": "<green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>. Costs <blue>5 mana</>.\n<red>[BLINDED]</>:Unit's accuracy and avoid greatly decreases.\nHIT -50. AVOID - 50.",
+        "desc": "<blue>(5 MP)</> <green>[Antarion Synergy]</>. While painful to admit, Safado learns from Antarion's swordskills. Swaps user with the target, also applying <red>[BLINDED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -5838,6 +5944,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Blinded"
+                ]
             ]
         ]
     },
@@ -5948,7 +6060,7 @@
     {
         "nid": "Stalling_Stance",
         "name": "Stalling Stance",
-        "desc": "Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks. Enemis are more likely to attack him. Safado inflicts <red>[FRUSTRATED]</> on enemies after combat. Costs <blue>5 mana</>.\n<red>[FRUSTRATED]</>: DEF and RES reduced. Can be stacked up to 5 times. Debuff is lost on receiving an attack.",
+        "desc": "<blue>(5 MP)</> Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks. Enemis are more likely to attack him. Safado inflicts <red>[FRUSTRATED]</> on enemies after combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -5970,6 +6082,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Frustrated"
+                ]
             ]
         ]
     },
@@ -6095,7 +6213,7 @@
     {
         "nid": "Nothing_Personal_skill",
         "name": "Nothing Personal",
-        "desc": "Safado can pivot to the other side of the enemy, inflicting <red>[POISONED]</>. After that, his next attack on this turn also inflicts <red>[POISONED]</>. Costs <blue>10 mana</>.\n<red>[POISONED]</>: Unit randomly receives up to 5 damage per turn.",
+        "desc": "<blue>(10 MP)</> Safado can pivot to the other side of the enemy, inflicting <red>[POISON]</>. After that, his next attack on this turn also inflicts <red>[POISON]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -6109,13 +6227,19 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Poisoned"
+                ]
             ]
         ]
     },
     {
         "nid": "Nothing_Personal_buff",
         "name": "Nothing Personal buff",
-        "desc": "Safado's next attack will inflict <red>[POISONED]</>.\n<red>[POISONED]</>: Unit randomly receives up to 5 damage per turn.",
+        "desc": "Safado's next attack will inflict <red>[POISON]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -6171,13 +6295,19 @@
             [
                 "combat_condition",
                 "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Poisoned"
+                ]
             ]
         ]
     },
     {
         "nid": "Chameleon_Stance",
         "name": "Chameleon Stance",
-        "desc": "Safado can gain <green>[CHAMELEON STANCE]</>. Costs <blue>5 mana</>.\n<green>[CHAMELEON STANCE]</>: Safado can pass through enemy units. He has bonus MOV and AVOID. Less likely to be attacked by enemy units. This buff is lost when Safado attacks someone.",
+        "desc": "<blue>(5 MP)</> Safado can gain <green>[CHAMELEON STANCE]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -6199,6 +6329,12 @@
             [
                 "cost_mana",
                 5
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Chameleon_stance_buff"
+                ]
             ]
         ]
     },
@@ -6524,7 +6660,7 @@
     {
         "nid": "Firewall_v2",
         "name": "Firewall",
-        "desc": "Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns. Costs <blue>5 mana</>.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
+        "desc": "<blue>(5 MP)</> Rosa ignites fire at an empty tile. Units standing on it get <red>[BURNED]</>. Lasts 3 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -6546,6 +6682,12 @@
             [
                 "cost_mana",
                 5
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Burned"
+                ]
             ]
         ]
     },
@@ -6752,7 +6894,7 @@
     {
         "nid": "Hot_Business",
         "name": "Hot Business",
-        "desc": "When using a <red>Fire</> spell, Rosa has MAG% chance to inflict <red>[BURNED]</> on her enemy.\n<red>[BURNED]</>: 5 damage at the start and end of unit's turn.",
+        "desc": "When using a <red>Fire</> spell, Rosa has MAG% chance to inflict <red>[BURNED]</> on her enemy.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -6774,6 +6916,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Burned"
+                ]
             ]
         ]
     },
@@ -6822,6 +6970,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Burned"
+                ]
             ]
         ]
     },
@@ -6995,7 +7149,7 @@
     {
         "nid": "Heroic_Fireworks",
         "name": "Heroic Fireworks",
-        "desc": "<green>[Chosen Synergy]</>. The Chosen usually begs Rosa for her to use fire magic as a spectacle for his entrance. While standing on a <red>Firewall</>, Rosa can use Heroic Fireworks: deals damage to enemies around her. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> <green>[Chosen Synergy]</>. The Chosen usually begs Rosa for her to use fire magic as a spectacle for his entrance. While standing on a <red>Firewall</>, Rosa can use Heroic Fireworks: deals damage to enemies around her.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -7071,7 +7225,7 @@
     {
         "nid": "Post_Nut_Prayer",
         "name": "Post Nut Prayer",
-        "desc": "<green>[Monica Synergy]</>. Milena learned from Monica the relaxing effect of spiritual pursuit. When dancing, also grants the ally <green>[PNP]</>.\n<green>[PNP]</>: Unit has bonus attack and defense speed.",
+        "desc": "<green>[Monica Synergy]</>. Milena learned from Monica the relaxing effect of spiritual pursuit. When dancing, also grants the ally <green>[PNP]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -7102,6 +7256,12 @@
                 "skill_tags",
                 [
                     "Synergy"
+                ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Post_Nut_Prayer_effect"
                 ]
             ]
         ]
@@ -7231,7 +7391,7 @@
     {
         "nid": "Mesmerizing_Tune",
         "name": "Mesmerizing Tune",
-        "desc": "Every now and then, Milena hits the perfect notes. For every 3 dances, Milena gives her allied target the <green>[ENTHRALLED]</> buff.\n<green>[ENTHRALLED]</>: Unit has double crit chance on their second strike.",
+        "desc": "Every now and then, Milena hits the perfect notes. For every 3 dances, Milena gives her allied target the <green>[ENTHRALLED]</> buff.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -7261,6 +7421,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Enthralled"
+                ]
             ]
         ]
     },
@@ -7352,7 +7518,7 @@
     {
         "nid": "Constricting_Love",
         "name": "Constricting Love",
-        "desc": "Milena entangles an enemy, inflicting it with <red>[SQUEEZED]</>. Costs <orange>15 SP</>.\n<red>[SQUEEZED]</>: Unit cannot move, has decreased attack speed and defense speed.",
+        "desc": "<orange>(15 SP)</> Milena entangles an enemy, inflicting it with <red>[SQUEEZED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -7370,6 +7536,12 @@
             [
                 "cost_mana",
                 15
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Squeezed"
+                ]
             ]
         ]
     },
@@ -7474,7 +7646,7 @@
     {
         "nid": "Dancing_Line",
         "name": "Dancing Line",
-        "desc": "Milena gather a happy line of dancing friends. She can select an ally up to 5 tiles away. All allies in a line between Milena and the target get their turn refreshed. Costs <orange>20 SP</>.",
+        "desc": "<orange>(20 SP)</> Milena gather a happy line of dancing friends. She can select an ally up to 5 tiles away. All allies in a line between Milena and the target get their turn refreshed.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,

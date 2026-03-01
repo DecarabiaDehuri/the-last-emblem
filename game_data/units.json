@@ -7148,13 +7148,35 @@
         "level": 1,
         "klass": "General",
         "tags": [],
-        "bases": {},
+        "bases": {
+            "HP": 38,
+            "STR": 9,
+            "MAG": 0,
+            "SKL": 12,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 9,
+            "RES": 7,
+            "CON": 11,
+            "MOV": 5
+        },
         "growths": {},
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Silver_Lance",
+                false
+            ]
+        ],
         "learned_skills": [],
         "unit_notes": [],
-        "wexp_gain": {},
+        "wexp_gain": {
+            "Lance": [
+                false,
+                181,
+                null
+            ]
+        },
         "alternate_classes": [],
         "portrait_nid": "Lahath",
         "affinity": "Hetero",

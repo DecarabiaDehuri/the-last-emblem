@@ -2112,7 +2112,7 @@
             ],
             [
                 "crit",
-                1
+                0
             ],
             [
                 "weight",
@@ -2180,7 +2180,7 @@
             ],
             [
                 "damage",
-                5
+                3
             ],
             [
                 "hit",
@@ -2188,7 +2188,7 @@
             ],
             [
                 "crit",
-                15
+                10
             ],
             [
                 "weight",
@@ -2264,7 +2264,7 @@
             ],
             [
                 "crit",
-                5
+                0
             ],
             [
                 "weight",
@@ -15221,7 +15221,7 @@
             ],
             [
                 "weight",
-                5
+                7
             ],
             [
                 "locked",
@@ -15229,7 +15229,7 @@
             ],
             [
                 "crit",
-                5
+                0
             ],
             [
                 "min_range",
@@ -15273,7 +15273,7 @@
             ],
             [
                 "weight",
-                5
+                9
             ],
             [
                 "locked",
@@ -15281,7 +15281,7 @@
             ],
             [
                 "crit",
-                5
+                0
             ],
             [
                 "min_range",
@@ -15325,7 +15325,7 @@
             ],
             [
                 "weight",
-                5
+                9
             ],
             [
                 "locked",
@@ -15333,7 +15333,7 @@
             ],
             [
                 "crit",
-                5
+                0
             ],
             [
                 "min_range",
@@ -15381,7 +15381,7 @@
             ],
             [
                 "weight",
-                2
+                5
             ],
             [
                 "locked",
@@ -15389,7 +15389,7 @@
             ],
             [
                 "crit",
-                15
+                3
             ],
             [
                 "min_range",
@@ -16158,7 +16158,7 @@
     },
     {
         "nid": "Emergency_Shelter",
-        "name": "Emergency_Shelter",
+        "name": "Emergency Shelter",
         "desc": "Rescues a 3-tiles away unit. Elder Lynine returns to her position and can move again after rescuing, with bonus MOV. Increases Overgasm. Costs half HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -29815,6 +29815,10 @@
             [
                 "level_exp",
                 null
+            ],
+            [
+                "never_use_battle_animation",
+                null
             ]
         ]
     },
@@ -29882,6 +29886,10 @@
             ],
             [
                 "level_exp",
+                null
+            ],
+            [
+                "never_use_battle_animation",
                 null
             ]
         ]
@@ -30823,6 +30831,64 @@
         ]
     },
     {
+        "nid": "Hero_Sword",
+        "name": "Hero Sword",
+        "desc": "Effective against Human King. Ralke only.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            19
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ralke"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Dance_Orc",
         "name": "Orc Dance",
         "desc": "<green>Refreshes</> an allied orc unit, letting them act again this turn.",
@@ -30999,64 +31065,6 @@
             [
                 "map_cast_anim",
                 "AOE_Rally"
-            ]
-        ]
-    },
-    {
-        "nid": "Hero_Sword",
-        "name": "Hero Sword",
-        "desc": "Effective against Human King. Ralke only.",
-        "icon_nid": "Sword",
-        "icon_index": [
-            0,
-            19
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                90
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "weight",
-                9
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "prf_unit",
-                [
-                    "Ralke"
-                ]
             ]
         ]
     }
