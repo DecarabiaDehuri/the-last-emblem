@@ -8311,7 +8311,7 @@
     {
         "nid": "Healing_Kiss",
         "name": "Healing Kiss",
-        "desc": "Qum heals an ally. <orange> 3 SP</>",
+        "desc": "<orange>(5 SP)</> Qum heals an ally.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -8331,7 +8331,7 @@
     {
         "nid": "Orgasmic_Thoughts",
         "name": "Orgasmic Thoughts",
-        "desc": "Qum heals allies in an area. <orange>10 SP</>. Once per chapter.",
+        "desc": "<orange>(10 SP)</> Qum heals allies in an area. One use per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -8351,7 +8351,7 @@
     {
         "nid": "Cleansing_Wink",
         "name": "Cleansing Wink",
-        "desc": "Qum cures an ally of an ailment. <orange>6 SP</>.",
+        "desc": "<orange>(6 SP)</> Qum cures an ally of an ailment.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -8371,7 +8371,7 @@
     {
         "nid": "Arousing_Kiss",
         "name": "Arousing Kiss",
-        "desc": "Qum buffs an ally with <green>[AROUSED]</>: +5 STR and MAG. <orange>8 SP</>.",
+        "desc": "<orange>(8 SP)</> Qum buffs an ally with <green>[AROUSED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -8385,13 +8385,19 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Arousing_Kiss_effect"
+                ]
             ]
         ]
     },
     {
         "nid": "Cumdump",
         "name": "Cumdump",
-        "desc": "Qum transfers some of her <orange>SP</> to an ally's <blue>mana</>. <orange>12 SP</>. Can be used up to 3 times per chapter.",
+        "desc": "<orange>(12 SP)</> Qum transfers some of her <orange>SP</> to an ally's <blue>MP</>. Can be used up to 3 times per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -8411,7 +8417,7 @@
     {
         "nid": "Little_Death",
         "name": "Little Death",
-        "desc": "When Qum is supporting another unit in a Pair-up, that ally has <green>[CRADLED]</>: When defeated in combat, returns with 1 HP. Only triggers once per chapter.",
+        "desc": "When Qum is supporting another unit in a Pair-up, that ally has <green>[CRADLED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -8429,6 +8435,12 @@
             [
                 "drain_charge",
                 1
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Little_Death_effect"
+                ]
             ]
         ]
     },
@@ -8467,7 +8479,7 @@
     {
         "nid": "Arousing_Aura",
         "name": "Arousing Aura",
-        "desc": "Qum buffs allies in an area with <green>[AROUSED]</>: +5 STR and MAG. <orange>15 SP</>.",
+        "desc": "<orange>(15 SP)</> Qum buffs allies in an area with <green>[AROUSED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -8481,13 +8493,19 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Arousing_Kiss_effect"
+                ]
             ]
         ]
     },
     {
         "nid": "Illusory_Orgy",
         "name": "Illusory Orgy",
-        "desc": "Qum heals and restores allies of negative statuses in an area. <orange>13 SP</>.",
+        "desc": "<orange>(13 SP)</> Qum heals and restores allies of negative statuses in an area.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -8507,7 +8525,7 @@
     {
         "nid": "Happy_Tingles",
         "name": "Happy Tingles",
-        "desc": "After Qum dances to an ally, they gain <green>[HAPPY]</>: Recovers a bit of HP and <mana> at the start of the turn.",
+        "desc": "After Qum dances to an ally, they gain <green>[HAPPY]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -8525,6 +8543,12 @@
             [
                 "combat_condition",
                 "target.team == unit.team"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Happy_Tingles_effect"
+                ]
             ]
         ]
     },
@@ -8559,7 +8583,7 @@
     {
         "nid": "Protective_Hug",
         "name": "Protective Hug",
-        "desc": "Qum gives an ally <green>[HUGGED]</>, which significantly improves defense. <orange>5 SP</>. Usable once per chapter.",
+        "desc": "<orange>(5 SP)</> Qum gives an ally <green>[HUGGED]</>, which significantly improves defense. Usable once per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -8921,7 +8945,7 @@
     {
         "nid": "Illusion",
         "name": "Illusion",
-        "desc": "Become invisible to enemies and pass between them. Lose the status after combat. <orange>5 SP</>.",
+        "desc": "<orange>(5 SP)</> Become invisible to enemies and pass between them. Lose the status after combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -8949,7 +8973,7 @@
     {
         "nid": "Haze_of_Sex",
         "name": "Haze of Sex",
-        "desc": "Also affects enemies around the target. Chance of inflicting <red>[CHARMED]</>. <orange>10 SP</>. <red>[CHARMED]</>: Unit is charmed by Yarra's exquisite presence and will follow her without attacking. Status is lost when getting hit.",
+        "desc": "<orange>(10 SP)</> Also affects enemies around the target. Chance of inflicting <red>[CHARMED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -8967,13 +8991,19 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Charmed_Yarra"
+                ]
             ]
         ]
     },
     {
         "nid": "Shared_Fantasy",
         "name": "Shared_Fantasy",
-        "desc": "Puts a partner into a fulfilling fantasy, increasing their DEF and RES for a few turns. <orange>7 SP</>. <red>1 use per chapter</>.",
+        "desc": "<orange>(7 SP)</> Puts a partner into a fulfilling fantasy, increasing their DEF and RES for a few turns. One use per chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -8997,7 +9027,7 @@
     {
         "nid": "Flirt",
         "name": "Flirt",
-        "desc": "Yarra flirts with the enemy, trying to make them <red>[CHARMED]</>. <orange>10 SP</>. <red>[CHARMED]</>: Unit is charmed by Yarra's exquisite presence and will follow her without attacking. Status is lost when getting hit.",
+        "desc": "<orange>(10 SP)</> Yarra flirts with the enemy, trying to make them <red>[CHARMED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -9015,13 +9045,19 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Charmed_Yarra"
+                ]
             ]
         ]
     },
     {
         "nid": "Sexual_Mana",
         "name": "Sexual Mana",
-        "desc": "Yarra transfers <blue>10 mana</> to an ally. <red>1 use per chapter</>.",
+        "desc": "Yarra transfers <blue>10 MP</> to an ally. <red>One use per chapter</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -9037,7 +9073,7 @@
     {
         "nid": "Doom_Kings_Emissary",
         "name": "Doom King's Emissary",
-        "desc": "Also affects enemies around the target. Chance of inflicting <red>[LUST DEATH]</>. <orange>15 SP</>.",
+        "desc": "<orange>(15 SP)</> Also affects enemies around the target. Chance of inflicting <red>[LUST DEATH]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -9055,6 +9091,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Lust_Death"
+                ]
             ]
         ]
     },
@@ -9279,7 +9321,7 @@
     {
         "nid": "First_slut",
         "name": "First slut",
-        "desc": "Yarra heals and buffs herself, increasing all stats for a few turns. <orange>10 SP</>. <red>1 use per chapter</>.",
+        "desc": "<orange>(10 SP)</> Yarra heals and buffs herself, increasing all stats for a few turns. <red>1 use per chapter</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -9370,7 +9412,7 @@
     {
         "nid": "Lightning_Whip",
         "name": "Lightning Whip",
-        "desc": "<green>[Robin synergy]</> Yarra strikes with Robin's assistance. <orange>5 SP</>",
+        "desc": "<orange>(5 SP)</> <green>[Robin synergy]</> Yarra strikes with Robin's assistance.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -9446,7 +9488,7 @@
     {
         "nid": "Earth_Whip",
         "name": "Earth Whip",
-        "desc": "<green>[Altina synergy]</> Yarra strikes with an earth magic from Altina. <orange>5 SP</>",
+        "desc": "<orange>(5 SP)</> <green>[Altina synergy]</> Yarra strikes with an earth magic from Altina.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -9530,7 +9572,7 @@
     {
         "nid": "Pure_Whip",
         "name": "Pure Whip",
-        "desc": "<green>[Vhala synergy]</> Yarra strikes with anti-sexually charged magic. Eugh! <orange>5 SP</>",
+        "desc": "<orange>(5 SP)</> <green>[Vhala synergy]</> Yarra strikes with anti-sexually charged magic. Eugh!",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -9614,7 +9656,7 @@
     {
         "nid": "Wild_Lashing",
         "name": "Wild Lashing",
-        "desc": "<green>[Uyae synergy]</> Yarra strikes violently. <orange>5 SP</>",
+        "desc": "<orange>(5 SP)</> <green>[Uyae synergy]</> Yarra strikes violently.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -9714,7 +9756,7 @@
     {
         "nid": "Lash_of_Torment",
         "name": "Lash of Torment",
-        "desc": "<green>[Nalili synergy]</> Nalili and Yarra combine their lust to unleash a powerful attack. <orange>5 SP</>",
+        "desc": "<orange>(5 SP)</> <green>[Nalili synergy]</> Nalili and Yarra combine their lust to unleash a powerful attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -9798,7 +9840,7 @@
     {
         "nid": "Lustful_Emissaries",
         "name": "Lutsful Emissaries",
-        "desc": "<green>[Riala synergy]</> Together they're unstoppable. <orange>10 SP</>",
+        "desc": "<orange>(10 SP)</> <green>[Riala synergy]</> Together they're unstoppable.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -9882,7 +9924,7 @@
     {
         "nid": "Forceful_Kiss",
         "name": "Forceful Kiss",
-        "desc": "<green>[Hilstara synergy]</> Yarra blows a kiss of physical strength. <orange>5 SP</>.",
+        "desc": "<orange>(5 SP)</> <green>[Hilstara synergy]</> Yarra blows a kiss of physical strength. ",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -9966,7 +10008,7 @@
     {
         "nid": "Combat_Fantasy",
         "name": "Combat Fantasy",
-        "desc": "<green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. Costs <orange>10 SP</>. <red>1 use per chapter</>.",
+        "desc": "<orange>('0 SP)</> <green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. <red>1 use per chapter</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -10079,7 +10121,7 @@
     {
         "nid": "Inspire",
         "name": "Inspire",
-        "desc": "<green>[Hilstara synergy]</> Riala buffs an ally with <green>[INSPIRED]</>: Unit has bonus MAG and RES. <blue> 5 MP</>",
+        "desc": "<orange>(5 SP)</> <green>[Hilstara synergy]</> Riala buffs an ally with <green>[INSPIRED]</>.",
         "icon_nid": "Affinity",
         "icon_index": [
             0,
@@ -10111,6 +10153,12 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Inspire_effect"
+                ]
             ]
         ]
     },
@@ -10409,7 +10457,7 @@
     {
         "nid": "Combat_Teleport",
         "name": "Combat Teleport",
-        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>Can only be used once per chapter.</>",
+        "desc": "Swaps an active ally for an undeployed one. The movement availability is carried over.\n<red>1 use per chapter.</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -10433,7 +10481,7 @@
     {
         "nid": "Nostalgic_Lust",
         "name": "Nostalgic Lust",
-        "desc": "Riala can use Lusting Gaze and Lethal Lust. Lusting Gaze: Riala inflicts a unit with <red>[DESIRED]</>: This unit can be the target of Lethal Lust: Riala targets her enemy with a rain of painful lust. Unit loses half of their health. Unit is inflicted with <red>[LEAKING]</>: Unit heals nearby enemies. <red>One use per chapter</>.",
+        "desc": "Riala can use Lusting Gaze and Lethal Lust.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -10443,6 +10491,20 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_item",
+                [
+                    "Lusting_Gaze_main",
+                    "Lethal_Lust_main"
+                ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Desired",
+                    "Leaking"
+                ]
             ]
         ]
     },
@@ -10477,7 +10539,7 @@
     {
         "nid": "Cyclical_Fire",
         "name": "Cyclical Fire",
-        "desc": "Advanced fire magic. Costs <orange>5 SP</>. 3 turns cooldown.",
+        "desc": "<orange>(5 SP)</> Advanced fire magic. 3 turns cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -10513,7 +10575,7 @@
     {
         "nid": "Refined_Dance",
         "name": "Refined Dance",
-        "desc": "Iris has meticulously calculated the best moves, though she has only enough stamina for the first three dances. Grants an ally <green>[REFINED]</>: Unit has +5 damage bonus and receives -5 damage.",
+        "desc": "Iris has meticulously calculated the best moves, though she has only enough stamina for the first three dances. Grants an ally <green>[REFINED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -10531,6 +10593,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Refined"
+                ]
             ]
         ]
     },
@@ -10589,7 +10657,7 @@
     {
         "nid": "Enhance",
         "name": "Enhance ally",
-        "desc": "When Iris is in guard stance in a pair-up, she boosts her lead ally's critical rate.",
+        "desc": "When Iris is in guard stance in a pair-up, she boosts her lead ally with <green>[ENHANCED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -10603,6 +10671,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Enhanced"
+                ]
             ]
         ]
     },
@@ -10781,7 +10855,7 @@
     {
         "nid": "Shield_of_Purity",
         "name": "Shield of Purity",
-        "desc": "Carina can increase nearby allies' DEF and RES for 2 turns. Costs <blue>6 mana</>.",
+        "desc": "<blue>(6 MP)</> Carina can increase nearby allies' DEF and RES for 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -10830,7 +10904,7 @@
     {
         "nid": "Revive",
         "name": "Revive",
-        "desc": "Carina can grant select an ally to grant <green>[REVIVE]</>: Unit will recover HP and lose this status once it is defeated. Costs <blue>20 mana</>.",
+        "desc": "<blue>(20 MP)</> Carina can grant select an ally to grant <green>[REVIVE]</>.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -10848,6 +10922,12 @@
             [
                 "cost_mana",
                 20
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Revive_effect"
+                ]
             ]
         ]
     },
@@ -10890,7 +10970,7 @@
     {
         "nid": "Ivala_Voice",
         "name": "Ivala's Voice",
-        "desc": "For every 3 combat interactions that Carina has with an ally, Carina grants them <green>[Faint Voice]</>: Unit recovers <blue>5 mana</> at the end of the turn.",
+        "desc": "For every 3 combat interactions that Carina has with an ally, Carina grants them <green>[Faint Voice]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -10916,6 +10996,12 @@
             [
                 "combat_condition",
                 "unit2.team == 'player'"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Ivala_Voice_buff"
+                ]
             ]
         ]
     },
@@ -10950,7 +11036,7 @@
     {
         "nid": "Mass_Heal",
         "name": "Mass Heal",
-        "desc": "Carina restores HP for all allied units in range. Range is dependent on Carinar's MAG. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Carina restores HP for all allied units in range. Range is dependent on Carinar's MAG.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -10970,7 +11056,7 @@
     {
         "nid": "Burst_Cleanse",
         "name": "Burst Cleanse",
-        "desc": "<green>[Lynine synergy]</> Carina releases a burst of divine magic around her, cleasing negative effects. Costs <blue>10 mana</>. Increases Lynine's Overgasm.",
+        "desc": "<blue>(10 MP)</> <green>[Lynine synergy]</> Carina releases a burst of divine magic around her, cleasing negative effects. Increases Lynine's Overgasm.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -11046,7 +11132,7 @@
     {
         "nid": "Strong_Faith",
         "name": "Strong Faith",
-        "desc": "<green>[Uyae] synergy</>. Carina channels her faith to empower her martial arts capabilities. <blue>5 MP</>.",
+        "desc": "<blue>(5 MP)</> <green>[Uyae] synergy</>. Carina channels her faith to empower her martial arts capabilities.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -12618,7 +12704,7 @@
     {
         "nid": "Shockwave",
         "name": "Shockwave",
-        "desc": "Uyae unleashes a damaging scream damaging enemies around her. <blue>5 MP</>. Requires <green>Aura of Might</>.",
+        "desc": "<blue>(5 MP)</> Uyae unleashes a damaging scream damaging enemies around her. Requires <green>Aura of Might</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -12646,7 +12732,7 @@
     {
         "nid": "Mana_Palm",
         "name": "Mana Palm",
-        "desc": "Uyae strikes with concentrated mana. <blue>5 MP.</> Requires <green>Aura of Spirit</>.",
+        "desc": "<blue>(5 MP)</> Uyae strikes with concentrated mana. Requires <green>Aura of Spirit</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -12674,7 +12760,7 @@
     {
         "nid": "Snuggly_Heal",
         "name": "Snuggly Heal",
-        "desc": "Uyae cuddles with her nestmate and heals them. <blue>5 MP</>. Requires <green>Aura of Healing</>.",
+        "desc": "<blue>(5 MP)</> Uyae cuddles with her nestmate and heals them. Requires <green>Aura of Healing</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -12702,7 +12788,7 @@
     {
         "nid": "Stalk",
         "name": "Stalk and Takedown",
-        "desc": "Uyae can stalk a target and use Takedown on them. While stalking, Uyae is buffed against her prey but nerfed against any other target. Takedown: Engage in a combat which ends until anyone is defeated.",
+        "desc": "Uyae can stalk a target and use Takedown on them.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -12716,6 +12802,13 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Stalking",
+                    "Takedown_effect"
+                ]
             ]
         ]
     },
@@ -13182,7 +13275,7 @@
     {
         "nid": "Affiliate_skill",
         "name": "Affiliate",
-        "desc": "<orange>[Megail] synergy</> Lynine can mark an ally as an affiliate. For 3 turns, Lynine can move next to them, regardless of distance. Marking costs <blue>5 mana</> and increases <red>[OVERGASM]</>.",
+        "desc": "<blue>(5 MP)</> <orange>[Megail] synergy</> Lynine can mark an ally as an affiliate. For 3 turns, Lynine can move next to them, regardless of distance. Marking increases <red>[OVERGASM]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -13318,13 +13411,19 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Overgasmed"
+                ]
             ]
         ]
     },
     {
         "nid": "Overgasm_Info",
         "name": "Overgasm",
-        "desc": "Some Lynine's skills increase the Overgasm meter. When it reaches 3 stacks, she suffers <red>[OVERGASMED]</>: unable to act for one turn, with increasing turn counts each time it is triggered on a chapter.",
+        "desc": "Some Lynine's skills increase the Overgasm meter. When it reaches 3 stacks, she suffers <red>[OVERGASMED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -13334,13 +13433,19 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Overgasmed"
+                ]
             ]
         ]
     },
     {
         "nid": "Overgasmed",
         "name": "<red>[OVERGASMED]</>",
-        "desc": "Lynine has fainted and can't act again until she recovers. Can't be cured. Enemies are more inclined to attack her.",
+        "desc": "Lynine has fainted and can't act again until she recovers. Can't be cured. Enemies are more inclined to attack her. Increasing turn counts each time it is triggered on a chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -13562,7 +13667,7 @@
     {
         "nid": "Tag_Team_Lynine",
         "name": "Tag Team",
-        "desc": "Elder Lynine and <green>Reliar</> Orilise are fearsome when bickering, but even stronger when collaborating. If both are adjacent to an unit, give them Tag Team. If <blue> ally: Unit is immune to negative status effects. If <red>enemy</>: Unit can't double.",
+        "desc": "Elder Lynine and <green>Reliar</> Orilise are fearsome when bickering, but even stronger when collaborating. If both are adjacent to an unit, give them Tag Team. If <blue> ally</>: Unit is immune to negative status effects. If <red>enemy</>: Unit can't double.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -13979,7 +14084,7 @@
     {
         "nid": "Provoke",
         "name": "Provoke",
-        "desc": "Orilise chooses an enemy to inflict <red>[PROVOKED]</>, which make their statuses diminished against Orilise.",
+        "desc": "Orilise chooses an enemy to inflict <red>[PROVOKED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -13993,6 +14098,12 @@
             [
                 "ability",
                 "Provoke"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Provoked"
+                ]
             ]
         ]
     },
@@ -14100,6 +14211,12 @@
             [
                 "combat_condition",
                 "'Provoked' in unit2.tags"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Provoked"
+                ]
             ]
         ]
     },
@@ -14162,7 +14279,7 @@
     {
         "nid": "Battle_Sophism",
         "name": "Battle Sophism",
-        "desc": "<green>Reliar</> Orilise has a LUK% chance to inflict <red>[DISCOURAGED]</> when attacking. <red>[DISCOURAGED]</>: Unit cannot double.",
+        "desc": "<green>Reliar</> Orilise has a LUK% chance to inflict <red>[DISCOURAGED]</> when attacking.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -14180,6 +14297,12 @@
             [
                 "proc_rate",
                 "PROCSTATUS"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Discouraged"
+                ]
             ]
         ]
     },
@@ -14521,7 +14644,7 @@
     {
         "nid": "Summon_Orc_1",
         "name": "Summon Orc",
-        "desc": "Balia can summon a weak orc. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> Balia can summon a weak orc.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -14545,7 +14668,7 @@
     {
         "nid": "Summon_Orc_2",
         "name": "Summon Elite Orc",
-        "desc": "Balia can summon an elite orc. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Balia can summon an elite orc.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -14569,7 +14692,7 @@
     {
         "nid": "Summon_Orc_3",
         "name": "Summon imp",
-        "desc": "Balia can summon a weak imp. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> Balia can summon a weak imp.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -14617,7 +14740,7 @@
     {
         "nid": "Summon_Orc_5",
         "name": "Summon Rock Hurler",
-        "desc": "Balia can summon a rock throwing orc. Costs <blue>15 mana</>.",
+        "desc": "<blue>(15 MP)</> Balia can summon a rock throwing orc.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -14641,7 +14764,7 @@
     {
         "nid": "Summon_Orc_6",
         "name": "Summon Elite Orc",
-        "desc": "Balia can summon a powerful ogre. Costs <blue>20 mana</>.",
+        "desc": "<blue>(20 MP)</> Balia can summon a powerful ogre.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -14685,17 +14808,6 @@
                 "<orange>Synergy</>"
             ]
         ]
-    },
-    {
-        "nid": "new",
-        "name": "new",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
     },
     {
         "nid": "Hipped",
@@ -14757,7 +14869,7 @@
     {
         "nid": "Delayed_Gratification",
         "name": "Delayed Gratification",
-        "desc": "Nalili learned with Simon that patience multiplies the pleasure. Nalili's skill share <blue>charges</>. Whenever Nalili starts an interaction with an enemy or ally, she gains <blue>1 charge</>. Defeating enemeis build <blue>2 charges</>. Upon use of skill, <blue>reset all charges</blue>.",
+        "desc": "Nalili learned with Simon that patience multiplies the pleasure. Nalili's skill share <blue>charges</>. Whenever Nalili starts an interaction with an enemy or ally, she gains <blue>1 charge</>. Defeating enemeis build <blue>2 charges</>. Upon use of skill, <blue>reset all charges</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -14917,7 +15029,7 @@
     {
         "nid": "Blade_of_Lust",
         "name": "Kiss of Steel",
-        "desc": "Nalili combines her swordmanship with her lust to create the ultimate technique. Low chance to inflict the enemy with <red>[LUST DEATH]</>: Unit is incapacitated until the end of chapter.",
+        "desc": "Nalili combines her swordmanship with her lust to create the ultimate technique. Low chance to inflict the enemy with <red>[LUST DEATH]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -14947,13 +15059,19 @@
             [
                 "kill_charge_increase",
                 2
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Lust_Death"
+                ]
             ]
         ]
     },
     {
         "nid": "Dance_Nalili",
         "name": "Swords Dance",
-        "desc": "Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target. Costs <orange> 5 SP</>.",
+        "desc": "<orange>(5 SP)</> Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -14987,7 +15105,7 @@
     {
         "nid": "Hip_Check",
         "name": "Hip Check",
-        "desc": "Nalili suddenly strikes the enemy with her hip, inflicting them with <red>[HIPPED]</>: -4 STR and MAG. Costs <orange>5 SP</> and <red>4 HP</>. <red>3 turns cooldown</>.",
+        "desc": "Nalili suddenly strikes the enemy with her hip, inflicting them with <red>[HIPPED]</>. <red>3 turns cooldown</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -15009,6 +15127,12 @@
             [
                 "cost_mana",
                 5
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Hipped"
+                ]
             ]
         ]
     },
@@ -15343,7 +15467,7 @@
     {
         "nid": "Cautious_Swipes",
         "name": "Cautious Swipes",
-        "desc": "<green>[Hilstara synergy]</> Releases weak but rapid strikes from behind Hilstara's cover. Always hits. <blue>5 MP</>.",
+        "desc": "<orange>(5 SP)</> <green>[Hilstara synergy]</> Releases weak but rapid strikes from behind Hilstara's cover. Always hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -15419,7 +15543,7 @@
     {
         "nid": "Swift_Stab",
         "name": "Swift Stab",
-        "desc": "<green>[Aka synergy]</> Attacks with blinding speed. <blue>5 MP</>.",
+        "desc": "<orange>(5 SP)</> <green>[Aka synergy]</> Attacks with blinding speed.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -15495,7 +15619,7 @@
     {
         "nid": "Flaming_Thrust",
         "name": "Flaming Thrust",
-        "desc": "<green>[Robin synergy]</> Attacks with magically charged thrust. <blue>5 MP</>.",
+        "desc": "<orange>(5 SP)</> <green>[Robin synergy]</> Attacks with magically charged thrust.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -15827,7 +15951,7 @@
     {
         "nid": "Poison_Storm",
         "name": "Poison Storm",
-        "desc": "<green>[Riala synergy]</> Curses the air around the target with a poison effect. <blue>15 MP</>.",
+        "desc": "<blue>(15 MP)</> <green>[Riala synergy]</> Curses the air around the target with a poison effect.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -16142,7 +16266,7 @@
     {
         "nid": "Copy",
         "name": "Copy",
-        "desc": "Trin copies the target enemy and replaces it with an allied version. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> Trin copies the target enemy and replaces it with an allied version.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -16182,7 +16306,7 @@
     {
         "nid": "RescueTrin",
         "name": "Rescue",
-        "desc": "Bring an ally to a space adjacent to the user. Range is dependent on user's MAG. Costs <blue>10 mana</>. Half the cost is refunded if used on a Trin's puppet.",
+        "desc": "<blue>(10 MP)</> Bring an ally to a space adjacent to the user. Range is dependent on user's MAG. Half the cost is refunded if used on a Trin's puppet.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -16238,7 +16362,7 @@
     {
         "nid": "Warp",
         "name": "Warp",
-        "desc": "Move an ally to another square. Range is dependent on user's MAG. Costs <blue>10 mana</>. Half the cost is refunded if used on a Trin's puppet.",
+        "desc": "<blue>(10 MP)</> Move an ally to another square. Range is dependent on user's MAG. Half the cost is refunded if used on a Trin's puppet.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -16289,6 +16413,12 @@
                 "skill_tags",
                 [
                     "Synergy"
+                ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Blinded"
                 ]
             ]
         ]
@@ -16502,7 +16632,7 @@
     {
         "nid": "Death_Defiance",
         "name": "Death Defiance",
-        "desc": "<green>[Balia Synergy]</> Wynn can select an orc summoned by Balia to grant <green>[Death Defiance]</>:Upon death, unit is revived with full HP. Status is lost at the end of the turn.",
+        "desc": "<green>[Balia Synergy]</> Wynn can select an orc summoned by Balia to grant <green>[Death Defiance]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -16538,6 +16668,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Death_Defiance_effect"
+                ]
             ]
         ]
     },
@@ -18336,7 +18472,7 @@
     {
         "nid": "Blinding_Stab",
         "name": "Blinding Stab",
-        "desc": "Aka attacks the target, inflicting <red>[BLIND]</> if it hits. Costs <blue>10 mana</>. <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "desc": "<blue>(10 MP)</> Aka attacks the target, inflicting <red>[BLIND]</> if it hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -18358,13 +18494,19 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Blinded"
+                ]
             ]
         ]
     },
     {
         "nid": "Piercing_Stab",
         "name": "Piercing Stab",
-        "desc": "Aka attacks the target, inflicting <red>[PIERCED]</> if it hits. Costs <blue>5 mana</>. <red>[PIERCED]</>: Unit loses 5 DEF.",
+        "desc": "<blue>(5 MP)</> Aka attacks the target, inflicting <red>[PIERCED]</> if it hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -18382,13 +18524,19 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Pierced"
+                ]
             ]
         ]
     },
     {
         "nid": "Crippling_Stab",
         "name": "Crippling Stab",
-        "desc": "Aka attacks the target, inflicting <red>[SLOWED]</> if it hits. Costs <blue>5 mana</>. <red>[SLOWED]</>: Unit loses 5 SPD.",
+        "desc": "<blue>(5 MP)</> Aka attacks the target, inflicting <red>[SLOWED]</> if it hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -18410,13 +18558,19 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Slowed"
+                ]
             ]
         ]
     },
     {
         "nid": "Weakening_Stab",
         "name": "Weakening Stab",
-        "desc": "Aka attacks the target, inflicting <red>[WEAKENED]</> if it hits. Costs <blue>5 mana</>. <red>[WEAKENED]</>: Unit loses 5 STR.",
+        "desc": "<blue>(5 MP)</> Aka attacks the target, inflicting <red>[WEAKENED]</> if it hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -18438,13 +18592,19 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Weakened"
+                ]
             ]
         ]
     },
     {
         "nid": "Disconcerting_Stab",
         "name": "Disconcerting Stab",
-        "desc": "Aka attacks the target, inflicting <red>[DISCONCERTED]</> if it hits. Costs <blue>5 mana</>. <red>[DISCONCERTED]</>: Unit loses 5 MAG.",
+        "desc": "<blue>(5 MP)</> Aka attacks the target, inflicting <red>[DISCONCERTED]</> if it hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -18466,13 +18626,19 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Disconcerted"
+                ]
             ]
         ]
     },
     {
         "nid": "Forceful_Lunge",
         "name": "Forceful Lunge",
-        "desc": "A powerful attack with greater critical chance. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> A powerful attack with greater critical chance.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -18500,7 +18666,7 @@
     {
         "nid": "Disabling_Assault",
         "name": "Disabling Assault",
-        "desc": "Aka attacks the target, inflicting <red>[DISABLED]</> if it hits. Costs <blue>15 mana</>. <red>[DISABLED]</>: -5 STR, MAG, SPD, DEF, RES.",
+        "desc": "<blue>(15 MP)</> Aka attacks the target, inflicting <red>[DISABLED]</> if it hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -18522,13 +18688,19 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Disabled"
+                ]
             ]
         ]
     },
     {
         "nid": "Deathblow",
         "name": "Deathblow",
-        "desc": "Aka attacks the target, inflicting <red>[DEATH'S DOOR]</> if it hits. Costs <blue>20 mana</>. <red>[DEATH'S DOOR]</>: On the next turn, unit's HP is set to 1.",
+        "desc": "<blue>(20 MP)</> Aka attacks the target, inflicting <red>[DEATH'S DOOR]</> if it hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -18550,6 +18722,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Deathblow_effect"
+                ]
             ]
         ]
     },
@@ -18594,7 +18772,16 @@
             2,
             51
         ],
-        "components": []
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Lethal_Intent"
+            ]
+        ]
     },
     {
         "nid": "Lethal_Intent_effect",
@@ -18661,13 +18848,17 @@
             [
                 "ability",
                 "Rally_Strength"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
     {
         "nid": "Poisoned_Blade",
         "name": "Poisoned Blade",
-        "desc": "Aka attacks the target, inflicting <red>[POISON]</> if it hits. Costs <blue>10 mana</>. <red>[POISON]</>: Unit randomly receives up to 5 damage per turn.",
+        "desc": "<blue>(10 MP)</> Aka attacks the target, inflicting <red>[POISON]</> if it hits.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -18689,6 +18880,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Poisoned"
+                ]
             ]
         ]
     },
@@ -18901,7 +19098,7 @@
     {
         "nid": "Pure_Stab",
         "name": "Pure Stab",
-        "desc": "<green>[Vhala synergy]</> Vhala enchants Aka's weapon with anti-lust properties. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> <green>[Vhala synergy]</> Vhala enchants Aka's weapon with anti-lust properties.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -18993,7 +19190,7 @@
     {
         "nid": "Flaming_Stab",
         "name": "Flaming Stab",
-        "desc": "<green>[Robin synergy]</> Robin enchants Aka's weapon with magical properties. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> <green>[Robin synergy]</> Robin enchants Aka's weapon with magical properties.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -19085,7 +19282,7 @@
     {
         "nid": "Sexual_Stab",
         "name": "Sexual Stab",
-        "desc": "<green>[Yarra synergy]</> Yarra enchants Aka's weapon with lust properties. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> <green>[Yarra synergy]</> Yarra enchants Aka's weapon with lust properties.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -19177,7 +19374,7 @@
     {
         "nid": "Healing_Hilt",
         "name": "Healing Hilt",
-        "desc": "<green>[Uyae synergy]</> Aka learned from Uyae how to channel healing into her weapon's hilt. Heals an ally. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> <green>[Uyae synergy]</> Aka learned from Uyae how to channel healing into her weapon's hilt. Heals an ally.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -19269,7 +19466,7 @@
     {
         "nid": "Weakening_Assault",
         "name": "Weakening Assault",
-        "desc": "<green>[Ginasta synergy]</> Weakens opponents' attack in an area. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> <green>[Ginasta synergy]</> Weakens opponents' attack in an area.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -19361,7 +19558,7 @@
     {
         "nid": "Flourished_Flurry",
         "name": "Flourished Flurry",
-        "desc": "<green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Aka moves to the other side of the target. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> <green>[Nalili synergy]</> Inspired by Nalili's battle threatics, Aka attacks three times in rapid sucession. Aka moves to the other side of the target.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -19491,7 +19688,7 @@
     {
         "nid": "Arrow_of_Ice",
         "name": "Arrow of Ice",
-        "desc": "<green>[Robin Synergy]</> Shoots a magically charged arrow. <blue>5 MP</>.",
+        "desc": "<blue>(5 MP)</> <green>[Robin Synergy]</> Shoots a magically charged arrow.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -19567,7 +19764,7 @@
     {
         "nid": "Arrow_of_Lust",
         "name": "Arrow of Lust",
-        "desc": "<green>[Yarra synergy]</> Fires a sexually charged arrow. <blue>5 MP</>",
+        "desc": "<blue>(5 MP)</> <green>[Yarra synergy]</> Fires a sexually charged arrow.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -19643,7 +19840,7 @@
     {
         "nid": "Offensive_Rain",
         "name": "Offensive Rain",
-        "desc": "Vhala can use <red>Offensive Rain</>, which debuffs the opponent's defensive stats.\nCosts <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Vhala can use <red>Offensive Rain</>, which debuffs the opponent's defensive stats.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -19657,13 +19854,19 @@
             [
                 "ability",
                 "Offensive_Rain_ability"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Offensive_Rain_debuff"
+                ]
             ]
         ]
     },
     {
         "nid": "Defensive_Rain",
         "name": "Defensive Rain",
-        "desc": "Vhala can use <red>Defensive Rain</>, which debuffs the opponent's offensive stats.\nCosts <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Vhala can use <red>Defensive Rain</>, which debuffs the opponent's offensive stats.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -19677,13 +19880,19 @@
             [
                 "ability",
                 "Defensive_Rain_ability"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Defensive_Rain_debuff"
+                ]
             ]
         ]
     },
     {
         "nid": "Blinding_Rain",
         "name": "Blinding Rain",
-        "desc": "Vhala can use <red>Blinding Rain</>, which can inflict <red>[Blinded]</> onto the targets.\nCosts <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Vhala can use <red>Blinding Rain</>, which can inflict <red>[Blinded]</> onto the targets.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -19697,6 +19906,12 @@
             [
                 "ability",
                 "Blinding_Rain_ability"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Blinded"
+                ]
             ]
         ]
     },
@@ -19821,7 +20036,7 @@
     {
         "nid": "Targeted_Shot",
         "name": "Targeted Shot",
-        "desc": "Vhala takes a moment to perfectly aim at a target. Can't miss. <blue>5 MP</>.",
+        "desc": "<blue>(5 MP)</> Vhala takes a moment to perfectly aim at a target. Can't miss.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -19849,7 +20064,7 @@
     {
         "nid": "Arrow_of_Purity",
         "name": "Arrow_of_Purity",
-        "desc": "An arrow coated with Divine magic. <blue>5 MP</>.\n",
+        "desc": "<blue>(5 MP)</> An arrow coated with Divine magic.\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -19901,7 +20116,7 @@
     {
         "nid": "Unhand",
         "name": "Unhand",
-        "desc": "Vhala restores negative effects from an ally. Cannot target Succubi. <blue>5 MP.</>",
+        "desc": "<blue>(5 MP)</> Vhala restores negative effects from an ally. Cannot target Succubi.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -20172,7 +20387,7 @@
     {
         "nid": "Earth_Bomb",
         "name": "Earth Bomb",
-        "desc": "<green>[Altina synergy]</> Varia throws a bomb magically infused by Altina. Cooldown 4 turns. Costs <red>25% of max HP.</> <blue>10 MP</>.",
+        "desc": "<blue>(10 MP)</> <red>(1/4 HP)</> <green>[Altina synergy]</> Varia throws a bomb magically infused by Altina. Cooldown 4 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -20248,7 +20463,7 @@
     {
         "nid": "Defenders_Frenzy",
         "name": "Defender's Frenzy",
-        "desc": "<green>[Hilstara synergy]</> Varia begins a frenzy to protect her allies. <blue>10 MP</>.",
+        "desc": "<blue>(10 MP)</> <green>[Hilstara synergy]</> Varia begins a frenzy to protect her allies.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -20370,6 +20585,12 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Burned"
+                ]
             ]
         ]
     },
@@ -20589,7 +20810,7 @@
     {
         "nid": "Encourage",
         "name": "Encourage",
-        "desc": "Varia encourages an adjacent ally, slightly increasing their offensive capabilities. <blue>4 MP</>.",
+        "desc": "<blue>(4 MP)</> Varia encourages an adjacent ally, slightly increasing their offensive capabilities.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -20756,7 +20977,7 @@
     {
         "nid": "Disrupt",
         "name": "Disrupt",
-        "desc": "<green>[Qum synergy]</> Attempts to inflict various status effects on an enemy. <blue>5 MP</>",
+        "desc": "<blue>(5 MP)</> <green>[Qum synergy]</> Attempts to inflict various status effects on an enemy.",
         "icon_nid": "Affinity",
         "icon_index": [
             0,
@@ -21252,7 +21473,7 @@
     {
         "nid": "Shieldwall",
         "name": "Shieldwall",
-        "desc": "Raises DEF and draws the enemy's attention. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> Raises DEF and draws the enemy's attention.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -21353,7 +21574,7 @@
     {
         "nid": "Aegis_Assault",
         "name": "Aegis Assault",
-        "desc": "Hilstara lunges forward with her shield. <red>Uses DEF to determine damage instead of STR.</>. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Hilstara lunges forward with her shield. <red>Uses DEF to determine damage instead of STR.</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -21417,7 +21638,7 @@
     {
         "nid": "Hold_The_Line",
         "name": "Hold the Line!",
-        "desc": "Hilstara shouts to maintain formation. All allied units 3 tiles horizontally adjacent to Hilstara gain <green>[HOLD]</>: Less damage received. Cannot move. Lasts one turn. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Hilstara shouts to maintain formation. All allied units 3 tiles horizontally adjacent to Hilstara gain <green>[HOLD]</>: Less damage received. Cannot move. Lasts one turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -21636,7 +21857,7 @@
     {
         "nid": "Active_Defense",
         "name": "Active Defense",
-        "desc": "Whenever Hilstara is in a guard stance with other unit, grants them <green>[SHIELDED]</>: When attacked, small chance of completely negating damage.",
+        "desc": "Whenever Hilstara is in a guard stance with other unit, grants them <green>[SHIELDED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -21646,6 +21867,16 @@
             [
                 "pairup_bonus",
                 "Active_Defense_effect"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Active_Defense_effect"
+                ]
             ]
         ]
     },
@@ -21768,7 +21999,7 @@
     {
         "nid": "Holy_Shieldwall",
         "name": "Holy Shieldwall",
-        "desc": "<green>[Carina synergy]</> Raises DEF, RES, draws the enemy's attention and gain health regeneration. <blue>10 MP</>.",
+        "desc": "<blue>(10 MP)</> <green>[Carina synergy]</> Raises DEF, RES, draws the enemy's attention and gain health regeneration.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -21897,7 +22128,7 @@
     {
         "nid": "Arcane_Shieldwall",
         "name": "Arcane Shieldwall",
-        "desc": "<green>[Riala synergy]</> Raises DEF, RES, draws the enemy's attention and gain mana regeneration. <blue>10 MP</>.",
+        "desc": "<blue>(10 MP)</> <green>[Riala synergy]</> Raises DEF, RES, draws the enemy's attention and gain mana regeneration.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -22030,7 +22261,7 @@
     {
         "nid": "Mighty_Bash",
         "name": "Mighty Bash",
-        "desc": "<green>[Uyae synergy]</> Paralyses and shoves an enemy 2 tiles away. <blue>8 MP</>.",
+        "desc": "<blue>(8 MP)</> <green>[Uyae synergy]</> Paralyses and shoves an enemy 2 tiles away.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -22114,7 +22345,7 @@
     {
         "nid": "Bikini_Armor",
         "name": "Bikini Armor",
-        "desc": "<green>[Nalili synergy]</> Hilstara follows Nalili's advice and takes off some of her armor, which somehow makes it better to resist magic. Doubles her RES but halves her DEF. <blue>7 MP</>.",
+        "desc": "<blue>(7 MP)</> <green>[Nalili synergy]</> Hilstara follows Nalili's advice and takes off some of her armor, which somehow makes it better to resist magic. Doubles her RES but halves her DEF.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -23181,7 +23412,7 @@
     {
         "nid": "Brutal_Nature",
         "name": "Brutal Nature",
-        "desc": "When attacking in <blue>player phase</>, gain 1 stack of <red>Brutality</>: for each stack, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
+        "desc": "When attacking in <blue>Player phase</>, gain 1 stack of <red>Brutality</>. Only active in <blue>Player phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -23207,13 +23438,19 @@
                     "recipient": "self",
                     "allegiance": "enemy"
                 }
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Brute_Stack"
+                ]
             ]
         ]
     },
     {
         "nid": "Introspective_Nature",
         "name": "Introspective Nature",
-        "desc": "After being attacked in <red>enemy phase</>, gain 1 stack of <blue>Serenity</>: for each stack, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
+        "desc": "After being attacked in <red>Enemy phase</>, gain 1 stack of <blue>Serenity</>. Only active in <red>Enemy phase</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -23239,6 +23476,12 @@
                     "recipient": "self",
                     "allegiance": "enemy"
                 }
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Calm_Stack"
+                ]
             ]
         ]
     },
@@ -23265,7 +23508,7 @@
     {
         "nid": "Brute_Stack",
         "name": "Brutality",
-        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSED]</>. <red>Only active in Player phase</>.",
+        "desc": "For each stack of <red>Brutality</>, Orcent deals 2 more damage and receives 2 more damage. At 5 stacks, Orcent gets <red>[CONFUSION]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -23307,13 +23550,19 @@
             [
                 "resist",
                 -2
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Confused"
+                ]
             ]
         ]
     },
     {
         "nid": "Calm_Stack",
         "name": "Serenity",
-        "desc": "For each stack of <blue>Serenity</>, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>. <red>Only active in Enemy phase</>.",
+        "desc": "For each stack of <blue>Serenity</>, Orcent has 10 more crit chance, deals 2 less damage and heals 5 HP after combat. At 5 stacks, Orcent gets <red>[SLEEP]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -23350,6 +23599,12 @@
                     0,
                     9,
                     91
+                ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Sleep"
                 ]
             ]
         ]
@@ -23498,7 +23753,7 @@
     {
         "nid": "Blinding_Attack_skill",
         "name": "Blinding Attack",
-        "desc": "<green>[Simon synergy]</> A precise attack. Inflicts the opponent with <red>[BLIND]</>: Unit's accuracy and avoid greatly decreases.",
+        "desc": "<green>[Simon synergy]</> A precise attack. Inflicts the opponent with <red>[BLIND]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -23534,6 +23789,12 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Blinded"
+                ]
             ]
         ]
     },
@@ -23556,7 +23817,7 @@
     {
         "nid": "Burning_Attack_skill",
         "name": "Burning Attack",
-        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</> Unit receives 5 damage at the start and end of the turn.",
+        "desc": "<green>[Robin synergy]</> Magical attack imbued with fire. May cause <red>[BURNED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -23588,6 +23849,12 @@
             [
                 "menu_category",
                 "<red>Combat Arts</>"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Burned"
+                ]
             ]
         ]
     },
@@ -24843,7 +25110,7 @@
     {
         "nid": "Parry",
         "name": "Parry",
-        "desc": "Inflicts adjacent enemies with <red>[PARRIED]</>: Unit deals no damage.",
+        "desc": "Inflicts adjacent enemies with <red>[PARRIED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -24878,6 +25145,12 @@
                 "skill_tags",
                 [
                     "Profession"
+                ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Parry_effect"
                 ]
             ]
         ]

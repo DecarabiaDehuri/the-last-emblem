@@ -20841,7 +20841,7 @@
             "move_portrait;Marlo;Right",
             "expression;Marlo;Smile",
             "s;Marlo;We've got everything under control, madam.|I admit, we were stupid last time. But we changed our methods.|Our contact is passing as an ally of them. They believe the warehouse we set up is safe.|Tomorrow it will become a slaughterhouse!",
-            "s;Perese;Quite thoughtful this time. I approve.| Best of luck to you. Do excuse me now, I have places to be.",
+            "s;Perese;Quite thoughtful this time. I approve.|Best of luck to you. Do excuse me now, I have places to be.",
             "multi_remove_portrait;Marlo;Perese",
             "wait;200",
             "move_unit;Perese;20,7",
@@ -20886,7 +20886,7 @@
             "center_cursor;1,18",
             "transition;open;1000",
             "wait;1000",
-            "spawn_group;play;west;play;normal",
+            "spawn_group;play;west;play;normal;closest",
             "wait;500",
             "s;Enemy;Huh?-{c:wait;200}{no_wait}",
             "kill_unit;103",
@@ -24292,7 +24292,7 @@
             "    end",
             "end",
             "",
-            "if;{v:fortL} == 1 and {v:fortR} == 1",
+            "if;{v:fortL} == 0 and {v:fortR} == 0",
             "    music_clear",
             "    wait;1000",
             "    add_portrait;Aka;Left",
@@ -25264,7 +25264,10 @@
         "_source": [
             "give_skill;Simon;multidesc_main;;no_banner",
             "give_skill;Simon;Commanding_Presence;;no_banner",
-            "give_skill;Simon;Aura_Blighting;;no_banner"
+            "give_skill;Simon;Aura_Blighting;;no_banner",
+            "give_skill;Simon;Nostalgic_Lust;;no_banner",
+            "autolevel_to;Qum;20;random",
+            "give_item;Qum;Arousing_Kiss;;no_banner"
         ],
         "nid": "teste2 New Event_4"
     }

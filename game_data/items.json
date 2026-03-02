@@ -518,7 +518,7 @@
     {
         "nid": "DivineHeal",
         "name": "Heal",
-        "desc": "(<blue>3 MP</>) Restores (User's MAG + 10) HP. ",
+        "desc": "<blue>(3 MP)</> Restores (User's MAG + 10) HP. ",
         "icon_nid": "Light",
         "icon_index": [
             0,
@@ -582,7 +582,7 @@
     {
         "nid": "DivineRestore",
         "name": "Cleanse",
-        "desc": "Cleanses the target of negative statuses. Costs <blue>5 mana</>.",
+        "desc": "<blue>(5 MP)</> Cleanses the target of negative statuses.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -687,7 +687,7 @@
     {
         "nid": "DivineMend",
         "name": "Mend",
-        "desc": "Restores (User's MAG + 20) HP. Costs <blue>7 mana</>.",
+        "desc": "<blue>(7 MP)</> Restores (User's MAG + 20) HP.",
         "icon_nid": "Light",
         "icon_index": [
             0,
@@ -755,7 +755,7 @@
     {
         "nid": "DivineFortify",
         "name": "Mass Heal",
-        "desc": "Restores (User's MAG + 20) HP for all allied units in range. Range is dependent on user's MAG. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Restores (User's MAG + 20) HP for all allied units in range. Range is dependent on user's MAG.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -854,7 +854,7 @@
     {
         "nid": "DivineLightning",
         "name": "Smite",
-        "desc": "(<blue>2 MP</>)Hits an enemy with basic divine magic. ",
+        "desc": "<blue>(2 MP)</> Hits an enemy with basic divine magic. ",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -922,7 +922,7 @@
     {
         "nid": "DivineShine",
         "name": "Shine",
-        "desc": "(<blue>5 MP</>) Hits an enemy with intermediate divine magic.",
+        "desc": "<blue>(5 MP)</> Hits an enemy with intermediate divine magic.",
         "icon_nid": "Light",
         "icon_index": [
             0,
@@ -2079,7 +2079,7 @@
     {
         "nid": "ArcaneFire",
         "name": "Fire",
-        "desc": "Basic fire magic. Strong but unreliable. <blue>1 MP</>. Effective against <blue>Ice</>.",
+        "desc": "<blue>(1 MP)</> Basic fire magic. Strong but unreliable. Effective against <blue>Ice</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2155,7 +2155,7 @@
     {
         "nid": "ArcaneLightning",
         "name": "Lightning",
-        "desc": "Basic lightning magic. Weak but high chance of critical. <blue>1 MP</>. Effective against <red>Fire</>.",
+        "desc": "<blue>(1 MP)</> Basic lightning magic. Weak but high chance of critical. Effective against <red>Fire</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2231,7 +2231,7 @@
     {
         "nid": "ArcaneIce",
         "name": "Ice",
-        "desc": "Basic ice magic. Medium damage, can't double or be doubled. <blue>1 MP</>. Effective against <yellow>Lightning</>.",
+        "desc": "<blue>(1 MP)</> Basic ice magic. Medium damage, can't double or be doubled. Effective against <yellow>Lightning</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2367,7 +2367,7 @@
     {
         "nid": "ArcanePoison",
         "name": "Poison",
-        "desc": "Deals magic damage and poisons the enemy on hit. <blue>5 MP</>.",
+        "desc": "<blue>(5 MP)</> BasicDeals magic damage and poisons the enemy on hit.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2476,7 +2476,7 @@
     {
         "nid": "FireLance",
         "name": "Fire Lance",
-        "desc": "Advanced fire magic. Strongest but unreliable. <blue>4 MP</>. Effective against <blue>Ice</>.",
+        "desc": " <blue>(4 MP)</> Advanced fire magic. Strongest but unreliable. Effective against <blue>Ice</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2552,7 +2552,7 @@
     {
         "nid": "LightningLance",
         "name": "Lightning Lance",
-        "desc": "Advanced lightning magic. Weakest but highest chance of critical. <blue>4 MP</>.  Effective against <red>Fire</>.",
+        "desc": " <blue>(4 MP)</> Advanced lightning magic. Weakest but highest chance of critical. Effective against <red>Fire</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2628,7 +2628,7 @@
     {
         "nid": "IceLance",
         "name": "Ice Lance",
-        "desc": "Advanced ice magic. Medium damage, highest precision, can't double or be doubled. <blue>4 MP</>. Effective against <yellow>Lightning</>.",
+        "desc": " <blue>(4 MP)</> Advanced ice magic. Medium damage, highest precision, can't double or be doubled. Effective against <yellow>Lightning</>.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -2874,7 +2874,7 @@
     {
         "nid": "LustFlux",
         "name": "Wink",
-        "desc": "Confuses the enemy with a quick wink. Costs <orange>1 SP</>.",
+        "desc": "<orange>(1 SP)</> Confuses the enemy with a quick wink.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -2946,7 +2946,7 @@
     {
         "nid": "Sexual_Torment",
         "name": "Sexual Torment",
-        "desc": "Attacks the target with sexual tension. Costs <orange>2 SP</>.",
+        "desc": "<orange>(2 SP)</> Attacks the target with sexual tension.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -3022,7 +3022,7 @@
     {
         "nid": "Succubus_Kiss",
         "name": "Succubus Kiss",
-        "desc": "User recovers HP equal to damage dealt. Costs <orange>10 SP</>.",
+        "desc": "<orange>(10 SP)</> User recovers HP equal to damage dealt.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -3148,7 +3148,7 @@
     {
         "nid": "LustLuna",
         "name": "Weaponized Tingling",
-        "desc": "Ignores enemy resistance. Costs <orange>12 SP</>.",
+        "desc": "<orange>(12 SP)</> Ignores enemy resistance.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -3224,7 +3224,7 @@
     {
         "nid": "LustEclipse",
         "name": "Halted Orgasm",
-        "desc": "Halves the enemy's current HP. Costs <orange>15 SP</>.",
+        "desc": "<orange>(15 SP)</> Halves the enemy's current HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -4030,7 +4030,7 @@
     {
         "nid": "Commanding_Presence",
         "name": "Commanding Presence",
-        "desc": "<blue>(10 MP)</> Deals damage to enemies around Simon, with a high chance of inflicting <red>[STUNNED]</>: Unit cannot act for the remainder of their turn.",
+        "desc": "<blue>(10 MP)</> Deals damage to enemies around Simon, with a high chance of inflicting <red>[STUNNED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -4189,6 +4189,12 @@
             [
                 "map_target_cast_anim",
                 "Snag"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Stunned"
+                ]
             ]
         ]
     },
@@ -5295,6 +5301,12 @@
             [
                 "status_after_combat_on_hit",
                 "Arousing_Kiss_effect"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Arousing_Kiss_effect"
+                ]
             ]
         ]
     },
