@@ -4019,7 +4019,7 @@
             ],
             [
                 "map_cast_sfx",
-                "Restore"
+                "Mend"
             ],
             [
                 "map_target_cast_anim",
@@ -4199,6 +4199,10 @@
                 [
                     "Stunned"
                 ]
+            ],
+            [
+                "level_exp",
+                null
             ]
         ]
     },
@@ -14772,7 +14776,7 @@
             ],
             [
                 "min_range",
-                2
+                1
             ],
             [
                 "max_range",
@@ -16870,6 +16874,10 @@
             [
                 "mana_cost",
                 8
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Unpeople' not in target.tags"
             ]
         ]
     },
@@ -16905,7 +16913,7 @@
             ],
             [
                 "damage",
-                10
+                8
             ],
             [
                 "map_hit_add_blend",
@@ -16920,6 +16928,10 @@
                 [
                     "AoE"
                 ]
+            ],
+            [
+                "level_exp",
+                null
             ]
         ]
     },
@@ -17926,6 +17938,10 @@
             [
                 "weapon_type_exempt",
                 "Bow"
+            ],
+            [
+                "wexp",
+                -10
             ]
         ]
     },
@@ -18453,7 +18469,7 @@
     {
         "nid": "Dance_enemy",
         "name": "Dance",
-        "desc": "This unit can <green>Dance</> to their allies, letting them act again on this turn.",
+        "desc": "This unit can <green>Dance</> to their allies with no cost, letting them act again on this turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -18537,7 +18553,7 @@
     {
         "nid": "Dance_enemy_2",
         "name": "Dance",
-        "desc": "This unit can <green>Dance</> to their allies, letting them act again on this turn.",
+        "desc": "This unit can <green>Dance</> to their allies with no cost, letting them act again on this turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -18687,6 +18703,10 @@
             [
                 "mana_cost",
                 6
+            ],
+            [
+                "eval_target_restrict_2",
+                "'Unpeople' not in target.tags"
             ]
         ]
     },
@@ -21665,7 +21685,11 @@
             [
                 "multi_item",
                 [
-                    "Piercing_Stab"
+                    "Piercing_Stab",
+                    "Disconcerting_Stab",
+                    "Weakening_Stab",
+                    "Crippling_Stab",
+                    "Blinding_Stab"
                 ]
             ]
         ]
@@ -21787,6 +21811,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "eval_available",
+                "has_skill('Aka', 'Disconcerting_Stab')"
             ]
         ]
     },
@@ -21847,6 +21875,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "eval_available",
+                "has_skill('Aka', 'Weakening_Stab')"
             ]
         ]
     },
@@ -21907,6 +21939,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "eval_available",
+                "has_skill('Aka', 'Crippling_Stab')"
             ]
         ]
     },
@@ -21967,6 +22003,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "eval_available",
+                "has_skill('Aka', 'Blinding_Stab')"
             ]
         ]
     },
@@ -22861,7 +22901,7 @@
     {
         "nid": "Instant_Delivery",
         "name": "Instant Delivery",
-        "desc": "<blue>(10 MP)</> Megail chooses an ally to trade with.",
+        "desc": "<blue>(10 MP)</> Megail chooses a distant ally to trade with.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -22878,7 +22918,7 @@
             ],
             [
                 "min_range",
-                1
+                2
             ],
             [
                 "max_range",
@@ -24557,7 +24597,7 @@
             ],
             [
                 "status_after_combat_on_hit",
-                "Nothing"
+                "Encouraged"
             ],
             [
                 "map_cast_pose",
@@ -25115,6 +25155,66 @@
             [
                 "weapon_rank",
                 "E"
+            ],
+            [
+                "weapon_type",
+                "Scythe"
+            ]
+        ]
+    },
+    {
+        "nid": "Steel_Scythe",
+        "name": "Steel Scythe",
+        "desc": "",
+        "icon_nid": "{SkidMarc25} Libido Scythe",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                360
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_rank",
+                "C"
             ],
             [
                 "weapon_type",
@@ -30749,6 +30849,10 @@
             [
                 "battle_cast_anim",
                 "Wind"
+            ],
+            [
+                "event_before_combat",
+                "Global Implevon magic attack"
             ]
         ]
     },

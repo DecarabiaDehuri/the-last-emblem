@@ -2933,9 +2933,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "remove_skill;Megail;Wagon_mode;;no_banner",
-            "remove_tag;Megail;Convoy;no_warn",
-            "remove_tag;Megail;AdjConvoy;no_warn"
+            "remove_skill;Megail;Wagon_mode;;no_banner"
         ],
         "nid": "Global Wagontosupplier"
     },
@@ -2948,9 +2946,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "remove_skill;Megail;Supply_mode;;no_banner",
-            "add_tag;Megail;Convoy;no_warn",
-            "add_tag;Megail;AdjConvoy;no_warn"
+            "remove_skill;Megail;Supply_mode;;no_banner"
         ],
         "nid": "Global Suppliertowagon"
     },
@@ -17326,6 +17322,7 @@
             "remove_portrait;Razar",
             "wait;500",
             "remove_unit;Razar;swoosh;fade",
+            "remove_unit;Yett;immediate;fade",
             "wait;1000",
             "music_clear;2000",
             "transition;close;3000",
@@ -18351,6 +18348,7 @@
             "    wait;300",
             "    move_group;merc0;merc;normal;closest;no_follow",
             "    wait;400",
+            "    level_var;ambush;1",
             "else",
             "end"
         ],
@@ -18762,15 +18760,15 @@
     },
     {
         "name": "Varia death cursed",
-        "trigger": null,
+        "trigger": "unit_death",
         "level_nid": null,
-        "condition": "True",
+        "condition": "unit.nid == 'Varia'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "wait;100",
-            "add_portrait;Varia;FarRight;;CloseEyes.Smile",
+            "add_portrait;Varia;FarRight;;CloseEyes,Smile",
             "s;Varia;Escaped from it again, huh...",
             "remove_portrait;Varia",
             "wait;300",
@@ -19356,8 +19354,8 @@
         "nid": "Intro0 green boss reinforcement deprecated"
     },
     {
-        "name": "Aka level up skills",
-        "trigger": "unit_level_up",
+        "name": "Aka level up skills deprecated",
+        "trigger": null,
         "level_nid": null,
         "condition": "unit.nid == 'Aka' and source == 'exp_gain'",
         "commands": [],
@@ -19376,7 +19374,7 @@
             "    end",
             "end"
         ],
-        "nid": "Global Aka level up skills"
+        "nid": "Global Aka level up skills deprecated"
     },
     {
         "name": "Carina level up skills",
@@ -20823,7 +20821,7 @@
     {
         "name": "Intro",
         "trigger": "level_start",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -20943,12 +20941,12 @@
             "s;Wynn;Nothing quite like pressure to elevate our minds.;;;noir",
             "transition;close;1500"
         ],
-        "nid": "Intro3_remake Intro"
+        "nid": "Intro3 Intro"
     },
     {
         "name": "Time",
         "trigger": "turn_change",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -20969,12 +20967,12 @@
             "    lose_game",
             "end"
         ],
-        "nid": "Intro3_remake Time"
+        "nid": "Intro3 Time"
     },
     {
         "name": "wall1",
         "trigger": "unit_death",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "unit.nid == 'wall1'",
         "commands": [],
         "only_once": true,
@@ -20983,12 +20981,12 @@
             "map_anim;Snag;{position}",
             "show_layer;wall1"
         ],
-        "nid": "Intro3_remake wall1"
+        "nid": "Intro3 wall1"
     },
     {
         "name": "wall2",
         "trigger": "unit_death",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "unit.nid == 'wall2'",
         "commands": [],
         "only_once": true,
@@ -20997,12 +20995,12 @@
             "map_anim;Snag;{position}",
             "show_layer;wall2"
         ],
-        "nid": "Intro3_remake wall2"
+        "nid": "Intro3 wall2"
     },
     {
         "name": "Chests",
         "trigger": "Chest",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -21025,7 +21023,7 @@
             "    remove_region;Chest3",
             "end"
         ],
-        "nid": "Intro3_remake Chests"
+        "nid": "Intro3 Chests"
     },
     {
         "name": "Change turns objective",
@@ -21044,7 +21042,7 @@
     {
         "name": "Morning",
         "trigger": "turn_change",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "True",
         "commands": [],
         "only_once": false,
@@ -21053,12 +21051,12 @@
             "inc_level_var;morning;-1",
             "change_objective_simple;Morning in {v:morning} turns"
         ],
-        "nid": "Intro3_remake Morning"
+        "nid": "Intro3 Morning"
     },
     {
         "name": "Boss dead victory",
         "trigger": "combat_end",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "game.check_dead('Marlo')",
         "commands": [],
         "only_once": false,
@@ -21070,7 +21068,7 @@
             "wait;1000",
             "win_game"
         ],
-        "nid": "Intro3_remake Boss dead victory"
+        "nid": "Intro3 Boss dead victory"
     },
     {
         "name": "Village destroy game over",
@@ -21904,6 +21902,9 @@
             "center_cursor;2,12;1500",
             "wait;1000",
             "spawn_group;pt2;west;pt2",
+            "for;nerf;[u.nid for u in game.get_other_units()]",
+            "    give_skill;{nerf};nerf_npc;;no_banner;persistent",
+            "endf",
             "wait;1000",
             "center_cursor;Grubbak;1500",
             "add_portrait;Grubbak;FarRight;mirror",
@@ -23388,7 +23389,7 @@
         "_source": [
             "unlock;{unit}",
             "show_layer;chest2",
-            "give_item;{unit};Axereaver",
+            "give_item;{unit};Devil_Axe",
             "remove_region;Chest"
         ],
         "nid": "O5 Chest2"
@@ -25342,7 +25343,10 @@
             "#interact_unit;DoomKing;Ginasta;crit1",
             "enable_supports;t",
             "unlock_support_rank;Uyae;Uyae;C;",
-            "increment_support_points;Yarra;Uyae;50"
+            "increment_support_points;Yarra;Uyae;50",
+            "autolevel_to;Megail;2",
+            "#autolevel_to;Aka;4",
+            "give_skill;Robin;Guaranteed_Crit;;no_banner"
         ],
         "nid": "teste2 New Event_4"
     },
@@ -25364,7 +25368,7 @@
     {
         "name": "Door1",
         "trigger": "Door",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "region.nid == 'Door1'",
         "commands": [],
         "only_once": false,
@@ -25373,12 +25377,12 @@
             "unlock;{unit}",
             "show_layer;door1"
         ],
-        "nid": "Intro3_remake Door1"
+        "nid": "Intro3 Door1"
     },
     {
         "name": "Door2",
         "trigger": "Door",
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "region.nid == 'Door2'",
         "commands": [],
         "only_once": false,
@@ -25387,12 +25391,12 @@
             "unlock;{unit}",
             "show_layer;door2"
         ],
-        "nid": "Intro3_remake Door2"
+        "nid": "Intro3 Door2"
     },
     {
         "name": "boss buff",
         "trigger": null,
-        "level_nid": "Intro3_remake",
+        "level_nid": "Intro3",
         "condition": "('Boss' in unit.tags or 'Boss' in unit2.tags) and game.level_vars['bossbuffed'] == 0",
         "commands": [],
         "only_once": false,
@@ -25420,7 +25424,7 @@
             "    end",
             "end"
         ],
-        "nid": "Intro3_remake boss buff"
+        "nid": "Intro3 boss buff"
     },
     {
         "name": "Reinforcements",
@@ -25622,9 +25626,95 @@
         "_source": [
             "for;sucp;[unit.nid for unit in game.get_player_units() if 'Succubus' in unit.tags and unit.nid not in ('Nalili', 'Qum')]",
             "    set_current_mana;{sucp};1",
-            "    s;test;{sucp}",
             "endf"
         ],
         "nid": "Intro7 Remove suc SP"
+    },
+    {
+        "name": "Essential unit death GAME OVER or TURNWHEEL",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "'gameover' in unit.tags",
+        "commands": [],
+        "only_once": false,
+        "priority": 10,
+        "_source": [
+            "wait;400",
+            "if;game.current_mode.permadeath",
+            "    lose_game",
+            "else",
+            "    activate_turnwheel;t",
+            "end"
+        ],
+        "nid": "Global Essential unit death GAME OVER or TURNWHEEL"
+    },
+    {
+        "name": "Variable",
+        "trigger": "level_start",
+        "level_nid": "Intro8",
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "level_var;ambush;0"
+        ],
+        "nid": "Intro8 Variable"
+    },
+    {
+        "name": "Essentials attribution",
+        "trigger": "level_start",
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.level_nid == 'O1'",
+            "    give_skill;Ralke;Essential;;no_banner",
+            "elif;game.level_nid == 'Intro1'",
+            "    give_skill;Yarra;Essential;;no_banner",
+            "elif;game.level_nid == 'Intro2'",
+            "    give_skill;Orcent;Essential;;no_banner",
+            "elif;game.level_nid == 'O2'",
+            "    give_skill;Ralke;Essential;;no_banner",
+            "    give_skill;Grubbak;Essential;;no_banner",
+            "elif;game.level_nid == 'Intro3'",
+            "    give_skill;Aka;Essential;;no_banner",
+            "elif;game.level_nid == 'Intro5'",
+            "    give_skill;Yarra;Essential;;no_banner",
+            "elif;game.level_nid == 'Intro6'",
+            "    give_skill;Aka;Essential;;no_banner",
+            "    give_skill;Orcent;Essential;;no_banner",
+            "elif;game.level_nid == 'O3'",
+            "    give_skill;Ralke;Essential;;no_banner",
+            "    give_skill;Grubbak;Essential;;no_banner",
+            "elif;game.level_nid == 'O4'",
+            "    give_skill;Ralke;Essential;;no_banner",
+            "    give_skill;Grubbak;Essential;;no_banner",
+            "elif;game.level_nid == 'O5'",
+            "    give_skill;Ralke;Essential;;no_banner",
+            "    give_skill;Grubbak;Essential;;no_banner",
+            "elif;game.level_nid == 'O6'",
+            "    give_skill;Ralke;Essential;;no_banner",
+            "    give_skill;Grubbak;Essential;;no_banner",
+            "end"
+        ],
+        "nid": "Global Essentials attribution"
+    },
+    {
+        "name": "Implevon magic attack",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Implevon;FarRight;right",
+            "s;Implevon;<wave>Magic Attack!</wave>",
+            "r;Implevon;;right"
+        ],
+        "nid": "Global Implevon magic attack"
     }
 ]

@@ -70,6 +70,10 @@
             [
                 8,
                 "All_Embracing_Care"
+            ],
+            [
+                1,
+                "Essential_Simon"
             ]
         ],
         "unit_notes": [],
@@ -1063,7 +1067,8 @@
             ]
         },
         "alternate_classes": [
-            "Cavalier"
+            "Cavalier",
+            "Shaman"
         ],
         "portrait_nid": "lynine2",
         "affinity": "Hetero",
@@ -1116,6 +1121,10 @@
             [
                 1,
                 "Supplier"
+            ],
+            [
+                2,
+                "Trade_Logistics"
             ]
         ],
         "unit_notes": [],
@@ -1668,7 +1677,8 @@
             ]
         },
         "alternate_classes": [
-            "Cavalier"
+            "Cavalier",
+            "Mage"
         ],
         "portrait_nid": "orilise2",
         "affinity": "Hetero",
@@ -2181,7 +2191,9 @@
                 251
             ]
         },
-        "alternate_classes": [],
+        "alternate_classes": [
+            "Brigand"
+        ],
         "portrait_nid": "trin2",
         "affinity": "Hetero",
         "fields": []
@@ -2436,7 +2448,8 @@
             ]
         },
         "alternate_classes": [
-            "Archer"
+            "Thief",
+            "Brigand"
         ],
         "portrait_nid": "varia3",
         "affinity": "Hetero",
@@ -2583,6 +2596,7 @@
             ]
         },
         "alternate_classes": [
+            "Cavalier",
             "Knight"
         ],
         "portrait_nid": "vhala2",
@@ -6654,8 +6668,8 @@
             "SKL": 6,
             "SPD": 5,
             "LCK": 4,
-            "DEF": 5,
-            "RES": 5,
+            "DEF": 4,
+            "RES": 4,
             "CON": 16,
             "MOV": 5
         },
@@ -6666,8 +6680,8 @@
             "SKL": 55,
             "SPD": 60,
             "LCK": 70,
-            "DEF": 60,
-            "RES": 60,
+            "DEF": 50,
+            "RES": 50,
             "CON": 0,
             "MOV": 0
         },
@@ -8073,7 +8087,7 @@
         "name": "Kothan",
         "desc": "",
         "variant": "",
-        "level": 5,
+        "level": 11,
         "klass": "Orc_Elite",
         "tags": [
             "Boss",
@@ -8182,7 +8196,12 @@
                 false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Lust_Death_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Dark": [
@@ -8241,13 +8260,14 @@
             [
                 "Holy_Axe",
                 false
-            ],
-            [
-                "DivineSpells_dmg",
-                false
             ]
         ],
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Paralysis_attack"
+            ]
+        ],
         "unit_notes": [],
         "wexp_gain": {
             "Axe": [
@@ -9371,7 +9391,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Iron_Bow",
+                "Crossbow",
                 false
             ],
             [
@@ -9383,6 +9403,11 @@
         "unit_notes": [],
         "wexp_gain": {
             "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
                 false,
                 71,
                 null
@@ -9660,7 +9685,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Vanessa",
-        "affinity": null,
+        "affinity": "None",
         "fields": []
     },
     {

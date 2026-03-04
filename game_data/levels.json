@@ -19639,7 +19639,7 @@
         "ai_groups": []
     },
     {
-        "nid": "Intro3_remake",
+        "nid": "Intro3",
         "name": "Nightmare",
         "tilemap": "intro3rmk",
         "bg_tilemap": null,
@@ -24467,12 +24467,7 @@
                 }
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "O4",
@@ -25593,12 +25588,7 @@
                 }
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "Intro7",
@@ -27496,15 +27486,16 @@
                 "faction": "Succubus",
                 "starting_items": [
                     [
-                        "Dance_enemy",
+                        "Dance_enemy_2",
                         false
                     ]
                 ],
                 "starting_skills": [
-                    "Enemy_dancer"
+                    "Enemy_dancer",
+                    "Dance"
                 ],
                 "team": "enemy2",
-                "ai": "Dancer_enemy",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -27540,7 +27531,11 @@
                 "faction": "Succubus",
                 "starting_items": [
                     [
-                        "Iron_Scythe",
+                        "Steel_Scythe",
+                        false
+                    ],
+                    [
+                        "LustSpells",
                         false
                     ]
                 ],
@@ -27561,7 +27556,11 @@
                 "faction": "Succubus",
                 "starting_items": [
                     [
-                        "Iron_Scythe",
+                        "Steel_Scythe",
+                        false
+                    ],
+                    [
+                        "LustSpells",
                         false
                     ]
                 ],
@@ -28510,7 +28509,7 @@
             {
                 "nid": "Yorem",
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -28648,8 +28647,8 @@
                         false
                     ],
                     [
-                        "Loot_Bag",
-                        true
+                        "Red_Gem",
+                        false
                     ]
                 ],
                 "starting_skills": [],
@@ -28954,7 +28953,7 @@
                     1
                 ],
                 "sub_nid": "Visit",
-                "condition": "True",
+                "condition": "game,level_vars['ambush'] == 0",
                 "time_left": null,
                 "only_once": true,
                 "interrupt_move": false,
@@ -29495,6 +29494,10 @@
             },
             {
                 "nid": "mage",
+                "trigger_threshold": 1
+            },
+            {
+                "nid": "",
                 "trigger_threshold": 1
             }
         ]
@@ -31002,7 +31005,7 @@
                 "variant": null,
                 "level": 1,
                 "klass": "Ship",
-                "faction": "Soldier",
+                "faction": "AntiDK",
                 "starting_items": [],
                 "starting_skills": [
                     "shipmove"
@@ -31415,7 +31418,12 @@
                 }
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "O6",
@@ -43226,8 +43234,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    9,
-                    0
+                    14,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -43387,8 +43395,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    1
+                    1,
+                    3
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -45124,12 +45132,12 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
-                    6
+                    10,
+                    12
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -45183,6 +45191,33 @@
                 ],
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 1,
+                "klass": "Suc_dancer",
+                "faction": "Succubus",
+                "starting_items": [
+                    [
+                        "Dance_enemy",
+                        false
+                    ]
+                ],
+                "starting_skills": [
+                    "Dance",
+                    "Enemy_dancer"
+                ],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    13
+                ],
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [],
