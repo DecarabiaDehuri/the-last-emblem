@@ -879,7 +879,7 @@
             ],
             [
                 "damage",
-                4
+                6
             ],
             [
                 "hit",
@@ -916,6 +916,10 @@
             [
                 "battle_cast_anim",
                 "Shine"
+            ],
+            [
+                "mana_cost",
+                2
             ]
         ]
     },
@@ -947,7 +951,7 @@
             ],
             [
                 "damage",
-                7
+                9
             ],
             [
                 "hit",
@@ -1608,7 +1612,7 @@
             ],
             [
                 "weight",
-                4
+                6
             ],
             [
                 "level_exp",
@@ -1676,7 +1680,7 @@
             ],
             [
                 "weight",
-                6
+                4
             ],
             [
                 "level_exp",
@@ -2104,11 +2108,11 @@
             ],
             [
                 "damage",
-                8
+                9
             ],
             [
                 "hit",
-                80
+                75
             ],
             [
                 "crit",
@@ -2116,7 +2120,7 @@
             ],
             [
                 "weight",
-                5
+                9
             ],
             [
                 "level_exp",
@@ -2180,7 +2184,7 @@
             ],
             [
                 "damage",
-                3
+                4
             ],
             [
                 "hit",
@@ -2192,7 +2196,7 @@
             ],
             [
                 "weight",
-                7
+                4
             ],
             [
                 "level_exp",
@@ -2256,11 +2260,11 @@
             ],
             [
                 "damage",
-                5
+                6
             ],
             [
                 "hit",
-                95
+                120
             ],
             [
                 "crit",
@@ -2497,7 +2501,7 @@
             ],
             [
                 "weight",
-                8
+                11
             ],
             [
                 "weapon",
@@ -2573,7 +2577,7 @@
             ],
             [
                 "weight",
-                10
+                8
             ],
             [
                 "weapon",
@@ -2979,7 +2983,7 @@
             ],
             [
                 "crit",
-                5
+                0
             ],
             [
                 "weight",
@@ -5954,6 +5958,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Charmed_Yarra"
+                ]
             ]
         ]
     },
@@ -6083,6 +6093,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Charmed_Yarra"
+                ]
             ]
         ]
     },
@@ -6319,6 +6335,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Lust_Death"
+                ]
             ]
         ]
     },
@@ -7344,7 +7366,7 @@
             ],
             [
                 "map_cast_anim",
-                "AOE_Blizzard"
+                "Ice2"
             ],
             [
                 "map_hit_sfx",
@@ -7463,7 +7485,7 @@
             ],
             [
                 "map_cast_anim",
-                "AOE_Wyrmsfire"
+                "Fire1"
             ],
             [
                 "map_hit_sfx",
@@ -7582,7 +7604,7 @@
             ],
             [
                 "map_cast_anim",
-                "AOE_Wyrmsfire"
+                "Fire1"
             ],
             [
                 "map_hit_sfx",
@@ -8804,7 +8826,7 @@
             ],
             [
                 "uses",
-                3
+                1
             ],
             [
                 "uses_options",
@@ -8851,7 +8873,7 @@
             ],
             [
                 "uses",
-                3
+                1
             ],
             [
                 "uses_options",
@@ -8898,7 +8920,7 @@
             ],
             [
                 "uses",
-                3
+                1
             ],
             [
                 "uses_options",
@@ -8945,7 +8967,7 @@
             ],
             [
                 "uses",
-                3
+                1
             ],
             [
                 "uses_options",
@@ -8996,7 +9018,7 @@
             ],
             [
                 "uses",
-                3
+                1
             ],
             [
                 "uses_options",
@@ -9047,7 +9069,7 @@
             ],
             [
                 "uses",
-                3
+                1
             ],
             [
                 "uses_options",
@@ -17721,7 +17743,7 @@
     },
     {
         "nid": "Necro_Axe",
-        "name": "(Axe) Demise",
+        "name": "Demise",
         "desc": "Wynn commands her corpse to attack with an axe.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -17785,7 +17807,7 @@
     },
     {
         "nid": "Necro_Axe_Ranged",
-        "name": "(Axe) Decease",
+        "name": "Decease",
         "desc": "Wynn commands her corpse to attack with an axe from afar.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -17845,7 +17867,7 @@
     },
     {
         "nid": "Necro_Bow",
-        "name": "(Bow) Departure",
+        "name": "Departure",
         "desc": "Wynn commands her corpse to attack with a bow.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -18203,7 +18225,7 @@
     {
         "nid": "Rock",
         "name": "Rock",
-        "desc": "Long range improvised weapon used by orcs. Has an area of effect damage. Units hit by this have a chance to be <red>[STUNNED]</>.\nHas 1 turn cooldown.\n<red>[STUNNED]</>: Cannot act for 1 turn.",
+        "desc": "Long range improvised weapon used by orcs. Units hit by this have a chance to gain <red>[STUN]</>.\nHas 1 turn cooldown.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -18236,7 +18258,7 @@
             ],
             [
                 "damage",
-                6
+                10
             ],
             [
                 "prf_class",
@@ -18253,10 +18275,6 @@
                 2
             ],
             [
-                "blast_aoe",
-                1
-            ],
-            [
                 "no_double",
                 null
             ],
@@ -18267,6 +18285,12 @@
             [
                 "status_on_equip",
                 "Stun_attack"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Stunned"
+                ]
             ]
         ]
     },
@@ -21122,7 +21146,7 @@
             ],
             [
                 "exp",
-                15
+                5
             ],
             [
                 "mana_cost_as_uses",
@@ -21190,7 +21214,7 @@
             ],
             [
                 "exp",
-                15
+                5
             ],
             [
                 "mana_cost_as_uses",
@@ -21258,7 +21282,7 @@
             ],
             [
                 "exp",
-                15
+                5
             ],
             [
                 "mana_cost_as_uses",
@@ -21326,7 +21350,7 @@
             ],
             [
                 "exp",
-                15
+                5
             ],
             [
                 "mana_cost_as_uses",
@@ -21394,7 +21418,7 @@
             ],
             [
                 "exp",
-                15
+                5
             ],
             [
                 "mana_cost_as_uses",
@@ -21462,7 +21486,7 @@
             ],
             [
                 "exp",
-                15
+                5
             ],
             [
                 "mana_cost_as_uses",
@@ -21530,7 +21554,7 @@
             ],
             [
                 "exp",
-                15
+                5
             ],
             [
                 "mana_cost_as_uses",
@@ -28361,7 +28385,7 @@
             ],
             [
                 "eval_target_restrict_2",
-                "unit.level >= 15"
+                "unit.level >= 10"
             ]
         ]
     },
@@ -29765,7 +29789,7 @@
     {
         "nid": "Bash",
         "name": "Bash",
-        "desc": "<blue>(5 MP)</> Shoves the enemy 1 tile away. Chance to stun the enemy afterwards.",
+        "desc": "<blue>(5 MP)</> Shoves the enemy 1 tile away. Chance to <red>[STUN]</> the enemy afterwards.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -29831,13 +29855,19 @@
             [
                 "never_use_battle_animation",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Stunned"
+                ]
             ]
         ]
     },
     {
         "nid": "Mighty_Bash",
         "name": "Mighty Bash",
-        "desc": "<blue>(8 MP)</> <green>[Uyae synergy]</> Shoves the enemy 2 tiles away. Chance to paralyze the enemy afterwards.",
+        "desc": "<blue>(8 MP)</> <green>[Uyae synergy]</> Shoves the enemy 2 tiles away. Chance to inflict <red>[PARALYSIS]</> on the enemy afterwards.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -29903,6 +29933,12 @@
             [
                 "never_use_battle_animation",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Paralysis"
+                ]
             ]
         ]
     },

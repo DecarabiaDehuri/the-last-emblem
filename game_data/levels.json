@@ -19651,7 +19651,7 @@
         },
         "objective": {
             "simple": "Defeat boss until morning",
-            "win": "Defeat before turn 13",
+            "win": "Defeat boss before turn 13",
             "loss": "Boss alive on turn 13,Aka defeated"
         },
         "roam": false,
@@ -20366,6 +20366,44 @@
                 ],
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "wall_1",
+                "variant": null,
+                "level": 1,
+                "klass": "Wall25",
+                "faction": "Wall",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    2,
+                    11
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "wall_2",
+                "variant": null,
+                "level": 1,
+                "klass": "Wall25",
+                "faction": "Wall",
+                "starting_items": [],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    20
+                ],
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [
@@ -20492,6 +20530,42 @@
                 "condition": "True",
                 "time_left": null,
                 "only_once": false,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "Door1",
+                "region_type": "event",
+                "position": [
+                    12,
+                    2
+                ],
+                "size": [
+                    1,
+                    3
+                ],
+                "sub_nid": "Door",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false,
+                "hide_time": false
+            },
+            {
+                "nid": "Door2",
+                "region_type": "event",
+                "position": [
+                    14,
+                    16
+                ],
+                "size": [
+                    1,
+                    3
+                ],
+                "sub_nid": "Door",
+                "condition": "unit.can_unlock(region)",
+                "time_left": null,
+                "only_once": true,
                 "interrupt_move": false,
                 "hide_time": false
             }
@@ -20793,13 +20867,17 @@
             {
                 "nid": "v_3",
                 "variant": null,
-                "level": 1,
+                "level": 3,
                 "klass": "Mage",
                 "faction": "AntiDK",
                 "starting_items": [
                     [
                         "ArcaneSpells",
                         false
+                    ],
+                    [
+                        "Sx_Purse",
+                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -20845,13 +20923,17 @@
             {
                 "nid": "n_2",
                 "variant": null,
-                "level": 1,
+                "level": 3,
                 "klass": "Knight",
                 "faction": "AntiDK",
                 "starting_items": [
                     [
                         "Iron_Lance",
                         false
+                    ],
+                    [
+                        "Sx_Purse",
+                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -20936,10 +21018,6 @@
                     [
                         "Iron_Axe",
                         false
-                    ],
-                    [
-                        "Sx_Purse",
-                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -20982,10 +21060,6 @@
                     [
                         "Iron_Sword",
                         false
-                    ],
-                    [
-                        "Sx_Purse",
-                        true
                     ]
                 ],
                 "starting_skills": [],
@@ -21048,6 +21122,90 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "r_1",
+                "variant": null,
+                "level": 3,
+                "klass": "Myrmidon",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r_2",
+                "variant": null,
+                "level": 3,
+                "klass": "Brigand",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r_3",
+                "variant": null,
+                "level": 3,
+                "klass": "Thief",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Slim_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "r_4",
+                "variant": null,
+                "level": 4,
+                "klass": "Archer",
+                "faction": "AntiDK",
+                "starting_items": [
+                    [
+                        "Iron_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [],
@@ -21695,7 +21853,7 @@
             },
             {
                 "nid": "Beholda",
-                "team": "enemy",
+                "team": "enemy2",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
@@ -22755,9 +22913,9 @@
             "player_phase": "DarkTension"
         },
         "objective": {
-            "simple": "",
-            "win": "",
-            "loss": ""
+            "simple": "Defeat boss",
+            "win": "Defeat Halta",
+            "loss": "Aka or Orcent defeated"
         },
         "roam": false,
         "roam_unit": null,
@@ -23102,8 +23260,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    24,
-                    4
+                    20,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -23126,8 +23284,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    26,
-                    4
+                    41,
+                    6
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -23584,7 +23742,7 @@
                     "ignoregreen"
                 ],
                 "team": "enemy",
-                "ai": "Guard",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -23640,12 +23798,12 @@
             {
                 "nid": "alarmL_4",
                 "variant": null,
-                "level": 5,
-                "klass": "Great_Knight",
+                "level": 16,
+                "klass": "Trailblazer",
                 "faction": "AntiDK",
                 "starting_items": [
                     [
-                        "Steel_Sword",
+                        "Poison_Axe",
                         false
                     ]
                 ],
@@ -23954,24 +24112,6 @@
         ],
         "regions": [
             {
-                "nid": "Seize",
-                "region_type": "event",
-                "position": [
-                    25,
-                    3
-                ],
-                "size": [
-                    1,
-                    1
-                ],
-                "sub_nid": "Seize",
-                "condition": "unit.nid == 'Aka' or unit.nid == 'Orcent'",
-                "time_left": null,
-                "only_once": true,
-                "interrupt_move": false,
-                "hide_time": false
-            },
-            {
                 "nid": "Alarm",
                 "region_type": "normal",
                 "position": [
@@ -24071,7 +24211,7 @@
                 ],
                 "positions": {
                     "alarmL_1": [
-                        12,
+                        11,
                         6
                     ],
                     "alarmL_2": [
@@ -24098,7 +24238,8 @@
                     "alarmL_5",
                     "alarmL_4",
                     "alarmL_3",
-                    "alarmL_2"
+                    "alarmL_2",
+                    "alarmL_1"
                 ],
                 "positions": {
                     "alarmL_5": [
@@ -24115,6 +24256,10 @@
                     ],
                     "alarmL_2": [
                         13,
+                        8
+                    ],
+                    "alarmL_1": [
+                        11,
                         8
                     ]
                 }
@@ -24237,9 +24382,97 @@
                         14
                     ]
                 }
+            },
+            {
+                "nid": "alarmC",
+                "units": [
+                    "alarmL_1",
+                    "alarmL_2",
+                    "alarmL_3",
+                    "alarmL_4",
+                    "alarmL_5",
+                    "alarmR_1",
+                    "alarmR_2",
+                    "alarmR_3",
+                    "alarmR_4",
+                    "alarmR_5",
+                    "alarmR_6",
+                    "alarmR_7",
+                    "alarmR_8",
+                    "alarmR_9",
+                    "alarmR_10",
+                    "alarmR_11"
+                ],
+                "positions": {
+                    "alarmL_1": [
+                        28,
+                        2
+                    ],
+                    "alarmL_2": [
+                        22,
+                        3
+                    ],
+                    "alarmL_3": [
+                        27,
+                        4
+                    ],
+                    "alarmL_4": [
+                        21,
+                        2
+                    ],
+                    "alarmL_5": [
+                        29,
+                        3
+                    ],
+                    "alarmR_1": [
+                        23,
+                        2
+                    ],
+                    "alarmR_3": [
+                        26,
+                        4
+                    ],
+                    "alarmR_2": [
+                        24,
+                        4
+                    ],
+                    "alarmR_4": [
+                        25,
+                        5
+                    ],
+                    "alarmR_6": [
+                        27,
+                        1
+                    ],
+                    "alarmR_7": [
+                        28,
+                        0
+                    ],
+                    "alarmR_8": [
+                        26,
+                        0
+                    ],
+                    "alarmR_9": [
+                        22,
+                        1
+                    ],
+                    "alarmR_10": [
+                        21,
+                        0
+                    ],
+                    "alarmR_11": [
+                        23,
+                        0
+                    ]
+                }
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "O4",
@@ -24749,8 +24982,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    9
+                    9,
+                    27
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -24916,12 +25149,12 @@
             {
                 "nid": "r2_2",
                 "variant": null,
-                "level": 1,
-                "klass": "Imp_Elite",
+                "level": 5,
+                "klass": "Orc_Elite",
                 "faction": "Orc",
                 "starting_items": [
                     [
-                        "Iron_Lance",
+                        "Iron_Axe",
                         false
                     ]
                 ],
@@ -25360,7 +25593,12 @@
                 }
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     },
     {
         "nid": "Intro7",
@@ -26376,7 +26614,7 @@
                     3,
                     2
                 ],
-                "sub_nid": null,
+                "sub_nid": "",
                 "condition": "True",
                 "time_left": null,
                 "only_once": false,
@@ -43024,8 +43262,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    10,
-                    6
+                    12,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -43326,13 +43564,13 @@
             },
             {
                 "nid": "Ginasta",
-                "team": "player",
+                "team": "enemy",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    4
+                    10,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -43383,8 +43621,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    8,
-                    8
+                    6,
+                    7
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -43548,6 +43786,19 @@
                 "ai_group": "",
                 "starting_position": [
                     14,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "DoomKing",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
                     8
                 ],
                 "starting_traveler": null,
@@ -46852,6 +47103,32 @@
                 ],
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "DoomKing",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    21,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Ginasta",
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    20,
+                    5
+                ],
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [

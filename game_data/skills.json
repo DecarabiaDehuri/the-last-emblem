@@ -2742,7 +2742,7 @@
     {
         "nid": "Determination",
         "name": "Determination",
-        "desc": "Jack's attributes are all doubled.",
+        "desc": "Attributes are all doubled.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -8849,6 +8849,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -9444,6 +9448,10 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -9524,6 +9532,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -9608,6 +9620,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -9699,6 +9715,10 @@
             ],
             [
                 "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
                 null
             ]
         ]
@@ -9792,6 +9812,10 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -9876,6 +9900,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -9960,6 +9988,10 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -10008,7 +10040,7 @@
     {
         "nid": "Combat_Fantasy",
         "name": "Combat Fantasy",
-        "desc": "<orange>('0 SP)</> <green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. <red>1 use per chapter</>.",
+        "desc": "<orange>(10 SP)</> <green>[Aka synergy]</>Puts Yarra and a partner into a fulfilling battle fantasy, increasing their stats for a few turns. <red>1 use per chapter</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -10040,6 +10072,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -11088,6 +11124,10 @@
             [
                 "grey_if_inactive",
                 null
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -11164,6 +11204,10 @@
             [
                 "condition",
                 "any([u.nid == 'Carina' for u in target_system.get_adj_units(game.get_unit('Uyae'))])"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -14580,6 +14624,12 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
             ]
         ]
     },
@@ -14598,8 +14648,16 @@
                 -5
             ],
             [
-                "unit_anim",
-                "MapSurprise"
+                "unit_flickering_tint",
+                [
+                    67,
+                    100,
+                    68
+                ]
+            ],
+            [
+                "negative",
+                null
             ]
         ]
     },
@@ -14869,7 +14927,7 @@
     {
         "nid": "Delayed_Gratification",
         "name": "Delayed Gratification",
-        "desc": "Nalili learned with Simon that patience multiplies the pleasure. Nalili's skill share <blue>charges</>. Whenever Nalili starts an interaction with an enemy or ally, she gains <blue>1 charge</>. Defeating enemeis build <blue>2 charges</>. Upon use of skill, <blue>reset all charges</>.",
+        "desc": "Nalili learned with Simon that patience multiplies the pleasure. Nalili's skill share <blue>charges</>. Whenever Nalili starts an interaction with an enemy or ally, she gains <blue>1 charge</>. Defeating enemies builds <blue>2 charges</>. Upon use of skill, <blue>reset all charges</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -15071,7 +15129,7 @@
     {
         "nid": "Dance_Nalili",
         "name": "Swords Dance",
-        "desc": "<orange>(5 SP)</> Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target.",
+        "desc": "<orange>(8 SP)</> Nalili <green>Refreshes</> an allied unit, letting them act again this turn. Also deals damage to enemies around the target.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -15092,7 +15150,7 @@
             ],
             [
                 "cost_mana",
-                5
+                8
             ],
             [
                 "skill_tags",
@@ -15271,6 +15329,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -15347,6 +15409,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "is_terrain",
+                null
             ]
         ]
     },
@@ -15423,6 +15489,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -15498,6 +15568,10 @@
             ],
             [
                 "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
                 null
             ]
         ]
@@ -15575,6 +15649,10 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -15650,6 +15728,10 @@
             ],
             [
                 "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
                 null
             ]
         ]
@@ -15877,6 +15959,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -15911,6 +15997,10 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -15983,6 +16073,10 @@
                 [
                     "Synergy"
                 ]
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -19676,10 +19770,6 @@
                 ]
             ],
             [
-                "unit_anim",
-                "synergy"
-            ],
-            [
                 "grey_if_inactive",
                 null
             ]
@@ -20419,6 +20509,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -20495,6 +20589,10 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -22624,6 +22722,10 @@
             [
                 "allowed_weapons",
                 "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -23556,6 +23658,10 @@
                 [
                     "Confused"
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -23606,6 +23712,10 @@
                 [
                     "Sleep"
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -25847,6 +25957,98 @@
                 "has_tags",
                 [
                     "no_copy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Orc_Balia",
+        "name": "Balia's orc",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sleep_forever",
+        "name": "<red>[SLEEP]</>",
+        "desc": "Unit is asleep. -5 DEF and RES. Unit awakes when receives a hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            44
+        ],
+        "components": [
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ],
+                    [
+                        "DEF",
+                        -5
+                    ],
+                    [
+                        "RES",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "lost_on_take_hit",
+                null
+            ],
+            [
+                "unit_anim",
+                "MapStun"
+            ],
+            [
+                "unit_tint",
+                [
+                    35,
+                    89,
+                    135
+                ]
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "self_nihil",
+                [
+                    "Sleep_Immune"
                 ]
             ]
         ]
