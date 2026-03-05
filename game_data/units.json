@@ -436,6 +436,10 @@
             [
                 13,
                 "Summon_Orc_6"
+            ],
+            [
+                2,
+                "Orc_mutation_Balia"
             ]
         ],
         "unit_notes": [],
@@ -4440,7 +4444,7 @@
         "desc": "Commander of the Ardoheim army. ",
         "variant": null,
         "level": 13,
-        "klass": "Ballistician",
+        "klass": "Sniper",
         "tags": [],
         "bases": {
             "HP": 28,
@@ -4458,10 +4462,6 @@
         "starting_items": [
             [
                 "Long_Ballista",
-                false
-            ],
-            [
-                "Ballista",
                 false
             ]
         ],
@@ -4529,7 +4529,11 @@
         "learned_skills": [
             [
                 1,
-                "Berserk_dancer"
+                "Enemy_dancer"
+            ],
+            [
+                1,
+                "Dance"
             ]
         ],
         "unit_notes": [],
@@ -4628,7 +4632,7 @@
         "stat_cap_modifiers": {},
         "starting_items": [
             [
-                "Luna",
+                "LustSpells_T2",
                 false
             ]
         ],
@@ -9472,13 +9476,24 @@
         "desc": "",
         "variant": null,
         "level": 1,
-        "klass": "Myrmidon",
+        "klass": "Cavalier",
         "tags": [],
         "bases": {
             "HP": 30
         },
         "growths": {},
-        "stat_cap_modifiers": {},
+        "stat_cap_modifiers": {
+            "HP": 10,
+            "STR": 10,
+            "MAG": 10,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 10,
+            "DEF": 10,
+            "RES": 10,
+            "CON": 10,
+            "MOV": 10
+        },
         "starting_items": [
             [
                 "Iron_Blade",
@@ -9487,6 +9502,10 @@
             [
                 "Loot_Bag",
                 true
+            ],
+            [
+                "Iron_Lance",
+                false
             ]
         ],
         "learned_skills": [
@@ -9549,7 +9568,7 @@
         },
         "alternate_classes": [],
         "portrait_nid": "Forde",
-        "affinity": null,
+        "affinity": "None",
         "fields": []
     },
     {

@@ -149,5 +149,69 @@
             "nid"
         ],
         "lovalue": []
+    },
+    {
+        "nid": "orc_mutation",
+        "dtype": "list",
+        "svalue": "",
+        "kvvalue": [],
+        "oattrs": [
+            "nid"
+        ],
+        "lovalue": [
+            {
+                "nid": "DEF"
+            },
+            {
+                "nid": "RES"
+            },
+            {
+                "nid": "LCK"
+            },
+            {
+                "nid": "SPD"
+            },
+            {
+                "nid": "SKL"
+            },
+            {
+                "nid": "MAG"
+            },
+            {
+                "nid": "STR"
+            }
+        ]
+    },
+    {
+        "nid": "om",
+        "dtype": "list",
+        "svalue": "",
+        "kvvalue": [],
+        "oattrs": [
+            "nid"
+        ],
+        "lovalue": [
+            {
+                "nid": "om_str"
+            },
+            {
+                "nid": "om_mag"
+            },
+            {
+                "nid": "om_skl"
+            },
+            {
+                "nid": "om_spd"
+            },
+            {
+                "nid": "om_lck"
+            },
+            {
+                "nid": "om_res"
+            },
+            {
+                "nid": "om_def"
+            }
+        ]
     }
 ]

@@ -173,6 +173,10 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "no_equip",
+                null
             ]
         ]
     },
@@ -3876,6 +3880,10 @@
             [
                 "map_hit_sfx",
                 "Select 1"
+            ],
+            [
+                "eval_target_restrict_2",
+                "'gameover' not in target.tags"
             ]
         ]
     },
@@ -6400,6 +6408,10 @@
             [
                 "map_hit_sfx",
                 "Select 1"
+            ],
+            [
+                "eval_target_restrict_2",
+                "'gameover' not in target.tags"
             ]
         ]
     },
@@ -7856,6 +7868,10 @@
             [
                 "map_hit_sfx",
                 "Select 1"
+            ],
+            [
+                "eval_target_restrict_2",
+                "'gameover' not in target.tags"
             ]
         ]
     },
@@ -17469,7 +17485,7 @@
             ],
             [
                 "exp",
-                15
+                25
             ]
         ]
     },
@@ -18406,7 +18422,7 @@
             ],
             [
                 "damage",
-                8
+                6
             ],
             [
                 "ignore_line_of_sight",
@@ -19459,6 +19475,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Blinded"
+                ]
             ]
         ]
     },
@@ -19519,6 +19541,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Silence"
+                ]
             ]
         ]
     },
@@ -19579,6 +19607,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Stunned"
+                ]
             ]
         ]
     },
@@ -20011,7 +20045,7 @@
     {
         "nid": "Penitence",
         "name": "Penitence",
-        "desc": "<blue>(10 MP)</> <red>(1/2 MAX HP)</> Monica suffers for the sake of others. Heals in an area. Allies gain <red>[BLESSED]</>: Unit takes half damage in the next combat.",
+        "desc": "<blue>(10 MP)</> <red>(1/2 MAX HP)</> Monica suffers for the sake of others. Heals in an area. Allies gain <red>[BLESSED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -20069,6 +20103,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Penitence_effect"
+                ]
             ]
         ]
     },
@@ -20162,7 +20202,9 @@
                 [
                     "ArcaneFire",
                     "FireLance",
-                    "Firewall_ability_v2"
+                    "Firewall_ability_v2",
+                    "ArcaneLightning",
+                    "ArcaneIce"
                 ]
             ],
             [
@@ -20561,7 +20603,7 @@
     {
         "nid": "Nothing_Personal",
         "name": "Nothing Personal",
-        "desc": "<blue>(10 MP)</> Safado jumps to the other side of the target, inflicting <red>[POISONED]</>. Can attack after. Safado's next attack on this turn also inflicts <red>[POISONED]</>: Unit randomly receives up to 5 damage per turn.",
+        "desc": "<blue>(10 MP)</> Safado jumps to the other side of the target, inflicting <red>[POISONED]</>. Can attack after. Safado's next attack on this turn also inflicts <red>[POISONED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -20607,13 +20649,19 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Poisoned"
+                ]
             ]
         ]
     },
     {
         "nid": "Stalling_Stance_ability",
         "name": "Stalling Stance",
-        "desc": "<blue>(5 MP)</> Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks. Enemis are more likely to attack him. After combat, inflicts enemies with <red>[FRUSTRATED]</>: DEF and RES reduced. Can be stacked up to 5 times. Debuff is lost on receiving an attack.",
+        "desc": "<blue>(5 MP)</> Safado can grant himself the Stalling Stance status. When active, neither Safado nor their enemies will land their attacks. Enemies are more likely to attack him. After combat, inflicts enemies with <red>[FRUSTRATED]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -20651,6 +20699,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Frustrated"
+                ]
             ]
         ]
     },
@@ -20713,10 +20767,6 @@
         ],
         "components": [
             [
-                "target_tile",
-                null
-            ],
-            [
                 "attack_after_combat",
                 null
             ],
@@ -20731,6 +20781,10 @@
             [
                 "shove",
                 1
+            ],
+            [
+                "target_unit",
+                null
             ]
         ]
     },
@@ -21057,7 +21111,7 @@
     {
         "nid": "Constricting_Love_ability",
         "name": "Constricting Love",
-        "desc": "Milena entangles an enemy, inflicting it with <red>[SQUEEZED]</>. Costs <orange>15 SP</>.\n<red>[SQUEEZED]</>: Unit cannot move and has decreased attack and defense speed.",
+        "desc": "Milena entangles an enemy, inflicting it with <red>[SQUEEZED]</>. Costs <orange>15 SP</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -21107,6 +21161,12 @@
             [
                 "mana_cost_as_uses",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Squeezed"
+                ]
             ]
         ]
     },
@@ -30271,6 +30331,10 @@
             [
                 "map_hit_sfx",
                 "Select 1"
+            ],
+            [
+                "eval_target_restrict_2",
+                "'gameover' not in target.tags"
             ]
         ]
     },

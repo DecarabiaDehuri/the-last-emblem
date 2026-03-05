@@ -295,349 +295,6 @@
         ]
     },
     {
-        "nid": "Rally_Strength_buff",
-        "name": "Strength bonus",
-        "desc": "Strength increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Magic_buff",
-        "name": "Magic bonus",
-        "desc": "Magic increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "MAG",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Skill_buff",
-        "name": "Skill bonus",
-        "desc": "Skill increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SKL",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Speed_buff",
-        "name": "Speed bonus",
-        "desc": "Speed increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SPD",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Luck_buff",
-        "name": "Luck bonus",
-        "desc": "Luck increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "LCK",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Defense_buff",
-        "name": "Defense bonus",
-        "desc": "Defense increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "DEF",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Resistance_buff",
-        "name": "Resistance bonus",
-        "desc": "Resistance increased.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            24
-        ],
-        "components": [
-            [
-                "time",
-                1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "RES",
-                        4
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Strength",
-        "name": "Rally Strength",
-        "desc": "Increases STR of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Strength"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Magic",
-        "name": "Rally Magic",
-        "desc": "Increases MAG of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Magic"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Skill",
-        "name": "Rally Skill",
-        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Skill"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Speed",
-        "name": "Rally Speed",
-        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Speed"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Luck",
-        "name": "Rally Luck",
-        "desc": "Increases LCK of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Luck"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Resistance",
-        "name": "Rally Resistance",
-        "desc": "Increases RES of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Resistance"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Rally_Defense",
-        "name": "Rally Defense",
-        "desc": "Increases DEF of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            24
-        ],
-        "components": [
-            [
-                "ability",
-                "Rally_Defense"
-            ],
-            [
-                "cost_mana",
-                5
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Duelists_Blow",
         "name": "Duelist's Blow",
         "desc": "+15 AVOID when initiating battle.",
@@ -657,10 +314,6 @@
             ],
             [
                 "class_skill",
-                null
-            ],
-            [
-                "display_skill_icon_in_combat",
                 null
             ],
             [
@@ -694,10 +347,6 @@
                 null
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "skill_tags",
                 [
                     "Profession"
@@ -725,10 +374,6 @@
             ],
             [
                 "class_skill",
-                null
-            ],
-            [
-                "display_skill_icon_in_combat",
                 null
             ],
             [
@@ -767,10 +412,6 @@
                 null
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "skill_tags",
                 [
                     "Profession"
@@ -806,10 +447,6 @@
                 null
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "skill_tags",
                 [
                     "Profession"
@@ -834,10 +471,6 @@
             [
                 "hit",
                 15
-            ],
-            [
-                "display_skill_icon_in_combat",
-                null
             ],
             [
                 "class_skill",
@@ -1113,7 +746,7 @@
     {
         "nid": "Spur_Magic_effect",
         "name": "Spur Magic",
-        "desc": "+5 MAG.",
+        "desc": "+3 MAG.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -1134,7 +767,7 @@
     {
         "nid": "Spur_Speed_effect",
         "name": "Spur Speed",
-        "desc": "+5 SPD.",
+        "desc": "+3 SPD.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -1155,7 +788,7 @@
     {
         "nid": "Spur_Skill_effect",
         "name": "Spur Skill",
-        "desc": "+5 SKL.",
+        "desc": "+3 SKL.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -1176,7 +809,7 @@
     {
         "nid": "Spur_Luck_effect",
         "name": "Spur Luck",
-        "desc": "+5 LUK.",
+        "desc": "+3 LUK.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -1197,7 +830,7 @@
     {
         "nid": "Spur_Defense_effect",
         "name": "Spur Defense",
-        "desc": "+5 DEF.",
+        "desc": "+3 DEF.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -1218,7 +851,7 @@
     {
         "nid": "Spur_Resistance_effect",
         "name": "Spur Resistance",
-        "desc": "+5 RES.",
+        "desc": "+3 RES.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -1259,10 +892,6 @@
                 null
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "skill_tags",
                 [
                     "Profession"
@@ -1273,7 +902,7 @@
     {
         "nid": "Deadly_Counter",
         "name": "Deadly Counter",
-        "desc": "+15 CRIT when under attack.",
+        "desc": "+10 CRIT when under attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -1286,14 +915,10 @@
             ],
             [
                 "crit",
-                15
+                10
             ],
             [
                 "class_skill",
-                null
-            ],
-            [
-                "display_skill_icon_in_combat",
                 null
             ],
             [
@@ -1323,10 +948,6 @@
                 null
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "defense_speed",
                 5
             ],
@@ -1341,7 +962,7 @@
     {
         "nid": "Warding_Counter",
         "name": "Warding Counter",
-        "desc": "+5 RES when under attack.",
+        "desc": "+3 RES when under attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -1357,16 +978,12 @@
                 [
                     [
                         "RES",
-                        5
+                        3
                     ]
                 ]
             ],
             [
                 "class_skill",
-                null
-            ],
-            [
-                "display_skill_icon_in_combat",
                 null
             ],
             [
@@ -1380,7 +997,7 @@
     {
         "nid": "Armored_Counter",
         "name": "Armored Counter",
-        "desc": "+5 DEF when under attack.",
+        "desc": "+3 DEF when under attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -1396,16 +1013,12 @@
                 [
                     [
                         "DEF",
-                        5
+                        3
                     ]
                 ]
             ],
             [
                 "class_skill",
-                null
-            ],
-            [
-                "display_skill_icon_in_combat",
                 null
             ],
             [
@@ -1419,7 +1032,7 @@
     {
         "nid": "Certain_Counter",
         "name": "Certain Counter",
-        "desc": "+15 HIT when under attack.",
+        "desc": "+10 HIT when under attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -1432,11 +1045,7 @@
             ],
             [
                 "hit",
-                15
-            ],
-            [
-                "display_skill_icon_in_combat",
-                null
+                10
             ],
             [
                 "class_skill",
@@ -2368,6 +1977,349 @@
         ]
     },
     {
+        "nid": "Rally_Strength_buff",
+        "name": "Strength bonus",
+        "desc": "Strength increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Magic_buff",
+        "name": "Magic bonus",
+        "desc": "Magic increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Skill_buff",
+        "name": "Skill bonus",
+        "desc": "Skill increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Speed_buff",
+        "name": "Speed bonus",
+        "desc": "Speed increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Luck_buff",
+        "name": "Luck bonus",
+        "desc": "Luck increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Defense_buff",
+        "name": "Defense bonus",
+        "desc": "Defense increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Resistance_buff",
+        "name": "Resistance bonus",
+        "desc": "Resistance increased.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Strength",
+        "name": "Rally Strength",
+        "desc": "Increases STR of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Strength"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Magic",
+        "name": "Rally Magic",
+        "desc": "Increases MAG of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Magic"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Skill",
+        "name": "Rally Skill",
+        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Skill"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Speed",
+        "name": "Rally Speed",
+        "desc": "Increases SPD of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Speed"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Luck",
+        "name": "Rally Luck",
+        "desc": "Increases LCK of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Luck"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Resistance",
+        "name": "Rally Resistance",
+        "desc": "Increases RES of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Resistance"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Defense",
+        "name": "Rally Defense",
+        "desc": "Increases DEF of allies within 2 tiles for the remainder of this turn. Costs <blue>5 mana</>.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Defense"
+            ],
+            [
+                "cost_mana",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Shelter_generic",
         "name": "Shelter",
         "desc": "Unit can rescue an adjacent ally.",
@@ -2420,7 +2372,7 @@
     {
         "nid": "All_Embracing_Care",
         "name": "All-embracing Care",
-        "desc": "Simon will always be there for his allies. Enables him to teleport to any ally. Costs <blue>10 mana</>.",
+        "desc": "<blue>(10 MP)</> Simon will always be there for his allies. Enables him to teleport to any ally. ",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -2472,7 +2424,7 @@
     {
         "nid": "Support_Allies",
         "name": "Support Allies",
-        "desc": "Simon heals negative status effects of himself and nearby allies. <blue>10 MP</>.",
+        "desc": "<blue>(10 MP)</> Simon heals negative status effects of himself and nearby allies. ",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -2542,7 +2494,7 @@
     {
         "nid": "Incubus_Assault",
         "name": "Incubus Assault",
-        "desc": "<blue>(10 MP</>) Simon uses his F.Emblem to viciously strike 3 random enemies.",
+        "desc": "<blue>(10 MP)</> Simon uses his F.Emblem to viciously strike 3 random enemies.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -3935,6 +3887,10 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ]
         ]
     },
@@ -3972,10 +3928,6 @@
             36
         ],
         "components": [
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
             [
                 "stat_multiplier",
                 [
@@ -4070,10 +4022,6 @@
                 null
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "post_combat_splash",
                 5
             ],
@@ -4083,11 +4031,7 @@
             ],
             [
                 "condition",
-                "{eval: u('Duro').get_hp() == u('Duro').get_max_hp()}"
-            ],
-            [
-                "combat_condition",
-                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+                "unit.get_hp() == unit.get_max_hp()"
             ]
         ]
     },
@@ -4107,10 +4051,6 @@
             ],
             [
                 "class_skill",
-                null
-            ],
-            [
-                "display_skill_icon_in_combat",
                 null
             ],
             [
@@ -4931,7 +4871,7 @@
             ],
             [
                 "allowed_weapons",
-                "item_system.weapon_type(unit, unit.get_weapon()) == 'Sword'"
+                "item_system.weapon_type(unit, item) == 'Sword'"
             ]
         ]
     },
@@ -5023,7 +4963,7 @@
             ],
             [
                 "allowed_weapons",
-                "item_system.weapon_type(unit, unit.get_weapon()) == 'Sword'"
+                "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
                 "combat_condition",
@@ -5050,10 +4990,6 @@
                 "unit.get_hp() < (unit.get_max_hp() / 2)"
             ],
             [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -5064,6 +5000,10 @@
             ],
             [
                 "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
                 null
             ]
         ]
@@ -5643,7 +5583,7 @@
     {
         "nid": "Striking_Defiance",
         "name": "Striking Defiance",
-        "desc": "For the first 3 combats this chapter, Lucia has incrased damage when defending.",
+        "desc": "For the first 3 combats this chapter, Lucia has increased damage when defending.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -10865,6 +10805,10 @@
             [
                 "ignore_alliances",
                 null
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -14844,6 +14788,231 @@
         ]
     },
     {
+        "nid": "Orc_Balia",
+        "name": "Balia's orc",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orc_mutation_Balia",
+        "name": "Orc Mutation",
+        "desc": "When summoning a basic Orc, Balia has a chance to trigger a mutation, altering one of its stats.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Orc_mutation",
+        "name": "Mutation",
+        "desc": "This unique orc has born with its stats altered.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "om_STR",
+        "name": "Mutation",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    85,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "om_MAG",
+        "name": "Mutation",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    0,
+                    0,
+                    127
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "om_SKL",
+        "name": "Mutation",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    255,
+                    170,
+                    127
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "om_SPD",
+        "name": "Mutation",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    85,
+                    170,
+                    0
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "om_LCK",
+        "name": "Mutation",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    170,
+                    170,
+                    127
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "om_DEF",
+        "name": "Mutation",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    85,
+                    170,
+                    255
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "om_RES",
+        "name": "Mutation",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "unit_tint",
+                [
+                    85,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Intervention",
         "name": "Intervention",
         "desc": "<green>[Orcent synergy]</> Balia can intervene with Orcent's emotions, resetting his <red>Brutality</> and <blue>Serenity</> stacks to 0.",
@@ -14864,6 +15033,12 @@
             [
                 "menu_category",
                 "<orange>Synergy</>"
+            ],
+            [
+                "skill_tags",
+                [
+                    "Synergy"
+                ]
             ]
         ]
     },
@@ -26037,31 +26212,6 @@
         ]
     },
     {
-        "nid": "Orc_Balia",
-        "name": "Balia's orc",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            0
-        ],
-        "components": [
-            [
-                "stat_multiplier",
-                [
-                    [
-                        "HP",
-                        0.5
-                    ]
-                ]
-            ],
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "nerf_npc",
         "name": "nerf npc",
         "desc": "",
@@ -26198,6 +26348,42 @@
                 [
                     "gameover"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "testeallowed",
+        "name": "testeallowed",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_art",
+                "teste2"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ]
+        ]
+    },
+    {
+        "nid": "teste2",
+        "name": "teste2",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Sword'"
             ]
         ]
     }

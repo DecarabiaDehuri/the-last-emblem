@@ -218,6 +218,27 @@
                 "generic": true
             },
             {
+                "nid": "113",
+                "variant": null,
+                "level": 5,
+                "klass": "Spider",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Sharp_Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
                 "nid": "Chosen",
                 "team": "player",
                 "ai": "None",
@@ -232,7 +253,7 @@
                 "variant": null,
                 "level": 1,
                 "klass": "Snag20",
-                "faction": "Soldier",
+                "faction": "Wall",
                 "starting_items": [],
                 "starting_skills": [],
                 "team": "enemy",
@@ -251,7 +272,7 @@
                 "variant": null,
                 "level": 1,
                 "klass": "Snag20",
-                "faction": "Soldier",
+                "faction": "Wall",
                 "starting_items": [],
                 "starting_skills": [],
                 "team": "enemy",
@@ -377,7 +398,7 @@
             },
             {
                 "nid": "Mira",
-                "team": "player",
+                "team": "other",
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
@@ -3771,11 +3792,11 @@
                 "nid": "103",
                 "variant": null,
                 "level": 6,
-                "klass": "Archer",
+                "klass": "Ballistician",
                 "faction": "AlliedSoldier",
                 "starting_items": [
                     [
-                        "Iron_Bow",
+                        "Ballista_CD1",
                         false
                     ]
                 ],
@@ -3795,11 +3816,11 @@
                 "nid": "105",
                 "variant": null,
                 "level": 6,
-                "klass": "Archer",
+                "klass": "Ballistician",
                 "faction": "AlliedSoldier",
                 "starting_items": [
                     [
-                        "Iron_Bow",
+                        "Ballista_CD2",
                         false
                     ]
                 ],
@@ -3877,7 +3898,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Defend",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -3905,7 +3926,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Defend",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -3929,7 +3950,7 @@
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Defend",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
@@ -5476,7 +5497,7 @@
             {
                 "nid": "101",
                 "variant": null,
-                "level": 11,
+                "level": 8,
                 "klass": "Suc_foe_lamia",
                 "faction": "Soldier",
                 "starting_items": [
@@ -5568,7 +5589,7 @@
             {
                 "nid": "105",
                 "variant": null,
-                "level": 11,
+                "level": 10,
                 "klass": "Suc_foe_lamia",
                 "faction": "Soldier",
                 "starting_items": [
@@ -5589,7 +5610,7 @@
             {
                 "nid": "106",
                 "variant": null,
-                "level": 11,
+                "level": 12,
                 "klass": "Suc_foe_lamia",
                 "faction": "Soldier",
                 "starting_items": [
@@ -5614,7 +5635,7 @@
             {
                 "nid": "107",
                 "variant": null,
-                "level": 11,
+                "level": 9,
                 "klass": "Suc_foe_lamia",
                 "faction": "Soldier",
                 "starting_items": [
@@ -5661,7 +5682,7 @@
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Scythe",
+                        "LustSpells",
                         false
                     ],
                     [
@@ -5690,9 +5711,12 @@
                         false
                     ]
                 ],
-                "starting_skills": [],
+                "starting_skills": [
+                    "Dance",
+                    "Enemy_dancer"
+                ],
                 "team": "enemy",
-                "ai": "Attack",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -5736,7 +5760,10 @@
                         true
                     ]
                 ],
-                "starting_skills": [],
+                "starting_skills": [
+                    "Enemy_dancer",
+                    "Dance"
+                ],
                 "team": "enemy",
                 "ai": "Attack",
                 "roam_ai": null,
@@ -5760,6 +5787,111 @@
                 "starting_skills": [],
                 "team": "enemy",
                 "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "114",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "115",
+                "variant": null,
+                "level": 12,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "LustSpells",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "116",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "117",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "118",
+                "variant": null,
+                "level": 11,
+                "klass": "Suc_foe_1",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron_Scythe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": null,
@@ -5802,11 +5934,11 @@
                 "nid": "orc1",
                 "variant": null,
                 "level": 11,
-                "klass": "Orc",
+                "klass": "Imp",
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Axe",
+                        "Iron_Lance",
                         false
                     ]
                 ],
@@ -5844,11 +5976,11 @@
                 "nid": "orc3",
                 "variant": null,
                 "level": 11,
-                "klass": "Orc",
+                "klass": "Imp",
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Axe",
+                        "Iron_Lance",
                         false
                     ]
                 ],
@@ -5865,11 +5997,11 @@
                 "nid": "orc4",
                 "variant": null,
                 "level": 11,
-                "klass": "Orc",
+                "klass": "Imp",
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Iron_Axe",
+                        "Iron_Lance",
                         false
                     ]
                 ],
@@ -6249,7 +6381,12 @@
                     "110",
                     "111",
                     "112",
-                    "113"
+                    "113",
+                    "114",
+                    "115",
+                    "116",
+                    "117",
+                    "118"
                 ],
                 "positions": {
                     "101": [
@@ -6307,6 +6444,26 @@
                     "Milena": [
                         33,
                         16
+                    ],
+                    "114": [
+                        31,
+                        2
+                    ],
+                    "115": [
+                        13,
+                        6
+                    ],
+                    "116": [
+                        3,
+                        2
+                    ],
+                    "117": [
+                        1,
+                        18
+                    ],
+                    "118": [
+                        0,
+                        28
                     ]
                 }
             },
@@ -29495,10 +29652,6 @@
             {
                 "nid": "mage",
                 "trigger_threshold": 1
-            },
-            {
-                "nid": "",
-                "trigger_threshold": 1
             }
         ]
     },
@@ -31418,12 +31571,7 @@
                 }
             }
         ],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     },
     {
         "nid": "O6",
@@ -43382,8 +43530,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    15,
-                    4
+                    14,
+                    9
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -43441,10 +43589,7 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    11,
-                    6
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
             },
@@ -43603,8 +43748,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    3,
-                    7
+                    11,
+                    8
                 ],
                 "starting_traveler": null,
                 "generic": false
@@ -43755,10 +43900,10 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    2,
-                    4
+                    14,
+                    8
                 ],
-                "starting_traveler": null,
+                "starting_traveler": "104",
                 "generic": true
             },
             {
@@ -43792,10 +43937,7 @@
                 "ai": "None",
                 "roam_ai": null,
                 "ai_group": "",
-                "starting_position": [
-                    14,
-                    8
-                ],
+                "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
             },
