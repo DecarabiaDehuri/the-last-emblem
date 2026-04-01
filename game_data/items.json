@@ -18782,13 +18782,21 @@
             [
                 "siege_weapon",
                 null
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "hit",
+                80
             ]
         ]
     },
     {
         "nid": "Lethal_Lust",
         "name": "Lethal Lust",
-        "desc": "Riala targets her enemy with a rain of painful lust. Unit loses half of their health. Unit is inflicted with <red>[LEAKING]</>.\n<red>[LEAKING]</>: Unit heals nearby enemies.",
+        "desc": "Riala targets her enemy with a rain of painful lust. Target is inflicted with <red>[LEAKING]</>.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -18808,7 +18816,147 @@
                 null
             ],
             [
-                "eclipse",
+                "global_range",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Hex"
+            ],
+            [
+                "warning",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Leaking",
+                    "Eclipse_Helper"
+                ]
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Leaking"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Lusting_Gaze_backup",
+        "name": "Lusting Gaze",
+        "desc": "Riala inflicts a unit with <red>[DESIRED]</>. This unit will be the victim of Riala's attack next turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            33
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Flux"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_after_combat_on_hit",
+                [
+                    "Desired",
+                    "Eclipse_Helper"
+                ]
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "hit",
+                80
+            ]
+        ]
+    },
+    {
+        "nid": "Lethal_Lust_backup",
+        "name": "Lethal Lust",
+        "desc": "Riala targets her enemy with a rain of painful lust. Unit is inflicted with <red>[LEAKING]</>.\n<red>[LEAKING]</>: Unit heals nearby enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            36
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
                 null
             ],
             [
@@ -18853,6 +19001,14 @@
             [
                 "siege_weapon",
                 null
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                85
             ]
         ]
     },
@@ -19831,7 +19987,7 @@
     {
         "nid": "Drink_Potion_ability",
         "name": "Drink Potion",
-        "desc": "Antarion drinks a health potion. Has 2 uses per chapter.",
+        "desc": "Antarion drinks a health potion. Where does he keep so many?",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -19840,7 +19996,7 @@
         "components": [
             [
                 "heal",
-                100
+                15
             ],
             [
                 "target_tile",
@@ -19859,19 +20015,8 @@
                 null
             ],
             [
-                "c_uses",
-                2
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
                 "exp",
-                10
+                5
             ]
         ]
     },
